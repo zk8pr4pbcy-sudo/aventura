@@ -8,6 +8,8 @@
   --sand-50: #fbf9f4;
   --sand-100: #f4efe6;
   --sand-200: #e7dece;
+  --coastal-50: #eef4f3;
+  --coastal-100: #e2ecea;
   --white: #ffffff;
   --gold: #bd9858;
   --gold-dark: #8f6b34;
@@ -290,6 +292,15 @@ body:not([data-page="home"]) .site-header {
   align-items: center;
   gap: 12px;
   flex: 0 0 auto;
+}
+
+.brand-logo {
+  width: 172px;
+  height: auto;
+}
+
+.footer-brand .brand-logo {
+  width: 220px;
 }
 
 .brand-mark {
@@ -2208,6 +2219,17 @@ html[lang="ar"] .about-why-statement {
   box-shadow: var(--shadow-sm);
 }
 
+.purpose-card::before {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  content: "";
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), #d8c393);
+}
+
 .purpose-card::after {
   position: absolute;
   right: -24px;
@@ -2239,26 +2261,14 @@ html[dir="rtl"] .purpose-card::after {
   margin-top: 18px;
 }
 
-.purpose-card-dark {
-  color: rgba(255, 255, 255, 0.68);
-  background: var(--navy-900);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.purpose-card-dark h2 {
-  color: var(--white);
-}
-
-.purpose-card-dark .eyebrow {
-  color: #dbc18e;
-}
-
-.purpose-card-dark .lead {
-  color: rgba(255, 255, 255, 0.78);
-}
-
 .about-value-card {
   min-height: 290px;
+}
+
+.about-why {
+  background: linear-gradient(135deg, var(--coastal-50), var(--sand-100));
+  border-top: 1px solid rgba(30, 105, 112, 0.1);
+  border-bottom: 1px solid rgba(143, 107, 52, 0.12);
 }
 
 .about-why-layout {
@@ -2270,6 +2280,7 @@ html[dir="rtl"] .purpose-card::after {
 
 .about-why h2 {
   margin-top: 14px;
+  color: var(--navy-900);
   font-size: clamp(2.45rem, 5vw, 5rem);
 }
 
@@ -2278,18 +2289,19 @@ html[dir="rtl"] .purpose-card::after {
 }
 
 .about-why-copy p {
-  color: rgba(255, 255, 255, 0.64);
+  color: var(--muted);
 }
 
 .about-why-copy .lead {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
 }
 
 .about-why-statement {
-  color: #f1dfbc;
-  background: rgba(189, 152, 88, 0.08);
-  border-color: rgba(189, 152, 88, 0.24);
+  color: var(--navy-900);
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(143, 107, 52, 0.2);
   border-inline-start-color: var(--gold);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 1250px) {
@@ -2304,6 +2316,10 @@ html[dir="rtl"] .purpose-card::after {
   .nav-link {
     padding-inline: 8px;
     font-size: 0.82rem;
+  }
+
+  .brand-logo {
+    width: 158px;
   }
 }
 
@@ -2529,6 +2545,14 @@ html[dir="rtl"] .purpose-card::after {
 
   .brand-tagline {
     display: none;
+  }
+
+  .brand-logo {
+    width: 142px;
+  }
+
+  .footer-brand .brand-logo {
+    width: 190px;
   }
 
   .brand-name {

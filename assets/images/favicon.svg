@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AVENTURA">
   <rect width="64" height="64" rx="16" fill="#04111d"/>
-  <circle cx="32" cy="32" r="21" fill="none" stroke="#bd9858" stroke-width="1.5"/>
-  <path d="M32 14 43 48h-6l-2.2-7H29l1.7-5h2.5L32 31.8 26.8 48H21L32 14Z" fill="#f4efe6"/>
-  <circle cx="32" cy="32" r="2" fill="#bd9858"/>
+  <path d="M32 16 42.5 49h-5.8l-2.1-6.8h-7.2l1.7-5.2H33l-1.2-4.1L26.6 49h-5.8L32 16Z" fill="#f8f7f2"/>
+  <path fill="#c7a35f" d="M32 2.5 34.5 8l5.2-3-1.8 5.8 5.8-1.8-3 5.2 5.5 2.5-5.5 2.5 3 5.2-5.8-1.8 1.8 5.8-5.2-3L32 31l-2.5-5.5-5.2 3 1.8-5.8-5.8 1.8 3-5.2-5.5-2.5 5.5-2.5-3-5.2 5.8 1.8-1.8-5.8 5.2 3Z"/>
+  <circle cx="32" cy="16.8" r="2.8" fill="#f8f7f2"/>
 </svg>
-
