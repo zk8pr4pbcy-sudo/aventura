@@ -949,6 +949,28 @@ html[dir="rtl"] .feature-media::after {
   left: -22px;
 }
 
+.experience-media-collage {
+  padding-bottom: 54px;
+}
+
+.feature-media .experience-media-primary {
+  aspect-ratio: 1.88 / 1;
+}
+
+.feature-media .experience-media-secondary {
+  position: absolute;
+  z-index: 2;
+  width: 38%;
+  max-width: 190px;
+  aspect-ratio: 3 / 4;
+  inset-inline-end: -10px;
+  bottom: 0;
+  object-fit: cover;
+  border: 6px solid var(--sand-100);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
 .feature-copy h2 {
   margin-bottom: 20px;
   font-size: clamp(2.25rem, 4.2vw, 4.3rem);
@@ -2675,6 +2697,16 @@ html[dir="rtl"] .purpose-card::after {
   .feature-media::after {
     right: -8px;
     bottom: -10px;
+  }
+
+  .experience-media-collage {
+    padding-bottom: 44px;
+  }
+
+  .feature-media .experience-media-secondary {
+    width: 36%;
+    inset-inline-end: -4px;
+    border-width: 4px;
   }
 
   html[dir="rtl"] .feature-media::after {
