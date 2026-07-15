@@ -2158,6 +2158,140 @@ html[dir="rtl"] .offer-card::after {
   border-top: 1px solid var(--line);
 }
 
+.about-story .feature-split {
+  align-items: start;
+}
+
+.about-story .feature-media {
+  position: sticky;
+  top: calc(var(--header-height) + 34px);
+}
+
+.about-story-copy > p + p {
+  margin-top: 18px;
+}
+
+.about-story-closing,
+.about-why-statement {
+  margin: 30px 0 0;
+  padding: 22px 24px;
+  color: var(--navy-900);
+  background: var(--sand-100);
+  border: 1px solid var(--sand-200);
+  border-inline-start: 4px solid var(--gold);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  line-height: 1.55;
+}
+
+html[lang="ar"] .about-story-closing,
+html[lang="ar"] .about-why-statement {
+  font-family: var(--font-arabic);
+  font-weight: 650;
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.purpose-card {
+  position: relative;
+  min-height: 520px;
+  padding: clamp(34px, 5vw, 58px);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.purpose-card::after {
+  position: absolute;
+  right: -24px;
+  bottom: -76px;
+  color: rgba(189, 152, 88, 0.07);
+  content: "A";
+  font-family: var(--font-display);
+  font-size: 15rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+html[dir="rtl"] .purpose-card::after {
+  right: auto;
+  left: -24px;
+}
+
+.purpose-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.purpose-card h2 {
+  margin: 20px 0;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+}
+
+.purpose-card > p + p {
+  margin-top: 18px;
+}
+
+.purpose-card-dark {
+  color: rgba(255, 255, 255, 0.68);
+  background: var(--navy-900);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.purpose-card-dark h2 {
+  color: var(--white);
+}
+
+.purpose-card-dark .eyebrow {
+  color: #dbc18e;
+}
+
+.purpose-card-dark .lead {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.about-value-card {
+  min-height: 290px;
+}
+
+.about-why-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+  gap: clamp(46px, 8vw, 112px);
+  align-items: start;
+}
+
+.about-why h2 {
+  margin-top: 14px;
+  font-size: clamp(2.45rem, 5vw, 5rem);
+}
+
+.about-why-copy > p + p {
+  margin-top: 20px;
+}
+
+.about-why-copy p {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.about-why-copy .lead {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.about-why-statement {
+  color: #f1dfbc;
+  background: rgba(189, 152, 88, 0.08);
+  border-color: rgba(189, 152, 88, 0.24);
+  border-inline-start-color: var(--gold);
+}
+
 @media (max-width: 1250px) {
   .header-plan {
     display: none;
@@ -2213,6 +2347,16 @@ html[dir="rtl"] .offer-card::after {
 
   .journey-pricing {
     width: min(100%, 620px);
+  }
+
+  .about-story .feature-media {
+    position: relative;
+    top: auto;
+  }
+
+  .purpose-grid,
+  .about-why-layout {
+    grid-template-columns: 1fr;
   }
 
   .nav-toggle {
@@ -2364,6 +2508,16 @@ html[dir="rtl"] .offer-card::after {
   .journey-step > span {
     width: 40px;
     height: 40px;
+  }
+
+  .purpose-card {
+    min-height: 0;
+    padding: 30px 26px;
+  }
+
+  .about-story-closing,
+  .about-why-statement {
+    padding: 20px;
   }
 
   .section-heading h2,
