@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact AVENTURA | Plan an Experience or Event</title>
+  <meta name="description" content="Contact AVENTURA in Jeddah to plan a private experience, event, guest program or corporate itinerary.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#04111d">
+  <link rel="canonical" href="https://aventuraksa.com/contact.html">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact AVENTURA">
+  <meta property="og:image" content="https://aventuraksa.com/assets/images/hero-jeddah.webp">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="contact" data-title-key="contact.metaTitle" data-description-key="contact.metaDescription">
+  <site-header></site-header>
+  <main id="main">
+    <section class="page-hero">
+      <img class="page-hero-media" src="assets/images/hero-jeddah.webp" width="1600" height="900" alt="" fetchpriority="high">
+      <div class="container">
+        <div class="page-hero-content" data-reveal>
+          <span class="eyebrow" data-i18n="contact.heroEyebrow">Contact</span>
+          <h1 data-i18n="contact.heroTitle">Start with the guests, date and occasion.</h1>
+          <p class="page-hero-description" data-i18n="contact.heroDescription">Send the essential details. We will help turn them into a practical first direction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <aside class="contact-panel" data-reveal>
+          <span class="eyebrow" data-i18n="contact.heroEyebrow">Contact</span>
+          <h2 data-i18n="contact.panelTitle">Talk to Aventura</h2>
+          <p data-i18n="contact.panelText">For a faster response, send your request through the form and it will open as a structured WhatsApp message.</p>
+          <div class="contact-methods">
+            <a class="contact-method" href="https://wa.me/966555884854" target="_blank" rel="noopener">
+              <span data-i18n="contact.phoneLabel">WhatsApp &amp; phone</span>
+              <strong dir="ltr">+966 55 588 4854</strong>
+            </a>
+            <a class="contact-method" href="mailto:amassiri@aventuraksa.com">
+              <span data-i18n="contact.email1Label">General inquiries</span>
+              <strong>amassiri@aventuraksa.com</strong>
+            </a>
+            <a class="contact-method" href="mailto:Waseem@aventuraksa.com">
+              <span data-i18n="contact.email2Label">Experience planning</span>
+              <strong>Waseem@aventuraksa.com</strong>
+            </a>
+            <div class="contact-method">
+              <span data-i18n="contact.locationLabel">Based in</span>
+              <strong data-i18n="common.jeddahSaudi">Jeddah, Saudi Arabia</strong>
+            </div>
+          </div>
+        </aside>
+
+        <form class="form-card" data-contact-form novalidate data-reveal>
+          <h2 data-i18n="contact.formTitle">Request details</h2>
+          <p class="lead" data-i18n="contact.formText">No payment is taken here. This form starts the planning conversation.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name" data-i18n="contact.nameLabel">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Your full name">
+            </div>
+            <div class="field">
+              <label for="company" data-i18n="contact.companyLabel">Company or organization</label>
+              <input id="company" name="company" type="text" autocomplete="organization" data-i18n-placeholder="contact.companyPlaceholder" placeholder="Optional">
+            </div>
+            <div class="field">
+              <label for="phone" data-i18n="contact.phoneFieldLabel">Mobile number</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" data-i18n-placeholder="contact.phonePlaceholder" placeholder="+966 ...">
+            </div>
+            <div class="field">
+              <label for="email" data-i18n="contact.emailLabel">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" dir="ltr" data-i18n-placeholder="contact.emailPlaceholder" placeholder="name@example.com">
+            </div>
+            <div class="field">
+              <label for="type" data-i18n="contact.typeLabel">Request type</label>
+              <select id="type" name="type">
+                <option value="" selected data-i18n="contact.typePlaceholder">Choose one</option>
+                <option value="experience" data-i18n="contact.typeExperience">Private experience</option>
+                <option value="event" data-i18n="contact.typeEvent">Event</option>
+                <option value="corporate" data-i18n="contact.typeCorporate">Corporate or delegation program</option>
+                <option value="collection" data-i18n="contact.typeCollection">Collection or guest gifts</option>
+                <option value="other" data-i18n="contact.typeOther">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="date" data-i18n="contact.dateLabel">Preferred date</label>
+              <input id="date" name="date" type="date">
+            </div>
+            <div class="field">
+              <label for="guests" data-i18n="contact.guestsLabel">Number of guests</label>
+              <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
+            </div>
+            <div class="field full">
+              <label for="message" data-i18n="contact.messageLabel">What would you like us to arrange?</label>
+              <textarea id="message" name="message" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Share the occasion, interests, timing and any important preferences."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-dark" type="submit" data-i18n="contact.submit">Continue on WhatsApp</button>
+            <span class="form-note" data-i18n="contact.note">By continuing, WhatsApp will open with your details. You can review the message before sending.</span>
+          </div>
+          <p class="form-status" data-form-status role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <site-footer></site-footer>
+</body>
+</html>
