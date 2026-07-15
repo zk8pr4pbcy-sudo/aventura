@@ -926,6 +926,7 @@ html[dir="rtl"] .service-card-link .service-card-action::after {
 
 .feature-media img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius-lg);
@@ -2485,6 +2486,36 @@ html[dir="rtl"] .purpose-card::after {
     order: 0;
   }
 
+  .experience-media-collage {
+    display: grid;
+    gap: 14px;
+    padding-bottom: 0;
+  }
+
+  .experience-media-collage::after {
+    display: none;
+  }
+
+  .feature-media .experience-media-primary,
+  .feature-media .experience-media-secondary {
+    position: static;
+    width: 100%;
+    max-width: none;
+    height: clamp(210px, 58vw, 300px);
+    aspect-ratio: auto;
+    border: 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .feature-media .experience-media-primary {
+    object-position: center;
+  }
+
+  .feature-media .experience-media-secondary {
+    object-position: center 62%;
+  }
+
   .image-feature-media {
     min-height: 420px;
   }
@@ -2697,16 +2728,6 @@ html[dir="rtl"] .purpose-card::after {
   .feature-media::after {
     right: -8px;
     bottom: -10px;
-  }
-
-  .experience-media-collage {
-    padding-bottom: 44px;
-  }
-
-  .feature-media .experience-media-secondary {
-    width: 36%;
-    inset-inline-end: -4px;
-    border-width: 4px;
   }
 
   html[dir="rtl"] .feature-media::after {
