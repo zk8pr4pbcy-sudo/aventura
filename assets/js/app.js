@@ -22,9 +22,10 @@
       '    <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">',
       '      <a class="nav-link" data-nav="home" href="index.html"><span data-i18n="nav.home">Home</span></a>',
       '      <a class="nav-link" data-nav="experiences" href="experiences.html"><span data-i18n="nav.experiences">Experiences</span></a>',
+      '      <a class="nav-link" data-nav="corporate" href="corporate.html"><span data-i18n="nav.corporate">Corporate</span></a>',
       '      <a class="nav-link" data-nav="events" href="events.html"><span data-i18n="nav.events">Events</span></a>',
       '      <a class="nav-link" data-nav="services" href="services.html"><span data-i18n="nav.services">Services</span></a>',
-      '      <a class="nav-link" data-nav="collection" href="collection.html"><span data-i18n="nav.collection">Collection</span></a>',
+      '      <a class="nav-link" data-nav="collection" href="collection.html"><span data-i18n="nav.collection">Boutique</span></a>',
       '      <a class="nav-link" data-nav="about" href="about.html"><span data-i18n="nav.about">About</span></a>',
       '      <a class="nav-link" data-nav="contact" href="contact.html"><span data-i18n="nav.contact">Contact</span></a>',
       '    </nav>',
@@ -57,9 +58,10 @@
       '      <h3 data-i18n="footer.explore">Explore</h3>',
       '      <ul class="footer-links">',
       '        <li><a href="experiences.html" data-i18n="nav.experiences">Experiences</a></li>',
+      '        <li><a href="corporate.html" data-i18n="nav.corporate">Corporate</a></li>',
       '        <li><a href="events.html" data-i18n="nav.events">Events</a></li>',
       '        <li><a href="services.html" data-i18n="nav.services">Services</a></li>',
-      '        <li><a href="collection.html" data-i18n="nav.collection">Collection</a></li>',
+      '        <li><a href="collection.html" data-i18n="nav.collection">Boutique</a></li>',
       '      </ul>',
       '    </div>',
       '    <div class="footer-column">',
@@ -232,26 +234,89 @@
     window.addEventListener("scroll", updateHeader, { passive: true });
 
     if (toggle && nav) {
+      function closeMenu() {
+        document.body.classList.remove("nav-open");
+        if (header) {
+          header.classList.remove("menu-open");
+        }
+        toggle.setAttribute("aria-expanded", "false");
+      }
+
       toggle.addEventListener("click", function () {
         var willOpen = !document.body.classList.contains("nav-open");
         document.body.classList.toggle("nav-open", willOpen);
+        if (header) {
+          header.classList.toggle("menu-open", willOpen);
+        }
         toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
       });
 
       nav.addEventListener("click", function (event) {
         if (event.target.closest("a")) {
-          document.body.classList.remove("nav-open");
-          toggle.setAttribute("aria-expanded", "false");
+          closeMenu();
         }
       });
 
       document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
-          document.body.classList.remove("nav-open");
-          toggle.setAttribute("aria-expanded", "false");
+          closeMenu();
         }
       });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) {
+          closeMenu();
+        }
+      }, { passive: true });
     }
+  }
+
+  function setupBoutiqueFilters() {
+    var boutique = document.querySelector("[data-boutique]");
+    if (!boutique) {
+      return;
+    }
+
+    var buttons = Array.from(boutique.querySelectorAll("[data-boutique-filter]"));
+    var items = Array.from(boutique.querySelectorAll("[data-boutique-item]"));
+    var allowed = ["all", "sea", "historic", "desert", "taif", "jeddah", "corporate"];
+    var query = new URLSearchParams(window.location.search);
+    var initial = query.get("experience") || "all";
+
+    if (allowed.indexOf(initial) === -1) {
+      initial = "all";
+    }
+
+    function applyFilter(filter, updateUrl) {
+      items.forEach(function (item) {
+        var categories = (item.getAttribute("data-category") || "").split(/\s+/).filter(Boolean);
+        item.hidden = filter !== "all" && categories.indexOf(filter) === -1;
+      });
+
+      buttons.forEach(function (button) {
+        var active = button.getAttribute("data-boutique-filter") === filter;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      if (updateUrl && window.history && window.history.replaceState) {
+        var url = new URL(window.location.href);
+        if (filter === "all") {
+          url.searchParams.delete("experience");
+        } else {
+          url.searchParams.set("experience", filter);
+        }
+        window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+      }
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        applyFilter(button.getAttribute("data-boutique-filter"), true);
+      });
+    });
+
+    applyFilter(initial, false);
   }
 
   function setupReveals() {
@@ -298,10 +363,53 @@
 
     var query = new URLSearchParams(window.location.search);
     var requestedType = query.get("type");
-    var allowedTypes = ["experience", "event", "corporate", "collection", "other"];
+    var allowedTypes = ["experience", "event", "corporate", "service", "collection", "other"];
     var typeField = form.querySelector('[name="type"]');
     if (typeField && allowedTypes.indexOf(requestedType) !== -1) {
       typeField.value = requestedType;
+    }
+
+    var requestKeys = {
+      "planning": "services.s1Title",
+      "meet-assist": "services.s2Title",
+      "transport": "services.s3Title",
+      "guide": "services.s4Title",
+      "hospitality": "services.s5Title",
+      "destination": "services.s6Title",
+      "thobe": "services.s7Title",
+      "abaya": "services.s8Title",
+      "golden-hour": "experiences.goldenTitle",
+      "sea-to-balad": "experiences.signature1Title",
+      "jeddah-day": "experiences.jeddahTitle",
+      "sea-box": "collection.box1Title",
+      "historic-box": "collection.box2Title",
+      "desert-box": "collection.box3Title",
+      "taif-box": "collection.box4Title",
+      "jeddah-box": "collection.box5Title",
+      "executive-arrival": "corporate.package1Title",
+      "leadership-half-day": "corporate.package2Title",
+      "team-discovery": "corporate.package3Title"
+    };
+    var requestedItem = query.get("request");
+    var requestKey = requestKeys[requestedItem];
+    var messageField = form.querySelector('[name="message"]');
+
+    function applyRequestedItem() {
+      if (!requestKey || !messageField) {
+        return;
+      }
+      if (!messageField.value || messageField.dataset.autofilled === "true") {
+        messageField.value = translate("contact.requestedItem") + ": " + translate(requestKey);
+        messageField.dataset.autofilled = "true";
+      }
+    }
+
+    applyRequestedItem();
+    document.addEventListener("aventura:language", applyRequestedItem);
+    if (messageField) {
+      messageField.addEventListener("input", function () {
+        messageField.dataset.autofilled = "false";
+      });
     }
 
     form.addEventListener("submit", function (event) {
@@ -376,6 +484,7 @@
     setupLanguageSwitcher();
     applyLanguage(getInitialLanguage(), false);
     setupHeader();
+    setupBoutiqueFilters();
     setupReveals();
     setupCurrentYear();
     setupContactForm();

@@ -2,7 +2,7 @@
   "name": "AVENTURA",
   "short_name": "AVENTURA",
   "description": "Private experiences, events and hospitality in Saudi Arabia.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#04111d",
   "theme_color": "#04111d",
@@ -15,4 +15,3 @@
     }
   ]
 }
-
