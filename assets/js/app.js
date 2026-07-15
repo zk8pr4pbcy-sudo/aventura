@@ -24,6 +24,7 @@
       '      <a class="nav-link" data-nav="services" href="services.html"><span data-i18n="nav.services">Services</span></a>',
       '      <a class="nav-link" data-nav="collection" href="collection.html"><span data-i18n="nav.collection">Boutique</span></a>',
       '      <a class="nav-link" data-nav="about" href="about.html"><span data-i18n="nav.about">About</span></a>',
+      '      <a class="nav-link" data-nav="partners" href="partners.html"><span data-i18n="nav.partners">Partner with us</span></a>',
       '      <a class="nav-link" data-nav="contact" href="contact.html"><span data-i18n="nav.contact">Contact</span></a>',
       '    </nav>',
       '    <div class="header-actions">',
@@ -65,6 +66,7 @@
       '      <h3 data-i18n="footer.company">Company</h3>',
       '      <ul class="footer-links">',
       '        <li><a href="about.html" data-i18n="nav.about">About</a></li>',
+      '        <li><a href="partners.html" data-i18n="nav.partners">Partner with us</a></li>',
       '        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>',
       '        <li><a href="faq.html" data-i18n="footer.faq">Frequently asked questions</a></li>',
       '        <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>',
@@ -83,6 +85,7 @@
       '  <div class="container footer-bottom">',
       '    <span>© <span data-current-year></span> AVENTURA. <span data-i18n="footer.rights">All rights reserved.</span></span>',
       '    <div class="footer-bottom-links">',
+      '      <a href="partners.html" data-i18n="nav.partners">Partner with us</a>',
       '      <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a>',
       '      <a href="contact.html" data-i18n="nav.contact">Contact</a>',
       '    </div>',
@@ -474,6 +477,83 @@
     });
   }
 
+  function setupPartnerForm() {
+    var form = document.querySelector("[data-partner-form]");
+    if (!form) {
+      return;
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var data = new FormData(form);
+      var partnerType = String(data.get("partnerType") || "").trim();
+      var name = String(data.get("name") || "").trim();
+      var country = String(data.get("country") || "").trim();
+      var city = String(data.get("city") || "").trim();
+      var category = String(data.get("category") || "").trim();
+      var phone = String(data.get("phone") || "").trim();
+      var email = String(data.get("email") || "").trim();
+      var message = String(data.get("message") || "").trim();
+      var consent = String(data.get("consent") || "").trim();
+      var status = form.querySelector("[data-partner-status]");
+
+      if (!partnerType || !name || !country || !city || !category || (!phone && !email) || !message || !consent) {
+        if (status) {
+          status.textContent = translate("partners.error");
+        }
+        return;
+      }
+
+      if (status) {
+        status.textContent = "";
+      }
+
+      var typeKey = partnerType === "organization" ? "partners.typeOrgTitle" : "partners.typeProTitle";
+      var categoryOption = form.querySelector('[name="category"] option:checked');
+      var categoryText = categoryOption ? categoryOption.textContent.trim() : category;
+      var lines = [
+        translate("partners.whatsappIntro"),
+        "",
+        translate("partners.typeLegend") + ": " + translate(typeKey),
+        translate("partners.nameLabel") + ": " + name
+      ];
+
+      [
+        ["brand", "partners.brandLabel"],
+        ["country", "partners.countryLabel"],
+        ["city", "partners.cityLabel"],
+        ["phone", "partners.phoneLabel"],
+        ["email", "partners.emailLabel"]
+      ].forEach(function (row) {
+        var value = String(data.get(row[0]) || "").trim();
+        if (value) {
+          lines.push(translate(row[1]) + ": " + value);
+        }
+      });
+
+      lines.push(translate("partners.categoryLabel") + ": " + categoryText);
+
+      [
+        ["website", "partners.websiteLabel"],
+        ["experience", "partners.experienceLabel"],
+        ["license", "partners.licenseLabel"],
+        ["languages", "partners.languagesLabel"],
+        ["coverage", "partners.coverageLabel"],
+        ["capacity", "partners.capacityLabel"],
+        ["message", "partners.messageLabel"]
+      ].forEach(function (row) {
+        var value = String(data.get(row[0]) || "").trim();
+        if (value) {
+          lines.push(translate(row[1]) + ": " + value);
+        }
+      });
+
+      var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+      window.open(url, "_blank", "noopener");
+    });
+  }
+
   function setupExternalLinks() {
     document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
       var rel = (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
@@ -493,6 +573,7 @@
     setupReveals();
     setupCurrentYear();
     setupContactForm();
+    setupPartnerForm();
     setupExternalLinks();
     document.documentElement.classList.add("app-ready");
   }
