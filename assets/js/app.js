@@ -326,8 +326,220 @@
     applyFilter(initial, false);
   }
 
+  function setupExperienceDetail() {
+    var root = document.querySelector("[data-experience-detail]");
+    if (!root) {
+      return;
+    }
+
+    var sets = {
+      sea: {
+        request: "sea",
+        perfume: { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp" },
+        products: [
+          ["sea-tote", "product-sea", "collection.productSea1Short", "collection.productSea1Title", "collection.productSea1Text"],
+          ["sea-towel", "product-sea", "collection.productSea2Short", "collection.productSea2Title", "collection.productSea2Text"],
+          ["sea-phone", "product-sea", "collection.productSea3Short", "collection.productSea3Title", "collection.productSea3Text"],
+          ["sea-bottle", "product-sea", "collection.productSea4Short", "collection.productSea4Title", "collection.productSea4Text"]
+        ],
+        box: ["sea-box", "box-sea", "RED SEA · AVENTURA", "collection.box1Title", "collection.box1Text", ["collection.box1Item1", "collection.box1Item2", "collection.box1Item3", "collection.box1Item4"]]
+      },
+      golden: { alias: "sea", request: "golden-hour" },
+      sunset: { alias: "sea", request: "sunset-moment" },
+      bayadah: { alias: "sea", request: "bayadah-day" },
+      "grand-bayadah": { alias: "sea", request: "bayadah-grand" },
+      historic: {
+        request: "historic-walk",
+        perfume: { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp" },
+        products: [
+          ["roshan-keepsake", "product-historic", "collection.productHistoric1Short", "collection.productHistoric1Title", "collection.productHistoric1Text"],
+          ["saudi-hospitality", "product-historic", "collection.productHospitalityShort", "collection.productHospitalityTitle", "collection.productHospitalityText"],
+          ["heritage-cards", "product-historic", "collection.productHistoric2Short", "collection.productHistoric2Title", "collection.productHistoric2Text"]
+        ],
+        box: ["historic-box", "box-historic", "ROSHAN · AVENTURA", "collection.box2Title", "collection.box2Text", ["collection.box2Item1", "collection.box2Item2", "collection.box2Item3", "collection.box2Item4"]]
+      },
+      desert: {
+        request: "desert",
+        perfume: { id: "perfume-last-light", titleKey: "collection.p3Title", textKey: "collection.p3Text" },
+        products: [
+          ["desert-shawl", "product-desert", "collection.productDesert1Short", "collection.productDesert1Title", "collection.productDesert1Text"],
+          ["desert-cup", "product-desert", "collection.productDesert2Short", "collection.productDesert2Title", "collection.productDesert2Text"],
+          ["saudi-hospitality", "product-desert", "collection.productHospitalityShort", "collection.productHospitalityTitle", "collection.productHospitalityText"],
+          ["desert-keepsake", "product-desert", "collection.productDesert3Short", "collection.productDesert3Title", "collection.productDesert3Text"]
+        ],
+        box: ["desert-box", "box-desert", "LAST LIGHT · AVENTURA", "collection.box3Title", "collection.box3Text", ["collection.box3Item1", "collection.box3Item2", "collection.box3Item3", "collection.box3Item4"]]
+      },
+      taif: {
+        request: "taif",
+        perfume: { id: "perfume-taif", titleKey: "collection.p4Title", textKey: "experienceDetail.perfumeTaifText", image: "assets/images/perfumes/perfume-taif.webp" },
+        products: [
+          ["taif-rose-water", "product-taif", "collection.productTaif1Short", "collection.productTaif1Title", "collection.productTaif1Text", true],
+          ["taif-rose-care", "product-taif", "collection.productTaif4Short", "collection.productTaif4Title", "collection.productTaif4Text", true],
+          ["taif-honey", "product-taif", "collection.productTaif2Short", "collection.productTaif2Title", "collection.productTaif2Text", true],
+          ["taif-sachet", "product-taif", "collection.productTaif3Short", "collection.productTaif3Title", "collection.productTaif3Text", true]
+        ],
+        box: ["taif-box", "box-taif", "TAIF ROSE · AVENTURA", "collection.box4Title", "collection.box4Text", ["collection.box4Item1", "collection.box4Item2", "collection.box4Item3", "collection.box4Item4"]]
+      },
+      jeddah: {
+        request: "jeddah-day",
+        perfumes: [
+          { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp" },
+          { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp" }
+        ],
+        products: [
+          ["sea-phone", "product-sea", "collection.productSea3Short", "collection.productSea3Title", "collection.productSea3Text"],
+          ["sea-bottle", "product-sea", "collection.productSea4Short", "collection.productSea4Title", "collection.productSea4Text"],
+          ["roshan-keepsake", "product-historic", "collection.productHistoric1Short", "collection.productHistoric1Title", "collection.productHistoric1Text"],
+          ["saudi-hospitality", "product-historic", "collection.productHospitalityShort", "collection.productHospitalityTitle", "collection.productHospitalityText"]
+        ],
+        box: ["jeddah-signature-box", "box-jeddah", "JEDDAH SIGNATURE · AVENTURA", "experienceDetail.jeddahBoxTitle", "experienceDetail.jeddahBoxText", ["collection.productSea3Title", "collection.productSea4Title", "collection.productHistoric1Title", "collection.productHospitalityTitle"]]
+      },
+      "sea-to-balad": { alias: "jeddah", request: "sea-to-balad" }
+    };
+
+    var experienceId = root.getAttribute("data-experience-id");
+    var config = sets[experienceId];
+    if (!config) {
+      return;
+    }
+
+    if (config.alias) {
+      var base = sets[config.alias];
+      config = Object.assign({}, base, { request: config.request });
+    }
+
+    var perfumes = config.perfumes || [config.perfume];
+
+    function quantityMarkup(id) {
+      return '<label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="' + id + '"></label>';
+    }
+
+    function perfumeMarkup(perfume) {
+      var visual = perfume.image
+        ? '<div class="detail-perfume-visual"><img src="' + perfume.image + '" width="900" height="1125" loading="eager" decoding="async" alt=""></div>'
+        : '<div class="detail-perfume-visual perfume-card-pending"><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="collection.lastLightPending">Marketing card in preparation</strong></div></div>';
+      return '<article class="catalog-product-card detail-perfume-product" data-reveal>' + visual +
+        '<div class="catalog-product-content"><span class="status coming" data-i18n="common.comingSoon">Coming soon</span>' +
+        '<h3 data-i18n="' + perfume.titleKey + '">Aventura fragrance</h3><p data-i18n="' + perfume.textKey + '">An experience-inspired fragrance.</p>' +
+        '<div class="catalog-card-actions">' + quantityMarkup(perfume.id) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + perfume.id + '" data-quote-label-key="' + perfume.titleKey + '" data-i18n="collection.addItem">Add to quote</button></div></div></article>';
+    }
+
+    function productMarkup(product) {
+      var seasonal = product[5];
+      return '<article class="catalog-product-card" data-reveal><div class="catalog-product-visual ' + product[1] + '"><span>AVENTURA</span><strong data-i18n="' + product[2] + '">Product</strong></div>' +
+        '<div class="catalog-product-content"><span class="status' + (seasonal ? '' : ' available') + '" data-i18n="' + (seasonal ? 'common.seasonal' : 'common.madeToOrder') + '">' + (seasonal ? 'Seasonal' : 'Made to order') + '</span>' +
+        '<h3 data-i18n="' + product[3] + '">Product</h3><p data-i18n="' + product[4] + '">Product details.</p>' +
+        '<div class="catalog-card-actions">' + quantityMarkup(product[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + product[0] + '" data-quote-label-key="' + product[3] + '" data-i18n="collection.addItem">Add to quote</button></div></div></article>';
+    }
+
+    function boxMarkup(box) {
+      var items = box[5].map(function (key) { return '<li data-i18n="' + key + '">Collection item</li>'; }).join("");
+      return '<article class="boutique-card experience-complete-box" data-reveal><div class="box-preview ' + box[1] + '"><div class="box-shell"><span class="box-monogram">A</span><span class="box-name">' + box[2] + '</span></div></div>' +
+        '<div class="boutique-card-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="' + box[3] + '">Complete collection</h3><p data-i18n="' + box[4] + '">Complete experience collection.</p><ul class="box-items">' + items + '</ul>' +
+        '<div class="catalog-card-actions">' + quantityMarkup(box[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + box[0] + '" data-quote-label-key="' + box[3] + '" data-i18n="collection.addBox">Add box to quote</button></div></div></article>';
+    }
+
+    var requestHref = "contact.html?type=experience&request=" + encodeURIComponent(config.request);
+    var relatedIds = perfumes.map(function (perfume) { return perfume.id; })
+      .concat(config.products.map(function (product) { return product[0]; }), [config.box[0]]);
+
+    root.setAttribute("data-related-items", relatedIds.join(","));
+    root.setAttribute("data-experience-request-key", config.request);
+    root.innerHTML = [
+      '<section class="section experience-products-section" id="experience-products">',
+      '  <div class="container">',
+      '    <div class="section-heading" data-reveal><div><span class="eyebrow" data-i18n="experienceDetail.productsEyebrow">Complete your experience</span><h2 data-i18n="experienceDetail.productsTitle">Products chosen for this experience</h2></div><p data-i18n="experienceDetail.productsText">Choose only what fits your guest. Products are optional and added to the same tailored quotation.</p></div>',
+      '    <div class="catalog-product-grid detail-product-grid">' + perfumes.map(perfumeMarkup).join("") + config.products.map(productMarkup).join("") + '</div>',
+      '  </div>',
+      '</section>',
+      '<section class="section section-muted experience-box-section" id="experience-box">',
+      '  <div class="container">',
+      '    <div class="section-heading" data-reveal><div><span class="eyebrow" data-i18n="experienceDetail.boxEyebrow">The complete collection</span><h2 data-i18n="experienceDetail.boxTitle">Everything in one considered set</h2></div><p data-i18n="experienceDetail.boxText">Choose the complete box when you prefer the full experience identity prepared as one request.</p></div>',
+      boxMarkup(config.box),
+      '  </div>',
+      '</section>',
+      '<section class="cta-band"><div class="container cta-inner" data-reveal><div><h2 data-i18n="experienceDetail.requestTitle">Ready to shape the experience?</h2><p data-i18n="experienceDetail.requestText">Send the date, guest count and timing. Any selected products will be included in the same request.</p></div><a class="btn" href="' + requestHref + '" data-experience-request data-i18n="experiences.quoteButton">Request a custom quote</a></div></section>',
+      '<div class="quote-selection-bar" data-quote-bar hidden><div><span data-i18n="collection.selectionLabel">Your selections</span><strong><span data-quote-count>0</span> <span data-i18n="collection.selectionItems">items</span></strong></div><button class="btn btn-sm" type="button" data-open-quote data-i18n="collection.reviewSelection">Review selections</button></div>',
+      '<dialog class="quote-selection-dialog" data-quote-dialog aria-labelledby="detailQuoteTitle"><div class="quote-dialog-head"><div><span class="eyebrow" data-i18n="collection.selectionLabel">Your selections</span><h2 id="detailQuoteTitle" data-i18n="collection.dialogTitle">Review your request</h2></div><button class="dialog-close" type="button" data-close-quote aria-label="Close">×</button></div><div class="quote-dialog-list" data-quote-list></div><p class="form-note" data-i18n="collection.quoteDisclaimer">Sending the request does not confirm booking or availability.</p><div class="quote-dialog-actions"><button class="btn btn-dark" type="button" data-continue-quote data-i18n="experiences.quoteButton">Request a custom quote</button><button class="text-link" type="button" data-clear-quote data-i18n="collection.clearSelection">Clear selections</button></div></dialog>',
+      '<dialog class="experience-product-dialog" data-experience-product-dialog aria-labelledby="productReminderTitle"><div class="experience-reminder-handle" aria-hidden="true"></div><span class="eyebrow" data-i18n="experienceDetail.reminderEyebrow">Before you continue</span><h2 id="productReminderTitle" data-i18n="experienceDetail.reminderTitle">Would you like to complete the experience?</h2><p data-i18n="experienceDetail.reminderText">We selected products connected to this experience. You can review them or continue without additions.</p><div class="experience-reminder-actions"><button class="btn btn-dark" type="button" data-view-experience-products data-i18n="experienceDetail.viewProducts">View experience products</button><button class="text-link" type="button" data-continue-without-products data-i18n="experienceDetail.continueWithout">Continue without products</button></div></dialog>'
+    ].join("");
+
+    document.querySelectorAll("[data-experience-request]").forEach(function (button) {
+      button.setAttribute("data-related-items", relatedIds.join(","));
+    });
+
+    var reminder = root.querySelector("[data-experience-product-dialog]");
+    var pendingHref = requestHref;
+    var bypassKey = "aventura_product_reminder_" + experienceId;
+
+    function readSelections() {
+      try {
+        return JSON.parse(sessionStorage.getItem("aventura_quote_selection") || "{}") || {};
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function selectedItems(state) {
+      return relatedIds.filter(function (id) { return Boolean(state[id]); });
+    }
+
+    function hrefWithSelections(href, state) {
+      var selected = selectedItems(state);
+      if (!selected.length) {
+        return href;
+      }
+      var url = new URL(href, window.location.href);
+      url.searchParams.set("items", selected.map(function (id) {
+        return id + ":" + Math.max(1, Number(state[id].quantity) || 1);
+      }).join(","));
+      url.searchParams.set("lang", currentLanguage);
+      return url.pathname + url.search;
+    }
+
+    document.querySelectorAll("[data-experience-request]").forEach(function (button) {
+      button.addEventListener("click", function (event) {
+        var state = readSelections();
+        var selected = selectedItems(state);
+        pendingHref = hrefWithSelections(button.getAttribute("href"), state);
+        var bypassed = false;
+        try { bypassed = sessionStorage.getItem(bypassKey) === "1"; } catch (error) { /* Ignore. */ }
+        if (selected.length || bypassed || !reminder) {
+          if (pendingHref !== button.getAttribute("href")) {
+            event.preventDefault();
+            window.location.href = pendingHref;
+          }
+          return;
+        }
+        event.preventDefault();
+        try { sessionStorage.setItem(bypassKey, "1"); } catch (error) { /* Ignore. */ }
+        if (typeof reminder.showModal === "function") {
+          reminder.showModal();
+        } else {
+          reminder.setAttribute("open", "");
+        }
+      });
+    });
+
+    var viewProducts = root.querySelector("[data-view-experience-products]");
+    if (viewProducts) {
+      viewProducts.addEventListener("click", function () {
+        reminder.close();
+        document.getElementById("experience-products").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+
+    var continueWithout = root.querySelector("[data-continue-without-products]");
+    if (continueWithout) {
+      continueWithout.addEventListener("click", function () {
+        try { sessionStorage.setItem(bypassKey, "1"); } catch (error) { /* Ignore. */ }
+        window.location.href = pendingHref;
+      });
+    }
+  }
+
   function setupBoutiqueQuoteSelection() {
-    var boutique = document.querySelector("[data-boutique]");
+    var boutique = document.querySelector("[data-boutique], [data-experience-detail]");
     if (!boutique) {
       return;
     }
@@ -436,7 +648,11 @@
         return id + ":" + Math.max(1, Number(state[id].quantity) || 1);
       }).join(",");
       var url = new URL("contact.html", window.location.href);
-      url.searchParams.set("type", "collection");
+      var detail = document.querySelector("[data-experience-detail]");
+      url.searchParams.set("type", detail ? "experience" : "collection");
+      if (detail && detail.getAttribute("data-experience-request-key")) {
+        url.searchParams.set("request", detail.getAttribute("data-experience-request-key"));
+      }
       url.searchParams.set("items", encodedItems);
       url.searchParams.set("lang", currentLanguage);
       return url.pathname + url.search;
@@ -585,6 +801,9 @@
       "historic-dinner": "experiences.dinnerNoteTitle",
       "sea-to-balad": "experiences.signature1Title",
       "jeddah-day": "experiences.jeddahTitle",
+      "sea": "experiences.seaTitle",
+      "desert": "experiences.desertTitle",
+      "taif": "experiences.taifTitle",
       "sea-box": "collection.box1Title",
       "historic-box": "collection.box2Title",
       "desert-box": "collection.box3Title",
@@ -602,6 +821,15 @@
       "taif-rose-water": "collection.productTaif1Title",
       "taif-honey": "collection.productTaif2Title",
       "taif-sachet": "collection.productTaif3Title",
+      "taif-rose-care": "collection.productTaif4Title",
+      "desert-keepsake": "collection.productDesert3Title",
+      "jeddah-signature-box": "experienceDetail.jeddahBoxTitle",
+      "perfume-sea": "collection.p1Title",
+      "perfume-roshan": "collection.p2Title",
+      "perfume-last-light": "collection.p3Title",
+      "perfume-taif": "collection.p4Title",
+      "perfume-noir": "collection.noirTitle",
+      "perfume-velvet": "collection.velvetTitle",
       "executive-arrival": "corporate.package1Title",
       "leadership-half-day": "corporate.package2Title",
       "team-discovery": "corporate.package3Title"
@@ -851,6 +1079,7 @@
   function init() {
     registerComponents();
     setupLanguageSwitcher();
+    setupExperienceDetail();
     applyLanguage(getInitialLanguage(), false);
     setupHeader();
     setupBoutiqueFilters();

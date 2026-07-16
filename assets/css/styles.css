@@ -3924,6 +3924,284 @@ html[dir="rtl"] .purpose-card::after {
   }
 }
 
+.experience-index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.experience-index-grid-compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.experience-index-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-index-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.experience-index-card > a {
+  display: grid;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.experience-index-card img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 28vw, 360px);
+  object-fit: cover;
+}
+
+.experience-index-card > a > div {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.experience-index-card span {
+  margin-bottom: 14px;
+  color: var(--gold-dark);
+  font-size: 0.68rem;
+  font-weight: 820;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+html[dir="rtl"] .experience-index-card span {
+  letter-spacing: 0;
+}
+
+.experience-index-card h3 {
+  margin-bottom: 12px;
+  color: var(--navy-900);
+  font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+}
+
+.experience-index-card p {
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+.experience-index-card strong {
+  margin-top: auto;
+  color: var(--navy-900);
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 5px;
+}
+
+.experience-detail-hero .page-hero-content {
+  max-width: 840px;
+}
+
+.detail-back {
+  display: inline-flex;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.74rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.detail-back::before {
+  margin-inline-end: 8px;
+  content: "←";
+}
+
+html[dir="rtl"] .detail-back::before {
+  content: "→";
+}
+
+.experience-detail-hero .tag {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.experience-detail-hero .text-link {
+  color: var(--white);
+}
+
+.experience-products-section,
+.experience-box-section {
+  scroll-margin-top: 92px;
+}
+
+.detail-product-grid {
+  align-items: stretch;
+}
+
+.detail-perfume-product {
+  border-color: rgba(189, 152, 88, 0.38);
+}
+
+.detail-perfume-visual {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-950);
+}
+
+.detail-perfume-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.detail-perfume-visual.perfume-card-pending {
+  min-height: 355px;
+  aspect-ratio: auto;
+  align-items: end;
+}
+
+.experience-complete-box {
+  width: min(100%, 1040px);
+  min-height: 430px;
+  margin-inline: auto;
+}
+
+.perfume-showcase-featured {
+  padding-top: clamp(82px, 9vw, 128px);
+}
+
+.perfume-card-with-actions {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.perfume-card-actions {
+  display: flex;
+  padding: 20px 22px 22px;
+  align-items: center;
+  gap: 18px;
+  justify-content: space-between;
+  color: var(--white);
+  background: rgba(3, 15, 26, 0.96);
+}
+
+.perfume-card-actions h3 {
+  color: var(--white);
+  font-size: 1.05rem;
+}
+
+.perfume-card-actions .text-link {
+  flex: 0 0 auto;
+  color: var(--gold-light);
+}
+
+.perfume-card-with-actions.perfume-card-pending {
+  padding: 34px;
+}
+
+.perfume-card-with-actions.perfume-card-pending .perfume-card-actions {
+  margin: auto -34px -34px;
+}
+
+.experience-product-dialog {
+  width: min(calc(100% - 32px), 680px);
+  margin: auto auto 0;
+  padding: 16px clamp(24px, 5vw, 44px) 34px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 26px 26px 0 0;
+  box-shadow: 0 -24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.experience-product-dialog::backdrop {
+  background: rgba(2, 10, 18, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.experience-reminder-handle {
+  width: 46px;
+  height: 4px;
+  margin: 0 auto 28px;
+  background: var(--sand-300);
+  border-radius: 999px;
+}
+
+.experience-product-dialog h2 {
+  margin: 8px 0 12px;
+  color: var(--navy-900);
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.experience-product-dialog p {
+  color: var(--muted);
+}
+
+.experience-reminder-actions {
+  display: flex;
+  margin-top: 26px;
+  align-items: center;
+  gap: 22px;
+  justify-content: space-between;
+}
+
+.experience-reminder-actions .text-link {
+  color: var(--navy-900);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .experience-index-grid,
+  .experience-index-grid-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-complete-box {
+    grid-template-columns: minmax(210px, 0.82fr) minmax(0, 1.18fr);
+  }
+}
+
+@media (max-width: 660px) {
+  .experience-index-card img {
+    height: 230px;
+  }
+
+  .experience-index-card > a > div {
+    padding: 25px;
+  }
+
+  .experience-detail-hero .page-hero-content {
+    padding-bottom: 54px;
+  }
+
+  .experience-complete-box {
+    grid-template-columns: 1fr;
+  }
+
+  .perfume-card-actions,
+  .experience-reminder-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .perfume-card-actions .text-link,
+  .experience-reminder-actions > * {
+    width: 100%;
+  }
+
+  .experience-product-dialog {
+    width: 100%;
+    max-height: 86vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
