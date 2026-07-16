@@ -1402,6 +1402,468 @@ html[dir="rtl"] .product-card::after {
   font-size: 0.84rem;
 }
 
+.boutique-hero .page-hero-media {
+  object-position: center 58%;
+}
+
+.boutique-process .process-step {
+  min-height: 250px;
+}
+
+.process-index {
+  display: inline-flex;
+  margin-bottom: 38px;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.box-executive {
+  --box-deep: #0b1624;
+  --box-mid: #28384d;
+  --box-accent: #d9bc7a;
+}
+
+.catalog-card-actions {
+  display: flex;
+  align-items: end;
+  gap: 18px;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.quantity-control {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 760;
+}
+
+.quantity-control input {
+  width: 76px;
+  min-height: 42px;
+  padding: 8px 10px;
+  color: var(--navy-900);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+.quote-add-button {
+  padding: 8px 0;
+  color: var(--navy-900);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: start;
+}
+
+.quote-add-button.is-added {
+  color: #205e52;
+}
+
+.catalog-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.catalog-product-card {
+  display: flex;
+  min-height: 500px;
+  overflow: hidden;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.catalog-product-visual {
+  position: relative;
+  display: flex;
+  min-height: 218px;
+  padding: 24px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.82);
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, #16465f, #071c2d);
+  isolation: isolate;
+}
+
+.catalog-product-visual::before,
+.catalog-product-visual::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.catalog-product-visual::before {
+  top: -80px;
+  inset-inline-end: -45px;
+  width: 190px;
+  height: 190px;
+}
+
+.catalog-product-visual::after {
+  bottom: -100px;
+  inset-inline-start: -80px;
+  width: 220px;
+  height: 220px;
+}
+
+.catalog-product-visual > span {
+  color: var(--gold-light);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.catalog-product-visual > strong {
+  max-width: 80%;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+html[lang="ar"] .catalog-product-visual > strong {
+  font-family: var(--font-arabic);
+  font-weight: 650;
+}
+
+.product-historic {
+  background: linear-gradient(145deg, #7a4b31, #2d1712);
+}
+
+.product-desert {
+  background: linear-gradient(145deg, #9a714d, #3a2419);
+}
+
+.product-taif {
+  background: linear-gradient(145deg, #9c667e, #3e2030);
+}
+
+.product-hospitality {
+  background: linear-gradient(145deg, #9a713a, #342416);
+}
+
+.catalog-product-content {
+  display: flex;
+  padding: 26px;
+  flex: 1;
+  flex-direction: column;
+}
+
+.catalog-product-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.catalog-product-content > p {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.perfume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.perfume-card {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: #071726;
+  border: 1px solid rgba(222, 190, 124, 0.24);
+  border-radius: var(--radius-md);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.2);
+}
+
+.perfume-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.perfume-card > .status {
+  position: absolute;
+  top: 18px;
+  inset-inline-end: 18px;
+  margin: 0;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.2);
+}
+
+.status.coming {
+  color: #79561f;
+  background: #fff4d9;
+  border-color: #e4c98f;
+}
+
+.perfume-card-pending {
+  display: grid;
+  min-height: 100%;
+  aspect-ratio: 4 / 5;
+  padding: clamp(32px, 5vw, 52px);
+  align-items: end;
+  color: var(--white);
+  background: radial-gradient(circle at 72% 18%, rgba(225, 176, 102, 0.28), transparent 30%), linear-gradient(150deg, #553821, #130f0c 72%);
+}
+
+.perfume-card-pending::before {
+  position: absolute;
+  top: 14%;
+  right: 12%;
+  left: 12%;
+  height: 48%;
+  content: "";
+  border: 1px solid rgba(222, 190, 124, 0.45);
+  border-radius: 50% 50% 16px 16px;
+}
+
+.perfume-card-pending > div {
+  position: relative;
+  z-index: 1;
+}
+
+.perfume-card-pending strong {
+  display: block;
+  margin: 14px 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  font-weight: 500;
+}
+
+html[lang="ar"] .perfume-card-pending strong {
+  font-family: var(--font-arabic);
+  font-weight: 650;
+}
+
+.perfume-card-pending p {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.85rem;
+}
+
+.guest-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.guest-service-card {
+  display: flex;
+  min-height: 470px;
+  padding: 34px;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-symbol {
+  display: inline-flex;
+  margin-bottom: 36px;
+  color: var(--gold-dark);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+}
+
+.guest-service-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.45rem;
+}
+
+.guest-service-card > p {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.service-points {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.service-points li {
+  position: relative;
+  padding-inline-start: 18px;
+  color: var(--ink);
+  font-size: 0.8rem;
+}
+
+.service-points li::before {
+  position: absolute;
+  top: 0.7em;
+  inset-inline-start: 0;
+  width: 6px;
+  height: 6px;
+  content: "";
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.guest-service-card .quote-add-button {
+  margin-top: auto;
+}
+
+.quote-selection-bar {
+  position: fixed;
+  z-index: 90;
+  right: 50%;
+  bottom: 22px;
+  display: flex;
+  width: min(calc(100% - 32px), 720px);
+  min-height: 74px;
+  padding: 12px 14px 12px 22px;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  color: var(--white);
+  background: rgba(4, 17, 29, 0.96);
+  border: 1px solid rgba(222, 190, 124, 0.34);
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
+  transform: translateX(50%);
+  backdrop-filter: blur(16px);
+}
+
+.quote-selection-bar[hidden] {
+  display: none;
+}
+
+.quote-selection-bar span,
+.quote-selection-bar strong {
+  display: block;
+}
+
+.quote-selection-bar > div > span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.68rem;
+}
+
+.quote-selection-bar strong {
+  margin-top: 2px;
+  font-size: 0.9rem;
+}
+
+.quote-selection-dialog {
+  width: min(calc(100% - 30px), 720px);
+  max-height: min(82vh, 760px);
+  padding: 0;
+  overflow: auto;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.38);
+}
+
+.quote-selection-dialog::backdrop {
+  background: rgba(2, 10, 18, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.quote-dialog-head {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  padding: 28px 30px 22px;
+  align-items: start;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.quote-dialog-head h2 {
+  margin-top: 6px;
+  font-size: 1.8rem;
+}
+
+.dialog-close {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--navy-900);
+  background: var(--sand-100);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.quote-dialog-list {
+  display: grid;
+  gap: 10px;
+  padding: 24px 30px;
+}
+
+.quote-dialog-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  padding: 14px 0;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.quote-dialog-item strong {
+  color: var(--navy-900);
+  font-size: 0.88rem;
+}
+
+.quote-dialog-item input {
+  width: 68px;
+  min-height: 40px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+
+.quote-remove {
+  color: #7b433f;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 760;
+}
+
+.quote-selection-dialog > .form-note {
+  display: block;
+  margin: 0 30px;
+  padding: 16px 18px;
+  background: var(--sand-100);
+  border-radius: var(--radius-sm);
+}
+
+.quote-dialog-actions {
+  display: flex;
+  padding: 24px 30px 30px;
+  align-items: center;
+  gap: 18px;
+  justify-content: space-between;
+}
+
 .cta-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1410,6 +1872,45 @@ html[dir="rtl"] .product-card::after {
 
 .experience-shop-link {
   margin-inline-start: 10px;
+}
+
+.experience-collection-strip {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.8fr) minmax(280px, 1.2fr) auto;
+  margin-top: clamp(40px, 6vw, 72px);
+  padding: 26px 28px;
+  align-items: center;
+  gap: 28px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-muted .experience-collection-strip {
+  background: var(--white);
+}
+
+.experience-collection-strip h3 {
+  margin-top: 6px;
+  color: var(--navy-900);
+  font-size: 1.2rem;
+}
+
+.experience-collection-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.experience-collection-items span {
+  padding: 8px 11px;
+  color: var(--navy-900);
+  background: var(--sand-100);
+  border: 1px solid var(--sand-200);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 720;
 }
 
 .corporate-inclusions {
@@ -1560,6 +2061,36 @@ html[dir="rtl"] .faq-item summary::after {
 
 .field.full {
   grid-column: 1 / -1;
+}
+
+.request-detail-group {
+  min-width: 0;
+  margin: 8px 0;
+  padding: 24px;
+  background: var(--sand-100);
+  border: 1px solid var(--sand-200);
+  border-radius: var(--radius-md);
+}
+
+.request-detail-group[hidden] {
+  display: none;
+}
+
+.request-detail-group legend {
+  padding: 0 10px;
+  color: var(--navy-900);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+html[lang="ar"] .request-detail-group legend {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+}
+
+.request-detail-grid {
+  margin-top: 8px;
 }
 
 .field label {
@@ -3044,6 +3575,17 @@ html[dir="rtl"] .purpose-card::after {
     grid-template-columns: 1fr;
   }
 
+  .experience-collection-strip {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .catalog-product-grid,
+  .perfume-grid,
+  .guest-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .corporate-inclusions {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -3208,8 +3750,64 @@ html[dir="rtl"] .purpose-card::after {
     grid-template-columns: 1fr;
   }
 
+  .catalog-product-grid,
+  .perfume-grid,
+  .guest-service-grid {
+    grid-template-columns: 1fr;
+  }
+
   .box-preview {
     min-height: 330px;
+  }
+
+  .catalog-card-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .quantity-control input {
+    width: 100%;
+  }
+
+  .quote-add-button {
+    min-height: 44px;
+  }
+
+  .quote-selection-bar {
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    width: auto;
+    padding: 10px 10px 10px 16px;
+    transform: none;
+  }
+
+  .quote-selection-bar .btn {
+    padding-inline: 16px;
+  }
+
+  .quote-dialog-head,
+  .quote-dialog-list,
+  .quote-dialog-actions {
+    padding-inline: 20px;
+  }
+
+  .quote-selection-dialog > .form-note {
+    margin-inline: 20px;
+  }
+
+  .quote-dialog-item {
+    grid-template-columns: minmax(0, 1fr) 60px;
+  }
+
+  .quote-remove {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .quote-dialog-actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .corporate-inclusions {

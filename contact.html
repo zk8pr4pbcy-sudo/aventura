@@ -114,6 +114,67 @@
               <label for="guests" data-i18n="contact.guestsLabel">Number of guests</label>
               <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
             </div>
+
+            <fieldset class="request-detail-group full" data-request-details="collection" hidden>
+              <legend data-i18n="contact.collectionDetailsTitle">Boutique and delivery details</legend>
+              <div class="form-grid request-detail-grid">
+                <div class="field">
+                  <label for="deliveryLocation" data-i18n="contact.deliveryLocationLabel">Hotel or delivery location</label>
+                  <input id="deliveryLocation" name="deliveryLocation" type="text" data-i18n-placeholder="contact.deliveryLocationPlaceholder" placeholder="Hotel, accommodation or venue">
+                </div>
+                <div class="field">
+                  <label for="deliveryTime" data-i18n="contact.deliveryTimeLabel">Requested delivery time</label>
+                  <input id="deliveryTime" name="deliveryTime" type="datetime-local">
+                </div>
+                <div class="field full">
+                  <label for="personalization" data-i18n="contact.personalizationLabel">Guest name, gift message or company logo</label>
+                  <input id="personalization" name="personalization" type="text" data-i18n-placeholder="contact.personalizationPlaceholder" placeholder="Optional personalization details">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="request-detail-group full" data-request-details="thobe" hidden>
+              <legend data-i18n="contact.thobeDetailsTitle">Tailoring service details</legend>
+              <div class="form-grid request-detail-grid">
+                <div class="field"><label for="thobeLocation" data-i18n="contact.serviceLocationLabel">Hotel or accommodation</label><input id="thobeLocation" name="thobeLocation" type="text"></div>
+                <div class="field"><label for="thobeCount" data-i18n="contact.thobeCountLabel">Number of thobes</label><input id="thobeCount" name="thobeCount" type="number" min="1" max="20" inputmode="numeric"></div>
+                <div class="field"><label for="thobeVisit" data-i18n="contact.visitTimeLabel">Preferred visit time</label><input id="thobeVisit" name="thobeVisit" type="datetime-local"></div>
+                <div class="field"><label for="thobeDelivery" data-i18n="contact.requiredDeliveryLabel">Required delivery time</label><input id="thobeDelivery" name="thobeDelivery" type="datetime-local"></div>
+                <div class="field full"><label for="thobePreference" data-i18n="contact.thobePreferenceLabel">Preferred color or fabric</label><input id="thobePreference" name="thobePreference" type="text" data-i18n-placeholder="contact.optionalPlaceholder" placeholder="Optional"></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="request-detail-group full" data-request-details="abaya" hidden>
+              <legend data-i18n="contact.abayaDetailsTitle">Abaya service details</legend>
+              <div class="form-grid request-detail-grid">
+                <div class="field"><label for="abayaLocation" data-i18n="contact.serviceLocationLabel">Hotel or accommodation</label><input id="abayaLocation" name="abayaLocation" type="text"></div>
+                <div class="field"><label for="abayaSize" data-i18n="contact.abayaSizeLabel">Approximate size or height</label><input id="abayaSize" name="abayaSize" type="text" data-i18n-placeholder="contact.optionalPlaceholder" placeholder="Optional"></div>
+                <div class="field"><label for="abayaVisit" data-i18n="contact.contactVisitTimeLabel">Preferred contact or visit time</label><input id="abayaVisit" name="abayaVisit" type="datetime-local"></div>
+                <div class="field"><label for="abayaDelivery" data-i18n="contact.requiredDeliveryLabel">Required delivery time</label><input id="abayaDelivery" name="abayaDelivery" type="datetime-local"></div>
+                <div class="field"><label for="abayaStyle" data-i18n="contact.abayaStyleLabel">Preferred color and style</label><input id="abayaStyle" name="abayaStyle" type="text"></div>
+                <div class="field">
+                  <label for="abayaContact" data-i18n="contact.preferredContactLabel">Preferred contact method</label>
+                  <select id="abayaContact" name="abayaContact"><option value="" selected data-i18n="contact.typePlaceholder">Choose one</option><option value="whatsapp">WhatsApp</option><option value="call" data-i18n="contact.contactCall">Phone call</option><option value="visit" data-i18n="contact.contactVisit">Hotel visit</option></select>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="request-detail-group full" data-request-details="flower" hidden>
+              <legend data-i18n="contact.flowerDetailsTitle">Flower delivery details</legend>
+              <div class="form-grid request-detail-grid">
+                <div class="field"><label for="flowerRecipient" data-i18n="contact.recipientLabel">Recipient name</label><input id="flowerRecipient" name="flowerRecipient" type="text"></div>
+                <div class="field"><label for="flowerOccasion" data-i18n="contact.occasionLabel">Occasion</label><input id="flowerOccasion" name="flowerOccasion" type="text"></div>
+                <div class="field">
+                  <label for="flowerSize" data-i18n="contact.flowerSizeLabel">Bouquet size</label>
+                  <select id="flowerSize" name="flowerSize"><option value="" selected data-i18n="contact.typePlaceholder">Choose one</option><option value="quiet" data-i18n="contact.flowerSizeQuiet">Subtle</option><option value="medium" data-i18n="contact.flowerSizeMedium">Medium</option><option value="signature" data-i18n="contact.flowerSizeSignature">Signature</option></select>
+                </div>
+                <div class="field"><label for="flowerColors" data-i18n="contact.flowerColorsLabel">Preferred colors</label><input id="flowerColors" name="flowerColors" type="text"></div>
+                <div class="field"><label for="flowerLocation" data-i18n="contact.deliveryLocationLabel">Hotel or delivery location</label><input id="flowerLocation" name="flowerLocation" type="text"></div>
+                <div class="field"><label for="flowerDelivery" data-i18n="contact.deliveryTimeLabel">Requested delivery time</label><input id="flowerDelivery" name="flowerDelivery" type="datetime-local"></div>
+                <div class="field full"><label for="flowerMessage" data-i18n="contact.cardMessageLabel">Gift card message</label><textarea id="flowerMessage" name="flowerMessage"></textarea></div>
+              </div>
+            </fieldset>
+
             <div class="field full">
               <label for="message" data-i18n="contact.messageLabel">What would you like us to arrange?</label>
               <textarea id="message" name="message" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Share the occasion, interests, timing and any important preferences."></textarea>

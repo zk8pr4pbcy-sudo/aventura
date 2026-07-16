@@ -279,6 +279,7 @@
 
     var buttons = Array.from(boutique.querySelectorAll("[data-boutique-filter]"));
     var items = Array.from(boutique.querySelectorAll("[data-boutique-item]"));
+    var sections = Array.from(boutique.querySelectorAll("[data-boutique-section]"));
     var allowed = ["all", "sea", "historic", "desert", "taif", "jeddah", "corporate"];
     var query = new URLSearchParams(window.location.search);
     var initial = query.get("experience") || "all";
@@ -290,7 +291,13 @@
     function applyFilter(filter, updateUrl) {
       items.forEach(function (item) {
         var categories = (item.getAttribute("data-category") || "").split(/\s+/).filter(Boolean);
-        item.hidden = filter !== "all" && categories.indexOf(filter) === -1;
+        var matchesJeddah = filter === "jeddah" && (categories.indexOf("sea") !== -1 || categories.indexOf("historic") !== -1);
+        item.hidden = filter !== "all" && categories.indexOf(filter) === -1 && !matchesJeddah;
+      });
+
+      sections.forEach(function (section) {
+        var sectionItems = Array.from(section.querySelectorAll("[data-boutique-item]"));
+        section.hidden = sectionItems.length > 0 && sectionItems.every(function (item) { return item.hidden; });
       });
 
       buttons.forEach(function (button) {
@@ -317,6 +324,194 @@
     });
 
     applyFilter(initial, false);
+  }
+
+  function setupBoutiqueQuoteSelection() {
+    var boutique = document.querySelector("[data-boutique]");
+    if (!boutique) {
+      return;
+    }
+
+    var storageKey = "aventura_quote_selection";
+    var buttons = Array.from(document.querySelectorAll("[data-quote-item]"));
+    var bar = document.querySelector("[data-quote-bar]");
+    var countElement = document.querySelector("[data-quote-count]");
+    var dialog = document.querySelector("[data-quote-dialog]");
+    var list = document.querySelector("[data-quote-list]");
+    var state = {};
+
+    try {
+      state = JSON.parse(sessionStorage.getItem(storageKey) || "{}") || {};
+    } catch (error) {
+      state = {};
+    }
+
+    function save() {
+      try {
+        sessionStorage.setItem(storageKey, JSON.stringify(state));
+      } catch (error) {
+        /* Session storage may be disabled. */
+      }
+    }
+
+    function totalQuantity() {
+      return Object.keys(state).reduce(function (total, id) {
+        return total + Math.max(1, Number(state[id].quantity) || 1);
+      }, 0);
+    }
+
+    function quantityForButton(button, id) {
+      var card = button.closest("article") || button.parentElement;
+      var input = card ? card.querySelector('[data-item-quantity="' + id + '"]') : null;
+      return input ? Math.max(1, Math.min(500, Number(input.value) || 1)) : 1;
+    }
+
+    function updateButtons() {
+      buttons.forEach(function (button) {
+        var selected = Boolean(state[button.getAttribute("data-quote-item")]);
+        var defaultKey = button.getAttribute("data-i18n") || "collection.addItem";
+        button.classList.toggle("is-added", selected);
+        button.setAttribute("aria-pressed", selected ? "true" : "false");
+        button.textContent = translate(selected ? "collection.added" : defaultKey);
+      });
+    }
+
+    function renderDialog() {
+      if (!list) {
+        return;
+      }
+      list.textContent = "";
+
+      Object.keys(state).forEach(function (id) {
+        var item = state[id];
+        var row = document.createElement("div");
+        row.className = "quote-dialog-item";
+
+        var name = document.createElement("strong");
+        name.textContent = translate(item.labelKey);
+
+        var quantity = document.createElement("input");
+        quantity.type = "number";
+        quantity.min = "1";
+        quantity.max = "500";
+        quantity.inputMode = "numeric";
+        quantity.value = String(Math.max(1, Number(item.quantity) || 1));
+        quantity.setAttribute("aria-label", translate("collection.quantity"));
+        quantity.addEventListener("change", function () {
+          state[id].quantity = Math.max(1, Math.min(500, Number(quantity.value) || 1));
+          quantity.value = String(state[id].quantity);
+          save();
+          updateSummary();
+        });
+
+        var remove = document.createElement("button");
+        remove.className = "quote-remove";
+        remove.type = "button";
+        remove.textContent = translate("collection.removeItem");
+        remove.addEventListener("click", function () {
+          delete state[id];
+          save();
+          updateSummary();
+          renderDialog();
+        });
+
+        row.append(name, quantity, remove);
+        list.appendChild(row);
+      });
+    }
+
+    function updateSummary() {
+      var count = totalQuantity();
+      if (bar) {
+        bar.hidden = count === 0;
+      }
+      if (countElement) {
+        countElement.textContent = String(count);
+      }
+      updateButtons();
+    }
+
+    function quoteUrl() {
+      var encodedItems = Object.keys(state).map(function (id) {
+        return id + ":" + Math.max(1, Number(state[id].quantity) || 1);
+      }).join(",");
+      var url = new URL("contact.html", window.location.href);
+      url.searchParams.set("type", "collection");
+      url.searchParams.set("items", encodedItems);
+      url.searchParams.set("lang", currentLanguage);
+      return url.pathname + url.search;
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var id = button.getAttribute("data-quote-item");
+        if (!id) {
+          return;
+        }
+        state[id] = {
+          labelKey: button.getAttribute("data-quote-label-key") || id,
+          quantity: quantityForButton(button, id)
+        };
+        save();
+        updateSummary();
+      });
+    });
+
+    var openButton = document.querySelector("[data-open-quote]");
+    if (openButton && dialog) {
+      openButton.addEventListener("click", function () {
+        renderDialog();
+        if (typeof dialog.showModal === "function") {
+          dialog.showModal();
+        } else {
+          dialog.setAttribute("open", "");
+        }
+      });
+    }
+
+    var closeButton = document.querySelector("[data-close-quote]");
+    if (closeButton && dialog) {
+      closeButton.addEventListener("click", function () { dialog.close(); });
+    }
+
+    if (dialog) {
+      dialog.addEventListener("click", function (event) {
+        if (event.target === dialog) {
+          dialog.close();
+        }
+      });
+    }
+
+    var clearButton = document.querySelector("[data-clear-quote]");
+    if (clearButton) {
+      clearButton.addEventListener("click", function () {
+        state = {};
+        save();
+        updateSummary();
+        renderDialog();
+        if (dialog && dialog.open) {
+          dialog.close();
+        }
+      });
+    }
+
+    var continueButton = document.querySelector("[data-continue-quote]");
+    if (continueButton) {
+      continueButton.addEventListener("click", function () {
+        if (Object.keys(state).length) {
+          window.location.href = quoteUrl();
+        }
+      });
+    }
+
+    document.addEventListener("aventura:language", function () {
+      updateSummary();
+      if (dialog && dialog.open) {
+        renderDialog();
+      }
+    });
+
+    updateSummary();
   }
 
   function setupReveals() {
@@ -376,8 +571,9 @@
       "guide": "services.s4Title",
       "hospitality": "services.s5Title",
       "destination": "services.s6Title",
-      "thobe": "services.s7Title",
-      "abaya": "services.s8Title",
+      "thobe": "collection.thobeTitle",
+      "abaya": "collection.abayaTitle",
+      "flower": "collection.flowerTitle",
       "golden-hour": "experiences.goldenTitle",
       "sunset-moment": "experiences.sunsetTitle",
       "bayadah-day": "experiences.bayadahTitle",
@@ -393,27 +589,71 @@
       "historic-box": "collection.box2Title",
       "desert-box": "collection.box3Title",
       "taif-box": "collection.box4Title",
-      "jeddah-box": "collection.box5Title",
+      "executive-box": "collection.boxExecutiveTitle",
+      "sea-tote": "collection.productSea1Title",
+      "sea-towel": "collection.productSea2Title",
+      "sea-phone": "collection.productSea3Title",
+      "sea-bottle": "collection.productSea4Title",
+      "roshan-keepsake": "collection.productHistoric1Title",
+      "saudi-hospitality": "collection.productHospitalityTitle",
+      "heritage-cards": "collection.productHistoric2Title",
+      "desert-shawl": "collection.productDesert1Title",
+      "desert-cup": "collection.productDesert2Title",
+      "taif-rose-water": "collection.productTaif1Title",
+      "taif-honey": "collection.productTaif2Title",
+      "taif-sachet": "collection.productTaif3Title",
       "executive-arrival": "corporate.package1Title",
       "leadership-half-day": "corporate.package2Title",
       "team-discovery": "corporate.package3Title"
     };
     var requestedItem = query.get("request");
     var requestKey = requestKeys[requestedItem];
+    var requestedItems = String(query.get("items") || "").split(",").map(function (part) {
+      var pieces = part.split(":");
+      var id = pieces[0] || "";
+      var quantity = Math.max(1, Math.min(500, Number(pieces[1]) || 1));
+      return requestKeys[id] ? { id: id, key: requestKeys[id], quantity: quantity } : null;
+    }).filter(Boolean);
     var messageField = form.querySelector('[name="message"]');
 
     function applyRequestedItem() {
-      if (!requestKey || !messageField) {
+      if ((!requestKey && !requestedItems.length) || !messageField) {
         return;
       }
       if (!messageField.value || messageField.dataset.autofilled === "true") {
-        messageField.value = translate("contact.requestedItem") + ": " + translate(requestKey);
+        var selections = [];
+        if (requestKey) {
+          selections.push(translate(requestKey));
+        }
+        requestedItems.forEach(function (item) {
+          selections.push(translate(item.key) + " × " + item.quantity);
+        });
+        messageField.value = translate("contact.requestedItems") + ":\n- " + selections.join("\n- ");
         messageField.dataset.autofilled = "true";
       }
     }
 
+    var detailGroups = Array.from(form.querySelectorAll("[data-request-details]"));
+    var selectedRequestIds = requestedItems.map(function (item) { return item.id; });
+    if (requestedItem) {
+      selectedRequestIds.push(requestedItem);
+    }
+
+    function updateRequestDetails() {
+      detailGroups.forEach(function (group) {
+        var groupName = group.getAttribute("data-request-details");
+        var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
+        var showService = groupName !== "collection" && selectedRequestIds.indexOf(groupName) !== -1;
+        group.hidden = !showCollection && !showService;
+      });
+    }
+
     applyRequestedItem();
+    updateRequestDetails();
     document.addEventListener("aventura:language", applyRequestedItem);
+    if (typeField) {
+      typeField.addEventListener("change", updateRequestDetails);
+    }
     if (messageField) {
       messageField.addEventListener("input", function () {
         messageField.dataset.autofilled = "false";
@@ -472,6 +712,45 @@
 
       [["date", "contact.whatsappDate"], ["time", "contact.whatsappTime"], ["guests", "contact.whatsappGuests"], ["message", "contact.whatsappMessage"]].forEach(function (row) {
         var value = String(data.get(row[0]) || "").trim();
+        if (value) {
+          lines.push(translate(row[1]) + ": " + value);
+        }
+      });
+
+      var detailRows = [
+        ["deliveryLocation", "contact.deliveryLocationLabel"],
+        ["deliveryTime", "contact.deliveryTimeLabel"],
+        ["personalization", "contact.personalizationLabel"],
+        ["thobeLocation", "contact.serviceLocationLabel"],
+        ["thobeCount", "contact.thobeCountLabel"],
+        ["thobeVisit", "contact.visitTimeLabel"],
+        ["thobeDelivery", "contact.requiredDeliveryLabel"],
+        ["thobePreference", "contact.thobePreferenceLabel"],
+        ["abayaLocation", "contact.serviceLocationLabel"],
+        ["abayaSize", "contact.abayaSizeLabel"],
+        ["abayaVisit", "contact.contactVisitTimeLabel"],
+        ["abayaDelivery", "contact.requiredDeliveryLabel"],
+        ["abayaStyle", "contact.abayaStyleLabel"],
+        ["abayaContact", "contact.preferredContactLabel"],
+        ["flowerRecipient", "contact.recipientLabel"],
+        ["flowerOccasion", "contact.occasionLabel"],
+        ["flowerSize", "contact.flowerSizeLabel"],
+        ["flowerColors", "contact.flowerColorsLabel"],
+        ["flowerLocation", "contact.deliveryLocationLabel"],
+        ["flowerDelivery", "contact.deliveryTimeLabel"],
+        ["flowerMessage", "contact.cardMessageLabel"]
+      ];
+
+      detailRows.forEach(function (row) {
+        var field = form.querySelector('[name="' + row[0] + '"]');
+        if (!field || field.closest("[data-request-details]") && field.closest("[data-request-details]").hidden) {
+          return;
+        }
+        var value = String(data.get(row[0]) || "").trim();
+        if (field.tagName === "SELECT" && field.value) {
+          var selectedOption = field.options[field.selectedIndex];
+          value = selectedOption ? selectedOption.textContent.trim() : value;
+        }
         if (value) {
           lines.push(translate(row[1]) + ": " + value);
         }
@@ -575,6 +854,7 @@
     applyLanguage(getInitialLanguage(), false);
     setupHeader();
     setupBoutiqueFilters();
+    setupBoutiqueQuoteSelection();
     setupReveals();
     setupCurrentYear();
     setupContactForm();
