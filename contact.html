@@ -97,6 +97,20 @@
               <input id="date" name="date" type="date">
             </div>
             <div class="field">
+              <label for="time" data-i18n="contact.timeLabel">Preferred start time</label>
+              <input id="time" name="time" type="time">
+            </div>
+            <div class="field">
+              <label for="duration" data-i18n="contact.durationLabel">Time available</label>
+              <select id="duration" name="duration">
+                <option value="" selected data-i18n="contact.durationPlaceholder">Choose the closest option</option>
+                <option value="short" data-i18n="contact.durationShort">1–2 hours</option>
+                <option value="half-day" data-i18n="contact.durationHalf">Half day</option>
+                <option value="full-day" data-i18n="contact.durationFull">Full day</option>
+                <option value="flexible" data-i18n="contact.durationFlexible">Flexible</option>
+              </select>
+            </div>
+            <div class="field">
               <label for="guests" data-i18n="contact.guestsLabel">Number of guests</label>
               <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
             </div>

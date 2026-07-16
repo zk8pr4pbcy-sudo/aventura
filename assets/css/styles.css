@@ -2367,6 +2367,50 @@ html[dir="rtl"] .offer-card::after {
   color: rgba(255, 255, 255, 0.68);
 }
 
+.quote-prompt {
+  display: grid;
+  gap: 5px;
+  margin-top: auto;
+  padding: 20px 18px;
+  background: var(--sand-100);
+  border: 1px solid var(--sand-200);
+  border-inline-start: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+}
+
+.quote-prompt span {
+  color: var(--gold-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.quote-prompt strong {
+  color: var(--navy-900);
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+html[dir="rtl"] .quote-prompt span {
+  letter-spacing: 0;
+}
+
+.offer-card-featured .quote-prompt {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  border-inline-start-color: var(--gold);
+}
+
+.offer-card-featured .quote-prompt span {
+  color: #dbc18e;
+}
+
+.offer-card-featured .quote-prompt strong {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 .offer-price {
   display: grid;
   grid-template-columns: 1fr auto;

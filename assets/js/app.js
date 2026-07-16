@@ -465,7 +465,12 @@
         lines.push(translate("contact.whatsappType") + ": " + typeText);
       }
 
-      [["date", "contact.whatsappDate"], ["guests", "contact.whatsappGuests"], ["message", "contact.whatsappMessage"]].forEach(function (row) {
+      var selectedDuration = form.querySelector('[name="duration"] option:checked');
+      if (selectedDuration && selectedDuration.value) {
+        lines.push(translate("contact.whatsappDuration") + ": " + selectedDuration.textContent.trim());
+      }
+
+      [["date", "contact.whatsappDate"], ["time", "contact.whatsappTime"], ["guests", "contact.whatsappGuests"], ["message", "contact.whatsappMessage"]].forEach(function (row) {
         var value = String(data.get(row[0]) || "").trim();
         if (value) {
           lines.push(translate(row[1]) + ": " + value);
