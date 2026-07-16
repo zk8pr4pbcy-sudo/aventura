@@ -335,7 +335,7 @@
     var sets = {
       sea: {
         request: "sea",
-        perfume: { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp" },
+        perfume: { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp", story: "assets/images/perfumes/perfume-sea-story.webp" },
         products: [
           ["sea-tote", "product-sea", "collection.productSea1Short", "collection.productSea1Title", "collection.productSea1Text"],
           ["sea-towel", "product-sea", "collection.productSea2Short", "collection.productSea2Title", "collection.productSea2Text"],
@@ -350,11 +350,12 @@
       "grand-bayadah": { alias: "sea", request: "bayadah-grand" },
       historic: {
         request: "historic-walk",
-        perfume: { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp" },
+        perfume: { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp", story: "assets/images/perfumes/perfume-roshan-story.webp" },
         products: [
           ["roshan-keepsake", "product-historic", "collection.productHistoric1Short", "collection.productHistoric1Title", "collection.productHistoric1Text"],
-          ["saudi-hospitality", "product-historic", "collection.productHospitalityShort", "collection.productHospitalityTitle", "collection.productHospitalityText"],
-          ["heritage-cards", "product-historic", "collection.productHistoric2Short", "collection.productHistoric2Title", "collection.productHistoric2Text"]
+          ["heritage-cards", "product-historic", "collection.productHistoric2Short", "collection.productHistoric2Title", "collection.productHistoric2Text"],
+          ["historic-notebook", "product-historic", "collection.productHistoric3Short", "collection.productHistoric3Title", "collection.productHistoric3Text"],
+          ["historic-pouch", "product-historic", "collection.productHistoric4Short", "collection.productHistoric4Title", "collection.productHistoric4Text"]
         ],
         box: ["historic-box", "box-historic", "ROSHAN · AVENTURA", "collection.box2Title", "collection.box2Text", ["collection.box2Item1", "collection.box2Item2", "collection.box2Item3", "collection.box2Item4"]]
       },
@@ -364,35 +365,35 @@
         products: [
           ["desert-shawl", "product-desert", "collection.productDesert1Short", "collection.productDesert1Title", "collection.productDesert1Text"],
           ["desert-cup", "product-desert", "collection.productDesert2Short", "collection.productDesert2Title", "collection.productDesert2Text"],
-          ["saudi-hospitality", "product-desert", "collection.productHospitalityShort", "collection.productHospitalityTitle", "collection.productHospitalityText"],
-          ["desert-keepsake", "product-desert", "collection.productDesert3Short", "collection.productDesert3Title", "collection.productDesert3Text"]
+          ["desert-keepsake", "product-desert", "collection.productDesert3Short", "collection.productDesert3Title", "collection.productDesert3Text"],
+          ["desert-glasses-case", "product-desert", "collection.productDesert4Short", "collection.productDesert4Title", "collection.productDesert4Text"]
         ],
         box: ["desert-box", "box-desert", "LAST LIGHT · AVENTURA", "collection.box3Title", "collection.box3Text", ["collection.box3Item1", "collection.box3Item2", "collection.box3Item3", "collection.box3Item4"]]
       },
       taif: {
         request: "taif",
-        perfume: { id: "perfume-taif", titleKey: "collection.p4Title", textKey: "experienceDetail.perfumeTaifText", image: "assets/images/perfumes/perfume-taif.webp" },
+        perfume: { id: "perfume-taif", titleKey: "collection.p4Title", textKey: "experienceDetail.perfumeTaifText", image: "assets/images/perfumes/perfume-taif.webp", story: "assets/images/perfumes/perfume-taif-story.webp" },
         products: [
-          ["taif-rose-water", "product-taif", "collection.productTaif1Short", "collection.productTaif1Title", "collection.productTaif1Text", true],
+          ["taif-rose-mist", "product-taif", "collection.productTaif1Short", "collection.productTaif1Title", "collection.productTaif1Text", true],
           ["taif-rose-care", "product-taif", "collection.productTaif4Short", "collection.productTaif4Title", "collection.productTaif4Text", true],
-          ["taif-honey", "product-taif", "collection.productTaif2Short", "collection.productTaif2Title", "collection.productTaif2Text", true],
-          ["taif-sachet", "product-taif", "collection.productTaif3Short", "collection.productTaif3Title", "collection.productTaif3Text", true]
+          ["taif-sachet", "product-taif", "collection.productTaif3Short", "collection.productTaif3Title", "collection.productTaif3Text", true],
+          ["taif-notebook", "product-taif", "collection.productTaif5Short", "collection.productTaif5Title", "collection.productTaif5Text", true]
         ],
         box: ["taif-box", "box-taif", "TAIF ROSE · AVENTURA", "collection.box4Title", "collection.box4Text", ["collection.box4Item1", "collection.box4Item2", "collection.box4Item3", "collection.box4Item4"]]
       },
       jeddah: {
         request: "jeddah-day",
         perfumes: [
-          { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp" },
-          { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp" }
+          { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp", story: "assets/images/perfumes/perfume-sea-story.webp" },
+          { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp", story: "assets/images/perfumes/perfume-roshan-story.webp" }
         ],
         products: [
           ["sea-phone", "product-sea", "collection.productSea3Short", "collection.productSea3Title", "collection.productSea3Text"],
           ["sea-bottle", "product-sea", "collection.productSea4Short", "collection.productSea4Title", "collection.productSea4Text"],
           ["roshan-keepsake", "product-historic", "collection.productHistoric1Short", "collection.productHistoric1Title", "collection.productHistoric1Text"],
-          ["saudi-hospitality", "product-historic", "collection.productHospitalityShort", "collection.productHospitalityTitle", "collection.productHospitalityText"]
+          ["heritage-cards", "product-historic", "collection.productHistoric2Short", "collection.productHistoric2Title", "collection.productHistoric2Text"]
         ],
-        box: ["jeddah-signature-box", "box-jeddah", "JEDDAH SIGNATURE · AVENTURA", "experienceDetail.jeddahBoxTitle", "experienceDetail.jeddahBoxText", ["collection.productSea3Title", "collection.productSea4Title", "collection.productHistoric1Title", "collection.productHospitalityTitle"]]
+        box: ["jeddah-signature-box", "box-jeddah", "JEDDAH SIGNATURE · AVENTURA", "experienceDetail.jeddahBoxTitle", "experienceDetail.jeddahBoxText", ["collection.productSea3Title", "collection.productSea4Title", "collection.productHistoric1Title", "collection.productHistoric2Title"]]
       },
       "sea-to-balad": { alias: "jeddah", request: "sea-to-balad" }
     };
@@ -418,10 +419,13 @@
       var visual = perfume.image
         ? '<div class="detail-perfume-visual"><img src="' + perfume.image + '" width="900" height="1125" loading="eager" decoding="async" alt=""></div>'
         : '<div class="detail-perfume-visual perfume-card-pending"><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="collection.lastLightPending">Marketing card in preparation</strong></div></div>';
+      var storyButton = perfume.story
+        ? '<button class="text-link" type="button" data-perfume-story="' + perfume.story + '" data-story-title-key="' + perfume.titleKey + '" data-i18n="collection.viewStoryCard">View story card</button>'
+        : '';
       return '<article class="catalog-product-card detail-perfume-product" data-reveal>' + visual +
         '<div class="catalog-product-content"><span class="status coming" data-i18n="common.comingSoon">Coming soon</span>' +
         '<h3 data-i18n="' + perfume.titleKey + '">Aventura fragrance</h3><p data-i18n="' + perfume.textKey + '">An experience-inspired fragrance.</p>' +
-        '<div class="catalog-card-actions">' + quantityMarkup(perfume.id) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + perfume.id + '" data-quote-label-key="' + perfume.titleKey + '" data-i18n="collection.addItem">Add to quote</button></div></div></article>';
+        storyButton + '<div class="catalog-card-actions">' + quantityMarkup(perfume.id) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + perfume.id + '" data-quote-label-key="' + perfume.titleKey + '" data-i18n="collection.addItem">Add to quote</button></div></div></article>';
     }
 
     function productMarkup(product) {
@@ -461,7 +465,8 @@
       '<section class="cta-band"><div class="container cta-inner" data-reveal><div><h2 data-i18n="experienceDetail.requestTitle">Ready to shape the experience?</h2><p data-i18n="experienceDetail.requestText">Send the date, guest count and timing. Any selected products will be included in the same request.</p></div><a class="btn" href="' + requestHref + '" data-experience-request data-i18n="experiences.quoteButton">Request a custom quote</a></div></section>',
       '<div class="quote-selection-bar" data-quote-bar hidden><div><span data-i18n="collection.selectionLabel">Your selections</span><strong><span data-quote-count>0</span> <span data-i18n="collection.selectionItems">items</span></strong></div><button class="btn btn-sm" type="button" data-open-quote data-i18n="collection.reviewSelection">Review selections</button></div>',
       '<dialog class="quote-selection-dialog" data-quote-dialog aria-labelledby="detailQuoteTitle"><div class="quote-dialog-head"><div><span class="eyebrow" data-i18n="collection.selectionLabel">Your selections</span><h2 id="detailQuoteTitle" data-i18n="collection.dialogTitle">Review your request</h2></div><button class="dialog-close" type="button" data-close-quote aria-label="Close">×</button></div><div class="quote-dialog-list" data-quote-list></div><p class="form-note" data-i18n="collection.quoteDisclaimer">Sending the request does not confirm booking or availability.</p><div class="quote-dialog-actions"><button class="btn btn-dark" type="button" data-continue-quote data-i18n="experiences.quoteButton">Request a custom quote</button><button class="text-link" type="button" data-clear-quote data-i18n="collection.clearSelection">Clear selections</button></div></dialog>',
-      '<dialog class="experience-product-dialog" data-experience-product-dialog aria-labelledby="productReminderTitle"><div class="experience-reminder-handle" aria-hidden="true"></div><span class="eyebrow" data-i18n="experienceDetail.reminderEyebrow">Before you continue</span><h2 id="productReminderTitle" data-i18n="experienceDetail.reminderTitle">Would you like to complete the experience?</h2><p data-i18n="experienceDetail.reminderText">We selected products connected to this experience. You can review them or continue without additions.</p><div class="experience-reminder-actions"><button class="btn btn-dark" type="button" data-view-experience-products data-i18n="experienceDetail.viewProducts">View experience products</button><button class="text-link" type="button" data-continue-without-products data-i18n="experienceDetail.continueWithout">Continue without products</button></div></dialog>'
+      '<dialog class="experience-product-dialog" data-experience-product-dialog aria-labelledby="productReminderTitle"><div class="experience-reminder-handle" aria-hidden="true"></div><span class="eyebrow" data-i18n="experienceDetail.reminderEyebrow">Before you continue</span><h2 id="productReminderTitle" data-i18n="experienceDetail.reminderTitle">Would you like to complete the experience?</h2><p data-i18n="experienceDetail.reminderText">We selected products connected to this experience. You can review them or continue without additions.</p><div class="experience-reminder-actions"><button class="btn btn-dark" type="button" data-view-experience-products data-i18n="experienceDetail.viewProducts">View experience products</button><button class="text-link" type="button" data-continue-without-products data-i18n="experienceDetail.continueWithout">Continue without products</button></div></dialog>',
+      '<dialog class="perfume-story-dialog" data-perfume-story-dialog aria-labelledby="experiencePerfumeStoryTitle"><div class="perfume-story-dialog-head"><div><span class="eyebrow" data-i18n="collection.storyDialogEyebrow">Fragrance campaign</span><h2 id="experiencePerfumeStoryTitle" data-perfume-story-title>Fragrance story card</h2></div><button class="dialog-close" type="button" data-close-perfume-story data-i18n-aria="collection.closeStoryCard" aria-label="Close story card">×</button></div><img data-perfume-story-image src="assets/images/perfumes/perfume-sea-story.webp" width="900" height="1125" alt=""></dialog>'
     ].join("");
 
     document.querySelectorAll("[data-experience-request]").forEach(function (button) {
@@ -544,7 +549,7 @@
       return;
     }
 
-    var storageKey = "aventura_quote_selection";
+    var storageKey = "aventura_quote_selection_v2";
     var buttons = Array.from(document.querySelectorAll("[data-quote-item]"));
     var bar = document.querySelector("[data-quote-bar]");
     var countElement = document.querySelector("[data-quote-count]");
@@ -730,6 +735,51 @@
     updateSummary();
   }
 
+  function setupPerfumeStoryCards() {
+    var dialog = document.querySelector("[data-perfume-story-dialog]");
+    if (!dialog) {
+      return;
+    }
+
+    var image = dialog.querySelector("[data-perfume-story-image]");
+    var title = dialog.querySelector("[data-perfume-story-title]");
+    var activeTitleKey = "";
+
+    document.querySelectorAll("[data-perfume-story]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        activeTitleKey = button.getAttribute("data-story-title-key") || "collection.storyDialogTitle";
+        if (image) {
+          image.src = button.getAttribute("data-perfume-story") || "";
+        }
+        if (title) {
+          title.textContent = translate(activeTitleKey);
+        }
+        if (typeof dialog.showModal === "function") {
+          dialog.showModal();
+        } else {
+          dialog.setAttribute("open", "");
+        }
+      });
+    });
+
+    var closeButton = dialog.querySelector("[data-close-perfume-story]");
+    if (closeButton) {
+      closeButton.addEventListener("click", function () { dialog.close(); });
+    }
+
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+
+    document.addEventListener("aventura:language", function () {
+      if (dialog.open && title && activeTitleKey) {
+        title.textContent = translate(activeTitleKey);
+      }
+    });
+  }
+
   function setupReveals() {
     var elements = Array.from(document.querySelectorAll("[data-reveal]"));
     if (!elements.length) {
@@ -814,14 +864,16 @@
       "sea-phone": "collection.productSea3Title",
       "sea-bottle": "collection.productSea4Title",
       "roshan-keepsake": "collection.productHistoric1Title",
-      "saudi-hospitality": "collection.productHospitalityTitle",
       "heritage-cards": "collection.productHistoric2Title",
+      "historic-notebook": "collection.productHistoric3Title",
+      "historic-pouch": "collection.productHistoric4Title",
       "desert-shawl": "collection.productDesert1Title",
       "desert-cup": "collection.productDesert2Title",
-      "taif-rose-water": "collection.productTaif1Title",
-      "taif-honey": "collection.productTaif2Title",
+      "desert-glasses-case": "collection.productDesert4Title",
+      "taif-rose-mist": "collection.productTaif1Title",
       "taif-sachet": "collection.productTaif3Title",
       "taif-rose-care": "collection.productTaif4Title",
+      "taif-notebook": "collection.productTaif5Title",
       "desert-keepsake": "collection.productDesert3Title",
       "jeddah-signature-box": "experienceDetail.jeddahBoxTitle",
       "perfume-sea": "collection.p1Title",
@@ -1080,6 +1132,7 @@
     registerComponents();
     setupLanguageSwitcher();
     setupExperienceDetail();
+    setupPerfumeStoryCards();
     applyLanguage(getInitialLanguage(), false);
     setupHeader();
     setupBoutiqueFilters();
