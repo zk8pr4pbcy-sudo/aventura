@@ -26,28 +26,100 @@
           <span class="eyebrow" data-i18n="collection.heroEyebrow">Aventura Boutique</span>
           <h1 data-i18n="collection.heroTitle">Every experience has its own collection.</h1>
           <p class="page-hero-description" data-i18n="collection.heroDescription">Choose an experience to reveal its boxes, useful products and guest services—or browse the complete boutique.</p>
-          <a class="btn" href="#collections" data-i18n="collection.exploreButton">Explore the collections</a>
+          <a class="btn" href="#boutique-discovery" data-i18n="collection.exploreButton">Explore the collections</a>
         </div>
       </div>
     </section>
 
-    <section class="section boutique-intro" id="collections">
-      <div class="container section-heading" data-reveal>
-        <div>
-          <span class="eyebrow" data-i18n="collection.introEyebrow">Connected to the experience</span>
-          <h2 data-i18n="collection.introTitle">Choose the experience and see only what belongs to it</h2>
+    <section class="section boutique-intro" id="boutique-discovery">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <div>
+            <span class="eyebrow" data-i18n="collection.introEyebrow">Connected to the experience</span>
+            <h2 data-i18n="collection.discoveryTitle">Two easy ways to enter the boutique</h2>
+          </div>
+          <p class="lead" data-i18n="collection.discoveryText">Discover a collection around your next experience, or go directly to a product you already know.</p>
         </div>
-        <div>
-          <p class="lead" data-i18n="collection.introText">This is not a generic catalogue. Each selection supports the setting, story and practical needs of the chosen journey.</p>
-          <div class="boutique-filter-bar" role="group" aria-label="Filter boutique by experience" data-i18n-aria="collection.filterAria">
-            <button class="boutique-filter" type="button" data-boutique-filter="all" data-i18n="collection.filterAll">All</button>
-            <button class="boutique-filter" type="button" data-boutique-filter="sea" data-i18n="collection.filterSea">Sea</button>
-            <button class="boutique-filter" type="button" data-boutique-filter="historic" data-i18n="collection.filterHistoric">Historic Jeddah</button>
-            <button class="boutique-filter" type="button" data-boutique-filter="desert" data-i18n="collection.filterDesert">Desert</button>
-            <button class="boutique-filter" type="button" data-boutique-filter="taif" data-i18n="collection.filterTaif">Taif</button>
-            <button class="boutique-filter" type="button" data-boutique-filter="corporate" data-i18n="collection.filterCorporate">Corporate &amp; executive</button>
+
+        <div class="boutique-path-grid" data-reveal>
+          <button class="boutique-path-card" type="button" data-boutique-path="experience" aria-controls="experienceFilters">
+            <span class="boutique-path-index">01</span>
+            <span class="eyebrow" data-i18n="collection.pathExperienceEyebrow">Planning a new journey</span>
+            <strong data-i18n="collection.pathExperienceTitle">Explore by experience</strong>
+            <span data-i18n="collection.pathExperienceText">See only the products, boxes and services connected to the sea, Historic Jeddah, the desert or Taif.</span>
+            <span class="text-link" data-i18n="collection.pathExperienceAction">Choose an experience</span>
+          </button>
+          <button class="boutique-path-card boutique-path-card-dark" type="button" data-boutique-path="product" aria-controls="boutiqueSearch">
+            <span class="boutique-path-index">02</span>
+            <span class="eyebrow" data-i18n="collection.pathProductEyebrow">Returning or shopping directly</span>
+            <strong data-i18n="collection.pathProductTitle">Find a product</strong>
+            <span data-i18n="collection.pathProductText">Search by product name or reference without needing to remember which experience it belongs to.</span>
+            <span class="text-link" data-i18n="collection.pathProductAction">Start searching</span>
+          </button>
+        </div>
+
+        <div class="boutique-discovery-panel" data-reveal>
+          <div class="boutique-search-field">
+            <label for="boutiqueSearch" data-i18n="collection.searchLabel">Search the boutique</label>
+            <div class="boutique-search-control">
+              <input id="boutiqueSearch" type="search" autocomplete="off" data-boutique-search data-i18n-placeholder="collection.searchPlaceholder" placeholder="Product name or reference">
+              <button type="button" data-clear-boutique-search data-i18n="collection.clearSearch">Clear</button>
+            </div>
+          </div>
+
+          <div class="boutique-filter-group">
+            <span class="boutique-filter-label" data-i18n="collection.typeFilterLabel">Product type</span>
+            <div class="boutique-filter-bar" role="group" aria-label="Filter boutique by product type" data-i18n-aria="collection.typeFilterAria">
+              <button class="boutique-filter" type="button" data-boutique-type="all" data-i18n="collection.typeAll">All types</button>
+              <button class="boutique-filter" type="button" data-boutique-type="fragrance" data-i18n="collection.typeFragrance">Fragrances</button>
+              <button class="boutique-filter" type="button" data-boutique-type="beach" data-i18n="collection.typeBeach">Beach essentials</button>
+              <button class="boutique-filter" type="button" data-boutique-type="gift" data-i18n="collection.typeGift">Gifts &amp; accessories</button>
+              <button class="boutique-filter" type="button" data-boutique-type="box" data-i18n="collection.typeBox">Complete boxes</button>
+              <button class="boutique-filter" type="button" data-boutique-type="service" data-i18n="collection.typeService">Guest services</button>
+            </div>
+          </div>
+
+          <div class="boutique-filter-group" id="experienceFilters">
+            <span class="boutique-filter-label" data-i18n="collection.experienceFilterLabel">Experience collection</span>
+            <div class="boutique-filter-bar" role="group" aria-label="Filter boutique by experience" data-i18n-aria="collection.filterAria">
+              <button class="boutique-filter" type="button" data-boutique-filter="all" data-i18n="collection.filterAll">All experiences</button>
+              <button class="boutique-filter" type="button" data-boutique-filter="sea" data-i18n="collection.filterSea">Sea</button>
+              <button class="boutique-filter" type="button" data-boutique-filter="historic" data-i18n="collection.filterHistoric">Historic Jeddah</button>
+              <button class="boutique-filter" type="button" data-boutique-filter="desert" data-i18n="collection.filterDesert">Desert</button>
+              <button class="boutique-filter" type="button" data-boutique-filter="taif" data-i18n="collection.filterTaif">Taif</button>
+              <button class="boutique-filter" type="button" data-boutique-filter="corporate" data-i18n="collection.filterCorporate">Corporate &amp; executive</button>
+            </div>
+          </div>
+
+          <div class="boutique-results-bar" aria-live="polite">
+            <span><strong data-boutique-results>0</strong> <span data-i18n="collection.resultsLabel">matching items</span></span>
+            <button class="text-link" type="button" data-clear-boutique-filters data-i18n="collection.clearFilters">Clear all filters</button>
           </div>
         </div>
+
+        <div class="boutique-empty" data-boutique-empty hidden>
+          <span class="boutique-empty-mark">A</span>
+          <div><h3 data-i18n="collection.emptyTitle">No matching items</h3><p data-i18n="collection.emptyText">Try another word or clear one of the filters.</p></div>
+          <button class="btn btn-dark" type="button" data-clear-boutique-filters data-i18n="collection.clearFilters">Clear all filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sm boutique-reorder" id="reorder">
+      <div class="container boutique-reorder-layout" data-reveal>
+        <div>
+          <span class="eyebrow" data-i18n="collection.reorderEyebrow">For returning guests</span>
+          <h2 data-i18n="collection.reorderTitle">Request the same item again</h2>
+          <p data-i18n="collection.reorderText">Enter the product name or reference and quantity. It will be added to your saved request for Aventura to review.</p>
+        </div>
+        <form class="boutique-reorder-form" data-reorder-form>
+          <label><span data-i18n="collection.reorderProductLabel">Product name or reference</span><input id="reorderProduct" name="reorderProduct" type="text" list="boutiqueProductList" autocomplete="off" required data-reorder-product data-i18n-placeholder="collection.reorderProductPlaceholder" placeholder="Example: SEA-BTL-04"></label>
+          <datalist id="boutiqueProductList" data-reorder-products></datalist>
+          <label><span data-i18n="collection.quantity">Quantity</span><input id="reorderQuantity" name="reorderQuantity" type="number" min="1" max="500" value="1" inputmode="numeric" data-reorder-quantity></label>
+          <button class="btn" type="submit" data-i18n="collection.reorderButton">Add to my request</button>
+          <p class="form-note boutique-reorder-note" data-i18n="collection.reorderNote">Availability, preparation time and final details are confirmed after Aventura reviews the request. Your selections stay saved on this device for 30 days.</p>
+          <p class="form-status" data-reorder-status aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -316,9 +388,35 @@
   </main>
 
   <div class="quote-selection-bar" data-quote-bar hidden>
-    <div><span data-i18n="collection.selectionLabel">Your selections</span><strong><span data-quote-count>0</span> <span data-i18n="collection.selectionItems">items</span></strong></div>
+    <div><span data-i18n="collection.selectionLabel">Your selections</span><strong><span data-quote-count>0</span> <span data-i18n="collection.selectionItems">items</span></strong><small data-quote-preview></small></div>
     <button class="btn btn-sm" type="button" data-open-quote data-i18n="collection.reviewSelection">Review selections</button>
   </div>
+
+  <dialog class="product-detail-dialog" data-product-dialog aria-labelledby="productDialogTitle">
+    <div class="product-detail-dialog-head">
+      <div><span class="eyebrow" data-i18n="collection.detailsEyebrow">Boutique item</span><span class="product-detail-code" data-product-dialog-code></span></div>
+      <button class="dialog-close" type="button" data-close-product-dialog data-i18n-aria="collection.closeDetails" aria-label="Close product details">×</button>
+    </div>
+    <div class="product-detail-layout">
+      <div class="product-detail-visual" data-product-dialog-visual></div>
+      <div class="product-detail-content">
+        <div class="product-context-tags" data-product-dialog-tags></div>
+        <h2 id="productDialogTitle" data-product-dialog-title>Product details</h2>
+        <p class="lead" data-product-dialog-description></p>
+        <dl class="product-detail-facts">
+          <div><dt data-i18n="collection.availabilityLabel">Availability</dt><dd data-product-dialog-status></dd></div>
+          <div><dt data-i18n="collection.preparationLabel">Preparation</dt><dd data-product-dialog-prep></dd></div>
+          <div><dt data-i18n="collection.personalizationLabel">Personalization</dt><dd data-product-dialog-personalization></dd></div>
+          <div><dt data-i18n="collection.collectionLabel">Collection</dt><dd data-product-dialog-collection></dd></div>
+        </dl>
+        <p class="form-note" data-i18n="collection.detailsDisclaimer">No price is shown because timing, quantity, personalization and supplier availability are reviewed before the quotation is issued.</p>
+        <div class="product-detail-actions">
+          <button class="btn btn-dark" type="button" data-product-dialog-action>Add to request</button>
+          <button class="text-link" type="button" data-close-product-dialog data-i18n="collection.continueBrowsing">Continue browsing</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <dialog class="quote-selection-dialog" data-quote-dialog aria-labelledby="quoteDialogTitle">
     <div class="quote-dialog-head"><div><span class="eyebrow" data-i18n="collection.selectionLabel">Your selections</span><h2 id="quoteDialogTitle" data-i18n="collection.dialogTitle">Review your request</h2></div><button class="dialog-close" type="button" data-close-quote aria-label="Close">×</button></div>

@@ -6,6 +6,55 @@
   var STORAGE_KEY = "aventura_language";
   var WHATSAPP_NUMBER = "966555884854";
   var currentLanguage = DEFAULT_LANGUAGE;
+  var BOUTIQUE_CATALOG = {
+    "perfume-sea": { code: "FR-SEA-01", type: "fragrance", categories: ["sea"], titleKey: "collection.p1Title", textKey: "collection.p1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-sea.webp" },
+    "perfume-roshan": { code: "FR-ROS-02", type: "fragrance", categories: ["historic"], titleKey: "collection.p2Title", textKey: "collection.p2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-roshan.webp" },
+    "perfume-last-light": { code: "FR-DES-03", type: "fragrance", categories: ["desert"], titleKey: "collection.p3Title", textKey: "collection.p3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest" },
+    "perfume-taif": { code: "FR-TAI-04", type: "fragrance", categories: ["taif"], titleKey: "collection.p4Title", textKey: "collection.p4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-taif.webp" },
+    "perfume-noir": { code: "FR-AFT-05", type: "fragrance", categories: ["corporate"], titleKey: "collection.noirTitle", textKey: "collection.noirText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-noir.webp" },
+    "perfume-velvet": { code: "FR-AFT-06", type: "fragrance", categories: ["corporate"], titleKey: "collection.velvetTitle", textKey: "collection.velvetText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-velvet.webp" },
+
+    "sea-box": { code: "BOX-SEA-01", type: "box", categories: ["sea"], titleKey: "collection.box1Title", textKey: "collection.box1Text", statusKey: "common.madeToOrder", prepKey: "collection.prepBox", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
+    "historic-box": { code: "BOX-HIS-01", type: "box", categories: ["historic"], titleKey: "collection.box2Title", textKey: "collection.box2Text", statusKey: "common.madeToOrder", prepKey: "collection.prepBox", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
+    "desert-box": { code: "BOX-DES-01", type: "box", categories: ["desert"], titleKey: "collection.box3Title", textKey: "collection.box3Text", statusKey: "common.madeToOrder", prepKey: "collection.prepBox", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
+    "taif-box": { code: "BOX-TAI-01", type: "box", categories: ["taif"], titleKey: "collection.box4Title", textKey: "collection.box4Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
+    "executive-box": { code: "BOX-EXE-01", type: "box", categories: ["corporate"], titleKey: "collection.boxExecutiveTitle", textKey: "collection.boxExecutiveText", statusKey: "common.madeToOrder", prepKey: "collection.prepBox", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
+
+    "sea-tote": { code: "SEA-BAG-01", type: "beach", categories: ["sea"], titleKey: "collection.productSea1Title", textKey: "collection.productSea1Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "bag" },
+    "sea-towel": { code: "SEA-TWL-02", type: "beach", categories: ["sea"], titleKey: "collection.productSea2Title", textKey: "collection.productSea2Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "textile" },
+    "sea-phone": { code: "SEA-PHN-03", type: "beach", categories: ["sea"], titleKey: "collection.productSea3Title", textKey: "collection.productSea3Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "phone" },
+    "sea-bottle": { code: "SEA-BTL-04", type: "beach", categories: ["sea"], titleKey: "collection.productSea4Title", textKey: "collection.productSea4Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "bottle" },
+    "roshan-keepsake": { code: "HIS-MEM-01", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric1Title", textKey: "collection.productHistoric1Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "keepsake" },
+    "heritage-cards": { code: "HIS-CRD-02", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric2Title", textKey: "collection.productHistoric2Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "cards" },
+    "historic-notebook": { code: "HIS-NBK-03", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric3Title", textKey: "collection.productHistoric3Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "notebook" },
+    "historic-pouch": { code: "HIS-PCH-04", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric4Title", textKey: "collection.productHistoric4Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "pouch" },
+    "desert-shawl": { code: "DES-SHL-01", type: "gift", categories: ["desert"], titleKey: "collection.productDesert1Title", textKey: "collection.productDesert1Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "textile" },
+    "desert-cup": { code: "DES-CUP-02", type: "gift", categories: ["desert"], titleKey: "collection.productDesert2Title", textKey: "collection.productDesert2Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "tumbler" },
+    "desert-keepsake": { code: "DES-MEM-03", type: "gift", categories: ["desert"], titleKey: "collection.productDesert3Title", textKey: "collection.productDesert3Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "keepsake" },
+    "desert-glasses-case": { code: "DES-EYE-04", type: "gift", categories: ["desert"], titleKey: "collection.productDesert4Title", textKey: "collection.productDesert4Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "glasses" },
+    "taif-rose-mist": { code: "TAI-MST-01", type: "gift", categories: ["taif"], titleKey: "collection.productTaif1Title", textKey: "collection.productTaif1Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "mist" },
+    "taif-rose-care": { code: "TAI-CAR-02", type: "gift", categories: ["taif"], titleKey: "collection.productTaif4Title", textKey: "collection.productTaif4Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "care" },
+    "taif-sachet": { code: "TAI-SCH-03", type: "gift", categories: ["taif"], titleKey: "collection.productTaif3Title", textKey: "collection.productTaif3Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "pouch" },
+    "taif-notebook": { code: "TAI-NBK-04", type: "gift", categories: ["taif"], titleKey: "collection.productTaif5Title", textKey: "collection.productTaif5Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "notebook" },
+
+    "thobe": { code: "SVC-THB-01", type: "service", categories: ["corporate"], titleKey: "collection.thobeTitle", textKey: "collection.thobeText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.addService", visual: "service" },
+    "abaya": { code: "SVC-ABY-02", type: "service", categories: ["corporate"], titleKey: "collection.abayaTitle", textKey: "collection.abayaText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.addService", visual: "service" },
+    "flower": { code: "SVC-FLW-03", type: "service", categories: ["corporate"], titleKey: "collection.flowerTitle", textKey: "collection.flowerText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.addService", visual: "service" }
+  };
+  var BOUTIQUE_TYPE_KEYS = {
+    fragrance: "collection.typeFragrance",
+    beach: "collection.typeBeach",
+    gift: "collection.typeGift",
+    box: "collection.typeBox",
+    service: "collection.typeService"
+  };
+  var BOUTIQUE_CATEGORY_KEYS = {
+    sea: "collection.filterSea",
+    historic: "collection.filterHistoric",
+    desert: "collection.filterDesert",
+    taif: "collection.filterTaif",
+    corporate: "collection.filterCorporate"
+  };
 
   function headerMarkup() {
     return [
@@ -271,28 +320,262 @@
     }
   }
 
+  function setupBoutiqueCatalog() {
+    var boutique = document.querySelector("[data-boutique]");
+    if (!boutique) {
+      return;
+    }
+
+    var items = Array.from(boutique.querySelectorAll("[data-boutique-item]"));
+    var dialog = document.querySelector("[data-product-dialog]");
+    var activeAction = null;
+    var activeProduct = null;
+
+    function createTag(key, className) {
+      var tag = document.createElement("span");
+      tag.className = className || "";
+      tag.setAttribute("data-i18n", key);
+      tag.textContent = translate(key);
+      return tag;
+    }
+
+    function createContextTags(product) {
+      var tags = document.createElement("div");
+      tags.className = "product-context-tags";
+      tags.appendChild(createTag(BOUTIQUE_TYPE_KEYS[product.type], "product-type-tag"));
+      if (product.categories[0] && BOUTIQUE_CATEGORY_KEYS[product.categories[0]]) {
+        tags.appendChild(createTag(BOUTIQUE_CATEGORY_KEYS[product.categories[0]], "product-collection-tag"));
+      }
+      var code = document.createElement("span");
+      code.className = "product-code-tag";
+      code.textContent = product.code;
+      tags.appendChild(code);
+      return tags;
+    }
+
+    function cloneProductVisual(item, product) {
+      var sourceImage = item.querySelector(".perfume-card-media img");
+      if (sourceImage) {
+        var image = sourceImage.cloneNode(true);
+        image.removeAttribute("loading");
+        image.removeAttribute("fetchpriority");
+        return image;
+      }
+      var source = item.querySelector(".box-preview, .catalog-product-visual");
+      if (source) {
+        var clone = source.cloneNode(true);
+        clone.removeAttribute("data-reveal");
+        return clone;
+      }
+      var service = document.createElement("div");
+      service.className = "product-detail-service-visual";
+      service.setAttribute("aria-hidden", "true");
+      service.innerHTML = "<span>A</span><small>" + product.code + "</small>";
+      return service;
+    }
+
+    function updateOpenDialog() {
+      if (!dialog || !activeProduct) {
+        return;
+      }
+      dialog.querySelector("[data-product-dialog-title]").textContent = translate(activeProduct.titleKey);
+      dialog.querySelector("[data-product-dialog-description]").textContent = translate(activeProduct.textKey);
+      dialog.querySelector("[data-product-dialog-status]").textContent = translate(activeProduct.statusKey);
+      dialog.querySelector("[data-product-dialog-prep]").textContent = translate(activeProduct.prepKey);
+      dialog.querySelector("[data-product-dialog-personalization]").textContent = translate(activeProduct.personalizationKey);
+      dialog.querySelector("[data-product-dialog-collection]").textContent = translate(BOUTIQUE_CATEGORY_KEYS[activeProduct.categories[0]]);
+      var dialogAction = dialog.querySelector("[data-product-dialog-action]");
+      dialogAction.textContent = translate(activeProduct.actionKey);
+      dialogAction.classList.toggle("interest-action", activeProduct.actionKey === "collection.registerInterest");
+
+      var tags = dialog.querySelector("[data-product-dialog-tags]");
+      tags.textContent = "";
+      tags.appendChild(createTag(BOUTIQUE_TYPE_KEYS[activeProduct.type], "product-type-tag"));
+      tags.appendChild(createTag(BOUTIQUE_CATEGORY_KEYS[activeProduct.categories[0]], "product-collection-tag"));
+    }
+
+    function openProductDialog(item, product) {
+      if (!dialog) {
+        return;
+      }
+      activeProduct = product;
+      activeAction = item.querySelector("[data-quote-item]");
+      dialog.querySelector("[data-product-dialog-code]").textContent = product.code;
+      var visual = dialog.querySelector("[data-product-dialog-visual]");
+      visual.textContent = "";
+      visual.appendChild(cloneProductVisual(item, product));
+      updateOpenDialog();
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+    }
+
+    items.forEach(function (item) {
+      var action = item.querySelector("[data-quote-item]");
+      var id = action ? action.getAttribute("data-quote-item") : "";
+      var product = BOUTIQUE_CATALOG[id];
+      if (!product) {
+        return;
+      }
+
+      item.setAttribute("data-product-id", id);
+      item.setAttribute("data-product-type", product.type);
+      item.setAttribute("data-category", product.categories.join(" "));
+      action.setAttribute("data-i18n", product.actionKey);
+      action.setAttribute("data-quote-label-key", product.titleKey);
+      if (product.actionKey === "collection.registerInterest") {
+        action.setAttribute("data-interest-item", "true");
+        action.classList.add("interest-action");
+      }
+
+      var content = item.querySelector(".perfume-card-copy, .boutique-card-content, .catalog-product-content");
+      if (!content && item.classList.contains("perfume-card-pending")) {
+        content = item.querySelector("div");
+      }
+      content = content || item;
+      content.insertBefore(createContextTags(product), content.firstChild);
+
+      var prep = document.createElement("p");
+      prep.className = "product-prep-line";
+      var prepLabel = document.createElement("span");
+      prepLabel.setAttribute("data-i18n", "collection.preparationLabel");
+      prepLabel.textContent = translate("collection.preparationLabel");
+      var prepValue = document.createElement("strong");
+      prepValue.setAttribute("data-i18n", product.prepKey);
+      prepValue.textContent = translate(product.prepKey);
+      prep.append(prepLabel, prepValue);
+      var description = content.querySelector("p:not(.product-prep-line)");
+      if (description && description.nextSibling) {
+        content.insertBefore(prep, description.nextSibling);
+      } else {
+        content.appendChild(prep);
+      }
+
+      var visual = item.querySelector(".catalog-product-visual");
+      if (visual && product.visual) {
+        var object = document.createElement("div");
+        object.className = "catalog-product-object";
+        object.setAttribute("data-shape", product.visual);
+        object.setAttribute("aria-hidden", "true");
+        object.innerHTML = "<span>A</span>";
+        visual.appendChild(object);
+      }
+
+      var details = document.createElement("button");
+      details.className = "product-details-button";
+      details.type = "button";
+      details.setAttribute("data-i18n", "collection.viewDetails");
+      details.textContent = translate("collection.viewDetails");
+      details.addEventListener("click", function () { openProductDialog(item, product); });
+      var actions = item.querySelector(".catalog-card-actions, .perfume-card-actions");
+      if (actions) {
+        actions.insertBefore(details, action);
+      } else {
+        action.parentNode.insertBefore(details, action);
+      }
+    });
+
+    if (dialog) {
+      dialog.querySelectorAll("[data-close-product-dialog]").forEach(function (button) {
+        button.addEventListener("click", function () { dialog.close(); });
+      });
+      dialog.addEventListener("click", function (event) {
+        if (event.target === dialog) {
+          dialog.close();
+        }
+      });
+      dialog.querySelector("[data-product-dialog-action]").addEventListener("click", function () {
+        if (activeAction) {
+          activeAction.click();
+        }
+        dialog.close();
+      });
+      document.addEventListener("aventura:language", function () {
+        if (dialog.open) {
+          updateOpenDialog();
+        }
+      });
+    }
+  }
+
   function setupBoutiqueFilters() {
     var boutique = document.querySelector("[data-boutique]");
     if (!boutique) {
       return;
     }
 
-    var buttons = Array.from(boutique.querySelectorAll("[data-boutique-filter]"));
+    var experienceButtons = Array.from(boutique.querySelectorAll("[data-boutique-filter]"));
+    var typeButtons = Array.from(boutique.querySelectorAll("[data-boutique-type]"));
     var items = Array.from(boutique.querySelectorAll("[data-boutique-item]"));
     var sections = Array.from(boutique.querySelectorAll("[data-boutique-section]"));
-    var allowed = ["all", "sea", "historic", "desert", "taif", "jeddah", "corporate"];
+    var search = boutique.querySelector("[data-boutique-search]");
+    var resultCount = boutique.querySelector("[data-boutique-results]");
+    var empty = boutique.querySelector("[data-boutique-empty]");
+    var allowedExperiences = ["all", "sea", "historic", "desert", "taif", "jeddah", "corporate"];
+    var allowedTypes = ["all", "fragrance", "beach", "gift", "box", "service"];
     var query = new URLSearchParams(window.location.search);
-    var initial = query.get("experience") || "all";
+    var state = {
+      experience: query.get("experience") || "all",
+      type: query.get("productType") || "all",
+      search: query.get("q") || ""
+    };
 
-    if (allowed.indexOf(initial) === -1) {
-      initial = "all";
+    if (allowedExperiences.indexOf(state.experience) === -1) {
+      state.experience = "all";
+    }
+    if (allowedTypes.indexOf(state.type) === -1) {
+      state.type = "all";
+    }
+    if (search) {
+      search.value = state.search;
     }
 
-    function applyFilter(filter, updateUrl) {
+    function normalize(value) {
+      var text = String(value || "").toLocaleLowerCase();
+      if (typeof text.normalize === "function") {
+        text = text.normalize("NFD").replace(/[\u0300-\u036f\u064b-\u065f]/g, "");
+      }
+      return text.replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+    }
+
+    function matchesExperience(categories) {
+      if (state.experience === "all") {
+        return true;
+      }
+      if (state.experience === "jeddah") {
+        return categories.indexOf("sea") !== -1 || categories.indexOf("historic") !== -1;
+      }
+      return categories.indexOf(state.experience) !== -1;
+    }
+
+    function updateUrl() {
+      if (!window.history || !window.history.replaceState) {
+        return;
+      }
+      var url = new URL(window.location.href);
+      state.experience === "all" ? url.searchParams.delete("experience") : url.searchParams.set("experience", state.experience);
+      state.type === "all" ? url.searchParams.delete("productType") : url.searchParams.set("productType", state.type);
+      state.search ? url.searchParams.set("q", state.search) : url.searchParams.delete("q");
+      window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+    }
+
+    function applyFilters(shouldUpdateUrl) {
+      var searchTerm = normalize(state.search);
+      var visible = 0;
+
       items.forEach(function (item) {
+        var id = item.getAttribute("data-product-id") || "";
+        var product = BOUTIQUE_CATALOG[id];
         var categories = (item.getAttribute("data-category") || "").split(/\s+/).filter(Boolean);
-        var matchesJeddah = filter === "jeddah" && (categories.indexOf("sea") !== -1 || categories.indexOf("historic") !== -1);
-        item.hidden = filter !== "all" && categories.indexOf(filter) === -1 && !matchesJeddah;
+        var typeMatches = state.type === "all" || item.getAttribute("data-product-type") === state.type;
+        var searchable = item.textContent + " " + id + " " + (product ? product.code : "");
+        var searchMatches = !searchTerm || normalize(searchable).indexOf(searchTerm) !== -1;
+        item.hidden = !(matchesExperience(categories) && typeMatches && searchMatches);
+        if (!item.hidden) {
+          visible += 1;
+        }
       });
 
       sections.forEach(function (section) {
@@ -300,30 +583,79 @@
         section.hidden = sectionItems.length > 0 && sectionItems.every(function (item) { return item.hidden; });
       });
 
-      buttons.forEach(function (button) {
-        var active = button.getAttribute("data-boutique-filter") === filter;
+      experienceButtons.forEach(function (button) {
+        var active = button.getAttribute("data-boutique-filter") === state.experience;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      typeButtons.forEach(function (button) {
+        var active = button.getAttribute("data-boutique-type") === state.type;
         button.classList.toggle("is-active", active);
         button.setAttribute("aria-pressed", active ? "true" : "false");
       });
 
-      if (updateUrl && window.history && window.history.replaceState) {
-        var url = new URL(window.location.href);
-        if (filter === "all") {
-          url.searchParams.delete("experience");
-        } else {
-          url.searchParams.set("experience", filter);
-        }
-        window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+      if (resultCount) {
+        resultCount.textContent = String(visible);
+      }
+      if (empty) {
+        empty.hidden = visible !== 0;
+      }
+      if (shouldUpdateUrl) {
+        updateUrl();
       }
     }
 
-    buttons.forEach(function (button) {
+    experienceButtons.forEach(function (button) {
       button.addEventListener("click", function () {
-        applyFilter(button.getAttribute("data-boutique-filter"), true);
+        state.experience = button.getAttribute("data-boutique-filter");
+        applyFilters(true);
+      });
+    });
+    typeButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        state.type = button.getAttribute("data-boutique-type");
+        applyFilters(true);
+      });
+    });
+    if (search) {
+      search.addEventListener("input", function () {
+        state.search = search.value.trim();
+        applyFilters(true);
+      });
+    }
+    boutique.querySelectorAll("[data-clear-boutique-search]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        state.search = "";
+        search.value = "";
+        applyFilters(true);
+        search.focus();
+      });
+    });
+    boutique.querySelectorAll("[data-clear-boutique-filters]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        state.experience = "all";
+        state.type = "all";
+        state.search = "";
+        if (search) {
+          search.value = "";
+        }
+        applyFilters(true);
+      });
+    });
+    boutique.querySelectorAll("[data-boutique-path]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var target = button.getAttribute("data-boutique-path") === "product" ? search : document.getElementById("experienceFilters");
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (target === search) {
+            window.setTimeout(function () { search.focus(); }, 350);
+          }
+        }
       });
     });
 
-    applyFilter(initial, false);
+    document.addEventListener("aventura:language", function () { applyFilters(false); });
+    applyFilters(false);
   }
 
   function setupExperienceDetail() {
@@ -425,7 +757,7 @@
       return '<article class="catalog-product-card detail-perfume-product" data-reveal>' + visual +
         '<div class="catalog-product-content"><span class="status coming" data-i18n="common.comingSoon">Coming soon</span>' +
         '<h3 data-i18n="' + perfume.titleKey + '">Aventura fragrance</h3><p data-i18n="' + perfume.textKey + '">An experience-inspired fragrance.</p>' +
-        storyButton + '<div class="catalog-card-actions">' + quantityMarkup(perfume.id) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + perfume.id + '" data-quote-label-key="' + perfume.titleKey + '" data-i18n="collection.addItem">Add to quote</button></div></div></article>';
+        storyButton + '<div class="catalog-card-actions">' + quantityMarkup(perfume.id) + '<button class="text-link quote-add-button interest-action" type="button" data-interest-item="true" data-quote-item="' + perfume.id + '" data-quote-label-key="' + perfume.titleKey + '" data-i18n="collection.registerInterest">Register interest</button></div></div></article>';
     }
 
     function productMarkup(product) {
@@ -549,25 +881,34 @@
       return;
     }
 
-    var storageKey = "aventura_quote_selection_v2";
+    var storageKey = "aventura_quote_selection_v3";
+    var legacyStorageKey = "aventura_quote_selection_v2";
+    var storageLifetime = 30 * 24 * 60 * 60 * 1000;
     var buttons = Array.from(document.querySelectorAll("[data-quote-item]"));
     var bar = document.querySelector("[data-quote-bar]");
     var countElement = document.querySelector("[data-quote-count]");
+    var previewElement = document.querySelector("[data-quote-preview]");
     var dialog = document.querySelector("[data-quote-dialog]");
     var list = document.querySelector("[data-quote-list]");
     var state = {};
 
     try {
-      state = JSON.parse(sessionStorage.getItem(storageKey) || "{}") || {};
+      var saved = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (saved && saved.state && Date.now() - Number(saved.savedAt || 0) <= storageLifetime) {
+        state = saved.state;
+      } else {
+        localStorage.removeItem(storageKey);
+        state = JSON.parse(sessionStorage.getItem(legacyStorageKey) || "{}") || {};
+      }
     } catch (error) {
       state = {};
     }
 
     function save() {
       try {
-        sessionStorage.setItem(storageKey, JSON.stringify(state));
+        localStorage.setItem(storageKey, JSON.stringify({ savedAt: Date.now(), state: state }));
       } catch (error) {
-        /* Session storage may be disabled. */
+        /* Local storage may be disabled. */
       }
     }
 
@@ -587,9 +928,10 @@
       buttons.forEach(function (button) {
         var selected = Boolean(state[button.getAttribute("data-quote-item")]);
         var defaultKey = button.getAttribute("data-i18n") || "collection.addItem";
+        var selectedKey = button.hasAttribute("data-interest-item") ? "collection.interestAdded" : "collection.added";
         button.classList.toggle("is-added", selected);
         button.setAttribute("aria-pressed", selected ? "true" : "false");
-        button.textContent = translate(selected ? "collection.added" : defaultKey);
+        button.textContent = translate(selected ? selectedKey : defaultKey);
       });
     }
 
@@ -645,6 +987,13 @@
       if (countElement) {
         countElement.textContent = String(count);
       }
+      if (previewElement) {
+        var names = Object.keys(state).slice(0, 2).map(function (id) {
+          return translate(state[id].labelKey);
+        });
+        var remaining = Math.max(0, Object.keys(state).length - names.length);
+        previewElement.textContent = names.join(" · ") + (remaining ? " · +" + remaining : "");
+      }
       updateButtons();
     }
 
@@ -669,14 +1018,84 @@
         if (!id) {
           return;
         }
+        var catalogProduct = BOUTIQUE_CATALOG[id];
         state[id] = {
-          labelKey: button.getAttribute("data-quote-label-key") || id,
+          labelKey: catalogProduct ? catalogProduct.titleKey : button.getAttribute("data-quote-label-key") || id,
           quantity: quantityForButton(button, id)
         };
         save();
         updateSummary();
       });
     });
+
+    var reorderForm = document.querySelector("[data-reorder-form]");
+    var reorderInput = document.querySelector("[data-reorder-product]");
+    var reorderList = document.querySelector("[data-reorder-products]");
+    var reorderQuantity = document.querySelector("[data-reorder-quantity]");
+    var reorderStatus = document.querySelector("[data-reorder-status]");
+    var reorderValues = {};
+
+    function normalizeReorderValue(value) {
+      return String(value || "").trim().toLocaleLowerCase();
+    }
+
+    function renderReorderProducts() {
+      if (!reorderList) {
+        return;
+      }
+      reorderValues = {};
+      reorderList.textContent = "";
+      Object.keys(BOUTIQUE_CATALOG).forEach(function (id) {
+        var product = BOUTIQUE_CATALOG[id];
+        if (product.actionKey === "collection.registerInterest") {
+          return;
+        }
+        var display = product.code + " — " + translate(product.titleKey);
+        var option = document.createElement("option");
+        option.value = display;
+        reorderList.appendChild(option);
+        reorderValues[normalizeReorderValue(display)] = id;
+        reorderValues[normalizeReorderValue(product.code)] = id;
+        reorderValues[normalizeReorderValue(id)] = id;
+        reorderValues[normalizeReorderValue(translate(product.titleKey))] = id;
+      });
+    }
+
+    if (reorderForm && reorderInput) {
+      reorderForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var entered = normalizeReorderValue(reorderInput.value);
+        var id = reorderValues[entered];
+        if (!id) {
+          var matchingKey = Object.keys(BOUTIQUE_CATALOG).find(function (productId) {
+            var product = BOUTIQUE_CATALOG[productId];
+            return product.actionKey !== "collection.registerInterest" && (normalizeReorderValue(product.code).indexOf(entered) !== -1 || normalizeReorderValue(translate(product.titleKey)).indexOf(entered) !== -1);
+          });
+          id = matchingKey || "";
+        }
+        if (!id) {
+          if (reorderStatus) {
+            reorderStatus.textContent = translate("collection.reorderError");
+          }
+          return;
+        }
+        var product = BOUTIQUE_CATALOG[id];
+        state[id] = {
+          labelKey: product.titleKey,
+          quantity: Math.max(1, Math.min(500, Number(reorderQuantity ? reorderQuantity.value : 1) || 1))
+        };
+        save();
+        updateSummary();
+        if (reorderStatus) {
+          reorderStatus.textContent = translate("collection.reorderSuccess") + " " + translate(product.titleKey) + ".";
+        }
+        reorderInput.value = "";
+        if (reorderQuantity) {
+          reorderQuantity.value = "1";
+        }
+      });
+      renderReorderProducts();
+    }
 
     var openButton = document.querySelector("[data-open-quote]");
     if (openButton && dialog) {
@@ -727,6 +1146,7 @@
 
     document.addEventListener("aventura:language", function () {
       updateSummary();
+      renderReorderProducts();
       if (dialog && dialog.open) {
         renderDialog();
       }
@@ -886,6 +1306,9 @@
       "leadership-half-day": "corporate.package2Title",
       "team-discovery": "corporate.package3Title"
     };
+    Object.keys(BOUTIQUE_CATALOG).forEach(function (id) {
+      requestKeys[id] = BOUTIQUE_CATALOG[id].titleKey;
+    });
     var requestedItem = query.get("request");
     var requestKey = requestKeys[requestedItem];
     var requestedItems = String(query.get("items") || "").split(",").map(function (part) {
@@ -1133,6 +1556,7 @@
     setupLanguageSwitcher();
     setupExperienceDetail();
     setupPerfumeStoryCards();
+    setupBoutiqueCatalog();
     applyLanguage(getInitialLanguage(), false);
     setupHeader();
     setupBoutiqueFilters();
