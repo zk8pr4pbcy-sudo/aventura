@@ -4,6 +4,9 @@
   var SUPPORTED_LANGUAGES = ["en", "ar", "es"];
   var DEFAULT_LANGUAGE = "en";
   var STORAGE_KEY = "aventura_language";
+  var QUOTE_SELECTION_STORAGE_KEY = "aventura_quote_selection_v3";
+  var QUOTE_SELECTION_LEGACY_KEY = "aventura_quote_selection_v2";
+  var QUOTE_SELECTION_LIFETIME = 30 * 24 * 60 * 60 * 1000;
   var WHATSAPP_NUMBER = "966555884854";
   var currentLanguage = DEFAULT_LANGUAGE;
   var BOUTIQUE_CATALOG = {
@@ -18,7 +21,6 @@
     "historic-box": { code: "BOX-HIS-01", type: "box", categories: ["historic"], titleKey: "collection.box2Title", textKey: "collection.box2Text", statusKey: "common.madeToOrder", prepKey: "collection.prepBox", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
     "desert-box": { code: "BOX-DES-01", type: "box", categories: ["desert"], titleKey: "collection.box3Title", textKey: "collection.box3Text", statusKey: "common.madeToOrder", prepKey: "collection.prepBox", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
     "taif-box": { code: "BOX-TAI-01", type: "box", categories: ["taif"], titleKey: "collection.box4Title", textKey: "collection.box4Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
-    "executive-box": { code: "BOX-EXE-01", type: "box", categories: ["corporate"], titleKey: "collection.boxExecutiveTitle", textKey: "collection.boxExecutiveText", statusKey: "common.madeToOrder", prepKey: "collection.prepBox", personalizationKey: "collection.personalizationAvailable", actionKey: "collection.addBox", visual: "box" },
 
     "sea-tote": { code: "SEA-BAG-01", type: "beach", categories: ["sea"], titleKey: "collection.productSea1Title", textKey: "collection.productSea1Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "bag" },
     "sea-towel": { code: "SEA-TWL-02", type: "beach", categories: ["sea"], titleKey: "collection.productSea2Title", textKey: "collection.productSea2Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "textile" },
@@ -31,7 +33,7 @@
     "desert-shawl": { code: "DES-SHL-01", type: "gift", categories: ["desert"], titleKey: "collection.productDesert1Title", textKey: "collection.productDesert1Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "textile" },
     "desert-cup": { code: "DES-CUP-02", type: "gift", categories: ["desert"], titleKey: "collection.productDesert2Title", textKey: "collection.productDesert2Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "tumbler" },
     "desert-keepsake": { code: "DES-MEM-03", type: "gift", categories: ["desert"], titleKey: "collection.productDesert3Title", textKey: "collection.productDesert3Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "keepsake" },
-    "desert-glasses-case": { code: "DES-EYE-04", type: "gift", categories: ["desert"], titleKey: "collection.productDesert4Title", textKey: "collection.productDesert4Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "glasses" },
+    "desert-glasses-case": { code: "DES-TRV-04", type: "gift", categories: ["desert"], titleKey: "collection.productDesert4Title", textKey: "collection.productDesert4Text", statusKey: "common.madeToOrder", prepKey: "collection.prepProduct", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "pouch" },
     "taif-rose-mist": { code: "TAI-MST-01", type: "gift", categories: ["taif"], titleKey: "collection.productTaif1Title", textKey: "collection.productTaif1Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "mist" },
     "taif-rose-care": { code: "TAI-CAR-02", type: "gift", categories: ["taif"], titleKey: "collection.productTaif4Title", textKey: "collection.productTaif4Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "care" },
     "taif-sachet": { code: "TAI-SCH-03", type: "gift", categories: ["taif"], titleKey: "collection.productTaif3Title", textKey: "collection.productTaif3Text", statusKey: "common.seasonal", prepKey: "collection.prepSeasonal", personalizationKey: "collection.personalizationReviewed", actionKey: "collection.addItem", visual: "pouch" },
@@ -39,7 +41,12 @@
 
     "thobe": { code: "SVC-THB-01", type: "service", categories: ["corporate"], titleKey: "collection.thobeTitle", textKey: "collection.thobeText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.addService", visual: "service" },
     "abaya": { code: "SVC-ABY-02", type: "service", categories: ["corporate"], titleKey: "collection.abayaTitle", textKey: "collection.abayaText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.addService", visual: "service" },
-    "flower": { code: "SVC-FLW-03", type: "service", categories: ["corporate"], titleKey: "collection.flowerTitle", textKey: "collection.flowerText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.addService", visual: "service" }
+    "flower": { code: "SVC-FLW-03", type: "service", categories: ["corporate"], titleKey: "collection.flowerTitle", textKey: "collection.flowerText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.addService", visual: "service" },
+    "airport-welcome": { code: "SVC-ARR-04", type: "service", categories: ["corporate"], titleKey: "collection.airportWelcomeTitle", textKey: "collection.airportWelcomeText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.requestService", visual: "service" },
+    "executive-transport": { code: "SVC-TRN-05", type: "service", categories: ["corporate"], titleKey: "collection.executiveTransportTitle", textKey: "collection.executiveTransportText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.requestService", visual: "service" },
+    "meeting-setup": { code: "SVC-MTG-06", type: "service", categories: ["corporate"], titleKey: "collection.meetingSetupTitle", textKey: "collection.meetingSetupText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.requestService", visual: "service" },
+    "official-gifts": { code: "SVC-GFT-07", type: "service", categories: ["corporate"], titleKey: "collection.officialGiftsTitle", textKey: "collection.officialGiftsText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.requestService", visual: "service" },
+    "concierge": { code: "SVC-CON-08", type: "service", categories: ["corporate"], titleKey: "collection.conciergeTitle", textKey: "collection.conciergeText", statusKey: "common.availableRequest", prepKey: "collection.prepService", personalizationKey: "collection.personalizationService", actionKey: "collection.requestService", visual: "service" }
   };
   var BOUTIQUE_TYPE_KEYS = {
     fragrance: "collection.typeFragrance",
@@ -56,6 +63,79 @@
     corporate: "collection.filterCorporate"
   };
 
+  function isInterestProduct(product) {
+    return Boolean(product && product.actionKey === "collection.registerInterest");
+  }
+
+  function isRequestableProduct(product) {
+    return Boolean(product && !isInterestProduct(product));
+  }
+
+  function clampQuantity(value) {
+    return Math.max(1, Math.min(500, Number(value) || 1));
+  }
+
+  function sanitizeQuoteSelection(rawState) {
+    var safeState = {};
+    if (!rawState || typeof rawState !== "object" || Array.isArray(rawState)) {
+      return safeState;
+    }
+
+    Object.keys(rawState).forEach(function (id) {
+      var product = BOUTIQUE_CATALOG[id];
+      var item = rawState[id];
+      if (!isRequestableProduct(product) || !item || typeof item !== "object") {
+        return;
+      }
+      safeState[id] = {
+        labelKey: product.titleKey,
+        quantity: clampQuantity(item.quantity)
+      };
+    });
+    return safeState;
+  }
+
+  function saveQuoteSelection(state) {
+    var safeState = sanitizeQuoteSelection(state);
+    try {
+      if (Object.keys(safeState).length) {
+        localStorage.setItem(QUOTE_SELECTION_STORAGE_KEY, JSON.stringify({ savedAt: Date.now(), state: safeState }));
+      } else {
+        localStorage.removeItem(QUOTE_SELECTION_STORAGE_KEY);
+      }
+      sessionStorage.removeItem(QUOTE_SELECTION_LEGACY_KEY);
+    } catch (error) {
+      /* Storage can be unavailable or disabled. */
+    }
+    return safeState;
+  }
+
+  function readQuoteSelection() {
+    var rawState = {};
+    try {
+      var saved = JSON.parse(localStorage.getItem(QUOTE_SELECTION_STORAGE_KEY) || "null");
+      if (saved && saved.state && Date.now() - Number(saved.savedAt || 0) <= QUOTE_SELECTION_LIFETIME) {
+        rawState = saved.state;
+      } else {
+        localStorage.removeItem(QUOTE_SELECTION_STORAGE_KEY);
+        rawState = JSON.parse(sessionStorage.getItem(QUOTE_SELECTION_LEGACY_KEY) || "{}") || {};
+      }
+    } catch (error) {
+      rawState = {};
+    }
+    return saveQuoteSelection(rawState);
+  }
+
+  function removeUnsupportedBoutiqueItems() {
+    document.querySelectorAll("[data-boutique-item]").forEach(function (item) {
+      var action = item.querySelector("[data-quote-item]");
+      var id = action && action.getAttribute("data-quote-item");
+      if (id && !BOUTIQUE_CATALOG[id]) {
+        item.remove();
+      }
+    });
+  }
+
   function headerMarkup() {
     return [
       '<a class="skip-link" href="#main" data-i18n="common.skip">Skip to main content</a>',
@@ -66,14 +146,10 @@
       '      <span class="sr-only" data-i18n="brand.tagline">Experiences · Events · Hospitality</span>',
       '    </a>',
       '    <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">',
-      '      <a class="nav-link" data-nav="home" href="index.html"><span data-i18n="nav.home">Home</span></a>',
       '      <a class="nav-link" data-nav="experiences" href="experiences.html"><span data-i18n="nav.experiences">Experiences</span></a>',
-      '      <a class="nav-link" data-nav="corporate" href="corporate.html"><span data-i18n="nav.corporate">Corporate</span></a>',
-      '      <a class="nav-link" data-nav="events" href="events.html"><span data-i18n="nav.events">Events</span></a>',
-      '      <a class="nav-link" data-nav="services" href="services.html"><span data-i18n="nav.services">Services</span></a>',
+      '      <a class="nav-link" data-nav="corporate" data-nav-alias="events" href="corporate.html"><span data-i18n="nav.corporateEvents">Corporate &amp; Events</span></a>',
       '      <a class="nav-link" data-nav="collection" href="collection.html"><span data-i18n="nav.collection">Boutique</span></a>',
       '      <a class="nav-link" data-nav="about" href="about.html"><span data-i18n="nav.about">About</span></a>',
-      '      <a class="nav-link" data-nav="partners" href="partners.html"><span data-i18n="nav.partners">Partner with us</span></a>',
       '      <a class="nav-link" data-nav="contact" href="contact.html"><span data-i18n="nav.contact">Contact</span></a>',
       '    </nav>',
       '    <div class="header-actions">',
@@ -105,7 +181,7 @@
       '      <h3 data-i18n="footer.explore">Explore</h3>',
       '      <ul class="footer-links">',
       '        <li><a href="experiences.html" data-i18n="nav.experiences">Experiences</a></li>',
-      '        <li><a href="corporate.html" data-i18n="nav.corporate">Corporate</a></li>',
+      '        <li><a href="corporate.html" data-i18n="nav.corporateEvents">Corporate &amp; Events</a></li>',
       '        <li><a href="events.html" data-i18n="nav.events">Events</a></li>',
       '        <li><a href="services.html" data-i18n="nav.services">Services</a></li>',
       '        <li><a href="collection.html" data-i18n="nav.collection">Boutique</a></li>',
@@ -218,6 +294,10 @@
       element.setAttribute("aria-label", translate(element.getAttribute("data-i18n-aria"), language));
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (element) {
+      element.setAttribute("alt", translate(element.getAttribute("data-i18n-alt"), language));
+    });
+
     document.querySelectorAll("[data-language]").forEach(function (button) {
       var active = button.getAttribute("data-language") === language;
       button.classList.toggle("is-active", active);
@@ -234,6 +314,21 @@
       if (description) {
         description.setAttribute("content", translate(descriptionKey, language));
       }
+    }
+
+    var currentTitle = document.title;
+    var currentDescription = document.querySelector('meta[name="description"]');
+    document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(function (meta) {
+      meta.setAttribute("content", currentTitle);
+    });
+    if (currentDescription) {
+      document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(function (meta) {
+        meta.setAttribute("content", currentDescription.getAttribute("content") || "");
+      });
+    }
+    var ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) {
+      ogLocale.setAttribute("content", language === "ar" ? "ar_SA" : language === "es" ? "es_ES" : "en_US");
     }
 
     try {
@@ -266,7 +361,7 @@
     var toggle = document.querySelector(".nav-toggle");
     var nav = document.getElementById("primaryNav");
     var page = document.body.getAttribute("data-page");
-    var active = document.querySelector('[data-nav="' + page + '"]');
+    var active = document.querySelector('[data-nav="' + page + '"], [data-nav-alias~="' + page + '"]');
 
     if (active) {
       active.classList.add("is-active");
@@ -318,6 +413,108 @@
         }
       }, { passive: true });
     }
+  }
+
+  function restoreDialogFocus(dialog) {
+    var trigger = dialog && dialog.__aventuraReturnFocus;
+    if (dialog) {
+      dialog.__aventuraReturnFocus = null;
+    }
+    if (trigger && document.contains(trigger) && typeof trigger.focus === "function") {
+      window.setTimeout(function () { trigger.focus(); }, 0);
+    }
+  }
+
+  function prepareDialog(dialog) {
+    if (!dialog || dialog.__aventuraPrepared) {
+      return;
+    }
+    dialog.__aventuraPrepared = true;
+    dialog.addEventListener("close", function () { restoreDialogFocus(dialog); });
+    dialog.querySelectorAll(".dialog-close").forEach(function (button) {
+      if (!button.hasAttribute("data-i18n-aria")) {
+        button.setAttribute("data-i18n-aria", "collection.closeDetails");
+      }
+      button.setAttribute("aria-label", translate(button.getAttribute("data-i18n-aria")));
+    });
+  }
+
+  function openAventuraDialog(dialog, trigger) {
+    if (!dialog || dialog.open) {
+      return;
+    }
+    prepareDialog(dialog);
+    dialog.__aventuraReturnFocus = trigger || document.activeElement;
+    dialog.setAttribute("dir", document.documentElement.dir || "ltr");
+    if (typeof dialog.showModal === "function") {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "");
+    }
+    window.setTimeout(function () {
+      var target = dialog.querySelector("button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled])");
+      if (target && typeof target.focus === "function") {
+        target.focus();
+      }
+    }, 0);
+  }
+
+  function closeAventuraDialog(dialog) {
+    if (!dialog) {
+      return;
+    }
+    if (typeof dialog.close === "function" && dialog.open) {
+      dialog.close();
+      return;
+    }
+    dialog.removeAttribute("open");
+    restoreDialogFocus(dialog);
+  }
+
+  function setupScentLabInterest() {
+    function scentInterestUrl(product) {
+      var message = [
+        "AVENTURA Scent Lab",
+        "",
+        translate("collection.registerInterest") + ": " + translate(product.titleKey)
+      ].join("\n");
+      return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    }
+
+    function updateInterestLabels() {
+      document.querySelectorAll("[data-scent-interest], [data-interest-item]").forEach(function (button) {
+        var productId = button.getAttribute("data-scent-id") || button.getAttribute("data-interest-item");
+        var product = BOUTIQUE_CATALOG[productId];
+        if (isInterestProduct(product)) {
+          button.setAttribute("aria-label", translate(product.actionKey) + ": " + translate(product.titleKey));
+          if (button.tagName === "A") {
+            button.setAttribute("href", scentInterestUrl(product));
+            button.setAttribute("target", "_blank");
+            button.setAttribute("rel", "noopener");
+          }
+        }
+      });
+    }
+
+    document.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-scent-interest], [data-interest-item]");
+      if (!button) {
+        return;
+      }
+      var productId = button.getAttribute("data-scent-id") || button.getAttribute("data-interest-item");
+      var product = BOUTIQUE_CATALOG[productId];
+      if (!isInterestProduct(product)) {
+        return;
+      }
+      event.preventDefault();
+      if (window.AVENTURA_TRACK) {
+        window.AVENTURA_TRACK("scent_interest", { productId: productId });
+      }
+      window.open(scentInterestUrl(product), "_blank", "noopener");
+    });
+
+    document.addEventListener("aventura:language", updateInterestLabels);
+    updateInterestLabels();
   }
 
   function setupBoutiqueCatalog() {
@@ -399,24 +596,21 @@
         return;
       }
       activeProduct = product;
-      activeAction = item.querySelector("[data-quote-item]");
+      activeAction = item.querySelector("[data-quote-item], [data-interest-item]");
       dialog.querySelector("[data-product-dialog-code]").textContent = product.code;
       var visual = dialog.querySelector("[data-product-dialog-visual]");
       visual.textContent = "";
       visual.appendChild(cloneProductVisual(item, product));
       updateOpenDialog();
-      if (typeof dialog.showModal === "function") {
-        dialog.showModal();
-      } else {
-        dialog.setAttribute("open", "");
-      }
+      openAventuraDialog(dialog, item.querySelector(".product-details-button") || activeAction);
     }
 
     items.forEach(function (item) {
-      var action = item.querySelector("[data-quote-item]");
-      var id = action ? action.getAttribute("data-quote-item") : "";
+      var action = item.querySelector("[data-quote-item], [data-interest-item]");
+      var id = action ? action.getAttribute("data-quote-item") || action.getAttribute("data-interest-item") : "";
       var product = BOUTIQUE_CATALOG[id];
       if (!product) {
+        item.remove();
         return;
       }
 
@@ -425,9 +619,21 @@
       item.setAttribute("data-category", product.categories.join(" "));
       action.setAttribute("data-i18n", product.actionKey);
       action.setAttribute("data-quote-label-key", product.titleKey);
-      if (product.actionKey === "collection.registerInterest") {
-        action.setAttribute("data-interest-item", "true");
+      if (isInterestProduct(product)) {
+        action.setAttribute("data-interest-item", id);
+        action.removeAttribute("data-quote-item");
+        action.removeAttribute("data-quote-label-key");
+        action.classList.remove("quote-add-button");
+        action.classList.add("product-details-button");
         action.classList.add("interest-action");
+        action.setAttribute("aria-label", translate(product.actionKey) + ": " + translate(product.titleKey));
+        var quantityControl = item.querySelector('[data-item-quantity="' + id + '"]');
+        if (quantityControl) {
+          var quantityLabel = quantityControl.closest("label");
+          if (quantityLabel) {
+            quantityLabel.remove();
+          }
+        }
       }
 
       var content = item.querySelector(".perfume-card-copy, .boutique-card-content, .catalog-product-content");
@@ -478,25 +684,57 @@
     });
 
     if (dialog) {
+      prepareDialog(dialog);
       dialog.querySelectorAll("[data-close-product-dialog]").forEach(function (button) {
-        button.addEventListener("click", function () { dialog.close(); });
+        button.addEventListener("click", function () { closeAventuraDialog(dialog); });
       });
       dialog.addEventListener("click", function (event) {
         if (event.target === dialog) {
-          dialog.close();
+          closeAventuraDialog(dialog);
         }
       });
       dialog.querySelector("[data-product-dialog-action]").addEventListener("click", function () {
         if (activeAction) {
           activeAction.click();
         }
-        dialog.close();
+        closeAventuraDialog(dialog);
       });
       document.addEventListener("aventura:language", function () {
         if (dialog.open) {
           updateOpenDialog();
         }
+        items.forEach(function (item) {
+          var interestButton = item.querySelector("[data-interest-item]");
+          var id = interestButton && interestButton.getAttribute("data-interest-item");
+          var interestProduct = BOUTIQUE_CATALOG[id];
+          if (interestButton && isInterestProduct(interestProduct)) {
+            interestButton.setAttribute("aria-label", translate(interestProduct.actionKey) + ": " + translate(interestProduct.titleKey));
+          }
+        });
       });
+    }
+  }
+
+  function arrangeBoutiqueSections() {
+    var boutique = document.querySelector("[data-boutique]");
+    if (!boutique) {
+      return;
+    }
+    var main = boutique.querySelector("main") || document.querySelector("main");
+    var process = boutique.querySelector(".boutique-process");
+    var boxes = document.getElementById("boxes");
+    var reorder = document.getElementById("reorder");
+    var fragrances = document.getElementById("fragrances");
+    var cta = main && main.querySelector(".cta-band");
+
+    if (process && boxes) {
+      main.insertBefore(process, boxes);
+    }
+    if (reorder && cta) {
+      main.insertBefore(reorder, cta);
+    }
+    if (fragrances && cta) {
+      main.insertBefore(fragrances, cta);
     }
   }
 
@@ -513,21 +751,26 @@
     var search = boutique.querySelector("[data-boutique-search]");
     var resultCount = boutique.querySelector("[data-boutique-results]");
     var empty = boutique.querySelector("[data-boutique-empty]");
+    var scentLab = boutique.querySelector("[data-scent-lab]") || document.getElementById("fragrances");
     var allowedExperiences = ["all", "sea", "historic", "desert", "taif", "jeddah", "corporate"];
-    var allowedTypes = ["all", "fragrance", "beach", "gift", "box", "service"];
-    var query = new URLSearchParams(window.location.search);
-    var state = {
-      experience: query.get("experience") || "all",
-      type: query.get("productType") || "all",
-      search: query.get("q") || ""
-    };
+    var allowedTypes = ["all", "beach", "gift", "box", "service"];
+    function readStateFromUrl() {
+      var query = new URLSearchParams(window.location.search);
+      var nextState = {
+        experience: query.get("experience") || "all",
+        type: query.get("productType") || "all",
+        search: query.get("q") || ""
+      };
+      if (allowedExperiences.indexOf(nextState.experience) === -1) {
+        nextState.experience = "all";
+      }
+      if (allowedTypes.indexOf(nextState.type) === -1) {
+        nextState.type = "all";
+      }
+      return nextState;
+    }
 
-    if (allowedExperiences.indexOf(state.experience) === -1) {
-      state.experience = "all";
-    }
-    if (allowedTypes.indexOf(state.type) === -1) {
-      state.type = "all";
-    }
+    var state = readStateFromUrl();
     if (search) {
       search.value = state.search;
     }
@@ -550,7 +793,7 @@
       return categories.indexOf(state.experience) !== -1;
     }
 
-    function updateUrl() {
+    function updateUrl(historyMode, hash) {
       if (!window.history || !window.history.replaceState) {
         return;
       }
@@ -558,10 +801,26 @@
       state.experience === "all" ? url.searchParams.delete("experience") : url.searchParams.set("experience", state.experience);
       state.type === "all" ? url.searchParams.delete("productType") : url.searchParams.set("productType", state.type);
       state.search ? url.searchParams.set("q", state.search) : url.searchParams.delete("q");
-      window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+      if (hash !== undefined) {
+        url.hash = hash;
+      }
+      var method = historyMode === "push" && window.history.pushState ? "pushState" : "replaceState";
+      window.history[method]({}, "", url.pathname + url.search + url.hash);
     }
 
-    function applyFilters(shouldUpdateUrl) {
+    function showScentLab(historyMode) {
+      state.type = "all";
+      updateUrl(historyMode, "fragrances");
+      if (scentLab) {
+        scentLab.scrollIntoView({ behavior: "smooth", block: "start" });
+        var interestLink = scentLab.querySelector("[data-scent-interest]");
+        if (interestLink && typeof interestLink.focus === "function") {
+          window.setTimeout(function () { interestLink.focus(); }, 350);
+        }
+      }
+    }
+
+    function applyFilters(shouldUpdateUrl, historyMode) {
       var searchTerm = normalize(state.search);
       var visible = 0;
 
@@ -601,33 +860,38 @@
         empty.hidden = visible !== 0;
       }
       if (shouldUpdateUrl) {
-        updateUrl();
+        updateUrl(historyMode);
       }
     }
 
     experienceButtons.forEach(function (button) {
       button.addEventListener("click", function () {
         state.experience = button.getAttribute("data-boutique-filter");
-        applyFilters(true);
+        applyFilters(true, "push");
       });
     });
     typeButtons.forEach(function (button) {
       button.addEventListener("click", function () {
-        state.type = button.getAttribute("data-boutique-type");
-        applyFilters(true);
+        var type = button.getAttribute("data-boutique-type");
+        if (type === "fragrance") {
+          showScentLab("push");
+          return;
+        }
+        state.type = type;
+        applyFilters(true, "push");
       });
     });
     if (search) {
       search.addEventListener("input", function () {
         state.search = search.value.trim();
-        applyFilters(true);
+        applyFilters(true, "replace");
       });
     }
     boutique.querySelectorAll("[data-clear-boutique-search]").forEach(function (button) {
       button.addEventListener("click", function () {
         state.search = "";
         search.value = "";
-        applyFilters(true);
+        applyFilters(true, "push");
         search.focus();
       });
     });
@@ -639,7 +903,7 @@
         if (search) {
           search.value = "";
         }
-        applyFilters(true);
+        applyFilters(true, "push");
       });
     });
     boutique.querySelectorAll("[data-boutique-path]").forEach(function (button) {
@@ -654,8 +918,19 @@
       });
     });
 
+    window.addEventListener("popstate", function () {
+      state = readStateFromUrl();
+      if (search) {
+        search.value = state.search;
+      }
+      applyFilters(false);
+    });
+
     document.addEventListener("aventura:language", function () { applyFilters(false); });
     applyFilters(false);
+    if (new URLSearchParams(window.location.search).get("productType") === "fragrance") {
+      window.setTimeout(function () { showScentLab("replace"); }, 0);
+    }
   }
 
   function setupExperienceDetail() {
@@ -724,8 +999,7 @@
           ["sea-bottle", "product-sea", "collection.productSea4Short", "collection.productSea4Title", "collection.productSea4Text"],
           ["roshan-keepsake", "product-historic", "collection.productHistoric1Short", "collection.productHistoric1Title", "collection.productHistoric1Text"],
           ["heritage-cards", "product-historic", "collection.productHistoric2Short", "collection.productHistoric2Title", "collection.productHistoric2Text"]
-        ],
-        box: ["jeddah-signature-box", "box-jeddah", "JEDDAH SIGNATURE · AVENTURA", "experienceDetail.jeddahBoxTitle", "experienceDetail.jeddahBoxText", ["collection.productSea3Title", "collection.productSea4Title", "collection.productHistoric1Title", "collection.productHistoric2Title"]]
+        ]
       },
       "sea-to-balad": { alias: "jeddah", request: "sea-to-balad" }
     };
@@ -741,7 +1015,7 @@
       config = Object.assign({}, base, { request: config.request });
     }
 
-    var perfumes = config.perfumes || [config.perfume];
+    var perfumes = (config.perfumes || [config.perfume]).filter(Boolean);
 
     function quantityMarkup(id) {
       return '<label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="' + id + '"></label>';
@@ -757,7 +1031,7 @@
       return '<article class="catalog-product-card detail-perfume-product" data-reveal>' + visual +
         '<div class="catalog-product-content"><span class="status coming" data-i18n="common.comingSoon">Coming soon</span>' +
         '<h3 data-i18n="' + perfume.titleKey + '">Aventura fragrance</h3><p data-i18n="' + perfume.textKey + '">An experience-inspired fragrance.</p>' +
-        storyButton + '<div class="catalog-card-actions">' + quantityMarkup(perfume.id) + '<button class="text-link quote-add-button interest-action" type="button" data-interest-item="true" data-quote-item="' + perfume.id + '" data-quote-label-key="' + perfume.titleKey + '" data-i18n="collection.registerInterest">Register interest</button></div></div></article>';
+        storyButton + '<div class="catalog-card-actions"><button class="text-link product-details-button interest-action" type="button" data-interest-item="' + perfume.id + '" data-i18n="collection.registerInterest">Register interest</button></div></div></article>';
     }
 
     function productMarkup(product) {
@@ -776,8 +1050,18 @@
     }
 
     var requestHref = "contact.html?type=experience&request=" + encodeURIComponent(config.request);
-    var relatedIds = perfumes.map(function (perfume) { return perfume.id; })
-      .concat(config.products.map(function (product) { return product[0]; }), [config.box[0]]);
+    var relatedIds = config.products.map(function (product) { return product[0]; });
+    if (config.box && isRequestableProduct(BOUTIQUE_CATALOG[config.box[0]])) {
+      relatedIds.push(config.box[0]);
+    }
+    var experienceBoxMarkup = config.box ? [
+      '<section class="section section-muted experience-box-section" id="experience-box">',
+      '  <div class="container">',
+      '    <div class="section-heading" data-reveal><div><span class="eyebrow" data-i18n="experienceDetail.boxEyebrow">The complete collection</span><h2 data-i18n="experienceDetail.boxTitle">Everything in one considered set</h2></div><p data-i18n="experienceDetail.boxText">Choose the complete box when you prefer the full experience identity prepared as one request.</p></div>',
+      boxMarkup(config.box),
+      '  </div>',
+      '</section>'
+    ].join("") : "";
 
     root.setAttribute("data-related-items", relatedIds.join(","));
     root.setAttribute("data-experience-request-key", config.request);
@@ -788,15 +1072,10 @@
       '    <div class="catalog-product-grid detail-product-grid">' + perfumes.map(perfumeMarkup).join("") + config.products.map(productMarkup).join("") + '</div>',
       '  </div>',
       '</section>',
-      '<section class="section section-muted experience-box-section" id="experience-box">',
-      '  <div class="container">',
-      '    <div class="section-heading" data-reveal><div><span class="eyebrow" data-i18n="experienceDetail.boxEyebrow">The complete collection</span><h2 data-i18n="experienceDetail.boxTitle">Everything in one considered set</h2></div><p data-i18n="experienceDetail.boxText">Choose the complete box when you prefer the full experience identity prepared as one request.</p></div>',
-      boxMarkup(config.box),
-      '  </div>',
-      '</section>',
+      experienceBoxMarkup,
       '<section class="cta-band"><div class="container cta-inner" data-reveal><div><h2 data-i18n="experienceDetail.requestTitle">Ready to shape the experience?</h2><p data-i18n="experienceDetail.requestText">Send the date, guest count and timing. Any selected products will be included in the same request.</p></div><a class="btn" href="' + requestHref + '" data-experience-request data-i18n="experiences.quoteButton">Request a custom quote</a></div></section>',
       '<div class="quote-selection-bar" data-quote-bar hidden><div><span data-i18n="collection.selectionLabel">Your selections</span><strong><span data-quote-count>0</span> <span data-i18n="collection.selectionItems">items</span></strong></div><button class="btn btn-sm" type="button" data-open-quote data-i18n="collection.reviewSelection">Review selections</button></div>',
-      '<dialog class="quote-selection-dialog" data-quote-dialog aria-labelledby="detailQuoteTitle"><div class="quote-dialog-head"><div><span class="eyebrow" data-i18n="collection.selectionLabel">Your selections</span><h2 id="detailQuoteTitle" data-i18n="collection.dialogTitle">Review your request</h2></div><button class="dialog-close" type="button" data-close-quote aria-label="Close">×</button></div><div class="quote-dialog-list" data-quote-list></div><p class="form-note" data-i18n="collection.quoteDisclaimer">Sending the request does not confirm booking or availability.</p><div class="quote-dialog-actions"><button class="btn btn-dark" type="button" data-continue-quote data-i18n="experiences.quoteButton">Request a custom quote</button><button class="text-link" type="button" data-clear-quote data-i18n="collection.clearSelection">Clear selections</button></div></dialog>',
+      '<dialog class="quote-selection-dialog" data-quote-dialog aria-labelledby="detailQuoteTitle"><div class="quote-dialog-head"><div><span class="eyebrow" data-i18n="collection.selectionLabel">Your selections</span><h2 id="detailQuoteTitle" data-i18n="collection.dialogTitle">Review your request</h2></div><button class="dialog-close" type="button" data-close-quote data-i18n-aria="collection.closeDetails" aria-label="Close">×</button></div><div class="quote-dialog-list" data-quote-list></div><p class="form-note" data-i18n="collection.quoteDisclaimer">Sending the request does not confirm booking or availability.</p><p class="form-note" data-quote-payment-note data-i18n="contact.formText">No payment is taken here. This form starts the planning conversation.</p><div class="quote-dialog-actions"><button class="btn btn-dark" type="button" data-continue-quote data-i18n="experiences.quoteButton">Request a custom quote</button><button class="text-link" type="button" data-clear-quote data-i18n="collection.clearSelection">Clear selections</button></div></dialog>',
       '<dialog class="experience-product-dialog" data-experience-product-dialog aria-labelledby="productReminderTitle"><div class="experience-reminder-handle" aria-hidden="true"></div><span class="eyebrow" data-i18n="experienceDetail.reminderEyebrow">Before you continue</span><h2 id="productReminderTitle" data-i18n="experienceDetail.reminderTitle">Would you like to complete the experience?</h2><p data-i18n="experienceDetail.reminderText">We selected products connected to this experience. You can review them or continue without additions.</p><div class="experience-reminder-actions"><button class="btn btn-dark" type="button" data-view-experience-products data-i18n="experienceDetail.viewProducts">View experience products</button><button class="text-link" type="button" data-continue-without-products data-i18n="experienceDetail.continueWithout">Continue without products</button></div></dialog>',
       '<dialog class="perfume-story-dialog" data-perfume-story-dialog aria-labelledby="experiencePerfumeStoryTitle"><div class="perfume-story-dialog-head"><div><span class="eyebrow" data-i18n="collection.storyDialogEyebrow">Fragrance campaign</span><h2 id="experiencePerfumeStoryTitle" data-perfume-story-title>Fragrance story card</h2></div><button class="dialog-close" type="button" data-close-perfume-story data-i18n-aria="collection.closeStoryCard" aria-label="Close story card">×</button></div><img data-perfume-story-image src="assets/images/perfumes/perfume-sea-story.webp" width="900" height="1125" alt=""></dialog>'
     ].join("");
@@ -806,15 +1085,26 @@
     });
 
     var reminder = root.querySelector("[data-experience-product-dialog]");
+    prepareDialog(reminder);
     var pendingHref = requestHref;
     var bypassKey = "aventura_product_reminder_" + experienceId;
+    var reminderLifetime = 30 * 24 * 60 * 60 * 1000;
+
+    function reminderWasSeen() {
+      try {
+        var seenAt = Number(localStorage.getItem(bypassKey) || 0);
+        return seenAt > 0 && Date.now() - seenAt <= reminderLifetime;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    function rememberReminder() {
+      try { localStorage.setItem(bypassKey, String(Date.now())); } catch (error) { /* Ignore. */ }
+    }
 
     function readSelections() {
-      try {
-        return JSON.parse(sessionStorage.getItem("aventura_quote_selection") || "{}") || {};
-      } catch (error) {
-        return {};
-      }
+      return readQuoteSelection();
     }
 
     function selectedItems(state) {
@@ -839,8 +1129,7 @@
         var state = readSelections();
         var selected = selectedItems(state);
         pendingHref = hrefWithSelections(button.getAttribute("href"), state);
-        var bypassed = false;
-        try { bypassed = sessionStorage.getItem(bypassKey) === "1"; } catch (error) { /* Ignore. */ }
+        var bypassed = reminderWasSeen();
         if (selected.length || bypassed || !reminder) {
           if (pendingHref !== button.getAttribute("href")) {
             event.preventDefault();
@@ -849,19 +1138,15 @@
           return;
         }
         event.preventDefault();
-        try { sessionStorage.setItem(bypassKey, "1"); } catch (error) { /* Ignore. */ }
-        if (typeof reminder.showModal === "function") {
-          reminder.showModal();
-        } else {
-          reminder.setAttribute("open", "");
-        }
+        rememberReminder();
+        openAventuraDialog(reminder, button);
       });
     });
 
     var viewProducts = root.querySelector("[data-view-experience-products]");
     if (viewProducts) {
       viewProducts.addEventListener("click", function () {
-        reminder.close();
+        closeAventuraDialog(reminder);
         document.getElementById("experience-products").scrollIntoView({ behavior: "smooth", block: "start" });
       });
     }
@@ -869,7 +1154,7 @@
     var continueWithout = root.querySelector("[data-continue-without-products]");
     if (continueWithout) {
       continueWithout.addEventListener("click", function () {
-        try { sessionStorage.setItem(bypassKey, "1"); } catch (error) { /* Ignore. */ }
+        rememberReminder();
         window.location.href = pendingHref;
       });
     }
@@ -881,54 +1166,38 @@
       return;
     }
 
-    var storageKey = "aventura_quote_selection_v3";
-    var legacyStorageKey = "aventura_quote_selection_v2";
-    var storageLifetime = 30 * 24 * 60 * 60 * 1000;
-    var buttons = Array.from(document.querySelectorAll("[data-quote-item]"));
+    var buttons = Array.from(document.querySelectorAll("[data-quote-item]")).filter(function (button) {
+      return isRequestableProduct(BOUTIQUE_CATALOG[button.getAttribute("data-quote-item")]);
+    });
     var bar = document.querySelector("[data-quote-bar]");
     var countElement = document.querySelector("[data-quote-count]");
     var previewElement = document.querySelector("[data-quote-preview]");
     var dialog = document.querySelector("[data-quote-dialog]");
     var list = document.querySelector("[data-quote-list]");
-    var state = {};
-
-    try {
-      var saved = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (saved && saved.state && Date.now() - Number(saved.savedAt || 0) <= storageLifetime) {
-        state = saved.state;
-      } else {
-        localStorage.removeItem(storageKey);
-        state = JSON.parse(sessionStorage.getItem(legacyStorageKey) || "{}") || {};
-      }
-    } catch (error) {
-      state = {};
-    }
+    var state = readQuoteSelection();
 
     function save() {
-      try {
-        localStorage.setItem(storageKey, JSON.stringify({ savedAt: Date.now(), state: state }));
-      } catch (error) {
-        /* Local storage may be disabled. */
-      }
+      state = saveQuoteSelection(state);
     }
 
     function totalQuantity() {
       return Object.keys(state).reduce(function (total, id) {
-        return total + Math.max(1, Number(state[id].quantity) || 1);
+        return total + clampQuantity(state[id].quantity);
       }, 0);
     }
 
     function quantityForButton(button, id) {
       var card = button.closest("article") || button.parentElement;
       var input = card ? card.querySelector('[data-item-quantity="' + id + '"]') : null;
-      return input ? Math.max(1, Math.min(500, Number(input.value) || 1)) : 1;
+      return input ? clampQuantity(input.value) : 1;
     }
 
     function updateButtons() {
       buttons.forEach(function (button) {
-        var selected = Boolean(state[button.getAttribute("data-quote-item")]);
+        var id = button.getAttribute("data-quote-item");
+        var selected = Boolean(state[id]);
         var defaultKey = button.getAttribute("data-i18n") || "collection.addItem";
-        var selectedKey = button.hasAttribute("data-interest-item") ? "collection.interestAdded" : "collection.added";
+        var selectedKey = "collection.added";
         button.classList.toggle("is-added", selected);
         button.setAttribute("aria-pressed", selected ? "true" : "false");
         button.textContent = translate(selected ? selectedKey : defaultKey);
@@ -954,10 +1223,10 @@
         quantity.min = "1";
         quantity.max = "500";
         quantity.inputMode = "numeric";
-        quantity.value = String(Math.max(1, Number(item.quantity) || 1));
+        quantity.value = String(clampQuantity(item.quantity));
         quantity.setAttribute("aria-label", translate("collection.quantity"));
         quantity.addEventListener("change", function () {
-          state[id].quantity = Math.max(1, Math.min(500, Number(quantity.value) || 1));
+          state[id].quantity = clampQuantity(quantity.value);
           quantity.value = String(state[id].quantity);
           save();
           updateSummary();
@@ -998,8 +1267,9 @@
     }
 
     function quoteUrl() {
+      state = sanitizeQuoteSelection(state);
       var encodedItems = Object.keys(state).map(function (id) {
-        return id + ":" + Math.max(1, Number(state[id].quantity) || 1);
+        return id + ":" + clampQuantity(state[id].quantity);
       }).join(",");
       var url = new URL("contact.html", window.location.href);
       var detail = document.querySelector("[data-experience-detail]");
@@ -1015,10 +1285,10 @@
     buttons.forEach(function (button) {
       button.addEventListener("click", function () {
         var id = button.getAttribute("data-quote-item");
-        if (!id) {
+        var catalogProduct = BOUTIQUE_CATALOG[id];
+        if (!id || !isRequestableProduct(catalogProduct)) {
           return;
         }
-        var catalogProduct = BOUTIQUE_CATALOG[id];
         state[id] = {
           labelKey: catalogProduct ? catalogProduct.titleKey : button.getAttribute("data-quote-label-key") || id,
           quantity: quantityForButton(button, id)
@@ -1047,7 +1317,7 @@
       reorderList.textContent = "";
       Object.keys(BOUTIQUE_CATALOG).forEach(function (id) {
         var product = BOUTIQUE_CATALOG[id];
-        if (product.actionKey === "collection.registerInterest") {
+        if (!isRequestableProduct(product)) {
           return;
         }
         var display = product.code + " — " + translate(product.titleKey);
@@ -1069,7 +1339,7 @@
         if (!id) {
           var matchingKey = Object.keys(BOUTIQUE_CATALOG).find(function (productId) {
             var product = BOUTIQUE_CATALOG[productId];
-            return product.actionKey !== "collection.registerInterest" && (normalizeReorderValue(product.code).indexOf(entered) !== -1 || normalizeReorderValue(translate(product.titleKey)).indexOf(entered) !== -1);
+            return isRequestableProduct(product) && (normalizeReorderValue(product.code).indexOf(entered) !== -1 || normalizeReorderValue(translate(product.titleKey)).indexOf(entered) !== -1);
           });
           id = matchingKey || "";
         }
@@ -1082,7 +1352,7 @@
         var product = BOUTIQUE_CATALOG[id];
         state[id] = {
           labelKey: product.titleKey,
-          quantity: Math.max(1, Math.min(500, Number(reorderQuantity ? reorderQuantity.value : 1) || 1))
+          quantity: clampQuantity(reorderQuantity ? reorderQuantity.value : 1)
         };
         save();
         updateSummary();
@@ -1099,25 +1369,33 @@
 
     var openButton = document.querySelector("[data-open-quote]");
     if (openButton && dialog) {
+      prepareDialog(dialog);
+      if (!dialog.querySelector("[data-quote-payment-note]")) {
+        var paymentNote = document.createElement("p");
+        paymentNote.className = "form-note";
+        paymentNote.setAttribute("data-quote-payment-note", "");
+        paymentNote.setAttribute("data-i18n", "contact.formText");
+        paymentNote.textContent = translate("contact.formText");
+        var quoteActions = dialog.querySelector(".quote-dialog-actions");
+        if (quoteActions) {
+          quoteActions.parentNode.insertBefore(paymentNote, quoteActions);
+        }
+      }
       openButton.addEventListener("click", function () {
         renderDialog();
-        if (typeof dialog.showModal === "function") {
-          dialog.showModal();
-        } else {
-          dialog.setAttribute("open", "");
-        }
+        openAventuraDialog(dialog, openButton);
       });
     }
 
     var closeButton = document.querySelector("[data-close-quote]");
     if (closeButton && dialog) {
-      closeButton.addEventListener("click", function () { dialog.close(); });
+      closeButton.addEventListener("click", function () { closeAventuraDialog(dialog); });
     }
 
     if (dialog) {
       dialog.addEventListener("click", function (event) {
         if (event.target === dialog) {
-          dialog.close();
+          closeAventuraDialog(dialog);
         }
       });
     }
@@ -1130,7 +1408,7 @@
         updateSummary();
         renderDialog();
         if (dialog && dialog.open) {
-          dialog.close();
+          closeAventuraDialog(dialog);
         }
       });
     }
@@ -1164,38 +1442,39 @@
     var image = dialog.querySelector("[data-perfume-story-image]");
     var title = dialog.querySelector("[data-perfume-story-title]");
     var activeTitleKey = "";
+    prepareDialog(dialog);
 
     document.querySelectorAll("[data-perfume-story]").forEach(function (button) {
       button.addEventListener("click", function () {
         activeTitleKey = button.getAttribute("data-story-title-key") || "collection.storyDialogTitle";
         if (image) {
           image.src = button.getAttribute("data-perfume-story") || "";
+          image.alt = translate(activeTitleKey) + " — " + translate("collection.storyDialogEyebrow");
         }
         if (title) {
           title.textContent = translate(activeTitleKey);
         }
-        if (typeof dialog.showModal === "function") {
-          dialog.showModal();
-        } else {
-          dialog.setAttribute("open", "");
-        }
+        openAventuraDialog(dialog, button);
       });
     });
 
     var closeButton = dialog.querySelector("[data-close-perfume-story]");
     if (closeButton) {
-      closeButton.addEventListener("click", function () { dialog.close(); });
+      closeButton.addEventListener("click", function () { closeAventuraDialog(dialog); });
     }
 
     dialog.addEventListener("click", function (event) {
       if (event.target === dialog) {
-        dialog.close();
+        closeAventuraDialog(dialog);
       }
     });
 
     document.addEventListener("aventura:language", function () {
       if (dialog.open && title && activeTitleKey) {
         title.textContent = translate(activeTitleKey);
+        if (image) {
+          image.alt = translate(activeTitleKey) + " — " + translate("collection.storyDialogEyebrow");
+        }
       }
     });
   }
@@ -1260,6 +1539,11 @@
       "thobe": "collection.thobeTitle",
       "abaya": "collection.abayaTitle",
       "flower": "collection.flowerTitle",
+      "airport-welcome": "collection.airportWelcomeTitle",
+      "executive-transport": "collection.executiveTransportTitle",
+      "meeting-setup": "collection.meetingSetupTitle",
+      "official-gifts": "collection.officialGiftsTitle",
+      "concierge": "collection.conciergeTitle",
       "golden-hour": "experiences.goldenTitle",
       "sunset-moment": "experiences.sunsetTitle",
       "bayadah-day": "experiences.bayadahTitle",
@@ -1278,7 +1562,6 @@
       "historic-box": "collection.box2Title",
       "desert-box": "collection.box3Title",
       "taif-box": "collection.box4Title",
-      "executive-box": "collection.boxExecutiveTitle",
       "sea-tote": "collection.productSea1Title",
       "sea-towel": "collection.productSea2Title",
       "sea-phone": "collection.productSea3Title",
@@ -1295,26 +1578,33 @@
       "taif-rose-care": "collection.productTaif4Title",
       "taif-notebook": "collection.productTaif5Title",
       "desert-keepsake": "collection.productDesert3Title",
-      "jeddah-signature-box": "experienceDetail.jeddahBoxTitle",
-      "perfume-sea": "collection.p1Title",
-      "perfume-roshan": "collection.p2Title",
-      "perfume-last-light": "collection.p3Title",
-      "perfume-taif": "collection.p4Title",
-      "perfume-noir": "collection.noirTitle",
-      "perfume-velvet": "collection.velvetTitle",
       "executive-arrival": "corporate.package1Title",
       "leadership-half-day": "corporate.package2Title",
-      "team-discovery": "corporate.package3Title"
+      "team-discovery": "corporate.package3Title",
+      "executive-offsite": "corporate.program1Title",
+      "vip-delegation": "corporate.program2Title",
+      "incentive-day": "corporate.program3Title",
+      "team-building": "corporate.program4Title",
+      "corporate-experience-day": "corporate.program5Title",
+      "private-event": "events.privateTitle",
+      "executive-meeting": "events.type1Title",
+      "networking-dinner": "events.type2Title",
+      "recognition": "events.type3Title",
+      "experience-day": "events.type4Title",
+      "team-program": "events.teamTitle",
+      "international-guests": "events.type6Title"
     };
     Object.keys(BOUTIQUE_CATALOG).forEach(function (id) {
-      requestKeys[id] = BOUTIQUE_CATALOG[id].titleKey;
+      if (isRequestableProduct(BOUTIQUE_CATALOG[id])) {
+        requestKeys[id] = BOUTIQUE_CATALOG[id].titleKey;
+      }
     });
-    var requestedItem = query.get("request");
+    var requestedItem = query.get("request") || query.get("service");
     var requestKey = requestKeys[requestedItem];
     var requestedItems = String(query.get("items") || "").split(",").map(function (part) {
       var pieces = part.split(":");
       var id = pieces[0] || "";
-      var quantity = Math.max(1, Math.min(500, Number(pieces[1]) || 1));
+      var quantity = clampQuantity(pieces[1]);
       return requestKeys[id] ? { id: id, key: requestKeys[id], quantity: quantity } : null;
     }).filter(Boolean);
     var messageField = form.querySelector('[name="message"]');
@@ -1363,6 +1653,178 @@
       });
     }
 
+    function setupContactWizard() {
+      var originalGrid = form.querySelector(":scope > .form-grid");
+      var originalActions = form.querySelector(":scope > .form-actions");
+      if (!originalGrid || !originalActions) {
+        return;
+      }
+
+      var progress = document.createElement("ol");
+      progress.className = "request-progress";
+      progress.setAttribute("aria-label", translate("contact.progressLabel"));
+      progress.innerHTML = [1, 2, 3].map(function (number) {
+        return '<li data-request-progress="' + number + '"><span>' + number + '</span><strong data-i18n="contact.step' + number + 'Short">Step ' + number + '</strong></li>';
+      }).join("");
+
+      var wizard = document.createElement("div");
+      wizard.className = "request-wizard";
+      var steps = {};
+
+      function createStep(number, titleKey, textKey) {
+        var step = document.createElement("section");
+        step.className = "request-step";
+        step.setAttribute("data-request-step", String(number));
+        step.hidden = number !== 1;
+        step.innerHTML = '<div class="request-step-heading"><span class="eyebrow" data-i18n="contact.step' + number + 'Short">Step ' + number + '</span><h3 data-i18n="' + titleKey + '">' + translate(titleKey) + '</h3><p data-i18n="' + textKey + '">' + translate(textKey) + '</p></div><div class="form-grid" data-request-step-grid></div>';
+        steps[number] = step;
+        wizard.appendChild(step);
+        return step.querySelector("[data-request-step-grid]");
+      }
+
+      var firstGrid = createStep(1, "contact.step1Title", "contact.step1Text");
+      var secondGrid = createStep(2, "contact.step2Title", "contact.step2Text");
+      var thirdGrid = createStep(3, "contact.step3Title", "contact.step3Text");
+
+      function moveField(name, target) {
+        var field = form.querySelector('[name="' + name + '"]');
+        var wrapper = field && field.closest(".field");
+        if (wrapper) {
+          target.appendChild(wrapper);
+        }
+      }
+
+      ["type", "date", "time", "duration", "guests"].forEach(function (name) { moveField(name, firstGrid); });
+
+      var objectiveField = document.createElement("div");
+      objectiveField.className = "field full";
+      objectiveField.innerHTML = '<label for="objective" data-i18n="contact.objectiveLabel">What should this plan achieve?</label><select id="objective" name="objective"><option value="" selected data-i18n="contact.objectivePlaceholder">Choose the closest objective</option><option value="relaxation" data-i18n="contact.objectiveRelaxation">Relaxation and private time</option><option value="discovery" data-i18n="contact.objectiveDiscovery">Discover Jeddah and local culture</option><option value="hosting" data-i18n="contact.objectiveHosting">Host guests or a delegation</option><option value="team" data-i18n="contact.objectiveTeam">Connect or reward a team</option><option value="celebration" data-i18n="contact.objectiveCelebration">Celebrate an occasion</option><option value="flexible" data-i18n="contact.objectiveFlexible">I would like Aventura to recommend</option></select>';
+      firstGrid.appendChild(objectiveField);
+
+      var addOns = document.createElement("fieldset");
+      addOns.className = "request-options full";
+      addOns.innerHTML = '<legend data-i18n="contact.addonsLegend">Optional supporting services</legend><p data-i18n="contact.addonsText">Select anything you may need. Aventura will confirm only what fits the program.</p><div class="request-option-grid"><label><input type="checkbox" name="addons" value="transport"><span data-i18n="contact.addonTransport">Private transportation</span></label><label><input type="checkbox" name="addons" value="guide"><span data-i18n="contact.addonGuide">Licensed guide</span></label><label><input type="checkbox" name="addons" value="dining"><span data-i18n="contact.addonDining">Dining arrangements</span></label><label><input type="checkbox" name="addons" value="hospitality"><span data-i18n="contact.addonHospitality">Guest welcome and hospitality</span></label><label><input type="checkbox" name="addons" value="boutique"><span data-i18n="contact.addonBoutique">Experience products or gifts</span></label><label><input type="checkbox" name="addons" value="concierge"><span data-i18n="contact.addonConcierge">Concierge support</span></label></div>';
+      secondGrid.appendChild(addOns);
+
+      detailGroups.forEach(function (group) { secondGrid.appendChild(group); });
+      moveField("message", secondGrid);
+      ["name", "company", "phone", "email", "preferredResponse"].forEach(function (name) { moveField(name, thirdGrid); });
+
+      function controls(back, next, submit) {
+        var row = document.createElement("div");
+        row.className = "request-step-actions full";
+        if (back) {
+          row.insertAdjacentHTML("beforeend", '<button class="btn btn-outline-dark" type="button" data-request-back data-i18n="contact.backButton">Back</button>');
+        }
+        if (next) {
+          row.insertAdjacentHTML("beforeend", '<button class="btn btn-dark" type="button" data-request-next data-i18n="contact.nextButton">Continue</button>');
+        }
+        if (submit) {
+          row.appendChild(originalActions);
+        }
+        return row;
+      }
+
+      firstGrid.appendChild(controls(false, true, false));
+      secondGrid.appendChild(controls(true, true, false));
+      thirdGrid.appendChild(controls(true, false, true));
+
+      originalGrid.replaceWith(wizard);
+      wizard.parentNode.insertBefore(progress, wizard);
+
+      var success = document.createElement("div");
+      success.className = "request-success";
+      success.hidden = true;
+      success.setAttribute("data-request-success", "");
+      success.setAttribute("role", "status");
+      success.innerHTML = '<span class="request-success-mark" aria-hidden="true">✓</span><div><strong data-i18n="contact.successTitle">Your request is ready</strong><p data-request-success-text></p><div class="request-success-actions"><a class="text-link" data-request-whatsapp-link target="_blank" rel="noopener" data-i18n="contact.openWhatsappAgain">Open WhatsApp again</a><button class="text-link" type="button" data-copy-request data-i18n="contact.copyRequest">Copy request details</button></div></div>';
+      form.appendChild(success);
+
+      var currentStep = 1;
+      function showStep(number) {
+        currentStep = Math.max(1, Math.min(3, number));
+        form.setAttribute("data-current-request-step", String(currentStep));
+        Object.keys(steps).forEach(function (key) { steps[key].hidden = Number(key) !== currentStep; });
+        progress.querySelectorAll("[data-request-progress]").forEach(function (item) {
+          var stepNumber = Number(item.getAttribute("data-request-progress"));
+          item.classList.toggle("is-active", stepNumber === currentStep);
+          item.classList.toggle("is-complete", stepNumber < currentStep);
+          item.setAttribute("aria-current", stepNumber === currentStep ? "step" : "false");
+        });
+        if (window.AVENTURA_TRACK) {
+          window.AVENTURA_TRACK("request_step", { target: String(currentStep), requestType: typeField ? typeField.value : "" });
+        }
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      wizard.addEventListener("click", function (event) {
+        if (event.target.closest("[data-request-next]")) {
+          if (currentStep === 1 && typeField && !typeField.value) {
+            var status = form.querySelector("[data-form-status]");
+            if (status) {
+              status.textContent = translate("contact.stepTypeError");
+            }
+            typeField.focus();
+            return;
+          }
+          var statusNext = form.querySelector("[data-form-status]");
+          if (statusNext) {
+            statusNext.textContent = "";
+          }
+          showStep(currentStep + 1);
+        }
+        if (event.target.closest("[data-request-back]")) {
+          showStep(currentStep - 1);
+        }
+      });
+
+      form.addEventListener("aventura:request-success", function () {
+        showStep(3);
+        success.hidden = false;
+      });
+
+      form.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" && event.target.tagName !== "TEXTAREA" && currentStep < 3) {
+          event.preventDefault();
+          var next = steps[currentStep].querySelector("[data-request-next]");
+          if (next) {
+            next.click();
+          }
+        }
+      });
+
+      showStep(1);
+    }
+
+    setupContactWizard();
+    form.querySelectorAll("[data-i18n]").forEach(function (element) {
+      element.textContent = translate(element.getAttribute("data-i18n"), currentLanguage);
+    });
+    var lastRequestMessage = "";
+
+    form.addEventListener("click", function (event) {
+      var copyButton = event.target.closest("[data-copy-request]");
+      if (!copyButton || !lastRequestMessage) {
+        return;
+      }
+      function confirmCopy() {
+        copyButton.textContent = translate("contact.requestCopied");
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(lastRequestMessage).then(confirmCopy).catch(function () {});
+      } else {
+        var temporary = document.createElement("textarea");
+        temporary.value = lastRequestMessage;
+        temporary.setAttribute("readonly", "");
+        temporary.style.position = "fixed";
+        temporary.style.opacity = "0";
+        document.body.appendChild(temporary);
+        temporary.select();
+        try { document.execCommand("copy"); confirmCopy(); } catch (error) { /* Ignore. */ }
+        temporary.remove();
+      }
+    });
+
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
@@ -1375,19 +1837,23 @@
       if (!name || (!phone && !email)) {
         if (status) {
           status.textContent = translate("contact.error");
+          status.classList.remove("is-success");
         }
         return;
       }
 
       if (status) {
         status.textContent = "";
+        status.classList.remove("is-success");
       }
 
       var selectedType = form.querySelector('[name="type"] option:checked');
       var typeText = selectedType ? selectedType.textContent.trim() : "";
+      var requestId = "AVE-" + new Date().toISOString().slice(0, 10).replace(/-/g, "") + "-" + Math.random().toString(36).slice(2, 6).toUpperCase();
       var lines = [
         translate("contact.whatsappIntro"),
         "",
+        translate("contact.requestReference") + ": " + requestId,
         translate("contact.whatsappName") + ": " + name
       ];
 
@@ -1406,6 +1872,24 @@
 
       if (typeText) {
         lines.push(translate("contact.whatsappType") + ": " + typeText);
+      }
+
+      var objectiveOption = form.querySelector('[name="objective"] option:checked');
+      if (objectiveOption && objectiveOption.value) {
+        lines.push(translate("contact.objectiveLabel") + ": " + objectiveOption.textContent.trim());
+      }
+
+      var addonKeys = {
+        transport: "contact.addonTransport",
+        guide: "contact.addonGuide",
+        dining: "contact.addonDining",
+        hospitality: "contact.addonHospitality",
+        boutique: "contact.addonBoutique",
+        concierge: "contact.addonConcierge"
+      };
+      var selectedAddons = data.getAll("addons").map(function (value) { return addonKeys[value] ? translate(addonKeys[value]) : value; });
+      if (selectedAddons.length) {
+        lines.push(translate("contact.addonsLegend") + ": " + selectedAddons.join(", "));
       }
 
       var selectedDuration = form.querySelector('[name="duration"] option:checked');
@@ -1435,6 +1919,7 @@
         ["abayaDelivery", "contact.requiredDeliveryLabel"],
         ["abayaStyle", "contact.abayaStyleLabel"],
         ["abayaContact", "contact.preferredContactLabel"],
+        ["preferredResponse", "contact.preferredContactLabel"],
         ["flowerRecipient", "contact.recipientLabel"],
         ["flowerOccasion", "contact.occasionLabel"],
         ["flowerSize", "contact.flowerSizeLabel"],
@@ -1455,11 +1940,37 @@
           value = selectedOption ? selectedOption.textContent.trim() : value;
         }
         if (value) {
-          lines.push(translate(row[1]) + ": " + value);
+          var label = translate(row[1]);
+          if (label === row[1] && field.id) {
+            var fieldLabel = form.querySelector('label[for="' + field.id + '"]');
+            label = fieldLabel ? fieldLabel.textContent.trim() : row[0];
+          }
+          lines.push(label + ": " + value);
         }
       });
 
-      var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+      lastRequestMessage = lines.join("\n");
+      var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lastRequestMessage);
+      var success = form.querySelector("[data-request-success]");
+      var successText = form.querySelector("[data-request-success-text]");
+      var whatsappLink = form.querySelector("[data-request-whatsapp-link]");
+      if (successText) {
+        successText.textContent = translate("contact.successText") + " " + requestId + ".";
+      }
+      if (whatsappLink) {
+        whatsappLink.href = url;
+      }
+      if (success) {
+        success.hidden = false;
+      }
+      if (status) {
+        status.textContent = translate("contact.successStatus") + " " + requestId + ".";
+        status.classList.add("is-success");
+      }
+      if (window.AVENTURA_TRACK) {
+        window.AVENTURA_TRACK("request_ready", { requestId: requestId, requestType: typeField ? typeField.value : "" });
+      }
+      form.dispatchEvent(new CustomEvent("aventura:request-success"));
       window.open(url, "_blank", "noopener");
     });
   }
@@ -1488,20 +1999,24 @@
       if (!partnerType || !name || !country || !city || !category || (!phone && !email) || !message || !consent) {
         if (status) {
           status.textContent = translate("partners.error");
+          status.classList.remove("is-success");
         }
         return;
       }
 
       if (status) {
         status.textContent = "";
+        status.classList.remove("is-success");
       }
 
       var typeKey = partnerType === "organization" ? "partners.typeOrgTitle" : "partners.typeProTitle";
       var categoryOption = form.querySelector('[name="category"] option:checked');
       var categoryText = categoryOption ? categoryOption.textContent.trim() : category;
+      var requestId = "COL-" + new Date().toISOString().slice(0, 10).replace(/-/g, "") + "-" + Math.random().toString(36).slice(2, 6).toUpperCase();
       var lines = [
         translate("partners.whatsappIntro"),
         "",
+        translate("contact.requestReference") + ": " + requestId,
         translate("partners.typeLegend") + ": " + translate(typeKey),
         translate("partners.nameLabel") + ": " + name
       ];
@@ -1537,6 +2052,13 @@
       });
 
       var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+      if (status) {
+        status.textContent = translate("partners.successStatus") + " " + requestId + ".";
+        status.classList.add("is-success");
+      }
+      if (window.AVENTURA_TRACK) {
+        window.AVENTURA_TRACK("partner_request_ready", { requestId: requestId, requestType: partnerType });
+      }
       window.open(url, "_blank", "noopener");
     });
   }
@@ -1556,11 +2078,14 @@
     setupLanguageSwitcher();
     setupExperienceDetail();
     setupPerfumeStoryCards();
+    arrangeBoutiqueSections();
+    removeUnsupportedBoutiqueItems();
     setupBoutiqueCatalog();
     applyLanguage(getInitialLanguage(), false);
     setupHeader();
     setupBoutiqueFilters();
     setupBoutiqueQuoteSelection();
+    setupScentLabInterest();
     setupReveals();
     setupCurrentYear();
     setupContactForm();
