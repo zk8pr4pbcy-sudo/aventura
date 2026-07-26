@@ -7,14 +7,44 @@
   <meta name="description" content="Explore AVENTURA collections: experience boxes, useful products, developing fragrances and personal guest services.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#04111d">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://aventuraksa.com/collection.html">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AVENTURA Boutique">
   <meta property="og:image" content="https://aventuraksa.com/assets/images/collection.webp">
+  <meta property="og:site_name" content="AVENTURA">
+  <meta property="og:description" content="Explore AVENTURA collections: experience boxes, useful products, developing fragrances and personal guest services.">
+  <meta property="og:url" content="https://aventuraksa.com/collection.html">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AVENTURA Boutique | Experience Collections &amp; Guest Services">
+  <meta name="twitter:description" content="Explore AVENTURA collections: experience boxes, useful products, developing fragrances and personal guest services.">
+  <meta name="twitter:image" content="https://aventuraksa.com/assets/images/collection.webp">
+
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/analytics.js" defer></script>
   <script src="assets/js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AVENTURA Boutique | Experience Collections & Guest Services",
+    "description": "Explore AVENTURA collections: experience boxes, useful products, developing fragrances and personal guest services.",
+    "url": "https://aventuraksa.com/collection.html",
+    "inLanguage": [
+      "en",
+      "ar",
+      "es"
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "AVENTURA",
+      "url": "https://aventuraksa.com/"
+    }
+  }
+  </script>
 </head>
 <body data-page="collection" data-title-key="collection.metaTitle" data-description-key="collection.metaDescription" data-boutique>
   <site-header></site-header>
@@ -35,30 +65,51 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <div>
-            <span class="eyebrow" data-i18n="collection.introEyebrow">Connected to the experience</span>
-            <h2 data-i18n="collection.discoveryTitle">Two easy ways to enter the boutique</h2>
+            <span class="eyebrow" data-i18n="collection.boutiqueGatewayEyebrow">Aventura Boutique</span>
+            <h2 data-i18n="collection.boutiqueGatewayTitle">Enter through the collection that fits your experience</h2>
           </div>
-          <p class="lead" data-i18n="collection.discoveryText">Discover a collection around your next experience, or go directly to a product you already know.</p>
+          <p class="lead" data-i18n="collection.boutiqueGatewayText">Each collection begins with the character of its place, then reveals the products and complete box prepared around it.</p>
         </div>
 
-        <div class="boutique-path-grid" data-reveal>
-          <button class="boutique-path-card" type="button" data-boutique-path="experience" aria-controls="experienceFilters">
-            <span class="boutique-path-index">01</span>
-            <span class="eyebrow" data-i18n="collection.pathExperienceEyebrow">Planning a new journey</span>
-            <strong data-i18n="collection.pathExperienceTitle">Explore by experience</strong>
-            <span data-i18n="collection.pathExperienceText">See only the products, boxes and services connected to the sea, Historic Jeddah, the desert or Taif.</span>
-            <span class="text-link" data-i18n="collection.pathExperienceAction">Choose an experience</span>
-          </button>
-          <button class="boutique-path-card boutique-path-card-dark" type="button" data-boutique-path="product" aria-controls="boutiqueSearch">
-            <span class="boutique-path-index">02</span>
-            <span class="eyebrow" data-i18n="collection.pathProductEyebrow">Returning or shopping directly</span>
-            <strong data-i18n="collection.pathProductTitle">Find a product</strong>
-            <span data-i18n="collection.pathProductText">Search by product name or reference without needing to remember which experience it belongs to.</span>
-            <span class="text-link" data-i18n="collection.pathProductAction">Start searching</span>
-          </button>
+        <div class="boutique-gateway-grid" data-reveal aria-label="Experience collections" data-i18n-aria="collection.boutiqueGatewayAria">
+          <a class="boutique-gateway-card boutique-gateway-sea" href="collection.html?experience=sea#boxes" data-boutique-gateway data-collection="sea">
+            <span class="boutique-gateway-index">01</span>
+            <span class="boutique-gateway-code">RED SEA</span>
+            <strong data-i18n="collection.filterSea">Sea</strong>
+            <span data-i18n="collection.box1Text">A practical beach collection presented inside the tote itself, ready for the sea day.</span>
+            <span class="boutique-gateway-action" data-i18n="collection.pathExperienceAction">Choose an experience</span>
+          </a>
+          <a class="boutique-gateway-card boutique-gateway-historic" href="collection.html?experience=historic#boxes" data-boutique-gateway data-collection="historic">
+            <span class="boutique-gateway-index">02</span>
+            <span class="boutique-gateway-code">ROSHAN</span>
+            <strong data-i18n="collection.filterHistoric">Historic Jeddah</strong>
+            <span data-i18n="collection.box2Text">A concise memory of Historic Jeddah, local craft and Saudi hospitality.</span>
+            <span class="boutique-gateway-action" data-i18n="collection.pathExperienceAction">Choose an experience</span>
+          </a>
+          <a class="boutique-gateway-card boutique-gateway-desert" href="collection.html?experience=desert#boxes" data-boutique-gateway data-collection="desert">
+            <span class="boutique-gateway-index">03</span>
+            <span class="boutique-gateway-code">LAST LIGHT</span>
+            <strong data-i18n="collection.filterDesert">Desert</strong>
+            <span data-i18n="collection.box3Text">Useful desert details with a warm palette and a restrained Saudi character.</span>
+            <span class="boutique-gateway-action" data-i18n="collection.pathExperienceAction">Choose an experience</span>
+          </a>
+          <a class="boutique-gateway-card boutique-gateway-taif" href="collection.html?experience=taif#boxes" data-boutique-gateway data-collection="taif">
+            <span class="boutique-gateway-index">04</span>
+            <span class="boutique-gateway-code">TAIF ROSE</span>
+            <strong data-i18n="collection.filterTaif">Taif</strong>
+            <span data-i18n="collection.box4Text">A seasonal collection centered on Taif rose and trusted local products.</span>
+            <span class="boutique-gateway-action" data-i18n="collection.pathExperienceAction">Choose an experience</span>
+          </a>
         </div>
 
-        <div class="boutique-discovery-panel" data-reveal>
+        <div class="boutique-discovery-panel" data-reveal data-boutique-direct-access>
+          <div class="boutique-direct-access">
+            <div>
+              <span class="eyebrow" data-i18n="collection.pathProductEyebrow">Returning or shopping directly</span>
+              <h3 data-i18n="collection.pathProductTitle">Find a product</h3>
+            </div>
+            <p data-i18n="collection.pathProductText">Search by product name or reference without needing to remember which experience it belongs to.</p>
+          </div>
           <div class="boutique-search-field">
             <label for="boutiqueSearch" data-i18n="collection.searchLabel">Search the boutique</label>
             <div class="boutique-search-control">
@@ -71,11 +122,9 @@
             <span class="boutique-filter-label" data-i18n="collection.typeFilterLabel">Product type</span>
             <div class="boutique-filter-bar" role="group" aria-label="Filter boutique by product type" data-i18n-aria="collection.typeFilterAria">
               <button class="boutique-filter" type="button" data-boutique-type="all" data-i18n="collection.typeAll">All types</button>
-              <button class="boutique-filter" type="button" data-boutique-type="fragrance" data-i18n="collection.typeFragrance">Fragrances</button>
               <button class="boutique-filter" type="button" data-boutique-type="beach" data-i18n="collection.typeBeach">Beach essentials</button>
               <button class="boutique-filter" type="button" data-boutique-type="gift" data-i18n="collection.typeGift">Gifts &amp; accessories</button>
               <button class="boutique-filter" type="button" data-boutique-type="box" data-i18n="collection.typeBox">Complete boxes</button>
-              <button class="boutique-filter" type="button" data-boutique-type="service" data-i18n="collection.typeService">Guest services</button>
             </div>
           </div>
 
@@ -87,7 +136,6 @@
               <button class="boutique-filter" type="button" data-boutique-filter="historic" data-i18n="collection.filterHistoric">Historic Jeddah</button>
               <button class="boutique-filter" type="button" data-boutique-filter="desert" data-i18n="collection.filterDesert">Desert</button>
               <button class="boutique-filter" type="button" data-boutique-filter="taif" data-i18n="collection.filterTaif">Taif</button>
-              <button class="boutique-filter" type="button" data-boutique-filter="corporate" data-i18n="collection.filterCorporate">Corporate &amp; executive</button>
             </div>
           </div>
 
@@ -123,22 +171,23 @@
       </div>
     </section>
 
-    <section class="section section-dark perfume-showcase perfume-showcase-featured" id="fragrances" data-boutique-section>
+    <section class="section section-dark perfume-showcase perfume-showcase-featured scent-lab-section" id="fragrances" data-scent-lab>
       <div class="container">
         <div class="section-heading" data-reveal>
-          <div><span class="eyebrow" data-i18n="collection.perfumeEyebrow">Aventura fragrances</span><h2 data-i18n="collection.perfumeTitle">Each place leaves its own trace</h2></div>
+          <div><span class="eyebrow" data-i18n="collection.perfumeEyebrow">Aventura Scent Lab</span><h2 data-i18n="collection.perfumeTitle">Fragrance concepts in development</h2></div>
           <div class="perfume-showcase-copy">
-            <p data-i18n="collection.perfumeText">The fragrance collection is still in development. These are the approved marketing directions; availability and release details will be announced later.</p>
-            <p class="perfume-completion-note" data-i18n="collection.perfumeCardsStatus">Five approved campaign cards are available below. The original Last Light artwork is still pending.</p>
+            <p data-i18n="collection.perfumeText">These concepts translate each Aventura experience into a scent direction. They are not available for sale yet.</p>
+            <p class="perfume-completion-note" data-i18n="collection.perfumeCardsStatus">The visuals are temporary concept previews. Final bottles, packaging, sizes and launch details will be added after product development is complete.</p>
+            <p class="scent-lab-interest-note" data-i18n="collection.scentLabInterestNote">Register interest to hear about the launch. Aventura will not add an in-development fragrance to a quotation or promise a launch date.</p>
           </div>
         </div>
         <div class="perfume-grid">
-          <article class="perfume-card perfume-card-with-actions" data-boutique-item data-category="sea" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-sea.webp" width="900" height="1125" loading="eager" decoding="async" alt="Sea Experience fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-sea-story.webp" data-story-title-key="collection.p1Title"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.p1Title">Sea Experience</h3><p data-i18n="collection.p1Text">Marine light, mineral air and polished woods.</p></div><div class="perfume-card-actions"><button class="text-link quote-add-button" type="button" data-quote-item="perfume-sea" data-quote-label-key="collection.p1Title" data-i18n="collection.addItem">Add to quote</button></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
-          <article class="perfume-card perfume-card-with-actions" data-boutique-item data-category="historic" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-roshan.webp" width="900" height="1125" loading="eager" decoding="async" alt="Roshan fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-roshan-story.webp" data-story-title-key="collection.p2Title"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.p2Title">Roshan</h3><p data-i18n="collection.p2Text">Roshan wood, warm stone, spice and incense.</p></div><div class="perfume-card-actions"><button class="text-link quote-add-button" type="button" data-quote-item="perfume-roshan" data-quote-label-key="collection.p2Title" data-i18n="collection.addItem">Add to quote</button></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
-          <article class="perfume-card perfume-card-pending perfume-card-with-actions" data-boutique-item data-category="desert" data-reveal><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="collection.lastLightPending">Marketing card in preparation</strong><p data-i18n="collection.p3Text">Dry woods, hot sand, vetiver and a metallic mineral accord.</p></div><div class="perfume-card-actions"><h3 data-i18n="collection.p3Title">Last Light</h3><button class="text-link quote-add-button" type="button" data-quote-item="perfume-last-light" data-quote-label-key="collection.p3Title" data-i18n="collection.addItem">Add to quote</button></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
-          <article class="perfume-card perfume-card-with-actions" data-boutique-item data-category="taif" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-taif.webp" width="900" height="1125" loading="eager" decoding="async" alt="Taif Experience fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-taif-story.webp" data-story-title-key="collection.p4Title"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.p4Title">Taif Experience</h3><p data-i18n="collection.p4Text">Taif rose, mountain air and restrained green notes.</p></div><div class="perfume-card-actions"><button class="text-link quote-add-button" type="button" data-quote-item="perfume-taif" data-quote-label-key="collection.p4Title" data-i18n="collection.addItem">Add to quote</button></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
-          <article class="perfume-card perfume-card-with-actions" data-boutique-item data-category="corporate brand" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-noir.webp" width="900" height="1125" loading="eager" decoding="async" alt="After Midnight Noir fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-noir-story.webp" data-story-title-key="collection.noirTitle"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.noirTitle">After Midnight Noir</h3><p data-i18n="collection.noirText">Black tea, iris, polished woods and a quiet nocturnal trail.</p></div><div class="perfume-card-actions"><button class="text-link quote-add-button" type="button" data-quote-item="perfume-noir" data-quote-label-key="collection.noirTitle" data-i18n="collection.addItem">Add to quote</button></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
-          <article class="perfume-card perfume-card-with-actions" data-boutique-item data-category="corporate brand" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-velvet.webp" width="900" height="1125" loading="eager" decoding="async" alt="After Midnight Velvet fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-velvet-story.webp" data-story-title-key="collection.velvetTitle"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.velvetTitle">After Midnight Velvet</h3><p data-i18n="collection.velvetText">Soft pear, warm jasmine, velvet woods and a refined feminine trail.</p></div><div class="perfume-card-actions"><button class="text-link quote-add-button" type="button" data-quote-item="perfume-velvet" data-quote-label-key="collection.velvetTitle" data-i18n="collection.addItem">Add to quote</button></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
+          <article class="perfume-card perfume-card-with-actions" data-scent-card data-scent-id="perfume-sea" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-sea.webp" width="900" height="1125" loading="eager" decoding="async" alt="Sea Experience fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-sea-story.webp" data-story-title-key="collection.p1Title"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.p1Title">Sea Experience</h3><p data-i18n="collection.p1Text">Marine light, mineral air and polished woods.</p></div><div class="perfume-card-actions"><a class="text-link perfume-interest-button" href="https://wa.me/966555884854" data-scent-interest data-scent-id="perfume-sea" data-i18n="collection.registerLaunchInterest">Register interest at launch</a></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
+          <article class="perfume-card perfume-card-with-actions" data-scent-card data-scent-id="perfume-roshan" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-roshan.webp" width="900" height="1125" loading="eager" decoding="async" alt="Roshan fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-roshan-story.webp" data-story-title-key="collection.p2Title"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.p2Title">Roshan</h3><p data-i18n="collection.p2Text">Roshan wood, warm stone, spice and incense.</p></div><div class="perfume-card-actions"><a class="text-link perfume-interest-button" href="https://wa.me/966555884854" data-scent-interest data-scent-id="perfume-roshan" data-i18n="collection.registerLaunchInterest">Register interest at launch</a></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
+          <article class="perfume-card perfume-card-pending perfume-card-with-actions" data-scent-card data-scent-id="perfume-last-light" data-reveal><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="collection.lastLightPending">Marketing card in preparation</strong><p data-i18n="collection.p3Text">Dry woods, hot sand, vetiver and a metallic mineral accord.</p></div><div class="perfume-card-actions"><h3 data-i18n="collection.p3Title">Last Light</h3><a class="text-link perfume-interest-button" href="https://wa.me/966555884854" data-scent-interest data-scent-id="perfume-last-light" data-i18n="collection.registerLaunchInterest">Register interest at launch</a></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
+          <article class="perfume-card perfume-card-with-actions" data-scent-card data-scent-id="perfume-taif" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-taif.webp" width="900" height="1125" loading="eager" decoding="async" alt="Taif Experience fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-taif-story.webp" data-story-title-key="collection.p4Title"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.p4Title">Taif Experience</h3><p data-i18n="collection.p4Text">Taif rose, mountain air and restrained green notes.</p></div><div class="perfume-card-actions"><a class="text-link perfume-interest-button" href="https://wa.me/966555884854" data-scent-interest data-scent-id="perfume-taif" data-i18n="collection.registerLaunchInterest">Register interest at launch</a></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
+          <article class="perfume-card perfume-card-with-actions" data-scent-card data-scent-id="perfume-noir" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-noir.webp" width="900" height="1125" loading="eager" decoding="async" alt="After Midnight Noir fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-noir-story.webp" data-story-title-key="collection.noirTitle"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.noirTitle">After Midnight Noir</h3><p data-i18n="collection.noirText">Black tea, iris, polished woods and a quiet nocturnal trail.</p></div><div class="perfume-card-actions"><a class="text-link perfume-interest-button" href="https://wa.me/966555884854" data-scent-interest data-scent-id="perfume-noir" data-i18n="collection.registerLaunchInterest">Register interest at launch</a></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
+          <article class="perfume-card perfume-card-with-actions" data-scent-card data-scent-id="perfume-velvet" data-reveal><div class="perfume-card-media"><img src="assets/images/perfumes/perfume-velvet.webp" width="900" height="1125" loading="eager" decoding="async" alt="After Midnight Velvet fragrance marketing card"><button class="perfume-story-trigger" type="button" data-perfume-story="assets/images/perfumes/perfume-velvet-story.webp" data-story-title-key="collection.velvetTitle"><span data-i18n="collection.viewStoryCard">View story card</span></button></div><div class="perfume-card-copy"><h3 data-i18n="collection.velvetTitle">After Midnight Velvet</h3><p data-i18n="collection.noirText">Soft pear, warm jasmine, velvet woods and a refined feminine trail.</p></div><div class="perfume-card-actions"><a class="text-link perfume-interest-button" href="https://wa.me/966555884854" data-scent-interest data-scent-id="perfume-velvet" data-i18n="collection.registerLaunchInterest">Register interest at launch</a></div><span class="status coming" data-i18n="common.comingSoon">Coming soon</span></article>
         </div>
         <dialog class="perfume-story-dialog" data-perfume-story-dialog aria-labelledby="perfumeStoryTitle">
           <div class="perfume-story-dialog-head"><div><span class="eyebrow" data-i18n="collection.storyDialogEyebrow">Fragrance campaign</span><h2 id="perfumeStoryTitle" data-perfume-story-title>Fragrance story card</h2></div><button class="dialog-close" type="button" data-close-perfume-story data-i18n-aria="collection.closeStoryCard" aria-label="Close story card">×</button></div>
@@ -147,7 +196,7 @@
       </div>
     </section>
 
-    <section class="section section-dark boutique-process">
+    <section class="section section-muted boutique-process">
       <div class="container">
         <div class="section-heading" data-reveal>
           <div><span class="eyebrow" data-i18n="collection.howEyebrow">How it works</span><h2 data-i18n="collection.howTitle">Build one request around the guest</h2></div>
@@ -179,8 +228,8 @@
               <ul class="box-items">
                 <li data-i18n="collection.box1Item1">Aventura beach tote</li>
                 <li data-i18n="collection.box1Item2">Quick-dry beach towel</li>
-                <li data-i18n="collection.box1Item3">Protective phone pouch for water spray and sand</li>
-                <li data-i18n="collection.box1Item4">Insulated water bottle</li>
+                <li data-i18n="collection.box1Item3">Water-resistant phone sleeve for spray and sand</li>
+                <li data-i18n="collection.box1Item4">Insulated travel flask</li>
               </ul>
               <div class="catalog-card-actions">
                 <label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="sea-box"></label>
@@ -218,7 +267,7 @@
                 <li data-i18n="collection.box3Item1">Light neutral shawl</li>
                 <li data-i18n="collection.box3Item2">Insulated travel tumbler</li>
                 <li data-i18n="collection.box3Item3">Small woven keepsake</li>
-                <li data-i18n="collection.box3Item4">Protective sunglasses case</li>
+                <li data-i18n="collection.box3Item4">Multi-use travel case</li>
               </ul>
               <div class="catalog-card-actions">
                 <label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="desert-box"></label>
@@ -246,24 +295,6 @@
             </div>
           </article>
 
-          <article class="boutique-card" data-boutique-item data-category="corporate" data-reveal>
-            <div class="box-preview box-executive"><div class="box-shell"><span class="box-monogram">A</span><span class="box-name">EXECUTIVE WELCOME · AVENTURA</span></div></div>
-            <div class="boutique-card-content">
-              <span class="status available" data-i18n="common.madeToOrder">Made to order</span>
-              <h3 data-i18n="collection.boxExecutiveTitle">Executive Welcome Box</h3>
-              <p data-i18n="collection.boxExecutiveText">A polished hotel welcome for executives, delegations and international guests.</p>
-              <ul class="box-items">
-                <li data-i18n="collection.boxExecutiveItem1">Refined notebook and pen</li>
-                <li data-i18n="collection.boxExecutiveItem2">Refined luggage tag</li>
-                <li data-i18n="collection.boxExecutiveItem3">Personal welcome card and itinerary</li>
-                <li data-i18n="collection.boxExecutiveItem4">Small local keepsake</li>
-              </ul>
-              <div class="catalog-card-actions">
-                <label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="500" value="1" inputmode="numeric" data-item-quantity="executive-box"></label>
-                <button class="text-link quote-add-button" type="button" data-quote-item="executive-box" data-quote-label-key="collection.boxExecutiveTitle" data-i18n="collection.addBox">Add box to quote</button>
-              </div>
-            </div>
-          </article>
         </div>
         <p class="boutique-note" data-reveal data-i18n="collection.boxNote">Contents, preparation time and substitutions are confirmed after reviewing the guest profile, quantity and season.</p>
       </div>
@@ -285,12 +316,12 @@
             <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productSea2Title">Quick-dry beach towel</h3><p data-i18n="collection.productSea2Text">Light to carry and useful for resort, boat and beach days.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="sea-towel"></label><button class="text-link quote-add-button" type="button" data-quote-item="sea-towel" data-quote-label-key="collection.productSea2Title" data-i18n="collection.addItem">Add to quote</button></div></div>
           </article>
           <article class="catalog-product-card" data-boutique-item data-category="sea" data-reveal>
-            <div class="catalog-product-visual product-sea"><span>SEA · 03</span><strong data-i18n="collection.productSea3Short">Phone pouch</strong></div>
-            <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productSea3Title">Protective phone pouch</h3><p data-i18n="collection.productSea3Text">A sealed pouch designed to protect the phone from water spray and sand.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="sea-phone"></label><button class="text-link quote-add-button" type="button" data-quote-item="sea-phone" data-quote-label-key="collection.productSea3Title" data-i18n="collection.addItem">Add to quote</button></div></div>
+            <div class="catalog-product-visual product-sea"><span>SEA · 03</span><strong data-i18n="collection.productSea3Short">Phone sleeve</strong></div>
+            <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productSea3Title">Water-resistant phone sleeve</h3><p data-i18n="collection.productSea3Text">A sealed protective sleeve for water spray and sand; it is not presented as diving equipment.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="sea-phone"></label><button class="text-link quote-add-button" type="button" data-quote-item="sea-phone" data-quote-label-key="collection.productSea3Title" data-i18n="collection.addItem">Add to quote</button></div></div>
           </article>
           <article class="catalog-product-card" data-boutique-item data-category="sea" data-reveal>
-            <div class="catalog-product-visual product-sea"><span>SEA · 04</span><strong data-i18n="collection.productSea4Short">Water bottle</strong></div>
-            <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productSea4Title">Insulated water bottle</h3><p data-i18n="collection.productSea4Text">Helps keep water cool during the sea experience.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="sea-bottle"></label><button class="text-link quote-add-button" type="button" data-quote-item="sea-bottle" data-quote-label-key="collection.productSea4Title" data-i18n="collection.addItem">Add to quote</button></div></div>
+            <div class="catalog-product-visual product-sea"><span>SEA · 04</span><strong data-i18n="collection.productSea4Short">Thermal flask</strong></div>
+            <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productSea4Title">Insulated travel flask</h3><p data-i18n="collection.productSea4Text">A reusable insulated flask designed to keep drinking water cool during the sea experience.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="sea-bottle"></label><button class="text-link quote-add-button" type="button" data-quote-item="sea-bottle" data-quote-label-key="collection.productSea4Title" data-i18n="collection.addItem">Add to quote</button></div></div>
           </article>
 
           <article class="catalog-product-card" data-boutique-item data-category="historic" data-reveal>
@@ -323,8 +354,8 @@
             <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productDesert3Title">Small woven keepsake</h3><p data-i18n="collection.productDesert3Text">A compact woven detail inspired by desert craft and easy to carry home.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="desert-keepsake"></label><button class="text-link quote-add-button" type="button" data-quote-item="desert-keepsake" data-quote-label-key="collection.productDesert3Title" data-i18n="collection.addItem">Add to quote</button></div></div>
           </article>
           <article class="catalog-product-card" data-boutique-item data-category="desert" data-reveal>
-            <div class="catalog-product-visual product-desert"><span>LAST LIGHT · 04</span><strong data-i18n="collection.productDesert4Short">Glasses case</strong></div>
-            <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productDesert4Title">Protective sunglasses case</h3><p data-i18n="collection.productDesert4Text">A compact case designed to protect sunglasses from sand and scratches.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="desert-glasses-case"></label><button class="text-link quote-add-button" type="button" data-quote-item="desert-glasses-case" data-quote-label-key="collection.productDesert4Title" data-i18n="collection.addItem">Add to quote</button></div></div>
+            <div class="catalog-product-visual product-desert"><span>LAST LIGHT · 04</span><strong data-i18n="collection.productDesert4Short">Travel case</strong></div>
+            <div class="catalog-product-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="collection.productDesert4Title">Multi-use travel case</h3><p data-i18n="collection.productDesert4Text">A compact fabric case for small personal items, designed to keep them organized away from sand.</p><div class="catalog-card-actions"><label class="quantity-control"><span data-i18n="collection.quantity">Quantity</span><input type="number" min="1" max="100" value="1" inputmode="numeric" data-item-quantity="desert-glasses-case"></label><button class="text-link quote-add-button" type="button" data-quote-item="desert-glasses-case" data-quote-label-key="collection.productDesert4Title" data-i18n="collection.addItem">Add to quote</button></div></div>
           </article>
 
           <article class="catalog-product-card" data-boutique-item data-category="taif" data-reveal>
@@ -347,33 +378,63 @@
       </div>
     </section>
 
-    <section class="section guest-services" id="guest-services" data-boutique-section>
+    <section class="section guest-services executive-guest-services" id="guest-services" data-guest-services>
       <div class="container">
         <div class="section-heading" data-reveal>
-          <div><span class="eyebrow" data-i18n="collection.guestServicesEyebrow">Guest services</span><h2 data-i18n="collection.guestServicesTitle">Personal details prepared before arrival</h2></div>
-          <p data-i18n="collection.guestServicesText">Available separately or as part of a corporate, executive or private guest program.</p>
+          <div><span class="eyebrow" data-i18n="collection.executiveServicesEyebrow">Guest &amp; executive services</span><h2 data-i18n="collection.executiveServicesTitle">Personal details arranged around the guest</h2></div>
+          <p data-i18n="collection.executiveServicesText">Request these services on their own or alongside a private, executive or corporate program. Availability is reviewed before confirmation.</p>
         </div>
         <div class="guest-service-grid">
-          <article class="guest-service-card" data-boutique-item data-category="corporate" data-reveal>
+          <article class="guest-service-card" data-service-request data-service-id="thobe" data-service-category="guest-executive" data-reveal>
             <span class="service-symbol">01</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
             <h3 data-i18n="collection.thobeTitle">Tailor to your accommodation</h3>
             <p data-i18n="collection.thobeText">A tailor visits for measurements and fabric selection, then arranges delivery in under 24 hours after availability is confirmed.</p>
             <ul class="service-points"><li data-i18n="collection.thobePoint1">Private visit</li><li data-i18n="collection.thobePoint2">Fabric selection</li><li data-i18n="collection.thobePoint3">Fast coordinated delivery</li></ul>
-            <button class="text-link quote-add-button" type="button" data-quote-item="thobe" data-quote-label-key="collection.thobeTitle" data-i18n="collection.addService">Add service to quote</button>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=thobe" data-service-request data-service-id="thobe" data-i18n="collection.requestService">Request this service</a>
           </article>
-          <article class="guest-service-card" data-boutique-item data-category="corporate" data-reveal>
+          <article class="guest-service-card" data-service-request data-service-id="abaya" data-service-category="guest-executive" data-reveal>
             <span class="service-symbol">02</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
             <h3 data-i18n="collection.abayaTitle">Abaya specialist for the guest</h3>
             <p data-i18n="collection.abayaText">A female specialist assists the guest privately with selecting the size, style and suitable abaya, then coordinates delivery according to availability.</p>
             <ul class="service-points"><li data-i18n="collection.abayaPoint1">Private assistance</li><li data-i18n="collection.abayaPoint2">Size and style selection</li><li data-i18n="collection.abayaPoint3">Coordinated delivery</li></ul>
-            <button class="text-link quote-add-button" type="button" data-quote-item="abaya" data-quote-label-key="collection.abayaTitle" data-i18n="collection.addService">Add service to quote</button>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=abaya" data-service-request data-service-id="abaya" data-i18n="collection.requestService">Request this service</a>
           </article>
-          <article class="guest-service-card" data-boutique-item data-category="corporate" data-reveal>
+          <article class="guest-service-card" data-service-request data-service-id="flower" data-service-category="guest-executive" data-reveal>
             <span class="service-symbol">03</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
             <h3 data-i18n="collection.flowerTitle">Flowers before the guest arrives</h3>
             <p data-i18n="collection.flowerText">A bouquet and personal card are arranged at the hotel or accommodation before the guest’s arrival.</p>
             <ul class="service-points"><li data-i18n="collection.flowerPoint1">Arrangement by occasion</li><li data-i18n="collection.flowerPoint2">Personal message card</li><li data-i18n="collection.flowerPoint3">Delivery before arrival</li></ul>
-            <button class="text-link quote-add-button" type="button" data-quote-item="flower" data-quote-label-key="collection.flowerTitle" data-i18n="collection.addService">Add service to quote</button>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=flower" data-service-request data-service-id="flower" data-i18n="collection.requestService">Request this service</a>
+          </article>
+          <article class="guest-service-card" data-service-request data-service-id="airport-welcome" data-service-category="guest-executive" data-reveal>
+            <span class="service-symbol">04</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
+            <h3 data-i18n="collection.airportWelcomeTitle">Airport welcome and transfer</h3>
+            <p data-i18n="collection.airportWelcomeText">Coordinate a considered arrival from the airport to the hotel or residence around the guest's timing and arrival details.</p>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=airport-welcome" data-service-request data-service-id="airport-welcome" data-i18n="collection.requestService">Request this service</a>
+          </article>
+          <article class="guest-service-card" data-service-request data-service-id="executive-transport" data-service-category="guest-executive" data-reveal>
+            <span class="service-symbol">05</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
+            <h3 data-i18n="collection.executiveTransportTitle">Executive transport coordination</h3>
+            <p data-i18n="collection.executiveTransportText">Arrange the appropriate private vehicle and driver around the itinerary, guest count and program timing.</p>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=executive-transport" data-service-request data-service-id="executive-transport" data-i18n="collection.requestService">Request this service</a>
+          </article>
+          <article class="guest-service-card" data-service-request data-service-id="meeting-setup" data-service-category="guest-executive" data-reveal>
+            <span class="service-symbol">06</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
+            <h3 data-i18n="collection.meetingSetupTitle">Meeting preparation</h3>
+            <p data-i18n="collection.meetingSetupText">Coordinate the practical hospitality details around an executive meeting, workshop or private gathering.</p>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=meeting-setup" data-service-request data-service-id="meeting-setup" data-i18n="collection.requestService">Request this service</a>
+          </article>
+          <article class="guest-service-card" data-service-request data-service-id="official-gifts" data-service-category="guest-executive" data-reveal>
+            <span class="service-symbol">07</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
+            <h3 data-i18n="collection.officialGiftsTitle">Official gifts coordination</h3>
+            <p data-i18n="collection.officialGiftsText">Source and prepare a considered gift direction that suits the occasion, recipient and approved brief.</p>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=official-gifts" data-service-request data-service-id="official-gifts" data-i18n="collection.requestService">Request this service</a>
+          </article>
+          <article class="guest-service-card" data-service-request data-service-id="concierge" data-service-category="guest-executive" data-reveal>
+            <span class="service-symbol">08</span><span class="status available" data-i18n="common.availableRequest">Available on request</span>
+            <h3 data-i18n="collection.conciergeTitle">Guest concierge</h3>
+            <p data-i18n="collection.conciergeText">A single coordination point for practical guest requests before and during an approved Aventura program.</p>
+            <a class="text-link guest-service-request" href="contact.html?type=service&amp;request=concierge" data-service-request data-service-id="concierge" data-i18n="collection.requestService">Request this service</a>
           </article>
         </div>
       </div>

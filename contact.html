@@ -7,14 +7,44 @@
   <meta name="description" content="Contact AVENTURA in Jeddah to plan a private experience, event, guest program or corporate itinerary.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#04111d">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://aventuraksa.com/contact.html">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact AVENTURA">
   <meta property="og:image" content="https://aventuraksa.com/assets/images/hero-jeddah.webp">
+  <meta property="og:site_name" content="AVENTURA">
+  <meta property="og:description" content="Contact AVENTURA in Jeddah to plan a private experience, event, guest program or corporate itinerary.">
+  <meta property="og:url" content="https://aventuraksa.com/contact.html">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact AVENTURA | Plan an Experience or Event">
+  <meta name="twitter:description" content="Contact AVENTURA in Jeddah to plan a private experience, event, guest program or corporate itinerary.">
+  <meta name="twitter:image" content="https://aventuraksa.com/assets/images/hero-jeddah.webp">
+
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/analytics.js" defer></script>
   <script src="assets/js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Contact AVENTURA | Plan an Experience or Event",
+    "description": "Contact AVENTURA in Jeddah to plan a private experience, event, guest program or corporate itinerary.",
+    "url": "https://aventuraksa.com/contact.html",
+    "inLanguage": [
+      "en",
+      "ar",
+      "es"
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "AVENTURA",
+      "url": "https://aventuraksa.com/"
+    }
+  }
+  </script>
 </head>
 <body data-page="contact" data-title-key="contact.metaTitle" data-description-key="contact.metaDescription">
   <site-header></site-header>
@@ -79,6 +109,15 @@
             <div class="field">
               <label for="email" data-i18n="contact.emailLabel">Email</label>
               <input id="email" name="email" type="email" autocomplete="email" dir="ltr" data-i18n-placeholder="contact.emailPlaceholder" placeholder="name@example.com">
+            </div>
+            <div class="field">
+              <label for="preferredResponse" data-i18n="contact.preferredContactLabel">Preferred contact method</label>
+              <select id="preferredResponse" name="preferredResponse">
+                <option value="whatsapp" selected data-i18n="contact.contactWhatsapp">WhatsApp</option>
+                <option value="phone" data-i18n="contact.contactCall">Phone call</option>
+                <option value="email" data-i18n="contact.contactEmail">Email</option>
+              </select>
+              <p class="form-note" data-i18n="contact.preferredResponseText">After reviewing the request, Aventura will respond through your preferred method when possible.</p>
             </div>
             <div class="field">
               <label for="type" data-i18n="contact.typeLabel">Request type</label>

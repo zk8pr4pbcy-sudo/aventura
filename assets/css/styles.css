@@ -4,7 +4,7 @@
   --navy-850: #0b2234;
   --navy-800: #102b40;
   --ink: #132536;
-  --muted: #64717d;
+  --muted: #606d78;
   --sand-50: #fbf9f4;
   --sand-100: #f4efe6;
   --sand-200: #e7dece;
@@ -12,12 +12,14 @@
   --coastal-100: #e2ecea;
   --white: #ffffff;
   --gold: #bd9858;
-  --gold-dark: #8f6b34;
+  --gold-dark: #85612f;
+  --gold-light: #e5ce9d;
   --teal: #1e6970;
   --rose: #a7656c;
   --line: rgba(7, 26, 42, 0.13);
   --line-light: rgba(255, 255, 255, 0.15);
   --shadow-sm: 0 12px 28px rgba(7, 26, 42, 0.09);
+  --shadow-md: 0 18px 44px rgba(7, 26, 42, 0.13);
   --shadow-lg: 0 24px 70px rgba(2, 14, 25, 0.22);
   --radius-sm: 10px;
   --radius-md: 18px;
@@ -222,6 +224,12 @@ html[dir="rtl"] .eyebrow {
 .section-heading p {
   margin-bottom: 4px;
   color: var(--muted);
+}
+
+.section-action {
+  display: flex;
+  margin-top: 38px;
+  justify-content: flex-start;
 }
 
 .section-dark .section-heading p {
@@ -576,7 +584,7 @@ html[dir="rtl"] .text-link:hover::after {
 }
 
 .page-hero {
-  min-height: 600px;
+  min-height: 500px;
   padding-top: var(--header-height);
   place-items: end start;
 }
@@ -629,7 +637,7 @@ html[dir="rtl"] .page-hero::before {
 
 .page-hero-content {
   max-width: 780px;
-  padding: 110px 0 86px;
+  padding: 88px 0 68px;
 }
 
 .hero h1,
@@ -1198,6 +1206,152 @@ html[dir="rtl"] .product-card::after {
   margin-bottom: 28px;
 }
 
+.boutique-gateway-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.boutique-gateway-card {
+  position: relative;
+  display: flex;
+  min-height: 320px;
+  padding: 26px;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--white);
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  background: radial-gradient(circle at 82% 16%, rgba(222, 190, 124, 0.26), transparent 30%), linear-gradient(145deg, #17465c, #071c2d);
+  border: 1px solid rgba(222, 190, 124, 0.25);
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 44px rgba(5, 20, 31, 0.16);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.boutique-gateway-card::before,
+.boutique-gateway-card::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.boutique-gateway-card::before {
+  top: -92px;
+  inset-inline-end: -92px;
+  width: 210px;
+  height: 210px;
+}
+
+.boutique-gateway-card::after {
+  bottom: -140px;
+  inset-inline-start: -112px;
+  width: 260px;
+  height: 260px;
+}
+
+.boutique-gateway-card:hover,
+.boutique-gateway-card:focus-visible {
+  border-color: rgba(239, 209, 148, 0.78);
+  box-shadow: 0 28px 60px rgba(5, 20, 31, 0.26);
+  transform: translateY(-5px);
+}
+
+.boutique-gateway-historic {
+  background: radial-gradient(circle at 82% 16%, rgba(227, 180, 109, 0.28), transparent 30%), linear-gradient(145deg, #754832, #2c1711);
+}
+
+.boutique-gateway-desert {
+  background: radial-gradient(circle at 82% 16%, rgba(240, 201, 135, 0.28), transparent 30%), linear-gradient(145deg, #8f6542, #392319);
+}
+
+.boutique-gateway-taif {
+  background: radial-gradient(circle at 82% 16%, rgba(241, 194, 204, 0.28), transparent 30%), linear-gradient(145deg, #8a566d, #3b1f2e);
+}
+
+.boutique-gateway-index {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  margin-bottom: auto;
+  place-items: center;
+  color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+}
+
+.boutique-gateway-code {
+  margin-top: 28px;
+  color: var(--gold-light);
+  font-size: 0.61rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.boutique-gateway-card strong {
+  margin: 8px 0 10px;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.5vw, 2.35rem);
+  font-weight: 500;
+  line-height: 0.98;
+}
+
+html[lang="ar"] .boutique-gateway-card strong {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+}
+
+.boutique-gateway-card > span:not(.boutique-gateway-index, .boutique-gateway-code, .boutique-gateway-action) {
+  max-width: 28ch;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  line-height: 1.62;
+}
+
+.boutique-gateway-action {
+  margin-top: 24px;
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(239, 209, 148, 0.42);
+  text-underline-offset: 5px;
+}
+
+.boutique-direct-access {
+  display: grid;
+  grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  align-items: end;
+  gap: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.boutique-direct-access .eyebrow {
+  color: var(--gold-dark);
+}
+
+.boutique-direct-access h3 {
+  margin-top: 7px;
+  color: var(--navy-900);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+.boutique-direct-access p {
+  max-width: 54ch;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
 .boutique-path-card {
   position: relative;
   display: flex;
@@ -1659,12 +1813,6 @@ html[lang="ar"] .boutique-path-card > strong {
   --box-accent: #f1c2cc;
 }
 
-.box-jeddah {
-  --box-deep: #102b35;
-  --box-mid: #2c6b70;
-  --box-accent: #e2bd78;
-}
-
 .boutique-card-content {
   display: flex;
   padding: 34px;
@@ -1738,12 +1886,6 @@ html[lang="ar"] .boutique-path-card > strong {
   letter-spacing: 0.14em;
 }
 
-.box-executive {
-  --box-deep: #0b1624;
-  --box-mid: #28384d;
-  --box-accent: #d9bc7a;
-}
-
 .catalog-card-actions {
   display: flex;
   align-items: end;
@@ -1788,11 +1930,19 @@ html[lang="ar"] .boutique-path-card > strong {
 }
 
 .interest-action {
-  color: #9a6d28 !important;
+  color: var(--gold-dark) !important;
 }
 
 .interest-action.is-added {
-  color: #4f786f !important;
+  color: #356c62 !important;
+}
+
+.perfume-card .interest-action {
+  color: var(--gold-light) !important;
+}
+
+.perfume-card .interest-action.is-added {
+  color: #a9d5c9 !important;
 }
 
 .product-context-tags {
@@ -2323,6 +2473,49 @@ html[lang="ar"] .perfume-card-pending strong {
 
 .guest-service-card .quote-add-button {
   margin-top: auto;
+}
+
+.executive-guest-services {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f5efe5 0%, #eee2d0 100%);
+}
+
+.executive-guest-services::before {
+  position: absolute;
+  top: -180px;
+  inset-inline-end: -100px;
+  width: 420px;
+  height: 420px;
+  content: "";
+  background: radial-gradient(circle, rgba(189, 152, 88, 0.16), transparent 66%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.executive-guest-services .section-heading,
+.executive-guest-services .guest-service-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.executive-guest-services .guest-service-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(143, 107, 52, 0.2);
+}
+
+.guest-service-request {
+  margin-top: auto;
+  color: var(--gold-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(143, 107, 52, 0.35);
+  text-underline-offset: 5px;
+}
+
+.guest-service-request:hover,
+.guest-service-request:focus-visible {
+  color: var(--navy-900);
 }
 
 .quote-selection-bar {
@@ -2914,6 +3107,242 @@ html[lang="ar"] .request-detail-group legend {
   font-size: 0.82rem;
 }
 
+.form-status.is-success {
+  color: #205e52;
+}
+
+.request-progress {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 34px 0 38px;
+  padding: 0;
+  list-style: none;
+}
+
+.request-progress li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.request-progress li::after {
+  position: absolute;
+  z-index: 0;
+  top: 16px;
+  right: 0;
+  left: 44px;
+  height: 1px;
+  content: "";
+  background: var(--sand-200);
+}
+
+html[dir="rtl"] .request-progress li::after {
+  right: 44px;
+  left: 0;
+}
+
+.request-progress li:last-child::after {
+  display: none;
+}
+
+.request-progress span,
+.request-progress strong {
+  position: relative;
+  z-index: 1;
+}
+
+.request-progress span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--navy-900);
+  background: var(--sand-100);
+  border: 1px solid var(--sand-200);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.request-progress strong {
+  padding-inline-end: 8px;
+  background: var(--white);
+  font-weight: 720;
+}
+
+.request-progress .is-active,
+.request-progress .is-complete {
+  color: var(--navy-900);
+}
+
+.request-progress .is-active span,
+.request-progress .is-complete span {
+  color: var(--white);
+  background: var(--navy-900);
+  border-color: var(--navy-900);
+}
+
+.request-progress .is-complete span {
+  background: var(--gold-dark);
+  border-color: var(--gold-dark);
+}
+
+.request-step-heading {
+  margin-bottom: 28px;
+}
+
+.request-step-heading h3 {
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 500;
+}
+
+html[lang="ar"] .request-step-heading h3 {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+}
+
+.request-step-heading p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.request-options {
+  min-width: 0;
+  margin: 0;
+  padding: 24px;
+  background: var(--sand-100);
+  border: 1px solid var(--sand-200);
+  border-radius: var(--radius-md);
+}
+
+.request-options legend {
+  padding: 0 8px;
+  color: var(--navy-900);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.request-options > p {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.request-option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.request-option-grid label {
+  display: flex;
+  min-height: 50px;
+  padding: 12px 14px;
+  align-items: center;
+  gap: 10px;
+  color: var(--navy-900);
+  cursor: pointer;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 680;
+}
+
+.request-option-grid label:has(input:checked) {
+  background: #fbf5e9;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(189, 152, 88, 0.11);
+}
+
+.request-option-grid input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: var(--gold-dark);
+}
+
+.request-step-actions {
+  display: flex;
+  margin-top: 8px;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.request-step-actions .form-actions {
+  width: 100%;
+  margin-top: 0;
+  justify-content: space-between;
+}
+
+.btn-outline-dark {
+  color: var(--navy-900);
+  background: transparent;
+  border-color: rgba(7, 26, 42, 0.26);
+}
+
+.btn-outline-dark:hover {
+  color: var(--white);
+  background: var(--navy-900);
+  border-color: var(--navy-900);
+}
+
+.request-success {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px;
+  color: var(--ink);
+  background: var(--coastal-50);
+  border: 1px solid rgba(30, 105, 112, 0.24);
+  border-radius: var(--radius-md);
+}
+
+.request-success-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  color: var(--white);
+  background: var(--teal);
+  border-radius: 50%;
+  font-weight: 850;
+}
+
+.request-success strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--navy-900);
+}
+
+.request-success p {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.request-success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.request-success-actions .text-link {
+  padding: 0;
+  color: var(--navy-900);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
 .partner-hero .page-hero-media {
   object-position: center 64%;
 }
@@ -3064,6 +3493,11 @@ html[dir="rtl"] .partner-audience-card::after {
 
 .partner-audience-featured h3 {
   color: var(--white);
+}
+
+.partner-audience-featured .eyebrow,
+.partner-application-panel .eyebrow {
+  color: var(--gold-light);
 }
 
 .partner-audience-card > p {
@@ -4347,6 +4781,16 @@ html[dir="rtl"] .purpose-card::after {
     grid-template-columns: 1fr;
   }
 
+  .boutique-gateway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .boutique-direct-access {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 12px;
+  }
+
   .boutique-reorder-layout {
     gap: 34px;
   }
@@ -4480,7 +4924,7 @@ html[dir="rtl"] .purpose-card::after {
   }
 
   .page-hero {
-    min-height: 560px;
+    min-height: 440px;
   }
 
   .hero::before,
@@ -4496,12 +4940,60 @@ html[dir="rtl"] .purpose-card::after {
   }
 
   .page-hero-content {
-    padding: 130px 0 62px;
+    padding: 104px 0 48px;
   }
 
   .hero h1,
   .page-hero h1 {
     font-size: clamp(2.75rem, 13.5vw, 4.4rem);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.35rem, 11vw, 3.75rem);
+  }
+
+  .request-progress {
+    margin: 28px 0 30px;
+  }
+
+  .request-progress li {
+    grid-template-columns: 30px 1fr;
+    gap: 6px;
+    font-size: 0.62rem;
+  }
+
+  .request-progress span {
+    width: 30px;
+    height: 30px;
+  }
+
+  .request-progress li::after {
+    top: 14px;
+    left: 36px;
+  }
+
+  html[dir="rtl"] .request-progress li::after {
+    right: 36px;
+    left: 0;
+  }
+
+  .request-option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .request-step-actions,
+  .request-step-actions .form-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .request-step-actions .btn,
+  .request-step-actions .form-actions .btn {
+    width: 100%;
+  }
+
+  .request-success {
+    grid-template-columns: 1fr;
   }
 
   .hero-proof-grid {
@@ -4532,6 +5024,15 @@ html[dir="rtl"] .purpose-card::after {
 
   .boutique-card {
     grid-template-columns: 1fr;
+  }
+
+  .boutique-gateway-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .boutique-gateway-card {
+    min-height: 282px;
+    padding: 24px;
   }
 
   .boutique-path-card {
@@ -4912,6 +5413,10 @@ html[dir="rtl"] .detail-back::before {
   align-items: end;
 }
 
+.detail-perfume-visual.perfume-card-pending .eyebrow {
+  color: var(--gold-light);
+}
+
 .experience-complete-box {
   width: min(100%, 1040px);
   min-height: 430px;
@@ -4932,6 +5437,32 @@ html[dir="rtl"] .detail-back::before {
   color: var(--gold-light) !important;
   border-inline-start: 2px solid rgba(222, 190, 124, 0.68);
   font-size: 0.78rem !important;
+}
+
+.scent-lab-section {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 8% 14%, rgba(189, 152, 88, 0.14), transparent 28%), radial-gradient(circle at 92% 80%, rgba(76, 119, 139, 0.14), transparent 32%), var(--navy-950);
+}
+
+.scent-lab-section::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(222, 190, 124, 0.68), transparent);
+}
+
+.scent-lab-interest-note {
+  padding: 14px 16px;
+  color: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(222, 190, 124, 0.22);
+  border-radius: 12px;
+  font-size: 0.78rem !important;
+  line-height: 1.6;
 }
 
 .perfume-card-with-actions {
@@ -4975,6 +5506,21 @@ html[dir="rtl"] .detail-back::before {
 .perfume-card-actions .text-link {
   flex: 0 0 auto;
   color: var(--gold-light);
+}
+
+.perfume-card-actions .perfume-interest-button {
+  padding: 6px 0;
+  color: var(--gold-light);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(239, 209, 148, 0.44);
+  text-underline-offset: 5px;
+}
+
+.perfume-card-actions .perfume-interest-button:hover,
+.perfume-card-actions .perfume-interest-button:focus-visible {
+  color: var(--white);
 }
 
 .perfume-card-with-actions.perfume-card-pending {
