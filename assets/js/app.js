@@ -150,6 +150,7 @@
       '      <a class="nav-link" data-nav="corporate" data-nav-alias="events" href="corporate.html"><span data-i18n="nav.corporateEvents">Corporate &amp; Events</span></a>',
       '      <a class="nav-link" data-nav="collection" href="collection.html"><span data-i18n="nav.collection">Boutique</span></a>',
       '      <a class="nav-link" data-nav="about" href="about.html"><span data-i18n="nav.about">About</span></a>',
+      '      <a class="nav-link" data-nav="partners" href="partners.html"><span data-i18n="nav.partners">Partner with us</span></a>',
       '      <a class="nav-link" data-nav="contact" href="contact.html"><span data-i18n="nav.contact">Contact</span></a>',
       '    </nav>',
       '    <div class="header-actions">',
