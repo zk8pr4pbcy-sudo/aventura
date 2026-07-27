@@ -5692,3 +5692,453 @@ html[dir="rtl"] .detail-back::before {
     transform: none;
   }
 }
+
+/* Signature worlds for the four core experiences. The shared header, footer and
+   interaction language stay Aventura; the journey itself changes beneath them. */
+body.experience-world {
+  background: var(--sand-50);
+}
+
+.experience-world main {
+  overflow: clip;
+  background: var(--world-page, var(--sand-50));
+}
+
+.experience-world .experience-detail-hero {
+  min-height: min(760px, 90svh);
+}
+
+.experience-world .experience-detail-hero .page-hero-content {
+  max-width: 770px;
+}
+
+.world-sea .experience-detail-hero .page-hero-media {
+  filter: saturate(1.13) brightness(1.13) hue-rotate(2deg);
+}
+
+.world-sea .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(3, 28, 47, 0.92) 0%, rgba(3, 39, 61, 0.7) 42%, rgba(3, 52, 76, 0.16) 74%, rgba(3, 52, 76, 0.08) 100%);
+}
+
+html[dir="rtl"] .world-sea .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(3, 28, 47, 0.92) 0%, rgba(3, 39, 61, 0.7) 42%, rgba(3, 52, 76, 0.16) 74%, rgba(3, 52, 76, 0.08) 100%);
+}
+
+.world-historic .experience-detail-hero .page-hero-media {
+  filter: saturate(0.8) contrast(1.04) brightness(0.96);
+}
+
+.world-historic .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(32, 23, 16, 0.92) 0%, rgba(49, 31, 20, 0.76) 43%, rgba(40, 28, 19, 0.24) 76%, rgba(40, 28, 19, 0.14) 100%);
+}
+
+html[dir="rtl"] .world-historic .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(32, 23, 16, 0.92) 0%, rgba(49, 31, 20, 0.76) 43%, rgba(40, 28, 19, 0.24) 76%, rgba(40, 28, 19, 0.14) 100%);
+}
+
+.world-desert .experience-detail-hero .page-hero-media {
+  filter: saturate(1.04) contrast(1.05) brightness(0.91);
+}
+
+.world-desert .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(28, 16, 16, 0.91) 0%, rgba(53, 28, 17, 0.72) 43%, rgba(74, 34, 17, 0.2) 76%, rgba(74, 34, 17, 0.12) 100%);
+}
+
+html[dir="rtl"] .world-desert .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(28, 16, 16, 0.91) 0%, rgba(53, 28, 17, 0.72) 43%, rgba(74, 34, 17, 0.2) 76%, rgba(74, 34, 17, 0.12) 100%);
+}
+
+.world-taif .experience-detail-hero .page-hero-media {
+  filter: saturate(0.98) brightness(1.07) hue-rotate(-7deg);
+}
+
+.world-taif .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(25, 36, 48, 0.9) 0%, rgba(45, 54, 70, 0.71) 43%, rgba(80, 73, 91, 0.19) 76%, rgba(80, 73, 91, 0.1) 100%);
+}
+
+html[dir="rtl"] .world-taif .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(25, 36, 48, 0.9) 0%, rgba(45, 54, 70, 0.71) 43%, rgba(80, 73, 91, 0.19) 76%, rgba(80, 73, 91, 0.1) 100%);
+}
+
+.experience-world-intro {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(76px, 10vw, 142px) 0 clamp(68px, 8vw, 112px);
+  color: var(--world-ink);
+  background: var(--world-intro-bg);
+  isolation: isolate;
+}
+
+.experience-world-intro::before,
+.experience-world-intro::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+.world-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(300px, 0.82fr);
+  gap: clamp(42px, 8vw, 124px);
+  align-items: center;
+}
+
+.world-story {
+  max-width: 680px;
+}
+
+.world-story .eyebrow {
+  color: var(--world-accent);
+}
+
+.world-story h2 {
+  max-width: 680px;
+  margin-bottom: 22px;
+  color: var(--world-ink);
+  font-size: clamp(2.35rem, 5vw, 5.4rem);
+}
+
+.world-story .lead {
+  max-width: 620px;
+  color: var(--world-muted);
+}
+
+.world-note {
+  max-width: 570px;
+  margin: 28px 0 0;
+  padding: 14px 0 14px 18px;
+  color: var(--world-note-ink);
+  border-inline-start: 2px solid var(--world-accent);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.75;
+}
+
+html[dir="rtl"] .world-note {
+  padding: 14px 18px 14px 0;
+}
+
+.world-portrait {
+  position: relative;
+  min-height: clamp(330px, 38vw, 530px);
+  overflow: hidden;
+  background: var(--world-portrait-bg);
+  border: 1px solid var(--world-portrait-line);
+  box-shadow: 0 28px 70px var(--world-portrait-shadow);
+}
+
+.world-portrait::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: var(--world-portrait-overlay);
+  pointer-events: none;
+}
+
+.world-portrait img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.world-route {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: clamp(52px, 7vw, 90px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.world-route li {
+  position: relative;
+  display: grid;
+  min-height: 190px;
+  padding: 26px 24px 28px;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: start;
+  gap: 17px;
+  background: var(--world-card-bg);
+  border: 1px solid var(--world-card-line);
+  border-radius: var(--world-card-radius, 20px);
+  box-shadow: 0 12px 30px var(--world-card-shadow);
+}
+
+.world-route-index {
+  color: var(--world-accent);
+  font-size: 0.71rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.world-route h3 {
+  margin: -2px 0 10px;
+  color: var(--world-ink);
+  font-size: 1.16rem;
+}
+
+.world-route p {
+  margin: 0;
+  color: var(--world-muted);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.world-sea {
+  --world-page: #f3fafb;
+  --world-ink: #0b3148;
+  --world-muted: #446276;
+  --world-note-ink: #174661;
+  --world-accent: #1c7b8a;
+  --world-intro-bg: radial-gradient(circle at 8% 18%, rgba(101, 192, 208, 0.28), transparent 28%), radial-gradient(circle at 88% 82%, rgba(10, 98, 124, 0.13), transparent 34%), #eaf6f7;
+  --world-portrait-bg: #b5dce1;
+  --world-portrait-line: rgba(17, 98, 119, 0.23);
+  --world-portrait-shadow: rgba(9, 75, 96, 0.18);
+  --world-portrait-overlay: linear-gradient(180deg, rgba(1, 44, 66, 0.02), rgba(1, 44, 66, 0.24));
+  --world-card-bg: rgba(255, 255, 255, 0.72);
+  --world-card-line: rgba(20, 112, 132, 0.18);
+  --world-card-shadow: rgba(18, 96, 119, 0.07);
+  --world-card-radius: 24px;
+}
+
+.world-sea .experience-world-intro::before {
+  top: -180px;
+  right: -120px;
+  width: 620px;
+  height: 620px;
+  border: 1px solid rgba(28, 123, 138, 0.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 42px rgba(28, 123, 138, 0.06), 0 0 0 86px rgba(28, 123, 138, 0.035);
+}
+
+.world-sea .world-portrait {
+  border-radius: 52% 52% 22px 22px;
+}
+
+.world-sea .experience-products-section {
+  background: linear-gradient(180deg, #f3fafb, #e8f4f5);
+}
+
+.world-sea .experience-box-section {
+  background: #ddecf0;
+}
+
+.world-sea .cta-band {
+  background: linear-gradient(120deg, #062b43, #0d5e6c);
+}
+
+.world-sea main > .section:not(.experience-world-intro) {
+  background: #f3fafb;
+}
+
+.world-historic {
+  --world-page: #f8f0e5;
+  --world-ink: #362719;
+  --world-muted: #725d49;
+  --world-note-ink: #4a3625;
+  --world-accent: #987443;
+  --world-intro-bg: radial-gradient(circle at 94% 8%, rgba(178, 139, 79, 0.21), transparent 27%), linear-gradient(135deg, rgba(118, 78, 38, 0.055) 25%, transparent 25%) 0 0 / 24px 24px, #f5ead9;
+  --world-portrait-bg: #b18b5c;
+  --world-portrait-line: rgba(107, 71, 34, 0.25);
+  --world-portrait-shadow: rgba(69, 42, 20, 0.17);
+  --world-portrait-overlay: linear-gradient(180deg, rgba(37, 22, 12, 0.03), rgba(37, 22, 12, 0.34));
+  --world-card-bg: rgba(255, 250, 242, 0.78);
+  --world-card-line: rgba(130, 94, 51, 0.22);
+  --world-card-shadow: rgba(90, 56, 25, 0.07);
+  --world-card-radius: 12px;
+}
+
+.world-historic .experience-world-intro::before {
+  right: -95px;
+  bottom: -85px;
+  width: 420px;
+  height: 420px;
+  background: repeating-linear-gradient(90deg, rgba(90, 55, 26, 0.1) 0 2px, transparent 2px 26px), repeating-linear-gradient(0deg, rgba(90, 55, 26, 0.1) 0 2px, transparent 2px 26px);
+  border: 1px solid rgba(90, 55, 26, 0.14);
+  transform: rotate(8deg);
+}
+
+.world-historic .world-portrait {
+  border-radius: 18px;
+}
+
+.world-historic .experience-products-section {
+  background: linear-gradient(180deg, #faf1e6, #f1e2cd);
+}
+
+.world-historic .experience-box-section {
+  background: #ead8bd;
+}
+
+.world-historic .cta-band {
+  background: linear-gradient(120deg, #312116, #72502c);
+}
+
+.world-historic main > .section:not(.experience-world-intro) {
+  background: #f8f0e5;
+}
+
+.world-desert {
+  --world-page: #f9efdd;
+  --world-ink: #482919;
+  --world-muted: #76533a;
+  --world-note-ink: #5c351e;
+  --world-accent: #b86732;
+  --world-intro-bg: radial-gradient(circle at 11% 4%, rgba(255, 214, 139, 0.7), transparent 28%), linear-gradient(180deg, #fae9cf, #efd2a4);
+  --world-portrait-bg: #c67c3f;
+  --world-portrait-line: rgba(123, 66, 27, 0.26);
+  --world-portrait-shadow: rgba(101, 51, 19, 0.2);
+  --world-portrait-overlay: linear-gradient(180deg, rgba(76, 35, 13, 0.01) 24%, rgba(76, 35, 13, 0.38));
+  --world-card-bg: rgba(255, 247, 231, 0.73);
+  --world-card-line: rgba(164, 87, 37, 0.22);
+  --world-card-shadow: rgba(122, 62, 23, 0.08);
+  --world-card-radius: 34px 34px 14px 14px;
+}
+
+.world-desert .experience-world-intro::before {
+  right: -5vw;
+  bottom: -155px;
+  width: min(82vw, 980px);
+  height: 380px;
+  background: #d99150;
+  border-radius: 50% 50% 0 0 / 86% 86% 0 0;
+  box-shadow: -260px 66px 0 -40px rgba(214, 138, 70, 0.72), -580px 120px 0 -80px rgba(238, 180, 108, 0.86);
+  opacity: 0.46;
+}
+
+.world-desert .world-portrait {
+  border-radius: 48% 48% 18px 18px;
+}
+
+.world-desert .world-portrait img {
+  object-position: center 56%;
+}
+
+.world-desert .experience-products-section {
+  background: linear-gradient(180deg, #fbf0df, #f4dfbe);
+}
+
+.world-desert .experience-box-section {
+  background: #ead0aa;
+}
+
+.world-desert .cta-band {
+  background: linear-gradient(120deg, #3a211b, #9c4e29);
+}
+
+.world-taif {
+  --world-page: #f7f5f1;
+  --world-ink: #324038;
+  --world-muted: #637268;
+  --world-note-ink: #46594d;
+  --world-accent: #9d6473;
+  --world-intro-bg: radial-gradient(circle at 89% 8%, rgba(205, 147, 169, 0.34), transparent 26%), radial-gradient(circle at 10% 78%, rgba(138, 172, 150, 0.2), transparent 33%), #eff4ee;
+  --world-portrait-bg: #b8949b;
+  --world-portrait-line: rgba(106, 103, 82, 0.25);
+  --world-portrait-shadow: rgba(70, 89, 74, 0.16);
+  --world-portrait-overlay: linear-gradient(180deg, rgba(52, 75, 62, 0.02), rgba(52, 75, 62, 0.3));
+  --world-card-bg: rgba(255, 255, 255, 0.72);
+  --world-card-line: rgba(126, 118, 105, 0.2);
+  --world-card-shadow: rgba(68, 87, 73, 0.07);
+  --world-card-radius: 28px 8px 28px 8px;
+}
+
+.world-taif .experience-world-intro::before {
+  top: -200px;
+  left: -180px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle at center, transparent 0 34%, rgba(157, 100, 115, 0.1) 35% 42%, transparent 43% 52%, rgba(92, 132, 104, 0.09) 53% 61%, transparent 62%);
+  border-radius: 50%;
+}
+
+.world-taif .world-portrait {
+  border-radius: 150px 20px 150px 20px;
+}
+
+.world-taif .experience-products-section {
+  background: linear-gradient(180deg, #f5f7f2, #e9eee6);
+}
+
+.world-taif .experience-box-section {
+  background: #e5e9dc;
+}
+
+.world-taif .cta-band {
+  background: linear-gradient(120deg, #2f4238, #7e5865);
+}
+
+@media (max-width: 900px) {
+  .experience-world .experience-detail-hero {
+    min-height: 640px;
+  }
+
+  .world-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .world-story {
+    max-width: 700px;
+  }
+
+  .world-portrait {
+    min-height: min(69vw, 490px);
+  }
+
+  .world-route {
+    grid-template-columns: 1fr;
+  }
+
+  .world-route li {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .experience-world .experience-detail-hero {
+    min-height: 590px;
+  }
+
+  .experience-world-intro {
+    padding: 72px 0 66px;
+  }
+
+  .world-story h2 {
+    font-size: clamp(2.25rem, 12vw, 3.45rem);
+  }
+
+  .world-portrait {
+    min-height: 280px;
+  }
+
+  .world-route {
+    gap: 12px;
+    margin-top: 46px;
+  }
+
+  .world-route li {
+    padding: 21px 18px 22px;
+    gap: 13px;
+  }
+
+  .world-route h3 {
+    font-size: 1.05rem;
+  }
+
+  .world-route p {
+    font-size: 0.8rem;
+  }
+
+  .world-sea .world-portrait,
+  .world-desert .world-portrait {
+    border-radius: 42% 42% 18px 18px;
+  }
+
+  .world-taif .world-portrait {
+    border-radius: 92px 18px 92px 18px;
+  }
+}
