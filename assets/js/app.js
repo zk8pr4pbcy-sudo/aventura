@@ -1001,7 +1001,19 @@
           ["heritage-cards", "product-historic", "collection.productHistoric2Short", "collection.productHistoric2Title", "collection.productHistoric2Text"]
         ]
       },
-      "sea-to-balad": { alias: "jeddah", request: "sea-to-balad" }
+      "sea-to-balad": {
+        request: "sea-to-balad",
+        perfumes: [
+          { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp", story: "assets/images/perfumes/perfume-sea-story.webp" },
+          { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp", story: "assets/images/perfumes/perfume-roshan-story.webp" }
+        ],
+        products: [
+          ["sea-phone", "product-sea", "collection.productSea3Short", "collection.productSea3Title", "collection.productSea3Text"],
+          ["sea-bottle", "product-sea", "collection.productSea4Short", "collection.productSea4Title", "collection.productSea4Text"],
+          ["roshan-keepsake", "product-historic", "collection.productHistoric1Short", "collection.productHistoric1Title", "collection.productHistoric1Text"],
+          ["heritage-cards", "product-historic", "collection.productHistoric2Short", "collection.productHistoric2Title", "collection.productHistoric2Text"]
+        ]
+      }
     };
 
     var experienceId = root.getAttribute("data-experience-id");
