@@ -991,8 +991,8 @@
       jeddah: {
         request: "jeddah-day",
         perfumes: [
-          { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp", story: "assets/images/perfumes/perfume-sea-story.webp" },
-          { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp", story: "assets/images/perfumes/perfume-roshan-story.webp" }
+          { id: "perfume-noir", titleKey: "collection.noirTitle", textKey: "collection.noirText", image: "assets/images/perfumes/perfume-noir.webp", story: "assets/images/perfumes/perfume-noir-story.webp" },
+          { id: "perfume-velvet", titleKey: "collection.velvetTitle", textKey: "collection.velvetText", image: "assets/images/perfumes/perfume-velvet.webp", story: "assets/images/perfumes/perfume-velvet-story.webp" }
         ],
         products: [
           ["sea-phone", "product-sea", "collection.productSea3Short", "collection.productSea3Title", "collection.productSea3Text"],
