@@ -5699,6 +5699,335 @@ html[dir="rtl"] .detail-back::before {
   }
 }
 
+/* Booking-first story layer for every experience. This sits before any optional
+   boutique detail, so visitors understand the day before they see a keepsake. */
+.experience-journey-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(76px, 10vw, 142px) 0;
+  color: var(--journey-ink, #203b43);
+  background: var(--journey-bg, #eef4f1);
+  isolation: isolate;
+}
+
+.experience-journey-section::before,
+.experience-journey-section::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+.experience-journey-section::before {
+  top: -18vw;
+  right: -12vw;
+  width: min(52vw, 760px);
+  aspect-ratio: 1;
+  border: 1px solid var(--journey-line, rgba(26, 92, 89, 0.18));
+  border-radius: 50%;
+  box-shadow: 0 0 0 48px var(--journey-ring, rgba(26, 92, 89, 0.05)), 0 0 0 108px var(--journey-ring-soft, rgba(26, 92, 89, 0.025));
+}
+
+.experience-journey-section::after {
+  bottom: -32px;
+  left: 8%;
+  width: min(72vw, 880px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--journey-line, rgba(26, 92, 89, 0.18)), transparent);
+}
+
+.experience-journey-heading {
+  max-width: 800px;
+}
+
+.experience-journey-heading .eyebrow,
+.experience-planning-card .eyebrow {
+  color: var(--journey-accent, #19777d);
+}
+
+.experience-journey-heading h2 {
+  max-width: 790px;
+  margin: 16px 0 22px;
+  color: var(--journey-ink, #203b43);
+  font-size: clamp(2.4rem, 5vw, 5.45rem);
+  line-height: 0.98;
+}
+
+.experience-journey-heading .lead {
+  max-width: 710px;
+  margin: 0;
+  color: var(--journey-muted, #5b6d71);
+}
+
+.experience-journey-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(286px, 0.72fr);
+  align-items: stretch;
+  gap: clamp(26px, 5vw, 74px);
+  margin-top: clamp(46px, 7vw, 86px);
+}
+
+.experience-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-stage {
+  display: grid;
+  min-height: 252px;
+  padding: 26px 23px 28px;
+  align-content: start;
+  gap: 34px;
+  background: var(--journey-card-bg, rgba(255, 255, 255, 0.68));
+  border: 1px solid var(--journey-card-line, rgba(26, 92, 89, 0.17));
+  border-radius: var(--journey-card-radius, 22px);
+  box-shadow: 0 16px 36px var(--journey-card-shadow, rgba(21, 74, 70, 0.07));
+}
+
+.experience-stage-index {
+  color: var(--journey-accent, #19777d);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.experience-stage h3 {
+  margin: 0 0 11px;
+  color: var(--journey-ink, #203b43);
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+
+.experience-stage p {
+  margin: 0;
+  color: var(--journey-muted, #5b6d71);
+  font-size: 0.86rem;
+  line-height: 1.72;
+}
+
+.experience-planning-card {
+  display: flex;
+  min-height: 100%;
+  padding: clamp(28px, 3vw, 42px);
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--journey-card-ink, #f5fbf8);
+  background: var(--journey-plan-bg, #123e43);
+  border: 1px solid var(--journey-plan-line, rgba(255, 255, 255, 0.16));
+  border-radius: var(--journey-plan-radius, 24px);
+  box-shadow: 0 22px 48px var(--journey-plan-shadow, rgba(16, 50, 51, 0.18));
+}
+
+.experience-planning-card .eyebrow {
+  color: var(--journey-plan-accent, #a8dcd5);
+}
+
+.experience-planning-card h3 {
+  margin: 16px 0 16px;
+  color: inherit;
+  font-size: clamp(1.65rem, 2.3vw, 2.2rem);
+  line-height: 1.08;
+}
+
+.experience-planning-card > p {
+  margin: 0;
+  color: var(--journey-card-muted, rgba(245, 251, 248, 0.76));
+  font-size: 0.92rem;
+  line-height: 1.74;
+}
+
+.experience-planning-list {
+  display: grid;
+  gap: 13px;
+  margin: 28px 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-planning-list li {
+  position: relative;
+  padding-inline-start: 18px;
+  color: var(--journey-card-muted, rgba(245, 251, 248, 0.76));
+  font-size: 0.79rem;
+  font-weight: 650;
+  line-height: 1.58;
+}
+
+.experience-planning-list li::before {
+  position: absolute;
+  top: 0.45em;
+  inset-inline-start: 0;
+  width: 6px;
+  height: 6px;
+  content: "";
+  background: var(--journey-plan-accent, #a8dcd5);
+  border-radius: 50%;
+}
+
+.experience-planning-card .btn {
+  margin-top: auto;
+  color: var(--journey-button-ink, #0b373b);
+  background: var(--journey-button-bg, #d7eee9);
+  border-color: var(--journey-button-bg, #d7eee9);
+}
+
+.experience-planning-card .btn:hover {
+  color: var(--journey-button-hover-ink, #ffffff);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.68);
+}
+
+.experience-marketing-sea {
+  --journey-bg: radial-gradient(circle at 8% 12%, rgba(122, 205, 218, 0.35), transparent 31%), linear-gradient(135deg, #eaf8f8, #e1f0f2);
+  --journey-ink: #0b334a;
+  --journey-muted: #486a79;
+  --journey-accent: #167f91;
+  --journey-line: rgba(16, 117, 136, 0.22);
+  --journey-ring: rgba(16, 117, 136, 0.06);
+  --journey-ring-soft: rgba(16, 117, 136, 0.025);
+  --journey-card-bg: rgba(255, 255, 255, 0.74);
+  --journey-card-line: rgba(16, 117, 136, 0.18);
+  --journey-card-shadow: rgba(13, 92, 113, 0.09);
+  --journey-card-radius: 24px 24px 12px 12px;
+  --journey-plan-bg: linear-gradient(145deg, #063b58, #0f7180);
+  --journey-plan-accent: #a8e2e4;
+  --journey-button-bg: #e0f5f3;
+  --journey-button-ink: #075567;
+}
+
+.experience-marketing-sea [data-experience-formats] {
+  background: #f2f9fa;
+}
+
+.experience-marketing-historic {
+  --journey-bg: radial-gradient(circle at 88% 8%, rgba(194, 150, 86, 0.22), transparent 27%), linear-gradient(135deg, #fbf2e4, #f2e2c9);
+  --journey-ink: #3d2a1a;
+  --journey-muted: #745e49;
+  --journey-accent: #a4763f;
+  --journey-line: rgba(128, 83, 35, 0.2);
+  --journey-ring: rgba(151, 107, 58, 0.06);
+  --journey-ring-soft: rgba(151, 107, 58, 0.025);
+  --journey-card-bg: rgba(255, 251, 243, 0.78);
+  --journey-card-line: rgba(128, 83, 35, 0.18);
+  --journey-card-shadow: rgba(95, 57, 23, 0.09);
+  --journey-card-radius: 12px;
+  --journey-plan-bg: linear-gradient(145deg, #332216, #76512c);
+  --journey-plan-accent: #f0c985;
+  --journey-button-bg: #f4e3be;
+  --journey-button-ink: #553617;
+}
+
+.experience-marketing-historic [data-experience-formats] {
+  background: #f8efe2;
+}
+
+.experience-marketing-desert {
+  --journey-bg: radial-gradient(circle at 12% 3%, rgba(255, 219, 151, 0.78), transparent 29%), linear-gradient(180deg, #faedd8, #f0d1a3);
+  --journey-ink: #49291a;
+  --journey-muted: #755039;
+  --journey-accent: #b96630;
+  --journey-line: rgba(165, 85, 34, 0.21);
+  --journey-ring: rgba(185, 102, 48, 0.07);
+  --journey-ring-soft: rgba(185, 102, 48, 0.03);
+  --journey-card-bg: rgba(255, 249, 237, 0.74);
+  --journey-card-line: rgba(165, 85, 34, 0.2);
+  --journey-card-shadow: rgba(112, 54, 17, 0.1);
+  --journey-card-radius: 36px 36px 14px 14px;
+  --journey-plan-bg: linear-gradient(145deg, #43251a, #9b4b28);
+  --journey-plan-accent: #ffd89b;
+  --journey-button-bg: #ffe1ac;
+  --journey-button-ink: #6d3317;
+}
+
+.experience-marketing-taif {
+  --journey-bg: radial-gradient(circle at 90% 8%, rgba(213, 164, 181, 0.36), transparent 28%), radial-gradient(circle at 8% 83%, rgba(137, 177, 146, 0.18), transparent 33%), #eff5ef;
+  --journey-ink: #33423a;
+  --journey-muted: #647368;
+  --journey-accent: #986272;
+  --journey-line: rgba(121, 100, 88, 0.2);
+  --journey-ring: rgba(152, 98, 114, 0.06);
+  --journey-ring-soft: rgba(152, 98, 114, 0.025);
+  --journey-card-bg: rgba(255, 255, 255, 0.76);
+  --journey-card-line: rgba(120, 110, 94, 0.19);
+  --journey-card-shadow: rgba(62, 90, 69, 0.08);
+  --journey-card-radius: 28px 8px 28px 8px;
+  --journey-plan-bg: linear-gradient(145deg, #30443a, #7c5865);
+  --journey-plan-accent: #f5c5d2;
+  --journey-button-bg: #f7e2e6;
+  --journey-button-ink: #6d4351;
+}
+
+.experience-marketing-jeddah {
+  --journey-bg: radial-gradient(circle at 9% 11%, rgba(167, 190, 199, 0.34), transparent 29%), linear-gradient(135deg, #eef3f4, #e2ebea);
+  --journey-ink: #263f48;
+  --journey-muted: #5e7379;
+  --journey-accent: #5e8790;
+  --journey-line: rgba(69, 111, 121, 0.2);
+  --journey-ring: rgba(69, 111, 121, 0.06);
+  --journey-ring-soft: rgba(69, 111, 121, 0.025);
+  --journey-card-bg: rgba(255, 255, 255, 0.74);
+  --journey-card-line: rgba(69, 111, 121, 0.17);
+  --journey-card-shadow: rgba(46, 82, 89, 0.08);
+  --journey-card-radius: 18px;
+  --journey-plan-bg: linear-gradient(145deg, #1c3641, #526d74);
+  --journey-plan-accent: #cce7e4;
+  --journey-button-bg: #e6f1ee;
+  --journey-button-ink: #294c53;
+}
+
+.experience-marketing-sea-to-balad {
+  --journey-bg: linear-gradient(115deg, #e7f3f4 0%, #eaf0eb 45%, #f3e5d0 100%);
+  --journey-ink: #264049;
+  --journey-muted: #5f7070;
+  --journey-accent: #7c7651;
+  --journey-line: rgba(86, 106, 87, 0.2);
+  --journey-ring: rgba(86, 106, 87, 0.06);
+  --journey-ring-soft: rgba(86, 106, 87, 0.025);
+  --journey-card-bg: rgba(255, 255, 255, 0.76);
+  --journey-card-line: rgba(86, 106, 87, 0.18);
+  --journey-card-shadow: rgba(55, 79, 74, 0.08);
+  --journey-card-radius: 18px;
+  --journey-plan-bg: linear-gradient(145deg, #164250, #716342);
+  --journey-plan-accent: #d7ead3;
+  --journey-button-bg: #eff1d9;
+  --journey-button-ink: #4f5633;
+}
+
+@media (max-width: 1060px) {
+  .experience-journey-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-planning-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .experience-journey-section {
+    padding: 76px 0;
+  }
+
+  .experience-journey-layout {
+    gap: 26px;
+    margin-top: 46px;
+  }
+
+  .experience-stage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-stage {
+    min-height: 0;
+    gap: 24px;
+  }
+}
+
 /* Signature worlds for the four core experiences. The shared header, footer and
    interaction language stay Aventura; the journey itself changes beneath them. */
 body.experience-world {

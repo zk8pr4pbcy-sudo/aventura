@@ -942,6 +942,8 @@
     var sets = {
       sea: {
         request: "sea",
+        theme: "sea",
+        journey: "sea",
         perfume: { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp", story: "assets/images/perfumes/perfume-sea-story.webp" },
         products: [
           ["sea-tote", "product-sea", "collection.productSea1Short", "collection.productSea1Title", "collection.productSea1Text"],
@@ -951,12 +953,14 @@
         ],
         box: ["sea-box", "box-sea", "RED SEA · AVENTURA", "collection.box1Title", "collection.box1Text", ["collection.box1Item1", "collection.box1Item2", "collection.box1Item3", "collection.box1Item4"]]
       },
-      golden: { alias: "sea", request: "golden-hour" },
-      sunset: { alias: "sea", request: "sunset-moment" },
-      bayadah: { alias: "sea", request: "bayadah-day" },
-      "grand-bayadah": { alias: "sea", request: "bayadah-grand" },
+      golden: { alias: "sea", request: "golden-hour", theme: "sea", journey: "golden" },
+      sunset: { alias: "sea", request: "sunset-moment", theme: "sea", journey: "sunset" },
+      bayadah: { alias: "sea", request: "bayadah-day", theme: "sea", journey: "bayadah" },
+      "grand-bayadah": { alias: "sea", request: "bayadah-grand", theme: "sea", journey: "grandBayadah" },
       historic: {
         request: "historic-walk",
+        theme: "historic",
+        journey: "historic",
         perfume: { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp", story: "assets/images/perfumes/perfume-roshan-story.webp" },
         products: [
           ["roshan-keepsake", "product-historic", "collection.productHistoric1Short", "collection.productHistoric1Title", "collection.productHistoric1Text"],
@@ -968,6 +972,8 @@
       },
       desert: {
         request: "desert",
+        theme: "desert",
+        journey: "desert",
         perfume: { id: "perfume-last-light", titleKey: "collection.p3Title", textKey: "collection.p3Text" },
         products: [
           ["desert-shawl", "product-desert", "collection.productDesert1Short", "collection.productDesert1Title", "collection.productDesert1Text"],
@@ -979,6 +985,8 @@
       },
       taif: {
         request: "taif",
+        theme: "taif",
+        journey: "taif",
         perfume: { id: "perfume-taif", titleKey: "collection.p4Title", textKey: "experienceDetail.perfumeTaifText", image: "assets/images/perfumes/perfume-taif.webp", story: "assets/images/perfumes/perfume-taif-story.webp" },
         products: [
           ["taif-rose-mist", "product-taif", "collection.productTaif1Short", "collection.productTaif1Title", "collection.productTaif1Text", true],
@@ -990,6 +998,8 @@
       },
       jeddah: {
         request: "jeddah-day",
+        theme: "jeddah",
+        journey: "jeddah",
         fragranceOnly: true,
         perfumes: [
           { id: "perfume-noir", titleKey: "collection.noirTitle", textKey: "collection.noirText", image: "assets/images/perfumes/perfume-noir.webp", story: "assets/images/perfumes/perfume-noir-story.webp" },
@@ -999,6 +1009,8 @@
       },
       "sea-to-balad": {
         request: "sea-to-balad",
+        theme: "sea-to-balad",
+        journey: "seaToBalad",
         perfumes: [
           { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp", story: "assets/images/perfumes/perfume-sea-story.webp" },
           { id: "perfume-roshan", titleKey: "collection.p2Title", textKey: "experienceDetail.perfumeRoshanText", image: "assets/images/perfumes/perfume-roshan.webp", story: "assets/images/perfumes/perfume-roshan-story.webp" }
@@ -1020,12 +1032,15 @@
 
     if (config.alias) {
       var base = sets[config.alias];
-      config = Object.assign({}, base, { request: config.request });
+      config = Object.assign({}, base, config);
     }
 
     var perfumes = (config.perfumes || [config.perfume]).filter(Boolean);
     var products = config.products || [];
     var fragranceOnly = config.fragranceOnly === true;
+    var journeyKey = config.journey || experienceId;
+    var journeyPrefix = "journey." + journeyKey;
+    var journeyTheme = config.theme || "jeddah";
     var productEyebrowKey = fragranceOnly ? "experienceDetail.scentsEyebrow" : "experienceDetail.productsEyebrow";
     var productTitleKey = fragranceOnly ? "experienceDetail.scentsTitle" : "experienceDetail.productsTitle";
     var productTextKey = fragranceOnly ? "experienceDetail.scentsText" : "experienceDetail.productsText";
@@ -1053,17 +1068,47 @@
       return '<article class="catalog-product-card" data-reveal><div class="catalog-product-visual ' + product[1] + '"><span>AVENTURA</span><strong data-i18n="' + product[2] + '">Product</strong></div>' +
         '<div class="catalog-product-content"><span class="status' + (seasonal ? '' : ' available') + '" data-i18n="' + (seasonal ? 'common.seasonal' : 'common.madeToOrder') + '">' + (seasonal ? 'Seasonal' : 'Made to order') + '</span>' +
         '<h3 data-i18n="' + product[3] + '">Product</h3><p data-i18n="' + product[4] + '">Product details.</p>' +
-        '<div class="catalog-card-actions">' + quantityMarkup(product[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + product[0] + '" data-quote-label-key="' + product[3] + '" data-i18n="collection.addItem">Add to quote</button></div></div></article>';
+        '<div class="catalog-card-actions">' + quantityMarkup(product[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + product[0] + '" data-quote-label-key="' + product[3] + '" data-i18n="experienceDetail.includeOptional">Include in my experience request</button></div></div></article>';
     }
 
     function boxMarkup(box) {
       var items = box[5].map(function (key) { return '<li data-i18n="' + key + '">Collection item</li>'; }).join("");
       return '<article class="boutique-card experience-complete-box" data-reveal><div class="box-preview ' + box[1] + '"><div class="box-shell"><span class="box-monogram">A</span><span class="box-name">' + box[2] + '</span></div></div>' +
         '<div class="boutique-card-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="' + box[3] + '">Complete collection</h3><p data-i18n="' + box[4] + '">Complete experience collection.</p><ul class="box-items">' + items + '</ul>' +
-        '<div class="catalog-card-actions">' + quantityMarkup(box[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + box[0] + '" data-quote-label-key="' + box[3] + '" data-i18n="collection.addBox">Add box to quote</button></div></div></article>';
+        '<div class="catalog-card-actions">' + quantityMarkup(box[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + box[0] + '" data-quote-label-key="' + box[3] + '" data-i18n="experienceDetail.includeBox">Include this keepsake box</button></div></div></article>';
     }
 
     var requestHref = "contact.html?type=experience&request=" + encodeURIComponent(config.request);
+    document.body.classList.add("experience-marketing-" + journeyTheme);
+
+    function journeyStepMarkup(index) {
+      return '<li class="experience-stage" data-reveal><span class="experience-stage-index">0' + index + '</span><div><h3 data-i18n="' + journeyPrefix + '.step' + index + 'Title">Experience moment</h3><p data-i18n="' + journeyPrefix + '.step' + index + 'Text">Aventura shapes each part around your guests.</p></div></li>';
+    }
+
+    function journeyMarkup() {
+      return [
+        '<section class="experience-journey-section" id="experience-journey" aria-labelledby="experienceJourneyTitle">',
+        '  <div class="container">',
+        '    <div class="experience-journey-heading" data-reveal>',
+        '      <span class="eyebrow" data-i18n="' + journeyPrefix + '.eyebrow">Your private experience</span>',
+        '      <h2 id="experienceJourneyTitle" data-i18n="' + journeyPrefix + '.title">The experience begins before you arrive</h2>',
+        '      <p class="lead" data-i18n="' + journeyPrefix + '.text">Aventura shapes the experience around the people, moment and pace you have in mind.</p>',
+        '    </div>',
+        '    <div class="experience-journey-layout">',
+        '      <ol class="experience-stage-grid">' + [1, 2, 3].map(journeyStepMarkup).join("") + '</ol>',
+        '      <aside class="experience-planning-card" data-reveal>',
+        '        <span class="eyebrow" data-i18n="experienceDetail.planEyebrow">Your private plan</span>',
+        '        <h3 data-i18n="experienceDetail.planTitle">Tell us the date. We will shape the rest.</h3>',
+        '        <p data-i18n="experienceDetail.planText">Share the occasion, guest count and preferred timing. Aventura prepares a considered route and clear quotation.</p>',
+        '        <ul class="experience-planning-list"><li data-i18n="experienceDetail.planPoint1">Pace and privacy shaped around your guests</li><li data-i18n="experienceDetail.planPoint2">Partners and movement coordinated by one team</li><li data-i18n="experienceDetail.planPoint3">No booking is confirmed until we agree the final plan</li></ul>',
+        '        <a class="btn" href="' + requestHref + '" data-experience-request data-direct-booking data-i18n="experienceDetail.planCta">Start planning this experience</a>',
+        '      </aside>',
+        '    </div>',
+        '  </div>',
+        '</section>'
+      ].join("");
+    }
+
     var relatedIds = products.map(function (product) { return product[0]; });
     if (config.box && isRequestableProduct(BOUTIQUE_CATALOG[config.box[0]])) {
       relatedIds.push(config.box[0]);
@@ -1080,9 +1125,10 @@
     root.setAttribute("data-related-items", relatedIds.join(","));
     root.setAttribute("data-experience-request-key", config.request);
     root.innerHTML = [
+      journeyMarkup(),
       '<section class="section experience-products-section" id="experience-products">',
       '  <div class="container">',
-      '    <div class="section-heading" data-reveal><div><span class="eyebrow" data-i18n="' + productEyebrowKey + '">Complete your experience</span><h2 data-i18n="' + productTitleKey + '">Products chosen for this experience</h2></div><p data-i18n="' + productTextKey + '">Choose only what fits your guest. Products are optional and added to the same tailored quotation.</p></div>',
+      '    <div class="section-heading" data-reveal><div><span class="eyebrow" data-i18n="' + productEyebrowKey + '">Optional finishing touches</span><h2 data-i18n="' + productTitleKey + '">Details connected to this experience</h2></div><p data-i18n="' + productTextKey + '">The experience is complete without them. Include a detail only if it fits your guest and the moment.</p></div>',
       '    <div class="catalog-product-grid detail-product-grid' + (fragranceOnly ? ' detail-product-grid--fragrance-only' : '') + '">' + perfumes.map(perfumeMarkup).join("") + products.map(productMarkup).join("") + '</div>',
       '  </div>',
       '</section>',
@@ -1090,9 +1136,15 @@
       '<section class="cta-band"><div class="container cta-inner" data-reveal><div><h2 data-i18n="experienceDetail.requestTitle">Ready to shape the experience?</h2><p data-i18n="' + requestTextKey + '">Send the date, guest count and timing. Any selected products will be included in the same request.</p></div><a class="btn" href="' + requestHref + '" data-experience-request data-i18n="experiences.quoteButton">Request a custom quote</a></div></section>',
       '<div class="quote-selection-bar" data-quote-bar hidden><div><span data-i18n="collection.selectionLabel">Your selections</span><strong><span data-quote-count>0</span> <span data-i18n="collection.selectionItems">items</span></strong></div><button class="btn btn-sm" type="button" data-open-quote data-i18n="collection.reviewSelection">Review selections</button></div>',
       '<dialog class="quote-selection-dialog" data-quote-dialog aria-labelledby="detailQuoteTitle"><div class="quote-dialog-head"><div><span class="eyebrow" data-i18n="collection.selectionLabel">Your selections</span><h2 id="detailQuoteTitle" data-i18n="collection.dialogTitle">Review your request</h2></div><button class="dialog-close" type="button" data-close-quote data-i18n-aria="collection.closeDetails" aria-label="Close">×</button></div><div class="quote-dialog-list" data-quote-list></div><p class="form-note" data-i18n="collection.quoteDisclaimer">Sending the request does not confirm booking or availability.</p><p class="form-note" data-quote-payment-note data-i18n="contact.formText">No payment is taken here. This form starts the planning conversation.</p><div class="quote-dialog-actions"><button class="btn btn-dark" type="button" data-continue-quote data-i18n="experiences.quoteButton">Request a custom quote</button><button class="text-link" type="button" data-clear-quote data-i18n="collection.clearSelection">Clear selections</button></div></dialog>',
-      relatedIds.length ? '<dialog class="experience-product-dialog" data-experience-product-dialog aria-labelledby="productReminderTitle"><div class="experience-reminder-handle" aria-hidden="true"></div><span class="eyebrow" data-i18n="experienceDetail.reminderEyebrow">Before you continue</span><h2 id="productReminderTitle" data-i18n="experienceDetail.reminderTitle">Would you like to complete the experience?</h2><p data-i18n="experienceDetail.reminderText">We selected products connected to this experience. You can review them or continue without additions.</p><div class="experience-reminder-actions"><button class="btn btn-dark" type="button" data-view-experience-products data-i18n="experienceDetail.viewProducts">View experience products</button><button class="text-link" type="button" data-continue-without-products data-i18n="experienceDetail.continueWithout">Continue without products</button></div></dialog>' : '',
+      relatedIds.length ? '<dialog class="experience-product-dialog" data-experience-product-dialog aria-labelledby="productReminderTitle"><div class="experience-reminder-handle" aria-hidden="true"></div><span class="eyebrow" data-i18n="experienceDetail.reminderEyebrow">Optional finishing touches</span><h2 id="productReminderTitle" data-i18n="experienceDetail.reminderTitle">The experience is ready to plan</h2><p data-i18n="experienceDetail.reminderText">You can include a detail if it suits your guest, or continue with the experience only.</p><div class="experience-reminder-actions"><button class="btn btn-dark" type="button" data-view-experience-products data-i18n="experienceDetail.viewProducts">View optional details</button><button class="text-link" type="button" data-continue-without-products data-i18n="experienceDetail.continueWithout">Continue to plan the experience</button></div></dialog>' : '',
       '<dialog class="perfume-story-dialog" data-perfume-story-dialog aria-labelledby="experiencePerfumeStoryTitle"><div class="perfume-story-dialog-head"><div><span class="eyebrow" data-i18n="collection.storyDialogEyebrow">Fragrance campaign</span><h2 id="experiencePerfumeStoryTitle" data-perfume-story-title>Fragrance story card</h2></div><button class="dialog-close" type="button" data-close-perfume-story data-i18n-aria="collection.closeStoryCard" aria-label="Close story card">×</button></div><img data-perfume-story-image src="assets/images/perfumes/perfume-sea-story.webp" width="900" height="1125" alt=""></dialog>'
     ].join("");
+
+    var formats = document.querySelector("[data-experience-formats]");
+    var productsSection = root.querySelector("#experience-products");
+    if (formats && productsSection) {
+      root.insertBefore(formats, productsSection);
+    }
 
     document.querySelectorAll("[data-experience-request]").forEach(function (button) {
       button.setAttribute("data-related-items", relatedIds.join(","));
@@ -1144,7 +1196,8 @@
         var selected = selectedItems(state);
         pendingHref = hrefWithSelections(button.getAttribute("href"), state);
         var bypassed = reminderWasSeen();
-        if (selected.length || bypassed || !reminder) {
+        var directBooking = button.hasAttribute("data-direct-booking");
+        if (selected.length || bypassed || !reminder || directBooking) {
           if (pendingHref !== button.getAttribute("href")) {
             event.preventDefault();
             window.location.href = pendingHref;
