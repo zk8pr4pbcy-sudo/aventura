@@ -5391,6 +5391,12 @@ html[dir="rtl"] .detail-back::before {
   align-items: stretch;
 }
 
+.detail-product-grid--fragrance-only {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 840px);
+  margin-inline: auto;
+}
+
 .detail-perfume-product {
   border-color: rgba(189, 152, 88, 0.38);
 }
