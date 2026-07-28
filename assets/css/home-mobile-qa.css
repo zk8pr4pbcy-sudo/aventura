@@ -1,0 +1,151 @@
+/* Mobile homepage QA correction: Arabic hero readability, hierarchy and header visibility. */
+
+@media (max-width: 680px) {
+  body[data-page="home"] .site-header {
+    display: block !important;
+    position: fixed;
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #071a2a;
+    background: rgba(255, 253, 248, 0.97);
+    border-bottom: 1px solid rgba(7, 26, 42, 0.12);
+    box-shadow: 0 8px 24px rgba(7, 26, 42, 0.1);
+    backdrop-filter: blur(16px);
+  }
+
+  body[data-page="home"] .site-header .brand {
+    padding: 4px 6px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  body[data-page="home"] .site-header .brand-logo {
+    width: 148px;
+  }
+
+  body[data-page="home"] .site-header .nav-toggle {
+    color: #071a2a;
+    border-color: rgba(7, 26, 42, 0.22);
+  }
+
+  body[data-page="home"] .site-header .lang-switch {
+    border-color: rgba(7, 26, 42, 0.18);
+  }
+
+  body[data-page="home"] .site-header .lang-switch button {
+    color: rgba(7, 26, 42, 0.72);
+  }
+
+  body[data-page="home"] .site-header .lang-switch button.is-active {
+    color: #fffdf8;
+    background: #071a2a;
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero {
+    min-height: 790px;
+    padding-top: 72px;
+    place-items: start stretch;
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-media {
+    object-position: 42% center;
+    filter: saturate(1.02) contrast(1.02) brightness(1.02);
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero::before {
+    background: linear-gradient(180deg, rgba(4, 17, 29, 0.12) 0%, rgba(4, 17, 29, 0.2) 42%, rgba(4, 17, 29, 0.48) 100%);
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-content {
+    position: relative;
+    max-width: none;
+    margin-top: 104px;
+    margin-bottom: 28px;
+    padding: 24px 20px 22px;
+    color: #ffffff;
+    background: linear-gradient(145deg, rgba(4, 17, 29, 0.84), rgba(7, 26, 42, 0.7));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    box-shadow: 0 22px 56px rgba(4, 17, 29, 0.28);
+    backdrop-filter: blur(10px);
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .eyebrow {
+    margin-bottom: 12px;
+    color: #e5ce9d;
+    font-size: 0.72rem;
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero h1 {
+    max-width: 12ch;
+    margin-bottom: 16px;
+    color: #ffffff !important;
+    font-size: clamp(2.35rem, 10.6vw, 3.25rem);
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-wrap: balance;
+    text-shadow: 0 3px 22px rgba(0, 0, 0, 0.3);
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-description {
+    max-width: 36ch;
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.96) !important;
+    font-size: 1rem;
+    line-height: 1.78;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  html[lang="ar"] body[data-page="home"] .hero-audience {
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+
+  html[lang="ar"] body[data-page="home"] .hero-audience span {
+    min-height: 32px;
+    padding: 6px 10px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.22);
+    font-size: 0.68rem;
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-actions .btn {
+    width: 100%;
+    min-height: 52px;
+    padding: 10px 12px;
+    font-size: 0.86rem;
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .btn-outline {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.52);
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-proof {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-content {
+    margin-top: 92px;
+    padding: 21px 17px;
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero h1 {
+    font-size: clamp(2.15rem, 10.8vw, 2.8rem);
+  }
+
+  html[lang="ar"] body[data-page="home"] .home-hero .hero-actions {
+    grid-template-columns: 1fr;
+  }
+}
