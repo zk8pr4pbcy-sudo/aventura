@@ -4,8 +4,8 @@
   "description": "Private experiences, events and hospitality in Saudi Arabia.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#04111d",
-  "theme_color": "#04111d",
+  "background_color": "#FFF9EF",
+  "theme_color": "#FFF9EF",
   "icons": [
     {
       "src": "assets/images/favicon.svg",
