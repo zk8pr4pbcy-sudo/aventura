@@ -1,6 +1,24 @@
 (function () {
   "use strict";
 
+  function applyLaunchTheme() {
+    var themeLink = document.getElementById("aventura-light-theme");
+    if (!themeLink) {
+      themeLink = document.createElement("link");
+      themeLink.id = "aventura-light-theme";
+      themeLink.rel = "stylesheet";
+      themeLink.href = "assets/css/light-theme.css?v=20260728";
+      document.head.appendChild(themeLink);
+    }
+
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) {
+      themeMeta.setAttribute("content", "#FFF9EF");
+    }
+  }
+
+  applyLaunchTheme();
+
   var SAFE_DETAIL_KEYS = ["page", "language", "target", "requestType", "requestId", "productId", "quantity", "source"];
 
   function cleanDetails(details) {
