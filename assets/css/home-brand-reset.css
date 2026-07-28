@@ -1,0 +1,249 @@
+/* AVENTURA homepage identity correction: broad brand, crisp logo, readable mobile hero. */
+
+body[data-page="home"] .site-header,
+body[data-page="home"] .site-header.is-scrolled,
+body[data-page="home"] .site-header.menu-open {
+  background: #fffdf8;
+  border-bottom: 1px solid rgba(7, 26, 42, 0.12);
+  box-shadow: 0 8px 24px rgba(7, 26, 42, 0.09);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body[data-page="home"] .site-header .brand {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transform: none;
+}
+
+body[data-page="home"] .site-header .brand-logo {
+  width: 172px;
+  opacity: 1;
+  filter: none;
+  transform: none;
+  image-rendering: auto;
+}
+
+body[data-page="home"] .site-header .nav-link,
+body[data-page="home"] .site-header .lang-switch button,
+body[data-page="home"] .site-header .nav-toggle {
+  color: #071a2a;
+}
+
+body[data-page="home"] .site-header .lang-switch,
+body[data-page="home"] .site-header .nav-toggle {
+  border-color: rgba(7, 26, 42, 0.2);
+}
+
+body[data-page="home"] .site-header .lang-switch button.is-active {
+  color: #fffdf8;
+  background: #071a2a;
+}
+
+.home-hero-aventura {
+  min-height: min(900px, 100svh);
+  background: #173247;
+}
+
+.home-hero-aventura .hero-media {
+  object-position: center 52%;
+  filter: saturate(1.03) contrast(1.02) brightness(0.94);
+}
+
+.home-hero-aventura::before,
+html[dir="rtl"] .home-hero-aventura::before {
+  background:
+    linear-gradient(90deg, rgba(4, 17, 29, 0.88) 0%, rgba(4, 17, 29, 0.66) 43%, rgba(4, 17, 29, 0.2) 78%, rgba(4, 17, 29, 0.28) 100%),
+    linear-gradient(180deg, rgba(4, 17, 29, 0.04), rgba(4, 17, 29, 0.2));
+}
+
+html[dir="rtl"] .home-hero-aventura::before {
+  background:
+    linear-gradient(270deg, rgba(4, 17, 29, 0.88) 0%, rgba(4, 17, 29, 0.66) 43%, rgba(4, 17, 29, 0.2) 78%, rgba(4, 17, 29, 0.28) 100%),
+    linear-gradient(180deg, rgba(4, 17, 29, 0.04), rgba(4, 17, 29, 0.2));
+}
+
+.home-hero-aventura .hero-content {
+  max-width: 860px;
+  padding-bottom: 150px;
+}
+
+.home-hero-aventura h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 6.6vw, 6.4rem);
+  line-height: 1.02;
+}
+
+html[lang="ar"] .home-hero-aventura h1 {
+  max-width: 10ch;
+  line-height: 1.18;
+}
+
+.home-hero-aventura .hero-description {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Historic Jeddah remains first in the experience order, not the identity of the whole company. */
+.experience-grid-home {
+  grid-template-rows: auto;
+}
+
+.experience-grid-home .experience-card-featured {
+  grid-column: span 7;
+  min-height: 520px;
+}
+
+.experience-grid-home .experience-card-featured::after {
+  display: none;
+}
+
+.experience-grid-home .experience-card:nth-child(2) {
+  grid-column: span 5;
+}
+
+.experience-grid-home .experience-card:nth-child(3),
+.experience-grid-home .experience-card:nth-child(4),
+.experience-grid-home .experience-card:nth-child(5) {
+  grid-column: span 4;
+}
+
+@media (max-width: 900px) {
+  body[data-page="home"] .site-header .brand-logo {
+    width: 154px;
+  }
+
+  .home-hero-aventura {
+    min-height: 820px;
+  }
+
+  .home-hero-aventura .hero-content {
+    padding-top: calc(var(--header-height) + 72px);
+    padding-bottom: 190px;
+  }
+
+  .experience-grid-home .experience-card-featured,
+  .experience-grid-home .experience-card:nth-child(2),
+  .experience-grid-home .experience-card:nth-child(3),
+  .experience-grid-home .experience-card:nth-child(4),
+  .experience-grid-home .experience-card:nth-child(5) {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 680px) {
+  body[data-page="home"] .site-header {
+    height: 72px;
+  }
+
+  body[data-page="home"] .site-header .brand-logo {
+    width: 146px;
+  }
+
+  .home-hero-aventura {
+    min-height: 780px;
+    padding-top: 72px;
+    place-items: start stretch;
+  }
+
+  .home-hero-aventura .hero-media {
+    object-position: 52% center;
+    filter: saturate(1.02) contrast(1.02) brightness(0.9);
+  }
+
+  .home-hero-aventura::before,
+  html[dir="rtl"] .home-hero-aventura::before {
+    background: linear-gradient(180deg, rgba(4, 17, 29, 0.16) 0%, rgba(4, 17, 29, 0.34) 38%, rgba(4, 17, 29, 0.82) 100%);
+  }
+
+  .home-hero-aventura .hero-content {
+    max-width: none;
+    margin-top: 92px;
+    margin-bottom: 24px;
+    padding: 22px 18px 20px;
+    color: #ffffff;
+    background: #071a2a;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 22px;
+    box-shadow: 0 18px 42px rgba(4, 17, 29, 0.28);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .home-hero-aventura .eyebrow {
+    margin-bottom: 10px;
+    color: #e5ce9d;
+    font-size: 0.68rem;
+  }
+
+  .home-hero-aventura h1,
+  html[lang="ar"] .home-hero-aventura h1 {
+    max-width: none;
+    margin-bottom: 14px;
+    color: #ffffff !important;
+    font-size: clamp(2.15rem, 9.6vw, 3rem);
+    line-height: 1.22;
+    text-shadow: none;
+  }
+
+  .home-hero-aventura .hero-description {
+    max-width: none;
+    margin-bottom: 16px;
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 0.95rem;
+    line-height: 1.68;
+    text-shadow: none;
+  }
+
+  .home-hero-aventura .hero-audience {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .home-hero-aventura .hero-audience span {
+    min-height: 30px;
+    padding: 5px 9px;
+    font-size: 0.64rem;
+  }
+
+  .home-hero-aventura .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .home-hero-aventura .hero-actions .btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 9px 10px;
+    font-size: 0.8rem;
+  }
+
+  .home-hero-aventura .hero-proof {
+    display: none;
+  }
+
+  .experience-grid-home .experience-card-featured,
+  .experience-grid-home .experience-card:nth-child(2),
+  .experience-grid-home .experience-card:nth-child(3),
+  .experience-grid-home .experience-card:nth-child(4),
+  .experience-grid-home .experience-card:nth-child(5) {
+    grid-column: 1 / -1;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-hero-aventura .hero-content {
+    margin-top: 82px;
+  }
+
+  .home-hero-aventura .hero-actions {
+    grid-template-columns: 1fr;
+  }
+}
