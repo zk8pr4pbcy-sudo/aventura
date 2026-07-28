@@ -1,0 +1,236 @@
+/* AVENTURA light launch theme — approved July 2026 */
+:root {
+  --av-ivory: #fff9ef;
+  --av-sand: #f2e4cc;
+  --av-sea: #dceff2;
+  --av-taif-green: #dce8d6;
+  --av-taif-rose: #ebcfd2;
+  --av-gold: #c59a55;
+  --av-ink: #17324a;
+  --av-muted: #526979;
+}
+
+body {
+  color: var(--av-ink);
+  background: var(--av-ivory);
+}
+
+.section-muted {
+  background: linear-gradient(180deg, #f8eedc 0%, var(--av-ivory) 100%);
+}
+
+.section-dark {
+  color: var(--av-muted);
+  background: linear-gradient(135deg, var(--av-sea) 0%, var(--av-ivory) 55%, var(--av-sand) 100%);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark .text-link,
+.image-feature-content .text-link {
+  color: var(--av-ink);
+}
+
+.section-dark .eyebrow,
+.hero .eyebrow,
+.page-hero .eyebrow {
+  color: #8a6531;
+}
+
+.section-dark .section-heading p,
+.section-dark p {
+  color: var(--av-muted);
+}
+
+.site-header.is-scrolled,
+body:not([data-page="home"]) .site-header {
+  color: var(--av-ink);
+  background: rgba(255, 249, 239, 0.96);
+  border-bottom-color: rgba(23, 50, 74, 0.12);
+  box-shadow: 0 10px 32px rgba(23, 50, 74, 0.08);
+}
+
+.site-header.is-scrolled .nav-link,
+body:not([data-page="home"]) .site-header .nav-link,
+.site-header.is-scrolled .brand-tagline,
+body:not([data-page="home"]) .site-header .brand-tagline {
+  color: rgba(23, 50, 74, 0.76);
+}
+
+.site-header.is-scrolled .nav-link:hover,
+.site-header.is-scrolled .nav-link.is-active,
+body:not([data-page="home"]) .site-header .nav-link:hover,
+body:not([data-page="home"]) .site-header .nav-link.is-active {
+  color: var(--av-ink);
+}
+
+.site-header.is-scrolled .lang-switch,
+.site-header.is-scrolled .nav-toggle,
+body:not([data-page="home"]) .site-header .lang-switch,
+body:not([data-page="home"]) .site-header .nav-toggle {
+  color: var(--av-ink);
+  border-color: rgba(23, 50, 74, 0.18);
+}
+
+.site-header.is-scrolled .lang-switch button,
+body:not([data-page="home"]) .site-header .lang-switch button {
+  color: rgba(23, 50, 74, 0.72);
+}
+
+.site-header.is-scrolled .lang-switch button:hover,
+.site-header.is-scrolled .lang-switch button.is-active,
+body:not([data-page="home"]) .site-header .lang-switch button:hover,
+body:not([data-page="home"]) .site-header .lang-switch button.is-active {
+  color: var(--av-ink);
+  background: var(--av-sea);
+}
+
+.hero,
+.page-hero {
+  color: var(--av-ink);
+  background: var(--av-sand);
+}
+
+.hero::before,
+.page-hero::before {
+  background: linear-gradient(90deg, rgba(255, 249, 239, 0.94) 0%, rgba(255, 249, 239, 0.76) 42%, rgba(255, 249, 239, 0.18) 75%, rgba(255, 249, 239, 0.24) 100%);
+}
+
+html[dir="rtl"] .hero::before,
+html[dir="rtl"] .page-hero::before {
+  background: linear-gradient(270deg, rgba(255, 249, 239, 0.94) 0%, rgba(255, 249, 239, 0.76) 42%, rgba(255, 249, 239, 0.18) 75%, rgba(255, 249, 239, 0.24) 100%);
+}
+
+.hero::after,
+.page-hero::after {
+  background: linear-gradient(transparent, rgba(255, 249, 239, 0.74));
+}
+
+.hero h1,
+.page-hero h1 {
+  color: var(--av-ink);
+  text-shadow: 0 2px 24px rgba(255, 249, 239, 0.7);
+}
+
+.hero-description,
+.page-hero-description {
+  color: rgba(23, 50, 74, 0.82);
+}
+
+.hero .btn-outline,
+.page-hero .btn-outline {
+  color: var(--av-ink);
+  background: rgba(255, 249, 239, 0.78);
+  border-color: rgba(23, 50, 74, 0.25);
+}
+
+.hero .btn-outline:hover,
+.page-hero .btn-outline:hover {
+  color: var(--av-ink);
+  background: var(--av-sea);
+  border-color: var(--av-sea);
+}
+
+.hero-proof {
+  background: rgba(255, 249, 239, 0.78);
+  border-top-color: rgba(23, 50, 74, 0.12);
+}
+
+.proof-item {
+  border-inline-end-color: rgba(23, 50, 74, 0.12);
+}
+
+.proof-item strong {
+  color: var(--av-ink);
+}
+
+.proof-item span {
+  color: rgba(23, 50, 74, 0.66);
+}
+
+.experience-card {
+  color: var(--av-ink);
+  background: var(--av-sand);
+}
+
+.experience-card::before {
+  background: linear-gradient(180deg, rgba(255, 249, 239, 0.02) 35%, rgba(255, 249, 239, 0.92) 100%);
+}
+
+.experience-card-content {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 249, 239, 0.88) 34%, rgba(255, 249, 239, 0.97) 100%);
+}
+
+.experience-card h3,
+.experience-card p,
+.experience-card .text-link {
+  color: var(--av-ink);
+}
+
+.experience-card p {
+  color: rgba(23, 50, 74, 0.74);
+}
+
+.btn-dark {
+  color: var(--av-ink);
+  background: var(--av-sea);
+  border-color: #b8dce1;
+}
+
+.btn-dark:hover,
+.btn-ghost:hover {
+  color: var(--av-ink);
+  background: var(--av-sand);
+  border-color: #dfc79f;
+}
+
+.card,
+.service-card,
+.value-card,
+.product-card,
+.event-card,
+.process-step {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(23, 50, 74, 0.11);
+  box-shadow: 0 16px 42px rgba(23, 50, 74, 0.07);
+}
+
+.site-footer,
+footer {
+  color: var(--av-ink);
+  background: linear-gradient(135deg, var(--av-sand), var(--av-ivory));
+  border-top: 1px solid rgba(23, 50, 74, 0.1);
+}
+
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer a,
+.site-footer strong,
+footer h2,
+footer h3,
+footer h4,
+footer a,
+footer strong {
+  color: var(--av-ink);
+}
+
+.site-footer p,
+.site-footer span,
+footer p,
+footer span {
+  color: rgba(23, 50, 74, 0.7);
+}
+
+@media (max-width: 980px) {
+  .primary-nav {
+    color: var(--av-ink);
+    background: rgba(255, 249, 239, 0.98);
+  }
+
+  .primary-nav .nav-link {
+    color: rgba(23, 50, 74, 0.8);
+  }
+}
