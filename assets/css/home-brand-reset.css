@@ -3,9 +3,10 @@
 body[data-page="home"] .site-header,
 body[data-page="home"] .site-header.is-scrolled,
 body[data-page="home"] .site-header.menu-open {
-  background: #fffdf8;
-  border-bottom: 1px solid rgba(7, 26, 42, 0.12);
-  box-shadow: 0 8px 24px rgba(7, 26, 42, 0.09);
+  /* Solid ivory keeps the header distinct from the hero at every scroll position. */
+  background: #fff9ef;
+  border-bottom: 1px solid rgba(23, 50, 74, 0.18);
+  box-shadow: 0 8px 24px rgba(23, 50, 74, 0.1);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
@@ -32,17 +33,17 @@ body[data-page="home"] .site-header .brand-logo {
 body[data-page="home"] .site-header .nav-link,
 body[data-page="home"] .site-header .lang-switch button,
 body[data-page="home"] .site-header .nav-toggle {
-  color: #071a2a;
+  color: #17324a;
 }
 
 body[data-page="home"] .site-header .lang-switch,
 body[data-page="home"] .site-header .nav-toggle {
-  border-color: rgba(7, 26, 42, 0.2);
+  border-color: rgba(23, 50, 74, 0.22);
 }
 
 body[data-page="home"] .site-header .lang-switch button.is-active {
-  color: #fffdf8;
-  background: #071a2a;
+  color: #fff9ef;
+  background: #17324a;
 }
 
 .home-hero-aventura {
