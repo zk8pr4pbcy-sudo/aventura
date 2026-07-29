@@ -44,14 +44,24 @@ for (const file of htmlFiles) {
 }
 
 const translationContext = { window: {} };
-vm.runInNewContext(fs.readFileSync(path.join(root, "assets/js/translations.js"), "utf8"), translationContext);
+[
+  "assets/js/translations.js",
+  "assets/js/home-phase1-i18n.js",
+  "assets/js/home-brand-reset.js"
+].forEach((sourceFile) => {
+  vm.runInNewContext(fs.readFileSync(path.join(root, sourceFile), "utf8"), translationContext);
+});
 const dictionaries = translationContext.window.AVENTURA_I18N;
 const languages = ["en", "ar", "es"];
 const counts = languages.map((language) => Object.keys(dictionaries[language] || {}).length);
 if (new Set(counts).size !== 1) fail("translations", `language counts differ: ${counts.join(", ")}`);
 
 const prefixes = new Set(Object.keys(dictionaries.en).map((key) => key.split(".")[0]));
-const translationSources = htmlFiles.map((file) => fs.readFileSync(path.join(root, file), "utf8")).join("\n") + fs.readFileSync(path.join(root, "assets/js/app.js"), "utf8");
+const translationSources = htmlFiles.map((file) => fs.readFileSync(path.join(root, file), "utf8")).join("\n") + [
+  "assets/js/app.js",
+  "assets/js/home-phase1-i18n.js",
+  "assets/js/home-brand-reset.js"
+].map((sourceFile) => fs.readFileSync(path.join(root, sourceFile), "utf8")).join("\n");
 const candidates = new Set();
 for (const match of translationSources.matchAll(/["']([a-z][A-Za-z0-9]*\.[A-Za-z0-9.]+)["']/g)) {
   if (prefixes.has(match[1].split(".")[0]) && !/\.(?:html|webp|svg|jpg|js|css)$/i.test(match[1])) candidates.add(match[1]);
@@ -65,6 +75,7 @@ for (const key of candidates) {
 
 const searchableText = translationSources + JSON.stringify(dictionaries);
 if (/\b(?:honey|miel)\b|عسل/iu.test(searchableText)) fail("content", "food product term found");
+if (/\bluxury\b|فاخر/iu.test(searchableText)) fail("content", "disallowed luxury language found");
 
 const appSource = fs.readFileSync(path.join(root, "assets/js/app.js"), "utf8");
 const collectionSource = fs.readFileSync(path.join(root, "collection.html"), "utf8");
@@ -74,32 +85,58 @@ if (!catalogMatch) {
 } else {
   const catalogSource = catalogMatch[1];
   const catalogEntries = [...catalogSource.matchAll(/^    "([^"]+)": \{([^\n]+)\},?$/gm)];
-  const boxIds = catalogEntries
-    .filter(([, , entry]) => /\btype: "box"/.test(entry))
-    .map(([, id]) => id)
-    .sort();
-  const expectedBoxIds = ["desert-box", "historic-box", "sea-box", "taif-box"];
-  if (boxIds.join(",") !== expectedBoxIds.join(",")) {
-    fail("boutique", `expected exactly four approved boxes; found ${boxIds.join(", ") || "none"}`);
+  const allowedTypes = ["fragrance", "box", "beach", "gift"];
+  if (catalogEntries.some(([, , entry]) => !allowedTypes.some((type) => entry.includes(`type: "${type}"`)))) {
+    fail("boutique", "an unsupported item type remains in the public boutique catalog");
   }
 
   const fragranceEntries = catalogEntries.filter(([, , entry]) => /\btype: "fragrance"/.test(entry));
-  if (!fragranceEntries.length || fragranceEntries.some(([, , entry]) => !/actionKey: "collection\.registerInterest"/.test(entry))) {
-    fail("boutique", "every Scent Lab fragrance must use the interest-only action");
+  const expectedFragranceIds = ["perfume-noir", "perfume-roshan", "perfume-sea", "perfume-taif", "perfume-velvet"];
+  if (fragranceEntries.map(([, id]) => id).sort().join(",") !== expectedFragranceIds.join(",") || fragranceEntries.some(([, , entry]) => !/actionKey: "collection\.registerInterest"/.test(entry))) {
+    fail("boutique", "the five Scent Lab fragrance concepts must use the interest-only action");
   }
 
-  ["executive-box", "jeddah-signature-box"].forEach((id) => {
+  const expectedPreviewIds = [
+    "desert-box", "desert-cup", "desert-glasses-case", "desert-keepsake", "desert-shawl",
+    "heritage-cards", "historic-box", "historic-notebook", "historic-pouch", "roshan-keepsake",
+    "sea-bottle", "sea-box", "sea-phone", "sea-tote", "sea-towel",
+    "taif-box", "taif-notebook", "taif-rose-care", "taif-rose-mist", "taif-sachet"
+  ];
+  const previewEntries = catalogEntries.filter(([, id]) => expectedPreviewIds.includes(id));
+  if (previewEntries.map(([, id]) => id).sort().join(",") !== expectedPreviewIds.join(",") || previewEntries.some(([, , entry]) => !/statusKey: "common\.comingSoon"/.test(entry) || !/prepKey: "collection\.prepDevelopment"/.test(entry) || /actionKey:/.test(entry))) {
+    fail("boutique", "every product and box preview must remain visible as Coming Soon without a request action");
+  }
+  const boxIds = catalogEntries.filter(([, , entry]) => /\btype: "box"/.test(entry)).map(([, id]) => id).sort();
+  if (boxIds.join(",") !== ["desert-box", "historic-box", "sea-box", "taif-box"].join(",")) {
+    fail("boutique", "only the four experience boxes may appear in the boutique");
+  }
+  ["executive-box", "jeddah-signature-box", "perfume-last-light"].forEach((id) => {
     if (new RegExp(`"${id}"\\s*:`).test(catalogSource)) {
-      fail("boutique", `retired box remains in catalog: ${id}`);
+      fail("boutique", `retired item remains in catalog: ${id}`);
     }
   });
 }
 
-const collectionBoxIds = [...collectionSource.matchAll(/data-quote-item="([^"]+-box)"/g)].map((match) => match[1]).sort();
-if (collectionBoxIds.join(",") !== ["desert-box", "historic-box", "sea-box", "taif-box"].join(",")) {
-  fail("collection.html", `expected four approved box cards; found ${collectionBoxIds.join(", ") || "none"}`);
+const collectionInterestIds = [...collectionSource.matchAll(/data-interest-item="(perfume-[^"]+)"/g)].map((match) => match[1]).sort();
+const expectedInterestIds = ["perfume-noir", "perfume-roshan", "perfume-sea", "perfume-taif", "perfume-velvet"];
+const expectedCollectionProductIds = [
+  ...expectedInterestIds,
+  "desert-box", "desert-cup", "desert-glasses-case", "desert-keepsake", "desert-shawl",
+  "heritage-cards", "historic-box", "historic-notebook", "historic-pouch", "roshan-keepsake",
+  "sea-bottle", "sea-box", "sea-phone", "sea-tote", "sea-towel",
+  "taif-box", "taif-notebook", "taif-rose-care", "taif-rose-mist", "taif-sachet"
+].sort();
+const collectionProductIds = [...collectionSource.matchAll(/data-product-id="([^"]+)"/g)].map((match) => match[1]).sort();
+if (/data-quote-item=/i.test(collectionSource)) {
+  fail("collection.html", "Coming Soon products and boxes must not expose quote controls");
 }
-if (/data-quote-item="perfume-/i.test(collectionSource) || !collectionSource.includes("data-scent-interest")) {
+if (collectionInterestIds.join(",") !== expectedInterestIds.join(",")) {
+  fail("collection.html", `expected five published fragrance concepts; found ${collectionInterestIds.join(", ") || "none"}`);
+}
+if (collectionProductIds.join(",") !== expectedCollectionProductIds.join(",")) {
+  fail("collection.html", "all approved boutique boxes and product previews must remain visible");
+}
+if (/data-quote-item="perfume-/i.test(collectionSource) || !collectionSource.includes("data-interest-item=\"perfume-")) {
   fail("collection.html", "Scent Lab must use its separate interest action, never a quote action");
 }
 if (!appSource.includes("function setupScentLabInterest") || !appSource.includes("[data-scent-interest], [data-interest-item]")) {
@@ -110,10 +147,81 @@ if (!scentHandler.includes('"https://wa.me/"') || !scentHandler.includes('window
   fail("assets/js/app.js", "Scent Lab interest CTA must open a non-personal WhatsApp message");
 }
 if (!appSource.includes("function sanitizeQuoteSelection") || !appSource.includes("isRequestableProduct(product)")) {
-  fail("assets/js/app.js", "quote selection must discard retired and interest-only entries");
+  fail("assets/js/app.js", "quote selection must discard unavailable and interest-only entries");
 }
-if (!appSource.includes('window.addEventListener("popstate"') || !appSource.includes('if (type === "fragrance")') || !appSource.includes('showScentLab("replace")')) {
-  fail("assets/js/app.js", "boutique URL filters must restore navigation and route Fragrance to Scent Lab");
+if (!appSource.includes('window.addEventListener("popstate"') || !appSource.includes('var allowedTypes = ["all", "fragrance", "box", "beach", "gift"]') || !appSource.includes('var allowedExperiences = ["all", "sea", "historic", "desert", "taif", "jeddah"]')) {
+  fail("assets/js/app.js", "boutique URL filters must restore the selected experience and item view");
+}
+if (!appSource.includes("function isVisibleBoutiqueProduct") || !appSource.includes('["fragrance", "box", "beach", "gift"]')) {
+  fail("assets/js/app.js", "the public boutique must keep fragrances, boxes and product previews visible");
+}
+if (!appSource.includes('var id = item.getAttribute("data-product-id")')) {
+  fail("assets/js/app.js", "Coming Soon previews must be supported without a purchase or interest action");
+}
+
+const guestServicesSource = fs.readFileSync(path.join(root, "guest-services.html"), "utf8");
+const guestServiceRequests = [...guestServicesSource.matchAll(/request=(thobe|abaya|flower)/g)].map((match) => match[1]).sort();
+if (guestServiceRequests.join(",") !== "abaya,flower,thobe" || /concierge|gift/i.test(guestServicesSource)) {
+  fail("guest-services.html", "guest services must contain only thobe tailoring, abaya service and flowers");
+}
+if (!appSource.includes('data-nav="guest-services"') || !appSource.includes('href="guest-services.html"')) {
+  fail("assets/js/app.js", "guest services must be reachable from the header and footer");
+}
+
+const primaryExperiencePages = {
+  "experience-historic-jeddah.html": "historic",
+  "experience-sea.html": "sea",
+  "experience-desert.html": "desert",
+  "experience-taif.html": "taif",
+  "experience-jeddah-day.html": "jeddah",
+  "experience-sea-to-balad.html": "sea-to-balad"
+};
+for (const [file, experienceId] of Object.entries(primaryExperiencePages)) {
+  const source = fs.readFileSync(path.join(root, file), "utf8");
+  if (!source.includes("data-static-experience-story")) {
+    fail(file, "must keep its localized experience story ahead of optional fragrances");
+  }
+  if (!source.includes(`data-experience-detail data-experience-id="${experienceId}"`)) {
+    fail(file, "missing the correct experience fragrance mapping");
+  }
+  if (count(source, /id="experience-journey"/g) !== 1) {
+    fail(file, "must contain exactly one visitor journey section");
+  }
+}
+
+function perfumeIdsBetween(startToken, endToken) {
+  const start = appSource.indexOf(startToken);
+  const end = start === -1 ? -1 : appSource.indexOf(endToken, start + startToken.length);
+  if (start === -1 || end === -1) return null;
+  return [...appSource.slice(start, end).matchAll(/id: "(perfume-[^"]+)"/g)].map((match) => match[1]).sort();
+}
+
+const jeddahPerfumes = perfumeIdsBetween('      jeddah: {', '      "sea-to-balad": {');
+const seaToBaladPerfumes = perfumeIdsBetween('      "sea-to-balad": {', '\n    };\n\n    var experienceId');
+const desertPerfumes = perfumeIdsBetween('      desert: {', '      taif: {');
+if (!jeddahPerfumes || jeddahPerfumes.join(",") !== "perfume-noir,perfume-velvet") {
+  fail("assets/js/app.js", "Jeddah Day must expose only Noir and Velvet fragrance concepts");
+}
+if (!seaToBaladPerfumes || seaToBaladPerfumes.join(",") !== "perfume-roshan,perfume-sea") {
+  fail("assets/js/app.js", "Sea to Al-Balad must expose only Sea and Roshan fragrance concepts");
+}
+if (!desertPerfumes || desertPerfumes.length) {
+  fail("assets/js/app.js", "the desert experience must not expose an incomplete fragrance concept");
+}
+
+[
+  ["experience-jeddah-day.html", "world-jeddah"],
+  ["experience-sea-to-balad.html", "world-sea-to-balad"]
+].forEach(([file, worldClass]) => {
+  const source = fs.readFileSync(path.join(root, file), "utf8");
+  if (!source.includes(`class="experience-world ${worldClass}"`) || !source.includes("world-dual-portrait")) {
+    fail(file, "must retain its own dual-world visual treatment rather than inherit the Historic Jeddah world");
+  }
+});
+
+const quoteControlFiles = publicFiles.filter((file) => /data-quote-item=/i.test(fs.readFileSync(path.join(root, file), "utf8")));
+if (quoteControlFiles.length) {
+  fail("public boutique", `quote controls are not allowed for concepts in development: ${quoteControlFiles.join(", ")}`);
 }
 
 const contactBlock = appSource.slice(appSource.indexOf("function setupContactForm()"));
@@ -134,6 +242,10 @@ if (!/\["name", "company", "phone", "email", "preferredResponse"\]\.forEach\(fun
 }
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+const customDomain = fs.readFileSync(path.join(root, "CNAME"), "utf8").trim();
+if (customDomain !== "aventuraksa.com") {
+  fail("CNAME", "must point GitHub Pages at aventuraksa.com");
+}
 for (const file of publicFiles) {
   const expected = file === "index.html" ? "https://aventuraksa.com/" : `https://aventuraksa.com/${file}`;
   if (!sitemap.includes(`<loc>${expected}</loc>`)) fail("sitemap.xml", `missing ${file}`);

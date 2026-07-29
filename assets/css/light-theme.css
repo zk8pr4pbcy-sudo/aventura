@@ -133,6 +133,56 @@ html[dir="rtl"] .page-hero::before {
   border-color: var(--av-sea);
 }
 
+/* The four experience worlds keep their own visual character without returning
+   to the dark, product-led treatment used before the launch reset. */
+.world-sea .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(241, 251, 252, 0.94) 0%, rgba(233, 247, 249, 0.74) 43%, rgba(226, 244, 246, 0.18) 76%, rgba(226, 244, 246, 0.14) 100%);
+}
+
+.world-historic .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(255, 247, 236, 0.94) 0%, rgba(250, 235, 212, 0.76) 43%, rgba(247, 230, 202, 0.2) 76%, rgba(247, 230, 202, 0.14) 100%);
+}
+
+.world-jeddah .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(246, 247, 241, 0.94) 0%, rgba(232, 243, 240, 0.76) 43%, rgba(234, 220, 194, 0.2) 76%, rgba(234, 220, 194, 0.14) 100%);
+}
+
+.world-sea-to-balad .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(240, 249, 247, 0.95) 0%, rgba(224, 241, 239, 0.76) 43%, rgba(237, 221, 194, 0.22) 76%, rgba(237, 221, 194, 0.14) 100%);
+}
+
+.world-desert .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(255, 246, 231, 0.94) 0%, rgba(250, 225, 189, 0.75) 43%, rgba(247, 214, 165, 0.2) 76%, rgba(247, 214, 165, 0.14) 100%);
+}
+
+.world-taif .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(247, 250, 244, 0.94) 0%, rgba(230, 239, 224, 0.76) 43%, rgba(234, 214, 220, 0.2) 76%, rgba(234, 214, 220, 0.14) 100%);
+}
+
+html[dir="rtl"] .world-sea .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(241, 251, 252, 0.94) 0%, rgba(233, 247, 249, 0.74) 43%, rgba(226, 244, 246, 0.18) 76%, rgba(226, 244, 246, 0.14) 100%);
+}
+
+html[dir="rtl"] .world-historic .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(255, 247, 236, 0.94) 0%, rgba(250, 235, 212, 0.76) 43%, rgba(247, 230, 202, 0.2) 76%, rgba(247, 230, 202, 0.14) 100%);
+}
+
+html[dir="rtl"] .world-jeddah .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(246, 247, 241, 0.94) 0%, rgba(232, 243, 240, 0.76) 43%, rgba(234, 220, 194, 0.2) 76%, rgba(234, 220, 194, 0.14) 100%);
+}
+
+html[dir="rtl"] .world-sea-to-balad .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(240, 249, 247, 0.95) 0%, rgba(224, 241, 239, 0.76) 43%, rgba(237, 221, 194, 0.22) 76%, rgba(237, 221, 194, 0.14) 100%);
+}
+
+html[dir="rtl"] .world-desert .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(255, 246, 231, 0.94) 0%, rgba(250, 225, 189, 0.75) 43%, rgba(247, 214, 165, 0.2) 76%, rgba(247, 214, 165, 0.14) 100%);
+}
+
+html[dir="rtl"] .world-taif .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(247, 250, 244, 0.94) 0%, rgba(230, 239, 224, 0.76) 43%, rgba(234, 214, 220, 0.2) 76%, rgba(234, 214, 220, 0.14) 100%);
+}
+
 .hero-proof {
   background: rgba(255, 249, 239, 0.78);
   border-top-color: rgba(23, 50, 74, 0.12);

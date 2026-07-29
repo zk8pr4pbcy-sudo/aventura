@@ -6179,6 +6179,26 @@ html[dir="rtl"] .world-note {
   transform: scale(1.02);
 }
 
+.world-dual-portrait {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.world-dual-portrait img {
+  grid-row: 1;
+  min-width: 0;
+}
+
+.world-dual-portrait img:first-child {
+  grid-column: 1;
+  object-position: 68% center;
+}
+
+.world-dual-portrait img:last-child {
+  grid-column: 2;
+  object-position: center;
+}
+
 .world-route {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -6314,6 +6334,72 @@ html[dir="rtl"] .world-note {
 
 .world-historic main > .section:not(.experience-world-intro) {
   background: #f8f0e5;
+}
+
+.world-jeddah {
+  --world-page: #f7f5ee;
+  --world-ink: #17324a;
+  --world-muted: #526979;
+  --world-note-ink: #36576a;
+  --world-accent: #9a713d;
+  --world-intro-bg: radial-gradient(circle at 8% 12%, rgba(116, 190, 203, 0.26), transparent 27%), radial-gradient(circle at 87% 86%, rgba(201, 155, 89, 0.2), transparent 34%), #f6f1e8;
+  --world-portrait-bg: #b9d6db;
+  --world-portrait-line: rgba(38, 94, 112, 0.22);
+  --world-portrait-shadow: rgba(24, 70, 88, 0.16);
+  --world-portrait-overlay: linear-gradient(180deg, rgba(16, 47, 66, 0.02), rgba(16, 47, 66, 0.24));
+  --world-card-bg: rgba(255, 252, 245, 0.8);
+  --world-card-line: rgba(45, 99, 117, 0.16);
+  --world-card-shadow: rgba(28, 78, 95, 0.07);
+  --world-card-radius: 24px;
+}
+
+.world-jeddah .world-portrait {
+  border-radius: 28px 28px 12px 12px;
+}
+
+.world-jeddah .experience-products-section {
+  background: linear-gradient(180deg, #f7f5ee, #eaf1ee);
+}
+
+.world-jeddah .cta-band {
+  background: linear-gradient(120deg, #18334a, #6c836f);
+}
+
+.world-jeddah main > .section:not(.experience-world-intro) {
+  background: #f7f5ee;
+}
+
+.world-sea-to-balad {
+  --world-page: #f3f7f5;
+  --world-ink: #17324a;
+  --world-muted: #526979;
+  --world-note-ink: #355c6a;
+  --world-accent: #287a89;
+  --world-intro-bg: radial-gradient(circle at 5% 11%, rgba(101, 192, 208, 0.3), transparent 26%), radial-gradient(circle at 91% 85%, rgba(208, 158, 88, 0.23), transparent 33%), #eef5f1;
+  --world-portrait-bg: #aed3d8;
+  --world-portrait-line: rgba(25, 104, 120, 0.23);
+  --world-portrait-shadow: rgba(15, 84, 99, 0.17);
+  --world-portrait-overlay: linear-gradient(180deg, rgba(8, 51, 64, 0.02), rgba(37, 43, 29, 0.25));
+  --world-card-bg: rgba(255, 255, 251, 0.78);
+  --world-card-line: rgba(32, 109, 123, 0.17);
+  --world-card-shadow: rgba(20, 86, 100, 0.07);
+  --world-card-radius: 34px 12px 34px 12px;
+}
+
+.world-sea-to-balad .world-portrait {
+  border-radius: 52px 18px 24px 18px;
+}
+
+.world-sea-to-balad .experience-products-section {
+  background: linear-gradient(180deg, #f3f7f5, #e2efeb);
+}
+
+.world-sea-to-balad .cta-band {
+  background: linear-gradient(120deg, #0f4053, #8e6a3a);
+}
+
+.world-sea-to-balad main > .section:not(.experience-world-intro) {
+  background: #f3f7f5;
 }
 
 .world-desert {

@@ -59,14 +59,14 @@ body[data-page="home"] .site-header .lang-switch button.is-active {
 
 .home-hero-aventura::before {
   background:
-    linear-gradient(90deg, rgba(4, 17, 29, 0.84) 0%, rgba(4, 17, 29, 0.58) 44%, rgba(4, 17, 29, 0.12) 78%, rgba(4, 17, 29, 0.2) 100%),
-    linear-gradient(180deg, rgba(4, 17, 29, 0.02), rgba(4, 17, 29, 0.32));
+    linear-gradient(90deg, rgba(4, 17, 29, 0.7) 0%, rgba(4, 17, 29, 0.42) 44%, rgba(4, 17, 29, 0.08) 78%, rgba(4, 17, 29, 0.14) 100%),
+    linear-gradient(180deg, rgba(4, 17, 29, 0.01), rgba(4, 17, 29, 0.2));
 }
 
 html[dir="rtl"] .home-hero-aventura::before {
   background:
-    linear-gradient(270deg, rgba(4, 17, 29, 0.84) 0%, rgba(4, 17, 29, 0.58) 44%, rgba(4, 17, 29, 0.12) 78%, rgba(4, 17, 29, 0.2) 100%),
-    linear-gradient(180deg, rgba(4, 17, 29, 0.02), rgba(4, 17, 29, 0.32));
+    linear-gradient(270deg, rgba(4, 17, 29, 0.7) 0%, rgba(4, 17, 29, 0.42) 44%, rgba(4, 17, 29, 0.08) 78%, rgba(4, 17, 29, 0.14) 100%),
+    linear-gradient(180deg, rgba(4, 17, 29, 0.01), rgba(4, 17, 29, 0.2));
 }
 
 .home-hero-aventura .hero-content {

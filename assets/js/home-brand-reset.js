@@ -23,7 +23,10 @@
       "home.expEyebrow": "Aventura experiences",
       "home.expTitle": "Start with Historic Jeddah, then choose the world that fits your guests.",
       "home.expDescription": "Historic Jeddah appears first because it is a core Aventura experience—not because Aventura is limited to Al-Balad.",
-      "home.historicCode": "01 · Historic Jeddah"
+      "home.historicCode": "01 · Historic Jeddah",
+      "home.collectionTitle": "Fragrance concepts, inspired by each experience.",
+      "home.collectionDescription": "The boutique currently introduces Aventura’s fragrance concepts. Physical collections appear only after development and approval; Guest Services remain separate.",
+      "home.altBoutique": "Aventura fragrance concepts"
     },
     ar: {
       "home.metaTitle": "أفنتورا | تجارب خاصة وفعاليات وضيافة ضيوف في السعودية",
@@ -45,7 +48,10 @@
       "home.expEyebrow": "تجارب أفنتورا",
       "home.expTitle": "ابدأ بجدة التاريخية، ثم اختر العالم الأنسب لضيوفك.",
       "home.expDescription": "تظهر جدة التاريخية أولاً لأنها تجربة أساسية في أفنتورا، لا لأن نشاط أفنتورا محصور في البلد.",
-      "home.historicCode": "01 · جدة التاريخية"
+      "home.historicCode": "01 · جدة التاريخية",
+      "home.collectionTitle": "تصورات عطرية مستوحاة من كل تجربة.",
+      "home.collectionDescription": "يعرض البوتيك حاليًا التصورات العطرية لأفنتورا. تظهر المجموعات المادية فقط بعد اكتمال التطوير والاعتماد، وتبقى خدمات الضيوف في مسار مستقل.",
+      "home.altBoutique": "تصورات أفنتورا العطرية"
     },
     es: {
       "home.metaTitle": "AVENTURA | Experiencias privadas, eventos y hospitalidad en Arabia Saudí",
@@ -67,7 +73,10 @@
       "home.expEyebrow": "Experiencias Aventura",
       "home.expTitle": "Empieza por Yeda Histórica y elige después el mundo que mejor encaje con tus invitados.",
       "home.expDescription": "Yeda Histórica aparece primero porque es una experiencia esencial de Aventura, no porque Aventura se limite a Al-Balad.",
-      "home.historicCode": "01 · Yeda Histórica"
+      "home.historicCode": "01 · Yeda Histórica",
+      "home.collectionTitle": "Conceptos de fragancia inspirados en cada experiencia.",
+      "home.collectionDescription": "La boutique presenta actualmente los conceptos de fragancia de Aventura. Las colecciones físicas aparecerán solo después del desarrollo y la aprobación; los Servicios para huéspedes permanecen separados.",
+      "home.altBoutique": "Conceptos de fragancia de Aventura"
     }
   };
 
