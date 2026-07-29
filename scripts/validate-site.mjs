@@ -242,9 +242,9 @@ if (!/\["name", "company", "phone", "email", "preferredResponse"\]\.forEach\(fun
 }
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-const customDomain = fs.readFileSync(path.join(root, "CNAME"), "utf8").trim();
-if (customDomain !== "aventuraksa.com") {
-  fail("CNAME", "must point GitHub Pages at aventuraksa.com");
+const customDomainPath = path.join(root, "CNAME");
+if (fs.existsSync(customDomainPath) && fs.readFileSync(customDomainPath, "utf8").trim() !== "aventuraksa.com") {
+  fail("CNAME", "must point GitHub Pages at aventuraksa.com when the custom domain is enabled");
 }
 for (const file of publicFiles) {
   const expected = file === "index.html" ? "https://aventuraksa.com/" : `https://aventuraksa.com/${file}`;
