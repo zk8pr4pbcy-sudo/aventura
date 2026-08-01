@@ -10,33 +10,33 @@
   var WHATSAPP_NUMBER = "966555884854";
   var currentLanguage = DEFAULT_LANGUAGE;
   var BOUTIQUE_CATALOG = {
-    "perfume-sea": { code: "FR-SEA-01", type: "fragrance", categories: ["sea"], titleKey: "collection.p1Title", textKey: "collection.p1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-sea.webp" },
-    "perfume-roshan": { code: "FR-ROS-02", type: "fragrance", categories: ["historic"], titleKey: "collection.p2Title", textKey: "collection.p2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-roshan.webp" },
-    "perfume-taif": { code: "FR-TAI-04", type: "fragrance", categories: ["taif"], titleKey: "collection.p4Title", textKey: "collection.p4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-taif.webp" },
-    "perfume-noir": { code: "FR-AFT-05", type: "fragrance", categories: ["jeddah"], titleKey: "collection.noirTitle", textKey: "collection.noirText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-noir.webp" },
-    "perfume-velvet": { code: "FR-AFT-06", type: "fragrance", categories: ["jeddah"], titleKey: "collection.velvetTitle", textKey: "collection.velvetText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-velvet.webp" },
+    "perfume-sea": { type: "fragrance", categories: ["sea"], titleKey: "collection.p1Title", textKey: "collection.p1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-sea.webp" },
+    "perfume-roshan": { type: "fragrance", categories: ["historic"], titleKey: "collection.p2Title", textKey: "collection.p2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-roshan.webp" },
+    "perfume-taif": { type: "fragrance", categories: ["taif"], titleKey: "collection.p4Title", textKey: "collection.p4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-taif.webp" },
+    "perfume-noir": { type: "fragrance", categories: ["jeddah"], titleKey: "collection.noirTitle", textKey: "collection.noirText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-noir.webp" },
+    "perfume-velvet": { type: "fragrance", categories: ["jeddah"], titleKey: "collection.velvetTitle", textKey: "collection.velvetText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-velvet.webp" },
 
-    "sea-box": { code: "BOX-SEA-01", type: "box", categories: ["sea"], titleKey: "collection.box1Title", textKey: "collection.box1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
-    "historic-box": { code: "BOX-HIS-01", type: "box", categories: ["historic"], titleKey: "collection.box2Title", textKey: "collection.box2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
-    "desert-box": { code: "BOX-DES-01", type: "box", categories: ["desert"], titleKey: "collection.box3Title", textKey: "collection.box3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
-    "taif-box": { code: "BOX-TAI-01", type: "box", categories: ["taif"], titleKey: "collection.box4Title", textKey: "collection.box4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
+    "sea-box": { type: "box", categories: ["sea"], titleKey: "collection.box1Title", textKey: "collection.box1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
+    "historic-box": { type: "box", categories: ["historic"], titleKey: "collection.box2Title", textKey: "collection.box2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
+    "desert-box": { type: "box", categories: ["desert"], titleKey: "collection.box3Title", textKey: "collection.box3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
+    "taif-box": { type: "box", categories: ["taif"], titleKey: "collection.box4Title", textKey: "collection.box4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
 
-    "sea-tote": { code: "SEA-BAG-01", type: "beach", categories: ["sea"], titleKey: "collection.productSea1Title", textKey: "collection.productSea1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "bag" },
-    "sea-towel": { code: "SEA-TWL-02", type: "beach", categories: ["sea"], titleKey: "collection.productSea2Title", textKey: "collection.productSea2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "textile" },
-    "sea-phone": { code: "SEA-PHN-03", type: "beach", categories: ["sea"], titleKey: "collection.productSea3Title", textKey: "collection.productSea3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "phone" },
-    "sea-bottle": { code: "SEA-BTL-04", type: "beach", categories: ["sea"], titleKey: "collection.productSea4Title", textKey: "collection.productSea4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "bottle" },
-    "roshan-keepsake": { code: "HIS-MEM-01", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric1Title", textKey: "collection.productHistoric1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "keepsake" },
-    "heritage-cards": { code: "HIS-CRD-02", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric2Title", textKey: "collection.productHistoric2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "cards" },
-    "historic-notebook": { code: "HIS-NBK-03", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric3Title", textKey: "collection.productHistoric3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "notebook" },
-    "historic-pouch": { code: "HIS-PCH-04", type: "gift", categories: ["historic"], titleKey: "collection.productHistoric4Title", textKey: "collection.productHistoric4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "pouch" },
-    "desert-shawl": { code: "DES-SHL-01", type: "gift", categories: ["desert"], titleKey: "collection.productDesert1Title", textKey: "collection.productDesert1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "textile" },
-    "desert-cup": { code: "DES-CUP-02", type: "gift", categories: ["desert"], titleKey: "collection.productDesert2Title", textKey: "collection.productDesert2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "tumbler" },
-    "desert-keepsake": { code: "DES-MEM-03", type: "gift", categories: ["desert"], titleKey: "collection.productDesert3Title", textKey: "collection.productDesert3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "keepsake" },
-    "desert-glasses-case": { code: "DES-TRV-04", type: "gift", categories: ["desert"], titleKey: "collection.productDesert4Title", textKey: "collection.productDesert4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "pouch" },
-    "taif-rose-mist": { code: "TAI-MST-01", type: "gift", categories: ["taif"], titleKey: "collection.productTaif1Title", textKey: "collection.productTaif1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "mist" },
-    "taif-rose-care": { code: "TAI-CAR-02", type: "gift", categories: ["taif"], titleKey: "collection.productTaif4Title", textKey: "collection.productTaif4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "care" },
-    "taif-sachet": { code: "TAI-SCH-03", type: "gift", categories: ["taif"], titleKey: "collection.productTaif3Title", textKey: "collection.productTaif3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "pouch" },
-    "taif-notebook": { code: "TAI-NBK-04", type: "gift", categories: ["taif"], titleKey: "collection.productTaif5Title", textKey: "collection.productTaif5Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "notebook" }
+    "sea-tote": { type: "beach", categories: ["sea"], titleKey: "collection.productSea1Title", textKey: "collection.productSea1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "bag" },
+    "sea-towel": { type: "beach", categories: ["sea"], titleKey: "collection.productSea2Title", textKey: "collection.productSea2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "textile" },
+    "sea-phone": { type: "beach", categories: ["sea"], titleKey: "collection.productSea3Title", textKey: "collection.productSea3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "phone" },
+    "sea-bottle": { type: "beach", categories: ["sea"], titleKey: "collection.productSea4Title", textKey: "collection.productSea4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "bottle" },
+    "roshan-keepsake": { type: "gift", categories: ["historic"], titleKey: "collection.productHistoric1Title", textKey: "collection.productHistoric1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "keepsake" },
+    "heritage-cards": { type: "gift", categories: ["historic"], titleKey: "collection.productHistoric2Title", textKey: "collection.productHistoric2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "cards" },
+    "historic-notebook": { type: "gift", categories: ["historic"], titleKey: "collection.productHistoric3Title", textKey: "collection.productHistoric3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "notebook" },
+    "historic-pouch": { type: "gift", categories: ["historic"], titleKey: "collection.productHistoric4Title", textKey: "collection.productHistoric4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "pouch" },
+    "desert-shawl": { type: "gift", categories: ["desert"], titleKey: "collection.productDesert1Title", textKey: "collection.productDesert1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "textile" },
+    "desert-cup": { type: "gift", categories: ["desert"], titleKey: "collection.productDesert2Title", textKey: "collection.productDesert2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "tumbler" },
+    "desert-keepsake": { type: "gift", categories: ["desert"], titleKey: "collection.productDesert3Title", textKey: "collection.productDesert3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "keepsake" },
+    "desert-glasses-case": { type: "gift", categories: ["desert"], titleKey: "collection.productDesert4Title", textKey: "collection.productDesert4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "pouch" },
+    "taif-rose-mist": { type: "gift", categories: ["taif"], titleKey: "collection.productTaif1Title", textKey: "collection.productTaif1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "mist" },
+    "taif-rose-care": { type: "gift", categories: ["taif"], titleKey: "collection.productTaif4Title", textKey: "collection.productTaif4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "care" },
+    "taif-sachet": { type: "gift", categories: ["taif"], titleKey: "collection.productTaif3Title", textKey: "collection.productTaif3Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "pouch" },
+    "taif-notebook": { type: "gift", categories: ["taif"], titleKey: "collection.productTaif5Title", textKey: "collection.productTaif5Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "notebook" }
   };
   var BOUTIQUE_TYPE_KEYS = {
     fragrance: "collection.typeFragrance",
@@ -153,7 +153,7 @@
       '        <button type="button" data-language="ar" aria-label="العربية">AR</button>',
       '        <button type="button" data-language="es" aria-label="Español">ES</button>',
       '      </div>',
-      '      <a class="btn btn-sm header-plan" href="contact.html" data-i18n="common.plan">Plan your experience</a>',
+      '      <a class="btn btn-sm header-plan" href="contact.html" data-i18n="common.plan">Request a Tailored Proposal</a>',
       '      <button class="nav-toggle" type="button" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation"><span></span></button>',
       '    </div>',
       '  </div>',
@@ -539,10 +539,6 @@
       if (product.categories[0] && BOUTIQUE_CATEGORY_KEYS[product.categories[0]]) {
         tags.appendChild(createTag(BOUTIQUE_CATEGORY_KEYS[product.categories[0]], "product-collection-tag"));
       }
-      var code = document.createElement("span");
-      code.className = "product-code-tag";
-      code.textContent = product.code;
-      tags.appendChild(code);
       return tags;
     }
 
@@ -563,7 +559,7 @@
       var service = document.createElement("div");
       service.className = "product-detail-service-visual";
       service.setAttribute("aria-hidden", "true");
-      service.innerHTML = "<span>A</span><small>" + product.code + "</small>";
+      service.innerHTML = "<span>A</span>";
       return service;
     }
 
@@ -593,7 +589,6 @@
       }
       activeProduct = product;
       activeAction = item.querySelector("[data-quote-item], [data-interest-item]");
-      dialog.querySelector("[data-product-dialog-code]").textContent = product.code;
       var visual = dialog.querySelector("[data-product-dialog-visual]");
       visual.textContent = "";
       visual.appendChild(cloneProductVisual(item, product));
@@ -813,7 +808,7 @@
         var product = BOUTIQUE_CATALOG[id];
         var categories = (item.getAttribute("data-category") || "").split(/\s+/).filter(Boolean);
         var typeMatches = state.type === "all" || item.getAttribute("data-product-type") === state.type;
-        var searchable = item.textContent + " " + id + " " + (product ? product.code : "");
+        var searchable = item.textContent;
         var searchMatches = !searchTerm || normalize(searchable).indexOf(searchTerm) !== -1;
         item.hidden = !(matchesExperience(categories) && typeMatches && searchMatches);
         if (!item.hidden) {
@@ -1306,13 +1301,11 @@
         if (!isRequestableProduct(product)) {
           return;
         }
-        var display = product.code + " — " + translate(product.titleKey);
+        var display = translate(product.titleKey);
         var option = document.createElement("option");
         option.value = display;
         reorderList.appendChild(option);
         reorderValues[normalizeReorderValue(display)] = id;
-        reorderValues[normalizeReorderValue(product.code)] = id;
-        reorderValues[normalizeReorderValue(id)] = id;
         reorderValues[normalizeReorderValue(translate(product.titleKey))] = id;
       });
     }
@@ -1325,7 +1318,7 @@
         if (!id) {
           var matchingKey = Object.keys(BOUTIQUE_CATALOG).find(function (productId) {
             var product = BOUTIQUE_CATALOG[productId];
-            return isRequestableProduct(product) && (normalizeReorderValue(product.code).indexOf(entered) !== -1 || normalizeReorderValue(translate(product.titleKey)).indexOf(entered) !== -1);
+            return isRequestableProduct(product) && normalizeReorderValue(translate(product.titleKey)).indexOf(entered) !== -1;
           });
           id = matchingKey || "";
         }

@@ -92,6 +92,29 @@ html[lang="ar"] .home-hero-aventura h1 {
   color: rgba(255, 255, 255, 0.94);
 }
 
+/* The shared light-theme rules must not leave homepage copy floating over a bright area. */
+@media (min-width: 681px) {
+  .home-hero-aventura h1 {
+    color: #ffffff !important;
+    text-shadow: 0 4px 28px rgba(4, 17, 29, 0.48);
+  }
+
+  .home-hero-aventura .hero-description {
+    margin-inline-start: -16px;
+    padding: 12px 16px 13px;
+    color: #ffffff !important;
+    background: linear-gradient(90deg, rgba(4, 17, 29, 0.72), rgba(4, 17, 29, 0.46));
+    border-inline-start: 2px solid rgba(229, 206, 157, 0.86);
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 12px 28px rgba(4, 17, 29, 0.16);
+  }
+
+  html[dir="rtl"] .home-hero-aventura .hero-description {
+    background: linear-gradient(270deg, rgba(4, 17, 29, 0.72), rgba(4, 17, 29, 0.46));
+    border-radius: 12px 0 0 12px;
+  }
+}
+
 /* Historic Jeddah remains first in the experience order, not the identity of the whole company. */
 .experience-grid-home {
   grid-template-rows: auto;
