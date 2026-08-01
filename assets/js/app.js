@@ -744,7 +744,6 @@
     var items = Array.from(boutique.querySelectorAll("[data-boutique-item]"));
     var sections = Array.from(boutique.querySelectorAll("[data-boutique-section]"));
     var search = boutique.querySelector("[data-boutique-search]");
-    var resultCount = boutique.querySelector("[data-boutique-results]");
     var empty = boutique.querySelector("[data-boutique-empty]");
     var allowedExperiences = ["all", "sea", "historic", "desert", "taif", "jeddah"];
     var allowedTypes = ["all", "fragrance", "box", "beach", "gift"];
@@ -832,9 +831,6 @@
         button.setAttribute("aria-pressed", active ? "true" : "false");
       });
 
-      if (resultCount) {
-        resultCount.textContent = String(visible);
-      }
       if (empty) {
         empty.hidden = visible !== 0;
       }

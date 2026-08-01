@@ -92,11 +92,11 @@ html[lang="ar"] .home-hero-aventura h1 {
   color: rgba(255, 255, 255, 0.94);
 }
 
-/* The shared light-theme rules must not leave homepage copy floating over a bright area. */
+/* The home image is intentionally light, so the main title needs the brand navy—not white. */
 @media (min-width: 681px) {
   .home-hero-aventura h1 {
-    color: #ffffff !important;
-    text-shadow: 0 4px 28px rgba(4, 17, 29, 0.48);
+    color: #071a2a !important;
+    text-shadow: 0 2px 22px rgba(255, 249, 239, 0.82);
   }
 
   .home-hero-aventura .hero-description {
