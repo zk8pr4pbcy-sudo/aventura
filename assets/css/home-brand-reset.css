@@ -185,14 +185,19 @@ html[lang="ar"] .home-hero-aventura h1 {
   .home-hero-aventura::before,
   html[dir="rtl"] .home-hero-aventura::before {
     background:
-      linear-gradient(180deg, rgba(4, 17, 29, 0.04) 0%, rgba(4, 17, 29, 0.12) 28%, rgba(4, 17, 29, 0.58) 68%, rgba(4, 17, 29, 0.9) 100%);
+      linear-gradient(180deg, rgba(255, 249, 239, 0.1) 0%, rgba(255, 249, 239, 0.24) 30%, rgba(255, 249, 239, 0.78) 68%, rgba(255, 249, 239, 0.94) 100%);
+  }
+
+  .home-hero-aventura::after {
+    /* Replace the shared dark lower fade with ivory so navy copy remains legible. */
+    background: linear-gradient(180deg, rgba(255, 249, 239, 0) 36%, rgba(255, 249, 239, 0.88) 100%);
   }
 
   .home-hero-aventura .hero-content {
     max-width: none;
     margin: 0;
     padding: 70px 0 44px;
-    color: #ffffff;
+    color: #071a2a;
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -203,7 +208,7 @@ html[lang="ar"] .home-hero-aventura h1 {
 
   .home-hero-aventura .eyebrow {
     margin-bottom: 10px;
-    color: #e5ce9d;
+    color: #806735;
     font-size: 0.68rem;
   }
 
@@ -211,19 +216,19 @@ html[lang="ar"] .home-hero-aventura h1 {
   html[lang="ar"] .home-hero-aventura h1 {
     max-width: 11ch;
     margin-bottom: 14px;
-    color: #ffffff !important;
+    color: #071a2a !important;
     font-size: clamp(2.45rem, 10.8vw, 3.45rem);
     line-height: 1.2;
-    text-shadow: 0 3px 22px rgba(0, 0, 0, 0.42);
+    text-shadow: 0 2px 18px rgba(255, 249, 239, 0.8);
   }
 
   .home-hero-aventura .hero-description {
     max-width: 35ch;
     margin-bottom: 16px;
-    color: rgba(255, 255, 255, 0.96) !important;
+    color: #17324a !important;
     font-size: 0.96rem;
     line-height: 1.72;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.42);
+    text-shadow: none;
   }
 
   .home-hero-aventura .hero-audience {
@@ -234,9 +239,9 @@ html[lang="ar"] .home-hero-aventura h1 {
   .home-hero-aventura .hero-audience span {
     min-height: 30px;
     padding: 5px 9px;
-    color: #ffffff;
-    background: rgba(4, 17, 29, 0.42);
-    border-color: rgba(255, 255, 255, 0.28);
+    color: #17324a;
+    background: rgba(255, 249, 239, 0.78);
+    border-color: rgba(23, 50, 74, 0.18);
     font-size: 0.64rem;
   }
 
