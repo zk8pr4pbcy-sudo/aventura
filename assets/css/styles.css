@@ -3266,6 +3266,11 @@ html[lang="ar"] .request-detail-group legend {
   color: #205e52;
 }
 
+.form-card[aria-busy="true"] .form-actions .btn {
+  cursor: wait;
+  opacity: 0.72;
+}
+
 .request-progress {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -92,8 +92,8 @@ if (!catalogMatch) {
 
   const fragranceEntries = catalogEntries.filter(([, , entry]) => /\btype: "fragrance"/.test(entry));
   const expectedFragranceIds = ["perfume-noir", "perfume-roshan", "perfume-sea", "perfume-taif", "perfume-velvet"];
-  if (fragranceEntries.map(([, id]) => id).sort().join(",") !== expectedFragranceIds.join(",") || fragranceEntries.some(([, , entry]) => !/actionKey: "collection\.registerInterest"/.test(entry))) {
-    fail("boutique", "the five Scent Lab fragrance concepts must use the interest-only action");
+  if (fragranceEntries.map(([, id]) => id).sort().join(",") !== expectedFragranceIds.join(",") || fragranceEntries.some(([, , entry]) => !/statusKey: "common\.comingSoon"/.test(entry) || !/prepKey: "collection\.prepDevelopment"/.test(entry) || /actionKey:/.test(entry))) {
+    fail("boutique", "every fragrance concept must remain visible as Coming Soon without a request action");
   }
 
   const expectedPreviewIds = [
@@ -118,36 +118,32 @@ if (!catalogMatch) {
 }
 
 const collectionInterestIds = [...collectionSource.matchAll(/data-interest-item="(perfume-[^"]+)"/g)].map((match) => match[1]).sort();
-const expectedInterestIds = ["perfume-noir", "perfume-roshan", "perfume-sea", "perfume-taif", "perfume-velvet"];
+const expectedFragrancePreviewIds = ["perfume-noir", "perfume-roshan", "perfume-sea", "perfume-taif", "perfume-velvet"];
 const expectedCollectionProductIds = [
-  ...expectedInterestIds,
+  ...expectedFragrancePreviewIds,
   "desert-box", "desert-cup", "desert-glasses-case", "desert-keepsake", "desert-shawl",
   "heritage-cards", "historic-box", "historic-notebook", "historic-pouch", "roshan-keepsake",
   "sea-bottle", "sea-box", "sea-phone", "sea-tote", "sea-towel",
   "taif-box", "taif-notebook", "taif-rose-care", "taif-rose-mist", "taif-sachet"
 ].sort();
 const collectionProductIds = [...collectionSource.matchAll(/data-product-id="([^"]+)"/g)].map((match) => match[1]).sort();
-if (/data-quote-item=/i.test(collectionSource)) {
-  fail("collection.html", "Coming Soon products and boxes must not expose quote controls");
+if (/data-(?:quote|interest)-item=/i.test(collectionSource)) {
+  fail("collection.html", "Coming Soon products, boxes and fragrances must not expose request controls");
 }
-if (collectionInterestIds.join(",") !== expectedInterestIds.join(",")) {
-  fail("collection.html", `expected five published fragrance concepts; found ${collectionInterestIds.join(", ") || "none"}`);
+if (collectionInterestIds.length) {
+  fail("collection.html", "fragrance concepts must not expose an interest action before launch");
 }
 if (collectionProductIds.join(",") !== expectedCollectionProductIds.join(",")) {
   fail("collection.html", "all approved boutique boxes and product previews must remain visible");
 }
-if (/data-quote-item="perfume-/i.test(collectionSource) || !collectionSource.includes("data-interest-item=\"perfume-")) {
-  fail("collection.html", "Scent Lab must use its separate interest action, never a quote action");
+if (/data-(?:quote|interest)-item="perfume-/i.test(collectionSource)) {
+  fail("collection.html", "fragrance concepts must remain Coming Soon without a request action");
 }
-if (!appSource.includes("function setupScentLabInterest") || !appSource.includes("[data-scent-interest], [data-interest-item]")) {
-  fail("assets/js/app.js", "missing compatible Scent Lab interest handler");
-}
-const scentHandler = appSource.slice(appSource.indexOf("function setupScentLabInterest"), appSource.indexOf("function setupBoutiqueCatalog"));
-if (!scentHandler.includes('"https://wa.me/"') || !scentHandler.includes('window.open(scentInterestUrl(product), "_blank", "noopener")')) {
-  fail("assets/js/app.js", "Scent Lab interest CTA must open a non-personal WhatsApp message");
+if (appSource.includes("collection.registerInterest") || appSource.includes("function setupScentLabInterest")) {
+  fail("assets/js/app.js", "fragrance concepts must not retain an interest workflow before launch");
 }
 if (!appSource.includes("function sanitizeQuoteSelection") || !appSource.includes("isRequestableProduct(product)")) {
-  fail("assets/js/app.js", "quote selection must discard unavailable and interest-only entries");
+  fail("assets/js/app.js", "quote selection must discard unavailable entries");
 }
 if (!appSource.includes('window.addEventListener("popstate"') || !appSource.includes('var allowedTypes = ["all", "fragrance", "box", "beach", "gift"]') || !appSource.includes('var allowedExperiences = ["all", "sea", "historic", "desert", "taif", "jeddah"]')) {
   fail("assets/js/app.js", "boutique URL filters must restore the selected experience and item view");
@@ -238,10 +234,20 @@ if (!contactBlock.includes('query.get("request") || query.get("service")')) {
   fail("contact", "service request links must prefill the request form");
 }
 if (!/\["name", "company", "phone", "email", "preferredResponse"\]\.forEach\(function \(name\) \{ moveField\(name, thirdGrid\); \}\);/.test(contactBlock) || !contactBlock.includes('["preferredResponse", "contact.preferredContactLabel"]')) {
-  fail("contact", "preferred response field is not included in the final request step and WhatsApp details");
+  fail("contact", "preferred response field is not included in the final request step and request details");
+}
+const contactSource = fs.readFileSync(path.join(root, "contact.html"), "utf8");
+if (!appSource.includes('var REQUEST_EMAIL = "contact@aventuraksa.com"') || !appSource.includes('var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com"') || !contactSource.includes('action="https://formsubmit.co/contact@aventuraksa.com"') || !contactSource.includes('method="POST"') || !/name="submissionChannel" value="email" checked[\s\S]*name="submissionChannel" value="whatsapp"/.test(contactSource) || !contactBlock.includes('var submissionChannel = String(data.get("submissionChannel") || "email")') || !contactBlock.includes('sendRequestWithFormSubmit(submissionData)') || contactBlock.includes('"mailto:" + REQUEST_EMAIL')) {
+  fail("contact", "booking requests must submit automatically to contact@aventuraksa.com with WhatsApp as the second option");
+}
+if (/amassiri@aventuraksa\.com|Waseem@aventuraksa\.com/i.test(searchableText)) {
+  fail("contact", "retired public email addresses remain in the site");
 }
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+if (/sunset-moment|experience-sunset-moment/i.test(searchableText + sitemap) || htmlFiles.includes("experience-sunset-moment.html")) {
+  fail("experiences", "the retired 30-minute Sunset Moment program remains public");
+}
 const customDomainPath = path.join(root, "CNAME");
 if (fs.existsSync(customDomainPath) && fs.readFileSync(customDomainPath, "utf8").trim() !== "aventuraksa.com") {
   fail("CNAME", "must point GitHub Pages at aventuraksa.com when the custom domain is enabled");

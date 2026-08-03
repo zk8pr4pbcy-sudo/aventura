@@ -8,13 +8,15 @@
   var QUOTE_SELECTION_LEGACY_KEY = "aventura_quote_selection_v2";
   var QUOTE_SELECTION_LIFETIME = 30 * 24 * 60 * 60 * 1000;
   var WHATSAPP_NUMBER = "966555884854";
+  var REQUEST_EMAIL = "contact@aventuraksa.com";
+  var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com";
   var currentLanguage = DEFAULT_LANGUAGE;
   var BOUTIQUE_CATALOG = {
-    "perfume-sea": { type: "fragrance", categories: ["sea"], titleKey: "collection.p1Title", textKey: "collection.p1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-sea.webp" },
-    "perfume-roshan": { type: "fragrance", categories: ["historic"], titleKey: "collection.p2Title", textKey: "collection.p2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-roshan.webp" },
-    "perfume-taif": { type: "fragrance", categories: ["taif"], titleKey: "collection.p4Title", textKey: "collection.p4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-taif.webp" },
-    "perfume-noir": { type: "fragrance", categories: ["jeddah"], titleKey: "collection.noirTitle", textKey: "collection.noirText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-noir.webp" },
-    "perfume-velvet": { type: "fragrance", categories: ["jeddah"], titleKey: "collection.velvetTitle", textKey: "collection.velvetText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", actionKey: "collection.registerInterest", image: "assets/images/perfumes/perfume-velvet.webp" },
+    "perfume-sea": { type: "fragrance", categories: ["sea"], titleKey: "collection.p1Title", textKey: "collection.p1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", image: "assets/images/perfumes/perfume-sea.webp" },
+    "perfume-roshan": { type: "fragrance", categories: ["historic"], titleKey: "collection.p2Title", textKey: "collection.p2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", image: "assets/images/perfumes/perfume-roshan.webp" },
+    "perfume-taif": { type: "fragrance", categories: ["taif"], titleKey: "collection.p4Title", textKey: "collection.p4Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", image: "assets/images/perfumes/perfume-taif.webp" },
+    "perfume-noir": { type: "fragrance", categories: ["jeddah"], titleKey: "collection.noirTitle", textKey: "collection.noirText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", image: "assets/images/perfumes/perfume-noir.webp" },
+    "perfume-velvet": { type: "fragrance", categories: ["jeddah"], titleKey: "collection.velvetTitle", textKey: "collection.velvetText", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", image: "assets/images/perfumes/perfume-velvet.webp" },
 
     "sea-box": { type: "box", categories: ["sea"], titleKey: "collection.box1Title", textKey: "collection.box1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
     "historic-box": { type: "box", categories: ["historic"], titleKey: "collection.box2Title", textKey: "collection.box2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", visual: "box" },
@@ -52,12 +54,8 @@
     jeddah: "collection.filterJeddah"
   };
 
-  function isInterestProduct(product) {
-    return Boolean(product && product.actionKey === "collection.registerInterest");
-  }
-
   function isRequestableProduct(product) {
-    return Boolean(product && product.available === true && !isInterestProduct(product));
+    return Boolean(product && product.available === true);
   }
 
   function isVisibleBoutiqueProduct(product) {
@@ -121,8 +119,7 @@
 
   function removeUnsupportedBoutiqueItems() {
     document.querySelectorAll("[data-boutique-item]").forEach(function (item) {
-      var action = item.querySelector("[data-quote-item], [data-interest-item]");
-      var id = item.getAttribute("data-product-id") || (action && (action.getAttribute("data-quote-item") || action.getAttribute("data-interest-item")));
+      var id = item.getAttribute("data-product-id") || "";
       if (id && !isVisibleBoutiqueProduct(BOUTIQUE_CATALOG[id])) {
         item.remove();
       }
@@ -196,9 +193,8 @@
       '    <div class="footer-column footer-contact">',
       '      <h3 data-i18n="footer.contact">Contact</h3>',
       '      <ul class="footer-links">',
+      '        <li><a href="mailto:' + REQUEST_EMAIL + '">' + REQUEST_EMAIL + '</a></li>',
       '        <li><a href="https://wa.me/' + WHATSAPP_NUMBER + '" target="_blank" rel="noopener">+966 55 588 4854</a></li>',
-      '        <li><a href="mailto:amassiri@aventuraksa.com">amassiri@aventuraksa.com</a></li>',
-      '        <li><a href="mailto:Waseem@aventuraksa.com">Waseem@aventuraksa.com</a></li>',
       '        <li><span data-i18n="footer.location">Jeddah, Saudi Arabia</span></li>',
       '      </ul>',
       '    </div>',
@@ -467,52 +463,6 @@
     restoreDialogFocus(dialog);
   }
 
-  function setupScentLabInterest() {
-    function scentInterestUrl(product) {
-      var message = [
-        translate("collection.scentLabName"),
-        "",
-        translate("collection.registerInterest") + ": " + translate(product.titleKey)
-      ].join("\n");
-      return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-    }
-
-    function updateInterestLabels() {
-      document.querySelectorAll("[data-scent-interest], [data-interest-item]").forEach(function (button) {
-        var productId = button.getAttribute("data-scent-id") || button.getAttribute("data-interest-item");
-        var product = BOUTIQUE_CATALOG[productId];
-        if (isInterestProduct(product)) {
-          button.setAttribute("aria-label", translate(product.actionKey) + ": " + translate(product.titleKey));
-          if (button.tagName === "A") {
-            button.setAttribute("href", scentInterestUrl(product));
-            button.setAttribute("target", "_blank");
-            button.setAttribute("rel", "noopener");
-          }
-        }
-      });
-    }
-
-    document.addEventListener("click", function (event) {
-      var button = event.target.closest("[data-scent-interest], [data-interest-item]");
-      if (!button) {
-        return;
-      }
-      var productId = button.getAttribute("data-scent-id") || button.getAttribute("data-interest-item");
-      var product = BOUTIQUE_CATALOG[productId];
-      if (!isInterestProduct(product)) {
-        return;
-      }
-      event.preventDefault();
-      if (window.AVENTURA_TRACK) {
-        window.AVENTURA_TRACK("scent_interest", { productId: productId });
-      }
-      window.open(scentInterestUrl(product), "_blank", "noopener");
-    });
-
-    document.addEventListener("aventura:language", updateInterestLabels);
-    updateInterestLabels();
-  }
-
   function setupBoutiqueCatalog() {
     var boutique = document.querySelector("[data-boutique]");
     if (!boutique) {
@@ -574,8 +524,8 @@
       dialog.querySelector("[data-product-dialog-personalization]").textContent = translate(activeProduct.personalizationKey);
       dialog.querySelector("[data-product-dialog-collection]").textContent = translate(BOUTIQUE_CATEGORY_KEYS[activeProduct.categories[0]]);
       var dialogAction = dialog.querySelector("[data-product-dialog-action]");
-      dialogAction.textContent = translate(activeProduct.actionKey);
-      dialogAction.classList.toggle("interest-action", activeProduct.actionKey === "collection.registerInterest");
+      dialogAction.hidden = !activeProduct.actionKey;
+      dialogAction.textContent = activeProduct.actionKey ? translate(activeProduct.actionKey) : "";
 
       var tags = dialog.querySelector("[data-product-dialog-tags]");
       tags.textContent = "";
@@ -588,7 +538,7 @@
         return;
       }
       activeProduct = product;
-      activeAction = item.querySelector("[data-quote-item], [data-interest-item]");
+      activeAction = item.querySelector("[data-quote-item]");
       var visual = dialog.querySelector("[data-product-dialog-visual]");
       visual.textContent = "";
       visual.appendChild(cloneProductVisual(item, product));
@@ -597,8 +547,8 @@
     }
 
     items.forEach(function (item) {
-      var action = item.querySelector("[data-quote-item], [data-interest-item]");
-      var id = item.getAttribute("data-product-id") || (action && (action.getAttribute("data-quote-item") || action.getAttribute("data-interest-item"))) || "";
+      var action = item.querySelector("[data-quote-item]");
+      var id = item.getAttribute("data-product-id") || (action && action.getAttribute("data-quote-item")) || "";
       var product = BOUTIQUE_CATALOG[id];
       if (!product) {
         item.remove();
@@ -612,23 +562,6 @@
         action.setAttribute("data-i18n", product.actionKey);
         action.setAttribute("data-quote-label-key", product.titleKey);
       }
-      if (action && isInterestProduct(product)) {
-        action.setAttribute("data-interest-item", id);
-        action.removeAttribute("data-quote-item");
-        action.removeAttribute("data-quote-label-key");
-        action.classList.remove("quote-add-button");
-        action.classList.add("product-details-button");
-        action.classList.add("interest-action");
-        action.setAttribute("aria-label", translate(product.actionKey) + ": " + translate(product.titleKey));
-        var quantityControl = item.querySelector('[data-item-quantity="' + id + '"]');
-        if (quantityControl) {
-          var quantityLabel = quantityControl.closest("label");
-          if (quantityLabel) {
-            quantityLabel.remove();
-          }
-        }
-      }
-
       var content = item.querySelector(".perfume-card-copy, .boutique-card-content, .catalog-product-content");
       if (!content && item.classList.contains("perfume-card-pending")) {
         content = item.querySelector("div");
@@ -698,14 +631,6 @@
         if (dialog.open) {
           updateOpenDialog();
         }
-        items.forEach(function (item) {
-          var interestButton = item.querySelector("[data-interest-item]");
-          var id = interestButton && interestButton.getAttribute("data-interest-item");
-          var interestProduct = BOUTIQUE_CATALOG[id];
-          if (interestButton && isInterestProduct(interestProduct)) {
-            interestButton.setAttribute("aria-label", translate(interestProduct.actionKey) + ": " + translate(interestProduct.titleKey));
-          }
-        });
       });
     }
   }
@@ -915,7 +840,6 @@
         perfume: { id: "perfume-sea", titleKey: "collection.p1Title", textKey: "experienceDetail.perfumeSeaText", image: "assets/images/perfumes/perfume-sea.webp", story: "assets/images/perfumes/perfume-sea-story.webp" }
       },
       golden: { alias: "sea", request: "golden-hour", theme: "sea", journey: "golden" },
-      sunset: { alias: "sea", request: "sunset-moment", theme: "sea", journey: "sunset" },
       bayadah: { alias: "sea", request: "bayadah-day", theme: "sea", journey: "bayadah" },
       "grand-bayadah": { alias: "sea", request: "bayadah-grand", theme: "sea", journey: "grandBayadah" },
       historic: {
@@ -993,22 +917,19 @@
       return '<article class="catalog-product-card detail-perfume-product" data-reveal>' + visual +
         '<div class="catalog-product-content"><span class="status coming" data-i18n="common.comingSoon">Coming soon</span>' +
         '<h3 data-i18n="' + perfume.titleKey + '">Aventura fragrance</h3><p data-i18n="' + perfume.textKey + '">An experience-inspired fragrance.</p>' +
-        storyButton + '<div class="catalog-card-actions"><button class="text-link product-details-button interest-action" type="button" data-interest-item="' + perfume.id + '" data-i18n="collection.registerInterest">Register interest</button></div></div></article>';
+        storyButton + '</div></article>';
     }
 
     function productMarkup(product) {
-      var seasonal = product[5];
       return '<article class="catalog-product-card" data-reveal><div class="catalog-product-visual ' + product[1] + '"><span>AVENTURA</span><strong data-i18n="' + product[2] + '">Product</strong></div>' +
-        '<div class="catalog-product-content"><span class="status' + (seasonal ? '' : ' available') + '" data-i18n="' + (seasonal ? 'common.seasonal' : 'common.madeToOrder') + '">' + (seasonal ? 'Seasonal' : 'Made to order') + '</span>' +
-        '<h3 data-i18n="' + product[3] + '">Product</h3><p data-i18n="' + product[4] + '">Product details.</p>' +
-        '<div class="catalog-card-actions">' + quantityMarkup(product[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + product[0] + '" data-quote-label-key="' + product[3] + '" data-i18n="experienceDetail.includeOptional">Include in my experience request</button></div></div></article>';
+        '<div class="catalog-product-content"><span class="status coming" data-i18n="common.comingSoon">Coming soon</span>' +
+        '<h3 data-i18n="' + product[3] + '">Product</h3><p data-i18n="' + product[4] + '">Product details.</p></div></article>';
     }
 
     function boxMarkup(box) {
       var items = box[5].map(function (key) { return '<li data-i18n="' + key + '">Collection item</li>'; }).join("");
       return '<article class="boutique-card experience-complete-box" data-reveal><div class="box-preview ' + box[1] + '"><div class="box-shell"><span class="box-monogram">A</span><span class="box-name">' + box[2] + '</span></div></div>' +
-        '<div class="boutique-card-content"><span class="status available" data-i18n="common.madeToOrder">Made to order</span><h3 data-i18n="' + box[3] + '">Complete collection</h3><p data-i18n="' + box[4] + '">Complete experience collection.</p><ul class="box-items">' + items + '</ul>' +
-        '<div class="catalog-card-actions">' + quantityMarkup(box[0]) + '<button class="text-link quote-add-button" type="button" data-quote-item="' + box[0] + '" data-quote-label-key="' + box[3] + '" data-i18n="experienceDetail.includeBox">Include this keepsake box</button></div></div></article>';
+        '<div class="boutique-card-content"><span class="status coming" data-i18n="common.comingSoon">Coming soon</span><h3 data-i18n="' + box[3] + '">Complete collection</h3><p data-i18n="' + box[4] + '">Complete experience collection.</p><ul class="box-items">' + items + '</ul></div></article>';
     }
 
     var requestHref = "contact.html?type=experience&request=" + encodeURIComponent(config.request);
@@ -1519,7 +1440,6 @@
       "meeting-setup": "collection.meetingSetupTitle",
       "concierge": "collection.conciergeTitle",
       "golden-hour": "experiences.goldenTitle",
-      "sunset-moment": "experiences.sunsetTitle",
       "bayadah-day": "experiences.bayadahTitle",
       "bayadah-grand": "experiences.grandTitle",
       "historic-walk": "experiences.heritageSmallTitle",
@@ -1663,6 +1583,10 @@
       detailGroups.forEach(function (group) { secondGrid.appendChild(group); });
       moveField("message", secondGrid);
       ["name", "company", "phone", "email", "preferredResponse"].forEach(function (name) { moveField(name, thirdGrid); });
+      var submissionChannel = form.querySelector("[data-submission-channel]");
+      if (submissionChannel) {
+        thirdGrid.appendChild(submissionChannel);
+      }
 
       function controls(back, next, submit) {
         var row = document.createElement("div");
@@ -1691,7 +1615,7 @@
       success.hidden = true;
       success.setAttribute("data-request-success", "");
       success.setAttribute("role", "status");
-      success.innerHTML = '<span class="request-success-mark" aria-hidden="true">✓</span><div><strong data-i18n="contact.successTitle">Your request is ready</strong><p data-request-success-text></p><div class="request-success-actions"><a class="text-link" data-request-whatsapp-link target="_blank" rel="noopener" data-i18n="contact.openWhatsappAgain">Open WhatsApp again</a><button class="text-link" type="button" data-copy-request data-i18n="contact.copyRequest">Copy request details</button></div></div>';
+      success.innerHTML = '<span class="request-success-mark" aria-hidden="true">✓</span><div><strong data-request-success-title data-i18n="contact.successTitle">Your request is ready</strong><p data-request-success-text></p><div class="request-success-actions"><a class="text-link" data-request-send-link rel="noopener" data-i18n="contact.openWhatsappAgain">Open WhatsApp again</a><button class="text-link" type="button" data-copy-request data-i18n="contact.copyRequest">Copy request details</button></div></div>';
       form.appendChild(success);
 
       var currentStep = 1;
@@ -1754,7 +1678,109 @@
     form.querySelectorAll("[data-i18n]").forEach(function (element) {
       element.textContent = translate(element.getAttribute("data-i18n"), currentLanguage);
     });
+
+    function selectedSubmissionChannel() {
+      var selected = form.querySelector('[name="submissionChannel"]:checked');
+      return selected ? selected.value : "email";
+    }
+
+    function updateSubmissionChannel() {
+      var isEmail = selectedSubmissionChannel() === "email";
+      var submitButton = form.querySelector("[data-submit-channel-button]");
+      var submitNote = form.querySelector("[data-submit-channel-note]");
+      var submitKey = isEmail ? "contact.submitEmail" : "contact.submitWhatsapp";
+      var noteKey = isEmail ? "contact.noteEmail" : "contact.noteWhatsapp";
+
+      if (submitButton) {
+        submitButton.setAttribute("data-i18n", submitKey);
+        submitButton.textContent = translate(submitKey);
+      }
+      if (submitNote) {
+        submitNote.setAttribute("data-i18n", noteKey);
+        submitNote.textContent = translate(noteKey);
+      }
+    }
+
+    form.querySelectorAll('[name="submissionChannel"]').forEach(function (input) {
+      input.addEventListener("change", updateSubmissionChannel);
+    });
+    document.addEventListener("aventura:language", updateSubmissionChannel);
+    updateSubmissionChannel();
     var lastRequestMessage = "";
+    var isSubmitting = false;
+
+    function setContactSubmitting(submitting) {
+      var submitButton = form.querySelector("[data-submit-channel-button]");
+      form.setAttribute("aria-busy", submitting ? "true" : "false");
+      if (submitButton) {
+        submitButton.disabled = submitting;
+        if (submitting) {
+          submitButton.setAttribute("data-i18n", "contact.sending");
+          submitButton.textContent = translate("contact.sending");
+        }
+      }
+      if (!submitting) {
+        updateSubmissionChannel();
+      }
+    }
+
+    function sendRequestWithFormSubmit(payload) {
+      if (!window.fetch) {
+        return Promise.reject(new Error("Fetch is unavailable"));
+      }
+      return window.fetch(FORM_SUBMIT_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: payload
+      }).then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (body) {
+          if (!response.ok || body.success === false || body.success === "false") {
+            throw new Error("FormSubmit rejected the request");
+          }
+          return body;
+        });
+      });
+    }
+
+    function showRequestSuccess(submissionChannel, requestId, sendUrl) {
+      var isEmail = submissionChannel === "email";
+      var success = form.querySelector("[data-request-success]");
+      var successTitle = form.querySelector("[data-request-success-title]");
+      var successText = form.querySelector("[data-request-success-text]");
+      var successActions = form.querySelector(".request-success-actions");
+      var sendLink = form.querySelector("[data-request-send-link]");
+      var status = form.querySelector("[data-form-status]");
+
+      if (successTitle) {
+        var titleKey = isEmail ? "contact.successEmailTitle" : "contact.successTitle";
+        successTitle.setAttribute("data-i18n", titleKey);
+        successTitle.textContent = translate(titleKey);
+      }
+      if (successText) {
+        successText.textContent = translate(isEmail ? "contact.successEmailText" : "contact.successText") + " " + requestId + ".";
+      }
+      if (successActions) {
+        successActions.hidden = isEmail;
+      }
+      if (!isEmail && sendLink) {
+        sendLink.hidden = false;
+        sendLink.href = sendUrl;
+        sendLink.setAttribute("target", "_blank");
+        sendLink.setAttribute("data-i18n", "contact.openWhatsappAgain");
+        sendLink.textContent = translate("contact.openWhatsappAgain");
+      }
+      if (success) {
+        success.hidden = false;
+      }
+      if (status) {
+        status.textContent = translate(isEmail ? "contact.successEmailStatus" : "contact.successStatus") + " " + requestId + ".";
+        status.classList.add("is-success");
+      }
+      if (window.AVENTURA_TRACK) {
+        window.AVENTURA_TRACK(isEmail ? "request_submitted" : "request_ready", { requestId: requestId, requestType: typeField ? typeField.value : "", submissionChannel: submissionChannel });
+      }
+      form.dispatchEvent(new CustomEvent("aventura:request-success"));
+    }
 
     form.addEventListener("click", function (event) {
       var copyButton = event.target.closest("[data-copy-request]");
@@ -1782,10 +1808,15 @@
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
+      if (isSubmitting) {
+        return;
+      }
+
       var data = new FormData(form);
       var name = String(data.get("name") || "").trim();
       var phone = String(data.get("phone") || "").trim();
       var email = String(data.get("email") || "").trim();
+      var submissionChannel = String(data.get("submissionChannel") || "email");
       var status = form.querySelector("[data-form-status]");
 
       if (!name || (!phone && !email)) {
@@ -1796,16 +1827,28 @@
         return;
       }
 
+      if (submissionChannel === "email" && !email) {
+        if (status) {
+          status.textContent = translate("contact.errorEmail");
+          status.classList.remove("is-success");
+        }
+        return;
+      }
+
       if (status) {
         status.textContent = "";
         status.classList.remove("is-success");
+      }
+      var previousSuccess = form.querySelector("[data-request-success]");
+      if (previousSuccess) {
+        previousSuccess.hidden = true;
       }
 
       var selectedType = form.querySelector('[name="type"] option:checked');
       var typeText = selectedType ? selectedType.textContent.trim() : "";
       var requestId = "AVE-" + new Date().toISOString().slice(0, 10).replace(/-/g, "") + "-" + Math.random().toString(36).slice(2, 6).toUpperCase();
       var lines = [
-        translate("contact.whatsappIntro"),
+        translate("contact.requestIntro"),
         "",
         translate("contact.requestReference") + ": " + requestId,
         translate("contact.whatsappName") + ": " + name
@@ -1902,28 +1945,35 @@
       });
 
       lastRequestMessage = lines.join("\n");
-      var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lastRequestMessage);
-      var success = form.querySelector("[data-request-success]");
-      var successText = form.querySelector("[data-request-success-text]");
-      var whatsappLink = form.querySelector("[data-request-whatsapp-link]");
-      if (successText) {
-        successText.textContent = translate("contact.successText") + " " + requestId + ".";
+      var isEmail = submissionChannel === "email";
+      if (isEmail) {
+        var submissionData = new FormData(form);
+        submissionData.set("_subject", translate("contact.emailSubject") + " · " + requestId);
+        submissionData.set("_replyto", email);
+        submissionData.set("_url", window.location.href.split("#")[0]);
+        submissionData.set("request_reference", requestId);
+        submissionData.set("request_language", currentLanguage);
+        submissionData.set("request_summary", lastRequestMessage);
+        isSubmitting = true;
+        setContactSubmitting(true);
+        sendRequestWithFormSubmit(submissionData).then(function () {
+          isSubmitting = false;
+          setContactSubmitting(false);
+          showRequestSuccess("email", requestId);
+        }).catch(function () {
+          isSubmitting = false;
+          setContactSubmitting(false);
+          if (status) {
+            status.textContent = translate("contact.submitError");
+            status.classList.remove("is-success");
+          }
+        });
+        return;
       }
-      if (whatsappLink) {
-        whatsappLink.href = url;
-      }
-      if (success) {
-        success.hidden = false;
-      }
-      if (status) {
-        status.textContent = translate("contact.successStatus") + " " + requestId + ".";
-        status.classList.add("is-success");
-      }
-      if (window.AVENTURA_TRACK) {
-        window.AVENTURA_TRACK("request_ready", { requestId: requestId, requestType: typeField ? typeField.value : "" });
-      }
-      form.dispatchEvent(new CustomEvent("aventura:request-success"));
-      window.open(url, "_blank", "noopener");
+
+      var whatsappUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lastRequestMessage);
+      showRequestSuccess("whatsapp", requestId, whatsappUrl);
+      window.open(whatsappUrl, "_blank", "noopener");
     });
   }
 
@@ -2037,7 +2087,6 @@
     setupHeader();
     setupBoutiqueFilters();
     setupBoutiqueQuoteSelection();
-    setupScentLabInterest();
     setupReveals();
     setupCurrentYear();
     setupContactForm();

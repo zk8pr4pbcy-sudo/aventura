@@ -23,10 +23,10 @@
   <meta name="twitter:image" content="https://aventuraksa.com/assets/images/hero-jeddah.webp">
 
   <link rel="stylesheet" href="assets/css/styles.css?v=maher-20260801">
-  <link rel="stylesheet" href="assets/css/light-theme.css?v=nav-readability-20260803" />
-  <script src="assets/js/translations.js?v=maher-20260801" defer></script>
+  <link rel="stylesheet" href="assets/css/light-theme.css?v=experience-readability-20260803" />
+  <script src="assets/js/translations.js?v=booking-email-20260803" defer></script>
   <script src="assets/js/analytics.js" defer></script>
-  <script src="assets/js/app.js?v=maher-20260801" defer></script>
+  <script src="assets/js/app.js?v=booking-email-20260803" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,19 +66,15 @@
         <aside class="contact-panel" data-reveal>
           <span class="eyebrow" data-i18n="contact.heroEyebrow">Contact</span>
           <h2 data-i18n="contact.panelTitle">Talk to Aventura</h2>
-          <p data-i18n="contact.panelText">For a faster response, send your request through the form and it will open as a structured WhatsApp message.</p>
+          <p data-i18n="contact.panelText">Email is the main booking channel. WhatsApp remains available as a second option.</p>
           <div class="contact-methods">
+            <a class="contact-method" href="mailto:contact@aventuraksa.com">
+              <span data-i18n="contact.email1Label">Bookings &amp; inquiries</span>
+              <strong>contact@aventuraksa.com</strong>
+            </a>
             <a class="contact-method" href="https://wa.me/966555884854" target="_blank" rel="noopener">
-              <span data-i18n="contact.phoneLabel">WhatsApp &amp; phone</span>
+              <span data-i18n="contact.phoneLabel">WhatsApp</span>
               <strong dir="ltr">+966 55 588 4854</strong>
-            </a>
-            <a class="contact-method" href="mailto:amassiri@aventuraksa.com">
-              <span data-i18n="contact.email1Label">General inquiries</span>
-              <strong>amassiri@aventuraksa.com</strong>
-            </a>
-            <a class="contact-method" href="mailto:Waseem@aventuraksa.com">
-              <span data-i18n="contact.email2Label">Experience planning</span>
-              <strong>Waseem@aventuraksa.com</strong>
             </a>
             <div class="contact-method">
               <span data-i18n="contact.locationLabel">Based in</span>
@@ -91,7 +87,14 @@
           </div>
         </aside>
 
-        <form class="form-card" data-contact-form novalidate data-reveal>
+        <form class="form-card" data-contact-form action="https://formsubmit.co/contact@aventuraksa.com" method="POST" novalidate data-reveal>
+          <input type="hidden" name="_subject" value="Aventura booking request">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_replyto" value="">
+          <input type="hidden" name="_url" value="">
+          <input type="hidden" name="request_reference" value="">
+          <input type="hidden" name="request_language" value="">
+          <input type="hidden" name="request_summary" value="">
           <h2 data-i18n="contact.formTitle">Request details</h2>
           <p class="lead" data-i18n="contact.formText">No payment is taken here. This form starts the planning conversation.</p>
           <div class="form-grid">
@@ -114,12 +117,20 @@
             <div class="field">
               <label for="preferredResponse" data-i18n="contact.preferredContactLabel">Preferred contact method</label>
               <select id="preferredResponse" name="preferredResponse">
-                <option value="whatsapp" selected data-i18n="contact.contactWhatsapp">WhatsApp</option>
+                <option value="email" selected data-i18n="contact.contactEmail">Email</option>
+                <option value="whatsapp" data-i18n="contact.contactWhatsapp">WhatsApp</option>
                 <option value="phone" data-i18n="contact.contactCall">Phone call</option>
-                <option value="email" data-i18n="contact.contactEmail">Email</option>
               </select>
               <p class="form-note" data-i18n="contact.preferredResponseText">After reviewing the request, Aventura will respond through your preferred method when possible.</p>
             </div>
+            <fieldset class="request-options full" data-submission-channel>
+              <legend data-i18n="contact.sendMethodLegend">Send your booking request via</legend>
+              <p data-i18n="contact.sendMethodText">Email is the main booking channel. WhatsApp remains available as a second option.</p>
+              <div class="request-option-grid">
+                <label><input type="radio" name="submissionChannel" value="email" checked><span data-i18n="contact.sendEmail">Email</span></label>
+                <label><input type="radio" name="submissionChannel" value="whatsapp"><span data-i18n="contact.sendWhatsapp">WhatsApp</span></label>
+              </div>
+            </fieldset>
             <div class="field">
               <label for="type" data-i18n="contact.typeLabel">Request type</label>
               <select id="type" name="type">
@@ -200,8 +211,8 @@
             </div>
           </div>
           <div class="form-actions">
-            <button class="btn btn-dark" type="submit" data-i18n="contact.submit">Continue on WhatsApp</button>
-            <span class="form-note" data-i18n="contact.note">By continuing, WhatsApp will open with your details. You can review the message before sending.</span>
+            <button class="btn btn-dark" type="submit" data-submit-channel-button data-i18n="contact.submitEmail">Send booking request</button>
+            <span class="form-note" data-submit-channel-note data-i18n="contact.noteEmail">Your request will be sent directly to Aventura. No email app will open; it does not confirm a booking or payment.</span>
           </div>
           <p class="form-status" data-form-status role="alert" aria-live="polite"></p>
         </form>
