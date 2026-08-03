@@ -284,3 +284,45 @@ footer span {
     color: rgba(23, 50, 74, 0.8);
   }
 }
+
+/* Longer labels move navigation into its compact menu on laptop widths too.
+   Keep that open state in the light Aventura palette, rather than inheriting
+   the dark-theme link colour from the original header. */
+@media (max-width: 1500px) {
+  body.nav-open .site-header.menu-open {
+    color: var(--av-ink);
+    background: rgba(255, 249, 239, 0.99);
+    border-bottom-color: rgba(23, 50, 74, 0.16);
+    box-shadow: 0 10px 32px rgba(23, 50, 74, 0.1);
+  }
+
+  body.nav-open .site-header.menu-open .primary-nav {
+    color: var(--av-ink);
+    background: var(--av-ivory);
+  }
+
+  body.nav-open .site-header.menu-open .nav-link {
+    color: rgba(23, 50, 74, 0.88);
+    border-bottom-color: rgba(23, 50, 74, 0.13);
+  }
+
+  body.nav-open .site-header.menu-open .nav-link:hover,
+  body.nav-open .site-header.menu-open .nav-link.is-active {
+    color: var(--av-ink);
+  }
+
+  body.nav-open .site-header.menu-open .lang-switch,
+  body.nav-open .site-header.menu-open .nav-toggle {
+    color: var(--av-ink);
+    border-color: rgba(23, 50, 74, 0.22);
+  }
+
+  body.nav-open .site-header.menu-open .lang-switch button {
+    color: rgba(23, 50, 74, 0.78);
+  }
+
+  body.nav-open .site-header.menu-open .lang-switch button.is-active {
+    color: var(--av-ivory);
+    background: var(--av-ink);
+  }
+}
