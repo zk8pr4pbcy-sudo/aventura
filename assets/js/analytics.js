@@ -17,6 +17,85 @@
     }
   }
 
+  var REQUEST_TYPES = {
+    en: [
+      ["", "Choose one"],
+      ["historic-jeddah", "Historic Jeddah experience"],
+      ["sea", "Red Sea experience"],
+      ["desert", "Desert experience"],
+      ["taif", "Taif journey"],
+      ["jeddah-day", "A complete Jeddah day"],
+      ["corporate", "Corporate program"],
+      ["private-event", "Private event or occasion"],
+      ["vip-hosting", "VIP or delegation hosting"],
+      ["custom-experience", "Design a custom experience"],
+      ["partnership", "Partnership or collaboration"],
+      ["general-inquiry", "General inquiry"]
+    ],
+    ar: [
+      ["", "اختر النوع"],
+      ["historic-jeddah", "جولة جدة التاريخية"],
+      ["sea", "تجربة بحرية"],
+      ["desert", "تجربة صحراوية"],
+      ["taif", "رحلة إلى الطائف"],
+      ["jeddah-day", "يوم متكامل في جدة"],
+      ["corporate", "برنامج شركات"],
+      ["private-event", "فعالية أو مناسبة خاصة"],
+      ["vip-hosting", "استضافة كبار الشخصيات أو الوفود"],
+      ["custom-experience", "تصميم تجربة خاصة"],
+      ["partnership", "تعاون أو شراكة"],
+      ["general-inquiry", "استفسار عام"]
+    ],
+    es: [
+      ["", "Elige una opción"],
+      ["historic-jeddah", "Experiencia en Yeda Histórica"],
+      ["sea", "Experiencia en el Mar Rojo"],
+      ["desert", "Experiencia en el desierto"],
+      ["taif", "Viaje a Taif"],
+      ["jeddah-day", "Un día completo en Yeda"],
+      ["corporate", "Programa corporativo"],
+      ["private-event", "Evento u ocasión privada"],
+      ["vip-hosting", "Atención VIP o delegaciones"],
+      ["custom-experience", "Diseñar una experiencia a medida"],
+      ["partnership", "Colaboración o alianza"],
+      ["general-inquiry", "Consulta general"]
+    ]
+  };
+
+  function updateRequestTypeOptions(language) {
+    var select = document.getElementById("type");
+    if (!select || !document.body || document.body.getAttribute("data-page") !== "contact") {
+      return;
+    }
+
+    var currentValue = select.value;
+    var options = REQUEST_TYPES[language] || REQUEST_TYPES.en;
+    select.innerHTML = "";
+
+    options.forEach(function (item, index) {
+      var option = document.createElement("option");
+      option.value = item[0];
+      option.textContent = item[1];
+      if (index === 0) {
+        option.disabled = true;
+      }
+      select.appendChild(option);
+    });
+
+    if (options.some(function (item) { return item[0] === currentValue; })) {
+      select.value = currentValue;
+    } else {
+      select.value = "";
+    }
+  }
+
+  function initializeRequestTypes() {
+    updateRequestTypeOptions(document.documentElement.lang || "en");
+    document.addEventListener("aventura:language", function (event) {
+      updateRequestTypeOptions((event.detail && event.detail.language) || document.documentElement.lang || "en");
+    });
+  }
+
   applyLaunchTheme();
 
   var SAFE_DETAIL_KEYS = ["page", "language", "target", "requestType", "requestId", "productId", "quantity", "source"];
@@ -73,6 +152,7 @@
   });
 
   function pageView() {
+    initializeRequestTypes();
     track("page_view", {
       page: document.body ? document.body.getAttribute("data-page") : "unknown",
       language: document.documentElement.lang
