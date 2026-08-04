@@ -1635,6 +1635,12 @@
         form.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
+      function firstMissingRequiredField(step) {
+        return Array.from(step.querySelectorAll("[required]")).find(function (field) {
+          return field.willValidate && !String(field.value || "").trim();
+        }) || null;
+      }
+
       wizard.addEventListener("click", function (event) {
         if (event.target.closest("[data-request-next]")) {
           if (currentStep === 1 && typeField && !typeField.value) {
@@ -1643,6 +1649,15 @@
               status.textContent = translate("contact.stepTypeError");
             }
             typeField.focus();
+            return;
+          }
+          var missingRequiredField = firstMissingRequiredField(steps[currentStep]);
+          if (missingRequiredField) {
+            var requiredStatus = form.querySelector("[data-form-status]");
+            if (requiredStatus) {
+              requiredStatus.textContent = translate("contact.stepRequiredError");
+            }
+            missingRequiredField.focus();
             return;
           }
           var statusNext = form.querySelector("[data-form-status]");
