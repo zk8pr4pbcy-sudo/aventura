@@ -1788,8 +1788,8 @@
         success.hidden = false;
       }
       if (status) {
-        status.textContent = translate(isEmail ? "contact.successEmailStatus" : "contact.successStatus") + " " + requestId + ".";
-        status.classList.add("is-success");
+        status.textContent = "";
+        status.classList.remove("is-success");
       }
       if (window.AVENTURA_TRACK) {
         window.AVENTURA_TRACK(isEmail ? "request_submitted" : "request_ready", { requestId: requestId, requestType: typeField ? typeField.value : "", submissionChannel: submissionChannel });
