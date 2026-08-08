@@ -1421,7 +1421,7 @@
     var requestedType = query.get("type");
     var allowedTypes = ["experience", "event", "corporate", "service", "other"];
     var typeField = form.querySelector('[name="type"]');
-    if (typeField && allowedTypes.indexOf(requestedType) !== -1) {
+    if (typeField && allowedTypes.indexOf(requestedType) !== -1 && Array.from(typeField.options).some(function (option) { return option.value === requestedType; })) {
       typeField.value = requestedType;
     }
 
@@ -1506,11 +1506,19 @@
       selectedRequestIds.push(requestedItem);
     }
 
+    function selectedDynamicAddons() {
+      var detailAliases = { tailor: "thobe", flowers: "flower" };
+      return Array.from(form.querySelectorAll('[name="addons[]"]:checked')).map(function (input) {
+        return detailAliases[input.value] || input.value;
+      });
+    }
+
     function updateRequestDetails() {
+      var activeRequestIds = selectedRequestIds.concat(selectedDynamicAddons());
       detailGroups.forEach(function (group) {
         var groupName = group.getAttribute("data-request-details");
         var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
-        var showService = groupName !== "collection" && selectedRequestIds.indexOf(groupName) !== -1;
+        var showService = groupName !== "collection" && activeRequestIds.indexOf(groupName) !== -1;
         group.hidden = !showCollection && !showService;
       });
     }
@@ -1521,6 +1529,11 @@
     if (typeField) {
       typeField.addEventListener("change", updateRequestDetails);
     }
+    form.addEventListener("change", function (event) {
+      if (event.target && event.target.matches('[name="addons[]"]')) {
+        updateRequestDetails();
+      }
+    });
     if (messageField) {
       messageField.addEventListener("input", function () {
         messageField.dataset.autofilled = "false";
@@ -1572,13 +1585,9 @@
 
       var objectiveField = document.createElement("div");
       objectiveField.className = "field full";
+      objectiveField.hidden = true;
       objectiveField.innerHTML = '<label for="objective" data-i18n="contact.objectiveLabel">What should this plan achieve?</label><select id="objective" name="objective"><option value="" selected data-i18n="contact.objectivePlaceholder">Choose the closest objective</option><option value="relaxation" data-i18n="contact.objectiveRelaxation">Relaxation and private time</option><option value="discovery" data-i18n="contact.objectiveDiscovery">Discover Jeddah and local culture</option><option value="hosting" data-i18n="contact.objectiveHosting">Host guests or a delegation</option><option value="team" data-i18n="contact.objectiveTeam">Connect or reward a team</option><option value="celebration" data-i18n="contact.objectiveCelebration">Celebrate an occasion</option><option value="flexible" data-i18n="contact.objectiveFlexible">I would like Aventura to recommend</option></select>';
       firstGrid.appendChild(objectiveField);
-
-      var addOns = document.createElement("fieldset");
-      addOns.className = "request-options full";
-      addOns.innerHTML = '<legend data-i18n="contact.addonsLegend">Optional supporting services</legend><p data-i18n="contact.addonsText">Select anything you may need. Aventura will confirm only what fits the program.</p><div class="request-option-grid"><label><input type="checkbox" name="addons" value="transport"><span data-i18n="contact.addonTransport">Private transportation</span></label><label><input type="checkbox" name="addons" value="guide"><span data-i18n="contact.addonGuide">Licensed guide</span></label><label><input type="checkbox" name="addons" value="dining"><span data-i18n="contact.addonDining">Dining arrangements</span></label><label><input type="checkbox" name="addons" value="hospitality"><span data-i18n="contact.addonHospitality">Guest welcome and hospitality</span></label><label><input type="checkbox" name="addons" value="concierge"><span data-i18n="contact.addonConcierge">Concierge support</span></label></div>';
-      secondGrid.appendChild(addOns);
 
       detailGroups.forEach(function (group) { secondGrid.appendChild(group); });
       moveField("message", secondGrid);
@@ -1693,6 +1702,7 @@
     form.querySelectorAll("[data-i18n]").forEach(function (element) {
       element.textContent = translate(element.getAttribute("data-i18n"), currentLanguage);
     });
+    form.dispatchEvent(new CustomEvent("aventura:contact-wizard-ready", { bubbles: true }));
 
     function selectedSubmissionChannel() {
       var selected = form.querySelector('[name="submissionChannel"]:checked');
@@ -1888,21 +1898,31 @@
 
       var objectiveOption = form.querySelector('[name="objective"] option:checked');
       if (objectiveOption && objectiveOption.value) {
-        lines.push(translate("contact.objectiveLabel") + ": " + objectiveOption.textContent.trim());
+        var objectiveLabel = form.querySelector('label[for="objective"]');
+        lines.push((objectiveLabel ? objectiveLabel.textContent.trim() : translate("contact.objectiveLabel")) + ": " + objectiveOption.textContent.trim());
       }
 
-      var addonKeys = {
-        transport: "contact.addonTransport",
-        guide: "contact.addonGuide",
-        dining: "contact.addonDining",
-        hospitality: "contact.addonHospitality",
-        boutique: "contact.addonBoutique",
-        concierge: "contact.addonConcierge"
-      };
-      var selectedAddons = data.getAll("addons").map(function (value) { return addonKeys[value] ? translate(addonKeys[value]) : value; });
+      var selectedAddons = Array.from(form.querySelectorAll('[name="addons[]"]:checked')).map(function (input) {
+        return input.closest("label").textContent.trim();
+      });
       if (selectedAddons.length) {
-        lines.push(translate("contact.addonsLegend") + ": " + selectedAddons.join(", "));
+        var addonLegend = form.querySelector("#dynamicRequestPanel legend");
+        lines.push((addonLegend ? addonLegend.textContent.trim() : translate("contact.addonsLegend")) + ": " + selectedAddons.join(", "));
       }
+
+      ["guideLanguage", "experiencePeriod", "seaExperienceDuration", "programCity", "occasionType", "eventLocation", "arrivalDate", "customExperienceDetails", "guestServiceDetails"].forEach(function (name) {
+        var field = form.querySelector('[name="' + name + '"]');
+        if (!field || !String(field.value || "").trim()) {
+          return;
+        }
+        var value = String(field.value).trim();
+        if (field.tagName === "SELECT") {
+          var selectedOption = field.options[field.selectedIndex];
+          value = selectedOption ? selectedOption.textContent.trim() : value;
+        }
+        var label = field.id ? form.querySelector('label[for="' + field.id + '"]') : null;
+        lines.push((label ? label.textContent.trim() : name) + ": " + value);
+      });
 
       var selectedDuration = form.querySelector('[name="duration"] option:checked');
       if (selectedDuration && selectedDuration.value) {
