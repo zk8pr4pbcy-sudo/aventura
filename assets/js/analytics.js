@@ -32,14 +32,13 @@
       chooseLanguage:"Choose a language",
       languages:["Arabic","English","Spanish","French","German","Italian","Russian","Chinese","Japanese","Other"],
       questions:{
-        historicFocus:"What should guide the Historic Jeddah tour?", historicHistory:"History and stories", historicArchitecture:"Architecture and rawasheen", historicHospitality:"A relaxed walk with hospitality",
-        historicPace:"Preferred tour pace", historicCalm:"Relaxed", historicBalanced:"Balanced",
         seaMood:"What atmosphere suits the sea experience?", seaPrivate:"Relaxation and privacy", seaFamily:"Family atmosphere", seaTime:"Time by the sea",
-        seaActivity:"Activity level", seaCalm:"Calm", seaBalanced:"Balanced",
+        seaJourney:"Which sea experience would you like?", seaTour:"Private sea tour", seaSunset:"Sunset boat journey", seaBayadah:"Bayadah sea day",
         desertStyle:"How would you like the desert experience?", desertCalm:"A relaxed desert session", desertDunes:"A dune experience", desertMix:"A mix of both",
         desertHospitality:"Would you like a private hospitality setup?", yes:"Yes", no:"No",
-        taifFocus:"What matters most on this Taif journey?", taifHada:"Al Hada mountains", taifRoses:"Rose farms in season", taifStops:"Calm stops and views",
-        jeddahFocus:"What matters most to the guest?", jeddahHospitality:"Hospitality", jeddahSea:"The sea", jeddahHistoric:"Historic Jeddah", jeddahBalanced:"A balanced day",
+        includedTaifGuide:"A licensed tour guide is included in every Taif journey.",
+        jeddahStops:"Which stop matters most during the Jeddah day?", jeddahMalls:"Malls", jeddahCorniche:"Jeddah Corniche", jeddahMuseums:"Museums", jeddahCafes:"Cafés",
+        jeddahTransport:"Transport type", jeddahStandardTransport:"Standard transport", jeddahVipTransport:"VIP transport",
         corporateGoal:"What outcome should the corporate program deliver?", corporateTeam:"Team building", corporateGuests:"Hosting guests or clients", corporateExecutive:"An executive program", corporateWorkplace:"Improving the work environment",
         corporateGuestType:"Who are the guests?", corporateEmployees:"Employees", corporateClients:"Clients", corporateDelegation:"An international delegation",
         eventType:"Occasion type", eventPrivate:"Private celebration", eventCorporate:"Corporate event", eventDinner:"Dinner or gathering",
@@ -66,14 +65,13 @@
       chooseLanguage:"اختر اللغة",
       languages:["العربية","الإنجليزية","الإسبانية","الفرنسية","الألمانية","الإيطالية","الروسية","الصينية","اليابانية","لغة أخرى"],
       questions:{
-        historicFocus:"ما الذي يهمكم أكثر في جولة جدة التاريخية؟", historicHistory:"التاريخ والقصص", historicArchitecture:"العمارة والرواشين", historicHospitality:"جولة هادئة مع ضيافة",
-        historicPace:"وتيرة الجولة", historicCalm:"هادئة", historicBalanced:"متوازنة",
         seaMood:"ما الأجواء المناسبة للتجربة البحرية؟", seaPrivate:"استرخاء وخصوصية", seaFamily:"أجواء عائلية", seaTime:"وقت على البحر",
-        seaActivity:"مستوى النشاط", seaCalm:"هادئ", seaBalanced:"متوازن",
+        seaJourney:"ما نوع التجربة البحرية التي تفضلونها؟", seaTour:"جولة بحرية خاصة", seaSunset:"رحلة وقت الغروب", seaBayadah:"يوم بحري إلى بياضة",
         desertStyle:"كيف تحبون التجربة؟", desertCalm:"جلسة هادئة في الصحراء", desertDunes:"تجربة الكثبان الرملية", desertMix:"مزيج بينهما",
         desertHospitality:"هل ترغبون بجلسة ضيافة خاصة؟", yes:"نعم", no:"لا",
-        taifFocus:"وش يهمكم أكثر في هذه الرحلة؟", taifHada:"جبال الهدا", taifRoses:"مزارع الورد في موسمها", taifStops:"محطات هادئة ومناظر",
-        jeddahFocus:"ما الذي يهم الضيف أكثر؟", jeddahHospitality:"الضيافة", jeddahSea:"البحر", jeddahHistoric:"جدة التاريخية", jeddahBalanced:"يوم متوازن بين الجميع",
+        includedTaifGuide:"تشمل كل رحلة إلى الطائف مرشدًا سياحيًا مرخصًا.",
+        jeddahStops:"ما المحطة التي تهمكم أكثر في يوم جدة؟", jeddahMalls:"المولات", jeddahCorniche:"كورنيش جدة", jeddahMuseums:"المتاحف", jeddahCafes:"المقاهي",
+        jeddahTransport:"نوع النقل", jeddahStandardTransport:"نقل عادي", jeddahVipTransport:"نقل VIP",
         corporateGoal:"ما النتيجة المطلوبة من البرنامج؟", corporateTeam:"بناء فريق", corporateGuests:"استقبال ضيوف أو عملاء", corporateExecutive:"برنامج تنفيذي", corporateWorkplace:"تحسين بيئة العمل",
         corporateGuestType:"نوع الضيوف", corporateEmployees:"موظفون", corporateClients:"عملاء", corporateDelegation:"وفد دولي",
         eventType:"نوع المناسبة", eventPrivate:"احتفال خاص", eventCorporate:"فعالية شركة", eventDinner:"عشاء أو لقاء",
@@ -100,14 +98,13 @@
       chooseLanguage:"Elige un idioma",
       languages:["Árabe","Inglés","Español","Francés","Alemán","Italiano","Ruso","Chino","Japonés","Otro"],
       questions:{
-        historicFocus:"¿Qué debe guiar la visita por Yeda Histórica?", historicHistory:"Historia y relatos", historicArchitecture:"Arquitectura y rawasheen", historicHospitality:"Un paseo tranquilo con hospitalidad",
-        historicPace:"Ritmo de la visita", historicCalm:"Tranquilo", historicBalanced:"Equilibrado",
         seaMood:"¿Qué ambiente encaja con la experiencia marina?", seaPrivate:"Relajación y privacidad", seaFamily:"Ambiente familiar", seaTime:"Tiempo junto al mar",
-        seaActivity:"Nivel de actividad", seaCalm:"Tranquilo", seaBalanced:"Equilibrado",
+        seaJourney:"¿Qué experiencia marina prefieres?", seaTour:"Paseo privado en el mar", seaSunset:"Paseo en barco al atardecer", seaBayadah:"Día de mar en Bayadah",
         desertStyle:"¿Cómo prefieren la experiencia del desierto?", desertCalm:"Una sesión tranquila en el desierto", desertDunes:"Una experiencia entre dunas", desertMix:"Una mezcla de ambas",
         desertHospitality:"¿Desean una sesión privada de hospitalidad?", yes:"Sí", no:"No",
-        taifFocus:"¿Qué importa más en este viaje a Taif?", taifHada:"Montañas de Al Hada", taifRoses:"Granjas de rosas en temporada", taifStops:"Paradas tranquilas y vistas",
-        jeddahFocus:"¿Qué importa más al huésped?", jeddahHospitality:"Hospitalidad", jeddahSea:"El mar", jeddahHistoric:"Yeda Histórica", jeddahBalanced:"Un día equilibrado",
+        includedTaifGuide:"Todas las excursiones a Taif incluyen un guía turístico autorizado.",
+        jeddahStops:"¿Qué parada importa más durante el día en Yeda?", jeddahMalls:"Centros comerciales", jeddahCorniche:"Corniche de Yeda", jeddahMuseums:"Museos", jeddahCafes:"Cafeterías",
+        jeddahTransport:"Tipo de transporte", jeddahStandardTransport:"Transporte estándar", jeddahVipTransport:"Transporte VIP",
         corporateGoal:"¿Qué resultado debe ofrecer el programa corporativo?", corporateTeam:"Creación de equipo", corporateGuests:"Recibir invitados o clientes", corporateExecutive:"Un programa ejecutivo", corporateWorkplace:"Mejorar el entorno de trabajo",
         corporateGuestType:"¿Quiénes son los invitados?", corporateEmployees:"Empleados", corporateClients:"Clientes", corporateDelegation:"Una delegación internacional",
         eventType:"Tipo de ocasión", eventPrivate:"Celebración privada", eventCorporate:"Evento corporativo", eventDinner:"Cena o encuentro",
@@ -132,13 +129,11 @@
     "historic-jeddah": {items:[
       {kind:"note", label:"included", text:"includedGuide"},
       {kind:"select", name:"guideLanguage", label:"guideLanguage", placeholder:"chooseLanguage", options:"languages", required:true},
-      {kind:"choice", name:"historicFocus", label:"historicFocus", options:["historicHistory","historicArchitecture","historicHospitality"]},
-      {kind:"choice", name:"historicPace", label:"historicPace", options:["historicCalm","historicBalanced"]},
       {kind:"addons", options:["transport","dining","photography"]}
     ]},
     sea: {items:[
+      {kind:"choice", name:"seaJourney", label:"seaJourney", options:["seaTour","seaSunset","seaBayadah"], required:true},
       {kind:"choice", name:"seaMood", label:"seaMood", options:["seaPrivate","seaFamily","seaTime"]},
-      {kind:"choice", name:"seaActivity", label:"seaActivity", options:["seaCalm","seaBalanced"]},
       {kind:"addons", options:["resort","transport","photography"]}
     ]},
     desert: {items:[
@@ -147,12 +142,13 @@
       {kind:"addons", options:["transport","photography"]}
     ]},
     taif: {items:[
-      {kind:"choice", name:"taifFocus", label:"taifFocus", options:["taifHada","taifRoses","taifStops"]},
-      {kind:"addons", options:["transport","dining","photography"]}
+      {kind:"note", label:"included", text:"includedTaifGuide"},
+      {kind:"select", name:"guideLanguage", label:"guideLanguage", placeholder:"chooseLanguage", options:"languages", required:true}
     ]},
     "jeddah-day": {items:[
-      {kind:"choice", name:"jeddahFocus", label:"jeddahFocus", options:["jeddahHospitality","jeddahSea","jeddahHistoric","jeddahBalanced"]},
-      {kind:"addons", options:["transport","dining","photography"]}
+      {kind:"choice", name:"jeddahStops", label:"jeddahStops", options:["jeddahMalls","jeddahCorniche","jeddahMuseums","jeddahCafes"], required:true},
+      {kind:"choice", name:"jeddahTransport", label:"jeddahTransport", options:["jeddahStandardTransport","jeddahVipTransport"], required:true},
+      {kind:"addons", options:["dining","photography"]}
     ]},
     corporate: {items:[
       {kind:"choice", name:"corporateGoal", label:"corporateGoal", options:["corporateTeam","corporateGuests","corporateExecutive","corporateWorkplace"]},
@@ -335,6 +331,12 @@
     concierge: "concierge"
   };
 
+  var SEA_JOURNEY_BY_ITEM = {
+    "golden-hour": "seaSunset",
+    "bayadah-day": "seaBayadah",
+    "bayadah-grand": "seaBayadah"
+  };
+
   function isKnownRequestType(value) {
     return Boolean(value) && REQUEST_TYPES.en.some(function (item) { return item[0] === value; });
   }
@@ -357,6 +359,12 @@
     var query = new URLSearchParams(window.location.search);
     var item = query.get("request") || query.get("service") || "";
     return ADDON_BY_ITEM[item] || "";
+  }
+
+  function requestedSeaJourneyFromUrl() {
+    var query = new URLSearchParams(window.location.search);
+    var item = query.get("request") || query.get("service") || "";
+    return SEA_JOURNEY_BY_ITEM[item] || "";
   }
 
   function updateConditionalFields(panel) {
@@ -408,6 +416,12 @@
     var requestedService = panel.querySelector('[name="guestService"]');
     if (requestedAddon && requestedService && Array.from(requestedService.options).some(function (option) { return option.value === requestedAddon; })) {
       requestedService.value = requestedAddon;
+    }
+
+    var requestedSeaJourney = requestedSeaJourneyFromUrl();
+    var selectedSeaJourney = requestedSeaJourney && panel.querySelector('[name="seaJourney"][value="' + requestedSeaJourney + '"]');
+    if (selectedSeaJourney) {
+      selectedSeaJourney.checked = true;
     }
 
     var detailGroup = secondGrid.querySelector("[data-request-details]");

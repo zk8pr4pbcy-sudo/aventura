@@ -1641,8 +1641,21 @@
       }
 
       function firstMissingRequiredField(step) {
+        var checkedRadioNames = {};
         return Array.from(step.querySelectorAll("[required]")).find(function (field) {
-          return field.willValidate && !String(field.value || "").trim();
+          if (!field.willValidate || field.disabled) {
+            return false;
+          }
+          if (field.type === "radio") {
+            if (checkedRadioNames[field.name]) {
+              return false;
+            }
+            checkedRadioNames[field.name] = true;
+            return !Array.from(step.querySelectorAll('input[type="radio"]')).some(function (radio) {
+              return radio.name === field.name && radio.checked;
+            });
+          }
+          return !field.checkValidity();
         }) || null;
       }
 
