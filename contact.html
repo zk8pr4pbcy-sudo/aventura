@@ -24,9 +24,9 @@
 
   <link rel="stylesheet" href="assets/css/styles.css?v=maher-20260801">
   <link rel="stylesheet" href="assets/css/light-theme.css?v=experience-readability-20260803" />
-  <script src="assets/js/translations.js?v=request-stage2e-20260808" defer></script>
-  <script src="assets/js/analytics.js?v=request-stage2e-20260808" defer></script>
-  <script src="assets/js/app.js?v=request-stage2e-20260808" defer></script>
+  <script src="assets/js/translations.js?v=legal-20260809" defer></script>
+  <script src="assets/js/analytics.js?v=legal-20260809" defer></script>
+  <script src="assets/js/app.js?v=legal-20260809" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -208,12 +208,14 @@
             <div class="field full">
               <label for="message" data-i18n="contact.messageLabel">What would you like us to arrange?</label>
               <textarea id="message" name="message" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Share the occasion, interests, timing and any important preferences."></textarea>
+              <p class="form-sensitive-notice" data-i18n="contact.sensitiveDataNotice">Please do not send national ID numbers, passport numbers, health information, or other sensitive data through this form.</p>
             </div>
           </div>
           <div class="form-actions">
             <button class="btn btn-dark" type="submit" data-submit-channel-button data-i18n="contact.submitEmail">Send booking request</button>
             <span class="form-note" data-submit-channel-note data-i18n="contact.noteEmail">Your request will be sent directly to Aventura. No email app will open; it does not confirm a booking or payment.</span>
           </div>
+          <p class="form-privacy-notice"><span data-i18n="contact.privacyNoticePrefix">By sending this request, Aventura processes your data to prepare the request and contact you under the</span> <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a><span data-i18n="contact.privacyNoticeTerms">. Confirmed services are governed by the</span> <a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a>.</p>
           <p class="form-status" data-form-status role="alert" aria-live="polite"></p>
         </form>
       </div>

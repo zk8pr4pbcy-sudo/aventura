@@ -3970,6 +3970,88 @@ html[dir="rtl"] .partner-list li::before {
   padding-inline-start: 22px;
 }
 
+.legal-identity {
+  margin: 24px 0;
+  padding: 20px 22px;
+  border: 1px solid rgba(22, 38, 54, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.legal-identity p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.legal-identity p + p {
+  margin-top: 8px;
+}
+
+.legal-page-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 40px;
+}
+
+.legal-page-links a {
+  padding: 8px 13px;
+  border: 1px solid rgba(22, 38, 54, 0.15);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.legal-page-links a[aria-current="page"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.legal-callout {
+  margin: 20px 0;
+  padding: 16px 18px;
+  border-inline-start: 3px solid var(--gold);
+  border-radius: 12px;
+  background: rgba(201, 168, 106, 0.11);
+  color: var(--muted);
+}
+
+.form-sensitive-notice,
+.form-privacy-notice {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
+.form-sensitive-notice {
+  padding: 10px 12px;
+  border-inline-start: 2px solid var(--gold);
+  background: rgba(201, 168, 106, 0.1);
+}
+
+.form-privacy-notice {
+  width: 100%;
+}
+
+.form-privacy-notice a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.request-step-actions .form-privacy-notice {
+  flex: 0 0 100%;
+  margin-top: 14px;
+}
+
+.request-step-actions:has(.form-privacy-notice) {
+  flex-wrap: wrap;
+}
+
 .cta-band {
   position: relative;
   overflow: hidden;

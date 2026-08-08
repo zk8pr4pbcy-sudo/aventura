@@ -187,6 +187,7 @@
       '        <li><a href="partners.html" data-i18n="nav.partners">Partner with us</a></li>',
       '        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>',
       '        <li><a href="faq.html" data-i18n="footer.faq">Frequently asked questions</a></li>',
+      '        <li><a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a></li>',
       '        <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>',
       '      </ul>',
       '    </div>',
@@ -203,6 +204,7 @@
       '    <span>© <span data-current-year></span> AVENTURA. <span data-i18n="footer.rights">All rights reserved.</span></span>',
       '    <div class="footer-bottom-links">',
       '      <a href="partners.html" data-i18n="nav.partners">Partner with us</a>',
+      '      <a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a>',
       '      <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a>',
       '      <a href="contact.html" data-i18n="nav.contact">Contact</a>',
       '    </div>',
@@ -1545,6 +1547,7 @@
     function setupContactWizard() {
       var originalGrid = form.querySelector(":scope > .form-grid");
       var originalActions = form.querySelector(":scope > .form-actions");
+      var originalPrivacyNotice = form.querySelector(":scope > .form-privacy-notice");
       if (!originalGrid || !originalActions) {
         return;
       }
@@ -1604,6 +1607,9 @@
         }
         if (submit) {
           row.appendChild(originalActions);
+          if (originalPrivacyNotice) {
+            row.appendChild(originalPrivacyNotice);
+          }
         }
         return row;
       }

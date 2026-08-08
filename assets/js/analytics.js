@@ -51,11 +51,11 @@
         transportNeed:"What type of transport do you need?", transportAirport:"Airport transfer", transportCity:"Transport between locations", transportDay:"Vehicle for the full program",
         diningNeed:"What arrangement do you need?", diningLunch:"Lunch reservation", diningDinner:"Dinner reservation", diningPrivate:"Private dining arrangement",
         hospitalityNeed:"What kind of hospitality do you need?", hospitalityArrival:"Arrival welcome", hospitalityProgram:"Hospitality within the program", hospitalityOccasion:"Hospitality for an occasion",
-        hotelNeed:"What do you need from the hotel arrangement?", hotelBooking:"Hotel booking", hotelCoordination:"Coordinating an existing stay", hotelOther:"Another hotel request",
+        hotelNeed:"What support do you need for the existing stay?", hotelCoordination:"Coordinating an existing stay",
         customArea:"Which setting is closest?", customHistoric:"Historic Jeddah", customSea:"The sea", customDesert:"The desert", customTaif:"Taif", customMix:"A mix of settings",
         privacyLevel:"Privacy level", privacyRegular:"Private", privacyVery:"Very private", customDetails:"Tell us what you have in mind"
       },
-      addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Hotel arrangements",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"Full event coordination",flowers:"Flowers and gifts",vipCar:"VIP vehicle",tailor:"Tailor at the hotel",abaya:"Abaya service",guide:"Licensed guide",concierge:"Concierge support"}
+      addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Existing-stay coordination",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"Full event coordination",flowers:"Flowers and gifts",vipCar:"VIP vehicle",tailor:"Tailor at the hotel",abaya:"Abaya service",guide:"Licensed guide",concierge:"Concierge support"}
     },
     ar: {
       optional:"إضافات اختيارية",
@@ -84,11 +84,11 @@
         transportNeed:"نوع النقل المطلوب", transportAirport:"نقل من أو إلى المطار", transportCity:"تنقل بين المواقع", transportDay:"سيارة للبرنامج كامل",
         diningNeed:"نوع الترتيب المطلوب", diningLunch:"حجز غداء", diningDinner:"حجز عشاء", diningPrivate:"ترتيب عشاء خاص",
         hospitalityNeed:"نوع الضيافة", hospitalityArrival:"ضيافة عند الوصول", hospitalityProgram:"ضيافة ضمن البرنامج", hospitalityOccasion:"ضيافة لمناسبة",
-        hotelNeed:"ما الذي تحتاجه في ترتيب الفندق؟", hotelBooking:"حجز فندق", hotelCoordination:"تنسيق إقامة قائمة", hotelOther:"طلب فندقي آخر",
+        hotelNeed:"ما الدعم المطلوب للإقامة القائمة؟", hotelCoordination:"تنسيق إقامة قائمة",
         customArea:"المجال الأقرب", customHistoric:"جدة التاريخية", customSea:"البحر", customDesert:"الصحراء", customTaif:"الطائف", customMix:"مزيج بين أكثر من تجربة",
         privacyLevel:"مستوى الخصوصية", privacyRegular:"خاص", privacyVery:"خاص جدًا", customDetails:"صف لنا ما تتخيله لهذه التجربة"
       },
-      addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"ترتيبات الفندق",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"تنسيق كامل للفعالية",flowers:"ورد وهدايا",vipCar:"سيارة VIP",tailor:"خياط في الفندق",abaya:"خدمة العباية",guide:"مرشد سياحي مرخص",concierge:"دعم الكونسيرج"}
+      addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"تنسيق الإقامة القائمة",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"تنسيق كامل للفعالية",flowers:"ورد وهدايا",vipCar:"سيارة VIP",tailor:"خياط في الفندق",abaya:"خدمة العباية",guide:"مرشد سياحي مرخص",concierge:"دعم الكونسيرج"}
     },
     es: {
       optional:"Complementos útiles",
@@ -117,11 +117,11 @@
         transportNeed:"¿Qué transporte necesitas?", transportAirport:"Traslado desde o hacia el aeropuerto", transportCity:"Traslado entre ubicaciones", transportDay:"Vehículo durante todo el programa",
         diningNeed:"¿Qué arreglo necesitas?", diningLunch:"Reserva de almuerzo", diningDinner:"Reserva de cena", diningPrivate:"Cena privada",
         hospitalityNeed:"Tipo de hospitalidad", hospitalityArrival:"Bienvenida a la llegada", hospitalityProgram:"Hospitalidad durante el programa", hospitalityOccasion:"Hospitalidad para una ocasión",
-        hotelNeed:"¿Qué necesitas del hotel?", hotelBooking:"Reserva de hotel", hotelCoordination:"Coordinación de una estancia existente", hotelOther:"Otra solicitud de hotel",
+        hotelNeed:"¿Qué apoyo necesitas para la estancia existente?", hotelCoordination:"Coordinación de una estancia existente",
         customArea:"¿Qué entorno es el más cercano?", customHistoric:"Yeda Histórica", customSea:"El mar", customDesert:"El desierto", customTaif:"Taif", customMix:"Una mezcla de experiencias",
         privacyLevel:"Nivel de privacidad", privacyRegular:"Privado", privacyVery:"Muy privado", customDetails:"Cuéntanos qué tienes en mente"
       },
-      addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Arreglos gastronómicos",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Sesión privada de hospitalidad",hotel:"Arreglos de hotel",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Coordinación completa del evento",flowers:"Flores y regalos",vipCar:"Vehículo VIP",tailor:"Sastre en el hotel",abaya:"Servicio de abaya",guide:"Guía turístico acreditado",concierge:"Asistencia de concierge"}
+      addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Arreglos gastronómicos",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Sesión privada de hospitalidad",hotel:"Coordinación de una estancia existente",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Coordinación completa del evento",flowers:"Flores y regalos",vipCar:"Vehículo VIP",tailor:"Sastre en el hotel",abaya:"Servicio de abaya",guide:"Guía turístico acreditado",concierge:"Asistencia de concierge"}
     }
   };
 
@@ -173,8 +173,7 @@
       {kind:"choice", name:"transportNeed", label:"transportNeed", options:["transportAirport","transportCity","transportDay"], dependsOn:"guestService:transport"},
       {kind:"select", name:"guideLanguage", label:"guideLanguage", placeholder:"chooseLanguage", options:"languages", required:true, dependsOn:"guestService:guide"},
       {kind:"choice", name:"diningNeed", label:"diningNeed", options:["diningLunch","diningDinner","diningPrivate"], dependsOn:"guestService:dining"},
-      {kind:"choice", name:"hospitalityNeed", label:"hospitalityNeed", options:["hospitalityArrival","hospitalityProgram","hospitalityOccasion"], dependsOn:"guestService:hospitality"},
-      {kind:"choice", name:"hotelNeed", label:"hotelNeed", options:["hotelBooking","hotelCoordination","hotelOther"], dependsOn:"guestService:hotel"}
+      {kind:"choice", name:"hospitalityNeed", label:"hospitalityNeed", options:["hospitalityArrival","hospitalityProgram","hospitalityOccasion"], dependsOn:"guestService:hospitality"}
     ]},
     "custom-experience": {items:[
       {kind:"choice", name:"customArea", label:"customArea", options:["customHistoric","customSea","customDesert","customTaif","customMix"]},
