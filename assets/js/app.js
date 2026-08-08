@@ -1508,9 +1508,10 @@
 
     function selectedDynamicAddons() {
       var detailAliases = { tailor: "thobe", flowers: "flower" };
-      return Array.from(form.querySelectorAll('[name="addons[]"]:checked')).map(function (input) {
-        return detailAliases[input.value] || input.value;
-      });
+      var selections = Array.from(form.querySelectorAll('[name="addons[]"]:checked')).map(function (input) { return input.value; });
+      var selectedGuestService = form.querySelector('[name="guestService"]');
+      if (selectedGuestService && selectedGuestService.value) selections.push(selectedGuestService.value);
+      return selections.map(function (value) { return detailAliases[value] || value; });
     }
 
     function updateRequestDetails() {
@@ -1518,7 +1519,7 @@
       detailGroups.forEach(function (group) {
         var groupName = group.getAttribute("data-request-details");
         var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
-        var showService = groupName !== "collection" && activeRequestIds.indexOf(groupName) !== -1;
+        var showService = groupName !== "collection" && typeField && typeField.value === "guest-services" && activeRequestIds.indexOf(groupName) !== -1;
         group.hidden = !showCollection && !showService;
       });
     }
@@ -1530,10 +1531,11 @@
       typeField.addEventListener("change", updateRequestDetails);
     }
     form.addEventListener("change", function (event) {
-      if (event.target && event.target.matches('[name="addons[]"]')) {
+      if (event.target && event.target.matches('[name="addons[]"], [name="guestService"]')) {
         updateRequestDetails();
       }
     });
+    form.addEventListener("aventura:request-details-updated", updateRequestDetails);
     if (messageField) {
       messageField.addEventListener("input", function () {
         messageField.dataset.autofilled = "false";
@@ -1582,12 +1584,6 @@
       }
 
       ["type", "date", "time", "duration", "guests"].forEach(function (name) { moveField(name, firstGrid); });
-
-      var objectiveField = document.createElement("div");
-      objectiveField.className = "field full";
-      objectiveField.hidden = true;
-      objectiveField.innerHTML = '<label for="objective" data-i18n="contact.objectiveLabel">What should this plan achieve?</label><select id="objective" name="objective"><option value="" selected data-i18n="contact.objectivePlaceholder">Choose the closest objective</option><option value="relaxation" data-i18n="contact.objectiveRelaxation">Relaxation and private time</option><option value="discovery" data-i18n="contact.objectiveDiscovery">Discover Jeddah and local culture</option><option value="hosting" data-i18n="contact.objectiveHosting">Host guests or a delegation</option><option value="team" data-i18n="contact.objectiveTeam">Connect or reward a team</option><option value="celebration" data-i18n="contact.objectiveCelebration">Celebrate an occasion</option><option value="flexible" data-i18n="contact.objectiveFlexible">I would like Aventura to recommend</option></select>';
-      firstGrid.appendChild(objectiveField);
 
       detailGroups.forEach(function (group) { secondGrid.appendChild(group); });
       moveField("message", secondGrid);
@@ -1896,32 +1892,26 @@
         lines.push(translate("contact.whatsappType") + ": " + typeText);
       }
 
-      var objectiveOption = form.querySelector('[name="objective"] option:checked');
-      if (objectiveOption && objectiveOption.value) {
-        var objectiveLabel = form.querySelector('label[for="objective"]');
-        lines.push((objectiveLabel ? objectiveLabel.textContent.trim() : translate("contact.objectiveLabel")) + ": " + objectiveOption.textContent.trim());
-      }
-
-      var selectedAddons = Array.from(form.querySelectorAll('[name="addons[]"]:checked')).map(function (input) {
-        return input.closest("label").textContent.trim();
-      });
-      if (selectedAddons.length) {
-        var addonLegend = form.querySelector("#dynamicRequestPanel legend");
-        lines.push((addonLegend ? addonLegend.textContent.trim() : translate("contact.addonsLegend")) + ": " + selectedAddons.join(", "));
-      }
-
-      ["guideLanguage", "experiencePeriod", "seaExperienceDuration", "programCity", "occasionType", "eventLocation", "arrivalDate", "customExperienceDetails", "guestServiceDetails"].forEach(function (name) {
-        var field = form.querySelector('[name="' + name + '"]');
-        if (!field || !String(field.value || "").trim()) {
-          return;
-        }
+      var dynamicSummary = {};
+      Array.from(form.querySelectorAll("#dynamicRequestPanel [data-request-summary]")).forEach(function (field) {
+        if (field.disabled || field.closest("[hidden]")) return;
+        if ((field.type === "radio" || field.type === "checkbox") && !field.checked) return;
+        if (!String(field.value || "").trim()) return;
+        var summaryGroup = field.closest("[data-request-summary-label]");
+        var label = summaryGroup ? summaryGroup.getAttribute("data-request-summary-label") : field.name;
         var value = String(field.value).trim();
         if (field.tagName === "SELECT") {
           var selectedOption = field.options[field.selectedIndex];
           value = selectedOption ? selectedOption.textContent.trim() : value;
+        } else if (field.type === "radio" || field.type === "checkbox") {
+          var optionLabel = field.closest("label");
+          value = optionLabel ? optionLabel.textContent.trim() : value;
         }
-        var label = field.id ? form.querySelector('label[for="' + field.id + '"]') : null;
-        lines.push((label ? label.textContent.trim() : name) + ": " + value);
+        if (!dynamicSummary[label]) dynamicSummary[label] = [];
+        dynamicSummary[label].push(value);
+      });
+      Object.keys(dynamicSummary).forEach(function (label) {
+        lines.push(label + ": " + dynamicSummary[label].join(", "));
       });
 
       var selectedDuration = form.querySelector('[name="duration"] option:checked');

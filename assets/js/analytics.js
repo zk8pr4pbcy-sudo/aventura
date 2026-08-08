@@ -24,68 +24,167 @@
   };
 
   var FORM_TEXT = {
-    en: {customize:"Add what suits your guests",optional:"Additions",includedGuide:"A licensed tour guide is included in every Historic Jeddah tour.",guideLanguage:"Guide language",chooseLanguage:"Choose a language",languages:["Arabic","English","Spanish","French","German","Italian","Russian","Chinese","Japanese","Other"],period:"Preferred period",periodOptions:["Morning","Sunset","Evening","Flexible"],seaDuration:"Sea experience duration",durationOptions:["One hour","Half day","Full day","Flexible"],companyCity:"City",eventType:"Occasion type",eventLocation:"Preferred location",arrivalDate:"Arrival date",customDetails:"Describe the experience you would like",included:"Included",addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Hotel arrangements",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"Full event coordination",flowers:"Flowers and gifts",vipCar:"VIP vehicle",tailor:"Tailor at the hotel",abaya:"Abaya service"}},
-    ar: {customize:"أضف ما يناسب ضيوفك",optional:"إضافات",includedGuide:"تشمل كل جولة في جدة التاريخية مرشدًا سياحيًا مرخصًا.",guideLanguage:"لغة المرشد",chooseLanguage:"اختر اللغة",languages:["العربية","الإنجليزية","الإسبانية","الفرنسية","الألمانية","الإيطالية","الروسية","الصينية","اليابانية","لغة أخرى"],period:"الفترة المفضلة",periodOptions:["صباحية","وقت الغروب","مسائية","مرنة"],seaDuration:"مدة التجربة البحرية",durationOptions:["ساعة واحدة","نصف يوم","يوم كامل","مرنة"],companyCity:"المدينة",eventType:"نوع المناسبة",eventLocation:"الموقع المفضل",arrivalDate:"تاريخ الوصول",customDetails:"صف لنا التجربة التي ترغب بها",included:"مشمول",addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"ترتيبات الفندق",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"تنسيق كامل للفعالية",flowers:"ورد وهدايا",vipCar:"سيارة VIP",tailor:"خياط في الفندق",abaya:"خدمة العباية"}},
-    es: {customize:"Añade lo que mejor se adapte a tus invitados",optional:"Complementos",includedGuide:"Todas las visitas a Yeda Histórica incluyen un guía turístico autorizado.",guideLanguage:"Idioma del guía",chooseLanguage:"Elige un idioma",languages:["Árabe","Inglés","Español","Francés","Alemán","Italiano","Ruso","Chino","Japonés","Otro"],period:"Periodo preferido",periodOptions:["Mañana","Atardecer","Noche","Flexible"],seaDuration:"Duración de la experiencia marina",durationOptions:["Una hora","Medio día","Día completo","Flexible"],companyCity:"Ciudad",eventType:"Tipo de ocasión",eventLocation:"Lugar preferido",arrivalDate:"Fecha de llegada",customDetails:"Describe la experiencia que deseas",included:"Incluido",addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Reservas gastronómicas",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Hospitalidad privada",hotel:"Alojamiento en hotel",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Coordinación completa del evento",flowers:"Flores y regalos",vipCar:"Vehículo VIP",tailor:"Sastre en el hotel",abaya:"Servicio de abaya"}}
-  };
-
-  FORM_TEXT.en.serviceDetails = "Describe the guest service you need";
-  FORM_TEXT.ar.serviceDetails = "صف لنا خدمة الضيف التي تحتاجها";
-  FORM_TEXT.es.serviceDetails = "Describe el servicio para huéspedes que necesitas";
-  FORM_TEXT.en.addons.guide = "Licensed guide";
-  FORM_TEXT.ar.addons.guide = "مرشد سياحي مرخص";
-  FORM_TEXT.es.addons.guide = "Guía turístico acreditado";
-  FORM_TEXT.en.addons.concierge = "Concierge support";
-  FORM_TEXT.ar.addons.concierge = "دعم الكونسيرج";
-  FORM_TEXT.es.addons.concierge = "Asistencia de concierge";
-
-  var OBJECTIVE_GROUP_BY_TYPE = {
-    "historic-jeddah": "experience",
-    sea: "experience",
-    desert: "experience",
-    taif: "experience",
-    "jeddah-day": "experience",
-    corporate: "corporate",
-    "private-event": "event",
-    "vip-hosting": "vip",
-    "custom-experience": "custom"
-  };
-
-  var OBJECTIVE_CONFIG = {
     en: {
-      experience: {label:"What are you looking for in this experience?",placeholder:"Choose the closest priority",options:[["privacy","Privacy and a relaxed pace"],["place","Discovering the place and its character"],["celebration","Celebrating an occasion"],["recommend","I would like Aventura to recommend"]]},
-      corporate: {label:"What is the most important outcome of the corporate program?",placeholder:"Choose the closest outcome",options:[["hosting","Hosting guests or a delegation"],["team","Strengthening or rewarding the team"],["discovery","Introducing guests to Jeddah and local culture"],["recommend","I would like Aventura to recommend"]]},
-      event: {label:"What is the main purpose of the event?",placeholder:"Choose the closest purpose",options:[["celebration","Celebrating an occasion"],["hosting","Hosting guests"],["team","Strengthening relationships or rewarding a team"],["recommend","I would like Aventura to recommend"]]},
-      vip: {label:"What does the guest or delegation need most?",placeholder:"Choose the closest need",options:[["arrival","Coordinated arrival and transportation"],["program","A private program for the guest"],["hospitality","Hotel and dining arrangements"],["recommend","I would like Aventura to recommend"]]},
-      custom: {label:"What would you like the experience to achieve?",placeholder:"Choose the closest outcome",options:[["privacy","Privacy and a relaxed pace"],["place","Discovering the place and its character"],["celebration","Celebrating an occasion"],["recommend","I would like Aventura to recommend"]]},
+      optional:"Useful additions",
+      included:"Included",
+      includedGuide:"A licensed tour guide is included in every Historic Jeddah tour.",
+      guideLanguage:"Guide language",
+      chooseLanguage:"Choose a language",
+      languages:["Arabic","English","Spanish","French","German","Italian","Russian","Chinese","Japanese","Other"],
+      questions:{
+        historicFocus:"What should guide the Historic Jeddah tour?", historicHistory:"History and stories", historicArchitecture:"Architecture and rawasheen", historicHospitality:"A relaxed walk with hospitality",
+        historicPace:"Preferred tour pace", historicCalm:"Relaxed", historicBalanced:"Balanced",
+        seaMood:"What atmosphere suits the sea experience?", seaPrivate:"Relaxation and privacy", seaFamily:"Family atmosphere", seaTime:"Time by the sea",
+        seaActivity:"Activity level", seaCalm:"Calm", seaBalanced:"Balanced",
+        desertStyle:"How would you like the desert experience?", desertCalm:"A relaxed desert session", desertDunes:"A dune experience", desertMix:"A mix of both",
+        desertHospitality:"Would you like a private hospitality setup?", yes:"Yes", no:"No",
+        taifFocus:"What matters most on this Taif journey?", taifHada:"Al Hada mountains", taifRoses:"Rose farms in season", taifStops:"Calm stops and views",
+        jeddahFocus:"What matters most to the guest?", jeddahHospitality:"Hospitality", jeddahSea:"The sea", jeddahHistoric:"Historic Jeddah", jeddahBalanced:"A balanced day",
+        corporateGoal:"What outcome should the corporate program deliver?", corporateTeam:"Team building", corporateGuests:"Hosting guests or clients", corporateExecutive:"An executive program", corporateWorkplace:"Improving the work environment",
+        corporateGuestType:"Who are the guests?", corporateEmployees:"Employees", corporateClients:"Clients", corporateDelegation:"An international delegation",
+        eventType:"Occasion type", eventPrivate:"Private celebration", eventCorporate:"Corporate event", eventDinner:"Dinner or gathering",
+        eventLocationStatus:"Venue status", eventLocationReady:"The venue is selected", eventLocationSuggest:"We need a venue recommendation",
+        eventTone:"Desired atmosphere", eventFormal:"Formal", eventCelebratory:"Celebratory", eventPrivateTone:"Private",
+        vipGuestType:"Guest type", vipIndividual:"Individual", vipFamily:"Family", vipDelegation:"Delegation",
+        vipPriority:"What matters most?", vipArrival:"Smooth arrival and reception", vipProgram:"A private program", vipReservations:"Reservations and hospitality", vipFull:"Full visit coordination",
+        guestService:"Which guest service do you need?", guestServicePlaceholder:"Choose a service",
+        airportService:"Which airport service do you need?", airportArrival:"Meet and assist on arrival", airportDeparture:"Airport transfer on departure", arrivalDate:"Arrival date",
+        transportNeed:"What type of transport do you need?", transportAirport:"Airport transfer", transportCity:"Transport between locations", transportDay:"Vehicle for the full program",
+        diningNeed:"What arrangement do you need?", diningLunch:"Lunch reservation", diningDinner:"Dinner reservation", diningPrivate:"Private dining arrangement",
+        hospitalityNeed:"What kind of hospitality do you need?", hospitalityArrival:"Arrival welcome", hospitalityProgram:"Hospitality within the program", hospitalityOccasion:"Hospitality for an occasion",
+        hotelNeed:"What do you need from the hotel arrangement?", hotelBooking:"Hotel booking", hotelCoordination:"Coordinating an existing stay", hotelOther:"Another hotel request",
+        customArea:"Which setting is closest?", customHistoric:"Historic Jeddah", customSea:"The sea", customDesert:"The desert", customTaif:"Taif", customMix:"A mix of settings",
+        privacyLevel:"Privacy level", privacyRegular:"Private", privacyVery:"Very private", customDetails:"Tell us what you have in mind"
+      },
+      addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Hotel arrangements",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"Full event coordination",flowers:"Flowers and gifts",vipCar:"VIP vehicle",tailor:"Tailor at the hotel",abaya:"Abaya service",guide:"Licensed guide",concierge:"Concierge support"}
     },
     ar: {
-      experience: {label:"ما الذي تبحث عنه في هذه التجربة؟",placeholder:"اختر الأولوية الأقرب",options:[["privacy","الخصوصية والراحة"],["place","اكتشاف المكان وطبيعته"],["celebration","الاحتفال بمناسبة"],["recommend","أرغب أن تقترح أفنتورا الأنسب"]]},
-      corporate: {label:"ما النتيجة الأهم التي ينبغي أن يحققها برنامج الشركة؟",placeholder:"اختر النتيجة الأقرب",options:[["hosting","استضافة ضيوف أو وفد"],["team","تقوية الفريق أو مكافأته"],["discovery","تعريف الضيوف بجدة والثقافة المحلية"],["recommend","أرغب أن تقترح أفنتورا الأنسب"]]},
-      event: {label:"ما الغرض الرئيسي من الفعالية؟",placeholder:"اختر الغرض الأقرب",options:[["celebration","الاحتفال بمناسبة"],["hosting","استضافة ضيوف"],["team","تقوية العلاقة أو مكافأة فريق"],["recommend","أرغب أن تقترح أفنتورا الأنسب"]]},
-      vip: {label:"ما الذي يحتاجه الضيف أو الوفد أكثر؟",placeholder:"اختر الاحتياج الأقرب",options:[["arrival","استقبال وتنقل منسق"],["program","برنامج خاص للضيف"],["hospitality","ترتيبات الفندق والمطاعم"],["recommend","أرغب أن تقترح أفنتورا الأنسب"]]},
-      custom: {label:"ما النتيجة التي ترغب أن تحققها التجربة؟",placeholder:"اختر النتيجة الأقرب",options:[["privacy","الخصوصية والراحة"],["place","اكتشاف المكان وطبيعته"],["celebration","الاحتفال بمناسبة"],["recommend","أرغب أن تقترح أفنتورا الأنسب"]]},
+      optional:"إضافات اختيارية",
+      included:"مشمول",
+      includedGuide:"تشمل كل جولة في جدة التاريخية مرشدًا سياحيًا مرخصًا.",
+      guideLanguage:"لغة المرشد",
+      chooseLanguage:"اختر اللغة",
+      languages:["العربية","الإنجليزية","الإسبانية","الفرنسية","الألمانية","الإيطالية","الروسية","الصينية","اليابانية","لغة أخرى"],
+      questions:{
+        historicFocus:"ما الذي يهمكم أكثر في جولة جدة التاريخية؟", historicHistory:"التاريخ والقصص", historicArchitecture:"العمارة والرواشين", historicHospitality:"جولة هادئة مع ضيافة",
+        historicPace:"وتيرة الجولة", historicCalm:"هادئة", historicBalanced:"متوازنة",
+        seaMood:"ما الأجواء المناسبة للتجربة البحرية؟", seaPrivate:"استرخاء وخصوصية", seaFamily:"أجواء عائلية", seaTime:"وقت على البحر",
+        seaActivity:"مستوى النشاط", seaCalm:"هادئ", seaBalanced:"متوازن",
+        desertStyle:"كيف تحبون التجربة؟", desertCalm:"جلسة هادئة في الصحراء", desertDunes:"تجربة الكثبان الرملية", desertMix:"مزيج بينهما",
+        desertHospitality:"هل ترغبون بجلسة ضيافة خاصة؟", yes:"نعم", no:"لا",
+        taifFocus:"وش يهمكم أكثر في هذه الرحلة؟", taifHada:"جبال الهدا", taifRoses:"مزارع الورد في موسمها", taifStops:"محطات هادئة ومناظر",
+        jeddahFocus:"ما الذي يهم الضيف أكثر؟", jeddahHospitality:"الضيافة", jeddahSea:"البحر", jeddahHistoric:"جدة التاريخية", jeddahBalanced:"يوم متوازن بين الجميع",
+        corporateGoal:"ما النتيجة المطلوبة من البرنامج؟", corporateTeam:"بناء فريق", corporateGuests:"استقبال ضيوف أو عملاء", corporateExecutive:"برنامج تنفيذي", corporateWorkplace:"تحسين بيئة العمل",
+        corporateGuestType:"نوع الضيوف", corporateEmployees:"موظفون", corporateClients:"عملاء", corporateDelegation:"وفد دولي",
+        eventType:"نوع المناسبة", eventPrivate:"احتفال خاص", eventCorporate:"فعالية شركة", eventDinner:"عشاء أو لقاء",
+        eventLocationStatus:"حالة الموقع", eventLocationReady:"تم اختيار الموقع", eventLocationSuggest:"نحتاج اقتراح موقع",
+        eventTone:"الطابع المطلوب", eventFormal:"رسمي", eventCelebratory:"احتفالي", eventPrivateTone:"خاص",
+        vipGuestType:"نوع الضيف", vipIndividual:"فرد", vipFamily:"عائلة", vipDelegation:"وفد",
+        vipPriority:"ما الذي يهم أكثر؟", vipArrival:"وصول واستقبال سلس", vipProgram:"برنامج خاص", vipReservations:"حجوزات وضيافة", vipFull:"تنسيق كامل للزيارة",
+        guestService:"الخدمة المطلوبة", guestServicePlaceholder:"اختر الخدمة",
+        airportService:"نوع خدمة المطار", airportArrival:"استقبال ومساعدة عند الوصول", airportDeparture:"توصيل إلى المطار عند المغادرة", arrivalDate:"تاريخ الوصول",
+        transportNeed:"نوع النقل المطلوب", transportAirport:"نقل من أو إلى المطار", transportCity:"تنقل بين المواقع", transportDay:"سيارة للبرنامج كامل",
+        diningNeed:"نوع الترتيب المطلوب", diningLunch:"حجز غداء", diningDinner:"حجز عشاء", diningPrivate:"ترتيب عشاء خاص",
+        hospitalityNeed:"نوع الضيافة", hospitalityArrival:"ضيافة عند الوصول", hospitalityProgram:"ضيافة ضمن البرنامج", hospitalityOccasion:"ضيافة لمناسبة",
+        hotelNeed:"ما الذي تحتاجه في ترتيب الفندق؟", hotelBooking:"حجز فندق", hotelCoordination:"تنسيق إقامة قائمة", hotelOther:"طلب فندقي آخر",
+        customArea:"المجال الأقرب", customHistoric:"جدة التاريخية", customSea:"البحر", customDesert:"الصحراء", customTaif:"الطائف", customMix:"مزيج بين أكثر من تجربة",
+        privacyLevel:"مستوى الخصوصية", privacyRegular:"خاص", privacyVery:"خاص جدًا", customDetails:"صف لنا ما تتخيله لهذه التجربة"
+      },
+      addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"ترتيبات الفندق",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"تنسيق كامل للفعالية",flowers:"ورد وهدايا",vipCar:"سيارة VIP",tailor:"خياط في الفندق",abaya:"خدمة العباية",guide:"مرشد سياحي مرخص",concierge:"دعم الكونسيرج"}
     },
     es: {
-      experience: {label:"¿Qué buscas en esta experiencia?",placeholder:"Elige la prioridad más cercana",options:[["privacy","Privacidad y un ritmo relajado"],["place","Descubrir el lugar y su carácter"],["celebration","Celebrar una ocasión"],["recommend","Prefiero una recomendación de Aventura"]]},
-      corporate: {label:"¿Cuál es el resultado más importante del programa corporativo?",placeholder:"Elige el resultado más cercano",options:[["hosting","Recibir invitados o una delegación"],["team","Fortalecer o reconocer al equipo"],["discovery","Presentar Yeda y la cultura local a los invitados"],["recommend","Prefiero una recomendación de Aventura"]]},
-      event: {label:"¿Cuál es el objetivo principal del evento?",placeholder:"Elige el objetivo más cercano",options:[["celebration","Celebrar una ocasión"],["hosting","Recibir invitados"],["team","Fortalecer relaciones o reconocer a un equipo"],["recommend","Prefiero una recomendación de Aventura"]]},
-      vip: {label:"¿Qué necesita más el huésped o la delegación?",placeholder:"Elige la necesidad más cercana",options:[["arrival","Llegada y transporte coordinados"],["program","Un programa privado para el huésped"],["hospitality","Arreglos de hotel y gastronomía"],["recommend","Prefiero una recomendación de Aventura"]]},
-      custom: {label:"¿Qué te gustaría que lograra la experiencia?",placeholder:"Elige el resultado más cercano",options:[["privacy","Privacidad y un ritmo relajado"],["place","Descubrir el lugar y su carácter"],["celebration","Celebrar una ocasión"],["recommend","Prefiero una recomendación de Aventura"]]},
+      optional:"Complementos útiles",
+      included:"Incluido",
+      includedGuide:"Todas las visitas a Yeda Histórica incluyen un guía turístico autorizado.",
+      guideLanguage:"Idioma del guía",
+      chooseLanguage:"Elige un idioma",
+      languages:["Árabe","Inglés","Español","Francés","Alemán","Italiano","Ruso","Chino","Japonés","Otro"],
+      questions:{
+        historicFocus:"¿Qué debe guiar la visita por Yeda Histórica?", historicHistory:"Historia y relatos", historicArchitecture:"Arquitectura y rawasheen", historicHospitality:"Un paseo tranquilo con hospitalidad",
+        historicPace:"Ritmo de la visita", historicCalm:"Tranquilo", historicBalanced:"Equilibrado",
+        seaMood:"¿Qué ambiente encaja con la experiencia marina?", seaPrivate:"Relajación y privacidad", seaFamily:"Ambiente familiar", seaTime:"Tiempo junto al mar",
+        seaActivity:"Nivel de actividad", seaCalm:"Tranquilo", seaBalanced:"Equilibrado",
+        desertStyle:"¿Cómo prefieren la experiencia del desierto?", desertCalm:"Una sesión tranquila en el desierto", desertDunes:"Una experiencia entre dunas", desertMix:"Una mezcla de ambas",
+        desertHospitality:"¿Desean una sesión privada de hospitalidad?", yes:"Sí", no:"No",
+        taifFocus:"¿Qué importa más en este viaje a Taif?", taifHada:"Montañas de Al Hada", taifRoses:"Granjas de rosas en temporada", taifStops:"Paradas tranquilas y vistas",
+        jeddahFocus:"¿Qué importa más al huésped?", jeddahHospitality:"Hospitalidad", jeddahSea:"El mar", jeddahHistoric:"Yeda Histórica", jeddahBalanced:"Un día equilibrado",
+        corporateGoal:"¿Qué resultado debe ofrecer el programa corporativo?", corporateTeam:"Creación de equipo", corporateGuests:"Recibir invitados o clientes", corporateExecutive:"Un programa ejecutivo", corporateWorkplace:"Mejorar el entorno de trabajo",
+        corporateGuestType:"¿Quiénes son los invitados?", corporateEmployees:"Empleados", corporateClients:"Clientes", corporateDelegation:"Una delegación internacional",
+        eventType:"Tipo de ocasión", eventPrivate:"Celebración privada", eventCorporate:"Evento corporativo", eventDinner:"Cena o encuentro",
+        eventLocationStatus:"Estado del lugar", eventLocationReady:"El lugar ya está elegido", eventLocationSuggest:"Necesitamos una recomendación de lugar",
+        eventTone:"Ambiente deseado", eventFormal:"Formal", eventCelebratory:"Festivo", eventPrivateTone:"Privado",
+        vipGuestType:"Tipo de huésped", vipIndividual:"Individual", vipFamily:"Familia", vipDelegation:"Delegación",
+        vipPriority:"¿Qué importa más?", vipArrival:"Llegada y recepción fluida", vipProgram:"Un programa privado", vipReservations:"Reservas y hospitalidad", vipFull:"Coordinación completa de la visita",
+        guestService:"Servicio para huéspedes", guestServicePlaceholder:"Elige un servicio",
+        airportService:"Servicio de aeropuerto", airportArrival:"Recepción y asistencia a la llegada", airportDeparture:"Traslado al aeropuerto a la salida", arrivalDate:"Fecha de llegada",
+        transportNeed:"¿Qué transporte necesitas?", transportAirport:"Traslado desde o hacia el aeropuerto", transportCity:"Traslado entre ubicaciones", transportDay:"Vehículo durante todo el programa",
+        diningNeed:"¿Qué arreglo necesitas?", diningLunch:"Reserva de almuerzo", diningDinner:"Reserva de cena", diningPrivate:"Cena privada",
+        hospitalityNeed:"Tipo de hospitalidad", hospitalityArrival:"Bienvenida a la llegada", hospitalityProgram:"Hospitalidad durante el programa", hospitalityOccasion:"Hospitalidad para una ocasión",
+        hotelNeed:"¿Qué necesitas del hotel?", hotelBooking:"Reserva de hotel", hotelCoordination:"Coordinación de una estancia existente", hotelOther:"Otra solicitud de hotel",
+        customArea:"¿Qué entorno es el más cercano?", customHistoric:"Yeda Histórica", customSea:"El mar", customDesert:"El desierto", customTaif:"Taif", customMix:"Una mezcla de experiencias",
+        privacyLevel:"Nivel de privacidad", privacyRegular:"Privado", privacyVery:"Muy privado", customDetails:"Cuéntanos qué tienes en mente"
+      },
+      addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Arreglos gastronómicos",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Sesión privada de hospitalidad",hotel:"Arreglos de hotel",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Coordinación completa del evento",flowers:"Flores y regalos",vipCar:"Vehículo VIP",tailor:"Sastre en el hotel",abaya:"Servicio de abaya",guide:"Guía turístico acreditado",concierge:"Asistencia de concierge"}
     }
   };
 
   var REQUEST_CONFIG = {
-    "historic-jeddah": {guide:true,addons:["airport","transport","dining","photography"]},
-    "sea": {period:true,seaDuration:true,addons:["resort","transport","photography"]},
-    "desert": {period:true,addons:["transport","hospitality","photography"]},
-    "taif": {addons:["transport","dining","photography"]},
-    "jeddah-day": {addons:["transport","dining","photography"]},
-    "corporate": {city:true,addons:["airport","hotel","interpreter","gifts"]},
-    "private-event": {eventType:true,eventLocation:true,addons:["coordination","photography","flowers"]},
-    "vip-hosting": {arrivalDate:true,addons:["airport","vipCar","hotel","dining","tailor","abaya"]},
-    "guest-services": {serviceDetails:true,addons:["airport","transport","guide","dining","hospitality","hotel","tailor","abaya","flowers","concierge"]},
-    "custom-experience": {customDetails:true,addons:[]}
+    "historic-jeddah": {items:[
+      {kind:"note", label:"included", text:"includedGuide"},
+      {kind:"select", name:"guideLanguage", label:"guideLanguage", placeholder:"chooseLanguage", options:"languages", required:true},
+      {kind:"choice", name:"historicFocus", label:"historicFocus", options:["historicHistory","historicArchitecture","historicHospitality"]},
+      {kind:"choice", name:"historicPace", label:"historicPace", options:["historicCalm","historicBalanced"]},
+      {kind:"addons", options:["transport","dining","photography"]}
+    ]},
+    sea: {items:[
+      {kind:"choice", name:"seaMood", label:"seaMood", options:["seaPrivate","seaFamily","seaTime"]},
+      {kind:"choice", name:"seaActivity", label:"seaActivity", options:["seaCalm","seaBalanced"]},
+      {kind:"addons", options:["resort","transport","photography"]}
+    ]},
+    desert: {items:[
+      {kind:"choice", name:"desertStyle", label:"desertStyle", options:["desertCalm","desertDunes","desertMix"]},
+      {kind:"choice", name:"desertHospitality", label:"desertHospitality", options:["yes","no"]},
+      {kind:"addons", options:["transport","photography"]}
+    ]},
+    taif: {items:[
+      {kind:"choice", name:"taifFocus", label:"taifFocus", options:["taifHada","taifRoses","taifStops"]},
+      {kind:"addons", options:["transport","dining","photography"]}
+    ]},
+    "jeddah-day": {items:[
+      {kind:"choice", name:"jeddahFocus", label:"jeddahFocus", options:["jeddahHospitality","jeddahSea","jeddahHistoric","jeddahBalanced"]},
+      {kind:"addons", options:["transport","dining","photography"]}
+    ]},
+    corporate: {items:[
+      {kind:"choice", name:"corporateGoal", label:"corporateGoal", options:["corporateTeam","corporateGuests","corporateExecutive","corporateWorkplace"]},
+      {kind:"choice", name:"corporateGuestType", label:"corporateGuestType", options:["corporateEmployees","corporateClients","corporateDelegation"]},
+      {kind:"addons", options:["airport","hotel","interpreter","gifts"]}
+    ]},
+    "private-event": {items:[
+      {kind:"choice", name:"eventType", label:"eventType", options:["eventPrivate","eventCorporate","eventDinner"]},
+      {kind:"choice", name:"eventLocationStatus", label:"eventLocationStatus", options:["eventLocationReady","eventLocationSuggest"]},
+      {kind:"choice", name:"eventTone", label:"eventTone", options:["eventFormal","eventCelebratory","eventPrivateTone"]},
+      {kind:"addons", options:["coordination","flowers","photography"]}
+    ]},
+    "vip-hosting": {items:[
+      {kind:"choice", name:"vipGuestType", label:"vipGuestType", options:["vipIndividual","vipFamily","vipDelegation"]},
+      {kind:"choice", name:"vipPriority", label:"vipPriority", options:["vipArrival","vipProgram","vipReservations","vipFull"]},
+      {kind:"addons", options:["airport","vipCar","hotel","dining","tailor","abaya"]}
+    ]},
+    "guest-services": {items:[
+      {kind:"select", name:"guestService", label:"guestService", placeholder:"guestServicePlaceholder", options:["airport","transport","guide","dining","hospitality","hotel","tailor","abaya","flowers","concierge"], required:true},
+      {kind:"choice", name:"airportService", label:"airportService", options:["airportArrival","airportDeparture"], dependsOn:"guestService:airport"},
+      {kind:"input", name:"arrivalDate", label:"arrivalDate", inputType:"date", dependsOn:"guestService:airport"},
+      {kind:"choice", name:"transportNeed", label:"transportNeed", options:["transportAirport","transportCity","transportDay"], dependsOn:"guestService:transport"},
+      {kind:"select", name:"guideLanguage", label:"guideLanguage", placeholder:"chooseLanguage", options:"languages", required:true, dependsOn:"guestService:guide"},
+      {kind:"choice", name:"diningNeed", label:"diningNeed", options:["diningLunch","diningDinner","diningPrivate"], dependsOn:"guestService:dining"},
+      {kind:"choice", name:"hospitalityNeed", label:"hospitalityNeed", options:["hospitalityArrival","hospitalityProgram","hospitalityOccasion"], dependsOn:"guestService:hospitality"},
+      {kind:"choice", name:"hotelNeed", label:"hotelNeed", options:["hotelBooking","hotelCoordination","hotelOther"], dependsOn:"guestService:hotel"}
+    ]},
+    "custom-experience": {items:[
+      {kind:"choice", name:"customArea", label:"customArea", options:["customHistoric","customSea","customDesert","customTaif","customMix"]},
+      {kind:"choice", name:"privacyLevel", label:"privacyLevel", options:["privacyRegular","privacyVery"]},
+      {kind:"textarea", name:"customExperienceDetails", label:"customDetails"}
+    ]}
   };
 
   function currentLanguage() {
@@ -97,22 +196,84 @@
     if (document.getElementById("aventura-dynamic-request-styles")) return;
     var style = document.createElement("style");
     style.id = "aventura-dynamic-request-styles";
-    style.textContent = ".dynamic-request-panel{grid-column:1/-1;margin-top:.35rem;padding:1.25rem;border:1px solid rgba(22,38,54,.14);border-radius:18px;background:rgba(255,255,255,.72);animation:aventuraPanelIn .28s ease both}.dynamic-request-panel h3{margin:0 0 .35rem;font-size:1.15rem}.dynamic-request-panel .dynamic-note{margin:0 0 1rem;padding:.8rem 1rem;border-radius:12px;background:rgba(201,168,106,.13)}.dynamic-request-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.dynamic-request-grid .full{grid-column:1/-1}.dynamic-addons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin-top:.75rem}.dynamic-addons label{display:flex;align-items:flex-start;gap:.65rem;padding:.8rem;border:1px solid rgba(22,38,54,.12);border-radius:12px;background:#fff;cursor:pointer}.dynamic-addons input{margin-top:.18rem}@keyframes aventuraPanelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@media(max-width:720px){.dynamic-request-grid,.dynamic-addons{grid-template-columns:1fr}}";
+    style.textContent = ".dynamic-request-panel{grid-column:1/-1;margin-top:.35rem;padding:1.25rem;border:1px solid rgba(22,38,54,.14);border-radius:18px;background:rgba(255,255,255,.72);animation:aventuraPanelIn .28s ease both}.dynamic-request-panel .dynamic-note{margin:0;padding:.8rem 1rem;border-radius:12px;background:rgba(201,168,106,.13)}.dynamic-request-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.dynamic-request-grid .full{grid-column:1/-1}.dynamic-choice{min-width:0;margin:0;padding:0;border:0}.dynamic-choice legend,.dynamic-addons legend{margin:0 0 .7rem;font-weight:700}.dynamic-choice-grid,.dynamic-addons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.dynamic-choice-grid label,.dynamic-addons label{display:flex;align-items:flex-start;gap:.65rem;padding:.8rem;border:1px solid rgba(22,38,54,.12);border-radius:12px;background:#fff;cursor:pointer}.dynamic-choice-grid input,.dynamic-addons input{margin-top:.18rem}.dynamic-addons{min-width:0;margin:0;padding:0;border:0}@keyframes aventuraPanelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@media(max-width:720px){.dynamic-request-grid,.dynamic-choice-grid,.dynamic-addons{grid-template-columns:1fr}}";
     document.head.appendChild(style);
   }
 
-  function fieldMarkup(id,name,label,type,required,full) {
-    return '<div class="field'+(full?' full':'')+'"><label for="'+id+'">'+label+(required?' *':'')+'</label><input id="'+id+'" name="'+name+'" type="'+type+'"'+(required?' required':'')+'></div>';
+  function escapeHtml(value) {
+    return String(value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\"/g, "&quot;").replace(/'/g, "&#039;");
   }
 
-  function textareaMarkup(id,name,label) {
-    return '<div class="field full"><label for="'+id+'">'+label+'</label><textarea id="'+id+'" name="'+name+'"></textarea></div>';
+  function textFor(key, text) {
+    if (text.questions && text.questions[key]) return text.questions[key];
+    if (text.addons && text.addons[key]) return text.addons[key];
+    return text[key] || key;
   }
 
-  function selectMarkup(id,name,label,placeholder,options,required) {
-    var html='<div class="field"><label for="'+id+'">'+label+(required?' *':'')+'</label><select id="'+id+'" name="'+name+'"'+(required?' required':'')+'><option value="" selected disabled>'+placeholder+'</option>';
-    options.forEach(function(option){html+='<option value="'+option+'">'+option+'</option>';});
-    return html+'</select></div>';
+  function dependencyAttributes(item) {
+    return item.dependsOn ? ' data-depends-on="' + escapeHtml(item.dependsOn) + '" hidden' : "";
+  }
+
+  function disabledAttribute(item) {
+    return item.dependsOn ? " disabled" : "";
+  }
+
+  function optionEntries(item, text) {
+    if (item.options === "languages") {
+      return text.languages.map(function (label, index) { return [String(index), label]; });
+    }
+    return (item.options || []).map(function (key) { return [key, textFor(key, text)]; });
+  }
+
+  function selectMarkup(item, text) {
+    var id = "request-" + item.name;
+    var label = textFor(item.label, text);
+    var html = '<div class="field full" data-request-summary-label="' + escapeHtml(label) + '"' + dependencyAttributes(item) + '><label for="' + id + '">' + escapeHtml(label) + (item.required ? " *" : "") + '</label><select id="' + id + '" name="' + item.name + '" data-request-summary' + (item.required ? " required" : "") + disabledAttribute(item) + '><option value="" selected disabled>' + escapeHtml(textFor(item.placeholder, text)) + "</option>";
+    optionEntries(item, text).forEach(function (option) {
+      html += '<option value="' + escapeHtml(option[0]) + '">' + escapeHtml(option[1]) + "</option>";
+    });
+    return html + "</select></div>";
+  }
+
+  function choiceMarkup(item, text) {
+    var label = textFor(item.label, text);
+    var html = '<fieldset class="dynamic-choice full" data-request-summary-label="' + escapeHtml(label) + '"' + dependencyAttributes(item) + "><legend>" + escapeHtml(label) + (item.required ? " *" : "") + '</legend><div class="dynamic-choice-grid">';
+    optionEntries(item, text).forEach(function (option, index) {
+      var id = "request-" + item.name + "-" + index;
+      html += '<label for="' + id + '"><input id="' + id + '" type="radio" name="' + item.name + '" value="' + escapeHtml(option[0]) + '" data-request-summary' + (item.required ? " required" : "") + disabledAttribute(item) + "><span>" + escapeHtml(option[1]) + "</span></label>";
+    });
+    return html + "</div></fieldset>";
+  }
+
+  function inputMarkup(item, text) {
+    var id = "request-" + item.name;
+    var label = textFor(item.label, text);
+    return '<div class="field full" data-request-summary-label="' + escapeHtml(label) + '"' + dependencyAttributes(item) + '><label for="' + id + '">' + escapeHtml(label) + (item.required ? " *" : "") + '</label><input id="' + id + '" name="' + item.name + '" type="' + (item.inputType || "text") + '" data-request-summary' + (item.required ? " required" : "") + disabledAttribute(item) + "></div>";
+  }
+
+  function textareaMarkup(item, text) {
+    var id = "request-" + item.name;
+    var label = textFor(item.label, text);
+    return '<div class="field full" data-request-summary-label="' + escapeHtml(label) + '"' + dependencyAttributes(item) + '><label for="' + id + '">' + escapeHtml(label) + (item.required ? " *" : "") + '</label><textarea id="' + id + '" name="' + item.name + '" data-request-summary' + (item.required ? " required" : "") + disabledAttribute(item) + "></textarea></div>";
+  }
+
+  function addonsMarkup(item, text) {
+    var html = '<fieldset class="dynamic-addons full" data-request-summary-label="' + escapeHtml(text.optional) + '"><legend>' + escapeHtml(text.optional) + '</legend><div class="dynamic-choice-grid">';
+    item.options.forEach(function (addon, index) {
+      var id = "request-addon-" + addon + "-" + index;
+      html += '<label for="' + id + '"><input id="' + id + '" type="checkbox" name="addons[]" value="' + addon + '" data-request-summary><span>' + escapeHtml(textFor(addon, text)) + "</span></label>";
+    });
+    return html + "</div></fieldset>";
+  }
+
+  function itemMarkup(item, text) {
+    if (item.kind === "note") return '<div class="dynamic-note full"><strong>' + escapeHtml(textFor(item.label, text)) + ":</strong> " + escapeHtml(textFor(item.text, text)) + "</div>";
+    if (item.kind === "select") return selectMarkup(item, text);
+    if (item.kind === "choice") return choiceMarkup(item, text);
+    if (item.kind === "input") return inputMarkup(item, text);
+    if (item.kind === "textarea") return textareaMarkup(item, text);
+    if (item.kind === "addons") return addonsMarkup(item, text);
+    return "";
   }
 
   var REQUEST_TYPE_BY_ITEM = {
@@ -198,67 +359,71 @@
     return ADDON_BY_ITEM[item] || "";
   }
 
-  function updateObjectiveField() {
-    var typeSelect = document.getElementById("type");
-    var objective = document.getElementById("objective");
-    if (!typeSelect || !objective) return;
-    var wrapper = objective.closest(".field");
-    var group = OBJECTIVE_GROUP_BY_TYPE[typeSelect.value];
-    var config = group && OBJECTIVE_CONFIG[currentLanguage()][group];
-    if (!config) {
-      if (wrapper) wrapper.hidden = true;
-      objective.disabled = true;
-      objective.value = "";
-      objective.removeAttribute("data-request-type");
-      return;
-    }
-    var preserveValue = objective.getAttribute("data-request-type") === typeSelect.value ? objective.value : "";
-    var label = document.querySelector('label[for="objective"]');
-    if (label) label.textContent = config.label;
-    objective.innerHTML = '<option value="" selected disabled>'+config.placeholder+'</option>';
-    config.options.forEach(function (option) {
-      var item = document.createElement("option");
-      item.value = option[0];
-      item.textContent = option[1];
-      objective.appendChild(item);
+  function updateConditionalFields(panel) {
+    panel.querySelectorAll("[data-depends-on]").forEach(function (container) {
+      var dependency = container.getAttribute("data-depends-on");
+      var parts = dependency.split(":");
+      var selected = panel.querySelector('[name="' + parts[0] + '"]:checked') || panel.querySelector('[name="' + parts[0] + '"]');
+      var shouldShow = Boolean(selected && selected.value === parts[1]);
+      container.hidden = !shouldShow;
+      container.querySelectorAll("input, select, textarea").forEach(function (control) {
+        control.disabled = !shouldShow;
+      });
     });
-    objective.value = config.options.some(function (option) { return option[0] === preserveValue; }) ? preserveValue : "";
-    objective.disabled = false;
-    objective.setAttribute("data-request-type", typeSelect.value);
-    if (wrapper) wrapper.hidden = false;
+  }
+
+  function notifyRequestDetailsUpdated() {
+    var form = document.querySelector("[data-contact-form]");
+    if (form) form.dispatchEvent(new CustomEvent("aventura:request-details-updated"));
+  }
+
+  function setMinimumDate(panel) {
+    var today = new Date();
+    var localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
+    panel.querySelectorAll('input[type="date"]').forEach(function (field) { field.setAttribute("min", localDate); });
   }
 
   function renderDynamicRequestFields() {
-    var select=document.getElementById("type");
-    var formGrid=select&&select.closest(".form-grid");
-    if(!select||!formGrid)return;
-    var existing=document.getElementById("dynamicRequestPanel");
-    if(existing)existing.remove();
-    var config=REQUEST_CONFIG[select.value];
-    if(!config)return;
-    var text=FORM_TEXT[currentLanguage()];
-    var panel=document.createElement("section");
-    panel.id="dynamicRequestPanel";
-    panel.className="dynamic-request-panel";
-    panel.setAttribute("aria-live","polite");
-    var markup='<h3>'+text.customize+'</h3><div class="dynamic-request-grid">';
-    if(config.guide){markup+='<div class="dynamic-note full"><strong>'+text.included+':</strong> '+text.includedGuide+'</div>';markup+=selectMarkup("guideLanguage","guideLanguage",text.guideLanguage,text.chooseLanguage,text.languages,true);}
-    if(config.period)markup+=selectMarkup("experiencePeriod","experiencePeriod",text.period,text.period,text.periodOptions,false);
-    if(config.seaDuration)markup+=selectMarkup("seaExperienceDuration","seaExperienceDuration",text.seaDuration,text.seaDuration,text.durationOptions,false);
-    if(config.city)markup+=fieldMarkup("programCity","programCity",text.companyCity,"text",false,false);
-    if(config.eventType)markup+=fieldMarkup("occasionType","occasionType",text.eventType,"text",false,false);
-    if(config.eventLocation)markup+=fieldMarkup("eventLocation","eventLocation",text.eventLocation,"text",false,false);
-    if(config.arrivalDate)markup+=fieldMarkup("arrivalDate","arrivalDate",text.arrivalDate,"date",false,false);
-    if(config.activityType)markup+=fieldMarkup("businessActivity","businessActivity",text.activityType,"text",false,false);
-    if(config.customDetails)markup+=textareaMarkup("customExperienceDetails","customExperienceDetails",text.customDetails);
-    if(config.serviceDetails)markup+=textareaMarkup("guestServiceDetails","guestServiceDetails",text.serviceDetails);
-    if(config.partnershipDetails)markup+=textareaMarkup("partnershipDetails","partnershipDetails",text.partnershipDetails);
-    if(config.addons&&config.addons.length){markup+='<fieldset class="full"><legend>'+text.optional+'</legend><div class="dynamic-addons">';config.addons.forEach(function(addon){markup+='<label><input type="checkbox" name="addons[]" value="'+addon+'"><span>'+text.addons[addon]+'</span></label>';});markup+='</div></fieldset>';}
-    panel.innerHTML=markup+'</div>';
+    var select = document.getElementById("type");
+    var secondGrid = document.querySelector('[data-request-step="2"] [data-request-step-grid]');
+    if (!select || !secondGrid) return;
+
+    var existing = document.getElementById("dynamicRequestPanel");
+    if (existing) existing.remove();
+
+    var config = REQUEST_CONFIG[select.value];
+    if (!config) {
+      notifyRequestDetailsUpdated();
+      return;
+    }
+
+    var text = FORM_TEXT[currentLanguage()];
+    var panel = document.createElement("section");
+    panel.id = "dynamicRequestPanel";
+    panel.className = "dynamic-request-panel";
+    panel.setAttribute("aria-live", "polite");
+    panel.innerHTML = '<div class="dynamic-request-grid">' + config.items.map(function (item) { return itemMarkup(item, text); }).join("") + "</div>";
+
     var requestedAddon = requestedAddonFromUrl();
-    var requestedAddonInput = requestedAddon && panel.querySelector('[name="addons[]"][value="'+requestedAddon+'"]');
-    if (requestedAddonInput) requestedAddonInput.checked = true;
-    select.closest(".field").insertAdjacentElement("afterend",panel);
+    var requestedService = panel.querySelector('[name="guestService"]');
+    if (requestedAddon && requestedService && Array.from(requestedService.options).some(function (option) { return option.value === requestedAddon; })) {
+      requestedService.value = requestedAddon;
+    }
+
+    var detailGroup = secondGrid.querySelector("[data-request-details]");
+    var message = document.getElementById("message");
+    var messageWrapper = message && message.closest(".field");
+    var anchor = detailGroup || messageWrapper || secondGrid.querySelector(".request-step-actions");
+    if (anchor) secondGrid.insertBefore(panel, anchor);
+    else secondGrid.appendChild(panel);
+
+    setMinimumDate(panel);
+    updateConditionalFields(panel);
+    panel.addEventListener("change", function () {
+      updateConditionalFields(panel);
+      notifyRequestDetailsUpdated();
+    });
+    notifyRequestDetailsUpdated();
   }
 
   function updateRequestTypeOptions(language) {
@@ -272,14 +437,13 @@
     options.forEach(function(item,index){var option=document.createElement("option");option.value=item[0];option.textContent=item[1];if(index===0)option.disabled=true;select.appendChild(option);});
     select.value=options.some(function(item){return item[0]===selectedValue;})?selectedValue:"";
     renderDynamicRequestFields();
-    updateObjectiveField();
   }
 
   function initializeRequestTypes() {
     addDynamicStyles();
     updateRequestTypeOptions(currentLanguage());
     var select=document.getElementById("type");
-    if(select)select.addEventListener("change",function(){renderDynamicRequestFields();updateObjectiveField();if(window.AVENTURA_TRACK)window.AVENTURA_TRACK("request_type_select",{requestType:select.value});});
+    if(select)select.addEventListener("change",function(){renderDynamicRequestFields();if(window.AVENTURA_TRACK)window.AVENTURA_TRACK("request_type_select",{requestType:select.value});});
     document.addEventListener("aventura:language",function(event){updateRequestTypeOptions((event.detail&&event.detail.language)||currentLanguage());});
     document.addEventListener("aventura:contact-wizard-ready",function(){updateRequestTypeOptions(currentLanguage());});
   }
