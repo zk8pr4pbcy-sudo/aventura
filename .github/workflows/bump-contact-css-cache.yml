@@ -1,0 +1,29 @@
+name: Bump contact CSS cache key
+
+on:
+  push:
+    branches:
+      - fix-contact-radio-labels-20260810
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-contact-radio-labels-20260810
+      - name: Update cache key and remove temporary workflow
+        run: |
+          sed -i 's/contact-mobile-fix.css?v=20260809-1/contact-mobile-fix.css?v=20260810-2/g' contact.html
+          rm -f .github/workflows/bump-contact-css-cache.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contact.html .github/workflows/bump-contact-css-cache.yml
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Refresh contact mobile fix cache key"
+          git push origin HEAD:fix-contact-radio-labels-20260810
