@@ -1,0 +1,147 @@
+name: Live production smoke
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  live-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.54.2 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+      - name: Test live Aventura site
+        run: |
+          cat > live-smoke.cjs <<'NODE'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          const path = require('path');
+          const BASE = 'https://aventuraksa.com/';
+          const pages = fs.readdirSync('.').filter(f => f.endsWith('.html')).sort();
+          const results = [];
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, locale: 'ar-SA' });
+            const pageErrors = [];
+            mobile.on('pageerror', e => pageErrors.push(String(e)));
+            mobile.on('console', msg => { if (msg.type() === 'error' && !String(msg.text()).includes('favicon')) pageErrors.push('console: ' + msg.text()); });
+
+            for (const file of pages) {
+              const url = new URL(file === 'index.html' ? '' : file, BASE).href;
+              let response = null;
+              for (let attempt = 0; attempt < 3; attempt++) {
+                try {
+                  response = await mobile.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+                  if (response && response.status() < 500) break;
+                } catch (e) {
+                  if (attempt === 2) throw new Error(file + ' failed to load: ' + e.message);
+                  await mobile.waitForTimeout(1500);
+                }
+              }
+              await mobile.waitForTimeout(250);
+              const status = response ? response.status() : 0;
+              if (status !== 200) throw new Error(file + ' returned HTTP ' + status);
+              const geometry = await mobile.evaluate(() => ({
+                sw: document.documentElement.scrollWidth,
+                cw: document.documentElement.clientWidth,
+                title: document.title,
+                h1: document.querySelector('h1')?.textContent?.trim() || ''
+              }));
+              if (geometry.sw > geometry.cw + 2) throw new Error(file + ' mobile horizontal overflow ' + JSON.stringify(geometry));
+              if (!geometry.title) throw new Error(file + ' missing title');
+              results.push({ file, status, overflow: geometry.sw - geometry.cw, title: geometry.title.slice(0,80) });
+            }
+
+            // Mobile navigation on production homepage.
+            await mobile.goto(BASE, { waitUntil: 'networkidle', timeout: 30000 });
+            const toggle = mobile.locator('.nav-toggle');
+            if (!(await toggle.isVisible())) throw new Error('Mobile navigation toggle is not visible');
+            await toggle.click();
+            const nav = mobile.locator('#primaryNav');
+            if (!(await nav.isVisible())) throw new Error('Mobile navigation did not open');
+            const visibleLinks = await nav.locator('a').count();
+            if (visibleLinks < 6) throw new Error('Mobile navigation has too few links: ' + visibleLinks);
+
+            // Language switching on homepage.
+            for (const lang of ['en','ar','es']) {
+              await mobile.goto(BASE, { waitUntil: 'networkidle', timeout: 30000 });
+              await mobile.locator(`[data-language="${lang}"]`).click();
+              await mobile.waitForTimeout(250);
+              const state = await mobile.evaluate(() => ({ lang: document.documentElement.lang, dir: document.documentElement.dir, h1: document.querySelector('h1')?.textContent?.trim() || '' }));
+              if (state.lang !== lang) throw new Error('Language switch failed for ' + lang + ': ' + JSON.stringify(state));
+              if (lang === 'ar' && state.dir !== 'rtl') throw new Error('Arabic direction is not RTL');
+              if (lang !== 'ar' && state.dir !== 'ltr') throw new Error(lang + ' direction is not LTR');
+              if (!state.h1) throw new Error('Homepage H1 empty after switching to ' + lang);
+            }
+
+            // Contact flow: Historic Jeddah, guide language, radio labels.
+            await mobile.goto(BASE + 'contact.html?lang=ar', { waitUntil: 'networkidle', timeout: 30000 });
+            await mobile.selectOption('#type', 'historic-jeddah');
+            await mobile.locator('[data-request-next]:visible').click();
+            const guide = mobile.locator('[name="guideLanguage"]:visible');
+            const options = await guide.locator('option').evaluateAll(items => items.map(o => ({ value:o.value, text:o.textContent.trim() })).filter(x => x.value));
+            if (options.length < 5) throw new Error('Guide language options missing');
+            for (const item of options) {
+              if (/^\d+$/.test(item.value)) throw new Error('Guide language still uses numeric value: ' + JSON.stringify(item));
+              if (item.value !== item.text) throw new Error('Guide language value/text mismatch: ' + JSON.stringify(item));
+            }
+            const french = options.find(x => x.text === 'الفرنسية');
+            if (!french) throw new Error('Arabic French option not found');
+            await guide.selectOption(french.value);
+            if ((await guide.inputValue()) !== 'الفرنسية') throw new Error('Selected guide language is not localized name');
+            await mobile.locator('[data-request-next]:visible').click();
+            await mobile.waitForTimeout(250);
+            const radios = await mobile.evaluate(() => [...document.querySelectorAll('[data-submission-channel] .request-option-grid label')].map(label => {
+              const input = label.querySelector('input'); const span = label.querySelector('span');
+              const lb = label.getBoundingClientRect(), ib = input.getBoundingClientRect(), sb = span.getBoundingClientRect();
+              return { text: span.textContent.trim(), label:[lb.left,lb.right], inputWidth:ib.width, span:[sb.left,sb.right] };
+            }));
+            if (radios.length !== 2) throw new Error('Submission channel options missing');
+            for (const r of radios) {
+              if (r.inputWidth > 30) throw new Error('Radio expanded on mobile: ' + JSON.stringify(r));
+              if (r.span[0] < r.label[0]-1 || r.span[1] > r.label[1]+1) throw new Error('Radio label escapes card: ' + JSON.stringify(r));
+            }
+            await mobile.screenshot({ path: 'live-contact-mobile.png', fullPage: true });
+
+            // Desktop spot checks for major pages.
+            const desktop = await browser.newPage({ viewport: { width: 1440, height: 1000 }, locale: 'en-US' });
+            for (const file of ['index.html','experience-historic-jeddah.html','collection.html','corporate.html','guest-services.html','contact.html']) {
+              const url = new URL(file === 'index.html' ? '' : file, BASE).href;
+              const response = await desktop.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+              if (!response || response.status() !== 200) throw new Error('Desktop ' + file + ' status ' + (response && response.status()));
+              const g = await desktop.evaluate(() => ({ sw:document.documentElement.scrollWidth,cw:document.documentElement.clientWidth }));
+              if (g.sw > g.cw + 2) throw new Error('Desktop overflow ' + file + ' ' + JSON.stringify(g));
+            }
+            await desktop.goto(BASE, { waitUntil: 'networkidle' });
+            await desktop.screenshot({ path: 'live-home-desktop.png', fullPage: false });
+
+            console.log('LIVE_PAGE_COUNT=' + pages.length);
+            console.log('LIVE_RESULTS=' + JSON.stringify(results));
+            console.log('CONTACT_GUIDE_OPTIONS=' + JSON.stringify(options));
+            console.log('CONTACT_RADIOS=' + JSON.stringify(radios));
+            console.log('PAGE_ERRORS=' + JSON.stringify(pageErrors));
+            if (pageErrors.length) throw new Error('Browser errors detected: ' + JSON.stringify(pageErrors.slice(0,10)));
+            await browser.close();
+          })().catch(e => { console.error(e); process.exit(1); });
+          NODE
+          node live-smoke.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-production-smoke
+          path: |
+            live-contact-mobile.png
+            live-home-desktop.png
+          if-no-files-found: ignore
