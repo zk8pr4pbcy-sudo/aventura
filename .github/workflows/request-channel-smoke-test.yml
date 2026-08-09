@@ -52,12 +52,34 @@ jobs:
             const pageErrors = [];
             page.on('pageerror', error => pageErrors.push(String(error)));
 
+            async function advanceWizard() {
+              const next = page.locator('[data-request-next]:visible');
+              if (await next.count()) {
+                await next.first().click();
+                await page.waitForTimeout(150);
+              }
+            }
+
             async function fillRequest(channel) {
               await page.goto('http://127.0.0.1:4173/contact.html?lang=ar', { waitUntil: 'networkidle' });
-              await page.fill('#name', 'اختبار أفنتورا قبل الإطلاق');
-              await page.fill('#email', 'contact@aventuraksa.com');
-              await page.fill('#phone', '+966555884854');
-              await page.fill('#message', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
+
+              // Step 1: choose a generic inquiry so the smoke test does not create a fake booking.
+              await page.selectOption('#type', 'other');
+              await advanceWizard();
+
+              // Step 2: add only a clearly marked technical test note.
+              if (await page.locator('#message:visible').count()) {
+                await page.fill('#message', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
+              }
+              await advanceWizard();
+
+              // Step 3: contact details and delivery channel.
+              await page.fill('#name:visible', 'اختبار أفنتورا قبل الإطلاق');
+              await page.fill('#email:visible', 'contact@aventuraksa.com');
+              await page.fill('#phone:visible', '+966555884854');
+              if (await page.locator('#message:visible').count()) {
+                await page.fill('#message:visible', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
+              }
               await page.check(`input[name="submissionChannel"][value="${channel}"]`);
             }
 
@@ -66,7 +88,7 @@ jobs:
               response => response.url().includes('formsubmit.co/ajax/contact@aventuraksa.com') && response.request().method() === 'POST',
               { timeout: 30000 }
             );
-            await page.locator('[data-contact-form] button[type="submit"]').click();
+            await page.locator('[data-contact-form] button[type="submit"]:visible').click();
             const emailResponse = await emailResponsePromise;
             const emailBody = await emailResponse.text();
             await page.waitForTimeout(500);
@@ -86,7 +108,7 @@ jobs:
                 return null;
               };
             });
-            await page.locator('[data-contact-form] button[type="submit"]').click();
+            await page.locator('[data-contact-form] button[type="submit"]:visible').click();
             await page.waitForFunction(() => Boolean(window.__aventuraWhatsAppTestUrl), null, { timeout: 10000 });
             const whatsappUrl = await page.evaluate(() => window.__aventuraWhatsAppTestUrl);
             const parsed = new URL(whatsappUrl);
