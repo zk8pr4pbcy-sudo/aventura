@@ -1,0 +1,90 @@
+name: Contact radio mobile check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  contact-radio-mobile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.54.2 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/aventura-http.log 2>&1 &
+          for i in {1..30}; do
+            curl -fsS http://127.0.0.1:4173/contact.html >/dev/null && exit 0
+            sleep 1
+          done
+          cat /tmp/aventura-http.log
+          exit 1
+      - name: Verify step 3 radio labels on iPhone width
+        run: |
+          cat > contact-radio-check.cjs <<'NODE'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage({ viewport: { width: 390, height: 844 }, locale: 'ar-SA' });
+            await page.goto('http://127.0.0.1:4173/contact.html?lang=ar', { waitUntil: 'networkidle' });
+            await page.selectOption('#type', 'historic-jeddah');
+            await page.locator('[data-request-next]:visible').click();
+            const guide = page.locator('[name="guideLanguage"]:visible');
+            const values = await guide.locator('option').evaluateAll(items => items.map(o => o.value).filter(Boolean));
+            await guide.selectOption(values[0]);
+            await page.locator('[data-request-next]:visible').click();
+            await page.waitForTimeout(300);
+
+            const result = await page.evaluate(() => {
+              const labels = [...document.querySelectorAll('[data-submission-channel] .request-option-grid label')];
+              return labels.map(label => {
+                const input = label.querySelector('input');
+                const span = label.querySelector('span');
+                const lb = label.getBoundingClientRect();
+                const ib = input.getBoundingClientRect();
+                const sb = span.getBoundingClientRect();
+                const style = getComputedStyle(span);
+                return {
+                  text: span.textContent.trim(),
+                  label: { x: lb.x, right: lb.right, width: lb.width },
+                  input: { x: ib.x, right: ib.right, width: ib.width },
+                  span: { x: sb.x, right: sb.right, width: sb.width },
+                  display: style.display,
+                  visibility: style.visibility,
+                  color: style.color
+                };
+              });
+            });
+            console.log('RADIO_LAYOUT=' + JSON.stringify(result));
+            if (result.length !== 2) throw new Error('Expected two submission-channel options');
+            for (const item of result) {
+              if (!item.text) throw new Error('Submission-channel label text is empty');
+              if (item.input.width > 30) throw new Error('Radio input is still expanding: ' + JSON.stringify(item));
+              if (item.span.width < 40) throw new Error('Radio label text has no usable width: ' + JSON.stringify(item));
+              if (item.span.x < 0 || item.span.right > 390) throw new Error('Radio label text is outside viewport: ' + JSON.stringify(item));
+              if (item.span.x < item.label.x - 1 || item.span.right > item.label.right + 1) throw new Error('Radio label text escapes its card: ' + JSON.stringify(item));
+              if (item.display === 'none' || item.visibility === 'hidden') throw new Error('Radio label is hidden: ' + JSON.stringify(item));
+            }
+            await page.screenshot({ path: 'contact-step3-mobile.png', fullPage: false });
+            await browser.close();
+          })().catch(error => { console.error(error); process.exit(1); });
+          NODE
+          node contact-radio-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: contact-step3-mobile
+          path: contact-step3-mobile.png
+          if-no-files-found: ignore
