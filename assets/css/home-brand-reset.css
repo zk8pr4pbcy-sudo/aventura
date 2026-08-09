@@ -3,12 +3,13 @@
 body[data-page="home"] .site-header,
 body[data-page="home"] .site-header.is-scrolled,
 body[data-page="home"] .site-header.menu-open {
-  /* Solid ivory keeps the header distinct from the hero at every scroll position. */
-  background: #fff9ef;
-  border-bottom: 1px solid rgba(23, 50, 74, 0.18);
-  box-shadow: 0 8px 24px rgba(23, 50, 74, 0.1);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  /* A permanent, calm surface keeps the brand readable over the opening mosaic. */
+  color: #0f2742;
+  background: rgba(255, 250, 242, 0.98);
+  border-bottom: 1px solid rgba(15, 39, 66, 0.14);
+  box-shadow: 0 10px 30px rgba(15, 39, 66, 0.09);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 body[data-page="home"] .site-header .brand {
@@ -23,27 +24,35 @@ body[data-page="home"] .site-header .brand {
 }
 
 body[data-page="home"] .site-header .brand-logo {
-  width: 172px;
+  width: 190px;
   opacity: 1;
   filter: none;
   transform: none;
   image-rendering: auto;
 }
 
-body[data-page="home"] .site-header .nav-link,
-body[data-page="home"] .site-header .lang-switch button,
-body[data-page="home"] .site-header .nav-toggle {
-  color: #17324a;
+body[data-page="home"] .site-header .nav-link {
+  color: #596978;
+}
+
+body[data-page="home"] .site-header .nav-link:hover,
+body[data-page="home"] .site-header .nav-link.is-active {
+  color: #0f2742;
 }
 
 body[data-page="home"] .site-header .lang-switch,
 body[data-page="home"] .site-header .nav-toggle {
-  border-color: rgba(23, 50, 74, 0.22);
+  color: #0f2742;
+  border-color: rgba(15, 39, 66, 0.22);
+}
+
+body[data-page="home"] .site-header .lang-switch button {
+  color: #596978;
 }
 
 body[data-page="home"] .site-header .lang-switch button.is-active {
-  color: #fff9ef;
-  background: #17324a;
+  color: #fffaf2;
+  background: #0f2742;
 }
 
 .home-hero-aventura {
