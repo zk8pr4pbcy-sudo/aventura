@@ -215,7 +215,7 @@
 
   function optionEntries(item, text) {
     if (item.options === "languages") {
-      return text.languages.map(function (label, index) { return [String(index), label]; });
+      return text.languages.map(function (label) { return [label, label]; });
     }
     return (item.options || []).map(function (key) { return [key, textFor(key, text)]; });
   }
