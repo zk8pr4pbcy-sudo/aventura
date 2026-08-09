@@ -1,0 +1,146 @@
+name: Prelaunch visual audit
+
+on:
+  push:
+    branches:
+      - visual-audit-prelaunch-20260809
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.54.2
+          npx playwright install --with-deps chromium
+
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/aventura-http.log 2>&1 &
+          echo $! > /tmp/aventura-http.pid
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/aventura-http.log
+          exit 1
+
+      - name: Capture desktop and iPhone views
+        run: |
+          cat > /tmp/visual-audit.js <<'NODE'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          const path = require('path');
+
+          const pages = fs.readdirSync('.')
+            .filter(name => name.endsWith('.html'))
+            .sort();
+
+          const profiles = [
+            { name: 'mobile', viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true },
+            { name: 'desktop', viewport: { width: 1440, height: 1100 }, isMobile: false, hasTouch: false }
+          ];
+
+          fs.mkdirSync('visual-audit', { recursive: true });
+          const report = { generatedAt: new Date().toISOString(), pageCount: pages.length, results: [] };
+          const browser = await chromium.launch({ headless: true });
+
+          for (const profile of profiles) {
+            const context = await browser.newContext({
+              viewport: profile.viewport,
+              isMobile: profile.isMobile,
+              hasTouch: profile.hasTouch,
+              locale: 'ar-SA',
+              colorScheme: 'light'
+            });
+            const page = await context.newPage();
+            await page.emulateMedia({ reducedMotion: 'reduce' });
+
+            for (const file of pages) {
+              const errors = [];
+              const consoleErrors = [];
+              const onPageError = err => errors.push(String(err));
+              const onConsole = msg => { if (msg.type() === 'error') consoleErrors.push(msg.text()); };
+              page.on('pageerror', onPageError);
+              page.on('console', onConsole);
+
+              const url = `http://127.0.0.1:4173/${encodeURIComponent(file)}`;
+              await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+              await page.waitForTimeout(250);
+
+              const metrics = await page.evaluate(() => {
+                const root = document.documentElement;
+                const body = document.body;
+                const hero = document.querySelector('.hero, .page-hero');
+                const heroTitle = hero && hero.querySelector('h1');
+                const heroDescription = hero && hero.querySelector('.hero-description, .page-hero-description');
+                const header = document.querySelector('.site-header');
+                const brokenImages = [...document.images]
+                  .filter(img => img.complete && img.naturalWidth === 0)
+                  .map(img => img.getAttribute('src') || '');
+                const viewportWidth = root.clientWidth;
+                const overflow = Math.max(root.scrollWidth, body ? body.scrollWidth : 0) - viewportWidth;
+                const offscreenFixed = [...document.querySelectorAll('header, nav, .site-header, .form-card, .page-hero-content, .hero-content')]
+                  .filter(el => {
+                    const r = el.getBoundingClientRect();
+                    return r.width > 0 && (r.left < -2 || r.right > viewportWidth + 2);
+                  })
+                  .map(el => ({ selector: el.className || el.tagName, left: Math.round(el.getBoundingClientRect().left), right: Math.round(el.getBoundingClientRect().right) }));
+                const colorOf = el => el ? getComputedStyle(el).color : null;
+                return {
+                  title: document.title,
+                  lang: root.lang,
+                  dir: root.dir,
+                  viewportWidth,
+                  documentWidth: Math.max(root.scrollWidth, body ? body.scrollWidth : 0),
+                  horizontalOverflowPx: Math.max(0, Math.round(overflow)),
+                  brokenImages,
+                  offscreenFixed,
+                  heroTitleColor: colorOf(heroTitle),
+                  heroDescriptionColor: colorOf(heroDescription),
+                  headerHeight: header ? Math.round(header.getBoundingClientRect().height) : null
+                };
+              });
+
+              const safe = file.replace(/\.html$/i, '') || 'index';
+              const screenshot = path.join('visual-audit', `${profile.name}__${safe}.png`);
+              await page.screenshot({ path: screenshot, fullPage: true, animations: 'disabled' });
+
+              report.results.push({ profile: profile.name, file, screenshot, errors, consoleErrors, ...metrics });
+              page.off('pageerror', onPageError);
+              page.off('console', onConsole);
+            }
+            await context.close();
+          }
+
+          await browser.close();
+          fs.writeFileSync('visual-audit/report.json', JSON.stringify(report, null, 2));
+          console.log(`Captured ${report.results.length} screenshots for ${pages.length} pages.`);
+          const issues = report.results.filter(r => r.horizontalOverflowPx > 2 || r.brokenImages.length || r.errors.length || r.offscreenFixed.length);
+          console.log(`Automated visual flags: ${issues.length}`);
+          for (const issue of issues) {
+            console.log(JSON.stringify({profile: issue.profile, file: issue.file, overflow: issue.horizontalOverflowPx, brokenImages: issue.brokenImages, errors: issue.errors, offscreen: issue.offscreenFixed}));
+          }
+          NODE
+          node /tmp/visual-audit.js
+
+      - name: Upload visual audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: aventura-prelaunch-visual-audit
+          path: visual-audit
+          retention-days: 7
