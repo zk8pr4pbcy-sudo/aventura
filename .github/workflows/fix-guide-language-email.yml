@@ -1,0 +1,55 @@
+name: Apply guide language email label fix
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.event.pull_request.head.ref == 'fix-guide-language-email-label-20260810'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-guide-language-email-label-20260810
+          fetch-depth: 0
+      - name: Patch language values and cache bust
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          analytics = Path('assets/js/analytics.js')
+          text = analytics.read_text()
+          old = 'return text.languages.map(function (label, index) { return [String(index), label]; });'
+          new = 'return text.languages.map(function (label) { return [label, label]; });'
+          if old not in text:
+              raise SystemExit('Expected language option mapping not found')
+          analytics.write_text(text.replace(old, new, 1))
+
+          contact = Path('contact.html')
+          html = contact.read_text()
+          old_src = 'assets/js/analytics.js?v=legal-20260809'
+          new_src = 'assets/js/analytics.js?v=guide-label-20260810'
+          if old_src not in html:
+              raise SystemExit('Expected analytics cache token not found')
+          contact.write_text(html.replace(old_src, new_src, 1))
+
+          wf = Path('.github/workflows/fix-guide-language-email.yml')
+          wf.unlink()
+          PY
+      - name: Verify patch
+        run: |
+          grep -F 'return text.languages.map(function (label) { return [label, label]; });' assets/js/analytics.js
+          grep -F 'assets/js/analytics.js?v=guide-label-20260810' contact.html
+          test ! -e .github/workflows/fix-guide-language-email.yml
+      - name: Commit fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/js/analytics.js contact.html .github/workflows/fix-guide-language-email.yml
+          git commit -m 'Send guide language names in booking emails'
+          git push origin HEAD:fix-guide-language-email-label-20260810
