@@ -1,0 +1,21 @@
+/* Final prelaunch visual polish found during screenshot review. */
+.prelaunch-last-light-section .detail-product-grid::before,
+.prelaunch-last-light-section .detail-product-grid::after,
+.prelaunch-last-light-section .detail-perfume-product::before,
+.prelaunch-last-light-section .detail-perfume-product::after {
+  display: none !important;
+}
+
+.prelaunch-last-light-section .detail-product-grid {
+  position: relative;
+  width: min(100%, 420px);
+  margin-inline: auto;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.prelaunch-last-light-section .detail-perfume-product {
+  width: 100%;
+  margin: 0;
+}
