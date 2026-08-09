@@ -11,7 +11,7 @@
       privacy: {
         lead: "آخر تحديث: 9 أغسطس 2026",
         identity: [
-          "جهة التحكم بالبيانات: أفنتورا، منشأة سعودية لتنظيم وإدارة الفعاليات والتجارب الخاصة في جدة، سجل تجاري رقم 4030583057.",
+          "جهة التحكم بالبيانات: مؤسسة أفنتورا لتنظيم وإدارة الفعاليات، منشأة سعودية مسجلة بالسجل التجاري رقم 4030583057.",
           "لأسئلة الخصوصية أو ممارسة الحقوق: contact@aventuraksa.com — يرجى كتابة «الخصوصية» في عنوان الرسالة."
         ],
         navigation: { privacy: "سياسة الخصوصية", terms: "الشروط والأحكام" },
@@ -40,7 +40,7 @@
           {
             heading: "3. مصادر البيانات وطريقة جمعها",
             blocks: [
-              { type: "p", text: "تصلنا البيانات مباشرة منك عبر نموذج الطلب، البريد الإلكتروني، واتساب أو نموذج التعاون. وقد تصلنا من شركة أو وكالة سفر أو جهة عمل تطلب خدمة محلية نيابة عن ضيوفها؛ ويتعين على تلك الجهة أن تكون مخولة بالمشاركة وأن تبلغ أصحاب البيانات عند الاقتضاء." },
+              { type: "p", text: "تصلنا البيانات مباشرة منك عبر نموذج الطلب، البريد الإلكتروني، واتساب أو نموذج التعاون. وقد تصلنا من شركة أو وكالة سفر أو جهة عمل تطلب خدمة محلية نيابة عن ضيوفها؛ ويتعين على تلك الجهة أن تكون مخولة بالمشاركة وأن تبلغ أصحاب البيانات عند الاقتضاء. وعند تلقّي بيانات من هذه الجهات، تُشعر أفنتورا صاحب البيانات بهذه السياسة أو تتيحها له في الوقت الذي يقتضيه النظام، ما لم يوجد استثناء نظامي." },
               { type: "p", text: "الحقول المطلوبة في النموذج محدودة بما يلزم لبدء الطلب. أما التفاصيل الإضافية، مثل موقع الفندق أو رسالة البطاقة، فهي اختيارية ما لم تكن ضرورية للخدمة التي طلبتها." }
             ]
           },
@@ -161,7 +161,7 @@
           {
             heading: "5. التعديل والإلغاء والاسترداد",
             blocks: [
-              { type: "p", text: "ما لم يذكر تأكيد الحجز سياسة مختلفة بسبب مورد أو خدمة مخصوصة، تؤكد الدفعة المقدمة البالغة 25٪ الحجز ولا تسترد عند إلغاء العميل. يستحق الرصيد قبل 48 ساعة من موعد الخدمة، ولا تسترد المبالغ المدفوعة عند الإلغاء خلال 48 ساعة. وتخضع أجزاء الموردين الخارجيين للشروط التي يبيّنها تأكيد الحجز." },
+              { type: "p", text: "تُحدد شروط التعديل والإلغاء والاسترداد وأي دفعة مطلوبة للخدمة المحددة حصراً في العرض أو تأكيد الحجز المكتوب، وفق نطاق الخدمة وتاريخها وتوفر الموردين وشروطهم. لا تعتمد أفنتورا في هذه الشروط العامة نسبة عربون أو مهلة أو استرداداً ثابتاً لجميع الخدمات." },
               { type: "p", text: "يجب طلب أي تعديل كتابةً، ويظل خاضعًا للتوفر وأثره في السعر أو الدفعة. لا تؤثر هذه الشروط في أي حقوق إلزامية يمنحها النظام السعودي للمستهلك." }
             ]
           },
@@ -220,7 +220,7 @@
       privacy: {
         lead: "Last updated: 9 August 2026",
         identity: [
-          "Data controller: Aventura, a Saudi organisation for event management and private experiences in Jeddah, Commercial Registration No. 4030583057.",
+          "Data controller: Aventura Event Management Establishment, a Saudi establishment registered under Commercial Registration No. 4030583057.",
           "For privacy questions or rights requests: contact@aventuraksa.com — please use “Privacy” in the subject line."
         ],
         navigation: { privacy: "Privacy policy", terms: "Terms & conditions" },
@@ -249,7 +249,7 @@
           {
             heading: "3. Sources and collection methods",
             blocks: [
-              { type: "p", text: "We receive data directly from you through the request form, email, WhatsApp, or the partnership form. We may also receive it from a company, travel agency, or employer that requests a local service for its guests; that organisation must be authorised to share the data and notify the relevant people where required." },
+              { type: "p", text: "We receive data directly from you through the request form, email, WhatsApp, or the partnership form. We may also receive it from a company, travel agency, or employer that requests a local service for its guests; that organisation must be authorised to share the data and notify the relevant people where required. When Aventura receives data this way, it will provide this policy to the relevant person or otherwise notify them when required by law, unless a legal exception applies." },
               { type: "p", text: "Required form fields are limited to what is needed to start the request. Extra details, such as a hotel location or gift-card message, are optional unless they are necessary for the service you request." }
             ]
           },
@@ -370,7 +370,7 @@
           {
             heading: "5. Changes, cancellations, and refunds",
             blocks: [
-              { type: "p", text: "Unless a booking confirmation states a different policy because of a particular supplier or service, a 25% deposit confirms the booking and is non-refundable if the client cancels. The balance is due 48 hours before the service; amounts paid for a cancellation within 48 hours are non-refundable. Third-party supplier components remain subject to the terms stated in the booking confirmation." },
+              { type: "p", text: "The payment, change, cancellation, and refund terms for a specific service are set only in its written proposal or booking confirmation, taking account of the service scope, date, provider availability, and provider terms. These general terms do not set a fixed deposit percentage, deadline, or refund outcome for every service." },
               { type: "p", text: "Any requested change must be made in writing and remains subject to availability and any effect on price or deposit. These terms do not affect any mandatory consumer rights under Saudi law." }
             ]
           },
@@ -429,7 +429,7 @@
       privacy: {
         lead: "Última actualización: 9 de agosto de 2026",
         identity: [
-          "Responsable del tratamiento: Aventura, entidad saudí de gestión de eventos y experiencias privadas en Yeda, Registro Comercial n.º 4030583057.",
+          "Responsable del tratamiento: Establecimiento Aventura de Gestión de Eventos, entidad saudí inscrita en el Registro Comercial n.º 4030583057.",
           "Para consultas de privacidad o ejercicio de derechos: contact@aventuraksa.com — indica «Privacidad» en el asunto."
         ],
         navigation: { privacy: "Política de privacidad", terms: "Términos y condiciones" },
@@ -458,7 +458,7 @@
           {
             heading: "3. Fuentes y formas de recogida",
             blocks: [
-              { type: "p", text: "Recibimos datos directamente de ti mediante el formulario de solicitud, el correo, WhatsApp o el formulario de colaboración. También podemos recibirlos de una empresa, agencia de viajes o empleador que solicita un servicio local para sus huéspedes; esa entidad debe estar autorizada para compartir los datos e informar a las personas afectadas cuando corresponda." },
+              { type: "p", text: "Recibimos datos directamente de ti mediante el formulario de solicitud, el correo, WhatsApp o el formulario de colaboración. También podemos recibirlos de una empresa, agencia de viajes o empleador que solicita un servicio local para sus huéspedes; esa entidad debe estar autorizada para compartir los datos e informar a las personas afectadas cuando corresponda. Cuando Aventura recibe datos de esta forma, facilitará esta política a la persona afectada o le informará de ella cuando la ley lo exija, salvo que exista una excepción legal." },
               { type: "p", text: "Los campos obligatorios se limitan a lo necesario para iniciar la solicitud. Los datos adicionales, como la ubicación del hotel o el mensaje de una tarjeta, son opcionales salvo que resulten necesarios para el servicio solicitado." }
             ]
           },
@@ -579,7 +579,7 @@
           {
             heading: "5. Cambios, cancelaciones y reembolsos",
             blocks: [
-              { type: "p", text: "Salvo que la confirmación de reserva establezca otra política por un proveedor o servicio concreto, un anticipo del 25 % confirma la reserva y no es reembolsable si el cliente cancela. El saldo vence 48 horas antes del servicio; los importes pagados no son reembolsables si la cancelación ocurre dentro de las 48 horas. Los componentes de proveedores externos se rigen además por las condiciones indicadas en la confirmación." },
+              { type: "p", text: "Las condiciones de pago, cambio, cancelación y reembolso de un servicio concreto se establecen únicamente en su propuesta o confirmación escrita, teniendo en cuenta el alcance, la fecha, la disponibilidad y las condiciones de los proveedores. Estos términos generales no fijan un porcentaje de anticipo, un plazo ni un resultado de reembolso único para todos los servicios." },
               { type: "p", text: "Todo cambio solicitado debe hacerse por escrito y depende de disponibilidad y de su posible efecto en el precio o el anticipo. Estos términos no afectan a derechos obligatorios del consumidor conforme a la legislación saudí." }
             ]
           },

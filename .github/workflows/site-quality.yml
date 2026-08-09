@@ -23,5 +23,7 @@ jobs:
           node --check assets/js/translations.js
           node --check assets/js/analytics.js
           node --check assets/js/app.js
+          node --check assets/js/legal-content.js
+          node --check scripts/localize-default-metadata.mjs
       - name: Validate pages, links and translations
         run: node scripts/validate-site.mjs

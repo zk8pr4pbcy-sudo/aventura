@@ -281,3 +281,156 @@ html[lang="ar"] .home-hero-aventura h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Pre-DNS direction: Historic Jeddah leads the opening image, with the sea,
+   desert and Taif visible as distinct supporting worlds. */
+.home-hero-aventura .home-hero-mosaic {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(180px, 0.9fr) minmax(160px, 0.72fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  background: #071a2a;
+}
+
+.home-hero-aventura .home-hero-tile {
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #17324a;
+}
+
+.home-hero-aventura .home-hero-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.06) contrast(1.02) brightness(1.02);
+  transform: scale(1.015);
+}
+
+.home-hero-aventura .home-hero-tile-historic {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+.home-hero-aventura .home-hero-tile-historic img {
+  object-position: center;
+}
+
+.home-hero-aventura .home-hero-tile-sea {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.home-hero-aventura .home-hero-tile-desert {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.home-hero-aventura .home-hero-tile-taif {
+  grid-row: 1 / -1;
+  grid-column: 3;
+}
+
+.home-hero-aventura::before,
+html[dir="rtl"] .home-hero-aventura::before {
+  background:
+    linear-gradient(90deg, rgba(4, 17, 29, 0.7) 0%, rgba(4, 17, 29, 0.42) 42%, rgba(4, 17, 29, 0.12) 73%, rgba(4, 17, 29, 0.24) 100%),
+    linear-gradient(180deg, rgba(4, 17, 29, 0.04), rgba(4, 17, 29, 0.34));
+}
+
+html[dir="rtl"] .home-hero-aventura::before {
+  background:
+    linear-gradient(270deg, rgba(4, 17, 29, 0.7) 0%, rgba(4, 17, 29, 0.42) 42%, rgba(4, 17, 29, 0.12) 73%, rgba(4, 17, 29, 0.24) 100%),
+    linear-gradient(180deg, rgba(4, 17, 29, 0.04), rgba(4, 17, 29, 0.34));
+}
+
+.home-hero-aventura::after {
+  background: linear-gradient(180deg, rgba(4, 17, 29, 0) 35%, rgba(4, 17, 29, 0.68) 100%);
+}
+
+.home-hero-aventura .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 681px) {
+  .home-hero-aventura h1,
+  html[lang="ar"] .home-hero-aventura h1 {
+    color: #fff9ef !important;
+    text-shadow: 0 3px 24px rgba(4, 17, 29, 0.56);
+  }
+
+  .home-hero-aventura .hero-description {
+    color: #ffffff !important;
+    background: linear-gradient(90deg, rgba(4, 17, 29, 0.64), rgba(4, 17, 29, 0.34));
+    box-shadow: 0 12px 28px rgba(4, 17, 29, 0.18);
+  }
+
+  html[dir="rtl"] .home-hero-aventura .hero-description {
+    background: linear-gradient(270deg, rgba(4, 17, 29, 0.64), rgba(4, 17, 29, 0.34));
+  }
+}
+
+@media (max-width: 680px) {
+  .home-hero-aventura {
+    min-height: 840px;
+    background: #17324a;
+  }
+
+  .home-hero-aventura .home-hero-mosaic {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1.55fr) minmax(0, 0.62fr);
+    gap: 3px;
+    padding: 3px;
+  }
+
+  .home-hero-aventura .home-hero-tile-historic {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+
+  .home-hero-aventura .home-hero-tile-sea {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .home-hero-aventura .home-hero-tile-desert {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .home-hero-aventura .home-hero-tile-taif {
+    grid-row: 2;
+    grid-column: 3;
+  }
+
+  .home-hero-aventura::before,
+  html[dir="rtl"] .home-hero-aventura::before {
+    background: linear-gradient(180deg, rgba(4, 17, 29, 0.06) 0%, rgba(4, 17, 29, 0.16) 34%, rgba(4, 17, 29, 0.74) 63%, rgba(4, 17, 29, 0.94) 100%);
+  }
+
+  .home-hero-aventura::after {
+    background: linear-gradient(180deg, rgba(4, 17, 29, 0) 44%, rgba(4, 17, 29, 0.84) 100%);
+  }
+
+  .home-hero-aventura h1,
+  html[lang="ar"] .home-hero-aventura h1 {
+    color: #fff9ef !important;
+    text-shadow: 0 3px 18px rgba(4, 17, 29, 0.66);
+  }
+
+  .home-hero-aventura .hero-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  .home-hero-aventura .hero-audience span {
+    color: #fff9ef;
+    background: rgba(4, 17, 29, 0.42);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}

@@ -56,6 +56,42 @@ const languages = ["en", "ar", "es"];
 const counts = languages.map((language) => Object.keys(dictionaries[language] || {}).length);
 if (new Set(counts).size !== 1) fail("translations", `language counts differ: ${counts.join(", ")}`);
 
+function decodeHtml(value) {
+  return String(value || "")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">");
+}
+
+function htmlValue(source, expression) {
+  const match = source.match(expression);
+  return match ? decodeHtml(match[1].trim()) : "";
+}
+
+for (const file of htmlFiles) {
+  const source = fs.readFileSync(path.join(root, file), "utf8");
+  const body = source.match(/<body\b[^>]*>/i)?.[0] || "";
+  const titleKey = htmlValue(body, /\bdata-title-key="([^"]+)"/i);
+  const descriptionKey = htmlValue(body, /\bdata-description-key="([^"]+)"/i);
+  const defaultTitle = dictionaries.ar?.[titleKey];
+  const defaultDescription = dictionaries.ar?.[descriptionKey];
+
+  if (!/<html\s+lang="ar"\s+dir="rtl"/i.test(source)) fail(file, "Arabic must be the static default");
+  if (!defaultTitle || !defaultDescription) {
+    fail(file, "missing Arabic default metadata key");
+    continue;
+  }
+  if (htmlValue(source, /<title>([\s\S]*?)<\/title>/i) !== defaultTitle) fail(file, "static title must match Arabic default");
+  if (htmlValue(source, /<meta\s+name="description"\s+content="([^"]*)"/i) !== defaultDescription) fail(file, "static description must match Arabic default");
+  if (htmlValue(source, /<meta\s+property="og:title"\s+content="([^"]*)"/i) !== defaultTitle) fail(file, "Open Graph title must match Arabic default");
+  if (htmlValue(source, /<meta\s+property="og:description"\s+content="([^"]*)"/i) !== defaultDescription) fail(file, "Open Graph description must match Arabic default");
+  if (htmlValue(source, /<meta\s+name="twitter:title"\s+content="([^"]*)"/i) !== defaultTitle) fail(file, "Twitter title must match Arabic default");
+  if (htmlValue(source, /<meta\s+name="twitter:description"\s+content="([^"]*)"/i) !== defaultDescription) fail(file, "Twitter description must match Arabic default");
+  if (htmlValue(source, /<meta\s+property="og:locale"\s+content="([^"]*)"/i) !== "ar_SA") fail(file, "Open Graph locale must be ar_SA");
+}
+
 const prefixes = new Set(Object.keys(dictionaries.en).map((key) => key.split(".")[0]));
 const translationSources = htmlFiles.map((file) => fs.readFileSync(path.join(root, file), "utf8")).join("\n") + [
   "assets/js/app.js",
@@ -76,6 +112,20 @@ for (const key of candidates) {
 const searchableText = translationSources + JSON.stringify(dictionaries);
 if (/\b(?:honey|miel)\b|عسل/iu.test(searchableText)) fail("content", "food product term found");
 if (/\bluxury\b|فاخر/iu.test(searchableText)) fail("content", "disallowed luxury language found");
+if (/\bfishing\b|\bpesca\b|صيد/iu.test(searchableText)) fail("content", "retired sea-activity language found");
+if (/Al-Dun|كثبان\s+الدون|كثبان\s+دون/iu.test(searchableText)) fail("content", "retired desert location language found");
+
+const homeSource = fs.readFileSync(path.join(root, "index.html"), "utf8");
+if (/"TravelAgency"/i.test(homeSource) || !/"EventPlanningBusiness"/i.test(homeSource)) {
+  fail("index.html", "structured data must describe Aventura as an event-planning business, not a travel agency");
+}
+
+["terms.html", "privacy.html"].forEach((file) => {
+  const source = fs.readFileSync(path.join(root, file), "utf8");
+  if (!source.includes('assets/js/legal-content.js') || !source.includes('data-legal-document=')) {
+    fail(file, "legal page must load its structured legal content");
+  }
+});
 
 const appSource = fs.readFileSync(path.join(root, "assets/js/app.js"), "utf8");
 const collectionSource = fs.readFileSync(path.join(root, "collection.html"), "utf8");
@@ -239,6 +289,9 @@ if (!/\["name", "company", "phone", "email", "preferredResponse"\]\.forEach\(fun
 const contactSource = fs.readFileSync(path.join(root, "contact.html"), "utf8");
 if (!appSource.includes('var REQUEST_EMAIL = "contact@aventuraksa.com"') || !appSource.includes('var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com"') || !contactSource.includes('action="https://formsubmit.co/contact@aventuraksa.com"') || !contactSource.includes('method="POST"') || !/name="submissionChannel" value="email" checked[\s\S]*name="submissionChannel" value="whatsapp"/.test(contactSource) || !contactBlock.includes('var submissionChannel = String(data.get("submissionChannel") || "email")') || !contactBlock.includes('sendRequestWithFormSubmit(submissionData)') || contactBlock.includes('"mailto:" + REQUEST_EMAIL')) {
   fail("contact", "booking requests must submit automatically to contact@aventuraksa.com with WhatsApp as the second option");
+}
+if (!contactSource.includes('href="privacy.html"') || !contactSource.includes('href="terms.html"') || !contactSource.includes('data-i18n="contact.sensitiveDataNotice"')) {
+  fail("contact", "request form must link its privacy notice, terms and sensitive-data warning");
 }
 if (/amassiri@aventuraksa\.com|Waseem@aventuraksa\.com/i.test(searchableText)) {
   fail("contact", "retired public email addresses remain in the site");

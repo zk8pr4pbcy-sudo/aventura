@@ -6806,3 +6806,39 @@ html[dir="rtl"] .world-note {
     border-radius: 92px 18px 92px 18px;
   }
 }
+
+/* Keep the direct request action visible on common laptop widths even when the
+   full navigation moves into the compact menu for long language labels. */
+@media (min-width: 1151px) and (max-width: 1500px) {
+  .site-header .header-plan {
+    display: inline-flex;
+    min-height: 42px;
+    padding-inline: 16px;
+    font-size: 0.78rem;
+  }
+}
+
+.partner-local-scope {
+  max-width: 920px;
+  margin: 42px auto 0;
+  padding: 25px 28px;
+  color: var(--navy-900);
+  background: linear-gradient(135deg, rgba(229, 206, 157, 0.34), rgba(255, 255, 255, 0.88));
+  border: 1px solid rgba(143, 107, 52, 0.2);
+  border-inline-start: 3px solid var(--gold);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.partner-local-scope .eyebrow {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.partner-local-scope p {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--ink);
+  font-weight: 620;
+  line-height: 1.8;
+}

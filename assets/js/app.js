@@ -2,7 +2,7 @@
   "use strict";
 
   var SUPPORTED_LANGUAGES = ["en", "ar", "es"];
-  var DEFAULT_LANGUAGE = "en";
+  var DEFAULT_LANGUAGE = "ar";
   var STORAGE_KEY = "aventura_language";
   var QUOTE_SELECTION_STORAGE_KEY = "aventura_quote_selection_v3";
   var QUOTE_SELECTION_LEGACY_KEY = "aventura_quote_selection_v2";
@@ -248,10 +248,19 @@
     return readPath(selected, key) || readPath(fallback, key) || key;
   }
 
-  function getInitialLanguage() {
+  function getLanguageFromQuery() {
     var query = new URLSearchParams(window.location.search).get("lang");
     if (SUPPORTED_LANGUAGES.indexOf(query) !== -1) {
       return query;
+    }
+
+    return null;
+  }
+
+  function getInitialLanguage() {
+    var queryLanguage = getLanguageFromQuery();
+    if (queryLanguage) {
+      return queryLanguage;
     }
 
     try {
@@ -263,8 +272,94 @@
       /* Local storage may be disabled. */
     }
 
-    var browserLanguage = (navigator.language || "").slice(0, 2).toLowerCase();
-    return SUPPORTED_LANGUAGES.indexOf(browserLanguage) !== -1 ? browserLanguage : DEFAULT_LANGUAGE;
+    return DEFAULT_LANGUAGE;
+  }
+
+  function localizedUrl(language) {
+    var url = new URL(window.location.href);
+    if (language === DEFAULT_LANGUAGE) {
+      url.searchParams.delete("lang");
+    } else {
+      url.searchParams.set("lang", language);
+    }
+    return url;
+  }
+
+  function localizedCanonicalUrl(language) {
+    var canonical = document.querySelector('link[rel="canonical"]');
+    var baseUrl = canonical && canonical.getAttribute("data-aventura-canonical-base");
+    if (!baseUrl && canonical) {
+      baseUrl = canonical.getAttribute("href") || canonical.href;
+      canonical.setAttribute("data-aventura-canonical-base", baseUrl);
+    }
+
+    var url = new URL(baseUrl || window.location.href, window.location.href);
+    url.search = "";
+    url.hash = "";
+    if (language !== DEFAULT_LANGUAGE) {
+      url.searchParams.set("lang", language);
+    }
+    return url;
+  }
+
+  function syncLocalizedMetadata(language) {
+    var canonicalUrl = localizedCanonicalUrl(language).toString();
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute("href", canonicalUrl);
+    }
+
+    document.querySelectorAll('meta[property="og:url"]').forEach(function (meta) {
+      meta.setAttribute("content", canonicalUrl);
+    });
+
+    ["ar", "en", "es"].forEach(function (locale) {
+      var selector = 'link[rel="alternate"][hreflang="' + locale + '"]';
+      var alternate = document.querySelector(selector);
+      if (!alternate) {
+        alternate = document.createElement("link");
+        alternate.setAttribute("rel", "alternate");
+        alternate.setAttribute("hreflang", locale);
+        document.head.appendChild(alternate);
+      }
+      alternate.setAttribute("href", localizedCanonicalUrl(locale).toString());
+    });
+
+    var defaultAlternate = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+    if (!defaultAlternate) {
+      defaultAlternate = document.createElement("link");
+      defaultAlternate.setAttribute("rel", "alternate");
+      defaultAlternate.setAttribute("hreflang", "x-default");
+      document.head.appendChild(defaultAlternate);
+    }
+    defaultAlternate.setAttribute("href", localizedCanonicalUrl(DEFAULT_LANGUAGE).toString());
+  }
+
+  function syncLocalizedLinks(language) {
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      if (!href || href.charAt(0) === "#" || /^(?:mailto:|tel:|javascript:|data:)/i.test(href)) {
+        return;
+      }
+
+      var target;
+      try {
+        target = new URL(href, window.location.href);
+      } catch (error) {
+        return;
+      }
+
+      if (target.origin !== window.location.origin || !/\.html$/i.test(target.pathname)) {
+        return;
+      }
+
+      if (language === DEFAULT_LANGUAGE) {
+        target.searchParams.delete("lang");
+      } else {
+        target.searchParams.set("lang", language);
+      }
+      link.setAttribute("href", target.pathname + target.search + target.hash);
+    });
   }
 
   function applyLanguage(language, updateUrl) {
@@ -332,10 +427,12 @@
     }
 
     if (updateUrl && window.history && window.history.replaceState) {
-      var url = new URL(window.location.href);
-      url.searchParams.set("lang", language);
+      var url = localizedUrl(language);
       window.history.replaceState({}, "", url.pathname + url.search + url.hash);
     }
+
+    syncLocalizedMetadata(language);
+    syncLocalizedLinks(language);
 
     document.dispatchEvent(new CustomEvent("aventura:language", { detail: { language: language } }));
   }
@@ -2127,7 +2224,8 @@
     arrangeBoutiqueSections();
     removeUnsupportedBoutiqueItems();
     setupBoutiqueCatalog();
-    applyLanguage(getInitialLanguage(), false);
+    var initialLanguage = getInitialLanguage();
+    applyLanguage(initialLanguage, Boolean(getLanguageFromQuery()) || initialLanguage !== DEFAULT_LANGUAGE);
     setupHeader();
     setupBoutiqueFilters();
     setupBoutiqueQuoteSelection();
