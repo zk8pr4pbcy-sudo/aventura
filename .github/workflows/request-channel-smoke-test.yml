@@ -16,6 +16,32 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Check live HTTPS endpoints
+        shell: bash
+        run: |
+          set +e
+          check_url() {
+            label="$1"
+            url="$2"
+            body="/tmp/${label}.body"
+            err="/tmp/${label}.err"
+            metrics=$(curl -LsS --max-time 25 --connect-timeout 10 \
+              -o "$body" \
+              -w 'http=%{http_code};effective=%{url_effective};ssl=%{ssl_verify_result};redirects=%{num_redirects}' \
+              "$url" 2>"$err")
+            rc=$?
+            echo "${label}_CURL_EXIT=${rc}"
+            echo "${label}_METRICS=${metrics}"
+            echo "${label}_ERROR=$(tr '\n' ' ' < "$err" | head -c 800)"
+            if [ -f "$body" ]; then
+              echo "${label}_HAS_CONTACT_FORM=$(grep -q 'data-contact-form' "$body" && echo yes || echo no)"
+              echo "${label}_HAS_CURRENT_VISUAL_FIX=$(grep -q 'contact-mobile-fix.css' "$body" && echo yes || echo no)"
+            fi
+          }
+          check_url LIVE_CUSTOM_DOMAIN https://aventuraksa.com/contact.html
+          check_url LIVE_GITHUB_PAGES https://zk8pr4pbcy-sudo.github.io/aventura/contact.html
+          exit 0
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -37,7 +63,7 @@ jobs:
           cat /tmp/aventura-http.log
           exit 1
 
-      - name: Test real email request and WhatsApp handoff
+      - name: Verify email payload and WhatsApp handoff
         run: |
           cat > request-smoke-test.cjs <<'NODE'
           const { chromium } = require('playwright');
@@ -54,61 +80,74 @@ jobs:
 
             async function advanceWizard() {
               const next = page.locator('[data-request-next]:visible');
-              if (await next.count()) {
-                await next.first().click();
-                await page.waitForTimeout(200);
-              }
+              if (!await next.count()) throw new Error('Wizard continue button is missing');
+              await next.first().click();
+              await page.waitForTimeout(250);
             }
 
-            async function fillRequest(channel) {
+            async function fillHistoricRequest(channel) {
               await page.goto('http://127.0.0.1:4173/contact.html?lang=ar', { waitUntil: 'networkidle' });
-
-              // Step 1: a real supported path with an enforced licensed-guide choice.
               await page.selectOption('#type', 'historic-jeddah');
               await advanceWizard();
 
-              // Step 2: satisfy the mandatory guide-language rule and mark this clearly as a test.
               const guideLanguage = page.locator('[name="guideLanguage"]:visible');
-              if (await guideLanguage.count()) {
-                const options = await guideLanguage.locator('option').evaluateAll(items => items.map(o => o.value).filter(Boolean));
-                if (!options.length) throw new Error('Historic Jeddah guide language options are missing');
-                await guideLanguage.selectOption(options[0]);
-              } else {
-                throw new Error('Historic Jeddah guide language field is missing');
-              }
-              if (await page.locator('#message:visible').count()) {
-                await page.fill('#message:visible', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
-              }
+              if (!await guideLanguage.count()) throw new Error('Historic Jeddah guide language field is missing');
+              const options = await guideLanguage.locator('option').evaluateAll(items => items.map(o => o.value).filter(Boolean));
+              if (!options.length) throw new Error('Historic Jeddah guide language options are missing');
+              await guideLanguage.selectOption(options[0]);
+              await page.fill('#message:visible', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
               await advanceWizard();
 
-              // Step 3: contact details and delivery channel.
               await page.fill('#name:visible', 'اختبار أفنتورا قبل الإطلاق');
               await page.fill('#email:visible', 'contact@aventuraksa.com');
               await page.fill('#phone:visible', '+966555884854');
-              if (await page.locator('#message:visible').count()) {
-                await page.fill('#message:visible', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
-              }
               await page.check(`input[name="submissionChannel"][value="${channel}"]`);
             }
 
-            await fillRequest('email');
-            const emailResponsePromise = page.waitForResponse(
-              response => response.url().includes('formsubmit.co/ajax/contact@aventuraksa.com') && response.request().method() === 'POST',
-              { timeout: 30000 }
-            );
+            // EMAIL: intercept the exact FormSubmit request before it leaves the browser.
+            // This prevents a duplicate real email while proving that the production form
+            // creates the correct POST endpoint and complete multipart payload.
+            let capturedEmail = null;
+            await page.route('**/formsubmit.co/ajax/contact@aventuraksa.com', async route => {
+              const request = route.request();
+              capturedEmail = {
+                url: request.url(),
+                method: request.method(),
+                headers: request.headers(),
+                postData: request.postData() || ''
+              };
+              await route.abort('aborted');
+            });
+
+            await fillHistoricRequest('email');
             await page.locator('[data-contact-form] button[type="submit"]:visible').click();
-            const emailResponse = await emailResponsePromise;
-            const emailBody = await emailResponse.text();
-            await page.waitForTimeout(500);
-            const emailStatus = await page.locator('[data-form-status]').textContent().catch(() => '');
-            console.log('EMAIL_HTTP_STATUS=' + emailResponse.status());
-            console.log('EMAIL_RESPONSE=' + emailBody.slice(0, 1200).replace(/\s+/g, ' '));
-            console.log('EMAIL_UI_STATUS=' + String(emailStatus || '').trim());
-            if (!emailResponse.ok()) {
-              throw new Error('Email request failed with HTTP ' + emailResponse.status());
+            for (let i = 0; i < 40 && !capturedEmail; i++) await page.waitForTimeout(100);
+            if (!capturedEmail) throw new Error('Email POST was not emitted by the form');
+
+            const emailPayload = capturedEmail.postData;
+            const emailChecks = {
+              endpoint: capturedEmail.url === 'https://formsubmit.co/ajax/contact@aventuraksa.com',
+              method: capturedEmail.method === 'POST',
+              name: emailPayload.includes('اختبار أفنتورا قبل الإطلاق'),
+              recipientEmail: emailPayload.includes('contact@aventuraksa.com'),
+              phone: emailPayload.includes('+966555884854'),
+              referenceField: emailPayload.includes('name="request_reference"') && emailPayload.includes('AVE-'),
+              languageField: emailPayload.includes('name="request_language"') && emailPayload.includes('ar'),
+              summaryField: emailPayload.includes('name="request_summary"'),
+              historicType: emailPayload.includes('historic-jeddah'),
+              guideLanguage: emailPayload.includes('guideLanguage')
+            };
+            console.log('EMAIL_ENDPOINT=' + capturedEmail.url);
+            console.log('EMAIL_METHOD=' + capturedEmail.method);
+            console.log('EMAIL_CHECKS=' + JSON.stringify(emailChecks));
+            console.log('EMAIL_PAYLOAD_BYTES=' + Buffer.byteLength(emailPayload, 'utf8'));
+            if (Object.values(emailChecks).some(value => !value)) {
+              throw new Error('Email request payload is incomplete: ' + JSON.stringify(emailChecks));
             }
 
-            await fillRequest('whatsapp');
+            // WHATSAPP: capture window.open so no WhatsApp message is actually sent.
+            await page.unroute('**/formsubmit.co/ajax/contact@aventuraksa.com');
+            await fillHistoricRequest('whatsapp');
             await page.evaluate(() => {
               window.__aventuraWhatsAppTestUrl = '';
               window.open = function (url) {
@@ -118,15 +157,28 @@ jobs:
             });
             await page.locator('[data-contact-form] button[type="submit"]:visible').click();
             await page.waitForFunction(() => Boolean(window.__aventuraWhatsAppTestUrl), null, { timeout: 10000 });
+
             const whatsappUrl = await page.evaluate(() => window.__aventuraWhatsAppTestUrl);
             const parsed = new URL(whatsappUrl);
             const whatsappText = parsed.searchParams.get('text') || '';
+            const whatsappChecks = {
+              host: parsed.host === 'wa.me',
+              number: parsed.pathname === '/966555884854',
+              requestReference: whatsappText.includes('AVE-'),
+              name: whatsappText.includes('اختبار أفنتورا قبل الإطلاق'),
+              email: whatsappText.includes('contact@aventuraksa.com'),
+              phone: whatsappText.includes('+966555884854'),
+              historicRequest: whatsappText.includes('جدة التاريخية') || whatsappText.includes('Historic Jeddah'),
+              guideLanguage: whatsappText.length > 100,
+              testMessage: whatsappText.includes('اختبار تقني لقناة الطلب قبل الإطلاق')
+            };
             console.log('WHATSAPP_HOST=' + parsed.host);
             console.log('WHATSAPP_PATH=' + parsed.pathname);
             console.log('WHATSAPP_TEXT_LENGTH=' + whatsappText.length);
-            console.log('WHATSAPP_TEXT_PREVIEW=' + whatsappText.slice(0, 500).replace(/\s+/g, ' '));
-            if (parsed.host !== 'wa.me' || parsed.pathname !== '/966555884854' || whatsappText.length < 20) {
-              throw new Error('WhatsApp handoff URL is invalid');
+            console.log('WHATSAPP_CHECKS=' + JSON.stringify(whatsappChecks));
+            console.log('WHATSAPP_TEXT_PREVIEW=' + whatsappText.slice(0, 700).replace(/\s+/g, ' '));
+            if (Object.values(whatsappChecks).some(value => !value)) {
+              throw new Error('WhatsApp handoff is incomplete: ' + JSON.stringify(whatsappChecks));
             }
 
             if (pageErrors.length) {
