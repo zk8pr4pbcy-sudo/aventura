@@ -1,0 +1,59 @@
+/* AVENTURA hero contrast hotfix — keeps image visible while making overlay copy reliably readable. */
+.hero,
+.page-hero.experience-detail-hero {
+  color: #ffffff;
+}
+
+.hero::before,
+.page-hero.experience-detail-hero::before,
+.world-historic .experience-detail-hero::before {
+  background: linear-gradient(90deg, rgba(4, 17, 29, 0.92) 0%, rgba(4, 17, 29, 0.76) 42%, rgba(4, 17, 29, 0.24) 72%, rgba(4, 17, 29, 0.12) 100%) !important;
+}
+
+html[dir="rtl"] .hero::before,
+html[dir="rtl"] .page-hero.experience-detail-hero::before,
+html[dir="rtl"] .world-historic .experience-detail-hero::before {
+  background: linear-gradient(270deg, rgba(4, 17, 29, 0.92) 0%, rgba(4, 17, 29, 0.76) 42%, rgba(4, 17, 29, 0.24) 72%, rgba(4, 17, 29, 0.12) 100%) !important;
+}
+
+.hero::after,
+.page-hero.experience-detail-hero::after {
+  background: linear-gradient(transparent, rgba(4, 17, 29, 0.48)) !important;
+}
+
+.hero h1,
+.hero .hero-description,
+.hero .page-hero-description,
+.page-hero.experience-detail-hero h1,
+.page-hero.experience-detail-hero .page-hero-description {
+  color: #ffffff !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42) !important;
+}
+
+.hero .eyebrow,
+.page-hero.experience-detail-hero .eyebrow {
+  color: #e5ce9d !important;
+}
+
+.page-hero.experience-detail-hero .text-link {
+  color: #ffffff !important;
+}
+
+.page-hero.experience-detail-hero .text-link::after {
+  color: #e5ce9d !important;
+}
+
+/* Mobile images can place busy details directly behind the copy, so strengthen only the text side. */
+@media (max-width: 720px) {
+  .hero::before,
+  .page-hero.experience-detail-hero::before,
+  .world-historic .experience-detail-hero::before {
+    background: linear-gradient(180deg, rgba(4, 17, 29, 0.48) 0%, rgba(4, 17, 29, 0.76) 44%, rgba(4, 17, 29, 0.92) 100%) !important;
+  }
+
+  .hero-content,
+  .page-hero.experience-detail-hero .page-hero-content {
+    position: relative;
+    z-index: 1;
+  }
+}
