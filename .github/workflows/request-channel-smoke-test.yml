@@ -56,20 +56,28 @@ jobs:
               const next = page.locator('[data-request-next]:visible');
               if (await next.count()) {
                 await next.first().click();
-                await page.waitForTimeout(150);
+                await page.waitForTimeout(200);
               }
             }
 
             async function fillRequest(channel) {
               await page.goto('http://127.0.0.1:4173/contact.html?lang=ar', { waitUntil: 'networkidle' });
 
-              // Step 1: choose a generic inquiry so the smoke test does not create a fake booking.
-              await page.selectOption('#type', 'other');
+              // Step 1: a real supported path with an enforced licensed-guide choice.
+              await page.selectOption('#type', 'historic-jeddah');
               await advanceWizard();
 
-              // Step 2: add only a clearly marked technical test note.
+              // Step 2: satisfy the mandatory guide-language rule and mark this clearly as a test.
+              const guideLanguage = page.locator('[name="guideLanguage"]:visible');
+              if (await guideLanguage.count()) {
+                const options = await guideLanguage.locator('option').evaluateAll(items => items.map(o => o.value).filter(Boolean));
+                if (!options.length) throw new Error('Historic Jeddah guide language options are missing');
+                await guideLanguage.selectOption(options[0]);
+              } else {
+                throw new Error('Historic Jeddah guide language field is missing');
+              }
               if (await page.locator('#message:visible').count()) {
-                await page.fill('#message', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
+                await page.fill('#message:visible', 'اختبار تقني لقناة الطلب قبل الإطلاق — لا يلزم الرد على هذه الرسالة.');
               }
               await advanceWizard();
 
