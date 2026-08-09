@@ -44,7 +44,7 @@ jobs:
 
       - name: Capture desktop and iPhone views
         run: |
-          cat > /tmp/visual-audit.cjs <<'NODE'
+          cat > visual-audit-runner.cjs <<'NODE'
           const { chromium } = require('playwright');
           const fs = require('fs');
           const path = require('path');
@@ -144,7 +144,7 @@ jobs:
             process.exit(1);
           });
           NODE
-          node /tmp/visual-audit.cjs
+          node visual-audit-runner.cjs
 
       - name: Upload visual audit
         if: always()
