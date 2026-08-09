@@ -1,4 +1,12 @@
 /* AVENTURA light launch theme — approved July 2026 */
+@font-face {
+  font-family: "Alexandria";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/alexandria/Alexandria%5Bwght%5D.ttf") format("truetype");
+}
+
 :root {
   --av-ivory: #fff9ef;
   --av-sand: #f2e4cc;
@@ -8,6 +16,9 @@
   --av-gold: #c59a55;
   --av-ink: #17324a;
   --av-muted: #526979;
+  --font-latin: "Alexandria", "Segoe UI", Arial, sans-serif;
+  --font-arabic: "Alexandria", Tahoma, Arial, sans-serif;
+  --font-display: "Alexandria", Georgia, sans-serif;
 }
 
 body {
@@ -427,5 +438,114 @@ footer span {
   body.nav-open .site-header.menu-open .lang-switch button.is-active {
     color: #fffaf2;
     background: #0f2742;
+  }
+}
+
+/* Aventura V2 launch recovery — presentation fixes validated against the lost launch summary. */
+.scent-lab-section {
+  background: linear-gradient(180deg, #0b2234 0%, #071726 100%);
+}
+
+.scent-lab-section .section-heading h2,
+.scent-lab-section .section-heading p,
+.scent-lab-section .perfume-showcase-copy,
+.scent-lab-section .perfume-completion-note,
+.scent-lab-section .scent-lab-interest-note {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.scent-lab-section .eyebrow {
+  color: #e5ce9d;
+}
+
+.scent-lab-section .perfume-card-copy p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.boutique-gateway-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.boutique-gateway-card {
+  grid-column: span 2;
+}
+
+.boutique-gateway-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.boutique-gateway-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+@media (min-width: 1281px) and (max-width: 1500px) {
+  .site-header .nav-shell {
+    width: min(calc(100% - 28px), 1460px);
+    gap: 16px;
+  }
+
+  .site-header .brand-logo {
+    width: 168px;
+  }
+
+  .site-header .primary-nav {
+    position: static;
+    z-index: auto;
+    display: flex;
+    height: auto;
+    margin-inline-start: auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 11px;
+    overflow: visible;
+    background: transparent;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .site-header .nav-link,
+  body.nav-open .site-header.menu-open .nav-link {
+    padding: 29px 0 26px;
+    color: #596978;
+    border-bottom: 0;
+    font-size: 0.74rem;
+  }
+
+  html[lang="ar"] .site-header .nav-link {
+    font-size: 0.78rem;
+  }
+
+  .site-header .nav-link::after {
+    display: block;
+  }
+
+  .site-header .nav-toggle {
+    display: none;
+  }
+
+  body.nav-open main,
+  body.nav-open site-footer {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 900px) {
+  .boutique-gateway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .boutique-gateway-card,
+  .boutique-gateway-card:nth-child(4),
+  .boutique-gateway-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 660px) {
+  .boutique-gateway-grid {
+    grid-template-columns: 1fr;
   }
 }
