@@ -1,0 +1,46 @@
+name: Materialize approved product assets
+
+on:
+  push:
+    branches: [product-cards-20260810]
+    paths:
+      - .github/workflows/materialize-approved-product-assets.yml
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: product-cards-20260810
+      - name: Restore approved binary cards
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images/campaign
+          restore_blob() {
+            sha="$1"
+            path="$2"
+            gh api "repos/${GITHUB_REPOSITORY}/git/blobs/${sha}" --jq '.content' | tr -d '\n' | base64 --decode > "$path"
+            test -s "$path"
+          }
+          restore_blob 6854b73ef2fd800cd92fa17d7f01b7f6b7289ee3 assets/images/campaign/perfume-roshan-card.webp
+          restore_blob ae592c9ef7fa95f6b2f70d1034014c43c6179f33 assets/images/campaign/perfume-taif-card.webp
+          restore_blob 9db0d89793342eb096cd1426859dd718eb005168 assets/images/campaign/perfume-last-light-card.webp
+          restore_blob 2c5da67c4468214eb81524b2b60a75e4013518ab assets/images/campaign/perfume-sea-card.webp
+          restore_blob 19f576bef57b6660881fab25c97488f92f263ab1 assets/images/campaign/perfume-velvet-card.webp
+          restore_blob 7b7869acd684d9e5dd17565c97bb720c46a5c0f2 assets/images/campaign/perfume-noir-card.webp
+          restore_blob e505ebe97365fad17e481484d5a84ee53119a7ca assets/images/campaign/box-historic-card.webp
+      - name: Commit assets and remove temporary workflow
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/materialize-approved-product-assets.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/campaign .github/workflows/materialize-approved-product-assets.yml
+          git commit -m "Add approved fragrance campaign cards"
+          git push origin HEAD:product-cards-20260810
