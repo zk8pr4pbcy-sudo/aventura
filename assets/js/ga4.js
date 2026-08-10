@@ -173,6 +173,13 @@
       var searchable = (card.textContent || "").toLowerCase();
       var searchMatches = !state.search || searchable.indexOf(state.search) !== -1 || "last light".indexOf(state.search) !== -1;
       card.hidden = !(experienceMatches && typeMatches && searchMatches);
+
+      var section = document.getElementById("fragrances");
+      if (section) {
+        var existingItems = Array.from(section.querySelectorAll("[data-boutique-item]"));
+        var existingVisible = existingItems.some(function (item) { return !item.hidden; });
+        section.hidden = card.hidden && !existingVisible;
+      }
     }
 
     var storyButton = card.querySelector("[data-qa-last-light-story]");
