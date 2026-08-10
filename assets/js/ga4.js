@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  // AVENTURA GA4 launch tracking.
   var MEASUREMENT_ID = "G-MC0GBSTCRT";
 
   window.dataLayer = window.dataLayer || [];
