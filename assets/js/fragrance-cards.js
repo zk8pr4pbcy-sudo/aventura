@@ -8,7 +8,7 @@
   var experienceId = root.getAttribute("data-experience-id") || "";
   var cards = {
     sea: [
-      { id: "sea-experience", name: "Sea Experience", image: "assets/images/perfumes/perfume-sea-story.webp" }
+      { id: "sea-experience", name: "Sea Experience", image: "assets/images/fragrance-cards/sea-experience.webp" }
     ],
     historic: [
       { id: "roshan", name: "Roshan", image: "assets/images/perfumes/perfume-roshan-story.webp" }
@@ -33,7 +33,7 @@
       title: "عطور تُولد من التجربة",
       text: "لكل تجربة في أفنتورا أثرها الخاص. نعمل على ترجمة هذا الأثر إلى عطور تحمل روح المكان وذاكرته، وتمنح الضيف امتدادًا للتجربة بعد انتهائها. المجموعة قيد التطوير وستتوفر قريبًا.",
       soon: "قريبًا",
-      interest: "أنا مهتم بهذا العطر",
+      interest: "أبلغني عند التوفر",
       dialogTitle: "سجّل اهتمامك بالعطر",
       dialogText: "اترك بيانات التواصل، وسنتواصل معك عند توفر العطر.",
       name: "الاسم",
@@ -49,7 +49,7 @@
       title: "Fragrances born from the experience",
       text: "Every Aventura experience leaves its own imprint. We are translating that feeling into fragrances that carry the spirit and memory of place, extending the experience beyond the day itself. The collection is in development and will be available soon.",
       soon: "Coming soon",
-      interest: "I’m interested in this fragrance",
+      interest: "Notify me when available",
       dialogTitle: "Register your interest",
       dialogText: "Leave your contact details and we’ll reach out when this fragrance becomes available.",
       name: "Name",
@@ -65,7 +65,7 @@
       title: "Fragancias nacidas de la experiencia",
       text: "Cada experiencia de Aventura deja una huella propia. Estamos transformando esa sensación en fragancias que conservan el espíritu y la memoria del lugar, prolongando la experiencia más allá del momento vivido. La colección está en desarrollo y estará disponible próximamente.",
       soon: "Próximamente",
-      interest: "Me interesa esta fragancia",
+      interest: "Avísame cuando esté disponible",
       dialogTitle: "Registra tu interés",
       dialogText: "Déjanos tus datos de contacto y te avisaremos cuando esta fragancia esté disponible.",
       name: "Nombre",
