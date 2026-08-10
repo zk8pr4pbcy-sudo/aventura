@@ -3,14 +3,15 @@ name: Install original fragrance cards
 on:
   push:
     branches: [fragrance-cards-final-fix-20260810]
-    paths:
-      - .github/workflows/install-original-fragrance-cards.yml
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
 
 jobs:
   install:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,54 +23,44 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p assets/images/fragrance-cards
-
           curl -fL 'https://media.canva.com/v2/image-resize/format:JPG/height:1402/quality:95/uri:ifs%3A%2F%2FM%2F1c4ae870-e846-4b3c-8750-1f252f14c91d/watermark:F/width:1122?csig=AAAAAAAAAAAAAAAAAAAAAGnyFzr83CbMGU2haFvR-5Fjb14G2ZfMrE5eWs8egsJY&exp=1786391087&osig=AAAAAAAAAAAAAAAAAAAAAIjmjPSeqK8UEUTk19Ie4QcNjdk4flMbWAB5jLclKysV&signer=media-rpc&x-canva-quality=thumbnail' -o assets/images/fragrance-cards/sea-experience.jpg
           curl -fL 'https://media.canva.com/v2/image-resize/format:JPG/height:1402/quality:95/uri:ifs%3A%2F%2FM%2F4b0918d2-5dfc-4c51-8d0e-065a0c40994a/watermark:F/width:1122?csig=AAAAAAAAAAAAAAAAAAAAAJKFWISQS6s4qwzjg3tt_nABpRIN6tluPoWsVa4d1ZlP&exp=1786394706&osig=AAAAAAAAAAAAAAAAAAAAAJ1zmgJ9A739YkSr2wSVhCXGYD-J0cSjqzQ0JNRV9hUL&signer=media-rpc&x-canva-quality=thumbnail' -o assets/images/fragrance-cards/roshan.jpg
           curl -fL 'https://media.canva.com/v2/image-resize/format:JPG/height:1402/quality:95/uri:ifs%3A%2F%2FM%2Fe52d92e3-1e25-43da-ae08-2a8293c21cf0/watermark:F/width:1122?csig=AAAAAAAAAAAAAAAAAAAAAEWV29I0YBDp2SofyrLd6E9ZB7NEicrxPUAU7MoVgS-f&exp=1786394755&osig=AAAAAAAAAAAAAAAAAAAAAFJjEnLSCr28AmurbqXzJjDwW0odCFam-U7CFugMZHFe&signer=media-rpc&x-canva-quality=thumbnail' -o assets/images/fragrance-cards/last-light.jpg
           curl -fL 'https://media.canva.com/v2/image-resize/format:JPG/height:1402/quality:95/uri:ifs%3A%2F%2FM%2Fc42c9e93-0ba7-4e63-b103-dc2a7bc03e12/watermark:F/width:1122?csig=AAAAAAAAAAAAAAAAAAAAAOpVzaD1qtCySdw3X8qEEx9yYeDzynj4RGHgNXcpIf2J&exp=1786394036&osig=AAAAAAAAAAAAAAAAAAAAAFNwteVCypMkiwOJuaLmtfIKMVz9YB6lDGR3J2QcFSrJ&signer=media-rpc&x-canva-quality=thumbnail' -o assets/images/fragrance-cards/taif-experience.jpg
           curl -fL 'https://media.canva.com/v2/image-resize/format:JPG/height:1402/quality:95/uri:ifs%3A%2F%2FM%2F504c5c23-f891-436e-a240-4cabbdcc711d/watermark:F/width:1122?csig=AAAAAAAAAAAAAAAAAAAAAFNdPZ-rIfu7PISsOtPB04Ty8GRS3wKWpk2mxI5HBg07&exp=1786392961&osig=AAAAAAAAAAAAAAAAAAAAAJvOjtB3LTVEF1CQ_OeVkg8sdbRXhEOKcn06_SnAw4ck&signer=media-rpc&x-canva-quality=thumbnail' -o assets/images/fragrance-cards/after-midnight-noir.jpg
           curl -fL 'https://media.canva.com/v2/image-resize/format:JPG/height:1402/quality:95/uri:ifs%3A%2F%2FM%2F459d1807-a147-46d0-8525-39c2fbc2612f/watermark:F/width:1122?csig=AAAAAAAAAAAAAAAAAAAAAMmATg2XqOFenm9yisAjuS2DJmcjvxpzjoIRv-r3hY0p&exp=1786391849&osig=AAAAAAAAAAAAAAAAAAAAAH_XvGDKhye_4fJvSrzsSHBcGKAzGmUlXeQb-qqdvMwN&signer=media-rpc&x-canva-quality=thumbnail' -o assets/images/fragrance-cards/after-midnight-velvet.jpg
-
           for f in assets/images/fragrance-cards/*.jpg; do
             echo "$f: $(file -b "$f")"
             file -b "$f" | grep -Eq '1122x1402|1122 x 1402' || { echo "Wrong dimensions for $f"; exit 1; }
             test "$(stat -c%s "$f")" -gt 100000 || { echo "Image too small: $f"; exit 1; }
           done
 
-      - name: Point experience pages to original cards and localize CTA
+      - name: Update fragrance UI
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          p = Path('assets/js/fragrance-cards.js')
-          s = p.read_text()
-          repl = {
-            'assets/images/perfumes/perfume-sea-story.webp': 'assets/images/fragrance-cards/sea-experience.jpg',
-            'assets/images/perfumes/perfume-roshan-story.webp': 'assets/images/fragrance-cards/roshan.jpg',
-            'assets/images/perfumes/perfume-last-light-story.webp': 'assets/images/fragrance-cards/last-light.jpg',
-            'assets/images/perfumes/perfume-taif-story.webp': 'assets/images/fragrance-cards/taif-experience.jpg',
-            'assets/images/perfumes/perfume-noir-story.webp': 'assets/images/fragrance-cards/after-midnight-noir.jpg',
-            'assets/images/perfumes/perfume-velvet-story.webp': 'assets/images/fragrance-cards/after-midnight-velvet.jpg',
-            'أنا مهتم بهذا العطر': 'أبلغني عند التوفر',
-            'I’m interested in this fragrance': 'Notify me when available',
-            'Me interesa esta fragancia': 'Avísame cuando esté disponible',
-          }
+          p=Path('assets/js/fragrance-cards.js'); s=p.read_text()
+          repl={
+            'assets/images/perfumes/perfume-sea-story.webp':'assets/images/fragrance-cards/sea-experience.jpg',
+            'assets/images/perfumes/perfume-roshan-story.webp':'assets/images/fragrance-cards/roshan.jpg',
+            'assets/images/perfumes/perfume-last-light-story.webp':'assets/images/fragrance-cards/last-light.jpg',
+            'assets/images/perfumes/perfume-taif-story.webp':'assets/images/fragrance-cards/taif-experience.jpg',
+            'assets/images/perfumes/perfume-noir-story.webp':'assets/images/fragrance-cards/after-midnight-noir.jpg',
+            'assets/images/perfumes/perfume-velvet-story.webp':'assets/images/fragrance-cards/after-midnight-velvet.jpg',
+            'أنا مهتم بهذا العطر':'أبلغني عند التوفر',
+            'I’m interested in this fragrance':'Notify me when available',
+            'Me interesa esta fragancia':'Avísame cuando esté disponible'}
           for a,b in repl.items():
-            if a not in s:
-              raise SystemExit(f'Missing expected text: {a}')
-            s = s.replace(a,b)
+            if a not in s: raise SystemExit('Missing expected text: '+a)
+            s=s.replace(a,b)
           p.write_text(s)
-
           for name in ['experience-sea.html','experience-historic-jeddah.html','experience-desert.html','experience-taif.html','experience-jeddah-day.html']:
-            q = Path(name)
-            t = q.read_text()
-            t = t.replace('fragrance-cards.css?v=20260810-2','fragrance-cards.css?v=20260810-3')
-            t = t.replace('fragrance-cards.js?v=20260810-2','fragrance-cards.js?v=20260810-3')
-            q.write_text(t)
+            q=Path(name); t=q.read_text().replace('fragrance-cards.css?v=20260810-2','fragrance-cards.css?v=20260810-3').replace('fragrance-cards.js?v=20260810-2','fragrance-cards.js?v=20260810-3'); q.write_text(t)
           PY
 
-      - name: Remove temporary workflow and commit
+      - name: Commit result
         shell: bash
         run: |
           set -euo pipefail
