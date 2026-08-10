@@ -1,0 +1,67 @@
+name: Install Sea fragrance card
+
+on:
+  push:
+    branches: [fragrance-cards-final-fix-20260810]
+    paths:
+      - .github/workflows/install-sea-card.yml
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fragrance-cards-final-fix-20260810
+          fetch-depth: 0
+
+      - name: Rebuild and verify original Sea card
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images/fragrance-cards
+          cat .github/sea-upload2/part.* | base64 -d > assets/images/fragrance-cards/sea-experience.webp
+          echo '662caf1e3cf77ff621b87bad05d4c1c59e171b0e848a17f8a31c5d7f281c7c80  assets/images/fragrance-cards/sea-experience.webp' | sha256sum -c -
+          test "$(stat -c%s assets/images/fragrance-cards/sea-experience.webp)" = "32524"
+          file assets/images/fragrance-cards/sea-experience.webp | grep -q '600x750'
+
+      - name: Use Sea card and availability CTA
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('assets/js/fragrance-cards.js')
+          s = p.read_text()
+          replacements = {
+              'assets/images/perfumes/perfume-sea-story.webp': 'assets/images/fragrance-cards/sea-experience.webp',
+              'أنا مهتم بهذا العطر': 'أبلغني عند التوفر',
+              'I’m interested in this fragrance': 'Notify me when available',
+              'Me interesa esta fragancia': 'Avísame cuando esté disponible',
+          }
+          for old, new in replacements.items():
+              if old not in s:
+                  raise SystemExit(f'Missing expected value: {old}')
+              s = s.replace(old, new)
+          p.write_text(s)
+
+          page = Path('experience-sea.html')
+          h = page.read_text()
+          h = h.replace('fragrance-cards.css?v=20260810-2', 'fragrance-cards.css?v=20260810-3')
+          h = h.replace('fragrance-cards.js?v=20260810-2', 'fragrance-cards.js?v=20260810-3')
+          page.write_text(h)
+          PY
+
+      - name: Commit verified Sea card
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .github/sea-upload2 .github/workflows/install-sea-card.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/images/fragrance-cards/sea-experience.webp assets/js/fragrance-cards.js experience-sea.html .github/sea-upload2 .github/workflows/install-sea-card.yml
+          git commit -m 'Use original Sea Experience fragrance card'
+          git push origin HEAD:fragrance-cards-final-fix-20260810
