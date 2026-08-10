@@ -8,20 +8,20 @@
   var experienceId = root.getAttribute("data-experience-id") || "";
   var cards = {
     sea: [
-      { id: "sea-experience", name: "Sea Experience", image: "assets/images/fragrance-cards/sea-experience.webp" }
+      { id: "sea-experience", name: "Sea Experience", image: "assets/images/perfumes/perfume-sea-story.webp" }
     ],
     historic: [
-      { id: "roshan", name: "Roshan", image: "assets/images/fragrance-cards/roshan.webp" }
+      { id: "roshan", name: "Roshan", image: "assets/images/perfumes/perfume-roshan-story.webp" }
     ],
     desert: [
-      { id: "last-light", name: "Last Light", image: "assets/images/fragrance-cards/last-light.webp" }
+      { id: "last-light", name: "Last Light", image: "assets/images/perfumes/perfume-last-light-story.webp" }
     ],
     taif: [
-      { id: "taif-experience", name: "Taif Experience", image: "assets/images/fragrance-cards/taif-experience.webp" }
+      { id: "taif-experience", name: "Taif Experience", image: "assets/images/perfumes/perfume-taif-story.webp" }
     ],
     jeddah: [
-      { id: "after-midnight-noir", name: "After Midnight Noir", image: "assets/images/fragrance-cards/after-midnight-noir.webp" },
-      { id: "after-midnight-velvet", name: "After Midnight Velvet", image: "assets/images/fragrance-cards/after-midnight-velvet.webp" }
+      { id: "after-midnight-noir", name: "After Midnight Noir", image: "assets/images/perfumes/perfume-noir-story.webp" },
+      { id: "after-midnight-velvet", name: "After Midnight Velvet", image: "assets/images/perfumes/perfume-velvet-story.webp" }
     ]
   };
 
@@ -90,10 +90,10 @@
   function cardMarkup(card) {
     return [
       '<article class="aventura-fragrance-card" data-fragrance-id="' + card.id + '">',
-      '  <div class="aventura-fragrance-card-media"><img src="' + card.image + '" alt="' + card.name + '" loading="lazy" decoding="async"></div>',
+      '  <div class="aventura-fragrance-card-media"><img src="' + card.image + '" alt="' + card.name + '" loading="eager" decoding="async"></div>',
       '  <div class="aventura-fragrance-card-actions">',
       '    <span class="status coming" data-fragrance-copy="soon">' + t("soon") + '</span>',
-      '    <button class="btn btn-outline aventura-fragrance-interest" type="button" data-fragrance-interest="' + card.id + '" data-fragrance-name="' + card.name + '">' + t("interest") + '</button>',
+      '    <button class="btn btn-outline-dark aventura-fragrance-interest" type="button" data-fragrance-interest="' + card.id + '" data-fragrance-name="' + card.name + '">' + t("interest") + '</button>',
       '  </div>',
       '</article>'
     ].join("");
