@@ -11,17 +11,17 @@
       { id: "sea-experience", name: "Sea Experience", image: "assets/images/fragrance-cards/sea-experience.webp" }
     ],
     historic: [
-      { id: "roshan", name: "Roshan", image: "assets/images/perfumes/perfume-roshan-story.webp" }
+      { id: "roshan", name: "Roshan", image: "assets/images/fragrance-cards/roshan.webp" }
     ],
     desert: [
-      { id: "last-light", name: "Last Light", image: "assets/images/perfumes/perfume-last-light-story.webp" }
+      { id: "last-light", name: "Last Light", image: "assets/images/fragrance-cards/last-light.webp" }
     ],
     taif: [
-      { id: "taif-experience", name: "Taif Experience", image: "assets/images/perfumes/perfume-taif-story.webp" }
+      { id: "taif-experience", name: "Taif Experience", image: "assets/images/fragrance-cards/taif-experience.webp" }
     ],
     jeddah: [
-      { id: "after-midnight-noir", name: "After Midnight Noir", image: "assets/images/perfumes/perfume-noir-story.webp" },
-      { id: "after-midnight-velvet", name: "After Midnight Velvet", image: "assets/images/perfumes/perfume-velvet-story.webp" }
+      { id: "after-midnight-noir", name: "After Midnight Noir", image: "assets/images/fragrance-cards/after-midnight-noir.webp" },
+      { id: "after-midnight-velvet", name: "After Midnight Velvet", image: "assets/images/fragrance-cards/after-midnight-velvet.webp" }
     ]
   };
 
@@ -31,7 +31,7 @@
     ar: {
       eyebrow: "مجموعة أفنتورا العطرية",
       title: "عطور تُولد من التجربة",
-      text: "لكل تجربة في أفنتورا أثرها الخاص. نعمل على ترجمة هذا الأثر إلى عطور تحمل روح المكان وذاكرته، وتمنح الضيف امتدادًا للتجربة بعد انتهائها. المجموعة قيد التطوير وستتوفر قريبًا.",
+      text: "لكل تجربة في أفنتورا أثرها الخاص. نعمل على ترجمة هذا الأثر إلى عطور تحمل روح المكان وذاكرتها، وتمنح الضيف امتدادًا للتجربة بعد انتهائها. المجموعة قيد التطوير وستتوفر قريبًا.",
       soon: "قريبًا",
       interest: "أبلغني عند التوفر",
       dialogTitle: "سجّل اهتمامك بالعطر",
