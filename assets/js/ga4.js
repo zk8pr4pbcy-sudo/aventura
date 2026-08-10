@@ -12,7 +12,7 @@
       if (dictionaries[lang]) dictionaries[lang][key] = value;
     }
 
-    /* Arabic: keep the same singular form of address within each sentence. */
+    /* Arabic: grammar, address consistency and natural editorial phrasing. */
     setCopy("ar", "cta.description", "شاركنا المناسبة وعدد الضيوف والتاريخ المناسب، وسنصمم اتجاهًا واضحًا يناسب أولوياتك.");
     setCopy("ar", "home.expDescription", "أربعة عوالم خاصة، يُصمَّم كلٌ منها حول ضيوفك ووقتك ونوع اليوم الذي ترغب في صنعه.");
     setCopy("ar", "common.plan", "اطلب عرضًا مخصصًا");
@@ -20,6 +20,17 @@
     setCopy("ar", "cta.button", "اطلب عرضًا مخصصًا");
     setCopy("ar", "home.heroSecondary", "اطلب عرضًا مخصصًا");
     setCopy("ar", "home.processButton", "اطلب عرضًا مخصصًا");
+    setCopy("ar", "experiences.desertTag1", "الكثبان الرملية والغروب");
+    setCopy("ar", "services.s1Text", "جداول وحجوزات واقتراحات وترتيبات خاصة تتناسب مع احتياجات الضيف.");
+    setCopy("ar", "services.s2Text", "تنسيق الوصول والانتقال بسلاسة من المطار إلى المركبة ثم مقر الإقامة.");
+    setCopy("ar", "contact.formText", "لا يتم تحصيل أي مبلغ ولا يُؤكَّد أي حجز هنا؛ هذا النموذج يبدأ محادثة التخطيط وطلب عرض السعر فقط.");
+    setCopy("ar", "collection.pathProductEyebrow", "للعميل العائد أو البحث المباشر");
+    setCopy("ar", "collection.gatewayDesertText", "تصور عطري للدفء الجاف للرمال والنفحة المعدنية والضوء الأخير فوق الكثبان.");
+    setCopy("ar", "guest.step1Text", "أخبرنا بمن ستُقدَّم له الخدمة، وأين يحتاجها، وما الموعد المفضل.");
+    setCopy("ar", "corporate.program4Title", "أنشطة خفيفة لبناء الفريق");
+    setCopy("ar", "corporate.program6Title", "لقاءات العلاقات والعشاء التنفيذي");
+    setCopy("ar", "experiences.offerGrandText", "يخت واسع للمجموعات الخاصة، ويشمل أساسيات اليوم البحري نفسها.");
+    setCopy("ar", "experiences.grandRate", "يُعد عرض سعر مخصصًا لليخت الخاص والبرنامج المختار.");
 
     /* English: replace technically understandable but non-native launch copy. */
     setCopy("en", "corporate.program4Title", "Practical team-building");
@@ -27,11 +38,30 @@
     setCopy("en", "experiences.heritageVipMeta", "VIP round-trip transport · Up to 6 guests");
     setCopy("en", "experiences.booking2Title", "Payment, changes and cancellations");
     setCopy("en", "experiences.booking2Text", "Payment terms and policies for changes, cancellations or refunds are confirmed in writing for each service.");
+    setCopy("en", "events.type4Text", "Established destinations adapted for company groups, with guest comfort and logistics coordinated throughout.");
+    setCopy("en", "events.type5Text", "Activities matched to the team's goals, group profile and available time.");
+    setCopy("en", "services.s1Text", "Itineraries, reservations, recommendations and special arrangements aligned with the guest's needs.");
+    setCopy("en", "about.storyText3", "We design private experiences that bring together culture, the sea, history and the desert, alongside events created with the same attention to depth and detail.");
 
-    /* Spanish: use one consistent tú register and one country style. */
+    /* Spanish: one consistent tú register, natural phrasing and one country style. */
     setCopy("es", "home.expDescription", "Cuatro mundos privados, cada uno diseñado en torno a tus invitados, tu tiempo y el tipo de día que quieres crear.");
     setCopy("es", "journey.bayadah.title", "Bayadah es el destino; el día entero es tuyo");
     setCopy("es", "corporate.program4Title", "Dinámicas prácticas de equipo");
+    setCopy("es", "events.type5Title", "Dinámicas de equipo");
+    setCopy("es", "events.step1Title", "Definición inicial");
+    setCopy("es", "services.s2Text", "Coordinación de la llegada y transición organizada del aeropuerto al vehículo y al alojamiento.");
+    setCopy("es", "collection.thobeText", "El sastre visita al huésped para tomar medidas y elegir el tejido. La entrega puede coordinarse en menos de 24 horas una vez confirmada la disponibilidad.");
+    setCopy("es", "contact.errorEmail", "Introduce tu correo electrónico para enviar la solicitud de reserva por correo electrónico.");
+    setCopy("es", "experiences.desertItem2", "Zona privada de descanso y hospitalidad");
+
+    function normalizeArabic(value) {
+      if (typeof value === "string") return value.replace(/اً/g, "ًا");
+      if (Array.isArray(value)) return value.map(normalizeArabic);
+      if (value && typeof value === "object") {
+        Object.keys(value).forEach(function (key) { value[key] = normalizeArabic(value[key]); });
+      }
+      return value;
+    }
 
     function normalizeSpanish(value) {
       if (typeof value === "string") {
@@ -51,6 +81,7 @@
       return value;
     }
 
+    if (dictionaries.ar) normalizeArabic(dictionaries.ar);
     if (dictionaries.es) normalizeSpanish(dictionaries.es);
   }
 
@@ -180,6 +211,8 @@
         var existingVisible = existingItems.some(function (item) { return !item.hidden; });
         section.hidden = card.hidden && !existingVisible;
       }
+      var empty = document.querySelector("[data-boutique-empty]");
+      if (empty && !card.hidden) empty.hidden = true;
     }
 
     var storyButton = card.querySelector("[data-qa-last-light-story]");
