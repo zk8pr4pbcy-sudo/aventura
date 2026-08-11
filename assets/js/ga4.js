@@ -98,6 +98,188 @@
     return typeof value === "string" ? value : fallback;
   }
 
+  function upsertMeta(selector, attributes, content) {
+    var node = document.head.querySelector(selector);
+    if (!node) {
+      node = document.createElement("meta");
+      Object.keys(attributes || {}).forEach(function (name) {
+        node.setAttribute(name, attributes[name]);
+      });
+      document.head.appendChild(node);
+    }
+    node.setAttribute("content", content || "");
+    return node;
+  }
+
+  function seoLanguage() {
+    var lang = (document.documentElement.lang || "ar").toLowerCase();
+    return ["ar", "en", "es"].indexOf(lang) !== -1 ? lang : "ar";
+  }
+
+  function seoPath() {
+    var path = window.location.pathname || "/";
+    if (/\/index\.html$/i.test(path)) path = path.replace(/index\.html$/i, "");
+    if (!path) path = "/";
+    return path.charAt(0) === "/" ? path : "/" + path;
+  }
+
+  function seoUrlFor(lang, path) {
+    var base = "https://aventuraksa.com" + (path || seoPath());
+    return lang === "ar" ? base : base + "?lang=" + encodeURIComponent(lang);
+  }
+
+  function setCanonicalAndAlternates(lang, path) {
+    var canonicalUrl = seoUrlFor(lang, path);
+    var canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (node) {
+      node.remove();
+    });
+
+    [
+      ["ar", seoUrlFor("ar", path)],
+      ["en", seoUrlFor("en", path)],
+      ["es", seoUrlFor("es", path)],
+      ["x-default", seoUrlFor("ar", path)]
+    ].forEach(function (row) {
+      var link = document.createElement("link");
+      link.rel = "alternate";
+      link.hreflang = row[0];
+      link.href = row[1];
+      document.head.appendChild(link);
+    });
+
+    return canonicalUrl;
+  }
+
+  function setSeoStructuredData(lang, canonicalUrl, pageTitle, pageDescription) {
+    var path = seoPath();
+    var isHome = path === "/";
+    var graph = [];
+    var organizationId = "https://aventuraksa.com/#organization";
+    var websiteId = "https://aventuraksa.com/#website";
+
+    graph.push({
+      "@type": "Organization",
+      "@id": organizationId,
+      name: "AVENTURA",
+      alternateName: "Aventura KSA",
+      url: "https://aventuraksa.com/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://aventuraksa.com/assets/images/aventura-logo.svg"
+      },
+      email: "contact@aventuraksa.com",
+      telephone: "+966555884854",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Jeddah",
+        addressCountry: "SA"
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Saudi Arabia"
+      }
+    });
+
+    if (isHome) {
+      graph.push({
+        "@type": "WebSite",
+        "@id": websiteId,
+        url: "https://aventuraksa.com/",
+        name: "AVENTURA",
+        alternateName: "Aventura KSA",
+        publisher: { "@id": organizationId }
+      });
+    }
+
+    var webPage = {
+      "@type": "WebPage",
+      "@id": canonicalUrl + "#webpage",
+      url: canonicalUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: lang === "ar" ? "ar-SA" : lang,
+      about: { "@id": organizationId }
+    };
+
+    if (!isHome) {
+      var h1 = document.querySelector("main h1");
+      var crumbName = h1 && h1.textContent.trim() ? h1.textContent.trim() : pageTitle;
+      var breadcrumbId = canonicalUrl + "#breadcrumb";
+      var homeUrl = seoUrlFor(lang, "/");
+      graph.push({
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbId,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: lang === "ar" ? "أفنتورا" : "AVENTURA",
+            item: homeUrl
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: crumbName,
+            item: canonicalUrl
+          }
+        ]
+      });
+      webPage.breadcrumb = { "@id": breadcrumbId };
+    } else {
+      webPage.isPartOf = { "@id": websiteId };
+    }
+
+    graph.push(webPage);
+
+    var schema = document.head.querySelector('script[data-aventura-seo-schema]');
+    if (!schema) {
+      schema = document.createElement("script");
+      schema.type = "application/ld+json";
+      schema.setAttribute("data-aventura-seo-schema", "true");
+      document.head.appendChild(schema);
+    }
+    schema.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+  }
+
+  function applySeoEnhancements() {
+    if (!document.body) return;
+
+    var lang = seoLanguage();
+    var dictionary = currentDictionary();
+    var titleKey = document.body.getAttribute("data-title-key") || "";
+    var descriptionKey = document.body.getAttribute("data-description-key") || "";
+    var translatedTitle = titleKey && typeof dictionary[titleKey] === "string" ? dictionary[titleKey].trim() : "";
+    var translatedDescription = descriptionKey && typeof dictionary[descriptionKey] === "string" ? dictionary[descriptionKey].trim() : "";
+    var descriptionMeta = document.head.querySelector('meta[name="description"]');
+    var pageTitle = translatedTitle || document.title || "AVENTURA";
+    var pageDescription = translatedDescription || (descriptionMeta ? descriptionMeta.getAttribute("content") : "") || "Private experiences, events and guest hospitality in Jeddah and Saudi Arabia.";
+    var path = seoPath();
+    var canonicalUrl = setCanonicalAndAlternates(lang, path);
+
+    document.title = pageTitle;
+    upsertMeta('meta[name="description"]', { name: "description" }, pageDescription);
+    upsertMeta('meta[name="robots"]', { name: "robots" }, "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    upsertMeta('meta[property="og:title"]', { property: "og:title" }, pageTitle);
+    upsertMeta('meta[property="og:description"]', { property: "og:description" }, pageDescription);
+    upsertMeta('meta[property="og:url"]', { property: "og:url" }, canonicalUrl);
+    upsertMeta('meta[property="og:site_name"]', { property: "og:site_name" }, "AVENTURA");
+    upsertMeta('meta[property="og:type"]', { property: "og:type" }, "website");
+    upsertMeta('meta[property="og:locale"]', { property: "og:locale" }, lang === "ar" ? "ar_SA" : (lang === "es" ? "es_ES" : "en_US"));
+    upsertMeta('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image");
+    upsertMeta('meta[name="twitter:title"]', { name: "twitter:title" }, pageTitle);
+    upsertMeta('meta[name="twitter:description"]', { name: "twitter:description" }, pageDescription);
+
+    setSeoStructuredData(lang, canonicalUrl, pageTitle, pageDescription);
+  }
+
   function patchPerfumeStoryPaths() {
     var storyPaths = {
       "perfume-roshan": "assets/images/fragrance-cards/roshan.webp",
@@ -273,6 +455,7 @@
     patchContactRequestTypes();
     addLastLightToBoutique();
     normalizeRenderedSpanish();
+    applySeoEnhancements();
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -284,6 +467,7 @@
       patchLaunchCopy();
       patchPerfumeStoryPaths();
       normalizeRenderedSpanish();
+      applySeoEnhancements();
     }, 0);
   });
 
