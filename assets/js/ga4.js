@@ -669,13 +669,17 @@
     showAnalyticsChoices();
   });
 
-  if (readAnalyticsConsent() === "granted") {
+  var initialAnalyticsConsent = readAnalyticsConsent();
+  if (initialAnalyticsConsent === "granted") {
     initializeAnalytics();
   } else {
     window["ga-disable-" + MEASUREMENT_ID] = true;
     clearAnalyticsCookies();
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", showAnalyticsChoices, { once: true });
-    else showAnalyticsChoices();
+    /* A recorded refusal is respected until the visitor opens preferences again. */
+    if (!initialAnalyticsConsent) {
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", showAnalyticsChoices, { once: true });
+      else showAnalyticsChoices();
+    }
   }
 
   function event(name, params) {
