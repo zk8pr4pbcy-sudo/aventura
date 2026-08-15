@@ -157,6 +157,12 @@
     document.querySelectorAll("[data-fragrance-copy]").forEach(function (node) {
       node.textContent = t(node.getAttribute("data-fragrance-copy"));
     });
+    document.querySelectorAll("[data-fragrance-interest]").forEach(function (button) {
+      button.textContent = t("interest");
+    });
+    document.querySelectorAll("[data-fragrance-submit]").forEach(function (button) {
+      if (!button.disabled) button.textContent = t("send");
+    });
     document.querySelectorAll("[data-fragrance-close]").forEach(function (node) {
       node.setAttribute("aria-label", t("close"));
     });
