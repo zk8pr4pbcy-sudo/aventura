@@ -1,3720 +1,10 @@
-(function () {
-  "use strict";
+YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éí×OyãÔèµ©hºÚn¶X§zÍJ[˜İ[Ûˆ
 
-  window.AVENTURA_I18N = {
-  "en": {
-    "common.skip": "Skip to main content",
-    "common.plan": "Request a Tailored Proposal",
-    "common.explore": "Explore",
-    "common.discover": "Discover more",
-    "common.request": "Request a Tailored Proposal",
-    "common.viewAll": "View all",
-    "common.learnMore": "Learn more",
-    "common.whatsapp": "Chat on WhatsApp",
-    "common.comingSoon": "Coming soon",
-    "common.availableRequest": "Available on request",
-    "common.jeddahSaudi": "Jeddah, Saudi Arabia",
-    "common.optional": "Optional",
-    "brand.tagline": "Experiences Â· Events Â· Hospitality",
-    "nav.home": "Home",
-    "nav.experiences": "Experiences",
-    "nav.events": "Events",
-    "nav.services": "Services",
-    "nav.collection": "Boutique",
-    "nav.guestServices": "Guest Services",
-    "nav.about": "About",
-    "nav.gallery": "Gallery",
-    "nav.contact": "Contact",
-    "footer.summary": "Aventura designs private journeys, events and guest programs with thoughtful planning, trusted partners and hands-on coordination.",
-    "footer.explore": "Explore",
-    "footer.company": "Company",
-    "footer.contact": "Contact",
-    "footer.faq": "Frequently asked questions",
-    "footer.privacy": "Privacy policy",
-    "footer.terms": "Terms & conditions",
-    "footer.rights": "All rights reserved.",
-    "footer.location": "Jeddah, Saudi Arabia",
-    "footer.primaryEmail": "General inquiries",
-    "footer.secondaryEmail": "Experience planning",
-    "cta.title": "Tell us what you want the day to feel like.",
-    "cta.description": "Share the occasion, group size and preferred date. We will shape a clear plan around your guests and priorities.",
-    "cta.button": "Request a Tailored Proposal",
-    "whatsapp.label": "Open WhatsApp",
-    "home.metaTitle": "AVENTURA | Private Experiences & Events in Saudi Arabia",
-    "home.metaDescription": "Private experiences, corporate events, guest hospitality and destination programs designed by AVENTURA in Jeddah and Saudi Arabia.",
-    "home.heroEyebrow": "Jeddah Â· Saudi Arabia",
-    "home.heroTitle": "Journeys and occasions, shaped around you.",
-    "home.heroDescription": "Aventura brings together private experiences, event management and guest hospitality in one carefully coordinated journeyâ€”from the first idea to the final farewell.",
-    "home.heroPrimary": "Explore experiences",
-    "home.heroSecondary": "Request a Tailored Proposal",
-    "home.proof1Title": "Locally grounded",
-    "home.proof1Text": "Knowledge of Jeddah and trusted local partners",
-    "home.proof2Title": "Private by design",
-    "home.proof2Text": "Programs shaped around your people and pace",
-    "home.proof3Title": "One point of coordination",
-    "home.proof3Text": "Planning, hospitality and operations together",
-    "home.introEyebrow": "Aventura approach",
-    "home.introTitle": "The place matters. The way you experience it matters more.",
-    "home.introDescription": "From Historic Jeddah to the Red Sea, the desert and Taif, we design private days shaped around your guests.",
-    "home.expEyebrow": "Experiences",
-    "home.expTitle": "Curated ways to discover Jeddah and western Saudi Arabia",
-    "home.expDescription": "Four private worlds, each shaped around your guests, time and the kind of day you want to create.",
-    "home.seaTitle": "The Red Sea",
-    "home.seaText": "Private yachts, sunset cruises, diving, snorkeling and resort days.",
-    "home.historicTitle": "Historic Jeddah",
-    "home.historicText": "Stories, architecture and local hospitality with licensed guides.",
-    "home.desertTitle": "The desert",
-    "home.desertText": "Open landscapes, 4x4 journeys and calm private gatherings.",
-    "home.taifTitle": "Taif highlands",
-    "home.taifText": "Mountains, roses, seasonal local details and a cooler change of pace.",
-    "home.servicesEyebrow": "Guest journey",
-    "home.servicesTitle": "Support before arrival, during the day and after the event",
-    "home.servicesDescription": "One coordinated team can manage the moving parts while you focus on your guests.",
-    "home.service1Title": "Planning & concierge",
-    "home.service1Text": "A clear itinerary, reservations and tailored recommendations.",
-    "home.service2Title": "Private transport",
-    "home.service2Text": "Coordinated vehicles and drivers suited to the group and program.",
-    "home.service3Title": "Licensed guides",
-    "home.service3Text": "Multilingual guides selected for the experience and guests.",
-    "home.service4Title": "Guest hospitality",
-    "home.service4Text": "Arrival coordination, flowers, hotel delivery and practical personal support.",
-    "home.eventsEyebrow": "Events",
-    "home.eventsTitle": "Corporate and private events with a clear purpose",
-    "home.eventsDescription": "From executive meetings and team programs to private seaside gatherings, we coordinate the venue, suppliers, guest flow and on-site execution.",
-    "home.eventsButton": "Explore events",
-    "home.collectionEyebrow": "Aventura Boutique",
-    "home.collectionTitle": "Fragrance concepts shaped by each world",
-    "home.collectionDescription": "The boutique currently presents fragrance concepts in development. Guest services remain separate inside Guest Services.",
-    "home.collectionButton": "Enter the boutique",
-    "home.whyEyebrow": "Why Aventura",
-    "home.whyTitle": "A local operator with a host's attention to detail",
-    "home.whyDescription": "Every plan is considered from the guest's point of view and managed with practical care on the ground.",
-    "home.why1Title": "Tailored, not templated",
-    "home.why1Text": "The plan changes with the guest, occasion, timing and preferred pace.",
-    "home.why2Title": "Privacy and discretion",
-    "home.why2Text": "Private settings and careful coordination for families, executives and VIP guests.",
-    "home.why3Title": "Operational clarity",
-    "home.why3Text": "A defined program, confirmed responsibilities and one point of contact.",
-    "experiences.metaTitle": "Private Experiences in Jeddah & Saudi Arabia | AVENTURA",
-    "experiences.metaDescription": "Explore Red Sea, Golden Hour, Historic Jeddah, desert, Taif and complete Jeddah day experiences by AVENTURA.",
-    "experiences.heroEyebrow": "Private journeys",
-    "experiences.heroTitle": "Experiences with a sense of place.",
-    "experiences.heroDescription": "Explore the Red Sea, Historic Jeddah, the desert, Taif and complete Jeddah programs at a pace shaped around your guests and time.",
-    "experiences.introEyebrow": "Designed around the guest",
-    "experiences.introTitle": "Start with a setting. We will build the day around it.",
-    "experiences.introText": "Each experience can stand alone or become part of a wider itinerary with transport, guides, dining, hospitality and optional activities.",
-    "experiences.seaTitle": "Red Sea experiences",
-    "experiences.seaText": "Bright morning water, open horizons and a day on or below the surface. We select the boat, timing and supporting services around the group.",
-    "experiences.seaItem1": "Private yacht journeys",
-    "experiences.seaItem2": "Golden Hour: a one-hour sunset boat journey",
-    "experiences.seaItem3": "Diving and snorkeling",
-    "experiences.seaItem4": "Beach and resort days",
-    "experiences.seaTag1": "Couples",
-    "experiences.seaTag2": "Families",
-    "experiences.seaTag3": "Private groups",
-    "experiences.historicTitle": "Historic Jeddah",
-    "experiences.historicText": "A private walk through Al-Balad led by a licensed guide who connects the architecture, people and stories of the city.",
-    "experiences.historicItem1": "Licensed multilingual guides",
-    "experiences.historicItem2": "Roshan architecture and local stories",
-    "experiences.historicItem3": "Arabic coffee, dates and selected heritage stops",
-    "experiences.historicItem4": "Transport and seafood dinner available as options",
-    "experiences.historicTag1": "Culture",
-    "experiences.historicTag2": "Architecture",
-    "experiences.historicTag3": "First-time visitors",
-    "experiences.desertTitle": "Desert experiences",
-    "experiences.desertText": "A private desert experience shaped around wide sand dunes, a selected 4x4 route, Last Light and Saudi hospitality.",
-    "experiences.desertItem1": "4x4 routes across sand dunes",
-    "experiences.desertItem2": "Private seating and hospitality",
-    "experiences.desertItem3": "Dinner arrangements",
-    "experiences.desertItem4": "Programs for small groups",
-    "experiences.desertTag1": "Sand dunes & sunset",
-    "experiences.desertTag2": "Small groups",
-    "experiences.desertTag3": "Private occasions",
-    "experiences.taifTitle": "Taif journeys",
-    "experiences.taifText": "A private day in the highlands combining mountain viewpoints, seasonal roses, local details and a slower atmosphere.",
-    "experiences.taifItem1": "Mountain routes and viewpoints",
-    "experiences.taifItem2": "Seasonal rose farms",
-    "experiences.taifItem3": "Local markets and seasonal stops",
-    "experiences.taifItem4": "Dining and cafÃ© stops",
-    "experiences.taifTag1": "Full day",
-    "experiences.taifTag2": "Seasonal",
-    "experiences.taifTag3": "Nature",
-    "experiences.signatureEyebrow": "Signature Jeddah journeys",
-    "experiences.signatureTitle": "Simple ideas with a memorable point of view",
-    "experiences.signatureText": "Signature programs can connect culture, sea, dining and hospitality without making the day feel rushed.",
-    "experiences.signature1Title": "From the Sea to Al-Balad",
-    "experiences.signature1Text": "A resort afternoon, a Yacht Club sunset stop and a licensed guided walk through Historic Jeddah.",
-    "experiences.signature2Title": "Sea to desert",
-    "experiences.signature2Text": "A coastal morning and a private desert setting at the final light.",
-    "experiences.signature3Title": "A complete Jeddah day",
-    "experiences.signature3Text": "A balanced day of city, culture, dining and waterfront moments.",
-    "experiences.requestTitle": "Want us to combine more than one experience?",
-    "experiences.requestText": "Tell us the number of guests and available time. We will suggest a balanced route.",
-    "events.metaTitle": "Corporate & Private Events in Jeddah | AVENTURA",
-    "events.metaDescription": "Corporate events, executive meetings, team programs, private gatherings and VIP guest hosting coordinated by AVENTURA.",
-    "events.heroEyebrow": "Event management",
-    "events.heroTitle": "Events managed from the first brief to guest arrival.",
-    "events.heroDescription": "Aventura plans and delivers corporate events, private gatherings and guest programs through one clear operating plan.",
-    "events.introEyebrow": "From idea to execution",
-    "events.introTitle": "The event is one moment. The guest journey starts earlier.",
-    "events.introText": "We align the objective, venue, timing, hospitality, suppliers and on-site flow so each part supports the occasion.",
-    "events.corporateEyebrow": "Corporate",
-    "events.corporateTitle": "Corporate event delivery",
-    "events.corporateText": "On-site delivery for executive meetings, recognition occasions, team programs, visiting delegations and company gatherings.",
-    "events.privateEyebrow": "Private",
-    "events.privateTitle": "Private events",
-    "events.privateText": "Birthdays, anniversaries, family gatherings and intimate celebrations shaped around the setting and guests.",
-    "events.vipTitle": "VIP & delegation hosting",
-    "events.vipText": "Coordinated arrival, transport, accommodation support, private programs and discreet guest care.",
-    "events.teamTitle": "Team programs",
-    "events.teamText": "Activities designed around team goals, group size and a suitable environment outside the usual workplace.",
-    "events.typesEyebrow": "What we coordinate",
-    "events.typesTitle": "A practical format for each objective",
-    "events.type1Title": "Executive meetings",
-    "events.type1Text": "A suitable setting, meeting essentials, refreshments and transport coordinated as one program.",
-    "events.type2Title": "Networking & executive dinners",
-    "events.type2Text": "Venue selection, guest reception, seating, hospitality and coordinated transportation.",
-    "events.type3Title": "Recognition & company occasions",
-    "events.type3Text": "Employee recognition, company milestones and selected seasonal gatherings.",
-    "events.type4Title": "Sea, desert & cultural days",
-    "events.type4Text": "Ready destinations adapted for company groups with practical guest comfort and logistics.",
-    "events.type5Title": "Team building",
-    "events.type5Text": "Activities matched to the team's purpose, ability and available time.",
-    "events.type6Title": "International guests",
-    "events.type6Text": "A connected hospitality program for visiting teams, partners and delegations.",
-    "events.processEyebrow": "Our process",
-    "events.processTitle": "One plan, four clear stages",
-    "events.step1Title": "Brief",
-    "events.step1Text": "We understand the objective, guests, date and operating constraints.",
-    "events.step2Title": "Design",
-    "events.step2Text": "We shape the format, venue, flow and supporting services.",
-    "events.step3Title": "Confirm",
-    "events.step3Text": "Suppliers, responsibilities and schedule are documented and aligned.",
-    "events.step4Title": "Deliver",
-    "events.step4Text": "On-site coordination keeps the guest journey and event moving smoothly.",
-    "events.requestTitle": "Planning an event in Jeddah?",
-    "events.requestText": "Send the date, guest count and purpose. We will respond with the right starting format.",
-    "services.metaTitle": "Guest, Concierge & Destination Services | AVENTURA",
-    "services.metaDescription": "Planning, transport, licensed guides, meet and assist, guest hospitality and destination management services in Saudi Arabia.",
-    "services.heroEyebrow": "Guest services",
-    "services.heroTitle": "The details around the experience matter.",
-    "services.heroDescription": "Planning, movement, welcome and support are coordinated around the same guest journey.",
-    "services.introEyebrow": "One coordinated layer",
-    "services.introTitle": "Services that make the day feel effortless",
-    "services.introText": "Book a single service or let us connect several into a complete program for individuals, families, companies and visiting delegations.",
-    "services.s1Title": "Planning & concierge",
-    "services.s1Text": "Itineraries, reservations, recommendations and special arrangements aligned to the guest.",
-    "services.s2Title": "Meet & assist",
-    "services.s2Text": "Arrival coordination and a clear handover from airport to vehicle and accommodation.",
-    "services.s3Title": "Private transportation",
-    "services.s3Text": "Suitable vehicles, professional drivers and timing coordinated with the program.",
-    "services.s4Title": "Licensed guides",
-    "services.s4Text": "Arabic, English and other languages selected according to availability and guest needs.",
-    "services.s5Title": "Guest hospitality",
-    "services.s5Text": "Arrival arrangements, flowers, hotel delivery and thoughtful practical details.",
-    "services.s6Title": "Destination management",
-    "services.s6Text": "Local coordination for travel agencies, companies, delegations and multi-day programs.",
-    "services.s7Title": "Thobe tailoring",
-    "services.s7Text": "A tailor visits the guest for measurements and fabric selection, with delivery in under 24 hours subject to confirmation.",
-    "services.s8Title": "Abaya assistance",
-    "services.s8Text": "A specialist helps the guest select a suitable abaya, with expedited delivery based on availability.",
-    "services.journeyEyebrow": "How it works",
-    "services.journeyTitle": "One request can connect the entire guest journey",
-    "services.j1Title": "Before arrival",
-    "services.j1Text": "Preferences, program, reservations and transport are confirmed.",
-    "services.j2Title": "On arrival",
-    "services.j2Text": "Meet, movement and arrival details are coordinated.",
-    "services.j3Title": "During the stay",
-    "services.j3Text": "Experiences, dining and special requests are managed through one contact.",
-    "services.j4Title": "Before departure",
-    "services.j4Text": "Final arrangements, delivery and transfer are checked.",
-    "collection.metaTitle": "AVENTURA Boutique | Fragrance Concepts by Experience",
-    "collection.metaDescription": "Explore Aventura fragrance concepts by experience, all currently in development.",
-    "collection.heroEyebrow": "Aventura Boutique",
-    "collection.heroTitle": "Fragrance concepts, rooted in each experience.",
-    "collection.heroDescription": "Explore the scent direction of each Aventura world. Every concept remains in development until its samples, suppliers and quality are approved.",
-    "collection.introEyebrow": "Connected to your experience",
-    "collection.introTitle": "Select an experience and see only what belongs to it",
-    "collection.introText": "Each fragrance concept is connected to the story, setting and rhythm of its experience.",
-    "collection.boxesEyebrow": "Experience boxes",
-    "collection.boxesTitle": "Experience boxes, coming soon.",
-    "collection.box1Title": "Red Sea Beach Bag",
-    "collection.box1Text": "A practical beach collection presented inside the tote itself, ready for the sea day.",
-    "collection.box2Title": "Roshan Box",
-    "collection.box2Text": "A concise memory of Historic Jeddah, local craft and Saudi hospitality.",
-    "collection.box3Title": "Last Light Box",
-    "collection.box3Text": "Useful desert details with a warm palette and a restrained Saudi character.",
-    "collection.box4Title": "Taif Rose Box",
-    "collection.box4Text": "A seasonal collection centered on Taif rose and trusted local products.",
-    "collection.perfumeEyebrow": "Aventura Scent Lab",
-    "collection.perfumeTitle": "Fragrance concepts in development",
-    "collection.perfumeText": "These concepts translate each Aventura experience into a scent direction. They are not available to request or purchase yet.",
-    "collection.p1Title": "Red Sea",
-    "collection.p1Text": "Marine light, mineral air and polished woods.",
-    "collection.p2Title": "Roshan",
-    "collection.p2Text": "Roshan wood, warm stone, spice and incense.",
-    "collection.p3Title": "Last Light",
-    "collection.p3Text": "Dry woods, sun-warmed sand, vetiver and a mineral accord.",
-    "collection.p4Title": "Taif Rose",
-    "collection.p4Text": "Taif rose, mountain air and restrained green notes.",
-    "collection.personalEyebrow": "Corporate & executive guests",
-    "collection.personalTitle": "Useful services prepared around the arrival",
-    "collection.thobeTitle": "Tailor to your accommodation",
-    "collection.thobeText": "A tailor visits for measurements and fabric selection, then arranges delivery in under 24 hours after availability is confirmed.",
-    "collection.abayaTitle": "Abaya specialist for the guest",
-    "collection.abayaText": "A specialist visits the guest to take the measurements required for the service. The appropriate abaya and delivery are coordinated only after confirmation; no ready-made catalogue is shown.",
-    "collection.requestTitle": "Build a quote request around your guest",
-    "collection.requestText": "Select ready products and services, then send one quote request. Aventura reviews availability, timing and personalization before issuing a quotation.",
-    "about.metaTitle": "About AVENTURA | Experiences, Events & Hospitality",
-    "about.metaDescription": "Discover the story, vision, mission and values behind AVENTURA's carefully designed experiences and events.",
-    "about.heroEyebrow": "About Aventura",
-    "about.heroTitle": "A different way to discover a place and create moments.",
-    "about.heroDescription": "Aventura is not merely a journey. We design meaningful private experiences and events around the guest, the moment and the details that remain.",
-    "about.storyEyebrow": "Our beginning",
-    "about.storyTitle": "In every city, there are places everyone visitsâ€¦",
-    "about.storyText1": "But there are places reached only by those who know the real way to them. This is where Aventura began.",
-    "about.storyText2": "Aventura was not born simply to sell tours or organize events, but from a deep understanding that the experience is not only in the placeâ€”it is in the way you live it: in the small details, the right moment, the right rhythm and the feeling that remains after the journey or event ends.",
-    "about.visionTitle": "Vision",
-    "about.visionText": "To become a trusted reference for carefully designed experiences and events in Saudi Arabia.",
-    "about.missionTitle": "Mission",
-    "about.missionText": "To create journeys and occasions that feel personal, well coordinated and genuinely connected to place.",
-    "about.valuesEyebrow": "Our values",
-    "about.valuesTitle": "The principles behind every experience",
-    "about.v1Title": "Mastery",
-    "about.v1Text": "Every detail has its weight, and every moment has its value.",
-    "about.v2Title": "Authenticity",
-    "about.v2Text": "We present an experience as it should be livedâ€”with honesty and depth, away from repetition.",
-    "about.v3Title": "Privacy",
-    "about.v3Text": "Every guest enjoys a place differently, and we design the experience accordingly.",
-    "about.v4Title": "Quality",
-    "about.v4Text": "We choose the best in every element to ensure a complete experience.",
-    "about.v5Title": "Innovation",
-    "about.v5Text": "We reimagine destinations, experiences and events in new and unconventional ways.",
-    "about.v6Title": "Curiosity",
-    "about.v6Text": "We keep looking for better, more meaningful ways to experience a place.",
-    "about.modelEyebrow": "How we work",
-    "about.modelTitle": "Local network, one accountable coordinator",
-    "about.modelText": "We collaborate with licensed guides, venues, transport providers, hospitality teams and specialist suppliers. Aventura remains the single coordinating point for the agreed program.",
-    "contact.metaTitle": "Contact AVENTURA | Plan an Experience or Event",
-    "contact.metaDescription": "Contact AVENTURA in Jeddah to plan a private experience, event, guest program or corporate itinerary.",
-    "contact.heroEyebrow": "Contact",
-    "contact.heroTitle": "Start with the guests, date and occasion.",
-    "contact.heroDescription": "Send the essential details. We will help turn them into a practical first direction.",
-    "contact.panelTitle": "Talk to Aventura",
-    "contact.panelText": "Email is the main booking channel. WhatsApp remains available as a second option.",
-    "contact.phoneLabel": "WhatsApp",
-    "contact.email1Label": "Bookings & inquiries",
-    "contact.email2Label": "Experience planning",
-    "contact.locationLabel": "Based in",
-    "contact.formTitle": "Request details",
-    "contact.formText": "No payment is taken and no booking is confirmed here. This form starts the planning and quote conversation only.",
-    "contact.nameLabel": "Name",
-    "contact.namePlaceholder": "Your full name",
-    "contact.companyLabel": "Company or organization",
-    "contact.companyPlaceholder": "Optional",
-    "contact.phoneFieldLabel": "Phone number",
-    "contact.phonePlaceholder": "+966 ...",
-    "contact.emailLabel": "Email",
-    "contact.emailPlaceholder": "name@example.com",
-    "contact.typeLabel": "Request type",
-    "contact.typePlaceholder": "Choose one",
-    "contact.typeExperience": "Private experience",
-    "contact.typeEvent": "Event",
-    "contact.typeCorporate": "Corporate or delegation program",
-    "contact.typeCollection": "Fragrance concepts in development",
-    "contact.typeOther": "Other",
-    "contact.dateLabel": "Preferred date",
-    "contact.guestsLabel": "Number of guests",
-    "contact.guestsPlaceholder": "Example: 6",
-    "contact.messageLabel": "Any other important details?",
-    "contact.messagePlaceholder": "Add a short optional note if there is anything else we should know.",
-    "contact.sensitiveDataNotice": "Please do not send national ID numbers, passport numbers, health information, or other sensitive data through this form.",
-    "contact.privacyNoticePrefix": "By sending this request, Aventura processes your data to prepare the request and contact you under the",
-    "contact.privacyNoticeTerms": ". Confirmed services are governed by the",
-    "contact.submit": "Send booking request",
-    "contact.note": "Choose email or WhatsApp to send the prepared request; it does not confirm a booking or payment.",
-    "contact.error": "Please enter your name and at least a phone number or email address.",
-    "contact.errorEmail": "Please enter your email address to send the booking request by email.",
-    "contact.requestIntro": "AVENTURA booking request",
-    "contact.emailSubject": "Aventura booking request",
-    "contact.submitEmail": "Send booking request",
-    "contact.submitWhatsapp": "Send booking request by WhatsApp",
-    "contact.noteEmail": "Your request will be sent directly to Aventura. No email app will open; it does not confirm a booking or payment.",
-    "contact.noteWhatsapp": "WhatsApp will open with the prepared request. You can review it before sending; it does not confirm a booking or payment.",
-    "contact.sending": "Sending your requestâ€¦",
-    "contact.submitError": "We could not send your request. Please try again or choose WhatsApp.",
-    "contact.whatsappIntro": "Hello AVENTURA, I would like to request planning support.",
-    "contact.whatsappName": "Name",
-    "contact.whatsappCompany": "Company",
-    "contact.whatsappPhone": "Phone",
-    "contact.whatsappEmail": "Email",
-    "contact.whatsappType": "Request type",
-    "contact.whatsappDate": "Preferred date",
-    "contact.whatsappGuests": "Guests",
-    "contact.whatsappMessage": "Details",
-    "faq.metaTitle": "Frequently Asked Questions | AVENTURA",
-    "faq.metaDescription": "Answers about AVENTURA experiences, events, private transport, guides, bookings and guest services.",
-    "faq.heroEyebrow": "Helpful information",
-    "faq.heroTitle": "Frequently asked questions",
-    "faq.heroDescription": "A clear starting point before we tailor the details around your request.",
-    "faq.q1": "How do I book an experience?",
-    "faq.a1": "Send the preferred date, guest count and interests through the request form by email, or use WhatsApp if you prefer. We will confirm availability and provide the proposed program before any payment.",
-    "faq.q2": "Are experiences private?",
-    "faq.a2": "Our core programs are designed for private guests and groups. If a shared option is ever suggested, it will be stated clearly before confirmation.",
-    "faq.q3": "Can you combine several experiences in one day?",
-    "faq.a3": "Yes. We balance travel time, weather and guest pace so a combined day remains enjoyable rather than rushed.",
-    "faq.q4": "Do you provide transportation?",
-    "faq.a4": "Yes. Private transportation can be added according to group size, route and required service level.",
-    "faq.q5": "Are licensed guides available in different languages?",
-    "faq.a5": "Yes, subject to availability. English and Arabic are commonly available, and additional languages can be requested in advance.",
-    "faq.q6": "Can Aventura organize corporate events?",
-    "faq.a6": "Yes. We coordinate meetings, conferences, launches, team programs, employee occasions and visiting delegation programs.",
-    "faq.q7": "How is the experience priced?",
-    "faq.a7": "Each experience is quoted after reviewing the date, preferred timing, group size, duration, transport and selected additions. You receive a clear written quotation before confirmation.",
-    "faq.q8": "Can guest services be arranged at a hotel?",
-    "faq.a8": "Yes. Thobe tailoring, abaya service and flowers can be coordinated for a hotel or accommodation by prior arrangement.",
-    "faq.q9": "How early should I contact you?",
-    "faq.a9": "Earlier is better, especially for weekends, larger groups and specialist guides. Short-notice requests can still be checked based on availability.",
-    "faq.q10": "What happens after I send a request?",
-    "faq.a10": "We review the details, ask any necessary questions, propose a direction and confirm availability. Nothing is booked until you approve the final scope and terms.",
-    "gallery.metaTitle": "Aventura Gallery | Places, Events & Details",
-    "gallery.metaDescription": "A visual preview of Red Sea, Historic Jeddah, desert, Taif, events and guest details by AVENTURA.",
-    "gallery.heroEyebrow": "Visual journal",
-    "gallery.heroTitle": "Places, settings and thoughtful details.",
-    "gallery.heroDescription": "A visual direction for the experiences and events we shape. Final arrangements vary with each program.",
-    "gallery.sea": "Red Sea journeys",
-    "gallery.historic": "Historic Jeddah",
-    "gallery.desert": "Desert at last light",
-    "gallery.taif": "Taif highlands",
-    "gallery.corporate": "Executive events",
-    "gallery.private": "Private gatherings",
-    "gallery.collection": "Aventura collection direction",
-    "gallery.jeddah": "Jeddah after sunset",
-    "gallery.altSea": "Red Sea experience concept",
-    "gallery.altHistoric": "Historic Jeddah experience concept",
-    "gallery.altDesert": "Desert experience at sunset",
-    "gallery.altTaif": "Taif highlands experience concept",
-    "gallery.altCorporate": "Executive event concept",
-    "gallery.altPrivate": "Private gathering concept",
-    "gallery.altCollection": "Aventura collection direction",
-    "gallery.altJeddah": "Jeddah after sunset",
-    "gallery.disclaimer": "These images present the visual direction of Aventura. Venues, experience details and setups are confirmed separately for each request.",
-    "privacy.metaTitle": "Privacy Policy | AVENTURA",
-    "privacy.metaDescription": "How AVENTURA handles personal data submitted through its website and contact channels.",
-    "privacy.heroEyebrow": "Legal",
-    "privacy.heroTitle": "Privacy policy",
-    "privacy.heroDescription": "A clear explanation of the personal data we receive and how we use it.",
-    "privacy.updated": "Last updated: July 2026",
-    "privacy.h1": "1. Information you provide",
-    "privacy.p1": "When you contact us, you may provide your name, phone number, email, company, country, city, preferred date, guest count or collaboration details such as profession, licenses, portfolio, languages and service coverage.",
-    "privacy.h2": "2. How we use information",
-    "privacy.p2": "We use submitted information to respond to inquiries, prepare proposals, coordinate requested services, maintain business records and improve our guest communication.",
-    "privacy.h3": "3. Sharing with service partners",
-    "privacy.p3": "When necessary to prepare or deliver an approved request, relevant details may be shared with selected providers such as guides, venues, transport companies or hospitality partners. We share only what is reasonably needed for that purpose.",
-    "privacy.h4": "4. Website preferences",
-    "privacy.p4": "The website stores your language choice and limited technical preferences on your device for a limited period. Anonymous interaction events are prepared without names, phone numbers, email addresses or message content. The website does not currently take online payments or create customer accounts.",
-    "privacy.h5": "5. WhatsApp and email",
-    "privacy.p5": "If you continue through WhatsApp or email, your communication is also subject to the privacy practices of that service provider.",
-    "privacy.h6": "6. Data retention and protection",
-    "privacy.p6": "We retain inquiry and service information only as needed for business, contractual and legal purposes, and apply reasonable measures to protect it from unauthorized access.",
-    "privacy.h7": "7. Your choices",
-    "privacy.p7": "You may ask us to correct or delete information you previously submitted, subject to any information we must retain for legal or contractual reasons.",
-    "privacy.h8": "8. Contact",
-    "privacy.p8": "For privacy questions, email contact@aventuraksa.com.",
-    "terms.metaTitle": "Terms & Conditions | AVENTURA",
-    "terms.metaDescription": "The terms that apply to AVENTURA website requests and confirmed local services.",
-    "terms.heroEyebrow": "Legal",
-    "terms.heroTitle": "Terms & conditions",
-    "terms.heroDescription": "Clear terms for requests, confirmed services, and guest experiences.",
-    "notfound.metaTitle": "Page Not Found | AVENTURA",
-    "notfound.title": "This page is not part of the journey.",
-    "notfound.text": "The link may have changed or the page may no longer exist.",
-    "notfound.button": "Return home",
-    "common.madeToOrder": "Made to order",
-    "nav.corporate": "Corporate",
-    "home.jeddahTitle": "A complete Jeddah day",
-    "home.jeddahText": "Waterfront, Historic Jeddah, local dining and selected city moments in one balanced route.",
-    "home.corporateButton": "Corporate programs",
-    "experiences.shopExperience": "View experience products",
-    "experiences.jeddahEyebrow": "Jeddah Â· Flexible day",
-    "experiences.jeddahTitle": "A complete Jeddah day",
-    "experiences.jeddahText": "A flexible city program that connects Jeddah's waterfront, Historic Jeddah, local dining and selected stops at a comfortable pace.",
-    "experiences.jeddahItem1": "Half-day or full-day format",
-    "experiences.jeddahItem2": "Licensed guide and coordinated transport",
-    "experiences.jeddahItem3": "Historic Jeddah and waterfront moments",
-    "experiences.jeddahItem4": "Dining, coffee and guest hospitality options",
-    "experiences.jeddahTag1": "First visit",
-    "experiences.jeddahTag2": "Flexible",
-    "experiences.jeddahTag3": "Full day",
-    "experiences.goldenTitle": "The Golden Hour",
-    "experiences.goldenText": "A private one-hour boat journey timed for the final light and sunset over the Red Sea.",
-    "events.corporateLink": "View corporate programs",
-    "services.requestService": "Request this service",
-    "collection.filterAll": "All experiences",
-    "collection.filterSea": "Sea",
-    "collection.filterHistoric": "Historic Jeddah",
-    "collection.filterDesert": "Desert",
-    "collection.filterTaif": "Taif",
-    "collection.filterJeddah": "Aventura Signature",
-    "collection.filterCorporate": "Corporate & executive",
-    "collection.howEyebrow": "How the boutique works",
-    "collection.howTitle": "Build one request around the guest",
-    "collection.how1Title": "Choose an experience",
-    "collection.how1Text": "Entering through an experience page opens its matching products automatically.",
-    "collection.how2Title": "Add what fits",
-    "collection.how2Text": "Select a box, individual products or personal guest services.",
-    "collection.how3Title": "Receive a tailored quote",
-    "collection.how3Text": "Aventura reviews timing, quantity, personalization and availability before confirming.",
-    "collection.boxesText": "These preview collections will be released only after samples, materials and suppliers are approved. They are not available to request yet.",
-    "collection.requestBox": "Request this box",
-    "collection.box1Item1": "Aventura beach tote",
-    "collection.box1Item2": "Quick-dry beach towel",
-    "collection.box1Item3": "Water-resistant phone sleeve for spray and sand",
-    "collection.box1Item4": "Insulated travel flask",
-    "collection.box1Item5": "Sea perfume option when released",
-    "collection.box2Item1": "Roshan-inspired wooden keepsake",
-    "collection.box2Item2": "Illustrated heritage cards",
-    "collection.box2Item3": "Roshan pocket notebook",
-    "collection.box2Item4": "Al-Balad fabric pouch",
-    "collection.box2Item5": "Historic Jeddah perfume option when released",
-    "collection.box3Item1": "Light neutral shawl",
-    "collection.box3Item2": "Insulated travel tumbler",
-    "collection.box3Item3": "Small woven keepsake",
-    "collection.box3Item4": "Multi-use travel case",
-    "collection.box3Item5": "Last Light perfume option when released",
-    "collection.box4Item1": "Taif rose mist",
-    "collection.box4Item2": "Rose soap or hand cream",
-    "collection.box4Item3": "Scented rose sachet",
-    "collection.box4Item4": "Floral pocket notebook",
-    "collection.box4Item5": "Taif perfume option when released",
-    "collection.box5Title": "Jeddah Day Box",
-    "collection.box5Text": "A small cross-section of the city for guests taking the Jeddah tour or complete day.",
-    "collection.box5Item1": "Pocket city notebook and illustrated route card",
-    "collection.box5Item2": "Roshan-inspired keepsake",
-    "collection.box5Item3": "Illustrated heritage cards",
-    "collection.box5Item4": "Compact sea accessory",
-    "collection.box5Item5": "Aventura gift card",
-    "collection.boxNote": "Contents are illustrative and remain subject to final product approval.",
-    "collection.personalText": "Selected services can be arranged separately or added to a corporate guest program.",
-    "collection.executive1Title": "Airport welcome & transfer",
-    "collection.executive1Text": "Meet and assist with coordinated executive transportation to the hotel or meeting.",
-    "collection.executive2Title": "Hotel flowers & welcome",
-    "collection.executive2Text": "A flower bouquet, welcome note or selected gift placed before the guest arrives.",
-    "collection.executive3Title": "Meeting preparation",
-    "collection.executive3Text": "Meeting essentials, refreshments, guest flow and transportation coordinated together.",
-    "collection.executive4Title": "Official gifts & concierge",
-    "collection.executive4Text": "Appropriate business gifts and practical assistance during the guest's stay.",
-    "corporate.metaTitle": "Corporate Experiences & Executive Guest Programs | AVENTURA",
-    "corporate.metaDescription": "Practical corporate experiences, executive meetings, team programs and VIP delegation hosting coordinated by AVENTURA in Jeddah.",
-    "corporate.heroEyebrow": "Corporate & executive programs",
-    "corporate.heroTitle": "Corporate programs shaped around a clear business objective.",
-    "corporate.heroDescription": "From an executive arrival to an off-site meeting or team day, Aventura designs a practical program that connects hospitality, transport and the right setting.",
-    "corporate.heroPrimary": "Request a Tailored Proposal",
-    "corporate.heroSecondary": "View practical formats",
-    "corporate.introEyebrow": "A complete operating solution",
-    "corporate.introTitle": "A business program, not a ready-made company trip.",
-    "corporate.introText": "We start with the business objectiveâ€”hosting, recognition, connection or team engagementâ€”then shape a realistic program around the guests, time and budget.",
-    "corporate.include1": "Planning",
-    "corporate.include2": "Venue",
-    "corporate.include3": "Transport",
-    "corporate.include4": "Hospitality",
-    "corporate.include5": "Guest flowers",
-    "corporate.include6": "On-site coordination",
-    "corporate.programsEyebrow": "Selected practical programs",
-    "corporate.programsTitle": "High-value formats without unnecessary complexity",
-    "corporate.programsText": "These formats use accessible venues and reliable services, and can be expanded only when the objective requires it.",
-    "corporate.program1Title": "Executive off-site meetings",
-    "corporate.program1Text": "A private meeting setting with refreshments, transport, meeting essentials and an optional lunch or dinner.",
-    "corporate.program2Title": "VIP delegations & international guests",
-    "corporate.program2Text": "Airport welcome, executive transport, hotel support, licensed guides and a coordinated guest itinerary.",
-    "corporate.program3Title": "Incentive & recognition days",
-    "corporate.program3Text": "A rewarding sea, cultural, desert or Taif day with transport, hospitality and a simple recognition moment.",
-    "corporate.program4Title": "Light team building",
-    "corporate.program4Text": "Accessible group challenges, clue trails and collaborative games adapted to the venue and available time.",
-    "corporate.program5Title": "Corporate experience days",
-    "corporate.program5Text": "Private Red Sea, Historic Jeddah, desert or Taif programs designed for teams, clients or business partners.",
-    "corporate.program6Title": "Networking & executive dinners",
-    "corporate.program6Text": "Venue selection, guest reception, seating, hospitality, transport and thoughtful on-site coordination.",
-    "corporate.packagesEyebrow": "Ready starting points",
-    "corporate.packagesTitle": "Three programs that are easy to shape",
-    "corporate.package1Title": "Executive Arrival",
-    "corporate.package1Text": "Airport coordination, executive transfer, hotel welcome flowers and concierge support.",
-    "corporate.package2Title": "Leadership Half-Day",
-    "corporate.package2Text": "Off-site meeting room, refreshments, working lunch and coordinated transport.",
-    "corporate.package3Title": "Team Discovery Day",
-    "corporate.package3Text": "One destination experience, a light team challenge, a shared meal and group transport.",
-    "corporate.guestEyebrow": "Executive guest care",
-    "corporate.guestTitle": "Useful support before the guest even arrives",
-    "corporate.guestText": "Corporate and executive guests can receive a connected hospitality plan rather than arranging each detail separately.",
-    "corporate.guest1": "Airport meet and executive transportation",
-    "corporate.guest2": "Hotel flowers, arrival coordination and concierge support",
-    "corporate.guest3": "Express thobe measurements and delivery in under 24 hours, subject to confirmation",
-    "corporate.guest4": "Abaya selection with a dedicated female specialist",
-    "corporate.guestBoutique": "View executive services",
-    "corporate.viewEvents": "Need event delivery? Explore event management",
-    "corporate.requestTitle": "What should the program achieve?",
-    "corporate.requestText": "Share the objective, number of guests and preferred date. We will recommend the simplest format that delivers the right result.",
-    "contact.typeService": "Guest service",
-    "contact.requestedItem": "Requested item",
-    "experiences.readySeaEyebrow": "Ready to request",
-    "experiences.readySeaTitle": "Sea journeys shaped around your timing",
-    "experiences.readySeaText": "Choose the experience, timing and group size. We then confirm the suitable boat and prepare a tailored quotation.",
-    "experiences.from": "Quotation",
-    "experiences.perBoat": "per private boat",
-    "experiences.perYacht": "per private yacht",
-    "experiences.perGroup": "per private group",
-    "experiences.perPerson": "per person",
-    "experiences.offerGoldenMeta": "60 minutes Â· Sharm Obhur Â· 1â€“4 guests",
-    "experiences.offerGoldenText": "A private sunset boat journey with captain, fuel, safety vests, water, snacks and ice.",
-    "experiences.goldenRates": "Quoted according to the date, timing and guest count.",
-    "experiences.bayadahTitle": "Bayadah Sea Day",
-    "experiences.offerBayadahMeta": "8 hours Â· Obhur to Bayadah Â· Up to 8 guests",
-    "experiences.offerBayadahText": "Swimming and unhurried time at sea, with captain, fuel, safety vests, snacks and ice included.",
-    "experiences.bayadahRates": "The boat is selected and quoted according to the group and availability.",
-    "experiences.grandTitle": "Grand Bayadah Yacht",
-    "experiences.offerGrandMeta": "8 hours Â· Obhur to Bayadah Â· Up to 23 guests",
-    "experiences.offerGrandText": "A spacious premium yacht for private groups, with the same sea-day essentials included.",
-    "experiences.grandRate": "A tailored quotation is prepared for the private yacht and selected program.",
-    "experiences.readyHistoricEyebrow": "Historic Jeddah formats",
-    "experiences.readyHistoricTitle": "A licensed guide, scaled to your group",
-    "experiences.readyHistoricText": "All walking formats include Arabic coffee, dates and a licensed guide. Any additional paid entries are confirmed separately.",
-    "experiences.heritageSmallMeta": "2â€“2.5 hours Â· 1â€“4 guests",
-    "experiences.heritageSmallTitle": "Private Heritage Walk",
-    "experiences.heritageSmallText": "A focused walking tour through Al-Balad with a licensed guide.",
-    "experiences.heritageGroupMeta": "2â€“2.5 hours Â· 5â€“12 guests",
-    "experiences.heritageGroupTitle": "Heritage Walk for Groups",
-    "experiences.heritageGroupText": "Licensed guide plus an Aventura organizer for smoother group movement.",
-    "experiences.heritageStandardMeta": "Return hotel transport Â· 1â€“4 guests",
-    "experiences.heritageStandardTitle": "Heritage Walk + Transport",
-    "experiences.heritageStandardText": "The private walk with a standard car and driver coordinated from the hotel.",
-    "experiences.heritageVipMeta": "VIP return transport Â· Up to 6 guests",
-    "experiences.heritageVipTitle": "Heritage Walk + VIP Transport",
-    "experiences.heritageVipText": "Executive vehicle and driver, with an organizer added when the group size requires one.",
-    "experiences.dinnerNoteTitle": "Optional dinner after the walk",
-    "experiences.dinnerNoteText": "Choose the dining style and preferred timing; the restaurant and quotation are confirmed with the full itinerary.",
-    "experiences.stbEyebrow": "Aventura signature day",
-    "experiences.stbTitle": "From the Sea to Al-Balad",
-    "experiences.stbLead": "A resort afternoon, a sunset stop at Jeddah Yacht Club and a licensed guided evening through Historic Jeddahâ€”one unhurried day.",
-    "experiences.stbClarity": "The sea chapter is the resort experience. A boat journey is optional, requested separately and confirmed by availability; the seafood dinner is optional too.",
-    "experiences.stbStep1Title": "Narcissus Resort",
-    "experiences.stbStep1Text": "Beach access, a meal and a refreshing drink in a relaxed resort setting.",
-    "experiences.stbStep2Title": "Jeddah Yacht Club at sunset",
-    "experiences.stbStep2Text": "A short public promenade stop with one standard drink included.",
-    "experiences.stbStep3Title": "Historic Jeddah",
-    "experiences.stbStep3Text": "A licensed guided walk with Arabic coffee, dates and selected heritage stops.",
-    "experiences.stbStep4Title": "Optional seafood dinner",
-    "experiences.stbStep4Text": "Add a selected seafood dinner in Historic Jeddah if you wish to end the evening there.",
-    "experiences.stbDurationLabel": "Program duration",
-    "experiences.stbDurationValue": "Up to 8 hours, flexible to about 9",
-    "experiences.stbBaseTitle": "Core journey",
-    "experiences.stbDinnerTitle": "With VIP seafood dinner",
-    "experiences.stbMinimum": "Minimum booking: 4 guests",
-    "experiences.stbRateNote": "Final timing and vehicle are confirmed after reviewing the date, hotel and group size.",
-    "experiences.bookingEyebrow": "Before you book",
-    "experiences.bookingTitle": "Clear terms, then a confirmed plan",
-    "experiences.bookingText": "Every quotation is prepared after reviewing the date, timing, group size, availability and final itinerary.",
-    "experiences.booking1Title": "Reservation timing",
-    "experiences.booking1Text": "Booking 2â€“3 days ahead is preferred. Next-day arrangements may be possible subject to availability.",
-    "experiences.booking2Title": "Payment and changes by confirmation",
-    "experiences.booking2Text": "The payment schedule and any terms for change, cancellation or refund are confirmed in writing for the specific service.",
-    "experiences.booking3Title": "Marine conditions",
-    "experiences.booking3Text": "If weather or a boat fault prevents sailing, the suitable alternative and any refund are handled under the written service confirmation.",
-    "about.storyText3": "We carefully design private experiences that bring together culture, sea, history, desert and events created to be lived with depth.",
-    "about.storyText4": "Every experience we create carries meaning, every route has a story, every event has a distinct signature and every guest lives a journey unlike any other.",
-    "about.storyClosing": "Aventura is not merely a journeyâ€¦ it is a different way to discover a place and create moments.",
-    "about.visionEyebrow": "Where we are going",
-    "about.visionText1": "To become the leading reference for carefully designed experiences and events by presenting a new way to explore destinations and organize occasionsâ€”one built on depth, quality and the details that make the difference.",
-    "about.visionText2": "We believe travel and events are no longer simply movement or an occasion, but a complete experience worthy of being built with mastery.",
-    "about.missionEyebrow": "What we create",
-    "about.missionText1": "To create exceptional experiences and events that leave a genuine mark in the memory of our guests.",
-    "about.missionText2": "We design every journey and event with an eye for detail, building each experience around the personâ€”their interests, time and expectations.",
-    "about.missionText3": "Our goal is to turn every visit and every occasion into a story worth telling.",
-    "about.valuesText": "Five principles guide the way we design, choose and deliver every journey and event.",
-    "about.whyEyebrow": "Why Aventura?",
-    "about.whyTitle": "The difference is not in the destinationâ€¦ but in how you experience it.",
-    "about.whyText1": "At Aventura, we do not offer one ready-made program for everyone. We create considered experiences for those looking for something different.",
-    "about.whyText2": "From the first moment to the last detail of the journey or event, everything is handled with a precise eye, high-level organization and a real understanding of what makes an experience exceptional.",
-    "about.whyText3": "Whether it is a calm moment by the sea, a walk through historic alleys, a private event or an experience designed for a teamâ€¦",
-    "about.whyClosing": "We do not simply arrange the journey. We create the impact that remains after it.",
-    "nav.partners": "Partner with us",
-    "partners.metaTitle": "Partner with AVENTURA | Tourism, Events & Hospitality",
-    "partners.metaDescription": "Partner with AVENTURA as a tourism company, venue, operator or independent professional in Saudi Arabia or internationally.",
-    "partners.heroEyebrow": "Aventura partnerships",
-    "partners.heroTitle": "Aventura welcomes meaningful collaboration.",
-    "partners.heroDescription": "Aventura welcomes collaboration with companies, venues, operators and independent professionals in Saudi Arabia and around the world.",
-    "partners.heroButton": "Submit a collaboration request",
-    "partners.introEyebrow": "Built on shared standards",
-    "partners.introTitle": "The right partnership strengthens every guest experience.",
-    "partners.introText": "We value clear communication, dependable delivery, authentic hospitality and respect for the guest. Each collaboration begins with understanding what both sides can create well together.",
-    "partners.introStatement": "Aventura welcomes relationships that add genuine value to the journey, the event and the placeâ€”whether local, regional or international.",
-    "partners.introReach": "Saudi Arabia Â· Regional Â· International",
-    "partners.localScopeEyebrow": "Local delivery",
-    "partners.localScopeText": "Travel agencies and hotels manage flights and accommodation. Aventura delivers the local experiences, events and guest services confirmed with us in Jeddah.",
-    "partners.audiencesEyebrow": "Who can collaborate?",
-    "partners.audiencesTitle": "Two paths, one clear gateway",
-    "partners.audiencesText": "Choose the path that describes you. The application captures the essential details without unnecessary steps.",
-    "partners.orgEyebrow": "Companies & venues",
-    "partners.orgTitle": "Organizations that host, operate or deliver",
-    "partners.orgText": "For licensed businesses and established venues that can contribute to a complete journey or event.",
-    "partners.orgItem1": "Tourism companies and event organizers",
-    "partners.orgItem2": "Resorts, hotels, restaurants, beaches and venues",
-    "partners.orgItem3": "Marine, transport and destination operators",
-    "partners.orgItem4": "Hospitality, floral and specialist service providers",
-    "partners.proEyebrow": "Independent professionals",
-    "partners.proTitle": "People whose expertise shapes the moment",
-    "partners.proText": "For professionals with a strong service mindset, relevant experience and any required local licenses.",
-    "partners.proItem1": "Event organizers, coordinators and guest companions",
-    "partners.proItem2": "Photographers and creative professionals",
-    "partners.proItem3": "Licensed guides, interpreters and translators",
-    "partners.proItem4": "Professional drivers and local specialists",
-    "partners.scopeEyebrow": "Areas of collaboration",
-    "partners.scopeTitle": "Different specialties, connected around the guest",
-    "partners.scopeText": "A collaboration may support one service or become part of a complete experience, event or multi-day guest program.",
-    "partners.scope1Title": "Tourism & destinations",
-    "partners.scope1Text": "Tour operators, destination companies, guides and cultural specialists.",
-    "partners.scope2Title": "Events & operations",
-    "partners.scope2Text": "Planning, production, staffing, coordination and on-site delivery.",
-    "partners.scope3Title": "Venues & hospitality",
-    "partners.scope3Text": "Resorts, restaurants, hotels, beaches, private spaces and catering.",
-    "partners.scope4Title": "Marine & transport",
-    "partners.scope4Text": "Boats, yachts, vehicles, professional drivers and movement logistics.",
-    "partners.scope5Title": "Content & languages",
-    "partners.scope5Text": "Photography, video, interpretation, translation and storytelling.",
-    "partners.scope6Title": "Guest services",
-    "partners.scope6Text": "Arrival services, companions, concierge, flowers and specialist requests.",
-    "partners.processEyebrow": "Collaboration path",
-    "partners.processTitle": "A considered beginning before any assignment",
-    "partners.processText": "The process protects the guest experience and gives both parties a clear understanding of expectations.",
-    "partners.process1Title": "Submit",
-    "partners.process1Text": "Share your profile, service area and the best examples of your work.",
-    "partners.process2Title": "Review",
-    "partners.process2Text": "We review suitability, operating coverage and relevant licenses or registrations.",
-    "partners.process3Title": "Connect",
-    "partners.process3Text": "A short conversation aligns service standards, availability and commercial terms.",
-    "partners.process4Title": "Confirm",
-    "partners.process4Text": "Approved opportunities are confirmed through a clear scope and agreement.",
-    "partners.formEyebrow": "Collaboration request",
-    "partners.formSideTitle": "Tell us what you do exceptionally well.",
-    "partners.formSideText": "A concise and accurate profile helps us understand where a future collaboration could fit.",
-    "partners.formNote1": "Use an international phone format if applying from outside Saudi Arabia.",
-    "partners.formNote2": "Share a website or portfolio link instead of sending sensitive documents.",
-    "partners.formNote3": "Licenses and supporting documents may be requested during review.",
-    "partners.formNotice": "Submitting a request does not constitute automatic approval or a commitment to assign work.",
-    "partners.formTitle": "Collaboration profile",
-    "partners.formText": "Complete the essential details. WhatsApp will open with a structured message that you can review before sending.",
-    "partners.typeLegend": "I am applying as",
-    "partners.typeOrgTitle": "A company or venue",
-    "partners.typeOrgText": "A licensed organization, operator or established place",
-    "partners.typeProTitle": "An independent professional",
-    "partners.typeProText": "An individual offering a professional service",
-    "partners.nameLabel": "Name / contact person",
-    "partners.namePlaceholder": "Full name",
-    "partners.brandLabel": "Organization or professional name",
-    "partners.brandPlaceholder": "Optional for individuals",
-    "partners.countryLabel": "Country",
-    "partners.countryPlaceholder": "Country",
-    "partners.cityLabel": "City / operating base",
-    "partners.cityPlaceholder": "City",
-    "partners.phoneLabel": "Phone / WhatsApp",
-    "partners.phonePlaceholder": "+966 ...",
-    "partners.emailLabel": "Email",
-    "partners.emailPlaceholder": "name@example.com",
-    "partners.categoryLabel": "Primary collaboration area",
-    "partners.categoryPlaceholder": "Choose the closest category",
-    "partners.categoryTourism": "Tourism company or destination operator",
-    "partners.categoryEvents": "Event company, organizer or coordinator",
-    "partners.categoryVenue": "Resort, hotel, restaurant, beach or venue",
-    "partners.categoryMarine": "Boat, yacht or marine operator",
-    "partners.categoryTransport": "Transport company or professional driver",
-    "partners.categoryPhoto": "Photographer, videographer or creative professional",
-    "partners.categoryGuide": "Tour guide",
-    "partners.categoryLanguage": "Interpreter or translator",
-    "partners.categoryGuest": "Guest companion, concierge or hospitality service",
-    "partners.categoryOther": "Other specialist service",
-    "partners.websiteLabel": "Website or portfolio link",
-    "partners.websitePlaceholder": "https://...",
-    "partners.experienceLabel": "Experience / track record",
-    "partners.experiencePlaceholder": "Years or relevant work",
-    "partners.licenseLabel": "License or registration",
-    "partners.licensePlaceholder": "Type and number, if applicable",
-    "partners.languagesLabel": "Languages",
-    "partners.languagesPlaceholder": "Arabic, English ...",
-    "partners.coverageLabel": "Service coverage",
-    "partners.coveragePlaceholder": "Cities or countries covered",
-    "partners.capacityLabel": "Capacity and indicative rates",
-    "partners.capacityPlaceholder": "Optional: team size, daily capacity or starting range",
-    "partners.messageLabel": "Introduce your service and proposed collaboration",
-    "partners.messagePlaceholder": "What do you provide, what makes it distinct and how could it complement an Aventura experience or event?",
-    "partners.consentText": "I confirm that the information is accurate and agree to be contacted about this request.",
-    "partners.privacyLink": "Privacy policy",
-    "partners.submit": "Continue on WhatsApp",
-    "partners.submitNote": "You can review the complete message before sending it.",
-    "partners.error": "Complete the required fields, select an applicant type, provide a phone number or email address, and accept the confirmation.",
-    "partners.whatsappIntro": "Hello AVENTURA, I would like to submit a collaboration request.",
-    "partners.contactLabel": "Companies, venues and professionals",
-    "experiences.quoteLabel": "Tailored quotation",
-    "experiences.quoteText": "Prepared after reviewing the date, duration, guest count and selected options.",
-    "experiences.quoteButton": "Request a Tailored Proposal",
-    "experiences.stbBaseQuoteText": "Resort, sunset stop, licensed guide and coordinated transport are quoted around your preferred schedule.",
-    "experiences.stbDinnerQuoteText": "Add the dining style that suits your guests and we will include it in the tailored quotation.",
-    "contact.timeLabel": "Preferred start time",
-    "contact.durationLabel": "Time available",
-    "contact.durationPlaceholder": "Choose the closest option",
-    "contact.durationShort": "1â€“2 hours",
-    "contact.durationHalf": "Half day",
-    "contact.durationFull": "Full day",
-    "contact.durationFlexible": "Flexible",
-    "contact.whatsappTime": "Preferred start time",
-    "contact.whatsappDuration": "Time available",
-    "nav.corporateEvents": "Corporate & Events",
-    "contact.progressLabel": "Request progress",
-    "contact.step1Short": "Your plan",
-    "contact.step2Short": "Tailor your plan",
-    "contact.step3Short": "Contact",
-    "contact.step1Title": "Start with the essential details",
-    "contact.step1Text": "Choose the closest request type, timing and group size. Everything can still be adjusted after review.",
-    "contact.step2Title": "Choose the details that fit your request",
-    "contact.step2Text": "Choose only the options related to your request, then add a short note if needed.",
-    "contact.step3Title": "Where should we send the first direction?",
-    "contact.step3Text": "Enter your contact details. No payment is taken and the request is not a booking confirmation.",
-    "contact.objectiveLabel": "What should this plan achieve?",
-    "contact.objectivePlaceholder": "Choose the closest option",
-    "contact.objectiveRelaxation": "Relaxation and private time",
-    "contact.objectiveDiscovery": "Discover Jeddah and local culture",
-    "contact.objectiveHosting": "Host guests or a delegation",
-    "contact.objectiveTeam": "Connect or reward a team",
-    "contact.objectiveCelebration": "Celebrate an occasion",
-    "contact.objectiveFlexible": "I would like Aventura to recommend",
-    "contact.addonsLegend": "Optional supporting services",
-    "contact.addonsText": "Select anything you may need. Aventura will confirm only what fits the program.",
-    "contact.addonTransport": "Private transportation",
-    "contact.addonGuide": "Licensed guide",
-    "contact.addonDining": "Dining arrangements",
-    "contact.addonHospitality": "Guest welcome and hospitality",
-    "contact.addonBoutique": "Fragrance concepts in development",
-    "contact.addonConcierge": "Concierge support",
-    "contact.backButton": "Back",
-    "contact.nextButton": "Continue",
-    "contact.stepTypeError": "Choose a request type before continuing.",
-    "contact.stepRequiredError": "Complete the required field before continuing.",
-    "contact.requestReference": "Request reference",
-    "contact.successTitle": "Your request is ready",
-    "contact.successText": "WhatsApp has opened with your structured request. Keep this reference:",
-    "contact.successEmailTitle": "Your request has been sent",
-    "contact.successEmailText": "Your request was sent directly to Aventura. We will review the details and reply through your preferred contact method. Keep this reference:",
-    "contact.successStatus": "Request prepared successfully. Reference:",
-    "contact.successEmailStatus": "Booking request sent successfully. Reference:",
-    "contact.openWhatsappAgain": "Open WhatsApp again",
-    "contact.copyRequest": "Copy request details",
-    "contact.requestCopied": "Request copied",
-    "partners.successStatus": "Collaboration profile prepared. Reference:",
-    "collection.perfumeCardsStatus": "The visuals are temporary concept previews. Final bottles, packaging, sizes and launch details will be introduced once scent development is complete.",
-    "collection.productSea3Short": "Phone sleeve",
-    "collection.productSea3Title": "Water-resistant phone sleeve",
-    "collection.productSea3Text": "A sealed protective sleeve for water spray and sand; it is not presented as diving equipment.",
-    "collection.productSea4Short": "Thermal flask",
-    "collection.productSea4Title": "Insulated travel flask",
-    "collection.productSea4Text": "A reusable insulated flask designed to keep drinking water cool during the sea experience.",
-    "collection.productDesert4Short": "Travel case",
-    "collection.productDesert4Title": "Multi-use travel case",
-    "collection.productDesert4Text": "A compact fabric case for small personal items, designed to keep them organized away from sand.",
-    "home.processEyebrow": "How Aventura works",
-    "home.processTitle": "From a request to one clear operating plan",
-    "home.processText": "No fixed package is imposed. Each request is reviewed around availability, timing and the people involved.",
-    "home.process1Title": "Share the essentials",
-    "home.process1Text": "Tell us the date, guests, occasion and how you want the experience to feel.",
-    "home.process2Title": "We review and shape",
-    "home.process2Text": "Aventura aligns the route, partners, timing, hospitality and optional guest details.",
-    "home.process3Title": "Confirm before delivery",
-    "home.process3Text": "You receive a clear scope and tailored quotation before any final confirmation.",
-    "home.processButton": "Request a Tailored Proposal",
-    "experienceIndex.heroText": "Choose an experience to open its story, program options and the details that shape the day around your guests.",
-    "experienceIndex.coreEyebrow": "Choose your setting",
-    "experienceIndex.coreTitle": "Every experience now has its own world",
-    "experienceIndex.coreText": "Open the experience to understand its story, formats and the pace that suits your guests.",
-    "experienceIndex.open": "Open experience",
-    "experienceIndex.back": "All experiences",
-    "experienceIndex.labelSea": "Red Sea Â· Obhur",
-    "experienceIndex.labelHistoric": "Al-Balad Â· Jeddah",
-    "experienceIndex.labelDesert": "Last Light Â· Desert",
-    "experienceIndex.labelTaif": "Taif Rose Â· Highlands",
-    "experienceIndex.labelJeddahDay": "Jeddah Â· Flexible day",
-    "experienceIndex.labelSignature": "Aventura Â· Signature day",
-    "experienceIndex.seaEyebrow": "Sea journeys",
-    "experienceIndex.seaTitle": "Choose the time and style on the water",
-    "experienceIndex.seaText": "Each sea program has its own page, with a clear rhythm from departure to the final moment on the water.",
-    "experienceDetail.productsEyebrow": "Optional finishing touches",
-    "experienceDetail.productsTitle": "Details connected to this experience",
-    "experienceDetail.productsText": "The experience is complete without them. Include a detail only if it fits your guest and the moment.",
-    "experienceDetail.scentsEyebrow": "Aventura signature scents",
-    "experienceDetail.scentsTitle": "The two fragrances of Aventura",
-    "experienceDetail.scentsText": "This experience has no added products. Discover After Midnight Noir and After Midnight Velvet, Aventuraâ€™s signature fragrances, both currently in development.",
-    "experienceDetail.boxEyebrow": "A keepsake for the occasion",
-    "experienceDetail.boxTitle": "The experience, held in one considered box",
-    "experienceDetail.boxText": "This is optional. Choose the box only when it belongs to the moment you are creating for your guests.",
-    "experienceDetail.requestTitle": "Ready to shape the experience?",
-    "experienceDetail.requestText": "Share the date, guest count and timing. Optional details can be included only if they fit the plan.",
-    "experienceDetail.requestWithoutProductsText": "Share the date, guest count and timing. Aventura will shape the day around your guests.",
-    "experienceDetail.viewProducts": "View optional details",
-    "experienceDetail.viewScents": "Discover Aventura scents",
-    "experienceDetail.viewJourney": "Explore the experience",
-    "experienceDetail.planEyebrow": "Your private plan",
-    "experienceDetail.planTitle": "Tell us the date. We will shape the rest.",
-    "experienceDetail.planText": "Share the occasion, guest count and preferred timing. Aventura prepares a considered route and clear quotation.",
-    "experienceDetail.planPoint1": "Pace and privacy shaped around your guests",
-    "experienceDetail.planPoint2": "Partners and movement coordinated by one team",
-    "experienceDetail.planPoint3": "No booking is confirmed until we agree the final plan",
-    "experienceDetail.planCta": "Request a Tailored Proposal",
-    "experienceDetail.includeOptional": "Include in my experience request",
-    "experienceDetail.includeBox": "Include this keepsake box",
-    "experienceDetail.reminderEyebrow": "Optional finishing touches",
-    "experienceDetail.reminderTitle": "The experience is ready to plan",
-    "experienceDetail.reminderText": "You can include a detail if it suits your guest, or continue with the experience only.",
-    "experienceDetail.continueWithout": "Continue to plan the experience",
-    "experienceDetail.perfumeSeaText": "A marine fragrance direction inspired by the light, air and movement of the Red Sea.",
-    "experienceDetail.perfumeRoshanText": "A warm fragrance direction inspired by Roshan wood, coffee, spice and Historic Jeddah.",
-    "experienceDetail.perfumeTaifText": "A fragrance direction inspired by Taif rose, mountain air and subtle green notes.",
-    "experienceDetail.jeddahBoxTitle": "Jeddah Signature Collection",
-    "experienceDetail.jeddahBoxText": "A combined Red Sea and Roshan set for the complete Jeddah day or Sea to Al-Balad journey.",
-    "journey.sea.eyebrow": "Your day on the Red Sea",
-    "journey.sea.title": "A private sea day begins before the boat leaves",
-    "journey.sea.text": "Tell us the mood of the day, and we will shape the boat, timing and pace around the people joining you.",
-    "journey.sea.step1Title": "Choose the rhythm",
-    "journey.sea.step1Text": "A short escape, a full day or a private yacht: we begin with how your group wants to spend time together.",
-    "journey.sea.step2Title": "Leave Obhur at the right moment",
-    "journey.sea.step2Text": "The boat, captain, departure and essential comfort are coordinated as one easy start to the day.",
-    "journey.sea.step3Title": "Keep the water for yourselves",
-    "journey.sea.step3Text": "Swim, drift or simply stay still with the horizon. The program has room for the moment to lead.",
-    "journey.golden.eyebrow": "The Golden Hour Â· Sharm Obhur",
-    "journey.golden.title": "One unhurried hour, timed to the final light",
-    "journey.golden.text": "A private sunset boat journey for when the point is not the distance, but the feeling of leaving the shore at exactly the right time.",
-    "journey.golden.step1Title": "Name the occasion",
-    "journey.golden.step1Text": "A quiet escape, a private celebration or a thoughtful surprise all begin with the moment you want to create.",
-    "journey.golden.step2Title": "Board with the day still open",
-    "journey.golden.step2Text": "Aventura aligns the departure from Obhur so the hour belongs to you rather than a fixed tourist timetable.",
-    "journey.golden.step3Title": "Let the light do the work",
-    "journey.golden.step3Text": "The final stretch is intentionally simple: open water, a private boat and the last colour of the day.",
-    "journey.bayadah.eyebrow": "Bayadah Â· A full private sea day",
-    "journey.bayadah.title": "Bayadah is the destination; the whole day is yours",
-    "journey.bayadah.text": "A full-day private boat experience shaped around the people on board, with time to swim and let the Red Sea set the pace.",
-    "journey.bayadah.step1Title": "Build the day around your group",
-    "journey.bayadah.step1Text": "We begin with the guest count, preferred tempo and the kind of time your group wants on the water.",
-    "journey.bayadah.step2Title": "Travel from Obhur to Bayadah",
-    "journey.bayadah.step2Text": "The boat, captain, fuel, safety equipment and sea-day essentials are coordinated before you arrive.",
-    "journey.bayadah.step3Title": "Stay longer where it feels right",
-    "journey.bayadah.step3Text": "Swimming and open-water pauses are part of the dayâ€”not rushed stops between obligations.",
-    "journey.grandBayadah.eyebrow": "Grand Bayadah Yacht Â· Private group day",
-    "journey.grandBayadah.title": "A larger yacht, with the same feeling of privacy",
-    "journey.grandBayadah.text": "For groups that want to share the sea without feeling like a group tour, Aventura builds the Bayadah day around your people and purpose.",
-    "journey.grandBayadah.step1Title": "Set the group rhythm",
-    "journey.grandBayadah.step1Text": "Whether it is family, colleagues or guests of honour, we begin with who is coming and how they should feel onboard.",
-    "journey.grandBayadah.step2Title": "Make the yacht the setting",
-    "journey.grandBayadah.step2Text": "The private yacht gives the group its own space while the route to Bayadah remains coordinated and calm.",
-    "journey.grandBayadah.step3Title": "Host the day your way",
-    "journey.grandBayadah.step3Text": "Leave room for conversation, swimming and a shared sea day that never feels pre-packaged.",
-    "journey.historic.eyebrow": "Historic Jeddah Â· A private walk",
-    "journey.historic.title": "Do not just see Al-Balad. Enter its story.",
-    "journey.historic.text": "A licensed guide shapes the route around your guests, turning stone, Roshan wood and quiet alleys into a personal introduction to the city.",
-    "journey.historic.step1Title": "Begin with the people behind the place",
-    "journey.historic.step1Text": "Your guide sets the context, pace and language so every guest feels included from the first step.",
-    "journey.historic.step2Title": "Move through the city with purpose",
-    "journey.historic.step2Text": "The walk follows stories, architecture and details that do not reveal themselves on a generic route.",
-    "journey.historic.step3Title": "Leave with a chapter, not a checklist",
-    "journey.historic.step3Text": "Coffee, dates and time to notice the city keep the experience human rather than hurried.",
-    "journey.desert.eyebrow": "Last Light Â· Sand dunes",
-    "journey.desert.title": "The sand dunes are not the backdrop. They are the reason to go.",
-    "journey.desert.text": "Aventura builds the route around the sand, the light and your groupâ€”so the desert feels wide, private and completely unlike the city.",
-    "journey.desert.step1Title": "Leave the city behind",
-    "journey.desert.step1Text": "Your departure and transport are planned so the change from road to open sand feels easy from the first mile.",
-    "journey.desert.step2Title": "Follow the dune line",
-    "journey.desert.step2Text": "A 4Ã—4 route is chosen for your group, with the sand dunes as the main scene rather than a backdrop for a staged stop.",
-    "journey.desert.step3Title": "Arrive at Last Light",
-    "journey.desert.step3Text": "As the sun lowers, Saudi hospitality and the quiet of the landscape create a closing moment worth taking slowly.",
-    "journey.taif.eyebrow": "Taif highlands Â· A quieter rhythm",
-    "journey.taif.title": "Trade the city heat for mountain air and a gentler day",
-    "journey.taif.text": "A private Taif journey brings together cooler air, mountain contours, roses and seasonal local detail at a pace that lets the highlands breathe.",
-    "journey.taif.step1Title": "Climb into a different rhythm",
-    "journey.taif.step1Text": "We plan the departure around your group so the journey upward feels like the start of the experience, not a transfer.",
-    "journey.taif.step2Title": "Meet the season in Taif",
-    "journey.taif.step2Text": "Roses, orchards and local stops are chosen around what the highlands genuinely offer at that time of year.",
-    "journey.taif.step3Title": "Pause where the view opens",
-    "journey.taif.step3Text": "The day leaves space for the landscape, the air and the unplanned moments that make Taif feel unlike Jeddah.",
-    "journey.jeddah.eyebrow": "Aventura Signature Day Â· Jeddah",
-    "journey.jeddah.title": "A full Jeddah day is not a package. It is shaped around your guests.",
-    "journey.jeddah.text": "From the waterfront to Historic Jeddah and a considered dining stop, Aventura connects the city at a pace that feels personal rather than rushed.",
-    "journey.jeddah.note": "The waterfront, the old city and the table are chapters of one dayâ€”not three rushed stops.",
-    "journey.jeddah.step1Title": "Start where your day should begin",
-    "journey.jeddah.step1Text": "We set the meeting point, transport and first stop around your arrival, energy and interests.",
-    "journey.jeddah.step2Title": "Let Jeddah unfold in chapters",
-    "journey.jeddah.step2Text": "Waterfront time, Historic Jeddah, local dining and selected stops are connected into one clear, flexible rhythm.",
-    "journey.jeddah.step3Title": "End with the city still with you",
-    "journey.jeddah.step3Text": "The final timing is shaped around your group, so the day closes with a sense of place rather than another item on an itinerary.",
-    "journey.seaToBalad.eyebrow": "Aventura Signature Day Â· Sea to Al-Balad",
-    "journey.seaToBalad.title": "One day that connects the sea to the story of the city",
-    "journey.seaToBalad.text": "A resort afternoon, a Yacht Club pause and a guided evening in Historic Jeddah become one private day with a clear change of scene.",
-    "journey.seaToBalad.note": "The transition is the point: daylight by the water, sunset at the Yacht Club, then the character of Al-Balad after dark.",
-    "journey.seaToBalad.step1Title": "Begin with the water",
-    "journey.seaToBalad.step1Text": "The sea chapter is designed as a resort experience, giving the day a relaxed beginning before the city comes into view.",
-    "journey.seaToBalad.step2Title": "Let the light change the scene",
-    "journey.seaToBalad.step2Text": "A sunset stop at Jeddah Yacht Club creates the transition between an open afternoon and the character of Al-Balad.",
-    "journey.seaToBalad.step3Title": "Walk into the evening with a guide",
-    "journey.seaToBalad.step3Text": "Historic Jeddah becomes the closing chapter, with the option to continue the evening through a considered local dinner.",
-    "world.sea.eyebrow": "First light Â· Red Sea",
-    "world.sea.title": "Begin where the horizon opens",
-    "world.sea.text": "From the first message, we set a clear morning rhythm around your group, the boat and the space you want to leave unplanned.",
-    "world.sea.note": "The Golden Hour remains its own sunset experience. The Red Sea world starts with daylight.",
-    "world.sea.step1Title": "Set the pace",
-    "world.sea.step1Text": "Share the time, guest rhythm and the kind of privacy you want on the water.",
-    "world.sea.step2Title": "Step into open water",
-    "world.sea.step2Text": "Departure from Obhur becomes the beginning of the day, not a transfer to it.",
-    "world.sea.step3Title": "Leave room for the day",
-    "world.sea.step3Text": "The sea day stays flexible, so a quiet swim, a conversation or a pause can become the memory.",
-    "world.historic.eyebrow": "Al-Balad Â· A living story",
-    "world.historic.title": "Enter the city one threshold at a time",
-    "world.historic.text": "Before the walk starts, your guide, pace and interests turn an alley into a personal introduction to Historic Jeddah.",
-    "world.historic.note": "The story is not rushed. We leave room to notice the wood, stone, voices and small details.",
-    "world.historic.step1Title": "Meet your guide",
-    "world.historic.step1Text": "Begin with the people and context that make every doorway more meaningful.",
-    "world.historic.step2Title": "Read the Roshan",
-    "world.historic.step2Text": "Move through shadows, carved wood and stories that do not appear on a map.",
-    "world.historic.step3Title": "Let the city linger",
-    "world.historic.step3Text": "End with time to absorb the wood, stone and voices of the city, rather than rushing toward a checklist.",
-    "world.desert.eyebrow": "Last Light Â· Sand dunes",
-    "world.desert.title": "Follow the sand dunes until the light slows",
-    "world.desert.text": "The landscape leads the program: wide sand dunes, a 4Ã—4 route chosen for your group and a private pause as the sun lowers.",
-    "world.desert.note": "This is the Aventura desert world: sand dunes before dÃ©cor, silence before spectacle.",
-    "world.desert.step1Title": "Leave the city behind",
-    "world.desert.step1Text": "The pace changes as the road gives way to sand and open distance.",
-    "world.desert.step2Title": "Read the dune line",
-    "world.desert.step2Text": "The route follows the landscape, with the sand dunes as the main sceneâ€”not a backdrop.",
-    "world.desert.step3Title": "Arrive at Last Light",
-    "world.desert.step3Text": "Settle into hospitality and the final glow in a moment shaped around the group.",
-    "world.taif.eyebrow": "First light Â· Highlands",
-    "world.taif.title": "Arrive before the city wakes",
-    "world.taif.text": "Cool air, mountain contours and Taif roses create a gentler start outside the rhythm of Jeddah.",
-    "world.taif.note": "The season shapes the detail; the calm of the highlands shapes everything else.",
-    "world.taif.step1Title": "Climb into morning",
-    "world.taif.step1Text": "Leave the city rhythm behind for cooler air and an open mountain view.",
-    "world.taif.step2Title": "Meet the season",
-    "world.taif.step2Text": "Roses, orchards and local details are selected around what the highlands offer now.",
-    "world.taif.step3Title": "Pause at the view",
-    "world.taif.step3Text": "Let the landscape set the pace; the air, the view and the quiet are already part of the memory.",
-    "collection.productDesert3Short": "Keepsake",
-    "collection.productDesert3Title": "Small woven keepsake",
-    "collection.productDesert3Text": "A compact woven detail inspired by desert craft and easy to carry home.",
-    "collection.productTaif4Short": "Rose care",
-    "collection.productTaif4Title": "Rose soap or hand cream",
-    "collection.productTaif4Text": "A small locally sourced care product selected according to season and availability.",
-    "collection.noirTitle": "After Midnight Noir",
-    "collection.velvetTitle": "After Midnight Velvet",
-    "common.seasonal": "Seasonal",
-    "collection.exploreButton": "Explore the collections",
-    "collection.filterAria": "Filter boutique by experience",
-    "collection.quantity": "Quantity",
-    "collection.addBox": "Add box to quote request",
-    "collection.addItem": "Add to quote request",
-    "collection.addService": "Add service to quote request",
-    "collection.added": "Added to your quote request",
-    "collection.removeItem": "Remove",
-    "collection.boxExecutiveTitle": "Executive Welcome Box",
-    "collection.boxExecutiveText": "A polished hotel welcome for executives, delegations and international guests.",
-    "collection.boxExecutiveItem1": "Refined notebook and pen",
-    "collection.boxExecutiveItem2": "Refined luggage tag",
-    "collection.boxExecutiveItem3": "Personal welcome card and itinerary",
-    "collection.boxExecutiveItem4": "Small local keepsake",
-    "collection.productsEyebrow": "Individual products",
-    "collection.productsTitle": "Products, coming soon.",
-    "collection.productsText": "These product previews remain visible while prototypes, suppliers and final details are approved. They cannot be added to a request yet.",
-    "collection.productSea1Short": "Tote",
-    "collection.productSea1Title": "Aventura beach tote",
-    "collection.productSea1Text": "A practical beach bag that can also hold the complete Red Sea collection.",
-    "collection.productSea2Short": "Towel",
-    "collection.productSea2Title": "Quick-dry beach towel",
-    "collection.productSea2Text": "Light to carry and useful for resort, boat and beach days.",
-    "collection.productHistoric1Short": "Keepsake",
-    "collection.productHistoric1Title": "Roshan wooden keepsake",
-    "collection.productHistoric1Text": "A small locally inspired piece recalling the windows of Historic Jeddah.",
-    "collection.productHospitalityShort": "Welcome set",
-    "collection.productHospitalityTitle": "Guest welcome card set",
-    "collection.productHospitalityText": "Personalized welcome cards and compact itinerary cards for guest arrivals.",
-    "collection.productHistoric2Short": "Cards",
-    "collection.productHistoric2Title": "Illustrated heritage cards",
-    "collection.productHistoric2Text": "A compact set inspired by Al-Balad architecture and its details.",
-    "collection.productDesert1Short": "Shawl",
-    "collection.productDesert1Title": "Light desert shawl",
-    "collection.productDesert1Text": "A neutral, easy-to-carry layer for the cooler desert evening.",
-    "collection.productDesert2Short": "Tumbler",
-    "collection.productDesert2Title": "Insulated travel tumbler",
-    "collection.productDesert2Text": "A reusable insulated tumbler suited to cooler desert evenings.",
-    "collection.productTaif1Short": "Rose mist",
-    "collection.productTaif1Title": "Taif rose mist",
-    "collection.productTaif1Text": "An aromatic rose mist for external use, sourced locally and confirmed according to season and supplier.",
-    "collection.productTaif2Short": "Floral notebook",
-    "collection.productTaif2Title": "Taif floral notebook",
-    "collection.productTaif2Text": "A compact notebook with an understated pattern inspired by Taif roses.",
-    "collection.productTaif3Short": "Rose Gift",
-    "collection.productTaif3Title": "Scented rose sachet",
-    "collection.productTaif3Text": "A light rose keepsake suited to hotel welcomes and experience boxes.",
-    "collection.lastLightPending": "Original campaign artwork pending",
-    "collection.scentLabName": "AVENTURA Scent Lab",
-    "collection.guestServicesEyebrow": "Guest services",
-    "collection.guestServicesTitle": "Guest details, arranged separately.",
-    "collection.guestServicesText": "Tailoring, abaya and flowers are coordinated through their own guest-service request.",
-    "collection.boutiqueGatewayAria": "Boutique entry paths",
-    "collection.boutiqueGatewayEyebrow": "Start with the way that suits you",
-    "collection.boutiqueGatewayTitle": "Choose how you want to explore the boutique",
-    "collection.boutiqueGatewayText": "Each fragrance concept begins with one place, one mood and one Aventura experience.",
-    "collection.executiveServicesEyebrow": "Guest & executive services",
-    "collection.executiveServicesTitle": "Thoughtful support around every arrival",
-    "collection.executiveServicesText": "Independent services or coordinated details within one guest program.",
-    "collection.airportWelcomeTitle": "Airport meet & assist",
-    "collection.airportWelcomeText": "Arrival coordination from the airport meeting point to the selected vehicle and accommodation.",
-    "collection.executiveTransportTitle": "Executive transport",
-    "collection.executiveTransportText": "Vehicles and drivers coordinated around the program, guest count and preferred timing.",
-    "collection.meetingSetupTitle": "Meeting preparation",
-    "collection.meetingSetupText": "Room, hospitality, transport and practical meeting details coordinated around the agenda.",
-    "collection.officialGiftsTitle": "Official gifts",
-    "collection.officialGiftsText": "A considered welcome or official gift prepared around the occasion, recipient and approved identity.",
-    "collection.conciergeTitle": "Concierge support",
-    "collection.conciergeText": "Practical guest support, reservations and special requests coordinated through one point of contact.",
-    "collection.requestService": "Request this service",
-    "collection.scentLabInterestNote": "Every fragrance concept remains in development and will be announced when it is ready.",
-    "collection.thobePoint1": "Private visit",
-    "collection.thobePoint2": "Fabric selection",
-    "collection.thobePoint3": "Fast coordinated delivery",
-    "collection.abayaPoint1": "Private assistance",
-    "collection.abayaPoint2": "Size and style selection",
-    "collection.abayaPoint3": "Coordinated delivery",
-    "collection.flowerTitle": "Flowers before the guest arrives",
-    "collection.flowerText": "A bouquet and personal card are arranged at the hotel or accommodation before the guestâ€™s arrival.",
-    "collection.flowerPoint1": "Arrangement by occasion",
-    "collection.flowerPoint2": "Personal message card",
-    "collection.flowerPoint3": "Delivery before arrival",
-    "collection.selectionLabel": "Your quote request",
-    "collection.selectionItems": "items",
-    "collection.reviewSelection": "Review quote request",
-    "collection.dialogTitle": "Review your quote request",
-    "collection.quoteDisclaimer": "Sending a quote request does not confirm booking, payment or availability. Aventura reviews timing, quantity and personalization before issuing the final quotation.",
-    "collection.clearSelection": "Clear selections",
-    "contact.requestedItems": "Selected details and services",
-    "contact.collectionDetailsTitle": "Boutique and delivery details",
-    "contact.deliveryLocationLabel": "Hotel or delivery location",
-    "contact.deliveryLocationPlaceholder": "Hotel, accommodation or venue",
-    "contact.deliveryTimeLabel": "Requested delivery time",
-    "contact.personalizationLabel": "Guest name, gift message or company logo",
-    "contact.personalizationPlaceholder": "Optional personalization details",
-    "contact.thobeDetailsTitle": "Tailoring service details",
-    "contact.serviceLocationLabel": "Hotel or accommodation",
-    "contact.thobeCountLabel": "Number of thobes",
-    "contact.visitTimeLabel": "Preferred visit time",
-    "contact.requiredDeliveryLabel": "Required delivery time",
-    "contact.thobePreferenceLabel": "Preferred color or fabric",
-    "contact.optionalPlaceholder": "Optional",
-    "contact.abayaDetailsTitle": "Abaya service details",
-    "contact.contactVisitTimeLabel": "Preferred contact or visit time",
-    "contact.preferredContactLabel": "Preferred contact method",
-    "contact.contactWhatsapp": "WhatsApp",
-    "contact.contactEmail": "Email",
-    "contact.preferredResponseText": "Aventura replies by email unless you request WhatsApp or a phone call.",
-    "contact.sendMethodLegend": "Send your booking request via",
-    "contact.sendMethodText": "Email is the main booking channel. WhatsApp remains available as a second option.",
-    "contact.sendEmail": "Email",
-    "contact.sendWhatsapp": "WhatsApp",
-    "contact.contactCall": "Phone call",
-    "contact.contactVisit": "Hotel visit",
-    "contact.flowerDetailsTitle": "Flower delivery details",
-    "contact.recipientLabel": "Recipient name",
-    "contact.occasionLabel": "Occasion",
-    "contact.flowerSizeLabel": "Bouquet size",
-    "contact.flowerSizeQuiet": "Subtle",
-    "contact.flowerSizeMedium": "Medium",
-    "contact.flowerSizeSignature": "Signature",
-    "contact.flowerColorsLabel": "Preferred colors",
-    "contact.cardMessageLabel": "Flower card message",
-    "experiences.completeEyebrow": "Complete the experience",
-    "experiences.completeSeaTitle": "Beach details ready for the sea day",
-    "experiences.completeHistoricTitle": "A memory of Al-Balad beyond the walk",
-    "experiences.completeDesertTitle": "Warm details for the final light",
-    "experiences.completeTaifTitle": "Seasonal gifts from the highlands",
-    "experiences.completeJeddahTitle": "Sea and Roshan selections in one day",
-    "experiences.viewCollection": "View the complete collection",
-    "collection.viewStoryCard": "View story card",
-    "collection.storyDialogEyebrow": "Fragrance campaign",
-    "collection.storyDialogTitle": "Fragrance story card",
-    "collection.closeStoryCard": "Close story card",
-    "collection.noirText": "Black tea, iris, polished woods and a quiet nocturnal trail.",
-    "collection.velvetText": "Soft pear, warm jasmine, velvet woods and a refined feminine trail.",
-    "collection.productHistoric3Short": "Notebook",
-    "collection.productHistoric3Title": "Roshan pocket notebook",
-    "collection.productHistoric3Text": "A compact notebook with details inspired by the wooden Roshan windows of Al-Balad.",
-    "collection.productHistoric4Short": "Pouch",
-    "collection.productHistoric4Title": "Al-Balad fabric pouch",
-    "collection.productHistoric4Text": "A lightweight fabric pouch with an understated pattern inspired by Historic Jeddah.",
-    "collection.productTaif5Short": "Notebook",
-    "collection.productTaif5Title": "Floral pocket notebook",
-    "collection.productTaif5Text": "A compact notebook with a subtle pattern inspired by Taif roses.",
-    "collection.discoveryTitle": "Two easy ways to enter the boutique",
-    "collection.discoveryText": "Discover a collection around your next experience, or go directly to a product you already know.",
-    "collection.pathExperienceEyebrow": "Planning a new journey",
-    "collection.pathExperienceTitle": "Explore by experience",
-    "collection.pathExperienceText": "Explore fragrance concepts inspired by the sea, Historic Jeddah, the desert and Taif.",
-    "collection.pathExperienceAction": "Choose an experience",
-    "collection.pathProductEyebrow": "Returning or shopping directly",
-    "collection.pathProductTitle": "Find a product",
-    "collection.pathProductText": "Search by product name or reference without needing to remember which experience it belongs to.",
-    "collection.pathProductAction": "Start searching",
-    "collection.searchLabel": "Search the boutique",
-    "collection.searchPlaceholder": "Product name or reference",
-    "collection.clearSearch": "Clear",
-    "collection.typeFilterLabel": "Product type",
-    "collection.typeFilterAria": "Filter boutique by product type",
-    "collection.typeAll": "All types",
-    "collection.typeFragrance": "Fragrances",
-    "collection.typeBeach": "Beach essentials",
-    "collection.typeGift": "Gifts & accessories",
-    "collection.typeBox": "Complete boxes",
-    "collection.typeService": "Guest & executive services",
-    "collection.experienceFilterLabel": "Experience collection",
-    "collection.resultsIntro": "Browse by world or product type.",
-    "collection.resultsLabel": "matching items",
-    "collection.clearFilters": "Clear all filters",
-    "collection.emptyTitle": "No matching items",
-    "collection.emptyText": "Try another word or clear one of the filters.",
-    "collection.reorderEyebrow": "For returning guests",
-    "collection.reorderTitle": "Request the same item again",
-    "collection.reorderText": "Enter the product name or reference and quantity. It will be added to your saved quote request for Aventura to review.",
-    "collection.reorderProductLabel": "Product name or reference",
-    "collection.reorderProductPlaceholder": "Start typing a product name",
-    "collection.reorderButton": "Add to quote request",
-    "collection.reorderNote": "Availability, preparation time and final details are confirmed after Aventura reviews the request. Your selections stay saved on this device for 30 days.",
-    "collection.reorderError": "Choose a valid reference from the suggestions or enter one manually.",
-    "collection.reorderSuccess": "Added to your saved request:",
-    "collection.viewDetails": "View details",
-    "collection.detailsEyebrow": "Fragrance concept",
-    "collection.closeDetails": "Close fragrance details",
-    "collection.availabilityLabel": "Status",
-    "collection.preparationLabel": "Development",
-    "collection.personalizationLabel": "Next step",
-    "collection.collectionLabel": "World",
-    "collection.detailsDisclaimer": "This fragrance concept is in development and is not yet available to request or purchase.",
-    "collection.continueBrowsing": "Continue browsing",
-    "collection.prepDevelopment": "In development; launch timing will be announced later",
-    "collection.prepBox": "Confirmed after quantity and personalization review",
-    "collection.prepProduct": "Confirmed after quantity and stock review",
-    "collection.prepSeasonal": "Confirmed according to season and supplier availability",
-    "collection.prepService": "Scheduled according to location, date and availability",
-    "collection.personalizationAvailable": "Guest name, message or company identity can be reviewed",
-    "collection.personalizationReviewed": "Available options are reviewed with the final request",
-    "collection.personalizationAfterLaunch": "Launch timing will be announced after development.",
-    "collection.personalizationService": "The service is arranged around the guestâ€™s requirements",
-    "collection.gatewayHistoricText": "A fragrance concept inspired by Roshan wood, stone and the living story of Al-Balad.",
-    "collection.gatewaySeaText": "A fragrance concept shaped by mineral air, open water and the calm of a private sea day.",
-    "collection.gatewayDesertText": "A fragrance concept for the dry warmth, mineral sand and final light of the dunes.",
-    "collection.gatewayTaifText": "A fragrance concept for rose season, mountain air and a slower highland rhythm.",
-    "collection.gatewayJeddahText": "After Midnight Noir and Velvet are Aventuraâ€™s signature fragrance concepts.",
-    "guest.metaTitle": "AVENTURA Guest Services | Thoughtful Guest Details",
-    "guest.metaDescription": "Tailoring, abaya and floral arrangements coordinated for guests in Jeddah through one Aventura point of contact.",
-    "guest.heroEyebrow": "Guest services",
-    "guest.heroTitle": "Guest details, thoughtfully arranged.",
-    "guest.heroDescription": "From a tailor visit to flowers, we coordinate practical details before arrival and during the stay through one point of contact.",
-    "guest.heroButton": "Explore guest services",
-    "guest.servicesEyebrow": "Personal guest services",
-    "guest.servicesTitle": "Three practical details, one clear request.",
-    "guest.servicesText": "We confirm the specialist, location, timing and practical availability before any service is arranged.",
-    "guest.thobeTitle": "Saudi thobe tailoring at your accommodation",
-    "guest.thobeText": "A tailor visits the guest for measurements and fabric selection. Delivery can be coordinated in under 24 hours when the request and availability are confirmed.",
-    "guest.abayaTitle": "Abaya service for the guest",
-    "guest.abayaText": "A specialist visits the guest to take the measurements required for the service. The appropriate abaya and delivery are coordinated only after confirmation; no ready-made catalogue is shown.",
-    "guest.flowerTitle": "Flowers for the occasion",
-    "guest.flowerText": "A bouquet and personal card are arranged for an arrival or occasion and delivered to the hotel, accommodation or venue at the agreed time.",
-    "guest.requestService": "Request a guest service",
-    "guest.viewService": "View guest service",
-    "guest.processEyebrow": "How it works",
-    "guest.processTitle": "Simple for the guest, clear for the team.",
-    "guest.step1Title": "Share the essentials",
-    "guest.step1Text": "Tell us who the service is for, where it is needed and the preferred timing.",
-    "guest.step2Title": "We confirm the arrangement",
-    "guest.step2Text": "Aventura confirms the right specialist, preparation time and practical details.",
-    "guest.step3Title": "One coordinated delivery",
-    "guest.step3Text": "The visit, preparation and delivery are managed through one point of contact.",
-    "guest.ctaTitle": "Tell us what the guest needs and when.",
-    "guest.ctaText": "We will review the request and return with the most practical arrangement."
-  },
-  "ar": {
-    "common.skip": "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ Ø§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ",
-    "common.plan": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "common.explore": "Ø§Ø³ØªÙƒØ´Ù",
-    "common.discover": "Ø§ÙƒØªØ´Ù Ø§Ù„Ù…Ø²ÙŠØ¯",
-    "common.request": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "common.viewAll": "Ø¹Ø±Ø¶ Ø§Ù„ÙƒÙ„",
-    "common.learnMore": "Ø§Ø¹Ø±Ù Ø§Ù„Ù…Ø²ÙŠØ¯",
-    "common.whatsapp": "ØªÙˆØ§ØµÙ„ Ø¹Ø¨Ø± ÙˆØ§ØªØ³Ø§Ø¨",
-    "common.comingSoon": "Ù‚Ø±ÙŠØ¨Ù‹Ø§",
-    "common.availableRequest": "Ù…ØªØ§Ø­ Ø­Ø³Ø¨ Ø§Ù„Ø·Ù„Ø¨",
-    "common.jeddahSaudi": "Ø¬Ø¯Ø©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©",
-    "common.optional": "Ø§Ø®ØªÙŠØ§Ø±ÙŠ",
-    "brand.tagline": "ØªØ¬Ø§Ø±Ø¨ Â· ÙØ¹Ø§Ù„ÙŠØ§Øª Â· Ø¶ÙŠØ§ÙØ©",
-    "nav.home": "Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©",
-    "nav.experiences": "Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "nav.events": "Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª",
-    "nav.services": "Ø§Ù„Ø®Ø¯Ù…Ø§Øª",
-    "nav.collection": "Ø§Ù„Ø¨ÙˆØªÙŠÙƒ",
-    "nav.guestServices": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "nav.about": "Ù…Ù† Ù†Ø­Ù†",
-    "nav.gallery": "Ø§Ù„Ù…Ø¹Ø±Ø¶",
-    "nav.contact": "ØªÙˆØ§ØµÙ„ Ù…Ø¹Ù†Ø§",
-    "footer.summary": "ØªØµÙ…Ù… Ø£ÙÙ†ØªÙˆØ±Ø§ Ø±Ø­Ù„Ø§Øª Ø®Ø§ØµØ© ÙˆÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø¶ÙŠØ§ÙØ©ØŒ Ù…Ù† Ø®Ù„Ø§Ù„ ØªØ®Ø·ÙŠØ· Ù…Ø¯Ø±ÙˆØ³ ÙˆØ´Ø±ÙƒØ§Ø¡ Ù…ÙˆØ«ÙˆÙ‚ÙŠÙ† ÙˆØ¥Ø¯Ø§Ø±Ø© Ù…Ø¨Ø§Ø´Ø±Ø© Ù„Ù„ØªÙ†ÙÙŠØ°.",
-    "footer.explore": "Ø§Ø³ØªÙƒØ´Ù",
-    "footer.company": "Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "footer.contact": "Ø§Ù„ØªÙˆØ§ØµÙ„",
-    "footer.faq": "Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©",
-    "footer.privacy": "Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©",
-    "footer.terms": "Ø§Ù„Ø´Ø±ÙˆØ· ÙˆØ§Ù„Ø£Ø­ÙƒØ§Ù…",
-    "footer.rights": "Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©.",
-    "footer.location": "Ø¬Ø¯Ø©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©",
-    "footer.primaryEmail": "Ø§Ù„Ø§Ø³ØªÙØ³Ø§Ø±Ø§Øª Ø§Ù„Ø¹Ø§Ù…Ø©",
-    "footer.secondaryEmail": "ØªØ®Ø·ÙŠØ· Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "cta.title": "ØµÙ Ù„Ù†Ø§ Ø§Ù„Ø¥Ø­Ø³Ø§Ø³ Ø§Ù„Ø°ÙŠ ØªØ±ÙŠØ¯Ù‡ Ù„Ù‡Ø°Ø§ Ø§Ù„ÙŠÙˆÙ….",
-    "cta.description": "Ø´Ø§Ø±ÙƒÙ†Ø§ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªØ§Ø±ÙŠØ® Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ØŒ ÙˆØ³Ù†ØµÙ…Ù… Ø§ØªØ¬Ø§Ù‡Ù‹Ø§ ÙˆØ§Ø¶Ø­Ù‹Ø§ ÙŠÙ†Ø§Ø³Ø¨ Ø£ÙˆÙ„ÙˆÙŠØ§ØªÙƒÙ….",
-    "cta.button": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "whatsapp.label": "ÙØªØ­ ÙˆØ§ØªØ³Ø§Ø¨",
-    "home.metaTitle": "Ø£ÙÙ†ØªÙˆØ±Ø§ | ØªØ¬Ø§Ø±Ø¨ Ø®Ø§ØµØ© ÙˆÙØ¹Ø§Ù„ÙŠØ§Øª ÙÙŠ Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©",
-    "home.metaDescription": "ØªØ¬Ø§Ø±Ø¨ Ø®Ø§ØµØ© ÙˆÙØ¹Ø§Ù„ÙŠØ§Øª Ø´Ø±ÙƒØ§Øª ÙˆØ¶ÙŠØ§ÙØ© Ù„Ù„Ø¶ÙŠÙˆÙ ÙˆØ¨Ø±Ø§Ù…Ø¬ ÙˆØ¬Ù‡Ø§Øª ØªØµÙ…Ù…Ù‡Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§ ÙÙŠ Ø¬Ø¯Ø© ÙˆØ§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©.",
-    "home.heroEyebrow": "Ø¬Ø¯Ø© Â· Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©",
-    "home.heroTitle": "Ø±Ø­Ù„Ø§Øª ÙˆÙ…Ù†Ø§Ø³Ø¨Ø§Øª ØªÙØµÙ…Ù… Ø­ÙˆÙ„Ùƒ.",
-    "home.heroDescription": "ØªØ¬Ù…Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¨ÙŠÙ† Ø§Ù„ØªØ¬Ø§Ø±Ø¨ Ø§Ù„Ø®Ø§ØµØ© ÙˆØ¥Ø¯Ø§Ø±Ø© Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ¶ÙŠØ§ÙØ© Ø§Ù„Ø¶ÙŠÙˆÙ ÙÙŠ Ø±Ø­Ù„Ø© ÙˆØ§Ø­Ø¯Ø© Ù…Ù†Ø³Ù‚Ø© Ø¨Ø¹Ù†Ø§ÙŠØ©ØŒ Ù…Ù† Ø§Ù„ÙÙƒØ±Ø© Ø§Ù„Ø£ÙˆÙ„Ù‰ Ø­ØªÙ‰ Ù„Ø­Ø¸Ø© Ø§Ù„ÙˆØ¯Ø§Ø¹.",
-    "home.heroPrimary": "Ø§Ø³ØªÙƒØ´Ù Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "home.heroSecondary": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "home.proof1Title": "Ø®Ø¨Ø±Ø© Ù…Ø­Ù„ÙŠØ©",
-    "home.proof1Text": "Ù…Ø¹Ø±ÙØ© Ø¨Ø¬Ø¯Ø© ÙˆØ´Ø¨ÙƒØ© Ù…Ù† Ø§Ù„Ø´Ø±ÙƒØ§Ø¡ Ø§Ù„Ù…Ø­Ù„ÙŠÙŠÙ†",
-    "home.proof2Title": "Ø®ØµÙˆØµÙŠØ© Ù…Ù† Ø§Ù„Ø¨Ø¯Ø§ÙŠØ©",
-    "home.proof2Text": "Ø¨Ø±Ø§Ù…Ø¬ ØªØªÙ†Ø§Ø³Ø¨ Ù…Ø¹ Ø¶ÙŠÙˆÙÙƒ ÙˆÙˆØªÙŠØ±Ø© ÙŠÙˆÙ…Ù‡Ù…",
-    "home.proof3Title": "Ø¬Ù‡Ø© ØªÙ†Ø³ÙŠÙ‚ ÙˆØ§Ø­Ø¯Ø©",
-    "home.proof3Text": "Ø§Ù„ØªØ®Ø·ÙŠØ· ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„ØªØ´ØºÙŠÙ„ ÙÙŠ Ù…Ø³Ø§Ø± ÙˆØ§Ø­Ø¯",
-    "home.introEyebrow": "Ø£Ø³Ù„ÙˆØ¨ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "home.introTitle": "Ø§Ù„Ù…ÙƒØ§Ù† Ù…Ù‡Ù…ØŒ Ù„ÙƒÙ† Ø·Ø±ÙŠÙ‚Ø© Ø¹ÙŠØ´Ù‡ Ø£Ù‡Ù….",
-    "home.introDescription": "Ù…Ù† Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© Ø¥Ù„Ù‰ Ø§Ù„Ø¨Ø­Ø± ÙˆØ§Ù„ØµØ­Ø±Ø§Ø¡ ÙˆØ§Ù„Ø·Ø§Ø¦ÙØŒ Ù†ØµÙ…Ù‘Ù… Ø£ÙŠØ§Ù…Ø§Ù‹ Ø®Ø§ØµØ© ØªØªØ´ÙƒÙ„ Ø­ÙˆÙ„ Ø¶ÙŠÙˆÙÙƒ.",
-    "home.expEyebrow": "Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "home.expTitle": "ØªØ¬Ø§Ø±Ø¨ Ù…Ø®ØªØ§Ø±Ø© Ù„Ø§ÙƒØªØ´Ø§Ù Ø¬Ø¯Ø© ÙˆØºØ±Ø¨ Ø§Ù„Ù…Ù…Ù„ÙƒØ©",
-    "home.expDescription": "Ø£Ø±Ø¨Ø¹Ø© Ø¹ÙˆØ§Ù„Ù… Ø®Ø§ØµØ©ØŒ ÙŠÙØµÙ…Ù‘ÙÙ… ÙƒÙ„ÙŒ Ù…Ù†Ù‡Ø§ Ø­ÙˆÙ„ Ø¶ÙŠÙˆÙÙƒ ÙˆÙˆÙ‚ØªÙƒÙ… ÙˆÙ†ÙˆØ¹ Ø§Ù„ÙŠÙˆÙ… Ø§Ù„Ø°ÙŠ ØªØ±ØºØ¨ÙˆÙ† ÙÙŠ ØµÙ†Ø¹Ù‡.",
-    "home.seaTitle": "Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "home.seaText": "ÙŠØ®ÙˆØª Ø®Ø§ØµØ© ÙˆØ±Ø­Ù„Ø§Øª ØºØ±ÙˆØ¨ ÙˆØºÙˆØµ ÙˆÙ…Ù†ØªØ¬Ø¹Ø§Øª Ø¨Ø­Ø±ÙŠØ©.",
-    "home.historicTitle": "Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©",
-    "home.historicText": "Ø­ÙƒØ§ÙŠØ§Øª ÙˆØ¹Ù…Ø§Ø±Ø© ÙˆØ¶ÙŠØ§ÙØ© Ù…Ø­Ù„ÙŠØ© Ù…Ø¹ Ù…Ø±Ø´Ø¯ÙŠÙ† Ù…Ø±Ø®ØµÙŠÙ†.",
-    "home.desertTitle": "Ø§Ù„ØµØ­Ø±Ø§Ø¡",
-    "home.desertText": "Ù…Ø³Ø§Ø­Ø§Øª Ù…ÙØªÙˆØ­Ø© ÙˆØ±Ø­Ù„Ø§Øª Ø¯ÙØ¹ Ø±Ø¨Ø§Ø¹ÙŠ ÙˆØ¬Ù„Ø³Ø§Øª Ø®Ø§ØµØ© Ù‡Ø§Ø¯Ø¦Ø©.",
-    "home.taifTitle": "Ù…Ø±ØªÙØ¹Ø§Øª Ø§Ù„Ø·Ø§Ø¦Ù",
-    "home.taifText": "Ø¬Ø¨Ø§Ù„ ÙˆÙˆØ±Ø¯ ÙˆØªÙØ§ØµÙŠÙ„ Ù…Ø­Ù„ÙŠØ© Ù…ÙˆØ³Ù…ÙŠØ© ÙˆØ£Ø¬ÙˆØ§Ø¡ Ø£ÙƒØ«Ø± Ø§Ø¹ØªØ¯Ø§Ù„Ù‹Ø§.",
-    "home.servicesEyebrow": "Ø±Ø­Ù„Ø© Ø§Ù„Ø¶ÙŠÙ",
-    "home.servicesTitle": "Ø¯Ø¹Ù… Ù‚Ø¨Ù„ Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ£Ø«Ù†Ø§Ø¡ Ø§Ù„ÙŠÙˆÙ… ÙˆØ­ØªÙ‰ Ù†Ù‡Ø§ÙŠØ© Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬",
-    "home.servicesDescription": "ÙØ±ÙŠÙ‚ ØªÙ†Ø³ÙŠÙ‚ ÙˆØ§Ø­Ø¯ ÙŠØ¯ÙŠØ± Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ù„ØªØªÙ…ÙƒÙ† Ø£Ù†Øª Ù…Ù† Ø§Ù„ØªØ±ÙƒÙŠØ² Ø¹Ù„Ù‰ Ø¶ÙŠÙˆÙÙƒ.",
-    "home.service1Title": "Ø§Ù„ØªØ®Ø·ÙŠØ· ÙˆØ§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬",
-    "home.service1Text": "Ø¨Ø±Ù†Ø§Ù…Ø¬ ÙˆØ§Ø¶Ø­ ÙˆØ­Ø¬ÙˆØ²Ø§Øª ÙˆØ§Ù‚ØªØ±Ø§Ø­Ø§Øª Ù…ØµÙ…Ù…Ø© Ø­Ø³Ø¨ Ø§Ù„Ø¶ÙŠÙ.",
-    "home.service2Title": "Ø§Ù„Ù†Ù‚Ù„ Ø§Ù„Ø®Ø§Øµ",
-    "home.service2Text": "Ù…Ø±ÙƒØ¨Ø§Øª ÙˆØ³Ø§Ø¦Ù‚ÙˆÙ† Ù…Ù†Ø§Ø³Ø¨ÙˆÙ† Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© ÙˆÙ…Ø³Ø§Ø± Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬.",
-    "home.service3Title": "Ù…Ø±Ø´Ø¯ÙˆÙ† Ù…Ø±Ø®ØµÙˆÙ†",
-    "home.service3Text": "Ù…Ø±Ø´Ø¯ÙˆÙ† Ø¨Ø¹Ø¯Ø© Ù„ØºØ§Øª ÙŠØªÙ… Ø§Ø®ØªÙŠØ§Ø±Ù‡Ù… Ø­Ø³Ø¨ Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙˆØ§Ù„Ø¶ÙŠÙˆÙ.",
-    "home.service4Title": "Ø¶ÙŠØ§ÙØ© Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "home.service4Text": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„ØªØ³Ù„ÙŠÙ… Ù„Ù„ÙÙ†Ø¯Ù‚ ÙˆØ§Ù„Ø¯Ø¹Ù… Ø§Ù„Ø¹Ù…Ù„ÙŠ Ø§Ù„Ø´Ø®ØµÙŠ.",
-    "home.eventsEyebrow": "Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª",
-    "home.eventsTitle": "ÙØ¹Ø§Ù„ÙŠØ§Øª Ø´Ø±ÙƒØ§Øª ÙˆÙ…Ù†Ø§Ø³Ø¨Ø§Øª Ø®Ø§ØµØ© Ù„Ù‡Ø§ Ù‡Ø¯Ù ÙˆØ§Ø¶Ø­",
-    "home.eventsDescription": "Ù…Ù† Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠØ© ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø§Ù„ÙØ±Ù‚ Ø¥Ù„Ù‰ Ø§Ù„ØªØ¬Ù…Ø¹Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¹Ù„Ù‰ Ø§Ù„Ø¨Ø­Ø±ØŒ Ù†Ù†Ø³Ù‚ Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ù„Ù…ÙˆØ±Ø¯ÙŠÙ† ÙˆØ­Ø±ÙƒØ© Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙ†ÙÙŠØ° Ø§Ù„Ù…ÙŠØ¯Ø§Ù†ÙŠ.",
-    "home.eventsButton": "Ø§Ø³ØªÙƒØ´Ù Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª",
-    "home.collectionEyebrow": "Ø¨ÙˆØªÙŠÙƒ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "home.collectionTitle": "ØªØµÙˆØ±Ø§Øª Ø¹Ø·Ø±ÙŠØ© ÙŠØµÙˆØºÙ‡Ø§ ÙƒÙ„ Ø¹Ø§Ù„Ù…",
-    "home.collectionDescription": "ÙŠØ¹Ø±Ø¶ Ø§Ù„Ø¨ÙˆØªÙŠÙƒ Ø­Ø§Ù„ÙŠÙ‹Ø§ ØªØµÙˆØ±Ø§Øª Ø¹Ø·Ø±ÙŠØ© Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ±. ÙˆØªØ¨Ù‚Ù‰ Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ ÙÙŠ Ù…Ø³Ø§Ø± Ù…Ø³ØªÙ‚Ù„ Ø¯Ø§Ø®Ù„ Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "home.collectionButton": "Ø¯Ø®ÙˆÙ„ Ø§Ù„Ø¨ÙˆØªÙŠÙƒ",
-    "home.whyEyebrow": "Ù„Ù…Ø§Ø°Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "home.whyTitle": "ØªØ´ØºÙŠÙ„ Ù…Ø­Ù„ÙŠ Ø¨Ø¹Ù†Ø§ÙŠØ© Ø§Ù„Ù…Ø¶ÙŠÙ Ù„Ù„ØªÙØ§ØµÙŠÙ„",
-    "home.whyDescription": "Ù†Ø±Ø§Ø¬Ø¹ ÙƒÙ„ Ø®Ø·Ø© Ù…Ù† Ù…Ù†Ø¸ÙˆØ± Ø§Ù„Ø¶ÙŠÙ ÙˆÙ†Ø¯ÙŠØ±Ù‡Ø§ Ø¨Ø§Ù‡ØªÙ…Ø§Ù… Ø¹Ù…Ù„ÙŠ Ø¹Ù„Ù‰ Ø£Ø±Ø¶ Ø§Ù„ÙˆØ§Ù‚Ø¹.",
-    "home.why1Title": "Ù…Ø®ØµØµØ© ÙˆÙ„ÙŠØ³Øª Ø¬Ø§Ù‡Ø²Ø©",
-    "home.why1Text": "ØªØªØºÙŠØ± Ø§Ù„Ø®Ø·Ø© Ø­Ø³Ø¨ Ø§Ù„Ø¶ÙŠÙ ÙˆØ§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ§Ù„ÙˆØªÙŠØ±Ø© Ø§Ù„Ù…ÙØ¶Ù„Ø©.",
-    "home.why2Title": "Ø§Ù„Ø®ØµÙˆØµÙŠØ© ÙˆØ§Ù„Ù‡Ø¯ÙˆØ¡",
-    "home.why2Text": "Ø®ÙŠØ§Ø±Ø§Øª Ø®Ø§ØµØ© ÙˆØªÙ†Ø³ÙŠÙ‚ Ù…ØªØ­ÙØ¸ Ù„Ù„Ø¹Ø§Ø¦Ù„Ø§Øª ÙˆØ§Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ† ÙˆØ¶ÙŠÙˆÙ VIP.",
-    "home.why3Title": "ÙˆØ¶ÙˆØ­ ØªØ´ØºÙŠÙ„ÙŠ",
-    "home.why3Text": "Ø¨Ø±Ù†Ø§Ù…Ø¬ Ù…Ø­Ø¯Ø¯ ÙˆÙ…Ø³Ø¤ÙˆÙ„ÙŠØ§Øª Ù…Ø¤ÙƒØ¯Ø© ÙˆÙ†Ù‚Ø·Ø© ØªÙˆØ§ØµÙ„ ÙˆØ§Ø­Ø¯Ø©.",
-    "experiences.metaTitle": "ØªØ¬Ø§Ø±Ø¨ Ø®Ø§ØµØ© ÙÙŠ Ø¬Ø¯Ø© ÙˆØ§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ© | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "experiences.metaDescription": "Ø§ÙƒØªØ´Ù ØªØ¬Ø§Ø±Ø¨ Ø§Ù„Ø¨Ø­Ø± ÙˆØ§Ù„Ø³Ø§Ø¹Ø© Ø§Ù„Ø°Ù‡Ø¨ÙŠØ© ÙˆØ¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ§Ù„ØµØ­Ø±Ø§Ø¡ ÙˆØ§Ù„Ø·Ø§Ø¦Ù ÙˆÙŠÙˆÙ… Ø¬Ø¯Ø© Ø§Ù„Ù…ØªÙƒØ§Ù…Ù„ Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§.",
-    "experiences.heroEyebrow": "Ø±Ø­Ù„Ø§Øª Ø®Ø§ØµØ©",
-    "experiences.heroTitle": "ØªØ¬Ø§Ø±Ø¨ ØªØ­Ù…Ù„ Ø±ÙˆØ­ Ø§Ù„Ù…ÙƒØ§Ù†.",
-    "experiences.heroDescription": "Ø§ÙƒØªØ´Ù Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø± ÙˆØ¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ§Ù„ØµØ­Ø±Ø§Ø¡ ÙˆØ§Ù„Ø·Ø§Ø¦Ù ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø¬Ø¯Ø© Ø§Ù„Ù…ØªÙƒØ§Ù…Ù„Ø© Ø¨Ø¥ÙŠÙ‚Ø§Ø¹ ÙŠÙ†Ø§Ø³Ø¨ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ÙˆÙ‚Øª.",
-    "experiences.introEyebrow": "Ù…ØµÙ…Ù…Ø© Ø­ÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ",
-    "experiences.introTitle": "Ø§Ø¨Ø¯Ø£ Ø¨Ø§Ù„Ù…ÙƒØ§Ù†ØŒ ÙˆØ³Ù†Ø¨Ù†ÙŠ Ø§Ù„ÙŠÙˆÙ… Ù…Ù† Ø­ÙˆÙ„Ù‡.",
-    "experiences.introText": "ÙŠÙ…ÙƒÙ† Ø­Ø¬Ø² ÙƒÙ„ ØªØ¬Ø±Ø¨Ø© Ù…Ø³ØªÙ‚Ù„Ø© Ø£Ùˆ Ø¯Ù…Ø¬Ù‡Ø§ ÙÙŠ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø£ÙˆØ³Ø¹ ÙŠØ´Ù…Ù„ Ø§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„Ù…Ø±Ø´Ø¯ÙŠÙ† ÙˆØ§Ù„Ù…Ø·Ø§Ø¹Ù… ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„Ø£Ù†Ø´Ø·Ø© Ø§Ù„Ø§Ø®ØªÙŠØ§Ø±ÙŠØ©.",
-    "experiences.seaTitle": "ØªØ¬Ø§Ø±Ø¨ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "experiences.seaText": "ØµØ¨Ø§Ø­ Ù…Ø´Ø±Ù‚ Ø¹Ù„Ù‰ Ø§Ù„Ù…Ø§Ø¡ ÙˆØ£ÙÙ‚ Ù…ÙØªÙˆØ­ ÙˆÙŠÙˆÙ… ÙÙˆÙ‚ Ø³Ø·Ø­ Ø§Ù„Ø¨Ø­Ø± Ø£Ùˆ ØªØ­ØªÙ‡. Ù†Ø®ØªØ§Ø± Ø§Ù„Ù‚Ø§Ø±Ø¨ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.",
-    "experiences.seaItem1": "Ø±Ø­Ù„Ø§Øª ÙŠØ®ÙˆØª Ø®Ø§ØµØ©",
-    "experiences.seaItem2": "Ø§Ù„Ø³Ø§Ø¹Ø© Ø§Ù„Ø°Ù‡Ø¨ÙŠØ©: Ø±Ø­Ù„Ø© Ù‚Ø§Ø±Ø¨ Ù„Ù…Ø¯Ø© Ø³Ø§Ø¹Ø© ÙˆÙ‚Øª Ø§Ù„ØºØ±ÙˆØ¨",
-    "experiences.seaItem3": "Ø§Ù„ØºÙˆØµ ÙˆØ§Ù„Ø³Ù†ÙˆØ±ÙƒÙ„ÙŠÙ†Ø¬",
-    "experiences.seaItem4": "Ø£ÙŠØ§Ù… Ø§Ù„Ø´Ø§Ø·Ø¦ ÙˆØ§Ù„Ù…Ù†ØªØ¬Ø¹Ø§Øª",
-    "experiences.seaTag1": "Ø§Ù„Ø£Ø²ÙˆØ§Ø¬",
-    "experiences.seaTag2": "Ø§Ù„Ø¹Ø§Ø¦Ù„Ø§Øª",
-    "experiences.seaTag3": "Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„Ø®Ø§ØµØ©",
-    "experiences.historicTitle": "Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©",
-    "experiences.historicText": "Ø¬ÙˆÙ„Ø© Ø®Ø§ØµØ© ÙÙŠ Ø§Ù„Ø¨Ù„Ø¯ ÙŠÙ‚ÙˆØ¯Ù‡Ø§ Ù…Ø±Ø´Ø¯ Ù…Ø±Ø®Øµ ÙŠØ±Ø¨Ø· Ø¨ÙŠÙ† Ø¹Ù…Ø§Ø±Ø© Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© ÙˆØ£Ù‡Ù„Ù‡Ø§ ÙˆØ­ÙƒØ§ÙŠØ§ØªÙ‡Ø§.",
-    "experiences.historicItem1": "Ù…Ø±Ø´Ø¯ÙˆÙ† Ù…Ø±Ø®ØµÙˆÙ† Ø¨Ø¹Ø¯Ø© Ù„ØºØ§Øª",
-    "experiences.historicItem2": "Ø¹Ù…Ø§Ø±Ø© Ø§Ù„Ø±ÙˆØ§Ø´ÙŠÙ† ÙˆØ§Ù„Ø­ÙƒØ§ÙŠØ§Øª Ø§Ù„Ù…Ø­Ù„ÙŠØ©",
-    "experiences.historicItem3": "Ø§Ù„Ù‚Ù‡ÙˆØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© ÙˆØ§Ù„ØªÙ…Ø± ÙˆÙ…Ø­Ø·Ø§Øª ØªØ±Ø§Ø«ÙŠØ© Ù…Ø®ØªØ§Ø±Ø©",
-    "experiences.historicItem4": "Ø§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„Ø¹Ø´Ø§Ø¡ Ø§Ù„Ø¨Ø­Ø±ÙŠ Ù…ØªØ§Ø­Ø§Ù† ÙƒØ®ÙŠØ§Ø±Ø§Øª Ø¥Ø¶Ø§ÙÙŠØ©",
-    "experiences.historicTag1": "Ø§Ù„Ø«Ù‚Ø§ÙØ©",
-    "experiences.historicTag2": "Ø§Ù„Ø¹Ù…Ø§Ø±Ø©",
-    "experiences.historicTag3": "Ø§Ù„Ø²ÙˆØ§Ø± Ù„Ø£ÙˆÙ„ Ù…Ø±Ø©",
-    "experiences.desertTitle": "ØªØ¬Ø§Ø±Ø¨ Ø§Ù„ØµØ­Ø±Ø§Ø¡",
-    "experiences.desertText": "ØªØ¬Ø±Ø¨Ø© ØµØ­Ø±Ø§ÙˆÙŠØ© Ø®Ø§ØµØ© ØªØªØ´ÙƒÙ„ Ø­ÙˆÙ„ ÙƒØ«Ø¨Ø§Ù† Ø±Ù…Ù„ÙŠØ© ÙˆØ§Ø³Ø¹Ø© ÙˆÙ…Ø³Ø§Ø± Ø¯ÙØ¹ Ø±Ø¨Ø§Ø¹ÙŠ Ù…Ø®ØªØ§Ø± ÙˆLast Light ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©.",
-    "experiences.desertItem1": "Ù…Ø³Ø§Ø±Ø§Øª Ø¯ÙØ¹ Ø±Ø¨Ø§Ø¹ÙŠ Ø¨ÙŠÙ† ÙƒØ«Ø¨Ø§Ù† Ø±Ù…Ù„ÙŠØ©",
-    "experiences.desertItem2": "Ø¬Ù„Ø³Ø© ÙˆØ¶ÙŠØ§ÙØ© Ø®Ø§ØµØ©",
-    "experiences.desertItem3": "ØªØ±ØªÙŠØ¨Ø§Øª Ø§Ù„Ø¹Ø´Ø§Ø¡",
-    "experiences.desertItem4": "Ø¨Ø±Ø§Ù…Ø¬ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„ØµØºÙŠØ±Ø©",
-    "experiences.desertTag1": "ÙƒØ«Ø¨Ø§Ù† Ø±Ù…Ù„ÙŠØ© ÙˆØ§Ù„ØºØ±ÙˆØ¨",
-    "experiences.desertTag2": "Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ØµØºÙŠØ±Ø©",
-    "experiences.desertTag3": "Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø®Ø§ØµØ©",
-    "experiences.taifTitle": "Ø±Ø­Ù„Ø§Øª Ø§Ù„Ø·Ø§Ø¦Ù",
-    "experiences.taifText": "ÙŠÙˆÙ… Ø®Ø§Øµ ÙÙŠ Ø§Ù„Ù…Ø±ØªÙØ¹Ø§Øª ÙŠØ¬Ù…Ø¹ Ø§Ù„Ø¥Ø·Ù„Ø§Ù„Ø§Øª Ø§Ù„Ø¬Ø¨Ù„ÙŠØ© ÙˆÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù Ø§Ù„Ù…ÙˆØ³Ù…ÙŠ ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø­Ù„ÙŠØ© ÙˆØ¥ÙŠÙ‚Ø§Ø¹Ù‹Ø§ Ø£ÙƒØ«Ø± Ù‡Ø¯ÙˆØ¡Ù‹Ø§.",
-    "experiences.taifItem1": "Ø·Ø±Ù‚ Ø¬Ø¨Ù„ÙŠØ© ÙˆØ¥Ø·Ù„Ø§Ù„Ø§Øª",
-    "experiences.taifItem2": "Ù…Ø²Ø§Ø±Ø¹ Ø§Ù„ÙˆØ±Ø¯ Ø§Ù„Ù…ÙˆØ³Ù…ÙŠØ©",
-    "experiences.taifItem3": "Ø£Ø³ÙˆØ§Ù‚ ÙˆÙ…Ø­Ø·Ø§Øª Ù…Ø­Ù„ÙŠØ© Ù…ÙˆØ³Ù…ÙŠØ©",
-    "experiences.taifItem4": "Ù…Ø·Ø§Ø¹Ù… ÙˆÙ…Ù‚Ø§Ù‡Ù Ù…Ø®ØªØ§Ø±Ø©",
-    "experiences.taifTag1": "ÙŠÙˆÙ… ÙƒØ§Ù…Ù„",
-    "experiences.taifTag2": "Ù…ÙˆØ³Ù…ÙŠØ©",
-    "experiences.taifTag3": "Ø§Ù„Ø·Ø¨ÙŠØ¹Ø©",
-    "experiences.signatureEyebrow": "ØªØ¬Ø§Ø±Ø¨ Ø¬Ø¯Ø© Ø§Ù„Ù…Ù…ÙŠØ²Ø©",
-    "experiences.signatureTitle": "Ø£ÙÙƒØ§Ø± Ø¨Ø³ÙŠØ·Ø© Ø¨Ø°ÙƒØ±Ù‰ Ù…Ù…ÙŠØ²Ø©",
-    "experiences.signatureText": "ÙŠÙ…ÙƒÙ† Ù„Ø¨Ø±Ø§Ù…Ø¬Ù†Ø§ Ø§Ù„Ù…Ù…ÙŠØ²Ø© Ø£Ù† ØªØ¬Ù…Ø¹ Ø§Ù„Ø«Ù‚Ø§ÙØ© ÙˆØ§Ù„Ø¨Ø­Ø± ÙˆØ§Ù„Ø·Ø¹Ø§Ù… ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© Ø¯ÙˆÙ† Ø£Ù† ÙŠØµØ¨Ø­ Ø§Ù„ÙŠÙˆÙ… Ù…Ø²Ø¯Ø­Ù…Ù‹Ø§.",
-    "experiences.signature1Title": "Ù…Ù† Ø§Ù„Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø§Ù„Ø¨Ù„Ø¯",
-    "experiences.signature1Text": "Ø¸Ù‡ÙŠØ±Ø© ÙÙŠ Ø§Ù„Ù…Ù†ØªØ¬Ø¹ØŒ ÙˆØªÙˆÙ‚Ù ÙˆÙ‚Øª Ø§Ù„ØºØ±ÙˆØ¨ ÙÙŠ Ù†Ø§Ø¯ÙŠ Ø¬Ø¯Ø© Ù„Ù„ÙŠØ®ÙˆØªØŒ ÙˆØ¬ÙˆÙ„Ø© Ù…Ø±Ø®ØµØ© ÙÙŠ Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©.",
-    "experiences.signature2Title": "Ù…Ù† Ø§Ù„Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø§Ù„ØµØ­Ø±Ø§Ø¡",
-    "experiences.signature2Text": "ØµØ¨Ø§Ø­ Ø¹Ù„Ù‰ Ø§Ù„Ø³Ø§Ø­Ù„ ÙˆØ¬Ù„Ø³Ø© ØµØ­Ø±Ø§ÙˆÙŠØ© Ø®Ø§ØµØ© Ù…Ø¹ Ø§Ù„Ø¶ÙˆØ¡ Ø§Ù„Ø£Ø®ÙŠØ±.",
-    "experiences.signature3Title": "ÙŠÙˆÙ… Ø¬Ø¯Ø© Ø§Ù„Ù…ØªÙƒØ§Ù…Ù„",
-    "experiences.signature3Text": "ÙŠÙˆÙ… Ù…ØªÙˆØ§Ø²Ù† ÙŠØ¬Ù…Ø¹ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© ÙˆØ§Ù„Ø«Ù‚Ø§ÙØ© ÙˆØ§Ù„Ø·Ø¹Ø§Ù… ÙˆØ§Ù„ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ©.",
-    "experiences.requestTitle": "Ù‡Ù„ ØªØ±ØºØ¨ ÙÙŠ Ø¯Ù…Ø¬ Ø£ÙƒØ«Ø± Ù…Ù† ØªØ¬Ø±Ø¨Ø©ØŸ",
-    "experiences.requestText": "Ø£Ø±Ø³Ù„ Ù„Ù†Ø§ Ø¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ÙˆÙ‚Øª Ø§Ù„Ù…ØªØ§Ø­ ÙˆØ³Ù†Ù‚ØªØ±Ø­ Ù…Ø³Ø§Ø±Ù‹Ø§ Ù…ØªÙˆØ§Ø²Ù†Ù‹Ø§.",
-    "events.metaTitle": "ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ø®Ø§ØµØ© ÙÙŠ Ø¬Ø¯Ø© | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "events.metaDescription": "ØªÙ†Ø³ÙŠÙ‚ ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠØ© ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø§Ù„ÙØ±Ù‚ ÙˆØ§Ù„Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ø®Ø§ØµØ© ÙˆØ§Ø³ØªØ¶Ø§ÙØ© Ø¶ÙŠÙˆÙ VIP.",
-    "events.heroEyebrow": "Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª",
-    "events.heroTitle": "ÙØ¹Ø§Ù„ÙŠØ§Øª ØªÙØ¯Ø§Ø± Ù…Ù† Ø£ÙˆÙ„ ÙÙƒØ±Ø© Ø­ØªÙ‰ ÙˆØµÙˆÙ„ Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "events.heroDescription": "ØªØ®Ø·Ø· Ø£ÙÙ†ØªÙˆØ±Ø§ ÙˆØªÙ†ÙØ° ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ø®Ø§ØµØ© ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ø¶ÙŠÙˆÙ Ø¶Ù…Ù† Ø®Ø·Ø© ØªØ´ØºÙŠÙ„ ÙˆØ§Ø­Ø¯Ø© ÙˆØ§Ø¶Ø­Ø©.",
-    "events.introEyebrow": "Ù…Ù† Ø§Ù„ÙÙƒØ±Ø© Ø¥Ù„Ù‰ Ø§Ù„ØªÙ†ÙÙŠØ°",
-    "events.introTitle": "Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ© Ù„Ø­Ø¸Ø© ÙˆØ§Ø­Ø¯Ø©ØŒ Ù„ÙƒÙ† Ø±Ø­Ù„Ø© Ø§Ù„Ø¶ÙŠÙ ØªØ¨Ø¯Ø£ Ù‚Ø¨Ù„Ù‡Ø§.",
-    "events.introText": "Ù†ÙˆØ­Ù‘Ø¯ Ø§Ù„Ù‡Ø¯Ù ÙˆØ§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„Ù…ÙˆØ±Ø¯ÙŠÙ† ÙˆØ­Ø±ÙƒØ© Ø§Ù„ØªÙ†ÙÙŠØ° Ø­ØªÙ‰ ÙŠØ®Ø¯Ù… ÙƒÙ„ Ø¬Ø²Ø¡ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©.",
-    "events.corporateEyebrow": "ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ø´Ø±ÙƒØ§Øª",
-    "events.corporateTitle": "ØªÙ†ÙÙŠØ° ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ø´Ø±ÙƒØ§Øª",
-    "events.corporateText": "Ù†Ø¯ÙŠØ± ØªÙ†ÙÙŠØ° Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠØ© ÙˆØ­ÙÙ„Ø§Øª Ø§Ù„ØªÙƒØ±ÙŠÙ… ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø§Ù„ÙØ±Ù‚ ÙˆØ§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„ÙˆÙÙˆØ¯ ÙˆØªÙØ§ØµÙŠÙ„Ù‡Ø§ Ø§Ù„Ù…ÙŠØ¯Ø§Ù†ÙŠØ©.",
-    "events.privateEyebrow": "Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø®Ø§ØµØ©",
-    "events.privateTitle": "Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ø®Ø§ØµØ©",
-    "events.privateText": "Ø£Ø¹ÙŠØ§Ø¯ Ù…ÙŠÙ„Ø§Ø¯ ÙˆØ°ÙƒØ±ÙŠØ§Øª Ø³Ù†ÙˆÙŠØ© ÙˆØªØ¬Ù…Ø¹Ø§Øª Ø¹Ø§Ø¦Ù„ÙŠØ© ÙˆØ§Ø­ØªÙØ§Ù„Ø§Øª ØµØºÙŠØ±Ø© ØªÙØµÙ…Ù… Ø­ÙˆÙ„ Ø§Ù„Ù…ÙƒØ§Ù† ÙˆØ§Ù„Ø¶ÙŠÙˆÙ.",
-    "events.vipTitle": "Ø§Ø³ØªØ¶Ø§ÙØ© ÙƒØ¨Ø§Ø± Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ÙˆÙÙˆØ¯",
-    "events.vipText": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ§Ù„Ù†Ù‚Ù„ ÙˆØ¯Ø¹Ù… Ø§Ù„Ø¥Ù‚Ø§Ù…Ø© ÙˆØ§Ù„Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ø®Ø§ØµØ© ÙˆØ§Ù„Ø¹Ù†Ø§ÙŠØ© Ø¨Ø§Ù„Ø¶ÙŠÙ Ø¨Ø®ØµÙˆØµÙŠØ©.",
-    "events.teamTitle": "Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„ÙØ±Ù‚",
-    "events.teamText": "Ø£Ù†Ø´Ø·Ø© ØªÙØµÙ…Ù… ÙˆÙÙ‚ Ø£Ù‡Ø¯Ø§Ù Ø§Ù„ÙØ±ÙŠÙ‚ ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ù…Ø´Ø§Ø±ÙƒÙŠÙ† ÙˆØ¨ÙŠØ¦Ø© Ù…Ù†Ø§Ø³Ø¨Ø© Ø®Ø§Ø±Ø¬ Ù…ÙƒØ§Ù† Ø§Ù„Ø¹Ù…Ù„ Ø§Ù„Ù…Ø¹ØªØ§Ø¯.",
-    "events.typesEyebrow": "Ù…Ø§ Ø§Ù„Ø°ÙŠ Ù†Ù†Ø³Ù‚Ù‡",
-    "events.typesTitle": "ØµÙŠØºØ© Ø¹Ù…Ù„ÙŠØ© Ù„ÙƒÙ„ Ù‡Ø¯Ù",
-    "events.type1Title": "Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠØ©",
-    "events.type1Text": "Ù…ÙˆÙ‚Ø¹ Ù…Ù†Ø§Ø³Ø¨ ÙˆØªØ¬Ù‡ÙŠØ²Ø§Øª Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„Ù†Ù‚Ù„ Ø¶Ù…Ù† Ø¨Ø±Ù†Ø§Ù…Ø¬ ÙˆØ§Ø­Ø¯.",
-    "events.type2Title": "Ø¹Ø´Ø§Ø¡ Ø§Ù„Ø¹Ù„Ø§Ù‚Ø§Øª ÙˆØ§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠØ©",
-    "events.type2Text": "Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØªØ±ØªÙŠØ¨ Ø§Ù„Ø¬Ù„Ø³Ø§Øª ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„Ù†Ù‚Ù„.",
-    "events.type3Title": "Ø§Ù„ØªÙƒØ±ÙŠÙ… ÙˆÙ…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ø´Ø±ÙƒØ©",
-    "events.type3Text": "ØªÙƒØ±ÙŠÙ… Ø§Ù„Ù…ÙˆØ¸ÙÙŠÙ† ÙˆØ¥Ù†Ø¬Ø§Ø²Ø§Øª Ø§Ù„Ø´Ø±ÙƒØ© ÙˆØ¨Ø¹Ø¶ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ù…ÙˆØ³Ù…ÙŠØ© Ø§Ù„Ù…Ø®ØªØ§Ø±Ø©.",
-    "events.type4Title": "Ø£ÙŠØ§Ù… Ø¨Ø­Ø±ÙŠØ© ÙˆØµØ­Ø±Ø§ÙˆÙŠØ© ÙˆØ«Ù‚Ø§ÙÙŠØ©",
-    "events.type4Text": "ÙˆØ¬Ù‡Ø§Øª Ø¬Ø§Ù‡Ø²Ø© ØªÙÙƒÙŠÙ‘Ù Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„Ø´Ø±ÙƒØ§Øª Ù…Ø¹ Ø±Ø§Ø­Ø© Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ³Ù‡ÙˆÙ„Ø© Ø§Ù„ØªØ´ØºÙŠÙ„.",
-    "events.type5Title": "Ø¨Ù†Ø§Ø¡ Ø§Ù„ÙØ±ÙŠÙ‚",
-    "events.type5Text": "Ø£Ù†Ø´Ø·Ø© ØªÙ†Ø§Ø³Ø¨ Ù‡Ø¯Ù Ø§Ù„ÙØ±ÙŠÙ‚ ÙˆÙ‚Ø¯Ø±Ø§ØªÙ‡ ÙˆØ§Ù„ÙˆÙ‚Øª Ø§Ù„Ù…ØªØ§Ø­.",
-    "events.type6Title": "Ø§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ø¯ÙˆÙ„ÙŠÙˆÙ†",
-    "events.type6Text": "Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø¶ÙŠØ§ÙØ© Ù…ØªØµÙ„ Ù„Ù„ÙØ±Ù‚ ÙˆØ§Ù„Ø´Ø±ÙƒØ§Ø¡ ÙˆØ§Ù„ÙˆÙÙˆØ¯ Ø§Ù„Ø²Ø§Ø¦Ø±Ø©.",
-    "events.processEyebrow": "Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„Ø¹Ù…Ù„",
-    "events.processTitle": "Ø®Ø·Ø© ÙˆØ§Ø­Ø¯Ø© ÙˆØ£Ø±Ø¨Ø¹ Ù…Ø±Ø§Ø­Ù„ ÙˆØ§Ø¶Ø­Ø©",
-    "events.step1Title": "ÙÙ‡Ù… Ø§Ù„Ø·Ù„Ø¨",
-    "events.step1Text": "Ù†ÙÙ‡Ù… Ø§Ù„Ù‡Ø¯Ù ÙˆØ§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„Ù‚ÙŠÙˆØ¯ Ø§Ù„ØªØ´ØºÙŠÙ„ÙŠØ©.",
-    "events.step2Title": "Ø§Ù„ØªØµÙ…ÙŠÙ…",
-    "events.step2Text": "Ù†ØµÙ…Ù… Ø§Ù„ØµÙŠØºØ© ÙˆØ§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ù„Ø­Ø±ÙƒØ© ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ø³Ø§Ù†Ø¯Ø©.",
-    "events.step3Title": "Ø§Ù„ØªØ£ÙƒÙŠØ¯",
-    "events.step3Text": "Ù†ÙˆØ«Ù‚ Ø§Ù„Ù…ÙˆØ±Ø¯ÙŠÙ† ÙˆØ§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ§Øª ÙˆØ§Ù„Ø¬Ø¯ÙˆÙ„ ÙˆÙ†ØªØ£ÙƒØ¯ Ù…Ù† ØªÙˆØ§ÙÙ‚Ù‡Ø§.",
-    "events.step4Title": "Ø§Ù„ØªÙ†ÙÙŠØ°",
-    "events.step4Text": "ÙŠØ­Ø§ÙØ¸ Ø§Ù„ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ù…ÙŠØ¯Ø§Ù†ÙŠ Ø¹Ù„Ù‰ Ø³Ù„Ø§Ø³Ø© Ø­Ø±ÙƒØ© Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ©.",
-    "events.requestTitle": "ØªØ®Ø·Ø· Ù„ÙØ¹Ø§Ù„ÙŠØ© ÙÙŠ Ø¬Ø¯Ø©ØŸ",
-    "events.requestText": "Ø£Ø±Ø³Ù„ Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ù‡Ø¯Ù ÙˆØ³Ù†Ù‚ØªØ±Ø­ Ù†Ù‚Ø·Ø© Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©.",
-    "services.metaTitle": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬ ÙˆØ¥Ø¯Ø§Ø±Ø© Ø§Ù„ÙˆØ¬Ù‡Ø§Øª | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "services.metaDescription": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„ØªØ®Ø·ÙŠØ· ÙˆØ§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„Ù…Ø±Ø´Ø¯ÙŠÙ† Ø§Ù„Ù…Ø±Ø®ØµÙŠÙ† ÙˆØ§Ù„Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙˆØ¶ÙŠØ§ÙØ© Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ¥Ø¯Ø§Ø±Ø© Ø§Ù„ÙˆØ¬Ù‡Ø§Øª ÙÙŠ Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©.",
-    "services.heroEyebrow": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "services.heroTitle": "Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø­ÙŠØ·Ø© Ø¨Ø§Ù„ØªØ¬Ø±Ø¨Ø© ØªØµÙ†Ø¹ Ø§Ù„ÙØ±Ù‚.",
-    "services.heroDescription": "ÙŠØªÙ… ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ØªØ®Ø·ÙŠØ· ÙˆØ§Ù„Ø­Ø±ÙƒØ© ÙˆØ§Ù„Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙˆØ§Ù„Ø¯Ø¹Ù… Ø­ÙˆÙ„ Ø±Ø­Ù„Ø© Ø¶ÙŠÙ ÙˆØ§Ø­Ø¯Ø©.",
-    "services.introEyebrow": "Ø·Ø¨Ù‚Ø© ØªÙ†Ø³ÙŠÙ‚ ÙˆØ§Ø­Ø¯Ø©",
-    "services.introTitle": "Ø®Ø¯Ù…Ø§Øª ØªØ¬Ø¹Ù„ Ø§Ù„ÙŠÙˆÙ… Ø£ÙƒØ«Ø± Ø³Ù„Ø§Ø³Ø©",
-    "services.introText": "Ø§Ø­Ø¬Ø² Ø®Ø¯Ù…Ø© Ù…Ù†ÙØ±Ø¯Ø© Ø£Ùˆ Ø¯Ø¹Ù†Ø§ Ù†Ø±Ø¨Ø· Ø¹Ø¯Ø© Ø®Ø¯Ù…Ø§Øª ÙÙŠ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ù…ØªÙƒØ§Ù…Ù„ Ù„Ù„Ø£ÙØ±Ø§Ø¯ ÙˆØ§Ù„Ø¹Ø§Ø¦Ù„Ø§Øª ÙˆØ§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„ÙˆÙÙˆØ¯ Ø§Ù„Ø²Ø§Ø¦Ø±Ø©.",
-    "services.s1Title": "Ø§Ù„ØªØ®Ø·ÙŠØ· ÙˆØ§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬",
-    "services.s1Text": "Ø¬Ø¯Ø§ÙˆÙ„ ÙˆØ­Ø¬ÙˆØ²Ø§Øª ÙˆØ§Ù‚ØªØ±Ø§Ø­Ø§Øª ÙˆØªØ±ØªÙŠØ¨Ø§Øª Ø®Ø§ØµØ© ØªØªÙˆØ§ÙÙ‚ Ù…Ø¹ Ø§Ù„Ø¶ÙŠÙ.",
-    "services.s2Title": "Ø§Ù„Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙˆØ§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø©",
-    "services.s2Text": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø§Ù„ÙˆØ§Ø¶Ø­ Ù…Ù† Ø§Ù„Ù…Ø·Ø§Ø± Ø¥Ù„Ù‰ Ø§Ù„Ù…Ø±ÙƒØ¨Ø© ÙˆÙ…Ù‚Ø± Ø§Ù„Ø¥Ù‚Ø§Ù…Ø©.",
-    "services.s3Title": "Ø§Ù„Ù†Ù‚Ù„ Ø§Ù„Ø®Ø§Øµ",
-    "services.s3Text": "Ù…Ø±ÙƒØ¨Ø§Øª Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ³Ø§Ø¦Ù‚ÙˆÙ† Ù…Ø­ØªØ±ÙÙˆÙ† ÙˆØªÙˆÙ‚ÙŠØª Ù…ØªÙˆØ§ÙÙ‚ Ù…Ø¹ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬.",
-    "services.s4Title": "Ø§Ù„Ù…Ø±Ø´Ø¯ÙˆÙ† Ø§Ù„Ù…Ø±Ø®ØµÙˆÙ†",
-    "services.s4Text": "Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© ÙˆØ§Ù„Ø¥Ù†Ø¬Ù„ÙŠØ²ÙŠØ© ÙˆÙ„ØºØ§Øª Ø£Ø®Ø±Ù‰ Ø­Ø³Ø¨ Ø§Ù„ØªÙˆÙØ± ÙˆØ§Ø­ØªÙŠØ§Ø¬ Ø§Ù„Ø¶ÙŠÙ.",
-    "services.s5Title": "Ø¶ÙŠØ§ÙØ© Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "services.s5Text": "ØªØ±ØªÙŠØ¨Ø§Øª Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„ØªØ³Ù„ÙŠÙ… Ù„Ù„ÙÙ†Ø¯Ù‚ ÙˆØªÙØ§ØµÙŠÙ„ Ø¹Ù…Ù„ÙŠØ© Ù…Ø¯Ø±ÙˆØ³Ø©.",
-    "services.s6Title": "Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„ÙˆØ¬Ù‡Ø§Øª",
-    "services.s6Text": "ØªÙ†Ø³ÙŠÙ‚ Ù…Ø­Ù„ÙŠ Ù„ÙˆÙƒØ§Ù„Ø§Øª Ø§Ù„Ø³ÙØ± ÙˆØ§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„ÙˆÙÙˆØ¯ ÙˆØ§Ù„Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ù…Ù…ØªØ¯Ø© Ù„Ø¹Ø¯Ø© Ø£ÙŠØ§Ù….",
-    "services.s7Title": "ØªÙØµÙŠÙ„ Ø§Ù„Ø«ÙˆØ¨",
-    "services.s7Text": "ÙŠØ²ÙˆØ± Ø§Ù„Ø®ÙŠØ§Ø· Ù…Ù‚Ø± Ø¥Ù‚Ø§Ù…Ø© Ø§Ù„Ø¶ÙŠÙ Ù„Ø£Ø®Ø° Ø§Ù„Ù…Ù‚Ø§Ø³Ø§Øª ÙˆØ§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù‚Ù…Ø§Ø´ØŒ Ù…Ø¹ Ø§Ù„ØªØ³Ù„ÙŠÙ… Ø®Ù„Ø§Ù„ Ø£Ù‚Ù„ Ù…Ù† 24 Ø³Ø§Ø¹Ø© Ø­Ø³Ø¨ Ø§Ù„ØªØ£ÙƒÙŠØ¯.",
-    "services.s8Title": "Ø®Ø¯Ù…Ø© Ø§Ù„Ø¹Ø¨Ø§ÙŠØ©",
-    "services.s8Text": "ØªØ³Ø§Ø¹Ø¯ Ù…Ø®ØªØµØ© Ø§Ù„Ø¶ÙŠÙØ© ÙÙŠ Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ø¹Ø¨Ø§ÙŠØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© Ù…Ø¹ ØªØ±ØªÙŠØ¨ Ø§Ù„ØªØ³Ù„ÙŠÙ… Ø§Ù„Ø³Ø±ÙŠØ¹ Ø­Ø³Ø¨ Ø§Ù„ØªÙˆÙØ±.",
-    "services.journeyEyebrow": "ÙƒÙŠÙ ØªØ¹Ù…Ù„",
-    "services.journeyTitle": "Ø·Ù„Ø¨ ÙˆØ§Ø­Ø¯ ÙŠÙ…ÙƒÙ†Ù‡ Ø±Ø¨Ø· Ø±Ø­Ù„Ø© Ø§Ù„Ø¶ÙŠÙ ÙƒØ§Ù…Ù„Ø©",
-    "services.j1Title": "Ù‚Ø¨Ù„ Ø§Ù„ÙˆØµÙˆÙ„",
-    "services.j1Text": "ØªØ£ÙƒÙŠØ¯ Ø§Ù„ØªÙØ¶ÙŠÙ„Ø§Øª ÙˆØ§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ ÙˆØ§Ù„Ø­Ø¬ÙˆØ²Ø§Øª ÙˆØ§Ù„Ù†Ù‚Ù„.",
-    "services.j2Title": "Ø¹Ù†Ø¯ Ø§Ù„ÙˆØµÙˆÙ„",
-    "services.j2Text": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙˆØ§Ù„Ø­Ø±ÙƒØ© ÙˆØªÙØ§ØµÙŠÙ„ Ø§Ù„ÙˆØµÙˆÙ„.",
-    "services.j3Title": "Ø£Ø«Ù†Ø§Ø¡ Ø§Ù„Ø¥Ù‚Ø§Ù…Ø©",
-    "services.j3Text": "Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„Ù…Ø·Ø§Ø¹Ù… ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¹Ø¨Ø± Ù†Ù‚Ø·Ø© ØªÙˆØ§ØµÙ„ ÙˆØ§Ø­Ø¯Ø©.",
-    "services.j4Title": "Ù‚Ø¨Ù„ Ø§Ù„Ù…ØºØ§Ø¯Ø±Ø©",
-    "services.j4Text": "Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„ØªØ±ØªÙŠØ¨Ø§Øª Ø§Ù„Ø£Ø®ÙŠØ±Ø© ÙˆØ§Ù„ØªÙˆØµÙŠÙ„ ÙˆØ§Ù„Ù†Ù‚Ù„.",
-    "collection.metaTitle": "Ø¨ÙˆØªÙŠÙƒ Ø£ÙÙ†ØªÙˆØ±Ø§ | ØªØµÙˆØ±Ø§Øª Ø¹Ø·Ø±ÙŠØ© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "collection.metaDescription": "Ø§Ø³ØªÙƒØ´Ù Ø§Ù„ØªØµÙˆØ±Ø§Øª Ø§Ù„Ø¹Ø·Ø±ÙŠØ© Ù„Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¨Ø­Ø³Ø¨ Ø§Ù„ØªØ¬Ø±Ø¨Ø©Ø› ÙˆØ¬Ù…ÙŠØ¹Ù‡Ø§ Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ± Ø­Ø§Ù„ÙŠØ§Ù‹.",
-    "collection.heroEyebrow": "Ø¨ÙˆØªÙŠÙƒ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "collection.heroTitle": "ØªØµÙˆØ±Ø§Øª Ø¹Ø·Ø±ÙŠØ© ØªÙ†Ø·Ù„Ù‚ Ù…Ù† ÙƒÙ„ ØªØ¬Ø±Ø¨Ø©.",
-    "collection.heroDescription": "Ø§Ø³ØªÙƒØ´Ù Ø§Ù„Ø§ØªØ¬Ø§Ù‡ Ø§Ù„Ø¹Ø·Ø±ÙŠ Ù„ÙƒÙ„ Ø¹Ø§Ù„Ù… Ù…Ù† Ø¹ÙˆØ§Ù„Ù… Ø£ÙÙ†ØªÙˆØ±Ø§. ÙŠØ¨Ù‚Ù‰ ÙƒÙ„ ØªØµÙˆØ± Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ± Ø­ØªÙ‰ Ø§Ø¹ØªÙ…Ø§Ø¯ Ø¹ÙŠÙ†Ø§ØªÙ‡ ÙˆÙ…ÙˆØ±Ø¯ÙŠÙ‡ ÙˆØ¬ÙˆØ¯ØªÙ‡.",
-    "collection.introEyebrow": "Ù…Ø±ØªØ¨Ø·Ø© Ø¨Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "collection.introTitle": "Ø§Ø®ØªØ± Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙˆØ´Ø§Ù‡Ø¯ Ù…Ø§ ÙŠØ±ØªØ¨Ø· Ø¨Ù‡Ø§ ÙÙ‚Ø·",
-    "collection.introText": "ÙƒÙ„ ØªØµÙˆØ± Ø¹Ø·Ø±ÙŠ ÙŠØ±ØªØ¨Ø· Ø¨Ù‚ØµØ© ØªØ¬Ø±Ø¨ØªÙ‡ ÙˆÙ…ÙƒØ§Ù†Ù‡Ø§ ÙˆØ¥ÙŠÙ‚Ø§Ø¹Ù‡Ø§.",
-    "collection.boxesEyebrow": "Ø¨ÙˆÙƒØ³Ø§Øª Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "collection.boxesTitle": "Ø¨ÙˆÙƒØ³Ø§Øª Ø§Ù„ØªØ¬Ø§Ø±Ø¨ Ù‚Ø±ÙŠØ¨Ù‹Ø§.",
-    "collection.box1Title": "Ø­Ù‚ÙŠØ¨Ø© Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "collection.box1Text": "Ù…Ø¬Ù…ÙˆØ¹Ø© Ø´Ø§Ø·Ø¦ÙŠØ© Ø¹Ù…Ù„ÙŠØ© ØªÙ‚Ø¯Ù… Ø¯Ø§Ø®Ù„ Ø§Ù„Ø­Ù‚ÙŠØ¨Ø© Ù†ÙØ³Ù‡Ø§ ÙˆØªÙƒÙˆÙ† Ø¬Ø§Ù‡Ø²Ø© Ù„Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… ÙÙŠ Ø§Ù„ÙŠÙˆÙ… Ø§Ù„Ø¨Ø­Ø±ÙŠ.",
-    "collection.box2Title": "Ø¨ÙˆÙƒØ³ Ø±ÙˆØ´Ø§Ù†",
-    "collection.box2Text": "Ø°Ø§ÙƒØ±Ø© Ù…Ø®ØªØµØ±Ø© Ù…Ù† Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ§Ù„Ø­Ø±Ù Ø§Ù„Ù…Ø­Ù„ÙŠØ© ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©.",
-    "collection.box3Title": "Ø¨ÙˆÙƒØ³ Ø¢Ø®Ø± Ø¶ÙˆØ¡",
-    "collection.box3Text": "ØªÙØ§ØµÙŠÙ„ ØµØ­Ø±Ø§ÙˆÙŠØ© Ù…ÙÙŠØ¯Ø© Ø¨Ø£Ù„ÙˆØ§Ù† Ø¯Ø§ÙØ¦Ø© ÙˆÙ‡ÙˆÙŠØ© Ø³Ø¹ÙˆØ¯ÙŠØ© Ù‡Ø§Ø¯Ø¦Ø©.",
-    "collection.box4Title": "Ø¨ÙˆÙƒØ³ ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù",
-    "collection.box4Text": "Ù…Ø¬Ù…ÙˆØ¹Ø© Ù…ÙˆØ³Ù…ÙŠØ© ØªØªÙ…Ø­ÙˆØ± Ø­ÙˆÙ„ ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù ÙˆÙ…Ù†ØªØ¬Ø§Øª Ù…Ø­Ù„ÙŠØ© Ù…Ù† Ù…ÙˆØ±Ø¯ÙŠÙ† Ù…ÙˆØ«ÙˆÙ‚ÙŠÙ†.",
-    "collection.perfumeEyebrow": "Ù…Ø®ØªØ¨Ø± Ø¹Ø·ÙˆØ± Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "collection.perfumeTitle": "ØªØµÙˆØ±Ø§Øª Ø¹Ø·Ø±ÙŠØ© Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ±",
-    "collection.perfumeText": "ØªØ­ÙˆÙ‘Ù„ Ù‡Ø°Ù‡ Ø§Ù„ØªØµÙˆØ±Ø§Øª ÙƒÙ„ ØªØ¬Ø±Ø¨Ø© Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¥Ù„Ù‰ Ø§ØªØ¬Ø§Ù‡ Ø¹Ø·Ø±ÙŠ Ø®Ø§ØµØŒ ÙˆÙ‡ÙŠ ØºÙŠØ± Ù…ØªØ§Ø­Ø© Ù„Ù„Ø·Ù„Ø¨ Ø£Ùˆ Ø§Ù„Ø¨ÙŠØ¹ Ø­Ø§Ù„ÙŠÙ‹Ø§.",
-    "collection.p1Title": "Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "collection.p1Text": "Ø¶ÙˆØ¡ Ø¨Ø­Ø±ÙŠ ÙˆÙ‡ÙˆØ§Ø¡ Ù…Ø¹Ø¯Ù†ÙŠ ÙˆØ£Ø®Ø´Ø§Ø¨ Ù…ØµÙ‚ÙˆÙ„Ø©.",
-    "collection.p2Title": "Roshan",
-    "collection.p2Text": "Ø®Ø´Ø¨ Ø§Ù„Ø±ÙˆØ´Ø§Ù† ÙˆØ­Ø¬Ø± Ø¯Ø§ÙØ¦ ÙˆØªÙˆØ§Ø¨Ù„ ÙˆØ¨Ø®ÙˆØ±.",
-    "collection.p3Title": "Last Light",
-    "collection.p3Text": "Ø£Ø®Ø´Ø§Ø¨ Ø¬Ø§ÙØ© ÙˆØ±Ù…Ø§Ù„ Ø¯Ø§ÙØ¦Ø© ÙˆÙ†Ø¬ÙŠÙ„ Ø§Ù„Ù‡Ù†Ø¯ ÙˆÙ†ÙØ­Ø© Ù…Ø¹Ø¯Ù†ÙŠØ©.",
-    "collection.p4Title": "ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù",
-    "collection.p4Text": "ÙˆØ±Ø¯ Ø·Ø§Ø¦ÙÙŠ ÙˆÙ‡ÙˆØ§Ø¡ Ø¬Ø¨Ù„ÙŠ ÙˆÙ†ÙØ­Ø§Øª Ø®Ø¶Ø±Ø§Ø¡ Ù‡Ø§Ø¯Ø¦Ø©.",
-    "collection.personalEyebrow": "Ø¶ÙŠÙˆÙ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„ØªÙ†ÙÙŠØ°ÙŠÙˆÙ†",
-    "collection.personalTitle": "Ø®Ø¯Ù…Ø§Øª Ù…ÙÙŠØ¯Ø© ØªÙØ¬Ù‡Ø² Ù‚Ø¨Ù„ Ø§Ù„ÙˆØµÙˆÙ„",
-    "collection.thobeTitle": "Ø®ÙŠØ§Ø· Ø¥Ù„Ù‰ Ù…Ù‚Ø± Ø¥Ù‚Ø§Ù…ØªÙƒ",
-    "collection.thobeText": "ÙŠØ²ÙˆØ±Ùƒ Ø§Ù„Ø®ÙŠØ§Ø· Ù„Ø£Ø®Ø° Ø§Ù„Ù…Ù‚Ø§Ø³Ø§Øª ÙˆØ§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù‚Ù…Ø§Ø´ØŒ Ø«Ù… ÙŠÙØ±ØªØ¨ ØªØ³Ù„ÙŠÙ… Ø§Ù„Ø«ÙˆØ¨ Ø®Ù„Ø§Ù„ Ø£Ù‚Ù„ Ù…Ù† 24 Ø³Ø§Ø¹Ø© Ø¨Ø¹Ø¯ ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø¥Ù…ÙƒØ§Ù†ÙŠØ©.",
-    "collection.abayaTitle": "Ù…Ø®ØªØµØ© Ø¹Ø¨Ø§ÙŠØ§Øª Ù„Ù„Ø¶ÙŠÙØ©",
-    "collection.abayaText": "ØªØ²ÙˆØ± Ù…Ø®ØªØµØ© Ø§Ù„Ø¶ÙŠÙØ© Ù„Ø£Ø®Ø° Ø§Ù„Ù…Ù‚Ø§Ø³Ø§Øª Ø§Ù„Ù„Ø§Ø²Ù…Ø© Ù„Ù„Ø®Ø¯Ù…Ø©Ø› Ø«Ù… ØªÙÙ†Ø³Ù‘Ù‚ Ø§Ù„Ø¹Ø¨Ø§Ø¡Ø© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ§Ù„ØªØ³Ù„ÙŠÙ… Ø¨Ø¹Ø¯ Ø§Ù„ØªØ£ÙƒÙŠØ¯ ÙÙ‚Ø·. Ù„Ø§ Ù†Ø¹Ø±Ø¶ ÙƒØªØ§Ù„ÙˆØ¬ Ø¹Ø¨Ø§ÙŠØ§Øª Ø¬Ø§Ù‡Ø²Ù‹Ø§.",
-    "collection.requestTitle": "ØµÙ…Ù‘Ù… Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ø­ÙˆÙ„ Ø¶ÙŠÙÙƒ",
-    "collection.requestText": "Ø§Ø®ØªØ± Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¬Ø§Ù‡Ø²Ø© Ø«Ù… Ø£Ø±Ø³Ù„ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø³Ø¹Ø± ÙˆØ§Ø­Ø¯Ù‹Ø§Ø› ØªØ±Ø§Ø¬Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„ØªÙˆÙØ± ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ§Ù„ØªØ®ØµÙŠØµ Ù‚Ø¨Ù„ Ø¥ØµØ¯Ø§Ø± Ø§Ù„Ø¹Ø±Ø¶.",
-    "about.metaTitle": "Ù…Ù† Ù†Ø­Ù† | Ø£ÙÙ†ØªÙˆØ±Ø§ Ù„Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ©",
-    "about.metaDescription": "ØªØ¹Ø±Ù‘Ù Ø¹Ù„Ù‰ Ù‚ØµØ© Ø£ÙÙ†ØªÙˆØ±Ø§ ÙˆØ±Ø¤ÙŠØªÙ‡Ø§ ÙˆØ±Ø³Ø§Ù„ØªÙ‡Ø§ ÙˆÙ‚ÙŠÙ…Ù‡Ø§ ÙÙŠ ØªØµÙ…ÙŠÙ… Ø§Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ø¨Ø¹Ù†Ø§ÙŠØ©.",
-    "about.heroEyebrow": "Ø¹Ù† Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "about.heroTitle": "Ø·Ø±ÙŠÙ‚Ø© Ù…Ø®ØªÙ„ÙØ© Ù„Ø§ÙƒØªØ´Ø§Ù Ø§Ù„Ù…ÙƒØ§Ù† ÙˆØµÙ†Ø§Ø¹Ø© Ø§Ù„Ù„Ø­Ø¸Ø§Øª.",
-    "about.heroDescription": "Ø£ÙÙ†ØªÙˆØ±Ø§ Ù„ÙŠØ³Øª Ù…Ø¬Ø±Ø¯ Ø±Ø­Ù„Ø©ØŒ Ø¨Ù„ ØªØ¬Ø§Ø±Ø¨ ÙˆÙØ¹Ø§Ù„ÙŠØ§Øª Ù…ØµÙ…Ù…Ø© Ø­ÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ ÙˆØ§Ù„Ù„Ø­Ø¸Ø© ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªÙŠ ØªØ¨Ù‚Ù‰.",
-    "about.storyEyebrow": "Ø¨Ø¯Ø§ÙŠØ© Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "about.storyTitle": "ÙÙŠ ÙƒÙ„ Ù…Ø¯ÙŠÙ†Ø© ØªÙˆØ¬Ø¯ Ø£Ù…Ø§ÙƒÙ† ÙŠØ²ÙˆØ±Ù‡Ø§ Ø§Ù„Ø¬Ù…ÙŠØ¹â€¦",
-    "about.storyText1": "Ù„ÙƒÙ† Ù‡Ù†Ø§Ùƒ Ø£Ù…Ø§ÙƒÙ† Ù„Ø§ ÙŠØµÙ„ Ø¥Ù„ÙŠÙ‡Ø§ Ø¥Ù„Ø§ Ù…Ù† ÙŠØ¹Ø±Ù Ø§Ù„Ø·Ø±ÙŠÙ‚ Ø§Ù„Ø­Ù‚ÙŠÙ‚ÙŠ Ø¥Ù„ÙŠÙ‡Ø§. Ù‡Ù†Ø§ Ø¨Ø¯Ø£Øª Ø£ÙÙ†ØªÙˆØ±Ø§.",
-    "about.storyText2": "Ù„Ù… ØªÙˆÙ„Ø¯ Ø£ÙÙ†ØªÙˆØ±Ø§ ÙƒÙÙƒØ±Ø© Ù„Ø¨ÙŠØ¹ Ø§Ù„Ø¬ÙˆÙ„Ø§Øª Ø£Ùˆ ØªÙ†Ø¸ÙŠÙ… Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙÙ‚Ø·ØŒ Ø¨Ù„ Ù…Ù† ÙÙ‡Ù… Ø¹Ù…ÙŠÙ‚ Ø¨Ø£Ù† Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù„ÙŠØ³Øª ÙÙŠ Ø§Ù„Ù…ÙƒØ§Ù† ÙÙ‚Ø·â€¦ Ø¨Ù„ ÙÙŠ Ø§Ù„Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„ØªÙŠ ØªØ¹ÙŠØ´Ù‡ Ø¨Ù‡Ø§. ÙÙŠ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØµØºÙŠØ±Ø©ØŒ ÙÙŠ Ø§Ù„Ù„Ø­Ø¸Ø© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©ØŒ ÙÙŠ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„ØµØ­ÙŠØ­ØŒ ÙˆÙÙŠ Ø§Ù„Ø´Ø¹ÙˆØ± Ø§Ù„Ø°ÙŠ ÙŠØ¨Ù‚Ù‰ Ø¨Ø¹Ø¯ Ø§Ù†ØªÙ‡Ø§Ø¡ Ø§Ù„Ø±Ø­Ù„Ø© Ø£Ùˆ Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ©.",
-    "about.visionTitle": "Ø§Ù„Ø±Ø¤ÙŠØ©",
-    "about.visionText": "Ø£Ù† Ù†ØµØ¨Ø­ Ù…Ø±Ø¬Ø¹Ù‹Ø§ Ù…ÙˆØ«ÙˆÙ‚Ù‹Ø§ Ù„Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ù…ØµÙ…Ù…Ø© Ø¨Ø¹Ù†Ø§ÙŠØ© ÙÙŠ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©.",
-    "about.missionTitle": "Ø§Ù„Ø±Ø³Ø§Ù„Ø©",
-    "about.missionText": "ØµÙ†Ø§Ø¹Ø© Ø±Ø­Ù„Ø§Øª ÙˆÙ…Ù†Ø§Ø³Ø¨Ø§Øª Ø´Ø®ØµÙŠØ© ÙˆÙ…Ù†Ø³Ù‚Ø© ÙˆÙ…Ø±ØªØ¨Ø·Ø© Ø¨Ø§Ù„Ù…ÙƒØ§Ù† Ø¨ØµØ¯Ù‚.",
-    "about.valuesEyebrow": "Ù‚ÙŠÙ…Ù†Ø§",
-    "about.valuesTitle": "Ø§Ù„Ù…Ø¨Ø§Ø¯Ø¦ Ø§Ù„ØªÙŠ ØªÙ‚Ù Ø®Ù„Ù ÙƒÙ„ ØªØ¬Ø±Ø¨Ø©",
-    "about.v1Title": "Ø§Ù„Ø¥ØªÙ‚Ø§Ù†",
-    "about.v1Text": "ÙƒÙ„ ØªÙØµÙŠÙ„Ø© Ù„Ù‡Ø§ ÙˆØ²Ù†Ù‡Ø§ØŒ ÙˆÙƒÙ„ Ù„Ø­Ø¸Ø© Ù„Ù‡Ø§ Ù‚ÙŠÙ…ØªÙ‡Ø§.",
-    "about.v2Title": "Ø§Ù„Ø£ØµØ§Ù„Ø©",
-    "about.v2Text": "Ù†Ù‚Ø¯Ù… Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙƒÙ…Ø§ ÙŠØ¬Ø¨ Ø£Ù† ØªÙØ¹Ø§Ø´ØŒ Ø¨ØµØ¯Ù‚ ÙˆØ¹Ù…Ù‚ Ø¨Ø¹ÙŠØ¯Ø§Ù‹ Ø¹Ù† Ø§Ù„ØªÙƒØ±Ø§Ø±.",
-    "about.v3Title": "Ø§Ù„Ø®ØµÙˆØµÙŠØ©",
-    "about.v3Text": "Ù„ÙƒÙ„ Ø¶ÙŠÙ Ø·Ø±ÙŠÙ‚ØªÙ‡ Ø§Ù„Ø®Ø§ØµØ© ÙÙŠ Ø§Ù„Ø§Ø³ØªÙ…ØªØ§Ø¹ØŒ ÙˆÙ†Ø­Ù† Ù†ØµÙ…Ù… Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙˆÙÙ‚ Ø°Ù„Ùƒ.",
-    "about.v4Title": "Ø§Ù„Ø¬ÙˆØ¯Ø©",
-    "about.v4Text": "Ù†Ø®ØªØ§Ø± Ø§Ù„Ø£ÙØ¶Ù„ ÙÙŠ ÙƒÙ„ Ø¹Ù†ØµØ± Ù„Ù†Ø¶Ù…Ù† ØªØ¬Ø±Ø¨Ø© Ù…ØªÙƒØ§Ù…Ù„Ø©.",
-    "about.v5Title": "Ø§Ù„Ø§Ø¨ØªÙƒØ§Ø±",
-    "about.v5Text": "Ù†Ø¹ÙŠØ¯ ØªÙ‚Ø¯ÙŠÙ… Ø§Ù„ÙˆØ¬Ù‡Ø§Øª ÙˆØ§Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ø¨Ø£Ø³Ø§Ù„ÙŠØ¨ Ø¬Ø¯ÙŠØ¯Ø© ÙˆØºÙŠØ± ØªÙ‚Ù„ÙŠØ¯ÙŠØ©.",
-    "about.v6Title": "Ø§Ù„ÙØ¶ÙˆÙ„",
-    "about.v6Text": "Ù†Ø¨Ø­Ø« Ø¯Ø§Ø¦Ù…Ù‹Ø§ Ø¹Ù† Ø·Ø±Ù‚ Ø£Ø¹Ù…Ù‚ ÙˆØ£ÙØ¶Ù„ Ù„Ø§ÙƒØªØ´Ø§Ù Ø§Ù„Ù…ÙƒØ§Ù†.",
-    "about.modelEyebrow": "Ø·Ø±ÙŠÙ‚Ø© Ø¹Ù…Ù„Ù†Ø§",
-    "about.modelTitle": "Ø´Ø¨ÙƒØ© Ù…Ø­Ù„ÙŠØ© ÙˆÙ…Ù†Ø³Ù‚ ÙˆØ§Ø­Ø¯ Ù…Ø³Ø¤ÙˆÙ„",
-    "about.modelText": "Ù†ØªØ¹Ø§ÙˆÙ† Ù…Ø¹ Ù…Ø±Ø´Ø¯ÙŠÙ† Ù…Ø±Ø®ØµÙŠÙ† ÙˆÙ…ÙˆØ§Ù‚Ø¹ ÙˆÙ…Ø²ÙˆØ¯ÙŠ Ù†Ù‚Ù„ ÙˆÙØ±Ù‚ Ø¶ÙŠØ§ÙØ© ÙˆÙ…ÙˆØ±Ø¯ÙŠÙ† Ù…ØªØ®ØµØµÙŠÙ†ØŒ ÙˆØªØ¨Ù‚Ù‰ Ø£ÙÙ†ØªÙˆØ±Ø§ Ù†Ù‚Ø·Ø© Ø§Ù„ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ÙˆØ§Ø­Ø¯Ø© Ù„Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ù…ØªÙÙ‚ Ø¹Ù„ÙŠÙ‡.",
-    "contact.metaTitle": "ØªÙˆØ§ØµÙ„ Ù…Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ | Ø®Ø·Ø· Ù„ØªØ¬Ø±Ø¨Ø© Ø£Ùˆ ÙØ¹Ø§Ù„ÙŠØ©",
-    "contact.metaDescription": "ØªÙˆØ§ØµÙ„ Ù…Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ ÙÙŠ Ø¬Ø¯Ø© Ù„ØªØ®Ø·ÙŠØ· ØªØ¬Ø±Ø¨Ø© Ø®Ø§ØµØ© Ø£Ùˆ ÙØ¹Ø§Ù„ÙŠØ© Ø£Ùˆ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø¶ÙŠÙˆÙ Ø£Ùˆ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø´Ø±ÙƒØ§Øª.",
-    "contact.heroEyebrow": "ØªÙˆØ§ØµÙ„ Ù…Ø¹Ù†Ø§",
-    "contact.heroTitle": "Ø§Ø¨Ø¯Ø£ Ø¨Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©.",
-    "contact.heroDescription": "Ø£Ø±Ø³Ù„ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© ÙˆØ³Ù†Ø³Ø§Ø¹Ø¯Ùƒ Ø¹Ù„Ù‰ ØªØ­ÙˆÙŠÙ„Ù‡Ø§ Ø¥Ù„Ù‰ Ø§ØªØ¬Ø§Ù‡ Ø¹Ù…Ù„ÙŠ Ø£ÙˆÙ„ÙŠ.",
-    "contact.panelTitle": "ØªØ­Ø¯Ø« Ù…Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "contact.panelText": "Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù‡Ùˆ ÙˆØ³ÙŠÙ„Ø© Ø§Ù„Ø­Ø¬Ø² Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ©ØŒ ÙˆÙŠØ¨Ù‚Ù‰ ÙˆØ§ØªØ³Ø§Ø¨ Ø®ÙŠØ§Ø±Ø§Ù‹ Ø«Ø§Ù†ÙŠØ§Ù‹.",
-    "contact.phoneLabel": "ÙˆØ§ØªØ³Ø§Ø¨",
-    "contact.email1Label": "Ø§Ù„Ø­Ø¬ÙˆØ²Ø§Øª ÙˆØ§Ù„Ø§Ø³ØªÙØ³Ø§Ø±Ø§Øª",
-    "contact.email2Label": "ØªØ®Ø·ÙŠØ· Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "contact.locationLabel": "Ù…Ù‚Ø±Ù†Ø§",
-    "contact.formTitle": "ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø·Ù„Ø¨",
-    "contact.formText": "Ù„Ø§ ÙŠØªÙ… Ø¯ÙØ¹ Ø£ÙŠ Ù…Ø¨Ù„Øº ÙˆÙ„Ø§ ÙŠØªØ£ÙƒØ¯ Ø£ÙŠ Ø­Ø¬Ø² Ù‡Ù†Ø§Ø› Ù‡Ø°Ø§ Ø§Ù„Ù†Ù…ÙˆØ°Ø¬ ÙŠØ¨Ø¯Ø£ Ù…Ø­Ø§Ø¯Ø«Ø© Ø§Ù„ØªØ®Ø·ÙŠØ· ÙˆØ·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± ÙÙ‚Ø·.",
-    "contact.nameLabel": "Ø§Ù„Ø§Ø³Ù…",
-    "contact.namePlaceholder": "Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„",
-    "contact.companyLabel": "Ø§Ù„Ø´Ø±ÙƒØ© Ø£Ùˆ Ø§Ù„Ø¬Ù‡Ø©",
-    "contact.companyPlaceholder": "Ø§Ø®ØªÙŠØ§Ø±ÙŠ",
-    "contact.phoneFieldLabel": "Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ",
-    "contact.phonePlaceholder": "+966 ...",
-    "contact.emailLabel": "Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ",
-    "contact.emailPlaceholder": "name@example.com",
-    "contact.typeLabel": "Ù†ÙˆØ¹ Ø§Ù„Ø·Ù„Ø¨",
-    "contact.typePlaceholder": "Ø§Ø®ØªØ± Ø§Ù„Ù†ÙˆØ¹",
-    "contact.typeExperience": "ØªØ¬Ø±Ø¨Ø© Ø®Ø§ØµØ©",
-    "contact.typeEvent": "ÙØ¹Ø§Ù„ÙŠØ©",
-    "contact.typeCorporate": "Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø´Ø±ÙƒØ© Ø£Ùˆ ÙˆÙØ¯",
-    "contact.typeCollection": "ØªØµÙˆØ±Ø§Øª Ø¹Ø·Ø±ÙŠØ© Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ±",
-    "contact.typeOther": "Ø£Ø®Ø±Ù‰",
-    "contact.dateLabel": "Ø§Ù„ØªØ§Ø±ÙŠØ® Ø§Ù„Ù…ÙØ¶Ù„",
-    "contact.guestsLabel": "Ø¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "contact.guestsPlaceholder": "Ù…Ø«Ø§Ù„: 6",
-    "contact.messageLabel": "Ù‡Ù„ ØªÙˆØ¬Ø¯ ØªÙØ§ØµÙŠÙ„ Ù…Ù‡Ù…Ø© Ø£Ø®Ø±Ù‰ØŸ",
-    "contact.messagePlaceholder": "Ø§ÙƒØªØ¨Ù‡Ø§ Ù‡Ù†Ø§ Ø¥Ù† ÙˆØ¬Ø¯Øª â€” Ù‡Ø°Ù‡ Ø§Ù„Ø®Ø§Ù†Ø© Ø§Ø®ØªÙŠØ§Ø±ÙŠØ©.",
-    "contact.sensitiveDataNotice": "ÙŠØ±Ø¬Ù‰ Ø¹Ø¯Ù… Ø¥Ø±Ø³Ø§Ù„ Ø£Ø±Ù‚Ø§Ù… Ø§Ù„Ù‡ÙˆÙŠØ© Ø£Ùˆ Ø§Ù„Ø¬ÙˆØ§Ø²Ø§Øª Ø£Ùˆ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„ØµØ­ÙŠØ© Ø£Ùˆ Ø£ÙŠ Ø¨ÙŠØ§Ù†Ø§Øª Ø­Ø³Ø§Ø³Ø© Ø¹Ø¨Ø± Ù‡Ø°Ø§ Ø§Ù„Ù†Ù…ÙˆØ°Ø¬.",
-    "contact.privacyNoticePrefix": "Ø¨Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨ØŒ ØªØªØ¹Ø§Ù…Ù„ Ø£ÙÙ†ØªÙˆØ±Ø§ Ù…Ø¹ Ø¨ÙŠØ§Ù†Ø§ØªÙƒ Ù„Ø¥Ø¹Ø¯Ø§Ø¯ Ø§Ù„Ø·Ù„Ø¨ ÙˆØ§Ù„ØªÙˆØ§ØµÙ„ Ø¨Ø´Ø£Ù†Ù‡ ÙˆÙÙ‚",
-    "contact.privacyNoticeTerms": "Ø› ÙˆØªÙØ·Ø¨Ù‚",
-    "contact.submit": "Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ Ø§Ù„Ø­Ø¬Ø²",
-    "contact.note": "Ø§Ø®ØªØ± Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø£Ùˆ ÙˆØ§ØªØ³Ø§Ø¨ Ù„Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ù…Ø±ØªØ¨Ø› ÙˆÙ„Ø§ ÙŠØ¹Ù†ÙŠ Ø°Ù„Ùƒ ØªØ£ÙƒÙŠØ¯ Ø­Ø¬Ø² Ø£Ùˆ Ø¯ÙØ¹.",
-    "contact.error": "ÙØ¶Ù„Ù‹Ø§ØŒ Ø£Ø¯Ø®Ù„ Ø§Ù„Ø§Ø³Ù… ÙˆØ±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ Ø£Ùˆ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø¹Ù„Ù‰ Ø§Ù„Ø£Ù‚Ù„.",
-    "contact.errorEmail": "ÙØ¶Ù„Ù‹Ø§ØŒ Ø£Ø¯Ø®Ù„ Ø¨Ø±ÙŠØ¯Ùƒ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù„Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ Ø§Ù„Ø­Ø¬Ø² Ø¹Ø¨Ø± Ø§Ù„Ø¨Ø±ÙŠØ¯.",
-    "contact.requestIntro": "Ø·Ù„Ø¨ Ø­Ø¬Ø² Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "contact.emailSubject": "Ø·Ù„Ø¨ Ø­Ø¬Ø² Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "contact.submitEmail": "Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ Ø§Ù„Ø­Ø¬Ø²",
-    "contact.submitWhatsapp": "Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ Ø§Ù„Ø­Ø¬Ø² Ø¹Ø¨Ø± ÙˆØ§ØªØ³Ø§Ø¨",
-    "contact.noteEmail": "Ø³ÙŠÙØ±Ø³Ù„ Ø·Ù„Ø¨Ùƒ Ù…Ø¨Ø§Ø´Ø±Ø© Ø¥Ù„Ù‰ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¯ÙˆÙ† ÙØªØ­ ØªØ·Ø¨ÙŠÙ‚ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ› ÙˆÙ„Ø§ ÙŠØ¹Ù†ÙŠ Ø°Ù„Ùƒ ØªØ£ÙƒÙŠØ¯ Ø­Ø¬Ø² Ø£Ùˆ Ø¯ÙØ¹.",
-    "contact.noteWhatsapp": "Ø³ÙŠÙØªØ­ ÙˆØ§ØªØ³Ø§Ø¨ ÙˆÙÙŠÙ‡ Ø·Ù„Ø¨Ùƒ Ø§Ù„Ù…Ø±ØªØ¨. ÙŠÙ…ÙƒÙ†Ùƒ Ù…Ø±Ø§Ø¬Ø¹ØªÙ‡ Ù‚Ø¨Ù„ Ø§Ù„Ø¥Ø±Ø³Ø§Ù„Ø› ÙˆÙ„Ø§ ÙŠØ¹Ù†ÙŠ Ø°Ù„Ùƒ ØªØ£ÙƒÙŠØ¯ Ø­Ø¬Ø² Ø£Ùˆ Ø¯ÙØ¹.",
-    "contact.sending": "Ø¬Ø§Ø±Ù Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨Ùƒâ€¦",
-    "contact.submitError": "ØªØ¹Ø°Ø± Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨Ùƒ. Ø­Ø§ÙˆÙ„ Ù…Ø±Ø© Ø£Ø®Ø±Ù‰ Ø£Ùˆ Ø§Ø®ØªØ± ÙˆØ§ØªØ³Ø§Ø¨.",
-    "contact.whatsappIntro": "Ù…Ø±Ø­Ø¨Ù‹Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§ØŒ Ø£Ø±ØºØ¨ ÙÙŠ Ø·Ù„Ø¨ Ù…Ø³Ø§Ø¹Ø¯Ø© Ù„ØªØ®Ø·ÙŠØ· Ø¨Ø±Ù†Ø§Ù…Ø¬.",
-    "contact.whatsappName": "Ø§Ù„Ø§Ø³Ù…",
-    "contact.whatsappCompany": "Ø§Ù„Ø¬Ù‡Ø©",
-    "contact.whatsappPhone": "Ø§Ù„Ù‡Ø§ØªÙ",
-    "contact.whatsappEmail": "Ø§Ù„Ø¨Ø±ÙŠØ¯",
-    "contact.whatsappType": "Ù†ÙˆØ¹ Ø§Ù„Ø·Ù„Ø¨",
-    "contact.whatsappDate": "Ø§Ù„ØªØ§Ø±ÙŠØ® Ø§Ù„Ù…ÙØ¶Ù„",
-    "contact.whatsappGuests": "Ø¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "contact.whatsappMessage": "Ø§Ù„ØªÙØ§ØµÙŠÙ„",
-    "faq.metaTitle": "Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø© | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "faq.metaDescription": "Ø¥Ø¬Ø§Ø¨Ø§Øª Ø­ÙˆÙ„ ØªØ¬Ø§Ø±Ø¨ Ø£ÙÙ†ØªÙˆØ±Ø§ ÙˆÙØ¹Ø§Ù„ÙŠØ§ØªÙ‡Ø§ ÙˆØ§Ù„Ù†Ù‚Ù„ Ø§Ù„Ø®Ø§Øµ ÙˆØ§Ù„Ù…Ø±Ø´Ø¯ÙŠÙ† ÙˆØ§Ù„Ø­Ø¬Ø² ÙˆØ®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "faq.heroEyebrow": "Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ù…ÙÙŠØ¯Ø©",
-    "faq.heroTitle": "Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©",
-    "faq.heroDescription": "Ù†Ù‚Ø·Ø© Ø¨Ø¯Ø§ÙŠØ© ÙˆØ§Ø¶Ø­Ø© Ù‚Ø¨Ù„ Ø£Ù† Ù†ØµÙ…Ù… Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø­Ø³Ø¨ Ø·Ù„Ø¨Ùƒ.",
-    "faq.q1": "ÙƒÙŠÙ Ø£Ø­Ø¬Ø² ØªØ¬Ø±Ø¨Ø©ØŸ",
-    "faq.a1": "Ø£Ø±Ø³Ù„ Ø§Ù„ØªØ§Ø±ÙŠØ® Ø§Ù„Ù…ÙØ¶Ù„ ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ø§Ù‡ØªÙ…Ø§Ù…Ø§Øª Ø¹Ø¨Ø± Ù†Ù…ÙˆØ°Ø¬ Ø§Ù„Ø·Ù„Ø¨ Ø¨Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØŒ Ø£Ùˆ Ø§Ø³ØªØ®Ø¯Ù… ÙˆØ§ØªØ³Ø§Ø¨ Ø¥Ø°Ø§ ÙØ¶Ù‘Ù„Øª. Ù†Ø¤ÙƒØ¯ Ø§Ù„ØªÙˆÙØ± ÙˆÙ†Ø±Ø³Ù„ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ù…Ù‚ØªØ±Ø­ Ù‚Ø¨Ù„ Ø£ÙŠ Ø¯ÙØ¹Ø©.",
-    "faq.q2": "Ù‡Ù„ Ø§Ù„ØªØ¬Ø§Ø±Ø¨ Ø®Ø§ØµØ©ØŸ",
-    "faq.a2": "Ø¨Ø±Ø§Ù…Ø¬Ù†Ø§ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© Ù…ØµÙ…Ù…Ø© Ù„Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„Ø®Ø§ØµØ©. ÙˆØ¥Ø°Ø§ ØªÙ… Ø§Ù‚ØªØ±Ø§Ø­ Ø®ÙŠØ§Ø± Ù…Ø´ØªØ±Ùƒ ÙØ³ÙŠØªÙ… ØªÙˆØ¶ÙŠØ­Ù‡ Ù‚Ø¨Ù„ Ø§Ù„ØªØ£ÙƒÙŠØ¯.",
-    "faq.q3": "Ù‡Ù„ ÙŠÙ…ÙƒÙ† Ø¯Ù…Ø¬ Ø£ÙƒØ«Ø± Ù…Ù† ØªØ¬Ø±Ø¨Ø© ÙÙŠ ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯ØŸ",
-    "faq.a3": "Ù†Ø¹Ù…ØŒ ÙˆÙ†ÙˆØ§Ø²Ù† ÙˆÙ‚Øª Ø§Ù„ØªÙ†Ù‚Ù„ ÙˆØ§Ù„Ø·Ù‚Ø³ ÙˆÙˆØªÙŠØ±Ø© Ø§Ù„Ø¶ÙŠÙˆÙ Ø­ØªÙ‰ ÙŠØ¨Ù‚Ù‰ Ø§Ù„ÙŠÙˆÙ… Ù…Ù…ØªØ¹Ù‹Ø§ ÙˆØºÙŠØ± Ù…Ø²Ø¯Ø­Ù….",
-    "faq.q4": "Ù‡Ù„ ØªÙˆÙØ±ÙˆÙ† Ø§Ù„Ù†Ù‚Ù„ØŸ",
-    "faq.a4": "Ù†Ø¹Ù…ØŒ ÙŠÙ…ÙƒÙ† Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ù†Ù‚Ù„ Ø§Ù„Ø®Ø§Øµ Ø¨Ø­Ø³Ø¨ Ø¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ù…Ø³Ø§Ø± ÙˆÙ…Ø³ØªÙˆÙ‰ Ø§Ù„Ø®Ø¯Ù…Ø© Ø§Ù„Ù…Ø·Ù„ÙˆØ¨.",
-    "faq.q5": "Ù‡Ù„ ÙŠÙˆØ¬Ø¯ Ù…Ø±Ø´Ø¯ÙˆÙ† Ù…Ø±Ø®ØµÙˆÙ† Ø¨Ù„ØºØ§Øª Ù…Ø®ØªÙ„ÙØ©ØŸ",
-    "faq.a5": "Ù†Ø¹Ù… Ø­Ø³Ø¨ Ø§Ù„ØªÙˆÙØ±. Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© ÙˆØ§Ù„Ø¥Ù†Ø¬Ù„ÙŠØ²ÙŠØ© Ù…ØªØ§Ø­ØªØ§Ù† ØºØ§Ù„Ø¨Ù‹Ø§ØŒ ÙˆÙŠÙ…ÙƒÙ† Ø·Ù„Ø¨ Ù„ØºØ§Øª Ø¥Ø¶Ø§ÙÙŠØ© Ù…Ø³Ø¨Ù‚Ù‹Ø§.",
-    "faq.q6": "Ù‡Ù„ ØªÙ†Ø¸Ù… Ø£ÙÙ†ØªÙˆØ±Ø§ ÙØ¹Ø§Ù„ÙŠØ§Øª Ù„Ù„Ø´Ø±ÙƒØ§ØªØŸ",
-    "faq.a6": "Ù†Ø¹Ù…ØŒ Ù†Ù†Ø³Ù‚ Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª ÙˆØ§Ù„Ù…Ø¤ØªÙ…Ø±Ø§Øª ÙˆØ§Ù„Ø¥Ø·Ù„Ø§Ù‚Ø§Øª ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø§Ù„ÙØ±Ù‚ ÙˆÙ…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ù…ÙˆØ¸ÙÙŠÙ† ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø§Ù„ÙˆÙÙˆØ¯ Ø§Ù„Ø²Ø§Ø¦Ø±Ø©.",
-    "faq.q7": "ÙƒÙŠÙ ÙŠØªÙ… ØªØ­Ø¯ÙŠØ¯ Ø³Ø¹Ø± Ø§Ù„ØªØ¬Ø±Ø¨Ø©ØŸ",
-    "faq.a7": "ÙŠÙØ¹Ø¯ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ù…Ø¯Ø© ÙˆØ§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„Ø¥Ø¶Ø§ÙØ§Øª Ø§Ù„Ù…Ø®ØªØ§Ø±Ø©ØŒ ÙˆÙŠØµÙ„ Ù„Ù„Ø¶ÙŠÙ Ø¹Ø±Ø¶ Ù…ÙƒØªÙˆØ¨ ÙˆÙˆØ§Ø¶Ø­ Ù‚Ø¨Ù„ Ø§Ù„ØªØ£ÙƒÙŠØ¯.",
-    "faq.q8": "Ù‡Ù„ ÙŠÙ…ÙƒÙ† ØªØ±ØªÙŠØ¨ Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ ÙÙŠ Ø§Ù„ÙÙ†Ø¯Ù‚ØŸ",
-    "faq.a8": "Ù†Ø¹Ù…ØŒ ÙŠÙ…ÙƒÙ† ØªÙ†Ø³ÙŠÙ‚ ØªÙØµÙŠÙ„ Ø§Ù„Ø«ÙˆØ¨ ÙˆØ®Ø¯Ù…Ø© Ø§Ù„Ø¹Ø¨Ø§ÙŠØ© ÙˆØ§Ù„ÙˆØ±Ø¯ ÙÙŠ Ø§Ù„ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ù…Ù‚Ø± Ø§Ù„Ø¥Ù‚Ø§Ù…Ø© Ø¨ØªØ±ØªÙŠØ¨ Ù…Ø³Ø¨Ù‚.",
-    "faq.q9": "Ù…ØªÙ‰ ÙŠØ¬Ø¨ Ø£Ù† Ø£ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙƒÙ…ØŸ",
-    "faq.a9": "ÙƒÙ„Ù…Ø§ ÙƒØ§Ù† Ø£Ø¨ÙƒØ± ÙƒØ§Ù† Ø£ÙØ¶Ù„ØŒ Ø®ØµÙˆØµÙ‹Ø§ Ù„Ø¹Ø·Ù„Ø© Ù†Ù‡Ø§ÙŠØ© Ø§Ù„Ø£Ø³Ø¨ÙˆØ¹ ÙˆØ§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„ÙƒØ¨ÙŠØ±Ø© ÙˆØ§Ù„Ù…Ø±Ø´Ø¯ÙŠÙ† Ø§Ù„Ù…ØªØ®ØµØµÙŠÙ†. ÙˆÙŠÙ…ÙƒÙ† Ø§Ù„ØªØ­Ù‚Ù‚ Ù…Ù† Ø§Ù„Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ø¹Ø§Ø¬Ù„Ø© Ø­Ø³Ø¨ Ø§Ù„ØªÙˆÙØ±.",
-    "faq.q10": "Ù…Ø§Ø°Ø§ ÙŠØ­Ø¯Ø« Ø¨Ø¹Ø¯ Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨ØŸ",
-    "faq.a10": "Ù†Ø±Ø§Ø¬Ø¹ Ø§Ù„ØªÙØ§ØµÙŠÙ„ ÙˆÙ†Ø·Ø±Ø­ Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø¶Ø±ÙˆØ±ÙŠØ© ÙˆÙ†Ù‚ØªØ±Ø­ Ø§ØªØ¬Ø§Ù‡Ù‹Ø§ ÙˆÙ†Ø¤ÙƒØ¯ Ø§Ù„ØªÙˆÙØ±. Ù„Ø§ ÙŠØªÙ… Ø£ÙŠ Ø­Ø¬Ø² Ø­ØªÙ‰ ØªÙˆØ§ÙÙ‚ Ø¹Ù„Ù‰ Ø§Ù„Ù†Ø·Ø§Ù‚ ÙˆØ§Ù„Ø´Ø±ÙˆØ· Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠØ©.",
-    "gallery.metaTitle": "Ù…Ø¹Ø±Ø¶ Ø£ÙÙ†ØªÙˆØ±Ø§ | Ø£Ù…Ø§ÙƒÙ† ÙˆÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØªÙØ§ØµÙŠÙ„",
-    "gallery.metaDescription": "Ù†Ø¸Ø±Ø© Ø¨ØµØ±ÙŠØ© Ø¹Ù„Ù‰ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø± ÙˆØ¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ§Ù„ØµØ­Ø±Ø§Ø¡ ÙˆØ§Ù„Ø·Ø§Ø¦Ù ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¶ÙŠÙˆÙ Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§.",
-    "gallery.heroEyebrow": "Ø§Ù„Ù…Ø¬Ù„Ø© Ø§Ù„Ø¨ØµØ±ÙŠØ©",
-    "gallery.heroTitle": "Ø£Ù…Ø§ÙƒÙ† ÙˆØ£Ø¬ÙˆØ§Ø¡ ÙˆØªÙØ§ØµÙŠÙ„ Ù…Ø¯Ø±ÙˆØ³Ø©.",
-    "gallery.heroDescription": "Ø§ØªØ¬Ø§Ù‡ Ø¨ØµØ±ÙŠ Ù„Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„ØªÙŠ Ù†ØµÙ…Ù…Ù‡Ø§ØŒ ÙˆØªØ®ØªÙ„Ù Ø§Ù„ØªØ±ØªÙŠØ¨Ø§Øª Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠØ© Ù…Ù† Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø¥Ù„Ù‰ Ø¢Ø®Ø±.",
-    "gallery.sea": "Ø±Ø­Ù„Ø§Øª Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "gallery.historic": "Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©",
-    "gallery.desert": "Ø¶ÙˆØ¡ Ø§Ù„ØµØ­Ø±Ø§Ø¡ Ø§Ù„Ø£Ø®ÙŠØ±",
-    "gallery.taif": "Ù…Ø±ØªÙØ¹Ø§Øª Ø§Ù„Ø·Ø§Ø¦Ù",
-    "gallery.corporate": "Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠØ©",
-    "gallery.private": "Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø§Øª Ø§Ù„Ø®Ø§ØµØ©",
-    "gallery.collection": "Ø§ØªØ¬Ø§Ù‡ Ù…Ø¬Ù…ÙˆØ¹Ø© Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "gallery.jeddah": "Ø¬Ø¯Ø© Ø¨Ø¹Ø¯ Ø§Ù„ØºØ±ÙˆØ¨",
-    "gallery.altSea": "ØªØµÙˆØ± Ù„ØªØ¬Ø±Ø¨Ø© Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "gallery.altHistoric": "ØªØµÙˆØ± Ù„ØªØ¬Ø±Ø¨Ø© Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©",
-    "gallery.altDesert": "ØªØ¬Ø±Ø¨Ø© ØµØ­Ø±Ø§ÙˆÙŠØ© ÙˆÙ‚Øª Ø§Ù„ØºØ±ÙˆØ¨",
-    "gallery.altTaif": "ØªØµÙˆØ± Ù„ØªØ¬Ø±Ø¨Ø© Ù…Ø±ØªÙØ¹Ø§Øª Ø§Ù„Ø·Ø§Ø¦Ù",
-    "gallery.altCorporate": "ØªØµÙˆØ± Ù„ÙØ¹Ø§Ù„ÙŠØ© ØªÙ†ÙÙŠØ°ÙŠØ©",
-    "gallery.altPrivate": "ØªØµÙˆØ± Ù„Ù…Ù†Ø§Ø³Ø¨Ø© Ø®Ø§ØµØ©",
-    "gallery.altCollection": "Ø§ØªØ¬Ø§Ù‡ Ù…Ø¬Ù…ÙˆØ¹Ø© Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "gallery.altJeddah": "Ø¬Ø¯Ø© Ø¨Ø¹Ø¯ Ø§Ù„ØºØ±ÙˆØ¨",
-    "gallery.disclaimer": "ØªÙ‚Ø¯Ù… Ù‡Ø°Ù‡ Ø§Ù„ØµÙˆØ± Ø§Ù„Ø§ØªØ¬Ø§Ù‡ Ø§Ù„Ø¨ØµØ±ÙŠ Ù„Ø£ÙÙ†ØªÙˆØ±Ø§. ÙŠØªÙ… ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ù…ÙˆØ§Ù‚Ø¹ ÙˆØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙˆØ§Ù„ØªØ¬Ù‡ÙŠØ²Ø§Øª Ø¨Ø´ÙƒÙ„ Ù…Ù†ÙØµÙ„ Ù„ÙƒÙ„ Ø·Ù„Ø¨.",
-    "privacy.metaTitle": "Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ© | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "privacy.metaDescription": "ÙƒÙŠÙÙŠØ© ØªØ¹Ø§Ù…Ù„ Ø£ÙÙ†ØªÙˆØ±Ø§ Ù…Ø¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ© Ø§Ù„Ù…Ø±Ø³Ù„Ø© Ø¹Ø¨Ø± Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆÙ‚Ù†ÙˆØ§Øª Ø§Ù„ØªÙˆØ§ØµÙ„.",
-    "privacy.heroEyebrow": "Ù‚Ø§Ù†ÙˆÙ†ÙŠ",
-    "privacy.heroTitle": "Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©",
-    "privacy.heroDescription": "ØªÙˆØ¶ÙŠØ­ ÙˆØ§Ø¶Ø­ Ù„Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ© Ø§Ù„ØªÙŠ Ù†Ø³ØªÙ‚Ø¨Ù„Ù‡Ø§ ÙˆÙƒÙŠÙ Ù†Ø³ØªØ®Ø¯Ù…Ù‡Ø§.",
-    "privacy.updated": "Ø¢Ø®Ø± ØªØ­Ø¯ÙŠØ«: ÙŠÙˆÙ„ÙŠÙˆ 2026",
-    "privacy.h1": "1. Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„ØªÙŠ ØªÙ‚Ø¯Ù…Ù‡Ø§",
-    "privacy.p1": "Ø¹Ù†Ø¯ Ø§Ù„ØªÙˆØ§ØµÙ„ Ù…Ø¹Ù†Ø§ Ù‚Ø¯ ØªØ²ÙˆØ¯Ù†Ø§ Ø¨Ø§Ù„Ø§Ø³Ù… ÙˆØ±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ ÙˆØ§Ù„Ø¨Ø±ÙŠØ¯ ÙˆØ§Ù„Ø¬Ù‡Ø© ÙˆØ§Ù„Ø¯ÙˆÙ„Ø© ÙˆØ§Ù„Ù…Ø¯ÙŠÙ†Ø© ÙˆØ§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙØŒ Ø£Ùˆ Ø¨ØªÙØ§ØµÙŠÙ„ Ø·Ù„Ø¨ Ø§Ù„ØªØ¹Ø§ÙˆÙ† Ù…Ø«Ù„ Ø§Ù„Ù…Ù‡Ù†Ø© ÙˆØ§Ù„ØªØ±Ø§Ø®ÙŠØµ ÙˆÙ…Ø¹Ø±Ø¶ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„ ÙˆØ§Ù„Ù„ØºØ§Øª ÙˆÙ†Ø·Ø§Ù‚ ØªÙ‚Ø¯ÙŠÙ… Ø§Ù„Ø®Ø¯Ù…Ø©.",
-    "privacy.h2": "2. ÙƒÙŠÙÙŠØ© Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª",
-    "privacy.p2": "Ù†Ø³ØªØ®Ø¯Ù… Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ù„Ù„Ø±Ø¯ Ø¹Ù„Ù‰ Ø§Ù„Ø§Ø³ØªÙØ³Ø§Ø±Ø§Øª ÙˆØ¥Ø¹Ø¯Ø§Ø¯ Ø§Ù„Ø¹Ø±ÙˆØ¶ ÙˆØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø© ÙˆØ§Ù„Ø§Ø­ØªÙØ§Ø¸ Ø¨Ø§Ù„Ø³Ø¬Ù„Ø§Øª Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ© ÙˆØªØ­Ø³ÙŠÙ† ØªÙˆØ§ØµÙ„Ù†Ø§ Ù…Ø¹ Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "privacy.h3": "3. Ø§Ù„Ù…Ø´Ø§Ø±ÙƒØ© Ù…Ø¹ Ù…Ø²ÙˆØ¯ÙŠ Ø§Ù„Ø®Ø¯Ù…Ø§Øª",
-    "privacy.p3": "Ø¹Ù†Ø¯ Ø§Ù„Ø­Ø§Ø¬Ø© Ù„Ø¥Ø¹Ø¯Ø§Ø¯ Ø£Ùˆ ØªÙ†ÙÙŠØ° Ø·Ù„Ø¨ Ù…Ø¹ØªÙ…Ø¯ØŒ Ù‚Ø¯ Ù†Ø´Ø§Ø±Ùƒ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø°Ø§Øª Ø§Ù„ØµÙ„Ø© Ù…Ø¹ Ù…Ø²ÙˆØ¯ÙŠÙ† Ù…Ø®ØªØ§Ø±ÙŠÙ† Ù…Ø«Ù„ Ø§Ù„Ù…Ø±Ø´Ø¯ÙŠÙ† ÙˆØ§Ù„Ù…ÙˆØ§Ù‚Ø¹ ÙˆØ´Ø±ÙƒØ§Øª Ø§Ù„Ù†Ù‚Ù„ ÙˆØ´Ø±ÙƒØ§Ø¡ Ø§Ù„Ø¶ÙŠØ§ÙØ©ØŒ ÙˆØ¨Ø§Ù„Ù‚Ø¯Ø± Ø§Ù„Ù…Ø·Ù„ÙˆØ¨ ÙÙ‚Ø·.",
-    "privacy.h4": "4. ØªÙØ¶ÙŠÙ„Ø§Øª Ø§Ù„Ù…ÙˆÙ‚Ø¹",
-    "privacy.p4": "ÙŠØ­ÙØ¸ Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø¹Ù„Ù‰ Ø¬Ù‡Ø§Ø²Ùƒ Ù„ÙØªØ±Ø© Ù…Ø­Ø¯ÙˆØ¯Ø© Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù„ØºØ© ÙˆØ¨Ø¹Ø¶ Ø§Ù„ØªÙØ¶ÙŠÙ„Ø§Øª Ø§Ù„ØªÙ‚Ù†ÙŠØ©. ÙˆØªÙØ¬Ù‡Ø² Ø£Ø­Ø¯Ø§Ø« ØªÙØ§Ø¹Ù„ Ù…Ø¬Ù‡ÙˆÙ„Ø© Ø¯ÙˆÙ† Ø§Ù„Ø§Ø³Ù… Ø£Ùˆ Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ Ø£Ùˆ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø£Ùˆ Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø±Ø³Ø§Ù„Ø©. ÙˆÙ„Ø§ ÙŠØ³ØªØ®Ø¯Ù… Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø­Ø§Ù„ÙŠÙ‹Ø§ Ù„ØªØ­ØµÙŠÙ„ Ø§Ù„Ù…Ø¯ÙÙˆØ¹Ø§Øª Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ© Ø£Ùˆ Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨Ø§Øª Ù„Ù„Ø¹Ù…Ù„Ø§Ø¡.",
-    "privacy.h5": "5. ÙˆØ§ØªØ³Ø§Ø¨ ÙˆØ§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ",
-    "privacy.p5": "Ø¹Ù†Ø¯ Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø© Ø¹Ø¨Ø± ÙˆØ§ØªØ³Ø§Ø¨ Ø£Ùˆ Ø§Ù„Ø¨Ø±ÙŠØ¯ØŒ ÙŠØ®Ø¶Ø¹ ØªÙˆØ§ØµÙ„Ùƒ ÙƒØ°Ù„Ùƒ Ù„Ø³ÙŠØ§Ø³Ø§Øª Ø§Ù„Ø®ØµÙˆØµÙŠØ© Ø§Ù„Ø®Ø§ØµØ© Ø¨Ù…Ù‚Ø¯Ù… ØªÙ„Ùƒ Ø§Ù„Ø®Ø¯Ù…Ø©.",
-    "privacy.h6": "6. Ø§Ù„Ø§Ø­ØªÙØ§Ø¸ Ø¨Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª ÙˆØ­Ù…Ø§ÙŠØªÙ‡Ø§",
-    "privacy.p6": "Ù†Ø­ØªÙØ¸ Ø¨Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø·Ù„Ø¨ ÙˆØ§Ù„Ø®Ø¯Ù…Ø© Ù„Ù„Ù…Ø¯Ø© Ø§Ù„Ù„Ø§Ø²Ù…Ø© Ù„Ù„Ø£ØºØ±Ø§Ø¶ Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ© ÙˆØ§Ù„ØªØ¹Ø§Ù‚Ø¯ÙŠØ© ÙˆØ§Ù„Ù†Ø¸Ø§Ù…ÙŠØ©ØŒ ÙˆÙ†Ø·Ø¨Ù‚ Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª Ù…Ø¹Ù‚ÙˆÙ„Ø© Ù„Ø­Ù…Ø§ÙŠØªÙ‡Ø§ Ù…Ù† Ø§Ù„ÙˆØµÙˆÙ„ ØºÙŠØ± Ø§Ù„Ù…ØµØ±Ø­.",
-    "privacy.h7": "7. Ø®ÙŠØ§Ø±Ø§ØªÙƒ",
-    "privacy.p7": "ÙŠÙ…ÙƒÙ†Ùƒ Ø·Ù„Ø¨ ØªØµØ­ÙŠØ­ Ø£Ùˆ Ø­Ø°Ù Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø³Ø¨Ù‚ Ø£Ù† Ù‚Ø¯Ù…ØªÙ‡Ø§ØŒ Ù…Ø¹ Ù…Ø±Ø§Ø¹Ø§Ø© Ù…Ø§ ÙŠÙ„Ø²Ù… Ø§Ù„Ø§Ø­ØªÙØ§Ø¸ Ø¨Ù‡ Ù„Ø£Ø³Ø¨Ø§Ø¨ Ù†Ø¸Ø§Ù…ÙŠØ© Ø£Ùˆ ØªØ¹Ø§Ù‚Ø¯ÙŠØ©.",
-    "privacy.h8": "8. Ø§Ù„ØªÙˆØ§ØµÙ„",
-    "privacy.p8": "Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø±Ø§Øª Ø§Ù„Ù…ØªØ¹Ù„Ù‚Ø© Ø¨Ø§Ù„Ø®ØµÙˆØµÙŠØ© ØªÙˆØ§ØµÙ„ Ø¹Ø¨Ø± contact@aventuraksa.com.",
-    "terms.metaTitle": "Ø§Ù„Ø´Ø±ÙˆØ· ÙˆØ§Ù„Ø£Ø­ÙƒØ§Ù… | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "terms.metaDescription": "Ø§Ù„Ø´Ø±ÙˆØ· Ø§Ù„ØªÙŠ ØªØ·Ø¨Ù‚ Ø¹Ù„Ù‰ Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ®Ø¯Ù…Ø§Øª Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ø­Ù„ÙŠØ© Ø§Ù„Ù…Ø¤ÙƒØ¯Ø©.",
-    "terms.heroEyebrow": "Ù‚Ø§Ù†ÙˆÙ†ÙŠ",
-    "terms.heroTitle": "Ø§Ù„Ø´Ø±ÙˆØ· ÙˆØ§Ù„Ø£Ø­ÙƒØ§Ù…",
-    "terms.heroDescription": "Ø´Ø±ÙˆØ· ÙˆØ§Ø¶Ø­Ø© Ù„Ù„Ø·Ù„Ø¨Ø§Øª ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ø¤ÙƒØ¯Ø© ÙˆØªØ¬Ø§Ø±Ø¨ Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "notfound.metaTitle": "Ø§Ù„ØµÙØ­Ø© ØºÙŠØ± Ù…ÙˆØ¬ÙˆØ¯Ø© | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "notfound.title": "Ù‡Ø°Ù‡ Ø§Ù„ØµÙØ­Ø© Ù„ÙŠØ³Øª Ø¶Ù…Ù† Ø§Ù„Ø±Ø­Ù„Ø©.",
-    "notfound.text": "Ø±Ø¨Ù…Ø§ ØªØºÙŠØ± Ø§Ù„Ø±Ø§Ø¨Ø· Ø£Ùˆ Ù„Ù… ØªØ¹Ø¯ Ø§Ù„ØµÙØ­Ø© Ù…ÙˆØ¬ÙˆØ¯Ø©.",
-    "notfound.button": "Ø§Ù„Ø¹ÙˆØ¯Ø© Ù„Ù„Ø±Ø¦ÙŠØ³ÙŠØ©",
-    "common.madeToOrder": "ÙŠØ¬Ù‡Ù‘Ø² Ø­Ø³Ø¨ Ø§Ù„Ø·Ù„Ø¨",
-    "nav.corporate": "Ø§Ù„Ø´Ø±ÙƒØ§Øª",
-    "home.jeddahTitle": "ÙŠÙˆÙ… Ù…ØªÙƒØ§Ù…Ù„ ÙÙŠ Ø¬Ø¯Ø©",
-    "home.jeddahText": "Ø§Ù„ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ© ÙˆØ¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ§Ù„Ù…Ø·Ø§Ø¹Ù… Ø§Ù„Ù…Ø­Ù„ÙŠØ© ÙˆÙ…Ø­Ø·Ø§Øª Ù…Ø®ØªØ§Ø±Ø© Ø¶Ù…Ù† Ù…Ø³Ø§Ø± Ù…ØªÙˆØ§Ø²Ù†.",
-    "home.corporateButton": "Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ø´Ø±ÙƒØ§Øª",
-    "experiences.shopExperience": "Ø¹Ø±Ø¶ Ù…Ù†ØªØ¬Ø§Øª Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experiences.jeddahEyebrow": "Ø¬Ø¯Ø© Â· ÙŠÙˆÙ… Ù…Ø±Ù†",
-    "experiences.jeddahTitle": "ÙŠÙˆÙ… Ø¬Ø¯Ø© Ø§Ù„Ù…ØªÙƒØ§Ù…Ù„",
-    "experiences.jeddahText": "Ø¨Ø±Ù†Ø§Ù…Ø¬ Ù…Ø±Ù† ÙŠØ±Ø¨Ø· Ø§Ù„ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ© Ø¨Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ§Ù„Ù…Ø·Ø§Ø¹Ù… Ø§Ù„Ù…Ø­Ù„ÙŠØ© ÙˆÙ…Ø­Ø·Ø§Øª Ù…Ø®ØªØ§Ø±Ø© Ø¨Ø¥ÙŠÙ‚Ø§Ø¹ Ù…Ø±ÙŠØ­.",
-    "experiences.jeddahItem1": "Ø®ÙŠØ§Ø± Ù†ØµÙ ÙŠÙˆÙ… Ø£Ùˆ ÙŠÙˆÙ… ÙƒØ§Ù…Ù„",
-    "experiences.jeddahItem2": "Ù…Ø±Ø´Ø¯ Ø³ÙŠØ§Ø­ÙŠ Ù…Ø±Ø®Øµ ÙˆÙ†Ù‚Ù„ Ù…Ù†Ø³Ù‚",
-    "experiences.jeddahItem3": "Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆÙ„Ø­Ø¸Ø§Øª Ø¹Ù„Ù‰ Ø§Ù„ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ©",
-    "experiences.jeddahItem4": "Ø®ÙŠØ§Ø±Ø§Øª Ø§Ù„Ø·Ø¹Ø§Ù… ÙˆØ§Ù„Ù‚Ù‡ÙˆØ© ÙˆØ¶ÙŠØ§ÙØ© Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "experiences.jeddahTag1": "Ø§Ù„Ø²ÙŠØ§Ø±Ø© Ø§Ù„Ø£ÙˆÙ„Ù‰",
-    "experiences.jeddahTag2": "Ù…Ø±Ù†Ø©",
-    "experiences.jeddahTag3": "ÙŠÙˆÙ… ÙƒØ§Ù…Ù„",
-    "experiences.goldenTitle": "Ø§Ù„Ø³Ø§Ø¹Ø© Ø§Ù„Ø°Ù‡Ø¨ÙŠØ©",
-    "experiences.goldenText": "Ø±Ø­Ù„Ø© Ø®Ø§ØµØ© Ø¨Ø§Ù„Ù‚Ø§Ø±Ø¨ Ù„Ù…Ø¯Ø© Ø³Ø§Ø¹Ø© ØªÙÙˆÙ‚Ù‘Øª Ù…Ø¹ Ø¢Ø®Ø± Ø¶ÙˆØ¡ ÙˆØºØ±ÙˆØ¨ Ø§Ù„Ø´Ù…Ø³ ÙÙˆÙ‚ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±.",
-    "events.corporateLink": "Ø¹Ø±Ø¶ Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ø´Ø±ÙƒØ§Øª",
-    "services.requestService": "Ø§Ø·Ù„Ø¨ Ù‡Ø°Ù‡ Ø§Ù„Ø®Ø¯Ù…Ø©",
-    "collection.filterAll": "Ø¬Ù…ÙŠØ¹ Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "collection.filterSea": "Ø§Ù„Ø¨Ø­Ø±",
-    "collection.filterHistoric": "Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©",
-    "collection.filterDesert": "Ø§Ù„ØµØ­Ø±Ø§Ø¡",
-    "collection.filterTaif": "Ø§Ù„Ø·Ø§Ø¦Ù",
-    "collection.filterJeddah": "ØªÙˆÙ‚ÙŠØ¹ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "collection.filterCorporate": "Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„ØªÙ†ÙÙŠØ°ÙŠÙˆÙ†",
-    "collection.howEyebrow": "ÙƒÙŠÙ ÙŠØ¹Ù…Ù„ Ø§Ù„Ø¨ÙˆØªÙŠÙƒ",
-    "collection.howTitle": "Ø§Ø¨Ù†Ù Ø·Ù„Ø¨Ù‹Ø§ ÙˆØ§Ø­Ø¯Ù‹Ø§ Ø­ÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ",
-    "collection.how1Title": "Ø§Ø®ØªØ± Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "collection.how1Text": "Ø¹Ù†Ø¯ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ù…Ù† ØµÙØ­Ø© Ø§Ù„ØªØ¬Ø±Ø¨Ø© ØªØ¸Ù‡Ø± Ù…Ù†ØªØ¬Ø§ØªÙ‡Ø§ Ø§Ù„Ù…Ø±ØªØ¨Ø·Ø© ØªÙ„Ù‚Ø§Ø¦ÙŠÙ‹Ø§.",
-    "collection.how2Title": "Ø£Ø¶Ù Ù…Ø§ ÙŠÙ†Ø§Ø³Ø¨Ùƒ",
-    "collection.how2Text": "Ø§Ø®ØªØ± Ø¨ÙˆÙƒØ³Ù‹Ø§ Ø£Ùˆ Ù…Ù†ØªØ¬Ø§Øª Ù…Ù†ÙØ±Ø¯Ø© Ø£Ùˆ Ø®Ø¯Ù…Ø§Øª Ø´Ø®ØµÙŠØ© Ù„Ù„Ø¶ÙŠÙ.",
-    "collection.how3Title": "Ø§Ø³ØªÙ„Ù… Ø¹Ø±Ø¶Ù‹Ø§ Ù…Ø®ØµØµÙ‹Ø§",
-    "collection.how3Text": "ØªØ±Ø§Ø¬Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ§Ù„ÙƒÙ…ÙŠØ© ÙˆØ§Ù„ØªØ®ØµÙŠØµ ÙˆØ§Ù„ØªÙˆÙØ± Ù‚Ø¨Ù„ Ø§Ù„ØªØ£ÙƒÙŠØ¯.",
-    "collection.boxesText": "Ù‡Ø°Ù‡ Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ø³ØªØ¹Ø±Ø§Ø¶ÙŠØ© Ø³ØªÙØ·Ø±Ø­ Ø¨Ø¹Ø¯ Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„Ø¹ÙŠÙ†Ø§Øª ÙˆØ§Ù„Ø®Ø§Ù…Ø§Øª ÙˆØ§Ù„Ù…ÙˆØ±Ø¯ÙŠÙ†. ÙˆÙ‡ÙŠ ØºÙŠØ± Ù…ØªØ§Ø­Ø© Ù„Ù„Ø·Ù„Ø¨ Ø­Ø§Ù„ÙŠÙ‹Ø§.",
-    "collection.requestBox": "Ø§Ø·Ù„Ø¨ Ù‡Ø°Ø§ Ø§Ù„Ø¨ÙˆÙƒØ³",
-    "collection.box1Item1": "Ø­Ù‚ÙŠØ¨Ø© Ø´Ø§Ø·Ø¦ Ø¨Ù‡ÙˆÙŠØ© Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "collection.box1Item2": "Ù…Ù†Ø´ÙØ© Ø´Ø§Ø·Ø¦ Ø³Ø±ÙŠØ¹Ø© Ø§Ù„Ø¬ÙØ§Ù",
-    "collection.box1Item3": "Ø­Ø§ÙØ¸Ø© Ù‡Ø§ØªÙ Ù…Ù‚Ø§ÙˆÙ…Ø© Ù„Ø±Ø°Ø§Ø° Ø§Ù„Ù…Ø§Ø¡ ÙˆØ§Ù„Ø±Ù…Ø§Ù„",
-    "collection.box1Item4": "Ø¹Ø¨ÙˆØ© Ù…ÙŠØ§Ù‡ Ù…Ø¹Ø²ÙˆÙ„Ø© Ø­Ø±Ø§Ø±ÙŠÙ‹Ø§",
-    "collection.box1Item5": "Ø®ÙŠØ§Ø± Ø¹Ø·Ø± Ø§Ù„Ø¨Ø­Ø± Ø¹Ù†Ø¯ Ø¥Ø·Ù„Ø§Ù‚Ù‡",
-    "collection.box2Item1": "ØªØ°ÙƒØ§Ø± Ø®Ø´Ø¨ÙŠ Ù…Ø³ØªÙˆØ­Ù‰ Ù…Ù† Ø§Ù„Ø±ÙˆØ´Ø§Ù†",
-    "collection.box2Item2": "Ø¨Ø·Ø§Ù‚Ø§Øª ØªØ±Ø§Ø«ÙŠØ© Ù…ØµÙˆØ±Ø©",
-    "collection.box2Item3": "Ø¯ÙØªØ± Ø¬ÙŠØ¨ Ø¨Ù†Ù‚ÙˆØ´ Ø§Ù„Ø±ÙˆØ´Ø§Ù†",
-    "collection.box2Item4": "Ø­Ù‚ÙŠØ¨Ø© Ù‚Ù…Ø§Ø´ÙŠØ© ØµØºÙŠØ±Ø© Ø¨Ù‡ÙˆÙŠØ© Ø§Ù„Ø¨Ù„Ø¯",
-    "collection.box2Item5": "Ø®ÙŠØ§Ø± Ø¹Ø·Ø± Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© Ø¹Ù†Ø¯ Ø¥Ø·Ù„Ø§Ù‚Ù‡",
-    "collection.box3Item1": "Ø´Ø§Ù„ Ø®ÙÙŠÙ Ø¨Ù„ÙˆÙ† Ù…Ø­Ø§ÙŠØ¯",
-    "collection.box3Item2": "ÙƒÙˆØ¨ Ø±Ø­Ù„Ø§Øª Ù…Ø¹Ø²ÙˆÙ„ Ø­Ø±Ø§Ø±ÙŠÙ‹Ø§",
-    "collection.box3Item3": "ØªØ°ÙƒØ§Ø± Ù…Ù†Ø³ÙˆØ¬ ØµØºÙŠØ±",
-    "collection.box3Item4": "Ø­Ø§ÙØ¸Ø© Ø³ÙØ± Ù…ØªØ¹Ø¯Ø¯Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…",
-    "collection.box3Item5": "Ø®ÙŠØ§Ø± Ø¹Ø·Ø± Last Light Ø¹Ù†Ø¯ Ø¥Ø·Ù„Ø§Ù‚Ù‡",
-    "collection.box4Item1": "Ø±Ø°Ø§Ø° ÙˆØ±Ø¯ Ø·Ø§Ø¦ÙÙŠ Ø¹Ø·Ø±ÙŠ",
-    "collection.box4Item2": "ØµØ§Ø¨ÙˆÙ† Ø¨Ø§Ù„ÙˆØ±Ø¯ Ø£Ùˆ ÙƒØ±ÙŠÙ… Ù„Ù„ÙŠØ¯ÙŠÙ†",
-    "collection.box4Item3": "ÙƒÙŠØ³ ÙˆØ±Ø¯ Ù…Ø¹Ø·Ø±",
-    "collection.box4Item4": "Ø¯ÙØªØ± Ø¬ÙŠØ¨ Ø¨Ù†Ù‚ÙˆØ´ Ø§Ù„ÙˆØ±Ø¯",
-    "collection.box4Item5": "Ø®ÙŠØ§Ø± Ø¹Ø·Ø± Ø§Ù„Ø·Ø§Ø¦Ù Ø¹Ù†Ø¯ Ø¥Ø·Ù„Ø§Ù‚Ù‡",
-    "collection.box5Title": "Ø¨ÙˆÙƒØ³ ÙŠÙˆÙ… Ø¬Ø¯Ø©",
-    "collection.box5Text": "Ù…Ø®ØªØ§Ø±Ø§Øª ØµØºÙŠØ±Ø© Ù…Ù† Ù‡ÙˆÙŠØ© Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ù„Ø¶ÙŠÙˆÙ Ø¬ÙˆÙ„Ø© Ø¬Ø¯Ø© Ø£Ùˆ Ø§Ù„ÙŠÙˆÙ… Ø§Ù„ÙƒØ§Ù…Ù„.",
-    "collection.box5Item1": "Ø¯ÙØªØ± Ø¬ÙŠØ¨ ÙˆØ¨Ø·Ø§Ù‚Ø© Ù…Ø³Ø§Ø± Ù…ØµÙˆØ±Ø©",
-    "collection.box5Item2": "Ù‚Ø·Ø¹Ø© ØªØ°ÙƒØ§Ø±ÙŠØ© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† Ø§Ù„Ø±ÙˆØ´Ø§Ù†",
-    "collection.box5Item3": "Ø¨Ø·Ø§Ù‚Ø§Øª ØªØ±Ø§Ø«ÙŠØ© Ù…ØµÙˆØ±Ø©",
-    "collection.box5Item4": "Ø¥ÙƒØ³Ø³ÙˆØ§Ø± Ø¨Ø­Ø±ÙŠ ØµØºÙŠØ±",
-    "collection.box5Item5": "Ø¨Ø·Ø§Ù‚Ø© Ù‡Ø¯ÙŠØ© Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "collection.boxNote": "Ø§Ù„Ù…Ø­ØªÙˆÙŠØ§Øª Ø§Ù„Ù…Ø¹Ø±ÙˆØ¶Ø© Ø§Ø³ØªØ±Ø´Ø§Ø¯ÙŠØ© ÙˆØªØ¨Ù‚Ù‰ Ø®Ø§Ø¶Ø¹Ø© Ù„Ù„Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠ Ù„Ù„Ù…Ù†ØªØ¬Ø§Øª.",
-    "collection.personalText": "ÙŠÙ…ÙƒÙ† ØªØ±ØªÙŠØ¨ Ø§Ù„Ø®Ø¯Ù…Ø§Øª Ù…Ù†ÙØµÙ„Ø© Ø£Ùˆ Ø¥Ø¶Ø§ÙØªÙ‡Ø§ Ø¥Ù„Ù‰ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ù…ØªÙƒØ§Ù…Ù„ Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ø´Ø±ÙƒØ§Øª.",
-    "collection.executive1Title": "Ø§Ù„Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙÙŠ Ø§Ù„Ù…Ø·Ø§Ø± ÙˆØ§Ù„Ù†Ù‚Ù„",
-    "collection.executive1Text": "Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙˆÙ…Ø³Ø§Ø¹Ø¯Ø© Ù…Ø¹ Ù†Ù‚Ù„ ØªÙ†ÙÙŠØ°ÙŠ Ù…Ù†Ø³Ù‚ Ø¥Ù„Ù‰ Ø§Ù„ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹.",
-    "collection.executive2Title": "Ø§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„ØªØ±Ø­ÙŠØ¨ ÙÙŠ Ø§Ù„ÙÙ†Ø¯Ù‚",
-    "collection.executive2Text": "Ø¨Ø§Ù‚Ø© ÙˆØ±Ø¯ Ø£Ùˆ Ø¨Ø·Ø§Ù‚Ø© ØªØ±Ø­ÙŠØ¨ Ø£Ùˆ Ù‡Ø¯ÙŠØ© Ù…Ø®ØªØ§Ø±Ø© ØªÙˆØ¶Ø¹ Ù‚Ø¨Ù„ ÙˆØµÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ.",
-    "collection.executive3Title": "ØªØ¬Ù‡ÙŠØ² Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹",
-    "collection.executive3Text": "Ø£Ø³Ø§Ø³ÙŠØ§Øª Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ­Ø±ÙƒØ© Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ù†Ù‚Ù„ Ø¶Ù…Ù† ØªÙ†Ø³ÙŠÙ‚ ÙˆØ§Ø­Ø¯.",
-    "collection.executive4Title": "Ø§Ù„Ù‡Ø¯Ø§ÙŠØ§ Ø§Ù„Ø±Ø³Ù…ÙŠØ© ÙˆØ§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬",
-    "collection.executive4Text": "Ù‡Ø¯Ø§ÙŠØ§ Ø£Ø¹Ù…Ø§Ù„ Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆÙ…Ø³Ø§Ø¹Ø¯Ø© Ø¹Ù…Ù„ÙŠØ© Ø®Ù„Ø§Ù„ Ø¥Ù‚Ø§Ù…Ø© Ø§Ù„Ø¶ÙŠÙ.",
-    "corporate.metaTitle": "ØªØ¬Ø§Ø±Ø¨ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ† | Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "corporate.metaDescription": "ØªØ¬Ø§Ø±Ø¨ Ø´Ø±ÙƒØ§Øª Ø¹Ù…Ù„ÙŠØ© ÙˆØ§Ø¬ØªÙ…Ø§Ø¹Ø§Øª ØªÙ†ÙÙŠØ°ÙŠØ© ÙˆØ¨Ø±Ø§Ù…Ø¬ ÙØ±Ù‚ ÙˆØ§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙˆÙÙˆØ¯ ØªÙ†Ø¸Ù…Ù‡Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§ ÙÙŠ Ø¬Ø¯Ø©.",
-    "corporate.heroEyebrow": "Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ†",
-    "corporate.heroTitle": "Ø¨Ø±Ø§Ù…Ø¬ Ø´Ø±ÙƒØ§Øª ÙˆØªÙ†ÙÙŠØ°ÙŠÙŠÙ† ØªØ¨Ø¯Ø£ Ø¨Ù‡Ø¯Ù Ø¹Ù…Ù„ ÙˆØ§Ø¶Ø­.",
-    "corporate.heroDescription": "Ù…Ù† Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø¶ÙŠÙ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠ Ø¥Ù„Ù‰ Ø§Ø¬ØªÙ…Ø§Ø¹ Ø®Ø§Ø±Ø¬ Ø§Ù„Ù…Ù‚Ø± Ø£Ùˆ ÙŠÙˆÙ… Ù„Ù„ÙØ±ÙŠÙ‚ØŒ ØªØµÙ…Ù… Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¨Ø±Ù†Ø§Ù…Ø¬Ù‹Ø§ Ø¹Ù…Ù„ÙŠÙ‹Ø§ ÙŠØ±Ø¨Ø· Ø§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„Ù…ÙƒØ§Ù† Ø§Ù„Ù…Ù†Ø§Ø³Ø¨.",
-    "corporate.heroPrimary": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "corporate.heroSecondary": "Ø¹Ø±Ø¶ Ø§Ù„Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„Ø¹Ù…Ù„ÙŠØ©",
-    "corporate.introEyebrow": "Ø­Ù„ ØªØ´ØºÙŠÙ„ÙŠ Ù…ØªÙƒØ§Ù…Ù„",
-    "corporate.introTitle": "Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø¹Ù…Ù„ØŒ Ù„Ø§ Ø±Ø­Ù„Ø© Ø´Ø±ÙƒØ§Øª Ø¬Ø§Ù‡Ø²Ø©.",
-    "corporate.introText": "Ù†Ø¨Ø¯Ø£ Ø¨Ø§Ù„Ù‡Ø¯Ù: Ø§Ù„Ø§Ø³ØªØ¶Ø§ÙØ© Ø£Ùˆ Ø§Ù„ØªÙƒØ±ÙŠÙ… Ø£Ùˆ Ø¨Ù†Ø§Ø¡ Ø§Ù„Ø¹Ù„Ø§Ù‚Ø§Øª Ø£Ùˆ ØªÙØ§Ø¹Ù„ Ø§Ù„ÙØ±ÙŠÙ‚ØŒ Ø«Ù… Ù†ØµÙ…Ù… Ø¨Ø±Ù†Ø§Ù…Ø¬Ù‹Ø§ ÙˆØ§Ù‚Ø¹ÙŠÙ‹Ø§ ÙŠÙ†Ø§Ø³Ø¨ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ÙˆÙ‚Øª ÙˆØ§Ù„Ù…ÙŠØ²Ø§Ù†ÙŠØ©.",
-    "corporate.include1": "Ø§Ù„ØªØ®Ø·ÙŠØ·",
-    "corporate.include2": "Ø§Ù„Ù…ÙˆÙ‚Ø¹",
-    "corporate.include3": "Ø§Ù„Ù†Ù‚Ù„",
-    "corporate.include4": "Ø§Ù„Ø¶ÙŠØ§ÙØ©",
-    "corporate.include5": "ÙˆØ±Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "corporate.include6": "Ø§Ù„ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ù…ÙŠØ¯Ø§Ù†ÙŠ",
-    "corporate.programsEyebrow": "Ø¨Ø±Ø§Ù…Ø¬ Ø¹Ù…Ù„ÙŠØ© Ù…Ø®ØªØ§Ø±Ø©",
-    "corporate.programsTitle": "Ù‚ÙŠÙ…Ø© Ø¹Ø§Ù„ÙŠØ© Ø¯ÙˆÙ† ØªØ¹Ù‚ÙŠØ¯ ØºÙŠØ± Ø¶Ø±ÙˆØ±ÙŠ",
-    "corporate.programsText": "ØªØ¹ØªÙ…Ø¯ Ù‡Ø°Ù‡ Ø§Ù„Ø¨Ø±Ø§Ù…Ø¬ Ø¹Ù„Ù‰ Ù…ÙˆØ§Ù‚Ø¹ Ù…ØªØ§Ø­Ø© ÙˆØ®Ø¯Ù…Ø§Øª Ù…ÙˆØ«ÙˆÙ‚Ø©ØŒ ÙˆÙ„Ø§ ØªØªÙˆØ³Ø¹ Ø¥Ù„Ø§ Ø¥Ø°Ø§ Ø§Ø­ØªØ§Ø¬ Ø§Ù„Ù‡Ø¯Ù Ø°Ù„Ùƒ.",
-    "corporate.program1Title": "Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª ØªÙ†ÙÙŠØ°ÙŠØ© Ø®Ø§Ø±Ø¬ Ø§Ù„Ù…ÙƒØªØ¨",
-    "corporate.program1Text": "Ù…ÙˆÙ‚Ø¹ Ø®Ø§Øµ Ù…Ø¹ Ø¶ÙŠØ§ÙØ© ÙˆÙ†Ù‚Ù„ ÙˆØªØ¬Ù‡ÙŠØ²Ø§Øª Ø£Ø³Ø§Ø³ÙŠØ© Ù„Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ ÙˆØ®ÙŠØ§Ø± ØºØ¯Ø§Ø¡ Ø£Ùˆ Ø¹Ø´Ø§Ø¡.",
-    "corporate.program2Title": "Ø§Ù„ÙˆÙÙˆØ¯ ÙˆÙƒØ¨Ø§Ø± Ø§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ø¯ÙˆÙ„ÙŠÙŠÙ†",
-    "corporate.program2Text": "Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙÙŠ Ø§Ù„Ù…Ø·Ø§Ø± ÙˆÙ†Ù‚Ù„ ØªÙ†ÙÙŠØ°ÙŠ ÙˆØ¯Ø¹Ù… Ø§Ù„ÙÙ†Ø¯Ù‚ ÙˆÙ…Ø±Ø´Ø¯ÙˆÙ† Ù…Ø±Ø®ØµÙˆÙ† ÙˆØ¨Ø±Ù†Ø§Ù…Ø¬ Ø¶ÙŠÙ Ù…Ù†Ø³Ù‚.",
-    "corporate.program3Title": "Ø£ÙŠØ§Ù… Ø§Ù„ØªØ­ÙÙŠØ² ÙˆØ§Ù„ØªÙƒØ±ÙŠÙ…",
-    "corporate.program3Text": "ÙŠÙˆÙ… Ø¨Ø­Ø±ÙŠ Ø£Ùˆ Ø«Ù‚Ø§ÙÙŠ Ø£Ùˆ ØµØ­Ø±Ø§ÙˆÙŠ Ø£Ùˆ ÙÙŠ Ø§Ù„Ø·Ø§Ø¦Ù Ù…Ø¹ Ø§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆÙ„Ø­Ø¸Ø© ØªÙƒØ±ÙŠÙ… Ø¨Ø³ÙŠØ·Ø©.",
-    "corporate.program4Title": "Ø¨Ù†Ø§Ø¡ ÙØ±ÙŠÙ‚ Ø®ÙÙŠÙ",
-    "corporate.program4Text": "ØªØ­Ø¯ÙŠØ§Øª Ø¬Ù…Ø§Ø¹ÙŠØ© Ø³Ù‡Ù„Ø© ÙˆÙ…Ø³Ø§Ø±Ø§Øª Ø£Ù„ØºØ§Ø² ÙˆØ£Ù„Ø¹Ø§Ø¨ ØªØ¹Ø§ÙˆÙ†ÙŠØ© ØªÙÙƒÙŠÙ‘Ù Ø­Ø³Ø¨ Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ù„ÙˆÙ‚Øª.",
-    "corporate.program5Title": "Ø£ÙŠØ§Ù… ØªØ¬Ø§Ø±Ø¨ Ø§Ù„Ø´Ø±ÙƒØ§Øª",
-    "corporate.program5Text": "Ø¨Ø±Ø§Ù…Ø¬ Ø®Ø§ØµØ© ÙÙŠ Ø§Ù„Ø¨Ø­Ø± Ø£Ùˆ Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© Ø£Ùˆ Ø§Ù„ØµØ­Ø±Ø§Ø¡ Ø£Ùˆ Ø§Ù„Ø·Ø§Ø¦Ù Ù„Ù„ÙØ±Ù‚ ÙˆØ§Ù„Ø¹Ù…Ù„Ø§Ø¡ ÙˆØ§Ù„Ø´Ø±ÙƒØ§Ø¡.",
-    "corporate.program6Title": "Ø¹Ø´Ø§Ø¡ Ø§Ù„Ø¹Ù„Ø§Ù‚Ø§Øª ÙˆØ§Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ†",
-    "corporate.program6Text": "Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØªØ±ØªÙŠØ¨ Ø§Ù„Ø¬Ù„Ø³Ø§Øª ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ù…Ø¯Ø±ÙˆØ³ ÙÙŠ Ø§Ù„Ù…ÙˆÙ‚Ø¹.",
-    "corporate.packagesEyebrow": "Ù†Ù…Ø§Ø°Ø¬ Ø¬Ø§Ù‡Ø²Ø© Ù„Ù„Ø¨Ø¯Ø¡",
-    "corporate.packagesTitle": "Ø«Ù„Ø§Ø«Ø© Ø¨Ø±Ø§Ù…Ø¬ Ø³Ù‡Ù„Ø© Ø§Ù„ØªØ®ØµÙŠØµ",
-    "corporate.package1Title": "Ø§Ù„ÙˆØµÙˆÙ„ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠ",
-    "corporate.package1Text": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ù…Ø·Ø§Ø± ÙˆØ§Ù„Ù†Ù‚Ù„ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠ ÙˆÙˆØ±Ø¯ ØªØ±Ø­ÙŠØ¨ ÙÙŠ Ø§Ù„ÙÙ†Ø¯Ù‚ ÙˆØ¯Ø¹Ù… Ø§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬.",
-    "corporate.package2Title": "Ù†ØµÙ ÙŠÙˆÙ… Ù‚ÙŠØ§Ø¯ÙŠ",
-    "corporate.package2Text": "Ù‚Ø§Ø¹Ø© Ø§Ø¬ØªÙ…Ø§Ø¹ Ø®Ø§Ø±Ø¬ÙŠØ© ÙˆØ¶ÙŠØ§ÙØ© ÙˆØºØ¯Ø§Ø¡ Ø¹Ù…Ù„ ÙˆÙ†Ù‚Ù„ Ù…Ù†Ø³Ù‚.",
-    "corporate.package3Title": "ÙŠÙˆÙ… Ø§ÙƒØªØ´Ø§Ù Ù„Ù„ÙØ±ÙŠÙ‚",
-    "corporate.package3Text": "ØªØ¬Ø±Ø¨Ø© ÙÙŠ ÙˆØ¬Ù‡Ø© ÙˆØ§Ø­Ø¯Ø© ÙˆØªØ­Ø¯Ù Ø¬Ù…Ø§Ø¹ÙŠ Ø®ÙÙŠÙ ÙˆÙˆØ¬Ø¨Ø© Ù…Ø´ØªØ±ÙƒØ© ÙˆÙ†Ù‚Ù„ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.",
-    "corporate.guestEyebrow": "Ø§Ù„Ø¹Ù†Ø§ÙŠØ© Ø¨Ø§Ù„Ø¶ÙŠÙ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠ",
-    "corporate.guestTitle": "Ø®Ø¯Ù…Ø§Øª Ù…ÙÙŠØ¯Ø© Ù‚Ø¨Ù„ Ø£Ù† ÙŠØµÙ„ Ø§Ù„Ø¶ÙŠÙ",
-    "corporate.guestText": "ÙŠØ­ØµÙ„ Ø¶ÙŠÙ Ø§Ù„Ø´Ø±ÙƒØ© Ø¹Ù„Ù‰ Ø®Ø·Ø© Ø¶ÙŠØ§ÙØ© Ù…ØªØ±Ø§Ø¨Ø·Ø© Ø¨Ø¯Ù„ ØªØ±ØªÙŠØ¨ ÙƒÙ„ ØªÙØµÙŠÙ„ Ø¨Ø´ÙƒÙ„ Ù…Ù†ÙØµÙ„.",
-    "corporate.guest1": "Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ù…Ø·Ø§Ø± ÙˆØ§Ù„Ù†Ù‚Ù„ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠ",
-    "corporate.guest2": "ÙˆØ±Ø¯ Ø§Ù„ÙÙ†Ø¯Ù‚ ÙˆØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ¯Ø¹Ù… Ø§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬",
-    "corporate.guest3": "Ø£Ø®Ø° Ù…Ù‚Ø§Ø³Ø§Øª Ø§Ù„Ø«ÙˆØ¨ ÙˆØªØ³Ù„ÙŠÙ…Ù‡ Ø®Ù„Ø§Ù„ Ø£Ù‚Ù„ Ù…Ù† 24 Ø³Ø§Ø¹Ø© Ø­Ø³Ø¨ Ø§Ù„ØªØ£ÙƒÙŠØ¯",
-    "corporate.guest4": "Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ø¹Ø¨Ø§ÙŠØ© Ø¨Ù…Ø³Ø§Ø¹Ø¯Ø© Ù…Ø®ØªØµØ©",
-    "corporate.guestBoutique": "Ø¹Ø±Ø¶ Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ†",
-    "corporate.viewEvents": "ØªØ­ØªØ§Ø¬ ØªÙ†ÙÙŠØ° ÙØ¹Ø§Ù„ÙŠØ©ØŸ Ø§Ø³ØªÙƒØ´Ù Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª",
-    "corporate.requestTitle": "Ù…Ø§ Ø§Ù„Ù‡Ø¯Ù Ø§Ù„Ø°ÙŠ ÙŠØ¬Ø¨ Ø£Ù† ÙŠØ­Ù‚Ù‚Ù‡ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ØŸ",
-    "corporate.requestText": "Ø£Ø±Ø³Ù„ Ø§Ù„Ù‡Ø¯Ù ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªØ§Ø±ÙŠØ® Ø§Ù„Ù…ÙØ¶Ù„ Ù„Ù†Ù‚ØªØ±Ø­ Ø£Ø¨Ø³Ø· Ø¨Ø±Ù†Ø§Ù…Ø¬ ÙŠØ­Ù‚Ù‚ Ø§Ù„Ù†ØªÙŠØ¬Ø© Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.",
-    "contact.typeService": "Ø®Ø¯Ù…Ø© Ø¶ÙŠÙ",
-    "contact.requestedItem": "Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ù…Ø­Ø¯Ø¯",
-    "experiences.readySeaEyebrow": "Ø¬Ø§Ù‡Ø²Ø© Ù„Ù„Ø·Ù„Ø¨",
-    "experiences.readySeaTitle": "ØªØ¬Ø§Ø±Ø¨ Ø¨Ø­Ø±ÙŠØ© ØªÙØµÙ…Ù… Ø­ÙˆÙ„ ØªÙˆÙ‚ÙŠØªÙƒ",
-    "experiences.readySeaText": "Ø§Ø®ØªØ± Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙØŒ Ø«Ù… Ù†Ø¤ÙƒØ¯ Ø§Ù„Ù‚Ø§Ø±Ø¨ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ ÙˆÙ†Ø¹Ø¯ Ø¹Ø±Ø¶ Ø³Ø¹Ø± Ù…Ø®ØµØµÙ‹Ø§.",
-    "experiences.from": "Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "experiences.perBoat": "Ù„Ù„Ù‚Ø§Ø±Ø¨ Ø§Ù„Ø®Ø§Øµ",
-    "experiences.perYacht": "Ù„Ù„ÙŠØ®Øª Ø§Ù„Ø®Ø§Øµ",
-    "experiences.perGroup": "Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© Ø§Ù„Ø®Ø§ØµØ©",
-    "experiences.perPerson": "Ù„Ù„Ø´Ø®Øµ",
-    "experiences.offerGoldenMeta": "60 Ø¯Ù‚ÙŠÙ‚Ø© Â· Ø´Ø±Ù… Ø£Ø¨Ø­Ø± Â· Ù…Ù† 1 Ø¥Ù„Ù‰ 4 Ø¶ÙŠÙˆÙ",
-    "experiences.offerGoldenText": "Ø±Ø­Ù„Ø© Ù‚Ø§Ø±Ø¨ Ø®Ø§ØµØ© ÙˆÙ‚Øª Ø§Ù„ØºØ±ÙˆØ¨ ØªØ´Ù…Ù„ Ø§Ù„Ù‚Ø¨Ø·Ø§Ù† ÙˆØ§Ù„ÙˆÙ‚ÙˆØ¯ ÙˆØ³ØªØ±Ø§Øª Ø§Ù„Ø³Ù„Ø§Ù…Ø© ÙˆØ§Ù„Ù…ÙŠØ§Ù‡ ÙˆØ§Ù„Ø³Ù†Ø§ÙƒØ§Øª ÙˆØ§Ù„Ø«Ù„Ø¬.",
-    "experiences.goldenRates": "ÙŠÙØ¹Ø¯ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ø­Ø³Ø¨ Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "experiences.bayadahTitle": "ÙŠÙˆÙ… Ø¨Ø­Ø±ÙŠ Ø¥Ù„Ù‰ Ø¨ÙŠØ§Ø¶Ø©",
-    "experiences.offerBayadahMeta": "8 Ø³Ø§Ø¹Ø§Øª Â· Ù…Ù† Ø£Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø¨ÙŠØ§Ø¶Ø© Â· Ø­ØªÙ‰ 8 Ø¶ÙŠÙˆÙ",
-    "experiences.offerBayadahText": "Ø³Ø¨Ø§Ø­Ø© ÙˆÙˆÙ‚Øª Ù‡Ø§Ø¯Ø¦ ÙÙŠ Ø§Ù„Ø¨Ø­Ø± Ù…Ø¹ Ø§Ù„Ù‚Ø¨Ø·Ø§Ù† ÙˆØ§Ù„ÙˆÙ‚ÙˆØ¯ ÙˆØ³ØªØ±Ø§Øª Ø§Ù„Ø³Ù„Ø§Ù…Ø© ÙˆØ§Ù„Ø³Ù†Ø§ÙƒØ§Øª ÙˆØ§Ù„Ø«Ù„Ø¬.",
-    "experiences.bayadahRates": "ÙŠÙØ­Ø¯Ø¯ Ø§Ù„Ù‚Ø§Ø±Ø¨ ÙˆÙŠÙØ¹Ø¯ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ø­Ø³Ø¨ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© ÙˆØ§Ù„ØªÙˆÙØ±.",
-    "experiences.grandTitle": "ÙŠØ®Øª Ø¨ÙŠØ§Ø¶Ø© Ø§Ù„ÙƒØ¨ÙŠØ±",
-    "experiences.offerGrandMeta": "8 Ø³Ø§Ø¹Ø§Øª Â· Ù…Ù† Ø£Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø¨ÙŠØ§Ø¶Ø© Â· Ø­ØªÙ‰ 23 Ø¶ÙŠÙÙ‹Ø§",
-    "experiences.offerGrandText": "ÙŠØ®Øª ÙˆØ§Ø³Ø¹ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ù…Ø¹ Ø´Ù…ÙˆÙ„ Ø£Ø³Ø§Ø³ÙŠØ§Øª Ø§Ù„ÙŠÙˆÙ… Ø§Ù„Ø¨Ø­Ø±ÙŠ Ù†ÙØ³Ù‡Ø§.",
-    "experiences.grandRate": "ÙŠÙØ¹Ø¯ Ø¹Ø±Ø¶ Ø³Ø¹Ø± Ù…Ø®ØµØµ Ù„Ù„ÙŠØ®Øª Ø§Ù„Ø®Ø§Øµ ÙˆØ§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ù…Ø®ØªØ§Ø±.",
-    "experiences.readyHistoricEyebrow": "Ø®ÙŠØ§Ø±Ø§Øª Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©",
-    "experiences.readyHistoricTitle": "Ù…Ø±Ø´Ø¯ Ù…Ø±Ø®Øµ ÙˆØ¨Ø±Ù†Ø§Ù…Ø¬ ÙŠÙ†Ø§Ø³Ø¨ Ø­Ø¬Ù… Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©",
-    "experiences.readyHistoricText": "ØªØ´Ù…Ù„ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¬ÙˆÙ„Ø§Øª Ø§Ù„Ù‚Ù‡ÙˆØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© ÙˆØ§Ù„ØªÙ…Ø± ÙˆÙ…Ø­Ø·Ø§Øª ØªØ±Ø§Ø«ÙŠØ© Ù…Ø®ØªØ§Ø±Ø©ØŒ ÙˆÙ„Ø§ ØªØ´Ù…Ù„ Ø£ÙŠ Ø±Ø³ÙˆÙ… Ø¯Ø®ÙˆÙ„ Ø£Ø®Ø±Ù‰.",
-    "experiences.heritageSmallMeta": "Ø³Ø§Ø¹ØªØ§Ù† Ø¥Ù„Ù‰ Ø³Ø§Ø¹ØªÙŠÙ† ÙˆÙ†ØµÙ Â· Ù…Ù† 1 Ø¥Ù„Ù‰ 4 Ø¶ÙŠÙˆÙ",
-    "experiences.heritageSmallTitle": "Ø¬ÙˆÙ„Ø© ØªØ±Ø§Ø«ÙŠØ© Ø®Ø§ØµØ©",
-    "experiences.heritageSmallText": "Ø¬ÙˆÙ„Ø© Ù…Ø´ÙŠ Ù…Ø±ÙƒØ²Ø© ÙÙŠ Ø§Ù„Ø¨Ù„Ø¯ Ù…Ø¹ Ù…Ø±Ø´Ø¯ Ø³ÙŠØ§Ø­ÙŠ Ù…Ø±Ø®Øµ.",
-    "experiences.heritageGroupMeta": "Ø³Ø§Ø¹ØªØ§Ù† Ø¥Ù„Ù‰ Ø³Ø§Ø¹ØªÙŠÙ† ÙˆÙ†ØµÙ Â· Ù…Ù† 5 Ø¥Ù„Ù‰ 12 Ø¶ÙŠÙÙ‹Ø§",
-    "experiences.heritageGroupTitle": "Ø¬ÙˆÙ„Ø© ØªØ±Ø§Ø«ÙŠØ© Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª",
-    "experiences.heritageGroupText": "Ù…Ø±Ø´Ø¯ Ù…Ø±Ø®Øµ Ù…Ø¹ Ù…Ù†Ø¸Ù… Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§ Ù„ØªØ³Ù‡ÙŠÙ„ Ø­Ø±ÙƒØ© Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.",
-    "experiences.heritageStandardMeta": "Ù†Ù‚Ù„ Ù…Ù† Ø§Ù„ÙÙ†Ø¯Ù‚ ÙˆØ§Ù„Ø¹ÙˆØ¯Ø© Â· Ù…Ù† 1 Ø¥Ù„Ù‰ 4 Ø¶ÙŠÙˆÙ",
-    "experiences.heritageStandardTitle": "Ø¬ÙˆÙ„Ø© ØªØ±Ø§Ø«ÙŠØ© Ù…Ø¹ Ø§Ù„Ù†Ù‚Ù„",
-    "experiences.heritageStandardText": "Ø§Ù„Ø¬ÙˆÙ„Ø© Ø§Ù„Ø®Ø§ØµØ© Ù…Ø¹ Ø³ÙŠØ§Ø±Ø© Ø¹Ø§Ø¯ÙŠØ© ÙˆØ³Ø§Ø¦Ù‚ Ø¨Ø§Ù„ØªÙ†Ø³ÙŠÙ‚ Ù…Ø¹ Ø§Ù„ÙÙ†Ø¯Ù‚.",
-    "experiences.heritageVipMeta": "Ù†Ù‚Ù„ VIP Ù…Ù† Ø§Ù„ÙÙ†Ø¯Ù‚ ÙˆØ§Ù„Ø¹ÙˆØ¯Ø© Â· Ø­ØªÙ‰ 6 Ø¶ÙŠÙˆÙ",
-    "experiences.heritageVipTitle": "Ø¬ÙˆÙ„Ø© ØªØ±Ø§Ø«ÙŠØ© Ù…Ø¹ Ù†Ù‚Ù„ VIP",
-    "experiences.heritageVipText": "Ø³ÙŠØ§Ø±Ø© ØªÙ†ÙÙŠØ°ÙŠØ© Ù…Ø¹ Ø³Ø§Ø¦Ù‚ØŒ Ù…Ø¹ Ø¥Ø¶Ø§ÙØ© Ù…Ù†Ø¸Ù… Ø¹Ù†Ø¯Ù…Ø§ ÙŠØªØ·Ù„Ø¨ Ø­Ø¬Ù… Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© Ø°Ù„Ùƒ.",
-    "experiences.dinnerNoteTitle": "Ø¹Ø´Ø§Ø¡ Ø§Ø®ØªÙŠØ§Ø±ÙŠ Ø¨Ø¹Ø¯ Ø§Ù„Ø¬ÙˆÙ„Ø©",
-    "experiences.dinnerNoteText": "Ø§Ø®ØªØ± Ù…Ø³ØªÙˆÙ‰ Ø§Ù„Ù…Ø·Ø¹Ù… ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ØŒ Ø«Ù… Ù†Ø¤ÙƒØ¯ Ø§Ù„Ø­Ø¬Ø² ÙˆÙ†Ø¶ÙŠÙÙ‡ Ø¥Ù„Ù‰ Ø¹Ø±Ø¶ Ø³Ø¹Ø± Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„ÙƒØ§Ù…Ù„.",
-    "experiences.stbEyebrow": "ÙŠÙˆÙ… Ù…Ù† ØªÙˆÙ‚ÙŠØ¹ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "experiences.stbTitle": "Ù…Ù† Ø§Ù„Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø§Ù„Ø¨Ù„Ø¯",
-    "experiences.stbLead": "ØªØ¬Ø±Ø¨Ø© ØªØ¬Ù…Ø¹ Ø¸Ù‡ÙŠØ±Ø© ÙÙŠ Ø§Ù„Ù…Ù†ØªØ¬Ø¹ØŒ ÙˆØªÙˆÙ‚ÙÙ‹Ø§ Ø¹Ù†Ø¯ Ø§Ù„ØºØ±ÙˆØ¨ ÙÙŠ Ù†Ø§Ø¯ÙŠ Ø¬Ø¯Ø© Ù„Ù„ÙŠØ®ÙˆØªØŒ ÙˆØ£Ù…Ø³ÙŠØ© Ø¨Ø¬ÙˆÙ„Ø© Ù…Ø±Ø®ØµØ© ÙÙŠ Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© Ø¶Ù…Ù† ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯ Ù…Ø±ÙŠØ­.",
-    "experiences.stbClarity": "Ø¬Ø²Ø¡ Â«Ø§Ù„Ø¨Ø­Ø±Â» ÙÙŠ Ù‡Ø°Ù‡ Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù‡Ùˆ ÙˆÙ‚Øª Ø§Ù„Ù…Ù†ØªØ¬Ø¹. ÙŠÙ…ÙƒÙ† Ø·Ù„Ø¨ Ø±Ø­Ù„Ø© Ø¨Ø§Ù„Ù‚Ø§Ø±Ø¨ ÙƒØ®ÙŠØ§Ø± Ù…Ù†ÙØµÙ„ Ø­Ø³Ø¨ Ø§Ù„ØªÙˆÙØ±ØŒ ÙˆØ§Ù„Ø¹Ø´Ø§Ø¡ Ø§Ù„Ø¨Ø­Ø±ÙŠ Ø§Ø®ØªÙŠØ§Ø±ÙŠ.",
-    "experiences.stbStep1Title": "Ù…Ù†ØªØ¬Ø¹ Ù†Ø§Ø±Ø³Ø³",
-    "experiences.stbStep1Text": "Ø¯Ø®ÙˆÙ„ Ø§Ù„Ø´Ø§Ø·Ø¦ Ù…Ø¹ ÙˆØ¬Ø¨Ø© ÙˆÙ…Ø´Ø±ÙˆØ¨ Ù…Ù†Ø¹Ø´ ÙÙŠ Ø£Ø¬ÙˆØ§Ø¡ Ù…Ù†ØªØ¬Ø¹ Ù‡Ø§Ø¯Ø¦Ø©.",
-    "experiences.stbStep2Title": "Ù†Ø§Ø¯ÙŠ Ø¬Ø¯Ø© Ù„Ù„ÙŠØ®ÙˆØª ÙˆÙ‚Øª Ø§Ù„ØºØ±ÙˆØ¨",
-    "experiences.stbStep2Text": "ØªÙˆÙ‚Ù Ù‚ØµÙŠØ± ÙÙŠ Ø§Ù„Ù…Ù…Ø´Ù‰ Ø§Ù„Ø¹Ø§Ù… Ù…Ø¹ Ù…Ø´Ø±ÙˆØ¨ Ù‚ÙŠØ§Ø³ÙŠ ÙˆØ§Ø­Ø¯ Ø¶Ù…Ù† Ø§Ù„Ø³Ø¹Ø±.",
-    "experiences.stbStep3Title": "Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©",
-    "experiences.stbStep3Text": "Ø¬ÙˆÙ„Ø© Ù…Ø¹ Ù…Ø±Ø´Ø¯ Ù…Ø±Ø®Øµ ØªØ´Ù…Ù„ Ø§Ù„Ù‚Ù‡ÙˆØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© ÙˆØ§Ù„ØªÙ…Ø± ÙˆÙ…Ø­Ø·Ø§Øª ØªØ±Ø§Ø«ÙŠØ© Ù…Ø®ØªØ§Ø±Ø©.",
-    "experiences.stbStep4Title": "Ø¹Ø´Ø§Ø¡ Ø¨Ø­Ø±ÙŠ Ø§Ø®ØªÙŠØ§Ø±ÙŠ",
-    "experiences.stbStep4Text": "ÙŠÙ…ÙƒÙ† Ø¥Ø¶Ø§ÙØ© Ø¹Ø´Ø§Ø¡ Ø¨Ø­Ø±ÙŠ ÙÙŠ Ù…Ø·Ø¹Ù… Ù…Ø®ØªØ§Ø± Ø¯Ø§Ø®Ù„ Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© Ø¹Ù†Ø¯ Ø§Ù„Ø±ØºØ¨Ø©.",
-    "experiences.stbDurationLabel": "Ù…Ø¯Ø© Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬",
-    "experiences.stbDurationValue": "Ø­ØªÙ‰ 8 Ø³Ø§Ø¹Ø§ØªØŒ Ø¨Ù…Ø±ÙˆÙ†Ø© ØªÙ‚Ø§Ø±Ø¨ 9 Ø³Ø§Ø¹Ø§Øª",
-    "experiences.stbBaseTitle": "Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ",
-    "experiences.stbDinnerTitle": "Ù…Ø¹ Ø¹Ø´Ø§Ø¡ Ø¨Ø­Ø±ÙŠ VIP",
-    "experiences.stbMinimum": "Ø§Ù„Ø­Ø¯ Ø§Ù„Ø£Ø¯Ù†Ù‰ Ù„Ù„Ø­Ø¬Ø²: 4 Ø¶ÙŠÙˆÙ",
-    "experiences.stbRateNote": "ÙŠØªÙ… ØªØ£ÙƒÙŠØ¯ Ø§Ù„ØªÙˆÙ‚ÙŠØª Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠ ÙˆØ§Ù„Ø³ÙŠØ§Ø±Ø© Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ÙÙ†Ø¯Ù‚ ÙˆØ­Ø¬Ù… Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.",
-    "experiences.bookingEyebrow": "Ù‚Ø¨Ù„ Ø§Ù„Ø­Ø¬Ø²",
-    "experiences.bookingTitle": "Ø´Ø±ÙˆØ· ÙˆØ§Ø¶Ø­Ø© Ø«Ù… Ø®Ø·Ø© Ù…Ø¤ÙƒØ¯Ø©",
-    "experiences.bookingText": "ÙŠÙØ¹Ø¯ ÙƒÙ„ Ø¹Ø±Ø¶ Ø³Ø¹Ø± Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙˆÙØ± ÙˆØ§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠ.",
-    "experiences.booking1Title": "ÙˆÙ‚Øª Ø§Ù„Ø­Ø¬Ø²",
-    "experiences.booking1Text": "ÙŠÙØ¶Ù„ Ø§Ù„Ø­Ø¬Ø² Ù‚Ø¨Ù„ ÙŠÙˆÙ…ÙŠÙ† Ø¥Ù„Ù‰ Ø«Ù„Ø§Ø«Ø© Ø£ÙŠØ§Ù…ØŒ ÙˆÙ‚Ø¯ ÙŠØªØ§Ø­ Ø§Ù„ØªØ±ØªÙŠØ¨ Ù„Ù„ÙŠÙˆÙ… Ø§Ù„ØªØ§Ù„ÙŠ Ø­Ø³Ø¨ Ø§Ù„ØªÙˆÙØ±.",
-    "experiences.booking2Title": "Ø§Ù„Ø¯ÙØ¹ ÙˆØ§Ù„ØªØ¹Ø¯ÙŠÙ„ ÙˆÙÙ‚ ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø®Ø¯Ù…Ø©",
-    "experiences.booking2Text": "ÙŠÙØ­Ø¯Ø¯ Ø¬Ø¯ÙˆÙ„ Ø§Ù„Ø¯ÙØ¹Ø§Øª ÙˆØ£ÙŠ Ø´Ø±ÙˆØ· Ù„Ù„ØªØ¹Ø¯ÙŠÙ„ Ø£Ùˆ Ø§Ù„Ø¥Ù„ØºØ§Ø¡ Ø£Ùˆ Ø§Ù„Ø§Ø³ØªØ±Ø¯Ø§Ø¯ ÙƒØªØ§Ø¨Ø©Ù‹ ÙÙŠ ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø®Ø¯Ù…Ø© Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ.",
-    "experiences.booking3Title": "Ø§Ù„Ø¸Ø±ÙˆÙ Ø§Ù„Ø¨Ø­Ø±ÙŠØ©",
-    "experiences.booking3Text": "Ø¥Ø°Ø§ Ù…Ù†Ø¹ Ø§Ù„Ø·Ù‚Ø³ Ø£Ùˆ Ø¹Ø·Ù„ Ø§Ù„Ù‚Ø§Ø±Ø¨ Ø§Ù„Ø¥Ø¨Ø­Ø§Ø±ØŒ ÙŠÙØ¹Ø§Ù„Ø¬ Ø§Ù„Ø¨Ø¯ÙŠÙ„ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ ÙˆØ£ÙŠ Ø§Ø³ØªØ±Ø¯Ø§Ø¯ ÙˆÙÙ‚ ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø®Ø¯Ù…Ø© Ø§Ù„Ù…ÙƒØªÙˆØ¨.",
-    "about.storyText3": "Ù†ØµÙ…Ù… ØªØ¬Ø§Ø±Ø¨ Ø®Ø§ØµØ© Ø¨Ø¹Ù†Ø§ÙŠØ©ØŒ ØªØ¬Ù…Ø¹ Ø¨ÙŠÙ† Ø§Ù„Ø«Ù‚Ø§ÙØ©ØŒ Ø§Ù„Ø¨Ø­Ø±ØŒ Ø§Ù„ØªØ§Ø±ÙŠØ®ØŒ Ø§Ù„ØµØ­Ø±Ø§Ø¡ØŒ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ù…ØµÙ…Ù…Ø© Ù„ØªÙØ¹Ø§Ø´ Ø¨Ø¹Ù…Ù‚.",
-    "about.storyText4": "ÙƒÙ„ ØªØ¬Ø±Ø¨Ø© Ù†Ø¨ØªÙƒØ±Ù‡Ø§ ØªØ­Ù…Ù„ Ù…Ø¹Ù†Ù‰ØŒ ÙˆÙƒÙ„ Ù…Ø³Ø§Ø± Ù†ØµÙ†Ø¹Ù‡ Ù„Ù‡ Ù‚ØµØ©ØŒ ÙˆÙƒÙ„ ÙØ¹Ø§Ù„ÙŠØ© Ù†Ù†ÙØ°Ù‡Ø§ ØªØ­Ù…Ù„ Ø¨ØµÙ…Ø© Ù…Ø®ØªÙ„ÙØ©ØŒ ÙˆÙƒÙ„ Ø¶ÙŠÙ ÙŠØ¹ÙŠØ´ Ù…Ø¹Ù†Ø§ Ø±Ø­Ù„Ø© Ù„Ø§ ØªØ´Ø¨Ù‡ ØºÙŠØ±Ù‡Ø§.",
-    "about.storyClosing": "Ø£ÙÙ†ØªÙˆØ±Ø§ Ù„ÙŠØ³Øª Ù…Ø¬Ø±Ø¯ Ø±Ø­Ù„Ø©â€¦ Ø¨Ù„ Ø·Ø±ÙŠÙ‚Ø© Ù…Ø®ØªÙ„ÙØ© Ù„Ø§ÙƒØªØ´Ø§Ù Ø§Ù„Ù…ÙƒØ§Ù† ÙˆØµÙ†Ø§Ø¹Ø© Ø§Ù„Ù„Ø­Ø¸Ø§Øª.",
-    "about.visionEyebrow": "Ø¥Ù„Ù‰ Ø£ÙŠÙ† Ù†ØªØ¬Ù‡",
-    "about.visionText1": "Ø£Ù† Ù†ØµØ¨Ø­ Ø§Ù„Ù…Ø±Ø¬Ø¹ Ø§Ù„Ø£ÙˆÙ„ Ù„Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ù„Ù…ØµÙ…Ù…Ø© Ø¨Ø¹Ù†Ø§ÙŠØ©ØŒ Ø¹Ø¨Ø± ØªÙ‚Ø¯ÙŠÙ… Ø£Ø³Ù„ÙˆØ¨ Ø¬Ø¯ÙŠØ¯ ÙÙŠ Ø§Ø³ØªÙƒØ´Ø§Ù Ø§Ù„ÙˆØ¬Ù‡Ø§Øª ÙˆØªÙ†Ø¸ÙŠÙ… Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§ØªØŒ ÙŠØ¹ØªÙ…Ø¯ Ø¹Ù„Ù‰ Ø§Ù„Ø¹Ù…Ù‚ØŒ Ø§Ù„Ø¬ÙˆØ¯Ø©ØŒ ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªÙŠ ØªØµÙ†Ø¹ Ø§Ù„ÙØ±Ù‚.",
-    "about.visionText2": "Ù†Ø¤Ù…Ù† Ø£Ù† Ø§Ù„Ø³ÙØ± ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª Ù„Ù… ÙŠØ¹ÙˆØ¯Ø§ Ù…Ø¬Ø±Ø¯ Ø§Ù†ØªÙ‚Ø§Ù„ Ø£Ùˆ Ù…Ù†Ø§Ø³Ø¨Ø©â€¦ Ø¨Ù„ ØªØ¬Ø±Ø¨Ø© Ù…ØªÙƒØ§Ù…Ù„Ø© ØªØ³ØªØ­Ù‚ Ø£Ù† ØªÙØ¨Ù†Ù‰ Ø¨Ø¥ØªÙ‚Ø§Ù†.",
-    "about.missionEyebrow": "Ù…Ø§ Ø§Ù„Ø°ÙŠ Ù†ØµÙ†Ø¹Ù‡",
-    "about.missionText1": "Ø®Ù„Ù‚ ØªØ¬Ø§Ø±Ø¨ ÙˆÙØ¹Ø§Ù„ÙŠØ§Øª Ø§Ø³ØªØ«Ù†Ø§Ø¦ÙŠØ© ØªØªØ±Ùƒ Ø£Ø«Ø±Ø§Ù‹ Ø­Ù‚ÙŠÙ‚ÙŠØ§Ù‹ ÙÙŠ Ø°Ø§ÙƒØ±Ø© Ø¶ÙŠÙˆÙÙ†Ø§.",
-    "about.missionText2": "Ù†ØµÙ…Ù… ÙƒÙ„ Ø±Ø­Ù„Ø© ÙˆÙƒÙ„ ÙØ¹Ø§Ù„ÙŠØ© Ø¨Ø¹ÙŠÙ† ØªÙ‡ØªÙ… Ø¨Ø§Ù„ØªÙØ§ØµÙŠÙ„ØŒ ÙˆÙ†Ø¨Ù†ÙŠ ÙƒÙ„ ØªØ¬Ø±Ø¨Ø© Ø­ÙˆÙ„ Ø§Ù„Ø¥Ù†Ø³Ø§Ù† Ù†ÙØ³Ù‡Ø› Ø§Ù‡ØªÙ…Ø§Ù…Ø§ØªÙ‡ØŒ ÙˆÙ‚ØªÙ‡ØŒ ÙˆØªÙˆÙ‚Ø¹Ø§ØªÙ‡.",
-    "about.missionText3": "Ù‡Ø¯ÙÙ†Ø§ Ø£Ù† Ù†Ø­ÙˆÙ„ ÙƒÙ„ Ø²ÙŠØ§Ø±Ø© ÙˆÙƒÙ„ Ù…Ù†Ø§Ø³Ø¨Ø© Ø¥Ù„Ù‰ Ù‚ØµØ© ØªØ³ØªØ­Ù‚ Ø£Ù† ØªÙØ±ÙˆÙ‰.",
-    "about.valuesText": "Ø®Ù…Ø³ Ù‚ÙŠÙ… ØªÙˆØ¬Ù‡ Ø·Ø±ÙŠÙ‚Ø© ØªØµÙ…ÙŠÙ…Ù†Ø§ ÙˆØ§Ø®ØªÙŠØ§Ø±Ù†Ø§ ÙˆØªÙ†ÙÙŠØ°Ù†Ø§ Ù„ÙƒÙ„ Ø±Ø­Ù„Ø© ÙˆÙØ¹Ø§Ù„ÙŠØ©.",
-    "about.whyEyebrow": "Ù„Ù…Ø§Ø°Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§ØŸ",
-    "about.whyTitle": "Ù„Ø£Ù† Ø§Ù„ÙØ±Ù‚ Ù„ÙŠØ³ ÙÙŠ Ø§Ù„ÙˆØ¬Ù‡Ø©â€¦ Ø¨Ù„ ÙÙŠ ÙƒÙŠÙ ØªØ¹ÙŠØ´Ù‡Ø§.",
-    "about.whyText1": "ÙÙŠ Ø£ÙÙ†ØªÙˆØ±Ø§ØŒ Ù„Ø§ Ù†Ù‚Ø¯Ù… Ø¨Ø±Ø§Ù…Ø¬ Ø¬Ø§Ù‡Ø²Ø© Ù„Ù„Ø¬Ù…ÙŠØ¹. Ù†Ø­Ù† Ù†ØµÙ†Ø¹ ØªØ¬Ø§Ø±Ø¨ Ù…Ø¯Ø±ÙˆØ³Ø©ØŒ Ù…ØµÙ…Ù…Ø© Ù„ØªÙ†Ø§Ø³Ø¨ Ù…Ù† ÙŠØ¨Ø­Ø« Ø¹Ù† Ø´ÙŠØ¡ Ù…Ø®ØªÙ„Ù.",
-    "about.whyText2": "Ù…Ù† Ù„Ø­Ø¸Ø© Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© ÙˆØ­ØªÙ‰ Ø¢Ø®Ø± ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø±Ø­Ù„Ø© Ø£Ùˆ Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ©ØŒ ÙƒÙ„ Ø´ÙŠØ¡ ÙŠØªÙ… Ø¨Ù†Ø¸Ø±Ø© Ø¯Ù‚ÙŠÙ‚Ø©ØŒ ØªÙ†Ø¸ÙŠÙ… Ø¹Ø§Ù„ÙØŒ ÙˆÙÙ‡Ù… Ø­Ù‚ÙŠÙ‚ÙŠ Ù„Ù…Ø§ ÙŠØ¬Ø¹Ù„ Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ø§Ø³ØªØ«Ù†Ø§Ø¦ÙŠØ©.",
-    "about.whyText3": "Ø³ÙˆØ§Ø¡ ÙƒØ§Ù†Øª Ù„Ø­Ø¸Ø© Ù‡Ø§Ø¯Ø¦Ø© Ø¹Ù„Ù‰ Ø§Ù„Ø¨Ø­Ø±ØŒ Ø¬ÙˆÙ„Ø© Ø¨ÙŠÙ† Ø§Ù„Ø£Ø²Ù‚Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©ØŒ ÙØ¹Ø§Ù„ÙŠØ© Ø®Ø§ØµØ©ØŒ Ø£Ùˆ ØªØ¬Ø±Ø¨Ø© Ù…ØµÙ…Ù…Ø© Ù„ÙØ±ÙŠÙ‚ Ø¹Ù…Ù„â€¦",
-    "about.whyClosing": "Ù†Ø­Ù† Ù„Ø§ Ù†Ø±ØªØ¨ Ø§Ù„Ø±Ø­Ù„Ø© ÙÙ‚Ø·ØŒ Ù†ØµÙ†Ø¹ Ø§Ù„Ø£Ø«Ø± Ø§Ù„Ø°ÙŠ ÙŠØ¨Ù‚Ù‰ Ø¨Ø¹Ø¯Ù‡Ø§.",
-    "nav.partners": "ØªØ¹Ø§ÙˆÙ† Ù…Ø¹Ù†Ø§",
-    "partners.metaTitle": "ØªØ¹Ø§ÙˆÙ† Ù…Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ | Ø´Ø±Ø§ÙƒØ§Øª Ø§Ù„Ø³ÙŠØ§Ø­Ø© ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ©",
-    "partners.metaDescription": "Ø¨ÙˆØ§Ø¨Ø© Ø§Ù„ØªØ¹Ø§ÙˆÙ† Ù…Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ Ù„Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ù†Ø´Ø¢Øª ÙˆØ§Ù„Ù…Ø­ØªØ±ÙÙŠÙ† ÙÙŠ Ø§Ù„Ø³ÙŠØ§Ø­Ø© ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© Ø¯Ø§Ø®Ù„ Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ© ÙˆØ®Ø§Ø±Ø¬Ù‡Ø§.",
-    "partners.heroEyebrow": "Ø´Ø±Ø§ÙƒØ§Øª Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "partners.heroTitle": "Ø£ÙÙ†ØªÙˆØ±Ø§ ØªØ±Ø­Ø¨ Ø¨Ø§Ù„ØªØ¹Ø§ÙˆÙ†.",
-    "partners.heroDescription": "ØªØ±Ø­Ø¨ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¨Ø§Ù„ØªØ¹Ø§ÙˆÙ† Ù…Ø¹ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ù†Ø´Ø¢Øª ÙˆØ§Ù„Ù…Ø­ØªØ±ÙÙŠÙ† Ø¯Ø§Ø®Ù„ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ© ÙˆØ®Ø§Ø±Ø¬Ù‡Ø§ØŒ Ù„Ø¨Ù†Ø§Ø¡ Ø´Ø±Ø§ÙƒØ§Øª ØªÙ‚Ø¯Ù… ØªØ¬Ø§Ø±Ø¨ ÙˆÙØ¹Ø§Ù„ÙŠØ§Øª Ø¨Ù…Ø¹Ø§ÙŠÙŠØ± Ø¹Ø§Ù„ÙŠØ© ÙˆÙ‡ÙˆÙŠØ© Ù…Ù…ÙŠØ²Ø©.",
-    "partners.heroButton": "Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ ØªØ¹Ø§ÙˆÙ†",
-    "partners.introEyebrow": "Ù…Ø¹Ø§ÙŠÙŠØ± Ù…Ø´ØªØ±ÙƒØ©",
-    "partners.introTitle": "Ø§Ù„Ø´Ø±Ø§ÙƒØ© Ø§Ù„ØµØ­ÙŠØ­Ø© ØªØ¹Ø²Ø² ÙƒÙ„ ØªØ¬Ø±Ø¨Ø© ÙŠØ¹ÙŠØ´Ù‡Ø§ Ø§Ù„Ø¶ÙŠÙ.",
-    "partners.introText": "Ù†Ù‚Ø¯Ù‘Ø± ÙˆØ¶ÙˆØ­ Ø§Ù„ØªÙˆØ§ØµÙ„ØŒ ÙˆØ§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø§Ù„ØªÙ†ÙÙŠØ°ØŒ ÙˆØ£ØµØ§Ù„Ø© Ø§Ù„Ø¶ÙŠØ§ÙØ©ØŒ ÙˆØ§Ø­ØªØ±Ø§Ù… Ø§Ù„Ø¶ÙŠÙ. ÙˆÙŠØ¨Ø¯Ø£ ÙƒÙ„ ØªØ¹Ø§ÙˆÙ† Ø¨ÙÙ‡Ù… Ù…Ø§ ÙŠØ³ØªØ·ÙŠØ¹ Ø§Ù„Ø·Ø±ÙØ§Ù† ØªÙ‚Ø¯ÙŠÙ…Ù‡ Ù…Ø¹Ù‹Ø§ Ø¨Ø£ÙØ¶Ù„ ØµÙˆØ±Ø©.",
-    "partners.introStatement": "ØªØ±Ø­Ø¨ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¨Ø§Ù„Ø´Ø±Ø§ÙƒØ§Øª Ø§Ù„ØªÙŠ ØªØ¶ÙŠÙ Ù‚ÙŠÙ…Ø© Ø­Ù‚ÙŠÙ‚ÙŠØ© Ù„Ù„Ø±Ø­Ù„Ø© ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ© ÙˆØ§Ù„Ù…ÙƒØ§Ù†ØŒ Ø³ÙˆØ§Ø¡ ÙƒØ§Ù†Øª Ù…Ø­Ù„ÙŠØ© Ø£Ùˆ Ø¥Ù‚Ù„ÙŠÙ…ÙŠØ© Ø£Ùˆ Ø¯ÙˆÙ„ÙŠØ©.",
-    "partners.introReach": "Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ© Â· Ø¥Ù‚Ù„ÙŠÙ…ÙŠÙ‹Ø§ Â· Ø¯ÙˆÙ„ÙŠÙ‹Ø§",
-    "partners.localScopeEyebrow": "ØªÙ†ÙÙŠØ° Ù…Ø­Ù„ÙŠ",
-    "partners.localScopeText": "ØªØ¯ÙŠØ± ÙˆÙƒØ§Ù„Ø§Øª Ø§Ù„Ø³ÙØ± ÙˆØ§Ù„ÙÙ†Ø§Ø¯Ù‚ Ø§Ù„Ø·ÙŠØ±Ø§Ù† ÙˆØ§Ù„Ø¥Ù‚Ø§Ù…Ø©ØŒ Ø¨ÙŠÙ†Ù…Ø§ ØªÙ†ÙØ° Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„ØªØ¬Ø§Ø±Ø¨ ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ù…Ø­Ù„ÙŠØ© Ø§Ù„Ù…Ø¤ÙƒØ¯Ø© Ù…Ø¹Ù‡Ø§ ÙÙŠ Ø¬Ø¯Ø©.",
-    "partners.audiencesEyebrow": "Ù…Ù† ÙŠÙ…ÙƒÙ†Ù‡ Ø§Ù„ØªØ¹Ø§ÙˆÙ†ØŸ",
-    "partners.audiencesTitle": "Ù…Ø³Ø§Ø±Ø§Ù† ÙˆØ¨ÙˆØ§Ø¨Ø© ÙˆØ§Ø­Ø¯Ø© ÙˆØ§Ø¶Ø­Ø©",
-    "partners.audiencesText": "Ø§Ø®ØªØ± Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ø°ÙŠ ÙŠØµÙÙƒØŒ ÙˆØ³ÙŠØ¬Ù…Ø¹ Ø§Ù„Ù†Ù…ÙˆØ°Ø¬ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© Ø¯ÙˆÙ† Ø®Ø·ÙˆØ§Øª ØºÙŠØ± Ø¶Ø±ÙˆØ±ÙŠØ©.",
-    "partners.orgEyebrow": "Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ù†Ø´Ø¢Øª",
-    "partners.orgTitle": "Ø¬Ù‡Ø§Øª ØªØ³ØªØ¶ÙŠÙ Ø£Ùˆ ØªØ´ØºÙ‘Ù„ Ø£Ùˆ ØªÙ†ÙØ°",
-    "partners.orgText": "Ù„Ù„Ù…Ù†Ø´Ø¢Øª Ø§Ù„Ù…Ø±Ø®ØµØ© ÙˆØ§Ù„Ù…ÙˆØ§Ù‚Ø¹ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ØªÙŠ ÙŠÙ…ÙƒÙ†Ù‡Ø§ Ø§Ù„Ù…Ø³Ø§Ù‡Ù…Ø© ÙÙŠ Ø±Ø­Ù„Ø© Ø£Ùˆ ÙØ¹Ø§Ù„ÙŠØ© Ù…ØªÙƒØ§Ù…Ù„Ø©.",
-    "partners.orgItem1": "Ø´Ø±ÙƒØ§Øª Ø§Ù„Ø³ÙŠØ§Ø­Ø© ÙˆÙ…Ù†Ø¸Ù…Ùˆ Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª",
-    "partners.orgItem2": "Ø§Ù„Ù…Ù†ØªØ¬Ø¹Ø§Øª ÙˆØ§Ù„ÙÙ†Ø§Ø¯Ù‚ ÙˆØ§Ù„Ù…Ø·Ø§Ø¹Ù… ÙˆØ§Ù„Ø´ÙˆØ§Ø·Ø¦ ÙˆØ§Ù„Ù…ÙˆØ§Ù‚Ø¹",
-    "partners.orgItem3": "Ù…Ø´ØºÙ„Ùˆ Ø§Ù„Ø£Ù†Ø´Ø·Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ© ÙˆØ§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„ÙˆØ¬Ù‡Ø§Øª",
-    "partners.orgItem4": "Ù…Ù‚Ø¯Ù…Ùˆ Ø§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…ØªØ®ØµØµØ©",
-    "partners.proEyebrow": "Ø§Ù„Ø£ÙØ±Ø§Ø¯ ÙˆØ§Ù„Ù…Ø­ØªØ±ÙÙˆÙ†",
-    "partners.proTitle": "Ø®Ø¨Ø±Ø§Øª ØªØµÙ†Ø¹ Ø¬ÙˆØ¯Ø© Ø§Ù„Ù„Ø­Ø¸Ø©",
-    "partners.proText": "Ù„Ù„Ù…Ø­ØªØ±ÙÙŠÙ† Ø§Ù„Ø°ÙŠÙ† ÙŠÙ…ØªÙ„ÙƒÙˆÙ† Ø®Ø¨Ø±Ø© Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ±ÙˆØ­ Ø®Ø¯Ù…Ø© Ø¹Ø§Ù„ÙŠØ© ÙˆØ£ÙŠ ØªØ±Ø§Ø®ÙŠØµ Ù…Ø­Ù„ÙŠØ© Ù…Ø·Ù„ÙˆØ¨Ø©.",
-    "partners.proItem1": "Ù…Ù†Ø¸Ù…Ùˆ Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ§Ù„Ù…Ù†Ø³Ù‚ÙˆÙ† ÙˆÙ…Ø±Ø§ÙÙ‚Ùˆ Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "partners.proItem2": "Ø§Ù„Ù…ØµÙˆØ±ÙˆÙ† ÙˆØ§Ù„Ù…Ø­ØªØ±ÙÙˆÙ† ÙÙŠ Ø§Ù„Ù…Ø¬Ø§Ù„Ø§Øª Ø§Ù„Ø¥Ø¨Ø¯Ø§Ø¹ÙŠØ©",
-    "partners.proItem3": "Ø§Ù„Ù…Ø±Ø´Ø¯ÙˆÙ† Ø§Ù„Ù…Ø±Ø®ØµÙˆÙ† ÙˆØ§Ù„Ù…ØªØ±Ø¬Ù…ÙˆÙ† Ø§Ù„ÙÙˆØ±ÙŠÙˆÙ† ÙˆØ§Ù„ØªØ­Ø±ÙŠØ±ÙŠÙˆÙ†",
-    "partners.proItem4": "Ø§Ù„Ø³Ø§Ø¦Ù‚ÙˆÙ† Ø§Ù„Ù…Ø­ØªØ±ÙÙˆÙ† ÙˆØ§Ù„Ù…ØªØ®ØµØµÙˆÙ† Ø§Ù„Ù…Ø­Ù„ÙŠÙˆÙ†",
-    "partners.scopeEyebrow": "Ù…Ø¬Ø§Ù„Ø§Øª Ø§Ù„ØªØ¹Ø§ÙˆÙ†",
-    "partners.scopeTitle": "ØªØ®ØµØµØ§Øª Ù…Ø®ØªÙ„ÙØ© ØªØ¬ØªÙ…Ø¹ Ø­ÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ",
-    "partners.scopeText": "Ù‚Ø¯ ÙŠØ¯Ø¹Ù… Ø§Ù„ØªØ¹Ø§ÙˆÙ† Ø®Ø¯Ù…Ø© ÙˆØ§Ø­Ø¯Ø©ØŒ Ø£Ùˆ ÙŠØµØ¨Ø­ Ø¬Ø²Ø¡Ù‹Ø§ Ù…Ù† ØªØ¬Ø±Ø¨Ø© Ø£Ùˆ ÙØ¹Ø§Ù„ÙŠØ© Ø£Ùˆ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø¶ÙŠÙˆÙ Ù…ØªØ¹Ø¯Ø¯ Ø§Ù„Ø£ÙŠØ§Ù….",
-    "partners.scope1Title": "Ø§Ù„Ø³ÙŠØ§Ø­Ø© ÙˆØ§Ù„ÙˆØ¬Ù‡Ø§Øª",
-    "partners.scope1Text": "Ù…Ø´ØºÙ„Ùˆ Ø§Ù„Ø±Ø­Ù„Ø§Øª ÙˆØ´Ø±ÙƒØ§Øª Ø§Ù„ÙˆØ¬Ù‡Ø§Øª ÙˆØ§Ù„Ù…Ø±Ø´Ø¯ÙˆÙ† ÙˆØ§Ù„Ù…ØªØ®ØµØµÙˆÙ† Ø§Ù„Ø«Ù‚Ø§ÙÙŠÙˆÙ†.",
-    "partners.scope2Title": "Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª ÙˆØ§Ù„ØªØ´ØºÙŠÙ„",
-    "partners.scope2Text": "Ø§Ù„ØªØ®Ø·ÙŠØ· ÙˆØ§Ù„Ø¥Ù†ØªØ§Ø¬ ÙˆØ§Ù„ÙƒÙˆØ§Ø¯Ø± ÙˆØ§Ù„ØªÙ†Ø³ÙŠÙ‚ ÙˆØ§Ù„ØªÙ†ÙÙŠØ° Ø§Ù„Ù…ÙŠØ¯Ø§Ù†ÙŠ.",
-    "partners.scope3Title": "Ø§Ù„Ù…ÙˆØ§Ù‚Ø¹ ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ©",
-    "partners.scope3Text": "Ø§Ù„Ù…Ù†ØªØ¬Ø¹Ø§Øª ÙˆØ§Ù„Ù…Ø·Ø§Ø¹Ù… ÙˆØ§Ù„ÙÙ†Ø§Ø¯Ù‚ ÙˆØ§Ù„Ø´ÙˆØ§Ø·Ø¦ ÙˆØ§Ù„Ù…ÙˆØ§Ù‚Ø¹ Ø§Ù„Ø®Ø§ØµØ© ÙˆØ§Ù„ØªÙ…ÙˆÙŠÙ†.",
-    "partners.scope4Title": "Ø§Ù„Ø¨Ø­Ø± ÙˆØ§Ù„Ù†Ù‚Ù„",
-    "partners.scope4Text": "Ø§Ù„Ù‚ÙˆØ§Ø±Ø¨ ÙˆØ§Ù„ÙŠØ®ÙˆØª ÙˆØ§Ù„Ù…Ø±ÙƒØ¨Ø§Øª ÙˆØ§Ù„Ø³Ø§Ø¦Ù‚ÙˆÙ† Ø§Ù„Ù…Ø­ØªØ±ÙÙˆÙ† ÙˆÙ„ÙˆØ¬Ø³ØªÙŠØ§Øª Ø§Ù„Ø­Ø±ÙƒØ©.",
-    "partners.scope5Title": "Ø§Ù„Ù…Ø­ØªÙˆÙ‰ ÙˆØ§Ù„Ù„ØºØ§Øª",
-    "partners.scope5Text": "Ø§Ù„ØªØµÙˆÙŠØ± ÙˆØ§Ù„ÙÙŠØ¯ÙŠÙˆ ÙˆØ§Ù„ØªØ±Ø¬Ù…Ø© Ø§Ù„ÙÙˆØ±ÙŠØ© ÙˆØ§Ù„ØªØ­Ø±ÙŠØ±ÙŠØ© ÙˆØµÙ†Ø§Ø¹Ø© Ø§Ù„Ù‚ØµØ©.",
-    "partners.scope6Title": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "partners.scope6Text": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ§Ù„Ù…Ø±Ø§ÙÙ‚ÙˆÙ† ÙˆØ§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬ ÙˆØ§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ù…ØªØ®ØµØµØ©.",
-    "partners.processEyebrow": "Ù…Ø³Ø§Ø± Ø§Ù„ØªØ¹Ø§ÙˆÙ†",
-    "partners.processTitle": "Ø¨Ø¯Ø§ÙŠØ© Ù…Ø¯Ø±ÙˆØ³Ø© Ù‚Ø¨Ù„ Ø£ÙŠ ØªÙƒÙ„ÙŠÙ",
-    "partners.processText": "ÙŠØ­Ù…ÙŠ Ø§Ù„Ù…Ø³Ø§Ø± ØªØ¬Ø±Ø¨Ø© Ø§Ù„Ø¶ÙŠÙ ÙˆÙŠÙ…Ù†Ø­ Ø§Ù„Ø·Ø±ÙÙŠÙ† ÙÙ‡Ù…Ù‹Ø§ ÙˆØ§Ø¶Ø­Ù‹Ø§ Ù„Ù„ØªÙˆÙ‚Ø¹Ø§Øª.",
-    "partners.process1Title": "Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨",
-    "partners.process1Text": "Ø´Ø§Ø±Ùƒ Ù†Ø¨Ø°ØªÙƒ ÙˆÙ…Ø¬Ø§Ù„ Ø®Ø¯Ù…ØªÙƒ ÙˆØ£ÙØ¶Ù„ Ø£Ù…Ø«Ù„Ø© Ø£Ø¹Ù…Ø§Ù„Ùƒ.",
-    "partners.process2Title": "Ø§Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©",
-    "partners.process2Text": "Ù†Ø±Ø§Ø¬Ø¹ Ø§Ù„Ù…Ù„Ø§Ø¡Ù…Ø© ÙˆØ§Ù„Ù†Ø·Ø§Ù‚ Ø§Ù„ØªØ´ØºÙŠÙ„ÙŠ ÙˆØ§Ù„ØªØ±Ø§Ø®ÙŠØµ Ø£Ùˆ Ø§Ù„ØªØ³Ø¬ÙŠÙ„Ø§Øª Ø°Ø§Øª Ø§Ù„ØµÙ„Ø©.",
-    "partners.process3Title": "Ø§Ù„ØªØ¹Ø§Ø±Ù",
-    "partners.process3Text": "Ù…Ø­Ø§Ø¯Ø«Ø© Ù…Ø®ØªØµØ±Ø© Ù„Ù…ÙˆØ§Ø¡Ù…Ø© Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø®Ø¯Ù…Ø© ÙˆØ§Ù„ØªÙˆÙØ± ÙˆØ§Ù„Ø¬ÙˆØ§Ù†Ø¨ Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ©.",
-    "partners.process4Title": "Ø§Ù„ØªØ£ÙƒÙŠØ¯",
-    "partners.process4Text": "ØªÙØ¤ÙƒØ¯ Ø§Ù„ÙØ±Øµ Ø§Ù„Ù…Ø¹ØªÙ…Ø¯Ø© Ø¹Ø¨Ø± Ù†Ø·Ø§Ù‚ Ø¹Ù…Ù„ ÙˆØ§ØªÙØ§Ù‚ ÙˆØ§Ø¶Ø­ÙŠÙ†.",
-    "partners.formEyebrow": "Ø·Ù„Ø¨ Ø§Ù„ØªØ¹Ø§ÙˆÙ†",
-    "partners.formSideTitle": "Ø£Ø®Ø¨Ø±Ù†Ø§ Ø¨Ù…Ø§ ØªÙ‚Ø¯Ù…Ù‡ Ø¨Ø¥ØªÙ‚Ø§Ù†.",
-    "partners.formSideText": "ØªØ³Ø§Ø¹Ø¯Ù†Ø§ Ø§Ù„Ù†Ø¨Ø°Ø© Ø§Ù„Ù…Ø®ØªØµØ±Ø© ÙˆØ§Ù„Ø¯Ù‚ÙŠÙ‚Ø© Ø¹Ù„Ù‰ ÙÙ‡Ù… Ø§Ù„Ù…ÙƒØ§Ù† Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ Ù„ØªØ¹Ø§ÙˆÙ† Ù…Ø³ØªÙ‚Ø¨Ù„ÙŠ.",
-    "partners.formNote1": "Ø§Ø³ØªØ®Ø¯Ù… ØµÙŠØºØ© Ø¯ÙˆÙ„ÙŠØ© Ù„Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ Ø¹Ù†Ø¯ Ø§Ù„ØªÙ‚Ø¯ÙŠÙ… Ù…Ù† Ø®Ø§Ø±Ø¬ Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©.",
-    "partners.formNote2": "Ø´Ø§Ø±Ùƒ Ø±Ø§Ø¨Ø· Ù…ÙˆÙ‚Ø¹ Ø£Ùˆ Ù…Ø¹Ø±Ø¶ Ø£Ø¹Ù…Ø§Ù„ Ø¨Ø¯Ù„ Ø¥Ø±Ø³Ø§Ù„ Ù…Ø³ØªÙ†Ø¯Ø§Øª Ø­Ø³Ø§Ø³Ø©.",
-    "partners.formNote3": "Ù‚Ø¯ Ù†Ø·Ù„Ø¨ Ø§Ù„ØªØ±Ø§Ø®ÙŠØµ ÙˆØ§Ù„Ù…Ø³ØªÙ†Ø¯Ø§Øª Ø§Ù„Ø¯Ø§Ø¹Ù…Ø© Ø®Ù„Ø§Ù„ Ù…Ø±Ø­Ù„Ø© Ø§Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©.",
-    "partners.formNotice": "Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨ Ù„Ø§ ÙŠØ¹Ù†ÙŠ Ø§Ù„Ø§Ø¹ØªÙ…Ø§Ø¯ ØªÙ„Ù‚Ø§Ø¦ÙŠÙ‹Ø§ Ø£Ùˆ Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø¥Ø³Ù†Ø§Ø¯ Ø£Ø¹Ù…Ø§Ù„.",
-    "partners.formTitle": "Ù…Ù„Ù Ø§Ù„ØªØ¹Ø§ÙˆÙ†",
-    "partners.formText": "Ø£ÙƒÙ…Ù„ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ©ØŒ ÙˆØ³ÙŠÙØªØ­ ÙˆØ§ØªØ³Ø§Ø¨ Ø¨Ø±Ø³Ø§Ù„Ø© Ù…Ø±ØªØ¨Ø© ÙŠÙ…ÙƒÙ†Ùƒ Ù…Ø±Ø§Ø¬Ø¹ØªÙ‡Ø§ Ù‚Ø¨Ù„ Ø§Ù„Ø¥Ø±Ø³Ø§Ù„.",
-    "partners.typeLegend": "Ø£ØªÙ‚Ø¯Ù… Ø¨ØµÙØªÙŠ",
-    "partners.typeOrgTitle": "Ø´Ø±ÙƒØ© Ø£Ùˆ Ù…Ù†Ø´Ø£Ø©",
-    "partners.typeOrgText": "Ø¬Ù‡Ø© Ù…Ø±Ø®ØµØ© Ø£Ùˆ Ù…Ø´ØºÙ„ Ø£Ùˆ Ù…ÙˆÙ‚Ø¹ Ù‚Ø§Ø¦Ù…",
-    "partners.typeProTitle": "Ù…Ø­ØªØ±Ù Ù…Ø³ØªÙ‚Ù„",
-    "partners.typeProText": "ÙØ±Ø¯ ÙŠÙ‚Ø¯Ù… Ø®Ø¯Ù…Ø© Ù…Ù‡Ù†ÙŠØ© Ù…ØªØ®ØµØµØ©",
-    "partners.nameLabel": "Ø§Ù„Ø§Ø³Ù… / Ù…Ø³Ø¤ÙˆÙ„ Ø§Ù„ØªÙˆØ§ØµÙ„",
-    "partners.namePlaceholder": "Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„",
-    "partners.brandLabel": "Ø§Ø³Ù… Ø§Ù„Ù…Ù†Ø´Ø£Ø© Ø£Ùˆ Ø§Ù„Ø§Ø³Ù… Ø§Ù„Ù…Ù‡Ù†ÙŠ",
-    "partners.brandPlaceholder": "Ø§Ø®ØªÙŠØ§Ø±ÙŠ Ù„Ù„Ø£ÙØ±Ø§Ø¯",
-    "partners.countryLabel": "Ø§Ù„Ø¯ÙˆÙ„Ø©",
-    "partners.countryPlaceholder": "Ø§Ù„Ø¯ÙˆÙ„Ø©",
-    "partners.cityLabel": "Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© / Ù…Ù‚Ø± Ø§Ù„ØªØ´ØºÙŠÙ„",
-    "partners.cityPlaceholder": "Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©",
-    "partners.phoneLabel": "Ø§Ù„Ù‡Ø§ØªÙ / ÙˆØ§ØªØ³Ø§Ø¨",
-    "partners.phonePlaceholder": "+966 ...",
-    "partners.emailLabel": "Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ",
-    "partners.emailPlaceholder": "name@example.com",
-    "partners.categoryLabel": "Ù…Ø¬Ø§Ù„ Ø§Ù„ØªØ¹Ø§ÙˆÙ† Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ",
-    "partners.categoryPlaceholder": "Ø§Ø®ØªØ± Ø§Ù„Ù…Ø¬Ø§Ù„ Ø§Ù„Ø£Ù‚Ø±Ø¨",
-    "partners.categoryTourism": "Ø´Ø±ÙƒØ© Ø³ÙŠØ§Ø­Ø© Ø£Ùˆ Ù…Ø´ØºÙ„ ÙˆØ¬Ù‡Ø©",
-    "partners.categoryEvents": "Ø´Ø±ÙƒØ© ÙØ¹Ø§Ù„ÙŠØ§Øª Ø£Ùˆ Ù…Ù†Ø¸Ù… Ø£Ùˆ Ù…Ù†Ø³Ù‚",
-    "partners.categoryVenue": "Ù…Ù†ØªØ¬Ø¹ Ø£Ùˆ ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ù…Ø·Ø¹Ù… Ø£Ùˆ Ø´Ø§Ø·Ø¦ Ø£Ùˆ Ù…ÙˆÙ‚Ø¹",
-    "partners.categoryMarine": "Ù…Ø´ØºÙ„ Ù‚ÙˆØ§Ø±Ø¨ Ø£Ùˆ ÙŠØ®ÙˆØª Ø£Ùˆ Ù†Ø´Ø§Ø· Ø¨Ø­Ø±ÙŠ",
-    "partners.categoryTransport": "Ø´Ø±ÙƒØ© Ù†Ù‚Ù„ Ø£Ùˆ Ø³Ø§Ø¦Ù‚ Ù…Ø­ØªØ±Ù",
-    "partners.categoryPhoto": "Ù…ØµÙˆØ± Ø£Ùˆ ØµØ§Ù†Ø¹ ÙÙŠØ¯ÙŠÙˆ Ø£Ùˆ Ù…Ø­ØªØ±Ù Ø¥Ø¨Ø¯Ø§Ø¹ÙŠ",
-    "partners.categoryGuide": "Ù…Ø±Ø´Ø¯ Ø³ÙŠØ§Ø­ÙŠ",
-    "partners.categoryLanguage": "Ù…ØªØ±Ø¬Ù… ÙÙˆØ±ÙŠ Ø£Ùˆ ØªØ­Ø±ÙŠØ±ÙŠ",
-    "partners.categoryGuest": "Ù…Ø±Ø§ÙÙ‚ Ø¶ÙŠÙˆÙ Ø£Ùˆ ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬ Ø£Ùˆ Ø®Ø¯Ù…Ø© Ø¶ÙŠØ§ÙØ©",
-    "partners.categoryOther": "Ø®Ø¯Ù…Ø© Ù…ØªØ®ØµØµØ© Ø£Ø®Ø±Ù‰",
-    "partners.websiteLabel": "Ø±Ø§Ø¨Ø· Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø£Ùˆ Ù…Ø¹Ø±Ø¶ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„",
-    "partners.websitePlaceholder": "https://...",
-    "partners.experienceLabel": "Ø§Ù„Ø®Ø¨Ø±Ø© / Ø³Ø¬Ù„ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„",
-    "partners.experiencePlaceholder": "Ø³Ù†ÙˆØ§Øª Ø§Ù„Ø®Ø¨Ø±Ø© Ø£Ùˆ Ø£Ø¹Ù…Ø§Ù„ Ø°Ø§Øª ØµÙ„Ø©",
-    "partners.licenseLabel": "Ø§Ù„ØªØ±Ø®ÙŠØµ Ø£Ùˆ Ø§Ù„ØªØ³Ø¬ÙŠÙ„",
-    "partners.licensePlaceholder": "Ø§Ù„Ù†ÙˆØ¹ ÙˆØ§Ù„Ø±Ù‚Ù… Ø¥Ù† ÙƒØ§Ù† Ù…Ø·Ù„ÙˆØ¨Ù‹Ø§",
-    "partners.languagesLabel": "Ø§Ù„Ù„ØºØ§Øª",
-    "partners.languagesPlaceholder": "Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©ØŒ Ø§Ù„Ø¥Ù†Ø¬Ù„ÙŠØ²ÙŠØ© ...",
-    "partners.coverageLabel": "Ù†Ø·Ø§Ù‚ ØªÙ‚Ø¯ÙŠÙ… Ø§Ù„Ø®Ø¯Ù…Ø©",
-    "partners.coveragePlaceholder": "Ø§Ù„Ù…Ø¯Ù† Ø£Ùˆ Ø§Ù„Ø¯ÙˆÙ„ Ø§Ù„ØªÙŠ ØªØºØ·ÙŠÙ‡Ø§",
-    "partners.capacityLabel": "Ø§Ù„Ø·Ø§Ù‚Ø© Ø§Ù„ØªØ´ØºÙŠÙ„ÙŠØ© ÙˆØ§Ù„Ø£Ø³Ø¹Ø§Ø± Ø§Ù„Ø§Ø³ØªØ±Ø´Ø§Ø¯ÙŠØ©",
-    "partners.capacityPlaceholder": "Ø§Ø®ØªÙŠØ§Ø±ÙŠ: Ø­Ø¬Ù… Ø§Ù„ÙØ±ÙŠÙ‚ Ø£Ùˆ Ø§Ù„Ø·Ø§Ù‚Ø© Ø§Ù„ÙŠÙˆÙ…ÙŠØ© Ø£Ùˆ Ù†Ø·Ø§Ù‚ Ø§Ù„Ø³Ø¹Ø±",
-    "partners.messageLabel": "Ø¹Ø±Ù‘Ù Ø¨Ø®Ø¯Ù…ØªÙƒ ÙˆØ§Ù„ØªØ¹Ø§ÙˆÙ† Ø§Ù„Ù…Ù‚ØªØ±Ø­",
-    "partners.messagePlaceholder": "Ù…Ø§Ø°Ø§ ØªÙ‚Ø¯Ù…ØŸ ÙˆÙ…Ø§ Ø§Ù„Ø°ÙŠ ÙŠÙ…ÙŠØ²ÙƒØŸ ÙˆÙƒÙŠÙ ÙŠÙ…ÙƒÙ† Ù„Ø®Ø¯Ù…ØªÙƒ Ø£Ù† ØªÙƒÙ…Ù„ ØªØ¬Ø±Ø¨Ø© Ø£Ùˆ ÙØ¹Ø§Ù„ÙŠØ© Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§ØŸ",
-    "partners.consentText": "Ø£Ø¤ÙƒØ¯ ØµØ­Ø© Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ÙˆØ£ÙˆØ§ÙÙ‚ Ø¹Ù„Ù‰ Ø§Ù„ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙŠ Ø¨Ø®ØµÙˆØµ Ù‡Ø°Ø§ Ø§Ù„Ø·Ù„Ø¨.",
-    "partners.privacyLink": "Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©",
-    "partners.submit": "Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø© Ø¹Ø¨Ø± ÙˆØ§ØªØ³Ø§Ø¨",
-    "partners.submitNote": "ÙŠÙ…ÙƒÙ†Ùƒ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„Ø±Ø³Ø§Ù„Ø© ÙƒØ§Ù…Ù„Ø© Ù‚Ø¨Ù„ Ø¥Ø±Ø³Ø§Ù„Ù‡Ø§.",
-    "partners.error": "Ø£ÙƒÙ…Ù„ Ø§Ù„Ø­Ù‚ÙˆÙ„ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©ØŒ ÙˆØ§Ø®ØªØ± ØµÙØ© Ø§Ù„Ù…ØªÙ‚Ø¯Ù…ØŒ ÙˆØ£Ø¯Ø®Ù„ Ø±Ù‚Ù… Ù‡Ø§ØªÙ Ø£Ùˆ Ø¨Ø±ÙŠØ¯Ù‹Ø§ Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠÙ‹Ø§ØŒ Ø«Ù… ÙˆØ§ÙÙ‚ Ø¹Ù„Ù‰ Ø§Ù„ØªØ£ÙƒÙŠØ¯.",
-    "partners.whatsappIntro": "Ù…Ø±Ø­Ø¨Ù‹Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§ØŒ Ø£Ø±ØºØ¨ ÙÙŠ ØªÙ‚Ø¯ÙŠÙ… Ø·Ù„Ø¨ ØªØ¹Ø§ÙˆÙ†.",
-    "partners.contactLabel": "Ù„Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ù†Ø´Ø¢Øª ÙˆØ§Ù„Ù…Ø­ØªØ±ÙÙŠÙ†",
-    "experiences.quoteLabel": "Ø¹Ø±Ø¶ Ø³Ø¹Ø± Ù…Ø®ØµØµ",
-    "experiences.quoteText": "ÙŠÙØ¹Ø¯ Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„Ù…Ø¯Ø© ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ø®ÙŠØ§Ø±Ø§Øª Ø§Ù„Ù…Ø®ØªØ§Ø±Ø©.",
-    "experiences.quoteButton": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "experiences.stbBaseQuoteText": "ÙŠÙØ³Ø¹Ù‘Ø± Ø§Ù„Ù…Ù†ØªØ¬Ø¹ ÙˆØªÙˆÙ‚Ù Ø§Ù„ØºØ±ÙˆØ¨ ÙˆØ§Ù„Ù…Ø±Ø´Ø¯ Ø§Ù„Ù…Ø±Ø®Øµ ÙˆØ§Ù„Ù†Ù‚Ù„ Ø§Ù„Ù…Ù†Ø³Ù‚ ÙˆÙÙ‚ Ø§Ù„ØªÙˆÙ‚ÙŠØª Ø§Ù„Ø°ÙŠ ÙŠÙ†Ø§Ø³Ø¨Ùƒ.",
-    "experiences.stbDinnerQuoteText": "Ø§Ø®ØªØ± Ù…Ø³ØªÙˆÙ‰ Ø§Ù„Ø¹Ø´Ø§Ø¡ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ Ù„Ø¶ÙŠÙˆÙÙƒ ÙˆØ³Ù†Ø¶ÙŠÙÙ‡ Ø¥Ù„Ù‰ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ø§Ù„Ù…Ø®ØµØµ.",
-    "contact.timeLabel": "ÙˆÙ‚Øª Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ù…ÙØ¶Ù„",
-    "contact.durationLabel": "Ø§Ù„Ù…Ø¯Ø© Ø§Ù„Ù…ØªØ§Ø­Ø©",
-    "contact.durationPlaceholder": "Ø§Ø®ØªØ± Ø§Ù„Ø®ÙŠØ§Ø± Ø§Ù„Ø£Ù‚Ø±Ø¨",
-    "contact.durationShort": "Ù…Ù† Ø³Ø§Ø¹Ø© Ø¥Ù„Ù‰ Ø³Ø§Ø¹ØªÙŠÙ†",
-    "contact.durationHalf": "Ù†ØµÙ ÙŠÙˆÙ…",
-    "contact.durationFull": "ÙŠÙˆÙ… ÙƒØ§Ù…Ù„",
-    "contact.durationFlexible": "Ù…Ø±Ù†",
-    "contact.whatsappTime": "ÙˆÙ‚Øª Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ù…ÙØ¶Ù„",
-    "contact.whatsappDuration": "Ø§Ù„Ù…Ø¯Ø© Ø§Ù„Ù…ØªØ§Ø­Ø©",
-    "nav.corporateEvents": "Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„ÙØ¹Ø§Ù„ÙŠØ§Øª",
-    "contact.progressLabel": "Ù…Ø±Ø§Ø­Ù„ Ø§Ù„Ø·Ù„Ø¨",
-    "contact.step1Short": "Ø¨Ø±Ù†Ø§Ù…Ø¬Ùƒ",
-    "contact.step2Short": "Ø®ØµÙ‘Øµ Ø·Ù„Ø¨Ùƒ",
-    "contact.step3Short": "Ø§Ù„ØªÙˆØ§ØµÙ„",
-    "contact.step1Title": "Ø§Ø¨Ø¯Ø£ Ø¨Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ©",
-    "contact.step1Text": "Ø§Ø®ØªØ± Ù†ÙˆØ¹ Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø£Ù‚Ø±Ø¨ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙØŒ ÙˆÙŠÙ…ÙƒÙ† ØªØ¹Ø¯ÙŠÙ„ ÙƒÙ„ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø¨Ø¹Ø¯ Ø§Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©.",
-    "contact.step2Title": "Ø§Ø®ØªØ± Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªÙŠ ØªÙ†Ø§Ø³Ø¨ Ø·Ù„Ø¨Ùƒ",
-    "contact.step2Text": "Ø§Ø®ØªØ± ÙÙ‚Ø· Ø§Ù„Ø®ÙŠØ§Ø±Ø§Øª Ø§Ù„Ù…Ø±ØªØ¨Ø·Ø© Ø¨Ø·Ù„Ø¨ÙƒØŒ Ø«Ù… Ø£Ø¶Ù Ù…Ù„Ø§Ø­Ø¸Ø© Ù‚ØµÙŠØ±Ø© Ø¥Ù† Ø§Ø­ØªØ¬Øª.",
-    "contact.step3Title": "ÙƒÙŠÙ Ù†ØªÙˆØ§ØµÙ„ Ù…Ø¹Ùƒ Ø¨Ø´Ø£Ù† Ø§Ù„ØªØµÙˆØ± Ø§Ù„Ø£ÙˆÙ„ÙŠØŸ",
-    "contact.step3Text": "Ø£Ø¯Ø®Ù„ Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„ØªÙˆØ§ØµÙ„. Ù„Ø§ ÙŠØªÙ… ØªØ­ØµÙŠÙ„ Ø£ÙŠ Ù…Ø¨Ù„ØºØŒ ÙˆÙ„Ø§ ÙŠÙØ¹Ø¯ Ø§Ù„Ø·Ù„Ø¨ ØªØ£ÙƒÙŠØ¯Ù‹Ø§ Ù„Ù„Ø­Ø¬Ø².",
-    "contact.objectiveLabel": "Ù…Ø§ Ø§Ù„Ù‡Ø¯Ù Ø§Ù„Ø°ÙŠ ØªØ±ÙŠØ¯ Ø£Ù† ÙŠØ­Ù‚Ù‚Ù‡ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ØŸ",
-    "contact.objectivePlaceholder": "Ø§Ø®ØªØ± Ø§Ù„Ø®ÙŠØ§Ø± Ø§Ù„Ø£Ù‚Ø±Ø¨",
-    "contact.objectiveRelaxation": "Ø§Ù„Ø§Ø³ØªØ±Ø®Ø§Ø¡ ÙˆÙˆÙ‚Øª Ø®Ø§Øµ",
-    "contact.objectiveDiscovery": "Ø§ÙƒØªØ´Ø§Ù Ø¬Ø¯Ø© ÙˆØ§Ù„Ø«Ù‚Ø§ÙØ© Ø§Ù„Ù…Ø­Ù„ÙŠØ©",
-    "contact.objectiveHosting": "Ø§Ø³ØªØ¶Ø§ÙØ© Ø¶ÙŠÙˆÙ Ø£Ùˆ ÙˆÙØ¯",
-    "contact.objectiveTeam": "ØªÙ‚ÙˆÙŠØ© Ø§Ù„Ø¹Ù„Ø§Ù‚Ø© Ø£Ùˆ Ù…ÙƒØ§ÙØ£Ø© ÙØ±ÙŠÙ‚",
-    "contact.objectiveCelebration": "Ø§Ù„Ø§Ø­ØªÙØ§Ù„ Ø¨Ù…Ù†Ø§Ø³Ø¨Ø©",
-    "contact.objectiveFlexible": "Ø£Ø±ØºØ¨ Ø£Ù† ØªÙ‚ØªØ±Ø­ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ø£Ù†Ø³Ø¨",
-    "contact.addonsLegend": "Ø®Ø¯Ù…Ø§Øª Ù…Ø³Ø§Ù†Ø¯Ø© Ø§Ø®ØªÙŠØ§Ø±ÙŠØ©",
-    "contact.addonsText": "Ø§Ø®ØªØ± Ù…Ø§ Ù‚Ø¯ ØªØ­ØªØ§Ø¬Ù‡ØŒ ÙˆØ³ØªØ¤ÙƒØ¯ Ø£ÙÙ†ØªÙˆØ±Ø§ ÙÙ‚Ø· Ù…Ø§ ÙŠÙ†Ø§Ø³Ø¨ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬.",
-    "contact.addonTransport": "Ù†Ù‚Ù„ Ø®Ø§Øµ",
-    "contact.addonGuide": "Ù…Ø±Ø´Ø¯ Ø³ÙŠØ§Ø­ÙŠ Ù…Ø±Ø®Øµ",
-    "contact.addonDining": "ØªØ±ØªÙŠØ¨Ø§Øª Ø§Ù„Ù…Ø·Ø§Ø¹Ù… ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ©",
-    "contact.addonHospitality": "Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø¶ÙŠÙ ÙˆØªØ¬Ù‡ÙŠØ² Ø§Ù„ØªØ±Ø­ÙŠØ¨",
-    "contact.addonBoutique": "ØªØµÙˆØ±Ø§Øª Ø¹Ø·Ø±ÙŠØ© Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ±",
-    "contact.addonConcierge": "Ø®Ø¯Ù…Ø© Ø§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬",
-    "contact.backButton": "Ø±Ø¬ÙˆØ¹",
-    "contact.nextButton": "Ù…ØªØ§Ø¨Ø¹Ø©",
-    "contact.stepTypeError": "Ø§Ø®ØªØ± Ù†ÙˆØ¹ Ø§Ù„Ø·Ù„Ø¨ Ù‚Ø¨Ù„ Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©.",
-    "contact.stepRequiredError": "Ø£ÙƒÙ…Ù„ Ø§Ù„Ø­Ù‚Ù„ Ø§Ù„Ø¥Ù„Ø²Ø§Ù…ÙŠ Ù‚Ø¨Ù„ Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©.",
-    "contact.requestReference": "Ù…Ø±Ø¬Ø¹ Ø§Ù„Ø·Ù„Ø¨",
-    "contact.successTitle": "Ø·Ù„Ø¨Ùƒ Ø£ØµØ¨Ø­ Ø¬Ø§Ù‡Ø²Ù‹Ø§",
-    "contact.successText": "ØªÙ… ÙØªØ­ ÙˆØ§ØªØ³Ø§Ø¨ ÙˆØ¨Ø¯Ø§Ø®Ù„Ù‡ Ø·Ù„Ø¨Ùƒ Ø§Ù„Ù…Ø±ØªØ¨. Ø§Ø­ØªÙØ¸ Ø¨Ù‡Ø°Ø§ Ø§Ù„Ù…Ø±Ø¬Ø¹:",
-    "contact.successEmailTitle": "ØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨Ùƒ",
-    "contact.successEmailText": "Ø£ÙØ±Ø³Ù„ Ø·Ù„Ø¨Ùƒ Ù…Ø¨Ø§Ø´Ø±Ø© Ø¥Ù„Ù‰ Ø£ÙÙ†ØªÙˆØ±Ø§. Ø³Ù†Ø±Ø§Ø¬Ø¹ Ø§Ù„ØªÙØ§ØµÙŠÙ„ ÙˆÙ†ØªÙˆØ§ØµÙ„ Ù…Ø¹Ùƒ Ø¨Ø§Ù„Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„ØªÙŠ ØªÙØ¶Ù„Ù‡Ø§. Ø§Ø­ØªÙØ¸ Ø¨Ù‡Ø°Ø§ Ø§Ù„Ù…Ø±Ø¬Ø¹:",
-    "contact.successStatus": "ØªÙ… ØªØ¬Ù‡ÙŠØ² Ø§Ù„Ø·Ù„Ø¨ Ø¨Ù†Ø¬Ø§Ø­. Ø§Ù„Ù…Ø±Ø¬Ø¹:",
-    "contact.successEmailStatus": "ØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ Ø§Ù„Ø­Ø¬Ø² Ø¨Ù†Ø¬Ø§Ø­. Ø§Ù„Ù…Ø±Ø¬Ø¹:",
-    "contact.openWhatsappAgain": "ÙØªØ­ ÙˆØ§ØªØ³Ø§Ø¨ Ù…Ø±Ø© Ø£Ø®Ø±Ù‰",
-    "contact.copyRequest": "Ù†Ø³Ø® ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø·Ù„Ø¨",
-    "contact.requestCopied": "ØªÙ… Ù†Ø³Ø® Ø§Ù„Ø·Ù„Ø¨",
-    "partners.successStatus": "ØªÙ… ØªØ¬Ù‡ÙŠØ² Ù…Ù„Ù Ø§Ù„ØªØ¹Ø§ÙˆÙ†. Ø§Ù„Ù…Ø±Ø¬Ø¹:",
-    "collection.perfumeCardsStatus": "Ø§Ù„Ù…Ø±Ø¦ÙŠØ§Øª Ø§Ù„Ø­Ø§Ù„ÙŠØ© ØªØµÙˆØ±Ø§Øª Ù…Ø¤Ù‚ØªØ©. Ø³ØªÙØ¶Ø§Ù Ø§Ù„Ø¹Ø¨ÙˆØ§Øª ÙˆØ§Ù„ØªØºÙ„ÙŠÙ ÙˆØ§Ù„Ø£Ø­Ø¬Ø§Ù… ÙˆÙ…ÙˆØ¹Ø¯ Ø§Ù„Ø¥Ø·Ù„Ø§Ù‚ Ø¨Ø¹Ø¯ Ø§ÙƒØªÙ…Ø§Ù„ ØªØ·ÙˆÙŠØ± Ø§Ù„Ø¹Ø·Ø±.",
-    "collection.productSea3Short": "Ø­Ø§ÙØ¸Ø© Ø§Ù„Ù‡Ø§ØªÙ",
-    "collection.productSea3Title": "Ø­Ø§ÙØ¸Ø© Ù‡Ø§ØªÙ Ù…Ù‚Ø§ÙˆÙ…Ø© Ù„Ù„Ø±Ø°Ø§Ø°",
-    "collection.productSea3Text": "Ø­Ø§ÙØ¸Ø© Ù…Ø­ÙƒÙ…Ø© Ù„Ø­Ù…Ø§ÙŠØ© Ø§Ù„Ù‡Ø§ØªÙ Ù…Ù† Ø±Ø°Ø§Ø° Ø§Ù„Ù…Ø§Ø¡ ÙˆØ§Ù„Ø±Ù…Ø§Ù„ØŒ ÙˆÙ„Ø§ ØªÙÙ‚Ø¯Ù‘ÙÙ… Ø¹Ù„Ù‰ Ø£Ù†Ù‡Ø§ Ù…Ø¹Ø¯Ù‘Ø© Ù„Ù„ØºÙˆØµ.",
-    "collection.productSea4Short": "Ø¹Ø¨ÙˆØ© Ø­Ø±Ø§Ø±ÙŠØ©",
-    "collection.productSea4Title": "Ø¹Ø¨ÙˆØ© Ù…ÙŠØ§Ù‡ Ù…Ø¹Ø²ÙˆÙ„Ø© Ø­Ø±Ø§Ø±ÙŠÙ‹Ø§",
-    "collection.productSea4Text": "Ø¹Ø¨ÙˆØ© Ù‚Ø§Ø¨Ù„Ø© Ù„Ø¥Ø¹Ø§Ø¯Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… ØªØ³Ø§Ø¹Ø¯ Ø¹Ù„Ù‰ Ø¥Ø¨Ù‚Ø§Ø¡ Ù…ÙŠØ§Ù‡ Ø§Ù„Ø´Ø±Ø¨ Ø¨Ø§Ø±Ø¯Ø© Ø®Ù„Ø§Ù„ Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ©.",
-    "collection.productDesert4Short": "Ø­Ø§ÙØ¸Ø© Ø³ÙØ±",
-    "collection.productDesert4Title": "Ø­Ø§ÙØ¸Ø© Ø³ÙØ± Ù…ØªØ¹Ø¯Ø¯Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…",
-    "collection.productDesert4Text": "Ø­Ø§ÙØ¸Ø© Ù‚Ù…Ø§Ø´ÙŠØ© ØµØºÙŠØ±Ø© Ù„Ù„Ø£ØºØ±Ø§Ø¶ Ø§Ù„Ø´Ø®ØµÙŠØ©ØŒ ØªØ³Ø§Ø¹Ø¯ Ø¹Ù„Ù‰ ØªØ±ØªÙŠØ¨Ù‡Ø§ ÙˆØ­Ù…Ø§ÙŠØªÙ‡Ø§ Ù…Ù† Ø§Ù„Ø±Ù…Ø§Ù„.",
-    "home.processEyebrow": "ÙƒÙŠÙ ØªØ¹Ù…Ù„ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "home.processTitle": "Ù…Ù† Ø§Ù„Ø·Ù„Ø¨ Ø¥Ù„Ù‰ Ø®Ø·Ø© ØªØ´ØºÙŠÙ„ÙŠØ© ÙˆØ§Ø­Ø¯Ø© ÙˆÙˆØ§Ø¶Ø­Ø©",
-    "home.processText": "Ù„Ø§ Ù†ÙØ±Ø¶ Ø¨Ø§Ù‚Ø© Ø«Ø§Ø¨ØªØ©Ø› Ø¨Ù„ Ù†Ø±Ø§Ø¬Ø¹ ÙƒÙ„ Ø·Ù„Ø¨ Ø­Ø³Ø¨ Ø§Ù„ØªÙˆÙØ± ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ·Ø¨ÙŠØ¹Ø© Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "home.process1Title": "Ø´Ø§Ø±ÙƒÙ†Ø§ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ§Øª",
-    "home.process1Text": "Ø£Ø®Ø¨Ø±Ù†Ø§ Ø¨Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ§Ù„Ø´Ø¹ÙˆØ± Ø§Ù„Ø°ÙŠ ØªØ±ÙŠØ¯ Ø£Ù† ØªØ­Ù…Ù„Ù‡ Ø§Ù„ØªØ¬Ø±Ø¨Ø©.",
-    "home.process2Title": "Ù†Ø±Ø§Ø¬Ø¹ ÙˆÙ†ØµÙ…Ù…",
-    "home.process2Text": "ØªÙ†Ø³Ù‚ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ø³Ø§Ø± ÙˆØ§Ù„Ø´Ø±ÙƒØ§Ø¡ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¶ÙŠÙ Ø§Ù„Ø§Ø®ØªÙŠØ§Ø±ÙŠØ©.",
-    "home.process3Title": "ØªØ£ÙƒÙŠØ¯ ÙˆØ§Ø¶Ø­ Ù‚Ø¨Ù„ Ø§Ù„ØªÙ†ÙÙŠØ°",
-    "home.process3Text": "ÙŠØµÙ„Ùƒ Ù†Ø·Ø§Ù‚ Ø¹Ù…Ù„ ÙˆØ§Ø¶Ø­ ÙˆØ¹Ø±Ø¶ Ø³Ø¹Ø± Ù…Ø®ØµØµ Ù‚Ø¨Ù„ Ø£ÙŠ ØªØ£ÙƒÙŠØ¯ Ù†Ù‡Ø§Ø¦ÙŠ.",
-    "home.processButton": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "experienceIndex.heroText": "Ø§Ø®ØªØ± Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù„ØªÙØªØ­ Ù‚ØµØªÙ‡Ø§ ÙˆØ®ÙŠØ§Ø±Ø§Øª Ø¨Ø±Ù†Ø§Ù…Ø¬Ù‡Ø§ ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªÙŠ ØªØµÙˆØº Ø§Ù„ÙŠÙˆÙ… Ø­ÙˆÙ„ Ø¶ÙŠÙˆÙÙƒ.",
-    "experienceIndex.coreEyebrow": "Ø§Ø®ØªØ± Ø¹Ø§Ù„Ù…Ùƒ",
-    "experienceIndex.coreTitle": "Ù„ÙƒÙ„ ØªØ¬Ø±Ø¨Ø© Ø§Ù„Ø¢Ù† Ø¹Ø§Ù„Ù…Ù‡Ø§ Ø§Ù„Ø®Ø§Øµ",
-    "experienceIndex.coreText": "Ø§ÙØªØ­ Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù„ØªÙÙ‡Ù… Ù‚ØµØªÙ‡Ø§ ÙˆØµÙŠØºÙ‡Ø§ ÙˆØ§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„Ø°ÙŠ ÙŠÙ†Ø§Ø³Ø¨ Ø¶ÙŠÙˆÙÙƒ.",
-    "experienceIndex.open": "ÙØªØ­ ØµÙØ­Ø© Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experienceIndex.back": "Ø¬Ù…ÙŠØ¹ Ø§Ù„ØªØ¬Ø§Ø±Ø¨",
-    "experienceIndex.labelSea": "Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø± Â· Ø£Ø¨Ø­Ø±",
-    "experienceIndex.labelHistoric": "Ø§Ù„Ø¨Ù„Ø¯ Â· Ø¬Ø¯Ø©",
-    "experienceIndex.labelDesert": "Last Light Â· Ø§Ù„ØµØ­Ø±Ø§Ø¡",
-    "experienceIndex.labelTaif": "ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù Â· Ø§Ù„Ù…Ø±ØªÙØ¹Ø§Øª",
-    "experienceIndex.labelJeddahDay": "Ø¬Ø¯Ø© Â· ÙŠÙˆÙ… Ù…Ø±Ù†",
-    "experienceIndex.labelSignature": "Ø£ÙÙ†ØªÙˆØ±Ø§ Â· ÙŠÙˆÙ… Ù…Ù…ÙŠØ²",
-    "experienceIndex.seaEyebrow": "Ø±Ø­Ù„Ø§Øª Ø§Ù„Ø¨Ø­Ø±",
-    "experienceIndex.seaTitle": "Ø§Ø®ØªØ± Ø§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ£Ø³Ù„ÙˆØ¨ Ø§Ù„Ø±Ø­Ù„Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ©",
-    "experienceIndex.seaText": "Ù„ÙƒÙ„ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø¨Ø­Ø±ÙŠ ØµÙØ­ØªÙ‡ Ø§Ù„Ø®Ø§ØµØ©ØŒ Ø¨Ø¥ÙŠÙ‚Ø§Ø¹ ÙˆØ§Ø¶Ø­ Ù…Ù† Ø§Ù„Ø§Ù†Ø·Ù„Ø§Ù‚ Ø­ØªÙ‰ Ø§Ù„Ù„Ø­Ø¸Ø© Ø§Ù„Ø£Ø®ÙŠØ±Ø© Ø¹Ù„Ù‰ Ø§Ù„Ù…Ø§Ø¡.",
-    "experienceDetail.productsEyebrow": "Ù„Ù…Ø³Ø§Øª Ø§Ø®ØªÙŠØ§Ø±ÙŠØ© Ø¨Ø¹Ø¯ Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experienceDetail.productsTitle": "ØªÙØ§ØµÙŠÙ„ Ù…Ø±ØªØ¨Ø·Ø© Ø¨Ù‡Ø°Ù‡ Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experienceDetail.productsText": "Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù…ÙƒØªÙ…Ù„Ø© Ø¯ÙˆÙ†Ù‡Ø§. Ø£Ø¶Ù Ø§Ù„ØªÙØµÙŠÙ„Ø© ÙÙ‚Ø· Ø¥Ø°Ø§ ÙƒØ§Ù†Øª ØªÙ†Ø§Ø³Ø¨ Ø¶ÙŠÙÙƒ ÙˆØ§Ù„Ù„Ø­Ø¸Ø©.",
-    "experienceDetail.scentsEyebrow": "Ø¹Ø·Ø±Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ù…ÙŠØ²Ø§Ù†",
-    "experienceDetail.scentsTitle": "Ø¹Ø·Ø±Ø§ Ø£ÙÙ†ØªÙˆØ±Ø§ Ù„Ù‡Ø°Ù‡ Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experienceDetail.scentsText": "Ù„Ø§ ØªØªØ¶Ù…Ù† Ù‡Ø°Ù‡ Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù…Ù†ØªØ¬Ø§Øª Ø¥Ø¶Ø§ÙÙŠØ©. Ø§Ø³ØªÙƒØ´Ù After Midnight Noir ÙˆAfter Midnight VelvetØŒ Ø¹Ø·Ø±ÙŠ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ†ØŒ ÙˆÙƒÙ„Ø§Ù‡Ù…Ø§ Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ±.",
-    "experienceDetail.boxEyebrow": "ØªØ°ÙƒØ§Ø± Ù„Ù„Ù…Ù†Ø§Ø³Ø¨Ø©",
-    "experienceDetail.boxTitle": "Ù‡ÙˆÙŠØ© Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙÙŠ Ø¨ÙˆÙƒØ³ ÙˆØ§Ø­Ø¯ Ù…Ø¯Ø±ÙˆØ³",
-    "experienceDetail.boxText": "Ø§Ù„Ø¨ÙˆÙƒØ³ Ø§Ø®ØªÙŠØ§Ø±ÙŠ. Ø§Ø®ØªØ±Ù‡ ÙÙ‚Ø· Ø¹Ù†Ø¯Ù…Ø§ ÙŠÙƒÙˆÙ† Ø¬Ø²Ø¡Ø§Ù‹ Ù…Ù†Ø§Ø³Ø¨Ø§Ù‹ Ù…Ù† Ø§Ù„Ù„Ø­Ø¸Ø© Ø§Ù„ØªÙŠ ØªØµÙ†Ø¹Ù‡Ø§ Ù„Ø¶ÙŠÙˆÙÙƒ.",
-    "experienceDetail.requestTitle": "Ø¬Ø§Ù‡Ø² Ù„ØªØµÙ…ÙŠÙ… Ø§Ù„ØªØ¬Ø±Ø¨Ø©ØŸ",
-    "experienceDetail.requestText": "Ø£Ø±Ø³Ù„ Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØªØŒ ÙˆÙŠÙ…ÙƒÙ† Ø¥Ø¶Ø§ÙØ© Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø§Ø®ØªÙŠØ§Ø±ÙŠØ© ÙÙ‚Ø· Ø¥Ø°Ø§ ÙƒØ§Ù†Øª Ù…Ù†Ø§Ø³Ø¨Ø© Ù„Ù„Ø®Ø·Ø©.",
-    "experienceDetail.requestWithoutProductsText": "Ø£Ø±Ø³Ù„ Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØªØŒ ÙˆØ³Ù†ØµÙ…Ù… Ø§Ù„ÙŠÙˆÙ… Ø¨Ù…Ø§ ÙŠÙ†Ø§Ø³Ø¨ Ø¶ÙŠÙˆÙÙƒ.",
-    "experienceDetail.viewProducts": "Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø§Ø®ØªÙŠØ§Ø±ÙŠØ©",
-    "experienceDetail.viewScents": "Ø§Ø³ØªÙƒØ´Ù Ø¹Ø·Ø±ÙŠ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "experienceDetail.viewJourney": "Ø§ÙƒØªØ´Ù ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experienceDetail.planEyebrow": "Ø®Ø·ØªÙƒ Ø§Ù„Ø®Ø§ØµØ©",
-    "experienceDetail.planTitle": "Ø£Ø®Ø¨Ø±Ù†Ø§ Ø¨Ø§Ù„Ù…ÙˆØ¹Ø¯ØŒ ÙˆÙ†Ø­Ù† Ù†ØµÙ…Ù… Ø§Ù„Ø¨Ø§Ù‚ÙŠ.",
-    "experienceDetail.planText": "Ø´Ø§Ø±ÙƒÙ†Ø§ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª Ø§Ù„Ù…ÙØ¶Ù„. ØªÙØ¹Ø¯ Ø£ÙÙ†ØªÙˆØ±Ø§ Ù…Ø³Ø§Ø±Ø§Ù‹ Ù…Ø¯Ø±ÙˆØ³Ø§Ù‹ ÙˆØ¹Ø±Ø¶ Ø³Ø¹Ø± ÙˆØ§Ø¶Ø­Ø§Ù‹.",
-    "experienceDetail.planPoint1": "Ø¥ÙŠÙ‚Ø§Ø¹ ÙˆØ®ØµÙˆØµÙŠØ© ÙˆÙÙ‚ Ø¶ÙŠÙˆÙÙƒ",
-    "experienceDetail.planPoint2": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ø´Ø±ÙƒØ§Ø¡ ÙˆØ§Ù„ØªÙ†Ù‚Ù„Ø§Øª Ø¹Ø¨Ø± ÙØ±ÙŠÙ‚ ÙˆØ§Ø­Ø¯",
-    "experienceDetail.planPoint3": "Ù„Ø§ ÙŠØªÙ… ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø­Ø¬Ø² Ù‚Ø¨Ù„ Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„Ø®Ø·Ø© Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠØ©",
-    "experienceDetail.planCta": "Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶Ø§Ù‹ Ù…Ø®ØµØµØ§Ù‹",
-    "experienceDetail.includeOptional": "Ø£Ø¶ÙÙ‡Ø§ Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experienceDetail.includeBox": "Ø£Ø¶Ù Ø¨ÙˆÙƒØ³ Ø§Ù„ØªØ°ÙƒØ§Ø± Ø¥Ù„Ù‰ Ø§Ù„Ø·Ù„Ø¨",
-    "experienceDetail.reminderEyebrow": "Ù„Ù…Ø³Ø§Øª Ø§Ø®ØªÙŠØ§Ø±ÙŠØ©",
-    "experienceDetail.reminderTitle": "Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ø¬Ø§Ù‡Ø²Ø© Ù„Ù„ØªØ®Ø·ÙŠØ·",
-    "experienceDetail.reminderText": "ÙŠÙ…ÙƒÙ†Ùƒ Ø¥Ø¶Ø§ÙØ© ØªÙØµÙŠÙ„Ø© Ø¥Ø°Ø§ ÙƒØ§Ù†Øª ØªÙ†Ø§Ø³Ø¨ Ø¶ÙŠÙÙƒØŒ Ø£Ùˆ Ù…ØªØ§Ø¨Ø¹Ø© Ø·Ù„Ø¨ Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙÙ‚Ø·.",
-    "experienceDetail.continueWithout": "ØªØ§Ø¨Ø¹ Ù„ØªØ®Ø·ÙŠØ· Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "experienceDetail.perfumeSeaText": "Ø§ØªØ¬Ø§Ù‡ Ø¹Ø·Ø±ÙŠ Ø¨Ø­Ø±ÙŠ Ù…Ø³ØªÙˆØ­Ù‰ Ù…Ù† Ø¶ÙˆØ¡ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø± ÙˆÙ‡ÙˆØ§Ø¦Ù‡ ÙˆØ­Ø±ÙƒØªÙ‡.",
-    "experienceDetail.perfumeRoshanText": "Ø§ØªØ¬Ø§Ù‡ Ø¹Ø·Ø±ÙŠ Ø¯Ø§ÙØ¦ Ù…Ø³ØªÙˆØ­Ù‰ Ù…Ù† Ø®Ø´Ø¨ Ø§Ù„Ø±ÙˆØ´Ø§Ù† ÙˆØ§Ù„Ù‚Ù‡ÙˆØ© ÙˆØ§Ù„ØªÙˆØ§Ø¨Ù„ ÙˆØ¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©.",
-    "experienceDetail.perfumeTaifText": "Ø§ØªØ¬Ø§Ù‡ Ø¹Ø·Ø±ÙŠ Ù…Ø³ØªÙˆØ­Ù‰ Ù…Ù† Ø§Ù„ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦ÙÙŠ ÙˆÙ‡ÙˆØ§Ø¡ Ø§Ù„Ø¬Ø¨Ø§Ù„ ÙˆØ§Ù„Ù†ÙØ­Ø§Øª Ø§Ù„Ø®Ø¶Ø±Ø§Ø¡ Ø§Ù„Ù‡Ø§Ø¯Ø¦Ø©.",
-    "experienceDetail.jeddahBoxTitle": "Ù…Ø¬Ù…ÙˆØ¹Ø© Ø¬Ø¯Ø© Ø§Ù„Ù…Ù…ÙŠØ²Ø©",
-    "experienceDetail.jeddahBoxText": "Ù…Ø¬Ù…ÙˆØ¹Ø© ØªØ¬Ù…Ø¹ ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¨Ø­Ø± ÙˆØ±ÙˆØ´Ø§Ù† Ù„ÙŠÙˆÙ… Ø¬Ø¯Ø© Ø§Ù„ÙƒØ§Ù…Ù„ Ø£Ùˆ ØªØ¬Ø±Ø¨Ø© Ù…Ù† Ø§Ù„Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø§Ù„Ø¨Ù„Ø¯.",
-    "journey.sea.eyebrow": "ÙŠÙˆÙ…Ùƒ Ø§Ù„Ø®Ø§Øµ Ø¹Ù„Ù‰ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "journey.sea.title": "ÙŠØ¨Ø¯Ø£ ÙŠÙˆÙ… Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø®Ø§Øµ Ù‚Ø¨Ù„ Ø£Ù† ØªØµØ¹Ø¯ Ø¥Ù„Ù‰ Ø§Ù„Ù‚Ø§Ø±Ø¨",
-    "journey.sea.text": "Ø£Ø®Ø¨Ø±Ù†Ø§ Ø¨Ø¥Ø­Ø³Ø§Ø³ Ø§Ù„ÙŠÙˆÙ… Ø§Ù„Ø°ÙŠ ØªØ±ÙŠØ¯Ù‡ØŒ ÙˆØ³Ù†ØµÙ…Ù… Ø§Ù„Ù‚Ø§Ø±Ø¨ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª ÙˆØ§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ Ø­ÙˆÙ„ Ø§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ø°ÙŠÙ† ÙŠØ´Ø§Ø±ÙƒÙˆÙ†Ùƒ Ø§Ù„Ù„Ø­Ø¸Ø©.",
-    "journey.sea.step1Title": "Ø§Ø®ØªØ± Ø¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„ÙŠÙˆÙ…",
-    "journey.sea.step1Text": "Ø±Ø­Ù„Ø© Ù‚ØµÙŠØ±Ø© Ø£Ùˆ ÙŠÙˆÙ… Ø¨Ø­Ø±ÙŠ ÙƒØ§Ù…Ù„ Ø£Ùˆ ÙŠØ®Øª Ø®Ø§ØµØ› Ù†Ø¨Ø¯Ø£ Ø¨Ø§Ù„Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„ØªÙŠ ÙŠØ±ØºØ¨ Ø¶ÙŠÙˆÙÙƒ Ø£Ù† ÙŠÙ‚Ø¶ÙˆØ§ Ø¨Ù‡Ø§ Ø§Ù„ÙˆÙ‚Øª Ù…Ø¹Ø§Ù‹.",
-    "journey.sea.step2Title": "Ø§Ù†Ø·Ù„Ù‚ Ù…Ù† Ø£Ø¨Ø­Ø± ÙÙŠ Ø§Ù„ÙˆÙ‚Øª Ø§Ù„Ù…Ù†Ø§Ø³Ø¨",
-    "journey.sea.step2Text": "ÙŠÙÙ†Ø³Ù‚ Ø§Ù„Ù‚Ø§Ø±Ø¨ ÙˆØ§Ù„Ù‚Ø¨Ø·Ø§Ù† ÙˆÙˆÙ‚Øª Ø§Ù„Ø§Ù†Ø·Ù„Ø§Ù‚ ÙˆÙˆØ³Ø§Ø¦Ù„ Ø§Ù„Ø±Ø§Ø­Ø© Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© ÙƒØ¨Ø¯Ø§ÙŠØ© ÙˆØ§Ø­Ø¯Ø© Ù‡Ø§Ø¯Ø¦Ø© Ù„Ù„ÙŠÙˆÙ….",
-    "journey.sea.step3Title": "Ø§Ø¬Ø¹Ù„ Ø§Ù„Ø¨Ø­Ø± Ù„ÙƒÙ… ÙˆØ­Ø¯ÙƒÙ…",
-    "journey.sea.step3Text": "Ø§Ø³Ø¨Ø­ÙˆØ§ Ø£Ùˆ Ø§ØªØ±ÙƒÙˆØ§ Ù„Ù„Ø£ÙÙ‚ Ù…Ø³Ø§Ø­Ø© Ù‡Ø§Ø¯Ø¦Ø©. ÙŠØ¨Ù‚Ù‰ ÙÙŠ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ Ù…Ø¬Ø§Ù„ ØªÙ‚ÙˆØ¯Ù‡ Ø§Ù„Ù„Ø­Ø¸Ø© Ù†ÙØ³Ù‡Ø§.",
-    "journey.golden.eyebrow": "Ø§Ù„Ø³Ø§Ø¹Ø© Ø§Ù„Ø°Ù‡Ø¨ÙŠØ© Â· Ø´Ø±Ù… Ø£Ø¨Ø­Ø±",
-    "journey.golden.title": "Ø³Ø§Ø¹Ø© Ù‡Ø§Ø¯Ø¦Ø© ØªÙØ¶Ø¨Ø· Ù…Ø¹ Ø¢Ø®Ø± Ø¶ÙˆØ¡",
-    "journey.golden.text": "Ø±Ø­Ù„Ø© Ù‚Ø§Ø±Ø¨ Ø®Ø§ØµØ© Ø¹Ù†Ø¯ Ø§Ù„ØºØ±ÙˆØ¨ØŒ Ø­ÙŠÙ† Ù„Ø§ ØªÙƒÙˆÙ† Ø§Ù„ÙÙƒØ±Ø© ÙÙŠ Ø§Ù„Ù…Ø³Ø§ÙØ© Ø¨Ù„ ÙÙŠ Ø¥Ø­Ø³Ø§Ø³ Ù…ØºØ§Ø¯Ø±Ø© Ø§Ù„Ø´Ø§Ø·Ø¦ ÙÙŠ Ø§Ù„ÙˆÙ‚Øª Ø§Ù„ØµØ­ÙŠØ­ ØªÙ…Ø§Ù…Ø§Ù‹.",
-    "journey.golden.step1Title": "Ø­Ø¯Ù‘Ø¯ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©",
-    "journey.golden.step1Text": "Ù…Ù‡Ø±Ø¨ Ù‡Ø§Ø¯Ø¦ Ø£Ùˆ Ø§Ø­ØªÙØ§Ù„ Ø®Ø§Øµ Ø£Ùˆ Ù…ÙØ§Ø¬Ø£Ø© Ù…Ø¯Ø±ÙˆØ³Ø©Ø› ØªØ¨Ø¯Ø£ Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù…Ù† Ø§Ù„Ù„Ø­Ø¸Ø© Ø§Ù„ØªÙŠ ØªØ±ÙŠØ¯ ØµÙ†Ø¹Ù‡Ø§.",
-    "journey.golden.step2Title": "Ø§ØµØ¹Ø¯ ÙˆØ§Ù„Ù‚Ø§Ø¯Ù… Ù…Ù† Ø§Ù„ÙŠÙˆÙ… Ù…Ø§ Ø²Ø§Ù„ Ù…ÙØªÙˆØ­Ø§Ù‹",
-    "journey.golden.step2Text": "ØªØ¶Ø¨Ø· Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ø§Ù†Ø·Ù„Ø§Ù‚ Ù…Ù† Ø£Ø¨Ø­Ø± Ù„ÙŠÙƒÙˆÙ† Ù‡Ø°Ø§ Ø§Ù„ÙˆÙ‚Øª Ù„ÙƒØŒ Ù„Ø§ Ù…Ø¬Ø±Ø¯ Ù…ÙˆØ¹Ø¯ Ø¶Ù…Ù† Ø¬Ø¯ÙˆÙ„ Ø³ÙŠØ§Ø­ÙŠ Ø«Ø§Ø¨Øª.",
-    "journey.golden.step3Title": "Ø¯Ø¹ Ø§Ù„Ø¶ÙˆØ¡ ÙŠØµÙ†Ø¹ Ø§Ù„Ù…Ø´Ù‡Ø¯",
-    "journey.golden.step3Text": "Ø§Ù„Ù†Ù‡Ø§ÙŠØ© Ù…Ù‚ØµÙˆØ¯Ø© ÙÙŠ Ø¨Ø³Ø§Ø·ØªÙ‡Ø§: Ù…Ø§Ø¡ Ù…ÙØªÙˆØ­ ÙˆÙ‚Ø§Ø±Ø¨ Ø®Ø§Øµ ÙˆØ¢Ø®Ø± Ø£Ù„ÙˆØ§Ù† Ø§Ù„ÙŠÙˆÙ….",
-    "journey.bayadah.eyebrow": "Ø¨ÙŠØ§Ø¶Ø© Â· ÙŠÙˆÙ… Ø¨Ø­Ø±ÙŠ Ø®Ø§Øµ ÙƒØ§Ù…Ù„",
-    "journey.bayadah.title": "Ø¨ÙŠØ§Ø¶Ø© Ù‡ÙŠ Ø§Ù„ÙˆØ¬Ù‡Ø©ØŒ ÙˆØ§Ù„ÙŠÙˆÙ… ÙƒÙ„Ù‡ Ù„ÙƒÙ…",
-    "journey.bayadah.text": "ØªØ¬Ø±Ø¨Ø© Ù‚Ø§Ø±Ø¨ Ø®Ø§ØµØ© Ù„ÙŠÙˆÙ… ÙƒØ§Ù…Ù„ ØªÙØµÙ…Ù… Ø­ÙˆÙ„ Ù…Ù† Ø¹Ù„Ù‰ Ù…ØªÙ†Ù‡ØŒ Ù…Ø¹ ÙˆÙ‚Øª Ù„Ù„Ø³Ø¨Ø§Ø­Ø© ÙˆØªØ±Ùƒ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø± ÙŠØ­Ø¯Ø¯ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ø¹.",
-    "journey.bayadah.step1Title": "Ø§Ø¨Ù†Ù Ø§Ù„ÙŠÙˆÙ… Ø­ÙˆÙ„ Ù…Ø¬Ù…ÙˆØ¹ØªÙƒ",
-    "journey.bayadah.step1Text": "Ù†Ø¨Ø¯Ø£ Ø¨Ø¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„Ù…ÙØ¶Ù„ ÙˆÙ†ÙˆØ¹ Ø§Ù„ÙˆÙ‚Øª Ø§Ù„Ø°ÙŠ ØªØ±ØºØ¨ Ù…Ø¬Ù…ÙˆØ¹ØªÙƒ ÙÙŠ Ù‚Ø¶Ø§Ø¦Ù‡ Ø¹Ù„Ù‰ Ø§Ù„Ù…Ø§Ø¡.",
-    "journey.bayadah.step2Title": "Ø§Ù†Ø·Ù„Ù‚ Ù…Ù† Ø£Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø¨ÙŠØ§Ø¶Ø©",
-    "journey.bayadah.step2Text": "ÙŠÙÙ†Ø³Ù‚ Ø§Ù„Ù‚Ø§Ø±Ø¨ ÙˆØ§Ù„Ù‚Ø¨Ø·Ø§Ù† ÙˆØ§Ù„ÙˆÙ‚ÙˆØ¯ ÙˆÙ…Ø¹Ø¯Ø§Øª Ø§Ù„Ø³Ù„Ø§Ù…Ø© ÙˆØªÙØ§ØµÙŠÙ„ Ø§Ù„ÙŠÙˆÙ… Ø§Ù„Ø¨Ø­Ø±ÙŠ Ù‚Ø¨Ù„ ÙˆØµÙˆÙ„ÙƒÙ….",
-    "journey.bayadah.step3Title": "Ø§Ø¨Ù‚Ù Ø£Ø·ÙˆÙ„ Ø­ÙŠØ« ÙŠØ¨Ø¯Ùˆ Ø§Ù„Ø£Ù…Ø± Ù…Ù†Ø§Ø³Ø¨Ø§Ù‹",
-    "journey.bayadah.step3Text": "Ø§Ù„Ø³Ø¨Ø§Ø­Ø© ÙˆØ§Ù„ØªÙˆÙ‚ÙØ§Øª ÙÙŠ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ù…ÙØªÙˆØ­ Ø¬Ø²Ø¡ Ù…Ù† Ø§Ù„ÙŠÙˆÙ…ØŒ Ù„Ø§ Ù…Ø­Ø·Ø§Øª Ù…Ø³ØªØ¹Ø¬Ù„Ø© Ø¨ÙŠÙ† Ø§Ù„ØªØ²Ø§Ù…Ø§Øª Ø£Ø®Ø±Ù‰.",
-    "journey.grandBayadah.eyebrow": "ÙŠØ®Øª Ø¨ÙŠØ§Ø¶Ø© Ø§Ù„ÙƒØ¨ÙŠØ± Â· ÙŠÙˆÙ… Ø®Ø§Øµ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª",
-    "journey.grandBayadah.title": "ÙŠØ®Øª Ø£ÙƒØ¨Ø± Ù…Ø¹ Ø§Ù„Ø¥Ø­Ø³Ø§Ø³ Ù†ÙØ³Ù‡ Ø¨Ø§Ù„Ø®ØµÙˆØµÙŠØ©",
-    "journey.grandBayadah.text": "Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„ØªÙŠ ØªØ±ÙŠØ¯ Ù…Ø´Ø§Ø±ÙƒØ© Ø§Ù„Ø¨Ø­Ø± Ù…Ù† Ø¯ÙˆÙ† Ø£Ù† ØªØ¨Ø¯Ùˆ ÙÙŠ Ø±Ø­Ù„Ø© Ø¬Ù…Ø§Ø¹ÙŠØ©ØŒ ØªØ¨Ù†ÙŠ Ø£ÙÙ†ØªÙˆØ±Ø§ ÙŠÙˆÙ… Ø¨ÙŠØ§Ø¶Ø© Ø­ÙˆÙ„ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ³Ø¨Ø¨ Ø§Ø¬ØªÙ…Ø§Ø¹Ù‡Ù….",
-    "journey.grandBayadah.step1Title": "Ø­Ø¯Ø¯ Ø¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©",
-    "journey.grandBayadah.step1Text": "Ø¹Ø§Ø¦Ù„Ø© Ø£Ùˆ Ø²Ù…Ù„Ø§Ø¡ Ø£Ùˆ Ø¶ÙŠÙˆÙ Ù…Ù‡Ù…ÙˆÙ†Ø› Ù†Ø¨Ø¯Ø£ Ø¨Ù…Ù† Ø³ÙŠØ­Ø¶Ø± ÙˆØ¨Ø§Ù„Ø´Ø¹ÙˆØ± Ø§Ù„Ø°ÙŠ ÙŠØ¬Ø¨ Ø£Ù† ÙŠØ¹ÙŠØ´Ù‡ Ø§Ù„Ø¬Ù…ÙŠØ¹ Ø¹Ù„Ù‰ Ù…ØªÙ† Ø§Ù„ÙŠØ®Øª.",
-    "journey.grandBayadah.step2Title": "Ø§Ø¬Ø¹Ù„ Ø§Ù„ÙŠØ®Øª Ù‡Ùˆ Ø§Ù„Ù…ÙƒØ§Ù†",
-    "journey.grandBayadah.step2Text": "ÙŠÙ…Ù†Ø­ Ø§Ù„ÙŠØ®Øª Ø§Ù„Ø®Ø§Øµ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© Ù…Ø³Ø§Ø­ØªÙ‡Ø§ Ø§Ù„Ø®Ø§ØµØ©ØŒ Ø¨ÙŠÙ†Ù…Ø§ ÙŠØ¨Ù‚Ù‰ Ø®Ø· Ø§Ù„Ø³ÙŠØ± Ø¥Ù„Ù‰ Ø¨ÙŠØ§Ø¶Ø© Ù…Ù†Ø³Ù‚Ø§Ù‹ ÙˆÙ‡Ø§Ø¯Ø¦Ø§Ù‹.",
-    "journey.grandBayadah.step3Title": "Ø§Ø³ØªØ¶Ù Ø§Ù„ÙŠÙˆÙ… Ø¨Ø·Ø±ÙŠÙ‚ØªÙƒ",
-    "journey.grandBayadah.step3Text": "Ø§ØªØ±Ùƒ Ù…Ø³Ø§Ø­Ø© Ù„Ù„Ø­Ø¯ÙŠØ« ÙˆØ§Ù„Ø³Ø¨Ø§Ø­Ø© ÙˆÙŠÙˆÙ… Ø¨Ø­Ø±ÙŠ Ù…Ø´ØªØ±Ùƒ Ù„Ø§ ÙŠØ´Ø¹Ø± Ø£ÙŠ Ø´Ø®Øµ Ø£Ù†Ù‡ Ø¨Ø§Ù‚Ø© Ø¬Ø§Ù‡Ø²Ø©.",
-    "journey.historic.eyebrow": "Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© Â· Ø¬ÙˆÙ„Ø© Ø®Ø§ØµØ©",
-    "journey.historic.title": "Ù„Ø§ ØªØ´Ø§Ù‡Ø¯ Ø§Ù„Ø¨Ù„Ø¯ ÙÙ‚Ø·Ø› Ø§Ø¯Ø®Ù„ Ø¥Ù„Ù‰ Ø­ÙƒØ§ÙŠØªÙ‡Ø§",
-    "journey.historic.text": "ÙŠØµÙ…Ù… Ø§Ù„Ù…Ø±Ø´Ø¯ Ø§Ù„Ù…Ø±Ø®Øµ Ø§Ù„Ù…Ø³Ø§Ø± Ø­ÙˆÙ„ Ø¶ÙŠÙˆÙÙƒØŒ Ù„ÙŠØ­ÙˆÙ‘Ù„ Ø§Ù„Ø­Ø¬Ø± ÙˆØ®Ø´Ø¨ Ø§Ù„Ø±ÙˆØ´Ø§Ù† ÙˆØ§Ù„Ø£Ø²Ù‚Ø© Ø§Ù„Ù‡Ø§Ø¯Ø¦Ø© Ø¥Ù„Ù‰ Ù…Ø¯Ø®Ù„ Ø´Ø®ØµÙŠ Ù„Ù„Ù…Ø¯ÙŠÙ†Ø©.",
-    "journey.historic.step1Title": "Ø§Ø¨Ø¯Ø£ Ø¨Ø§Ù„Ù†Ø§Ø³ ÙˆØ±Ø§Ø¡ Ø§Ù„Ù…ÙƒØ§Ù†",
-    "journey.historic.step1Text": "ÙŠØ­Ø¯Ø¯ Ù…Ø±Ø´Ø¯Ùƒ Ø§Ù„Ø³ÙŠØ§Ù‚ ÙˆØ§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ ÙˆØ§Ù„Ù„ØºØ©ØŒ Ù„ÙŠØ´Ø¹Ø± ÙƒÙ„ Ø¶ÙŠÙ Ø¨Ø£Ù†Ù‡ Ø¯Ø§Ø®Ù„ Ø§Ù„Ø­ÙƒØ§ÙŠØ© Ù…Ù† Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ø£ÙˆÙ„Ù‰.",
-    "journey.historic.step2Title": "ØªØ­Ø±Ùƒ ÙÙŠ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø¨Ù‡Ø¯Ù",
-    "journey.historic.step2Text": "ØªØªØ¨Ø¹ Ø§Ù„Ø¬ÙˆÙ„Ø© Ø§Ù„Ø­ÙƒØ§ÙŠØ§Øª ÙˆØ§Ù„Ø¹Ù…Ø§Ø±Ø© ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªÙŠ Ù„Ø§ ØªØ¸Ù‡Ø± ÙÙŠ Ù…Ø³Ø§Ø± Ø¹Ø§Ù… Ø£Ùˆ Ø¹Ù„Ù‰ Ø®Ø±ÙŠØ·Ø©.",
-    "journey.historic.step3Title": "ØºØ§Ø¯Ø± Ø¨ÙØµÙ„ Ù„Ø§ Ø¨Ù‚Ø§Ø¦Ù…Ø©",
-    "journey.historic.step3Text": "Ø§Ù„Ù‚Ù‡ÙˆØ© ÙˆØ§Ù„ØªÙ…Ø± ÙˆÙˆÙ‚Øª Ù…Ù„Ø§Ø­Ø¸Ø© Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© ØªØ¬Ø¹Ù„ Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ø¥Ù†Ø³Ø§Ù†ÙŠØ© Ù„Ø§ Ù…Ø³ØªØ¹Ø¬Ù„Ø©.",
-    "journey.desert.eyebrow": "Last Light Â· ÙƒØ«Ø¨Ø§Ù† Ø±Ù…Ù„ÙŠØ©",
-    "journey.desert.title": "Ø§Ù„ÙƒØ«Ø¨Ø§Ù† Ø§Ù„Ø±Ù…Ù„ÙŠØ© Ù„ÙŠØ³Øª Ø®Ù„ÙÙŠØ©Ø› Ø¥Ù†Ù‡Ø§ Ø³Ø¨Ø¨ Ø§Ù„Ø°Ù‡Ø§Ø¨",
-    "journey.desert.text": "ØªØ¨Ù†ÙŠ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ø³Ø§Ø± Ø­ÙˆÙ„ Ø§Ù„Ø±Ù…Ù„ ÙˆØ§Ù„Ø¶ÙˆØ¡ ÙˆØ§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©ØŒ Ù„ØªØ¨Ø¯Ùˆ Ø§Ù„ØµØ­Ø±Ø§Ø¡ ÙˆØ§Ø³Ø¹Ø© ÙˆØ®Ø§ØµØ© ÙˆÙ…Ø®ØªÙ„ÙØ© ØªÙ…Ø§Ù…Ø§Ù‹ Ø¹Ù† Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©.",
-    "journey.desert.step1Title": "Ø§ØªØ±Ùƒ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø®Ù„ÙÙƒ",
-    "journey.desert.step1Text": "ÙŠÙØ®Ø·Ø· Ø§Ù„Ø§Ù†Ø·Ù„Ø§Ù‚ ÙˆØ§Ù„ØªÙ†Ù‚Ù„ Ø¨Ø­ÙŠØ« ÙŠÙƒÙˆÙ† Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ù…Ù† Ø§Ù„Ø·Ø±ÙŠÙ‚ Ø¥Ù„Ù‰ Ø§Ù„Ø±Ù…Ù„ Ø§Ù„Ù…ÙØªÙˆØ­ Ø³Ù„Ø³Ø§Ù‹ Ù…Ù†Ø° Ø§Ù„Ø¨Ø¯Ø§ÙŠØ©.",
-    "journey.desert.step2Title": "Ø§ØªØ¨Ø¹ Ø®Ø· Ø§Ù„ÙƒØ«Ø¨Ø§Ù†",
-    "journey.desert.step2Text": "ÙŠÙØ®ØªØ§Ø± Ù…Ø³Ø§Ø± Ø¯ÙØ¹ Ø±Ø¨Ø§Ø¹ÙŠ Ù„Ù…Ø¬Ù…ÙˆØ¹ØªÙƒØŒ ÙˆØªØ¨Ù‚Ù‰ Ø§Ù„ÙƒØ«Ø¨Ø§Ù† Ø§Ù„Ø±Ù…Ù„ÙŠØ© Ù‡ÙŠ Ø§Ù„Ù…Ø´Ù‡Ø¯ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ Ù„Ø§ Ø®Ù„ÙÙŠØ© Ù„ØªÙˆÙ‚Ù Ù…ØµØ·Ù†Ø¹.",
-    "journey.desert.step3Title": "ØµÙ„ Ø¥Ù„Ù‰ Last Light",
-    "journey.desert.step3Text": "Ø­ÙŠÙ† ØªÙ†Ø®ÙØ¶ Ø§Ù„Ø´Ù…Ø³ØŒ ØªØµÙ†Ø¹ Ø§Ù„Ø¶ÙŠØ§ÙØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ© ÙˆÙ‡Ø¯ÙˆØ¡ Ø§Ù„Ù…ÙƒØ§Ù† Ø®ØªØ§Ù…Ø§Ù‹ ÙŠØ³ØªØ­Ù‚ Ø£Ù† ÙŠÙØ¤Ø®Ø° Ø¨Ø¨Ø·Ø¡.",
-    "journey.taif.eyebrow": "Ù…Ø±ØªÙØ¹Ø§Øª Ø§Ù„Ø·Ø§Ø¦Ù Â· Ø¥ÙŠÙ‚Ø§Ø¹ Ø£Ù‡Ø¯Ø£",
-    "journey.taif.title": "Ø§Ø³ØªØ¨Ø¯Ù„ Ø­Ø±Ø§Ø±Ø© Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø¨Ù‡ÙˆØ§Ø¡ Ø§Ù„Ø¬Ø¨Ù„ ÙˆÙŠÙˆÙ… Ø£ÙƒØ«Ø± Ù‡Ø¯ÙˆØ¡Ø§Ù‹",
-    "journey.taif.text": "ØªØ¬Ù…Ø¹ Ø±Ø­Ù„Ø© Ø§Ù„Ø·Ø§Ø¦Ù Ø§Ù„Ø®Ø§ØµØ© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ø£Ø¨Ø±Ø¯ ÙˆØ®Ø·ÙˆØ· Ø§Ù„Ø¬Ø¨Ø§Ù„ ÙˆØ§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø­Ù„ÙŠØ© Ø§Ù„Ù…ÙˆØ³Ù…ÙŠØ© Ø¨Ø¥ÙŠÙ‚Ø§Ø¹ ÙŠØªØ±Ùƒ Ù„Ù„Ù…Ø±ØªÙØ¹Ø§Øª Ù…Ø³Ø§Ø­ØªÙ‡Ø§.",
-    "journey.taif.step1Title": "Ø§ØµØ¹Ø¯ Ø¥Ù„Ù‰ Ø¥ÙŠÙ‚Ø§Ø¹ Ù…Ø®ØªÙ„Ù",
-    "journey.taif.step1Text": "Ù†Ø®Ø·Ø· Ø§Ù„Ø§Ù†Ø·Ù„Ø§Ù‚ Ø­ÙˆÙ„ Ù…Ø¬Ù…ÙˆØ¹ØªÙƒ Ù„ØªØµØ¨Ø­ Ø§Ù„Ø±Ø­Ù„Ø© Ø¥Ù„Ù‰ Ø§Ù„Ø£Ø¹Ù„Ù‰ Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„ØªØ¬Ø±Ø¨Ø©ØŒ Ù„Ø§ Ù…Ø¬Ø±Ø¯ Ø§Ù†ØªÙ‚Ø§Ù„.",
-    "journey.taif.step2Title": "Ø§Ù„ØªÙ‚Ù Ø¨Ù…ÙˆØ³Ù… Ø§Ù„Ø·Ø§Ø¦Ù",
-    "journey.taif.step2Text": "ÙŠÙØ®ØªØ§Ø± Ø§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„Ø¨Ø³Ø§ØªÙŠÙ† ÙˆØ§Ù„ØªÙˆÙ‚ÙØ§Øª Ø§Ù„Ù…Ø­Ù„ÙŠØ© ÙˆÙÙ‚ Ù…Ø§ ØªÙ‚Ø¯Ù…Ù‡ Ø§Ù„Ù…Ø±ØªÙØ¹Ø§Øª ÙØ¹Ù„Ø§Ù‹ ÙÙŠ Ø°Ù„Ùƒ Ø§Ù„ÙˆÙ‚Øª Ù…Ù† Ø§Ù„Ø³Ù†Ø©.",
-    "journey.taif.step3Title": "ØªÙˆÙ‚Ù Ø­ÙŠØ« ØªÙ†ÙØªØ­ Ø§Ù„Ø¥Ø·Ù„Ø§Ù„Ø©",
-    "journey.taif.step3Text": "ÙŠØ¨Ù‚Ù‰ ÙÙŠ Ø§Ù„ÙŠÙˆÙ… Ù…Ø³Ø§Ø­Ø© Ù„Ù„Ù…Ø´Ù‡Ø¯ ÙˆØ§Ù„Ù‡ÙˆØ§Ø¡ ÙˆØ§Ù„Ù„Ø­Ø¸Ø§Øª ØºÙŠØ± Ø§Ù„Ù…Ø®Ø·Ø· Ù„Ù‡Ø§ Ø§Ù„ØªÙŠ ØªØ¬Ø¹Ù„ Ø§Ù„Ø·Ø§Ø¦Ù Ù…Ø®ØªÙ„ÙØ© Ø¹Ù† Ø¬Ø¯Ø©.",
-    "journey.jeddah.eyebrow": "ÙŠÙˆÙ… Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ù…ÙŠØ² Â· Ø¬Ø¯Ø©",
-    "journey.jeddah.title": "ÙŠÙˆÙ… Ø¬Ø¯Ø© Ø§Ù„ÙƒØ§Ù…Ù„ Ù„ÙŠØ³ Ø¨Ø§Ù‚Ø©Ø› Ø¨Ù„ ÙŠÙØ¨Ù†Ù‰ Ø­ÙˆÙ„ Ø¶ÙŠÙˆÙÙƒ",
-    "journey.jeddah.text": "Ù…Ù† Ø§Ù„ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ© Ø¥Ù„Ù‰ Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØªÙˆÙ‚Ù Ø¹Ø´Ø§Ø¡ Ù…Ø¯Ø±ÙˆØ³ØŒ ØªØ±Ø¨Ø· Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø¨Ø¥ÙŠÙ‚Ø§Ø¹ Ø´Ø®ØµÙŠ Ù„Ø§ Ù…Ø³ØªØ¹Ø¬Ù„.",
-    "journey.jeddah.note": "Ø§Ù„ÙˆØ§Ø¬Ù‡Ø© ÙˆØ§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø§Ù„Ù‚Ø¯ÙŠÙ…Ø© ÙˆØ§Ù„Ø·Ø§ÙˆÙ„Ø© ÙØµÙˆÙ„ Ù„ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯ØŒ Ù„Ø§ Ø«Ù„Ø§Ø« Ù…Ø­Ø·Ø§Øª Ù…Ø³ØªØ¹Ø¬Ù„Ø©.",
-    "journey.jeddah.step1Title": "Ø§Ø¨Ø¯Ø£ Ù…Ù† Ø§Ù„Ù…ÙƒØ§Ù† Ø§Ù„Ø°ÙŠ ÙŠÙ†Ø§Ø³Ø¨ ÙŠÙˆÙ…Ùƒ",
-    "journey.jeddah.step1Text": "Ù†Ø­Ø¯Ø¯ Ù†Ù‚Ø·Ø© Ø§Ù„Ù„Ù‚Ø§Ø¡ ÙˆØ§Ù„ØªÙ†Ù‚Ù„ ÙˆØ£ÙˆÙ„ Ù…Ø­Ø·Ø© Ø¨Ø­Ø³Ø¨ ÙˆØµÙˆÙ„Ùƒ ÙˆØ·Ø§Ù‚ØªÙƒ ÙˆØ§Ù‡ØªÙ…Ø§Ù…Ø§ØªÙƒ.",
-    "journey.jeddah.step2Title": "Ø¯Ø¹ Ø¬Ø¯Ø© ØªØ¸Ù‡Ø± Ø¹Ù„Ù‰ Ø´ÙƒÙ„ ÙØµÙˆÙ„",
-    "journey.jeddah.step2Text": "ÙˆÙ‚Øª Ø¹Ù„Ù‰ Ø§Ù„ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø¨Ø­Ø±ÙŠØ© ÙˆØ¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ·Ø¹Ø§Ù… Ù…Ø­Ù„ÙŠ ÙˆØªÙˆÙ‚ÙØ§Øª Ù…Ø®ØªØ§Ø±Ø© ØªØªØµÙ„ ÙÙŠ Ø¥ÙŠÙ‚Ø§Ø¹ ÙˆØ§Ø­Ø¯ ÙˆØ§Ø¶Ø­ ÙˆÙ…Ø±Ù†.",
-    "journey.jeddah.step3Title": "Ø§Ø®ØªÙ… ÙˆØ§Ù„ÙŠÙˆÙ… Ù…Ø§ Ø²Ø§Ù„ Ù…Ø¹Ùƒ",
-    "journey.jeddah.step3Text": "ÙŠÙØµÙ…Ù… Ø§Ù„ØªÙˆÙ‚ÙŠØª Ø§Ù„Ø£Ø®ÙŠØ± Ø­ÙˆÙ„ Ù…Ø¬Ù…ÙˆØ¹ØªÙƒØŒ Ù„ÙŠÙ†ØªÙ‡ÙŠ Ø§Ù„ÙŠÙˆÙ… Ø¨Ø¥Ø­Ø³Ø§Ø³ Ø¨Ø§Ù„Ù…ÙƒØ§Ù† Ù„Ø§ ÙƒØ¨Ù†Ø¯ Ø¢Ø®Ø± ÙÙŠ Ø¬Ø¯ÙˆÙ„.",
-    "journey.seaToBalad.eyebrow": "ÙŠÙˆÙ… Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ù…ÙŠØ² Â· Ù…Ù† Ø§Ù„Ø¨Ø­Ø± Ø¥Ù„Ù‰ Ø§Ù„Ø¨Ù„Ø¯",
-    "journey.seaToBalad.title": "ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯ ÙŠØ±Ø¨Ø· Ø§Ù„Ø¨Ø­Ø± Ø¨Ø­ÙƒØ§ÙŠØ© Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©",
-    "journey.seaToBalad.text": "Ø¹ØµØ± ÙÙŠ Ø§Ù„Ù…Ù†ØªØ¬Ø¹ ÙˆØªÙˆÙ‚Ù ÙÙŠ Ù†Ø§Ø¯ÙŠ Ø¬Ø¯Ø© Ù„Ù„ÙŠØ®ÙˆØª ÙˆØ¬ÙˆÙ„Ø© Ù…Ø³Ø§Ø¦ÙŠØ© Ù…Ø±Ø´Ø¯Ø© ÙÙŠ Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ØªØµØ¨Ø­ ÙŠÙˆÙ…Ø§Ù‹ Ø®Ø§ØµØ§Ù‹ ÙˆØ§Ø¶Ø­ Ø§Ù„ØªØ­ÙˆÙ„ Ø¨ÙŠÙ† Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯.",
-    "journey.seaToBalad.note": "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ù‡Ùˆ Ø§Ù„ÙÙƒØ±Ø©: Ø¶ÙˆØ¡ Ø§Ù„Ù†Ù‡Ø§Ø± Ù‚Ø±Ø¨ Ø§Ù„Ù…Ø§Ø¡ØŒ ÙˆØºØ±ÙˆØ¨ ÙÙŠ Ù†Ø§Ø¯ÙŠ Ø§Ù„ÙŠØ®ÙˆØªØŒ Ø«Ù… Ø·Ø§Ø¨Ø¹ Ø§Ù„Ø¨Ù„Ø¯ Ø¨Ø¹Ø¯ Ø­Ù„ÙˆÙ„ Ø§Ù„Ø¸Ù„Ø§Ù….",
-    "journey.seaToBalad.step1Title": "Ø§Ø¨Ø¯Ø£ Ù…Ø¹ Ø§Ù„Ù…Ø§Ø¡",
-    "journey.seaToBalad.step1Text": "ÙŠÙØµÙ…Ù… ÙØµÙ„ Ø§Ù„Ø¨Ø­Ø± ÙƒØªØ¬Ø±Ø¨Ø© Ù…Ù†ØªØ¬Ø¹ØŒ Ù„ÙŠÙ…Ù†Ø­ Ø§Ù„ÙŠÙˆÙ… Ø¨Ø¯Ø§ÙŠØ© Ù‡Ø§Ø¯Ø¦Ø© Ù‚Ø¨Ù„ Ø£Ù† ØªØ¸Ù‡Ø± Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© ÙÙŠ Ø§Ù„Ù…Ø´Ù‡Ø¯.",
-    "journey.seaToBalad.step2Title": "Ø¯Ø¹ Ø§Ù„Ø¶ÙˆØ¡ ÙŠØºÙŠÙ‘Ø± Ø§Ù„Ù…Ø´Ù‡Ø¯",
-    "journey.seaToBalad.step2Text": "ÙŠØµÙ†Ø¹ ØªÙˆÙ‚Ù Ø§Ù„ØºØ±ÙˆØ¨ ÙÙŠ Ù†Ø§Ø¯ÙŠ Ø¬Ø¯Ø© Ù„Ù„ÙŠØ®ÙˆØª Ø§Ù†ØªÙ‚Ø§Ù„Ø§Ù‹ Ø¨ÙŠÙ† Ø¹ØµØ± Ù…ÙØªÙˆØ­ ÙˆØ´Ø®ØµÙŠØ© Ø§Ù„Ø¨Ù„Ø¯.",
-    "journey.seaToBalad.step3Title": "Ø§Ø¯Ø®Ù„ Ø¥Ù„Ù‰ Ø§Ù„Ù…Ø³Ø§Ø¡ Ù…Ø¹ Ù…Ø±Ø´Ø¯",
-    "journey.seaToBalad.step3Text": "ØªØµØ¨Ø­ Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© Ø§Ù„ÙØµÙ„ Ø§Ù„Ø£Ø®ÙŠØ±ØŒ Ù…Ø¹ Ø®ÙŠØ§Ø± Ù…ÙˆØ§ØµÙ„Ø© Ø§Ù„Ù…Ø³Ø§Ø¡ Ø¨Ø¹Ø´Ø§Ø¡ Ù…Ø­Ù„ÙŠ Ù…Ø¯Ø±ÙˆØ³.",
-    "world.sea.eyebrow": "Ø¶ÙˆØ¡ Ø§Ù„ØµØ¨Ø§Ø­ Â· Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±",
-    "world.sea.title": "Ø§Ø¨Ø¯Ø£ Ù…Ù† Ø­ÙŠØ« ÙŠÙ†ÙØªØ­ Ø§Ù„Ø£ÙÙ‚",
-    "world.sea.text": "Ù…Ù† Ø£ÙˆÙ„ Ø±Ø³Ø§Ù„Ø© Ù†Ø¶Ø¨Ø· Ø¥ÙŠÙ‚Ø§Ø¹Ø§Ù‹ ØµØ¨Ø§Ø­ÙŠØ§Ù‹ ÙˆØ§Ø¶Ø­Ø§Ù‹ Ø­ÙˆÙ„ Ù…Ø¬Ù…ÙˆØ¹ØªÙƒ ÙˆØ§Ù„Ù‚Ø§Ø±Ø¨ ÙˆØ§Ù„Ù…Ø³Ø§Ø­Ø© Ø§Ù„ØªÙŠ ØªØ±ÙŠØ¯ Ø£Ù† ØªØ¨Ù‚Ù‰ Ø¨Ù„Ø§ Ø¬Ø¯ÙˆÙ„.",
-    "world.sea.note": "ØªØ¨Ù‚Ù‰ Ø§Ù„Ø³Ø§Ø¹Ø© Ø§Ù„Ø°Ù‡Ø¨ÙŠØ© ØªØ¬Ø±Ø¨Ø© ØºØ±ÙˆØ¨ Ù…Ø³ØªÙ‚Ù„Ø©. Ø¹Ø§Ù„Ù… Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø± ÙŠØ¨Ø¯Ø£ Ù…Ø¹ Ø¶ÙˆØ¡ Ø§Ù„Ù†Ù‡Ø§Ø±.",
-    "world.sea.step1Title": "Ø­Ø¯Ø¯ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ø¹",
-    "world.sea.step1Text": "Ø£Ø®Ø¨Ø±Ù†Ø§ Ø¨Ø§Ù„ÙˆÙ‚Øª ÙˆØ¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆÙ…Ø³ØªÙˆÙ‰ Ø§Ù„Ø®ØµÙˆØµÙŠØ© Ø§Ù„Ø°ÙŠ ØªØ±ØºØ¨ Ø¨Ù‡ Ø¹Ù„Ù‰ Ø§Ù„Ù…Ø§Ø¡.",
-    "world.sea.step2Title": "Ø§Ù†Ø·Ù„Ù‚ Ù†Ø­Ùˆ Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ù…ÙØªÙˆØ­",
-    "world.sea.step2Text": "ÙŠØµØ¨Ø­ Ø§Ù„Ø§Ù†Ø·Ù„Ø§Ù‚ Ù…Ù† Ø£Ø¨Ø­Ø± Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„ÙŠÙˆÙ…ØŒ Ù„Ø§ Ù…Ø¬Ø±Ø¯ Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„ÙŠÙ‡.",
-    "world.sea.step3Title": "Ø§ØªØ±Ùƒ Ù…Ø³Ø§Ø­Ø© Ù„Ù„ÙŠÙˆÙ…",
-    "world.sea.step3Text": "ÙŠØ¨Ù‚Ù‰ Ø§Ù„ÙŠÙˆÙ… Ø§Ù„Ø¨Ø­Ø±ÙŠ Ù…Ø±Ù†Ø§Ù‹ØŒ ÙÙŠÙ…ÙƒÙ† Ù„Ø³Ø¨Ø§Ø­Ø© Ù‡Ø§Ø¯Ø¦Ø© Ø£Ùˆ Ø­Ø¯ÙŠØ« Ø£Ùˆ ØªÙˆÙ‚Ù Ù‚ØµÙŠØ± Ø£Ù† ÙŠØµØ¨Ø­ Ù‡Ùˆ Ø§Ù„Ø°ÙƒØ±Ù‰.",
-    "world.historic.eyebrow": "Ø§Ù„Ø¨Ù„Ø¯ Â· Ø­ÙƒØ§ÙŠØ© Ø­ÙŠÙ‘Ø©",
-    "world.historic.title": "Ø§Ø¯Ø®Ù„ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø¹ØªØ¨Ø©Ù‹ Ø¨Ø¹Ø¯ Ø¹ØªØ¨Ø©",
-    "world.historic.text": "Ù‚Ø¨Ù„ Ø£Ù† ØªØ¨Ø¯Ø£ Ø§Ù„Ø¬ÙˆÙ„Ø©ØŒ ÙŠØ­ÙˆÙ‘Ù„ Ø§Ù„Ù…Ø±Ø´Ø¯ ÙˆØ§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ ÙˆØ§Ù‡ØªÙ…Ø§Ù…Ø§ØªÙƒ Ø§Ù„Ø²Ù‚Ø§Ù‚ Ø¥Ù„Ù‰ Ù…Ø¯Ø®Ù„ Ø´Ø®ØµÙŠ Ù„Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©.",
-    "world.historic.note": "Ù„Ø§ ØªÙØ³ØªØ¹Ø¬Ù„ Ø§Ù„Ø­ÙƒØ§ÙŠØ©. Ù†ØªØ±Ùƒ Ù…Ø³Ø§Ø­Ø© Ù„Ù…Ù„Ø§Ø­Ø¸Ø© Ø§Ù„Ø®Ø´Ø¨ ÙˆØ§Ù„Ø­Ø¬Ø± ÙˆØ§Ù„Ø£ØµÙˆØ§Øª ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØµØºÙŠØ±Ø©.",
-    "world.historic.step1Title": "ØªØ¹Ø±Ù‘Ù Ø¥Ù„Ù‰ Ù…Ø±Ø´Ø¯Ùƒ",
-    "world.historic.step1Text": "Ø§Ø¨Ø¯Ø£ Ø¨Ø§Ù„Ù†Ø§Ø³ ÙˆØ§Ù„Ø³ÙŠØ§Ù‚ Ø§Ù„Ù„Ø°ÙŠÙ† ÙŠÙ…Ù†Ø­Ø§Ù† ÙƒÙ„ Ø¨Ø§Ø¨ Ù…Ø¹Ù†Ù‰ Ø£Ø¹Ù…Ù‚.",
-    "world.historic.step2Title": "Ø§Ù‚Ø±Ø£ Ø§Ù„Ø±ÙˆØ´Ø§Ù†",
-    "world.historic.step2Text": "ØªÙ†Ù‚Ù‘Ù„ Ø¨ÙŠÙ† Ø§Ù„Ø¸Ù„Ø§Ù„ ÙˆØ§Ù„Ø®Ø´Ø¨ Ø§Ù„Ù…Ù†Ø­ÙˆØª ÙˆØ§Ù„Ø­ÙƒØ§ÙŠØ§Øª Ø§Ù„ØªÙŠ Ù„Ø§ ØªØ¸Ù‡Ø± Ø¹Ù„Ù‰ Ø§Ù„Ø®Ø±ÙŠØ·Ø©.",
-    "world.historic.step3Title": "Ø¯Ø¹ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© ØªØ¨Ù‚Ù‰ Ù…Ø¹Ùƒ",
-    "world.historic.step3Text": "Ø§Ø®ØªÙ… Ø¨ÙˆÙ‚Øª ÙŠØ³Ù…Ø­ Ù„Ùƒ Ø¨Ø§Ø³ØªÙŠØ¹Ø§Ø¨ Ø§Ù„Ø®Ø´Ø¨ ÙˆØ§Ù„Ø­Ø¬Ø± ÙˆØ£ØµÙˆØ§Øª Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©ØŒ Ø¨Ø¯Ù„Ø§Ù‹ Ù…Ù† Ø§Ù„Ø§Ø³ØªØ¹Ø¬Ø§Ù„ Ù†Ø­Ùˆ Ù‚Ø§Ø¦Ù…Ø© Ø«Ø§Ø¨ØªØ©.",
-    "world.desert.eyebrow": "Last Light Â· ÙƒØ«Ø¨Ø§Ù† Ø±Ù…Ù„ÙŠØ©",
-    "world.desert.title": "Ø§ØªØ¨Ø¹ Ø§Ù„ÙƒØ«Ø¨Ø§Ù† Ø§Ù„Ø±Ù…Ù„ÙŠØ© Ø­ØªÙ‰ ÙŠÙ‡Ø¯Ø£ Ø§Ù„Ø¶ÙˆØ¡",
-    "world.desert.text": "Ø§Ù„Ù…Ø´Ù‡Ø¯ Ø§Ù„Ø·Ø¨ÙŠØ¹ÙŠ ÙŠÙ‚ÙˆØ¯ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬: Ø§Ù…ØªØ¯Ø§Ø¯Ø§Øª ÙƒØ«Ø¨Ø§Ù† Ø±Ù…Ù„ÙŠØ©ØŒ ÙˆÙ…Ø³Ø§Ø± Ø¯ÙØ¹ Ø±Ø¨Ø§Ø¹ÙŠ Ù…Ø®ØªØ§Ø± Ù„Ù…Ø¬Ù…ÙˆØ¹ØªÙƒØŒ ÙˆØªÙˆÙ‚Ù Ø®Ø§Øµ Ù…Ø¹ Ø§Ù†Ø®ÙØ§Ø¶ Ø§Ù„Ø´Ù…Ø³.",
-    "world.desert.note": "Ù‡Ø°Ø§ Ù‡Ùˆ Ø¹Ø§Ù„Ù… Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„ØµØ­Ø±Ø§ÙˆÙŠ: ÙƒØ«Ø¨Ø§Ù† Ø±Ù…Ù„ÙŠØ© Ù‚Ø¨Ù„ Ø§Ù„Ø¯ÙŠÙƒÙˆØ±ØŒ ÙˆØ§Ù„Ù‡Ø¯ÙˆØ¡ Ù‚Ø¨Ù„ Ø§Ù„Ø§Ø³ØªØ¹Ø±Ø§Ø¶.",
-    "world.desert.step1Title": "Ø§ØªØ±Ùƒ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø®Ù„ÙÙƒ",
-    "world.desert.step1Text": "ÙŠØªØºÙŠØ± Ø§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ Ø­ÙŠÙ† ÙŠÙØ³Ø­ Ø§Ù„Ø·Ø±ÙŠÙ‚ Ø§Ù„Ù…Ø¬Ø§Ù„ Ù„Ù„Ø±Ù…Ø§Ù„ ÙˆØ§Ù„Ø§Ù…ØªØ¯Ø§Ø¯ Ø§Ù„Ù…ÙØªÙˆØ­.",
-    "world.desert.step2Title": "Ø§Ù‚Ø±Ø£ Ø®Ø· Ø§Ù„ÙƒØ«Ø¨Ø§Ù†",
-    "world.desert.step2Text": "ÙŠØªØ¨Ø¹ Ø§Ù„Ù…Ø³Ø§Ø± Ø·Ø¨ÙŠØ¹Ø© Ø§Ù„Ù…ÙƒØ§Ù†ØŒ ÙØ§Ù„ÙƒØ«Ø¨Ø§Ù† Ø§Ù„Ø±Ù…Ù„ÙŠØ© Ù‡ÙŠ Ø§Ù„Ù…Ø´Ù‡Ø¯ Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ ÙˆÙ„ÙŠØ³Øª Ø®Ù„ÙÙŠØ©.",
-    "world.desert.step3Title": "ØµÙ„ Ø¥Ù„Ù‰ Last Light",
-    "world.desert.step3Text": "Ø§Ø³ØªÙ‚Ø± Ù…Ø¹ Ø§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„ÙˆÙ‡Ø¬ Ø§Ù„Ø£Ø®ÙŠØ± ÙÙŠ Ù„Ø­Ø¸Ø© Ù…ØµÙ…Ù…Ø© Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.",
-    "world.taif.eyebrow": "Ø¶ÙˆØ¡ Ø§Ù„ÙØ¬Ø± Â· Ø§Ù„Ù…Ø±ØªÙØ¹Ø§Øª",
-    "world.taif.title": "ØµÙ„ Ù‚Ø¨Ù„ Ø£Ù† ØªØ³ØªÙŠÙ‚Ø¸ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©",
-    "world.taif.text": "Ù‡ÙˆØ§Ø¡ Ø¨Ø§Ø±Ø¯ ÙˆØ®Ø·ÙˆØ· Ø¬Ø¨Ù„ÙŠØ© ÙˆÙˆØ±Ø¯ Ø·Ø§Ø¦ÙÙŠ ØªÙ…Ù†Ø­ Ø¨Ø¯Ø§ÙŠØ© Ø£Ù‡Ø¯Ø£ Ø®Ø§Ø±Ø¬ Ø¥ÙŠÙ‚Ø§Ø¹ Ø¬Ø¯Ø©.",
-    "world.taif.note": "ÙŠØ´ÙƒÙ‘Ù„ Ø§Ù„Ù…ÙˆØ³Ù… Ø§Ù„ØªÙØ§ØµÙŠÙ„ØŒ ÙˆÙŠØ´ÙƒÙ‘Ù„ Ù‡Ø¯ÙˆØ¡ Ø§Ù„Ù…Ø±ØªÙØ¹Ø§Øª ÙƒÙ„ Ù…Ø§ Ø¹Ø¯Ø§ Ø°Ù„Ùƒ.",
-    "world.taif.step1Title": "Ø§ØµØ¹Ø¯ Ø¥Ù„Ù‰ Ø§Ù„ØµØ¨Ø§Ø­",
-    "world.taif.step1Text": "Ø§ØªØ±Ùƒ Ø¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© ÙˆØ±Ø§Ø¡Ùƒ Ù„Ù‡ÙˆØ§Ø¡ Ø£Ø¨Ø±Ø¯ ÙˆØ¥Ø·Ù„Ø§Ù„Ø© Ø¬Ø¨Ù„ÙŠØ© Ù…ÙØªÙˆØ­Ø©.",
-    "world.taif.step2Title": "Ø§Ù„ØªÙ‚Ù Ø¨Ø§Ù„Ù…ÙˆØ³Ù…",
-    "world.taif.step2Text": "ÙŠÙØ®ØªØ§Ø± Ø§Ù„ÙˆØ±Ø¯ ÙˆØ§Ù„Ø¨Ø³Ø§ØªÙŠÙ† ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø­Ù„ÙŠØ© Ø¨Ø­Ø³Ø¨ Ù…Ø§ ØªÙ‚Ø¯Ù…Ù‡ Ø§Ù„Ù…Ø±ØªÙØ¹Ø§Øª Ø§Ù„Ø¢Ù†.",
-    "world.taif.step3Title": "ØªÙˆÙ‚Ù Ø¹Ù†Ø¯ Ø§Ù„Ø¥Ø·Ù„Ø§Ù„Ø©",
-    "world.taif.step3Text": "Ø¯Ø¹ Ø§Ù„Ù…Ø´Ù‡Ø¯ Ø§Ù„Ø·Ø¨ÙŠØ¹ÙŠ ÙŠØ­Ø¯Ø¯ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ø¹Ø› ÙØ§Ù„Ù‡ÙˆØ§Ø¡ ÙˆØ§Ù„Ø¥Ø·Ù„Ø§Ù„Ø© ÙˆØ§Ù„Ù‡Ø¯ÙˆØ¡ Ù‡ÙŠ Ø¨Ø§Ù„ÙØ¹Ù„ Ø¬Ø²Ø¡ Ù…Ù† Ø§Ù„Ø°ÙƒØ±Ù‰.",
-    "collection.productDesert3Short": "Ø§Ù„ØªØ°ÙƒØ§Ø±",
-    "collection.productDesert3Title": "ØªØ°ÙƒØ§Ø± Ù…Ù†Ø³ÙˆØ¬ ØµØºÙŠØ±",
-    "collection.productDesert3Text": "Ù‚Ø·Ø¹Ø© Ù…Ù†Ø³ÙˆØ¬Ø© ØµØºÙŠØ±Ø© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† Ø§Ù„Ø­Ø±Ù Ø§Ù„ØµØ­Ø±Ø§ÙˆÙŠØ© ÙˆÙŠØ³Ù‡Ù„ Ø­Ù…Ù„Ù‡Ø§ ÙƒØªØ°ÙƒØ§Ø±.",
-    "collection.productTaif4Short": "Ø¹Ù†Ø§ÙŠØ© Ø§Ù„ÙˆØ±Ø¯",
-    "collection.productTaif4Title": "ØµØ§Ø¨ÙˆÙ† ÙˆØ±Ø¯ Ø£Ùˆ ÙƒØ±ÙŠÙ… Ù„Ù„ÙŠØ¯ÙŠÙ†",
-    "collection.productTaif4Text": "Ù…Ù†ØªØ¬ Ø¹Ù†Ø§ÙŠØ© Ù…Ø­Ù„ÙŠ ØµØºÙŠØ± ÙŠÙØ®ØªØ§Ø± Ø­Ø³Ø¨ Ø§Ù„Ù…ÙˆØ³Ù… ÙˆØ§Ù„ØªÙˆÙØ±.",
-    "collection.noirTitle": "After Midnight Noir",
-    "collection.velvetTitle": "After Midnight Velvet",
-    "common.seasonal": "Ù…ÙˆØ³Ù…ÙŠ",
-    "collection.exploreButton": "ØªØµÙØ­ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª",
-    "collection.filterAria": "ØªØµÙÙŠØ© Ø§Ù„Ø¨ÙˆØªÙŠÙƒ Ø­Ø³Ø¨ Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "collection.quantity": "Ø§Ù„ÙƒÙ…ÙŠØ©",
-    "collection.addBox": "Ø£Ø¶Ù Ø§Ù„Ø¨ÙˆÙƒØ³ Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.addItem": "Ø£Ø¶Ù Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.addService": "Ø£Ø¶Ù Ø§Ù„Ø®Ø¯Ù…Ø© Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.added": "ØªÙ…Øª Ø§Ù„Ø¥Ø¶Ø§ÙØ© Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.removeItem": "Ø¥Ø²Ø§Ù„Ø©",
-    "collection.boxExecutiveTitle": "Ø¨ÙˆÙƒØ³ Ø§Ù„ØªØ±Ø­ÙŠØ¨ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠ",
-    "collection.boxExecutiveText": "ØªØ±Ø­ÙŠØ¨ Ø±Ø§Ù‚Ù ÙÙŠ Ø§Ù„ÙÙ†Ø¯Ù‚ Ù„Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ† ÙˆØ§Ù„ÙˆÙÙˆØ¯ ÙˆØ§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ø¯ÙˆÙ„ÙŠÙŠÙ†.",
-    "collection.boxExecutiveItem1": "Ø¯ÙØªØ± ÙˆÙ‚Ù„Ù… Ø±Ø§Ù‚ÙŠØ§Ù†",
-    "collection.boxExecutiveItem2": "Ø¨Ø·Ø§Ù‚Ø© Ø£Ù…ØªØ¹Ø© Ø£Ù†ÙŠÙ‚Ø©",
-    "collection.boxExecutiveItem3": "Ø¨Ø·Ø§Ù‚Ø© ØªØ±Ø­ÙŠØ¨ ÙˆÙ…Ø³Ø§Ø± Ø¨Ø§Ø³Ù… Ø§Ù„Ø¶ÙŠÙ",
-    "collection.boxExecutiveItem4": "ØªØ°ÙƒØ§Ø± Ù…Ø­Ù„ÙŠ ØµØºÙŠØ±",
-    "collection.productsEyebrow": "Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª Ø§Ù„Ù…Ù†ÙØ±Ø¯Ø©",
-    "collection.productsTitle": "Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª Ù‚Ø±ÙŠØ¨Ù‹Ø§.",
-    "collection.productsText": "ØªØ¨Ù‚Ù‰ Ù‡Ø°Ù‡ Ø§Ù„Ù…Ø¹Ø§ÙŠÙ†Ø§Øª Ù…Ø±Ø¦ÙŠØ© Ø£Ø«Ù†Ø§Ø¡ Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„Ù†Ù…Ø§Ø°Ø¬ Ø§Ù„Ø£ÙˆÙ„ÙŠØ© ÙˆØ§Ù„Ù…ÙˆØ±Ø¯ÙŠÙ† ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠØ©ØŒ ÙˆÙ„Ø§ ÙŠÙ…ÙƒÙ† Ø¥Ø¶Ø§ÙØªÙ‡Ø§ Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø­Ø§Ù„ÙŠÙ‹Ø§.",
-    "collection.productSea1Short": "Ø§Ù„Ø­Ù‚ÙŠØ¨Ø©",
-    "collection.productSea1Title": "Ø­Ù‚ÙŠØ¨Ø© Ø´Ø§Ø·Ø¦ Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "collection.productSea1Text": "Ø­Ù‚ÙŠØ¨Ø© Ø¹Ù…Ù„ÙŠØ© Ù„Ù„Ø´Ø§Ø·Ø¦ ÙˆÙŠÙ…ÙƒÙ† Ø§Ø³ØªØ®Ø¯Ø§Ù…Ù‡Ø§ Ù„Ø­Ù…Ù„ Ù…Ø¬Ù…ÙˆØ¹Ø© Ø§Ù„Ø¨Ø­Ø± ÙƒØ§Ù…Ù„Ø©.",
-    "collection.productSea2Short": "Ø§Ù„Ù…Ù†Ø´ÙØ©",
-    "collection.productSea2Title": "Ù…Ù†Ø´ÙØ© Ø´Ø§Ø·Ø¦ Ø³Ø±ÙŠØ¹Ø© Ø§Ù„Ø¬ÙØ§Ù",
-    "collection.productSea2Text": "Ø®ÙÙŠÙØ© ÙˆØ³Ù‡Ù„Ø© Ø§Ù„Ø­Ù…Ù„ ÙˆÙ…Ù†Ø§Ø³Ø¨Ø© Ù„Ù„Ù…Ù†ØªØ¬Ø¹ ÙˆØ§Ù„Ù‚Ø§Ø±Ø¨ ÙˆØ§Ù„Ø´Ø§Ø·Ø¦.",
-    "collection.productHistoric1Short": "ØªØ°ÙƒØ§Ø±",
-    "collection.productHistoric1Title": "ØªØ°ÙƒØ§Ø± Ø®Ø´Ø¨ÙŠ Ù…Ø³ØªÙˆØ­Ù‰ Ù…Ù† Ø§Ù„Ø±ÙˆØ´Ø§Ù†",
-    "collection.productHistoric1Text": "Ù‚Ø·Ø¹Ø© ØµØºÙŠØ±Ø© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ø­Ù„ÙŠÙ‹Ø§ Ù…Ù† Ù†ÙˆØ§ÙØ° Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©.",
-    "collection.productHospitalityShort": "Ù…Ø¬Ù…ÙˆØ¹Ø© ØªØ±Ø­ÙŠØ¨",
-    "collection.productHospitalityTitle": "Ù…Ø¬Ù…ÙˆØ¹Ø© Ø¨Ø·Ø§Ù‚Ø§Øª ØªØ±Ø­ÙŠØ¨ Ø¨Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "collection.productHospitalityText": "Ø¨Ø·Ø§Ù‚Ø§Øª ØªØ±Ø­ÙŠØ¨ Ù…Ø®ØµØµØ© ÙˆØ¨Ø·Ø§Ù‚Ø§Øª Ù…Ø³Ø§Ø± ØµØºÙŠØ±Ø© Ù„Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "collection.productHistoric2Short": "Ø¨Ø·Ø§Ù‚Ø§Øª",
-    "collection.productHistoric2Title": "Ø¨Ø·Ø§Ù‚Ø§Øª ØªØ±Ø§Ø«ÙŠØ© Ù…ØµÙˆØ±Ø©",
-    "collection.productHistoric2Text": "Ù…Ø¬Ù…ÙˆØ¹Ø© Ù…Ø®ØªØµØ±Ø© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† Ø¹Ù…Ø§Ø±Ø© Ø§Ù„Ø¨Ù„Ø¯ ÙˆØªÙØ§ØµÙŠÙ„Ù‡Ø§.",
-    "collection.productDesert1Short": "Ø§Ù„Ø´Ø§Ù„",
-    "collection.productDesert1Title": "Ø´Ø§Ù„ ØµØ­Ø±Ø§ÙˆÙŠ Ø®ÙÙŠÙ",
-    "collection.productDesert1Text": "Ø·Ø¨Ù‚Ø© Ø®ÙÙŠÙØ© ÙˆÙ…Ø­Ø§ÙŠØ¯Ø© ÙŠØ³Ù‡Ù„ Ø­Ù…Ù„Ù‡Ø§ Ù„Ø£Ø¬ÙˆØ§Ø¡ Ø§Ù„Ù…Ø³Ø§Ø¡ Ø§Ù„ØµØ­Ø±Ø§ÙˆÙŠ.",
-    "collection.productDesert2Short": "Ø§Ù„ÙƒÙˆØ¨ Ø§Ù„Ø­Ø±Ø§Ø±ÙŠ",
-    "collection.productDesert2Title": "ÙƒÙˆØ¨ Ø±Ø­Ù„Ø§Øª Ù…Ø¹Ø²ÙˆÙ„ Ø­Ø±Ø§Ø±ÙŠÙ‹Ø§",
-    "collection.productDesert2Text": "ÙƒÙˆØ¨ Ù‚Ø§Ø¨Ù„ Ù„Ø¥Ø¹Ø§Ø¯Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… ÙˆÙ…Ù†Ø§Ø³Ø¨ Ù„Ø£Ø¬ÙˆØ§Ø¡ Ø§Ù„Ù…Ø³Ø§Ø¡ Ø§Ù„ØµØ­Ø±Ø§ÙˆÙŠ.",
-    "collection.productTaif1Short": "Ø±Ø°Ø§Ø° Ø§Ù„ÙˆØ±Ø¯",
-    "collection.productTaif1Title": "Ø±Ø°Ø§Ø° ÙˆØ±Ø¯ Ø·Ø§Ø¦ÙÙŠ Ø¹Ø·Ø±ÙŠ",
-    "collection.productTaif1Text": "Ø±Ø°Ø§Ø° ÙˆØ±Ø¯ Ø¹Ø·Ø±ÙŠ Ù„Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„Ø®Ø§Ø±Ø¬ÙŠØŒ ÙŠÙØ®ØªØ§Ø± Ù…Ù† Ù…ÙˆØ±Ø¯ Ù…Ø­Ù„ÙŠ Ø­Ø³Ø¨ Ø§Ù„Ù…ÙˆØ³Ù… ÙˆØ§Ù„ØªÙˆÙØ±.",
-    "collection.productTaif2Short": "Ø¯ÙØªØ± Ø¨Ù†Ù‚ÙˆØ´ Ø§Ù„ÙˆØ±Ø¯",
-    "collection.productTaif2Title": "Ø¯ÙØªØ± Ø¨Ù†Ù‚ÙˆØ´ ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù",
-    "collection.productTaif2Text": "Ø¯ÙØªØ± ØµØºÙŠØ± Ø¨Ù†Ù‚ÙˆØ´ Ù‡Ø§Ø¯Ø¦Ø© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù.",
-    "collection.productTaif3Short": "Ù‡Ø¯ÙŠØ© Ø§Ù„ÙˆØ±Ø¯",
-    "collection.productTaif3Title": "ÙƒÙŠØ³ ÙˆØ±Ø¯ Ù…Ø¹Ø·Ø±",
-    "collection.productTaif3Text": "ØªØ°ÙƒØ§Ø± Ø®ÙÙŠÙ Ù…Ù†Ø§Ø³Ø¨ Ù„Ù„ØªØ±Ø­ÙŠØ¨ ÙÙŠ Ø§Ù„ÙÙ†Ø¯Ù‚ ÙˆØ¨ÙˆÙƒØ³Ø§Øª Ø§Ù„ØªØ¬Ø§Ø±Ø¨.",
-    "collection.lastLightPending": "Ø§Ù„ØªØµÙ…ÙŠÙ… Ø§Ù„Ø£ØµÙ„ÙŠ Ù„Ù„Ø¨Ø·Ø§Ù‚Ø© Ù‚ÙŠØ¯ Ø§Ù„Ø¥Ø¹Ø¯Ø§Ø¯",
-    "collection.scentLabName": "Ù…Ø®ØªØ¨Ø± Ø¹Ø·ÙˆØ± Ø£ÙÙ†ØªÙˆØ±Ø§",
-    "collection.guestServicesEyebrow": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "collection.guestServicesTitle": "ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¶ÙŠÙ ØªÙØ±ØªØ¨ ÙÙŠ Ù…Ø³Ø§Ø± Ù…Ø³ØªÙ‚Ù„.",
-    "collection.guestServicesText": "ÙŠÙÙ†Ø³Ù‘Ù‚ ØªÙØµÙŠÙ„ Ø§Ù„Ø«ÙˆØ¨ ÙˆØ§Ù„Ø¹Ø¨Ø§ÙŠØ© ÙˆØ§Ù„ÙˆØ±Ø¯ Ø¹Ø¨Ø± Ø·Ù„Ø¨ Ø®Ø§Øµ Ø¨Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ.",
-    "collection.boutiqueGatewayAria": "Ù…Ø³Ø§Ø±Ø§Øª Ø¯Ø®ÙˆÙ„ Ø§Ù„Ø¨ÙˆØªÙŠÙƒ",
-    "collection.boutiqueGatewayEyebrow": "Ø§Ø¨Ø¯Ø£ Ø¨Ø§Ù„Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„ØªÙŠ ØªÙ†Ø§Ø³Ø¨Ùƒ",
-    "collection.boutiqueGatewayTitle": "Ø§Ø®ØªØ± Ø·Ø±ÙŠÙ‚Ø© Ø§Ø³ØªÙƒØ´Ø§Ù Ø§Ù„Ø¨ÙˆØªÙŠÙƒ",
-    "collection.boutiqueGatewayText": "ÙŠØ¨Ø¯Ø£ ÙƒÙ„ ØªØµÙˆØ± Ø¹Ø·Ø±ÙŠ Ù…Ù† Ù…ÙƒØ§Ù† ÙˆÙ…Ø²Ø§Ø¬ ÙˆØªØ¬Ø±Ø¨Ø© ÙˆØ§Ø­Ø¯Ø© Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§.",
-    "collection.executiveServicesEyebrow": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ†",
-    "collection.executiveServicesTitle": "Ø¯Ø¹Ù… Ù…Ø¯Ø±ÙˆØ³ Ø­ÙˆÙ„ ÙƒÙ„ ÙˆØµÙˆÙ„",
-    "collection.executiveServicesText": "Ø®Ø¯Ù…Ø§Øª Ù…Ø³ØªÙ‚Ù„Ø© Ø£Ùˆ ØªÙØ§ØµÙŠÙ„ Ù…Ù†Ø³Ù‚Ø© Ø¶Ù…Ù† Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø¶ÙŠÙ ÙˆØ§Ø­Ø¯.",
-    "collection.airportWelcomeTitle": "Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙˆØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ù…Ø·Ø§Ø±",
-    "collection.airportWelcomeText": "ØªÙ†Ø³ÙŠÙ‚ ÙˆØµÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ Ù…Ù† Ù†Ù‚Ø·Ø© Ø§Ù„Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙÙŠ Ø§Ù„Ù…Ø·Ø§Ø± Ø¥Ù„Ù‰ Ø§Ù„Ø³ÙŠØ§Ø±Ø© ÙˆÙ…ÙƒØ§Ù† Ø§Ù„Ø¥Ù‚Ø§Ù…Ø© Ø§Ù„Ù…Ø­Ø¯Ø¯ÙŠÙ†.",
-    "collection.executiveTransportTitle": "Ø§Ù„Ù†Ù‚Ù„ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠ",
-    "collection.executiveTransportText": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ø³ÙŠØ§Ø±Ø© ÙˆØ§Ù„Ø³Ø§Ø¦Ù‚ Ø¨Ø­Ø³Ø¨ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬ ÙˆØ¹Ø¯Ø¯ Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙˆÙ‚ÙŠØª Ø§Ù„Ù…ÙØ¶Ù„.",
-    "collection.meetingSetupTitle": "ØªØ¬Ù‡ÙŠØ² Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹Ø§Øª",
-    "collection.meetingSetupText": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ù‚Ø§Ø¹Ø© ÙˆØ§Ù„Ø¶ÙŠØ§ÙØ© ÙˆØ§Ù„Ù†Ù‚Ù„ ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¹Ù…Ù„ÙŠØ© Ù„Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ ÙˆÙÙ‚ Ø¬Ø¯ÙˆÙ„ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„.",
-    "collection.officialGiftsTitle": "Ø§Ù„Ù‡Ø¯Ø§ÙŠØ§ Ø§Ù„Ø±Ø³Ù…ÙŠØ©",
-    "collection.officialGiftsText": "ØªØ¬Ù‡ÙŠØ² Ù‡Ø¯ÙŠØ© ØªØ±Ø­ÙŠØ¨ Ø£Ùˆ Ù‡Ø¯ÙŠØ© Ø±Ø³Ù…ÙŠØ© Ø¨Ø­Ø³Ø¨ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ§Ù„Ù…Ø³ØªÙ„Ù… ÙˆØ§Ù„Ù‡ÙˆÙŠØ© Ø§Ù„Ù…Ø¹ØªÙ…Ø¯Ø©.",
-    "collection.conciergeTitle": "Ø¯Ø¹Ù… Ø§Ù„ÙƒÙˆÙ†Ø³ÙŠØ±Ø¬",
-    "collection.conciergeText": "ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„Ø¯Ø¹Ù… Ø§Ù„Ø¹Ù…Ù„ÙŠ Ù„Ù„Ø¶ÙŠÙ ÙˆØ§Ù„Ø­Ø¬ÙˆØ²Ø§Øª ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¹Ø¨Ø± Ù†Ù‚Ø·Ø© ØªÙˆØ§ØµÙ„ ÙˆØ§Ø­Ø¯Ø©.",
-    "collection.requestService": "Ø§Ø·Ù„Ø¨ Ù‡Ø°Ù‡ Ø§Ù„Ø®Ø¯Ù…Ø©",
-    "collection.scentLabInterestNote": "Ø¬Ù…ÙŠØ¹ ØªØµÙˆØ±Ø§Øª Ø§Ù„Ø¹Ø·ÙˆØ± Ù…Ø§ Ø²Ø§Ù„Øª Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ±ØŒ ÙˆØ³ÙŠÙØ¹Ù„Ù† Ø¹Ù†Ù‡Ø§ Ø¹Ù†Ø¯ Ø¬Ø§Ù‡Ø²ÙŠØªÙ‡Ø§.",
-    "collection.thobePoint1": "Ø²ÙŠØ§Ø±Ø© Ø®Ø§ØµØ©",
-    "collection.thobePoint2": "Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù‚Ù…Ø§Ø´",
-    "collection.thobePoint3": "ØªØ³Ù„ÙŠÙ… Ø³Ø±ÙŠØ¹ ÙˆÙ…Ù†Ø³Ù‚",
-    "collection.abayaPoint1": "Ù…Ø³Ø§Ø¹Ø¯Ø© Ø®Ø§ØµØ©",
-    "collection.abayaPoint2": "Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù…Ù‚Ø§Ø³ ÙˆØ§Ù„Ø£Ø³Ù„ÙˆØ¨",
-    "collection.abayaPoint3": "ØªØ³Ù„ÙŠÙ… Ù…Ù†Ø³Ù‚",
-    "collection.flowerTitle": "Ø¨Ø§Ù‚Ø© ÙˆØ±Ø¯ Ù‚Ø¨Ù„ ÙˆØµÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ",
-    "collection.flowerText": "ØªÙØ±ØªØ¨ Ø¨Ø§Ù‚Ø© ÙˆØ±Ø¯ ÙˆØ¨Ø·Ø§Ù‚Ø© Ø´Ø®ØµÙŠØ© ÙÙŠ Ø§Ù„ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ù…Ù‚Ø± Ø§Ù„Ø¥Ù‚Ø§Ù…Ø© Ù‚Ø¨Ù„ ÙˆØµÙˆÙ„ Ø§Ù„Ø¶ÙŠÙ.",
-    "collection.flowerPoint1": "ØªÙ†Ø³ÙŠÙ‚ Ø­Ø³Ø¨ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©",
-    "collection.flowerPoint2": "Ø¨Ø·Ø§Ù‚Ø© Ø¨Ø±Ø³Ø§Ù„Ø© Ø´Ø®ØµÙŠØ©",
-    "collection.flowerPoint3": "ØªÙˆØµÙŠÙ„ Ù‚Ø¨Ù„ Ø§Ù„ÙˆØµÙˆÙ„",
-    "collection.selectionLabel": "Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.selectionItems": "Ø¹Ù†Ø§ØµØ±",
-    "collection.reviewSelection": "Ø±Ø§Ø¬Ø¹ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.dialogTitle": "Ø±Ø§Ø¬Ø¹ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.quoteDisclaimer": "Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ù„Ø§ ÙŠØ¤ÙƒØ¯ Ø§Ù„Ø­Ø¬Ø² Ø£Ùˆ Ø§Ù„Ø¯ÙØ¹ Ø£Ùˆ Ø§Ù„ØªÙˆÙØ±. ØªØ±Ø§Ø¬Ø¹ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…ÙˆØ¹Ø¯ ÙˆØ§Ù„ÙƒÙ…ÙŠØ© ÙˆØ§Ù„ØªØ®ØµÙŠØµ Ù‚Ø¨Ù„ Ø¥ØµØ¯Ø§Ø± Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠ.",
-    "collection.clearSelection": "Ù…Ø³Ø­ Ø§Ù„Ø§Ø®ØªÙŠØ§Ø±Ø§Øª",
-    "contact.requestedItems": "Ø§Ù„ØªÙØ§ØµÙŠÙ„ ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ø®ØªØ§Ø±Ø©",
-    "contact.collectionDetailsTitle": "ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¨ÙˆØªÙŠÙƒ ÙˆØ§Ù„ØªÙˆØµÙŠÙ„",
-    "contact.deliveryLocationLabel": "Ø§Ù„ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ù…ÙˆÙ‚Ø¹ Ø§Ù„ØªØ³Ù„ÙŠÙ…",
-    "contact.deliveryLocationPlaceholder": "Ø§Ù„ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ù…Ù‚Ø± Ø§Ù„Ø¥Ù‚Ø§Ù…Ø© Ø£Ùˆ Ù…ÙˆÙ‚Ø¹ Ø§Ù„ÙØ¹Ø§Ù„ÙŠØ©",
-    "contact.deliveryTimeLabel": "ÙˆÙ‚Øª Ø§Ù„ØªØ³Ù„ÙŠÙ… Ø§Ù„Ù…Ø·Ù„ÙˆØ¨",
-    "contact.personalizationLabel": "Ø§Ø³Ù… Ø§Ù„Ø¶ÙŠÙ Ø£Ùˆ Ø±Ø³Ø§Ù„Ø© Ø§Ù„Ø¥Ù‡Ø¯Ø§Ø¡ Ø£Ùˆ Ø´Ø¹Ø§Ø± Ø§Ù„Ø´Ø±ÙƒØ©",
-    "contact.personalizationPlaceholder": "ØªÙØ§ØµÙŠÙ„ Ø§Ù„ØªØ®ØµÙŠØµ Ø¥Ù† ÙˆØ¬Ø¯Øª",
-    "contact.thobeDetailsTitle": "ØªÙØ§ØµÙŠÙ„ Ø®Ø¯Ù…Ø© ØªÙØµÙŠÙ„ Ø§Ù„Ø«ÙˆØ¨",
-    "contact.serviceLocationLabel": "Ø§Ù„ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ù…Ù‚Ø± Ø§Ù„Ø¥Ù‚Ø§Ù…Ø©",
-    "contact.thobeCountLabel": "Ø¹Ø¯Ø¯ Ø§Ù„Ø£Ø«ÙˆØ§Ø¨",
-    "contact.visitTimeLabel": "Ù…ÙˆØ¹Ø¯ Ø§Ù„Ø²ÙŠØ§Ø±Ø© Ø§Ù„Ù…ÙØ¶Ù„",
-    "contact.requiredDeliveryLabel": "Ù…ÙˆØ¹Ø¯ Ø§Ù„ØªØ³Ù„ÙŠÙ… Ø§Ù„Ù…Ø·Ù„ÙˆØ¨",
-    "contact.thobePreferenceLabel": "Ø§Ù„Ù„ÙˆÙ† Ø£Ùˆ Ø§Ù„Ù‚Ù…Ø§Ø´ Ø§Ù„Ù…ÙØ¶Ù„",
-    "contact.optionalPlaceholder": "Ø§Ø®ØªÙŠØ§Ø±ÙŠ",
-    "contact.abayaDetailsTitle": "ØªÙØ§ØµÙŠÙ„ Ø®Ø¯Ù…Ø© Ø§Ù„Ø¹Ø¨Ø§ÙŠØ©",
-    "contact.contactVisitTimeLabel": "Ù…ÙˆØ¹Ø¯ Ø§Ù„ØªÙˆØ§ØµÙ„ Ø£Ùˆ Ø§Ù„Ø²ÙŠØ§Ø±Ø© Ø§Ù„Ù…ÙØ¶Ù„",
-    "contact.preferredContactLabel": "Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„ØªÙˆØ§ØµÙ„ Ø§Ù„Ù…ÙØ¶Ù„Ø©",
-    "contact.contactWhatsapp": "ÙˆØ§ØªØ³Ø§Ø¨",
-    "contact.contactEmail": "Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ",
-    "contact.preferredResponseText": "ØªØ±Ø¯ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø¹Ø¨Ø± Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù…Ø§ Ù„Ù… ØªÙØ¶Ù‘Ù„ ÙˆØ§ØªØ³Ø§Ø¨ Ø£Ùˆ Ø§Ù„Ø§ØªØµØ§Ù„ Ø§Ù„Ù‡Ø§ØªÙÙŠ.",
-    "contact.sendMethodLegend": "Ø£Ø±Ø³Ù„ Ø·Ù„Ø¨ Ø­Ø¬Ø²Ùƒ Ø¹Ø¨Ø±",
-    "contact.sendMethodText": "Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù‡Ùˆ ÙˆØ³ÙŠÙ„Ø© Ø§Ù„Ø­Ø¬Ø² Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ©ØŒ ÙˆÙŠØ¨Ù‚Ù‰ ÙˆØ§ØªØ³Ø§Ø¨ Ø®ÙŠØ§Ø±Ø§Ù‹ Ø«Ø§Ù†ÙŠØ§Ù‹.",
-    "contact.sendEmail": "Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ",
-    "contact.sendWhatsapp": "ÙˆØ§ØªØ³Ø§Ø¨",
-    "contact.contactCall": "Ø§ØªØµØ§Ù„ Ù‡Ø§ØªÙÙŠ",
-    "contact.contactVisit": "Ø²ÙŠØ§Ø±Ø© Ø§Ù„ÙÙ†Ø¯Ù‚",
-    "contact.flowerDetailsTitle": "ØªÙØ§ØµÙŠÙ„ ØªÙˆØµÙŠÙ„ Ø§Ù„ÙˆØ±Ø¯",
-    "contact.recipientLabel": "Ø§Ø³Ù… Ø§Ù„Ù…Ø³ØªÙ„Ù…",
-    "contact.occasionLabel": "Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©",
-    "contact.flowerSizeLabel": "Ø­Ø¬Ù… Ø§Ù„Ø¨Ø§Ù‚Ø©",
-    "contact.flowerSizeQuiet": "Ù‡Ø§Ø¯Ø¦Ø©",
-    "contact.flowerSizeMedium": "Ù…ØªÙˆØ³Ø·Ø©",
-    "contact.flowerSizeSignature": "Ù…Ù…ÙŠØ²Ø©",
-    "contact.flowerColorsLabel": "Ø§Ù„Ø£Ù„ÙˆØ§Ù† Ø§Ù„Ù…ÙØ¶Ù„Ø©",
-    "contact.cardMessageLabel": "Ù†Øµ Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„ÙˆØ±Ø¯",
-    "experiences.completeEyebrow": "Ø£ÙƒÙ…Ù„ ØªØ¬Ø±Ø¨ØªÙƒ",
-    "experiences.completeSeaTitle": "ØªÙØ§ØµÙŠÙ„ Ø´Ø§Ø·Ø¦ÙŠØ© Ø¬Ø§Ù‡Ø²Ø© Ù„Ù„ÙŠÙˆÙ… Ø§Ù„Ø¨Ø­Ø±ÙŠ",
-    "experiences.completeHistoricTitle": "Ø°ÙƒØ±Ù‰ Ù…Ù† Ø§Ù„Ø¨Ù„Ø¯ ØªØ¨Ù‚Ù‰ Ø¨Ø¹Ø¯ Ø§Ù„Ø¬ÙˆÙ„Ø©",
-    "experiences.completeDesertTitle": "ØªÙØ§ØµÙŠÙ„ Ø¯Ø§ÙØ¦Ø© Ù„Ù„Ø­Ø¸Ø§Øª Ø§Ù„Ø¶ÙˆØ¡ Ø§Ù„Ø£Ø®ÙŠØ±",
-    "experiences.completeTaifTitle": "Ù‡Ø¯Ø§ÙŠØ§ Ù…ÙˆØ³Ù…ÙŠØ© Ù…Ù† Ø§Ù„Ù…Ø±ØªÙØ¹Ø§Øª",
-    "experiences.completeJeddahTitle": "Ù…Ø®ØªØ§Ø±Ø§Øª Ø§Ù„Ø¨Ø­Ø± ÙˆØ±ÙˆØ´Ø§Ù† ÙÙŠ ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯",
-    "experiences.viewCollection": "Ø¹Ø±Ø¶ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© ÙƒØ§Ù…Ù„Ø©",
-    "collection.viewStoryCard": "Ø¹Ø±Ø¶ Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„Ù‚ØµØ©",
-    "collection.storyDialogEyebrow": "Ø­Ù…Ù„Ø© Ø§Ù„Ø¹Ø·Ø±",
-    "collection.storyDialogTitle": "Ø¨Ø·Ø§Ù‚Ø© Ù‚ØµØ© Ø§Ù„Ø¹Ø·Ø±",
-    "collection.closeStoryCard": "Ø¥ØºÙ„Ø§Ù‚ Ø¨Ø·Ø§Ù‚Ø© Ø§Ù„Ù‚ØµØ©",
-    "collection.noirText": "Ø´Ø§ÙŠ Ø£Ø³ÙˆØ¯ ÙˆØ³ÙˆØ³Ù† ÙˆØ£Ø®Ø´Ø§Ø¨ Ù…ØµÙ‚ÙˆÙ„Ø© ÙˆØ£Ø«Ø± Ù„ÙŠÙ„ÙŠ Ù‡Ø§Ø¯Ø¦.",
-    "collection.velvetText": "ÙƒÙ…Ø«Ø±Ù‰ Ù†Ø§Ø¹Ù…Ø© ÙˆÙŠØ§Ø³Ù…ÙŠÙ† Ø¯Ø§ÙØ¦ ÙˆØ£Ø®Ø´Ø§Ø¨ Ù…Ø®Ù…Ù„ÙŠØ© ÙˆØ£Ø«Ø± Ø£Ù†Ø«ÙˆÙŠ Ø±Ø§Ù‚Ù.",
-    "collection.productHistoric3Short": "Ø¯ÙØªØ± Ø¬ÙŠØ¨",
-    "collection.productHistoric3Title": "Ø¯ÙØªØ± Ø¬ÙŠØ¨ Ø¨Ù†Ù‚ÙˆØ´ Ø§Ù„Ø±ÙˆØ´Ø§Ù†",
-    "collection.productHistoric3Text": "Ø¯ÙØªØ± ØµØºÙŠØ± Ø¨ØªÙØ§ØµÙŠÙ„ Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† Ø±ÙˆØ§Ø´ÙŠÙ† Ø§Ù„Ø¨Ù„Ø¯ Ø§Ù„Ø®Ø´Ø¨ÙŠØ©.",
-    "collection.productHistoric4Short": "Ø­Ù‚ÙŠØ¨Ø© Ù‚Ù…Ø§Ø´ÙŠØ©",
-    "collection.productHistoric4Title": "Ø­Ù‚ÙŠØ¨Ø© Ù‚Ù…Ø§Ø´ÙŠØ© ØµØºÙŠØ±Ø© Ø¨Ù‡ÙˆÙŠØ© Ø§Ù„Ø¨Ù„Ø¯",
-    "collection.productHistoric4Text": "Ø­Ù‚ÙŠØ¨Ø© Ù‚Ù…Ø§Ø´ÙŠØ© Ø®ÙÙŠÙØ© Ø¨Ù†Ù‚ÙˆØ´ Ù‡Ø§Ø¯Ø¦Ø© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† Ø¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ©.",
-    "collection.productTaif5Short": "Ø¯ÙØªØ± Ø¬ÙŠØ¨",
-    "collection.productTaif5Title": "Ø¯ÙØªØ± Ø¬ÙŠØ¨ Ø¨Ù†Ù‚ÙˆØ´ Ø§Ù„ÙˆØ±Ø¯",
-    "collection.productTaif5Text": "Ø¯ÙØªØ± ØµØºÙŠØ± Ø¨Ù†Ù‚ÙˆØ´ Ù‡Ø§Ø¯Ø¦Ø© Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† ÙˆØ±Ø¯ Ø§Ù„Ø·Ø§Ø¦Ù.",
-    "collection.discoveryTitle": "Ø·Ø±ÙŠÙ‚ØªØ§Ù† ÙˆØ§Ø¶Ø­ØªØ§Ù† Ù„Ø¯Ø®ÙˆÙ„ Ø§Ù„Ø¨ÙˆØªÙŠÙƒ",
-    "collection.discoveryText": "Ø§ÙƒØªØ´Ù Ù…Ø¬Ù…ÙˆØ¹Ø© Ù…Ø±ØªØ¨Ø·Ø© Ø¨ØªØ¬Ø±Ø¨ØªÙƒ Ø§Ù„Ù‚Ø§Ø¯Ù…Ø©ØŒ Ø£Ùˆ Ø§Ù†ØªÙ‚Ù„ Ù…Ø¨Ø§Ø´Ø±Ø© Ø¥Ù„Ù‰ Ù…Ù†ØªØ¬ ØªØ¹Ø±ÙÙ‡ ÙˆØªØ±ÙŠØ¯ Ø·Ù„Ø¨Ù‡.",
-    "collection.pathExperienceEyebrow": "ØªØ®Ø·Ø· Ù„ØªØ¬Ø±Ø¨Ø© Ø¬Ø¯ÙŠØ¯Ø©",
-    "collection.pathExperienceTitle": "ØªØµÙØ­ Ø­Ø³Ø¨ Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "collection.pathExperienceText": "Ø§Ø³ØªÙƒØ´Ù Ø§Ù„ØªØµÙˆØ±Ø§Øª Ø§Ù„Ø¹Ø·Ø±ÙŠØ© Ø§Ù„Ù…Ø³ØªÙˆØ­Ø§Ø© Ù…Ù† Ø§Ù„Ø¨Ø­Ø± ÙˆØ¬Ø¯Ø© Ø§Ù„ØªØ§Ø±ÙŠØ®ÙŠØ© ÙˆØ§Ù„ØµØ­Ø±Ø§Ø¡ ÙˆØ§Ù„Ø·Ø§Ø¦Ù.",
-    "collection.pathExperienceAction": "Ø§Ø®ØªØ± ØªØ¬Ø±Ø¨Ø©",
-    "collection.pathProductEyebrow": "Ø¹Ù…ÙŠÙ„ Ø¹Ø§Ø¦Ø¯ Ø£Ùˆ ØªØ¨Ø­Ø« Ù…Ø¨Ø§Ø´Ø±Ø©",
-    "collection.pathProductTitle": "Ø§Ø¨Ø­Ø« Ø¹Ù† Ù…Ù†ØªØ¬",
-    "collection.pathProductText": "Ø§Ø¨Ø­Ø« Ø¨Ø§Ø³Ù… Ø§Ù„Ù…Ù†ØªØ¬ Ø£Ùˆ Ø±Ù…Ø²Ù‡ Ù…Ù† Ø¯ÙˆÙ† Ø§Ù„Ø­Ø§Ø¬Ø© Ø¥Ù„Ù‰ ØªØ°ÙƒØ± Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ø§Ù„ØªÙŠ ÙŠÙ†ØªÙ…ÙŠ Ø¥Ù„ÙŠÙ‡Ø§.",
-    "collection.pathProductAction": "Ø§Ø¨Ø¯Ø£ Ø§Ù„Ø¨Ø­Ø«",
-    "collection.searchLabel": "Ø§Ù„Ø¨Ø­Ø« ÙÙŠ Ø§Ù„Ø¨ÙˆØªÙŠÙƒ",
-    "collection.searchPlaceholder": "Ø§Ø³Ù… Ø§Ù„Ù…Ù†ØªØ¬ Ø£Ùˆ Ø±Ù…Ø²Ù‡",
-    "collection.clearSearch": "Ù…Ø³Ø­",
-    "collection.typeFilterLabel": "Ù†ÙˆØ¹ Ø§Ù„Ù…Ù†ØªØ¬",
-    "collection.typeFilterAria": "ØªØµÙÙŠØ© Ø§Ù„Ø¨ÙˆØªÙŠÙƒ Ø­Ø³Ø¨ Ù†ÙˆØ¹ Ø§Ù„Ù…Ù†ØªØ¬",
-    "collection.typeAll": "Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£Ù†ÙˆØ§Ø¹",
-    "collection.typeFragrance": "Ø§Ù„Ø¹Ø·ÙˆØ±",
-    "collection.typeBeach": "Ù…Ø³ØªÙ„Ø²Ù…Ø§Øª Ø§Ù„Ø¨Ø­Ø± ÙˆØ§Ù„Ø´Ø§Ø·Ø¦",
-    "collection.typeGift": "Ø§Ù„Ù‡Ø¯Ø§ÙŠØ§ ÙˆØ§Ù„Ø¥ÙƒØ³Ø³ÙˆØ§Ø±Ø§Øª",
-    "collection.typeBox": "Ø§Ù„Ø¨ÙˆÙƒØ³Ø§Øª Ø§Ù„ÙƒØ§Ù…Ù„Ø©",
-    "collection.typeService": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ ÙˆØ§Ù„ØªÙ†ÙÙŠØ°ÙŠÙŠÙ†",
-    "collection.experienceFilterLabel": "Ù…Ø¬Ù…ÙˆØ¹Ø© Ø§Ù„ØªØ¬Ø±Ø¨Ø©",
-    "collection.resultsIntro": "ØªØµÙÙ‘Ø­ Ø­Ø³Ø¨ Ø§Ù„Ø¹Ø§Ù„Ù… Ø£Ùˆ Ù†ÙˆØ¹ Ø§Ù„Ù…Ù†ØªØ¬.",
-    "collection.resultsLabel": "Ø¹Ù†ØµØ±Ù‹Ø§ Ù…Ø·Ø§Ø¨Ù‚Ù‹Ø§",
-    "collection.clearFilters": "Ù…Ø³Ø­ Ø¬Ù…ÙŠØ¹ Ø§Ù„ÙÙ„Ø§ØªØ±",
-    "collection.emptyTitle": "Ù„Ø§ ØªÙˆØ¬Ø¯ Ø¹Ù†Ø§ØµØ± Ù…Ø·Ø§Ø¨Ù‚Ø©",
-    "collection.emptyText": "Ø¬Ø±Ù‘Ø¨ ÙƒÙ„Ù…Ø© Ø£Ø®Ø±Ù‰ Ø£Ùˆ Ø§Ù…Ø³Ø­ Ø£Ø­Ø¯ Ø§Ù„ÙÙ„Ø§ØªØ±.",
-    "collection.reorderEyebrow": "Ù„Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ø¹Ø§Ø¦Ø¯ÙŠÙ†",
-    "collection.reorderTitle": "Ø§Ø·Ù„Ø¨ Ø§Ù„Ù…Ù†ØªØ¬ Ù†ÙØ³Ù‡ Ù…Ø±Ø© Ø£Ø®Ø±Ù‰",
-    "collection.reorderText": "Ø£Ø¯Ø®Ù„ Ø§Ø³Ù… Ø§Ù„Ù…Ù†ØªØ¬ Ø£Ùˆ Ø±Ù…Ø²Ù‡ ÙˆØ§Ù„ÙƒÙ…ÙŠØ©ØŒ ÙˆØ³ÙŠÙØ¶Ø§Ù Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø± Ø§Ù„Ù…Ø­ÙÙˆØ¸ Ù„ØªØ±Ø§Ø¬Ø¹Ù‡ Ø£ÙÙ†ØªÙˆØ±Ø§.",
-    "collection.reorderProductLabel": "Ø§Ø³Ù… Ø§Ù„Ù…Ù†ØªØ¬ Ø£Ùˆ Ø±Ù…Ø²Ù‡",
-    "collection.reorderProductPlaceholder": "Ø§Ø¨Ø¯Ø£ Ø¨ÙƒØªØ§Ø¨Ø© Ø§Ø³Ù… Ø§Ù„Ù…Ù†ØªØ¬",
-    "collection.reorderButton": "Ø£Ø¶Ù Ø¥Ù„Ù‰ Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„Ø³Ø¹Ø±",
-    "collection.reorderNote": "ÙŠÙØ¤ÙƒØ¯ Ø§Ù„ØªÙˆÙØ± ÙˆÙ…Ø¯Ø© Ø§Ù„ØªØ¬Ù‡ÙŠØ² ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠØ© Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø£ÙÙ†ØªÙˆØ±Ø§ Ù„Ù„Ø·Ù„Ø¨. ØªØ¨Ù‚Ù‰ Ø§Ø®ØªÙŠØ§Ø±Ø§ØªÙƒ Ù…Ø­ÙÙˆØ¸Ø© Ø¹Ù„Ù‰ Ù‡Ø°Ø§ Ø§Ù„Ø¬Ù‡Ø§Ø² Ù„Ù…Ø¯Ø© 30 ÙŠÙˆÙ…Ù‹Ø§.",
-    "collection.reorderError": "Ø§Ø®ØªØ± Ø±Ù…Ø²Ù‹Ø§ ØµØ­ÙŠØ­Ù‹Ø§ Ù…Ù† Ø§Ù„Ø§Ù‚ØªØ±Ø§Ø­Ø§Øª Ø£Ùˆ Ø£Ø¯Ø®Ù„Ù‡ ÙŠØ¯ÙˆÙŠÙ‹Ø§.",
-    "collection.reorderSuccess": "ØªÙ…Øª Ø§Ù„Ø¥Ø¶Ø§ÙØ© Ø¥Ù„Ù‰ Ø·Ù„Ø¨Ùƒ Ø§Ù„Ù…Ø­ÙÙˆØ¸:",
-    "collection.viewDetails": "Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„",
-    "collection.detailsEyebrow": "ØªØµÙˆÙ‘Ø± Ø¹Ø·Ø±ÙŠ",
-    "collection.closeDetails": "Ø¥ØºÙ„Ø§Ù‚ ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¹Ø·Ø±",
-    "collection.availabilityLabel": "Ø§Ù„Ø­Ø§Ù„Ø©",
-    "collection.preparationLabel": "Ø§Ù„ØªØ·ÙˆÙŠØ±",
-    "collection.personalizationLabel": "Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„ØªØ§Ù„ÙŠØ©",
-    "collection.collectionLabel": "Ø§Ù„Ø¹Ø§Ù„Ù…",
-    "collection.detailsDisclaimer": "Ù‡Ø°Ø§ Ø§Ù„ØªØµÙˆÙ‘Ø± Ø§Ù„Ø¹Ø·Ø±ÙŠ Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ± ÙˆÙ„ÙŠØ³ Ù…ØªØ§Ø­Ù‹Ø§ Ù„Ù„Ø·Ù„Ø¨ Ø£Ùˆ Ø§Ù„Ø´Ø±Ø§Ø¡ Ø¨Ø¹Ø¯.",
-    "collection.continueBrowsing": "Ù…ØªØ§Ø¨Ø¹Ø© Ø§Ù„ØªØµÙØ­",
-    "collection.prepDevelopment": "Ù‚ÙŠØ¯ Ø§Ù„ØªØ·ÙˆÙŠØ±ØŒ ÙˆÙŠÙØ¹Ù„Ù† Ù…ÙˆØ¹Ø¯ Ø§Ù„Ø·Ø±Ø­ Ù„Ø§Ø­Ù‚Ù‹Ø§",
-    "collection.prepBox": "ØªÙØ­Ø¯Ø¯ Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„ÙƒÙ…ÙŠØ© ÙˆØ§Ù„ØªØ®ØµÙŠØµ",
-    "collection.prepProduct": "ØªÙØ­Ø¯Ø¯ Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ø§Ù„ÙƒÙ…ÙŠØ© ÙˆØ§Ù„ØªÙˆÙØ±",
-    "collection.prepSeasonal": "ØªÙØ­Ø¯Ø¯ Ø­Ø³Ø¨ Ø§Ù„Ù…ÙˆØ³Ù… ÙˆØªÙˆÙØ± Ø§Ù„Ù…ÙˆØ±Ø¯",
-    "collection.prepService": "ØªÙÙ†Ø³Ù‚ Ø­Ø³Ø¨ Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ù„Ù…ÙˆØ¹Ø¯ ÙˆØ§Ù„ØªÙˆÙØ±",
-    "collection.personalizationAvailable": "ÙŠÙ…ÙƒÙ† Ù…Ø±Ø§Ø¬Ø¹Ø© Ø¥Ø¶Ø§ÙØ© Ø§Ø³Ù… Ø§Ù„Ø¶ÙŠÙ Ø£Ùˆ Ø§Ù„Ø±Ø³Ø§Ù„Ø© Ø£Ùˆ Ù‡ÙˆÙŠØ© Ø§Ù„Ø´Ø±ÙƒØ©",
-    "collection.personalizationReviewed": "ØªÙØ±Ø§Ø¬Ø¹ Ø§Ù„Ø®ÙŠØ§Ø±Ø§Øª Ø§Ù„Ù…ØªØ§Ø­Ø© Ù…Ø¹ Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠ",
-    "collection.personalizationAfterLaunch": "ÙŠÙØ¹Ù„Ù† Ù…ÙˆØ¹Ø¯ Ø§Ù„Ø¥Ø·Ù„Ø§Ù‚ Ø¨Ø¹Ø¯ Ø§ÙƒØªÙ…Ø§Ù„ Ø§Ù„ØªØ·ÙˆÙŠØ±.",
-    "collection.personalizationService": "ØªÙØ±ØªØ¨ Ø§Ù„Ø®Ø¯Ù…Ø© ÙˆÙÙ‚ Ø§Ø­ØªÙŠØ§Ø¬Ø§Øª Ø§Ù„Ø¶ÙŠÙ",
-    "collection.gatewayHistoricText": "ØªØµÙˆØ± Ø¹Ø·Ø±ÙŠ Ù…Ø³ØªÙˆØ­Ù‰ Ù…Ù† Ø®Ø´Ø¨ Ø§Ù„Ø±ÙˆØ´Ø§Ù† ÙˆØ§Ù„Ø­Ø¬Ø± ÙˆØ­ÙƒØ§ÙŠØ© Ø§Ù„Ø¨Ù„Ø¯ Ø§Ù„Ø­ÙŠØ©.",
-    "collection.gatewaySeaText": "ØªØµÙˆØ± Ø¹Ø·Ø±ÙŠ ÙŠØªØ´ÙƒÙ„ Ù…Ù† Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø¹Ø¯Ù†ÙŠ ÙˆØ§Ù„Ù…Ø§Ø¡ Ø§Ù„Ù…ÙØªÙˆØ­ ÙˆÙ‡Ø¯ÙˆØ¡ Ø§Ù„ÙŠÙˆÙ… Ø§Ù„Ø¨Ø­Ø±ÙŠ Ø§Ù„Ø®Ø§Øµ.",
-    "collection.gatewayDesertText": "ØªØµÙˆØ± Ø¹Ø·Ø±ÙŠ Ù„Ø¯ÙØ¡ Ø§Ù„Ø±Ù…Ø§Ù„ Ø§Ù„Ø¬Ø§Ù ÙˆØ§Ù„Ø±Ù…Ù„ Ø§Ù„Ù…Ø¹Ø¯Ù†ÙŠ ÙˆØ§Ù„Ø¶ÙˆØ¡ Ø§Ù„Ø£Ø®ÙŠØ± ÙÙˆÙ‚ Ø§Ù„ÙƒØ«Ø¨Ø§Ù†.",
-    "collection.gatewayTaifText": "ØªØµÙˆØ± Ø¹Ø·Ø±ÙŠ Ù„Ù…ÙˆØ³Ù… Ø§Ù„ÙˆØ±Ø¯ ÙˆÙ‡ÙˆØ§Ø¡ Ø§Ù„Ø¬Ø¨Ø§Ù„ ÙˆØ§Ù„Ø¥ÙŠÙ‚Ø§Ø¹ Ø§Ù„Ù‡Ø§Ø¯Ø¦ Ù„Ù„Ù…Ø±ØªÙØ¹Ø§Øª.",
-    "collection.gatewayJeddahText": "After Midnight Noir ÙˆAfter Midnight Velvet Ù‡Ù…Ø§ Ø§Ù„ØªØµÙˆØ±Ø§Ù† Ø§Ù„Ø¹Ø·Ø±ÙŠØ§Ù† Ù…Ù† ØªÙˆÙ‚ÙŠØ¹ Ø£ÙÙ†ØªÙˆØ±Ø§.",
-    "guest.metaTitle": "Ø®Ø¯Ù…Ø§Øª Ø¶ÙŠÙˆÙ Ø£ÙÙ†ØªÙˆØ±Ø§ | ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¶ÙŠÙ Ø§Ù„Ù…Ø±ØªØ¨Ø© Ø¨Ø¹Ù†Ø§ÙŠØ©",
-    "guest.metaDescription": "ØªÙ†Ø³ÙŠÙ‚ ØªÙØµÙŠÙ„ Ø§Ù„Ø«ÙˆØ¨ ÙˆØ§Ù„Ø¹Ø¨Ø§ÙŠØ© ÙˆØ§Ù„ÙˆØ±Ø¯ Ù„Ù„Ø¶ÙŠÙˆÙ ÙÙŠ Ø¬Ø¯Ø© Ø¹Ø¨Ø± Ù†Ù‚Ø·Ø© ØªÙˆØ§ØµÙ„ ÙˆØ§Ø­Ø¯Ø© Ù…Ù† Ø£ÙÙ†ØªÙˆØ±Ø§.",
-    "guest.heroEyebrow": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "guest.heroTitle": "ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¶ÙŠÙØŒ Ù…Ø±ØªØ¨Ø© Ø¨Ø¹Ù†Ø§ÙŠØ©.",
-    "guest.heroDescription": "Ù…Ù† Ø²ÙŠØ§Ø±Ø© Ø§Ù„Ø®ÙŠØ§Ø· Ø¥Ù„Ù‰ ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ÙˆØ±Ø¯ØŒ Ù†Ø±ØªØ¨ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¹Ù…Ù„ÙŠØ© Ù‚Ø¨Ù„ Ø§Ù„ÙˆØµÙˆÙ„ ÙˆØ£Ø«Ù†Ø§Ø¡ Ø§Ù„Ø¥Ù‚Ø§Ù…Ø© Ø¹Ø¨Ø± Ù†Ù‚Ø·Ø© ØªÙˆØ§ØµÙ„ ÙˆØ§Ø­Ø¯Ø©.",
-    "guest.heroButton": "Ø§Ø³ØªÙƒØ´Ù Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "guest.servicesEyebrow": "Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø¶ÙŠÙˆÙ Ø§Ù„Ø´Ø®ØµÙŠØ©",
-    "guest.servicesTitle": "Ø«Ù„Ø§Ø« ØªÙØ§ØµÙŠÙ„ Ø¹Ù…Ù„ÙŠØ©ØŒ Ø¨Ø·Ù„Ø¨ ÙˆØ§Ø­Ø¯ ÙˆØ§Ø¶Ø­.",
-    "guest.servicesText": "Ù†Ø¤ÙƒØ¯ Ø§Ù„Ù…Ø®ØªØµ ÙˆØ§Ù„Ù…ÙˆÙ‚Ø¹ ÙˆØ§Ù„Ù…ÙˆØ¹Ø¯ ÙˆØ§Ù„Ø¥ØªØ§Ø­Ø© Ø§Ù„Ø¹Ù…Ù„ÙŠØ© Ù‚Ø¨Ù„ ØªØ±ØªÙŠØ¨ Ø£ÙŠ Ø®Ø¯Ù…Ø©.",
-    "guest.thobeTitle": "ØªÙØµÙŠÙ„ Ø«ÙˆØ¨ Ø³Ø¹ÙˆØ¯ÙŠ ÙÙŠ Ù…Ù‚Ø± Ø§Ù„Ø¥Ù‚Ø§Ù…Ø©",
-    "guest.thobeText": "ÙŠØ²ÙˆØ± Ø§Ù„Ø®ÙŠØ§Ø· Ø§Ù„Ø¶ÙŠÙ Ù„Ø£Ø®Ø° Ø§Ù„Ù…Ù‚Ø§Ø³Ø§Øª ÙˆØ§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù‚Ù…Ø§Ø´. ÙŠÙ…ÙƒÙ† ØªÙ†Ø³ÙŠÙ‚ Ø§Ù„ØªØ³Ù„ÙŠÙ… Ø®Ù„Ø§Ù„ Ø£Ù‚Ù„ Ù…Ù† 24 Ø³Ø§Ø¹Ø© Ø¹Ù†Ø¯ ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø·Ù„Ø¨ ÙˆØ§Ù„ØªÙˆÙØ±.",
-    "guest.abayaTitle": "Ø®Ø¯Ù…Ø© Ø¹Ø¨Ø§ÙŠØ© Ù„Ù„Ø¶ÙŠÙØ©",
-    "guest.abayaText": "ØªØ²ÙˆØ± Ù…Ø®ØªØµØ© Ø§Ù„Ø¶ÙŠÙØ© Ù„Ø£Ø®Ø° Ø§Ù„Ù…Ù‚Ø§Ø³Ø§Øª Ø§Ù„Ù„Ø§Ø²Ù…Ø© Ù„Ù„Ø®Ø¯Ù…Ø©Ø› Ø«Ù… ØªÙÙ†Ø³Ù‘Ù‚ Ø§Ù„Ø¹Ø¨Ø§Ø¡Ø© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© ÙˆØ§Ù„ØªØ³Ù„ÙŠÙ… Ø¨Ø¹Ø¯ Ø§Ù„ØªØ£ÙƒÙŠØ¯ ÙÙ‚Ø·. Ù„Ø§ Ù†Ø¹Ø±Ø¶ ÙƒØªØ§Ù„ÙˆØ¬ Ø¹Ø¨Ø§ÙŠØ§Øª Ø¬Ø§Ù‡Ø²Ù‹Ø§.",
-    "guest.flowerTitle": "ÙˆØ±Ø¯ Ù„Ù„Ù…Ù†Ø§Ø³Ø¨Ø©",
-    "guest.flowerText": "Ù†Ø±ØªØ¨ Ø¨Ø§Ù‚Ø© ÙˆØ±Ø¯ ÙˆØ¨Ø·Ø§Ù‚Ø© Ø´Ø®ØµÙŠØ© Ù„Ù„ÙˆØµÙˆÙ„ Ø£Ùˆ Ù„Ù„Ù…Ù†Ø§Ø³Ø¨Ø©ØŒ ÙˆÙ†Ø³Ù„Ù…Ù‡Ø§ Ø¥Ù„Ù‰ Ø§Ù„ÙÙ†Ø¯Ù‚ Ø£Ùˆ Ù…Ù‚Ø± Ø§Ù„Ø¥Ù‚Ø§Ù…Ø© Ø£Ùˆ Ø§Ù„Ù…ÙˆÙ‚Ø¹ ÙÙŠ Ø§Ù„Ù…ÙˆØ¹Ø¯ Ø§Ù„Ù…ØªÙÙ‚ Ø¹Ù„ÙŠÙ‡.",
-    "guest.requestService": "Ø§Ø·Ù„Ø¨ Ø®Ø¯Ù…Ø© Ù„Ù„Ø¶ÙŠÙ",
-    "guest.viewService": "Ø¹Ø±Ø¶ Ø®Ø¯Ù…Ø© Ø§Ù„Ø¶ÙŠÙˆÙ",
-    "guest.processEyebrow": "ÙƒÙŠÙ ØªØ¹Ù…Ù„",
-    "guest.processTitle": "Ø³Ù‡Ù„Ø© Ù„Ù„Ø¶ÙŠÙØŒ ÙˆÙˆØ§Ø¶Ø­Ø© Ù„Ù„ÙØ±ÙŠÙ‚.",
-    "guest.step1Title": "Ø´Ø§Ø±Ùƒ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ§Øª",
-    "guest.step1Text": "Ø£Ø®Ø¨Ø±Ù†Ø§ Ù„Ù…Ù† Ø§Ù„Ø®Ø¯Ù…Ø© ÙˆØ£ÙŠÙ† ØªØ­ØªØ§Ø¬Ù‡Ø§ ÙˆØ§Ù„Ù…ÙˆØ¹Ø¯ Ø§Ù„Ù…ÙØ¶Ù„.",
-    "guest.step2Title": "Ù†Ø¤ÙƒØ¯ Ø§Ù„ØªØ±ØªÙŠØ¨",
-    "guest.step2Text": "ØªØ¤ÙƒØ¯ Ø£ÙÙ†ØªÙˆØ±Ø§ Ø§Ù„Ù…Ø®ØªØµ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ ÙˆÙ…Ø¯Ø© Ø§Ù„ØªØ¬Ù‡ÙŠØ² ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø¹Ù…Ù„ÙŠØ©.",
-    "guest.step3Title": "ØªÙ†ÙÙŠØ° Ù…Ù†Ø³Ù‚ ÙˆØ§Ø­Ø¯",
-    "guest.step3Text": "ØªØ¯Ø§Ø± Ø§Ù„Ø²ÙŠØ§Ø±Ø© ÙˆØ§Ù„ØªØ¬Ù‡ÙŠØ² ÙˆØ§Ù„ØªØ³Ù„ÙŠÙ… Ø¹Ø¨Ø± Ù†Ù‚Ø·Ø© ØªÙˆØ§ØµÙ„ ÙˆØ§Ø­Ø¯Ø©.",
-    "guest.ctaTitle": "Ø£Ø®Ø¨Ø±Ù†Ø§ Ù…Ø§ Ø§Ù„Ø°ÙŠ ÙŠØ­ØªØ§Ø¬Ù‡ Ø§Ù„Ø¶ÙŠÙ ÙˆÙ…ØªÙ‰.",
-    "guest.ctaText": "Ù†Ø±Ø§Ø¬Ø¹ Ø§Ù„Ø·Ù„Ø¨ ÙˆÙ†Ø¹ÙˆØ¯ Ø¥Ù„ÙŠÙƒ Ø¨Ø§Ù„ØªØ±ØªÙŠØ¨ Ø§Ù„Ø¹Ù…Ù„ÙŠ Ø§Ù„Ø£Ù†Ø³Ø¨."
-  },
-  "es": {
-    "common.skip": "Ir al contenido principal",
-    "common.plan": "Solicita una propuesta a medida",
-    "common.explore": "Explorar",
-    "common.discover": "Descubrir mÃ¡s",
-    "common.request": "Solicita una propuesta a medida",
-    "common.viewAll": "Ver todo",
-    "common.learnMore": "MÃ¡s informaciÃ³n",
-    "common.whatsapp": "Hablar por WhatsApp",
-    "common.comingSoon": "PrÃ³ximamente",
-    "common.availableRequest": "Disponible bajo solicitud",
-    "common.jeddahSaudi": "Yeda, Arabia Saudita",
-    "common.optional": "Opcional",
-    "brand.tagline": "Experiencias Â· Eventos Â· Hospitalidad",
-    "nav.home": "Inicio",
-    "nav.experiences": "Experiencias",
-    "nav.events": "Eventos",
-    "nav.services": "Servicios",
-    "nav.collection": "Boutique",
-    "nav.guestServices": "Servicios para huÃ©spedes",
-    "nav.about": "Nosotros",
-    "nav.gallery": "GalerÃ­a",
-    "nav.contact": "Contacto",
-    "footer.summary": "Aventura diseÃ±a viajes privados, eventos y programas para huÃ©spedes mediante una planificaciÃ³n atenta, socios de confianza y coordinaciÃ³n directa.",
-    "footer.explore": "Explorar",
-    "footer.company": "Empresa",
-    "footer.contact": "Contacto",
-    "footer.faq": "Preguntas frecuentes",
-    "footer.privacy": "PolÃ­tica de privacidad",
-    "footer.terms": "TÃ©rminos y condiciones",
-    "footer.rights": "Todos los derechos reservados.",
-    "footer.location": "Yeda, Arabia Saudita",
-    "footer.primaryEmail": "Consultas generales",
-    "footer.secondaryEmail": "PlanificaciÃ³n de experiencias",
-    "cta.title": "CuÃ©ntanos cÃ³mo quieres que se sienta el dÃ­a.",
-    "cta.description": "Comparte la ocasiÃ³n, el nÃºmero de invitados y la fecha. Crearemos una direcciÃ³n clara segÃºn tus prioridades.",
-    "cta.button": "Solicita una propuesta a medida",
-    "whatsapp.label": "Abrir WhatsApp",
-    "home.metaTitle": "AVENTURA | Experiencias Privadas y Eventos en Arabia Saudita",
-    "home.metaDescription": "Experiencias privadas, eventos corporativos, hospitalidad y programas de destino diseÃ±ados por AVENTURA en Yeda y Arabia Saudita.",
-    "home.heroEyebrow": "Yeda Â· Arabia Saudita",
-    "home.heroTitle": "Viajes y ocasiones, diseÃ±ados a tu medida.",
-    "home.heroDescription": "Aventura reÃºne experiencias privadas, gestiÃ³n de eventos y hospitalidad en un solo recorrido coordinado, desde la primera idea hasta la despedida.",
-    "home.heroPrimary": "Explorar experiencias",
-    "home.heroSecondary": "Solicita una propuesta a medida",
-    "home.proof1Title": "Conocimiento local",
-    "home.proof1Text": "Yeda y una red de socios locales de confianza",
-    "home.proof2Title": "Privacidad desde el diseÃ±o",
-    "home.proof2Text": "Programas adaptados a tus invitados y a su ritmo",
-    "home.proof3Title": "Un solo coordinador",
-    "home.proof3Text": "PlanificaciÃ³n, hospitalidad y operaciÃ³n conectadas",
-    "home.introEyebrow": "El enfoque Aventura",
-    "home.introTitle": "El lugar importa. CÃ³mo lo vives importa aÃºn mÃ¡s.",
-    "home.introDescription": "Desde Yeda HistÃ³rica hasta el Mar Rojo, el desierto y Taif, diseÃ±amos dÃ­as privados pensados en torno a tus invitados.",
-    "home.expEyebrow": "Experiencias",
-    "home.expTitle": "Experiencias seleccionadas para descubrir Yeda y el oeste de Arabia Saudita",
-    "home.expDescription": "Cuatro mundos privados, cada uno diseÃ±ado en torno a tus invitados, vuestro tiempo y el tipo de dÃ­a que querÃ©is crear.",
-    "home.seaTitle": "El Mar Rojo",
-    "home.seaText": "Yates privados, cruceros al atardecer, buceo y dÃ­as de resort.",
-    "home.historicTitle": "Yeda HistÃ³rica",
-    "home.historicText": "Historias, arquitectura y hospitalidad local con guÃ­as autorizados.",
-    "home.desertTitle": "El desierto",
-    "home.desertText": "Paisajes abiertos, recorridos 4x4 y encuentros privados tranquilos.",
-    "home.taifTitle": "Las montaÃ±as de Taif",
-    "home.taifText": "MontaÃ±as, rosas, detalles locales de temporada y un ritmo mÃ¡s fresco.",
-    "home.servicesEyebrow": "Viaje del huÃ©sped",
-    "home.servicesTitle": "Apoyo antes de la llegada, durante el dÃ­a y hasta el final",
-    "home.servicesDescription": "Un equipo coordinado gestiona los detalles para que tÃº puedas centrarte en tus invitados.",
-    "home.service1Title": "PlanificaciÃ³n y conserjerÃ­a",
-    "home.service1Text": "Itinerario claro, reservas y recomendaciones personalizadas.",
-    "home.service2Title": "Transporte privado",
-    "home.service2Text": "VehÃ­culos y conductores adecuados al grupo y al programa.",
-    "home.service3Title": "GuÃ­as autorizados",
-    "home.service3Text": "GuÃ­as multilingÃ¼es seleccionados para la experiencia y los huÃ©spedes.",
-    "home.service4Title": "Hospitalidad",
-    "home.service4Text": "CoordinaciÃ³n de llegada, flores, entrega en hotel y apoyo personal prÃ¡ctico.",
-    "home.eventsEyebrow": "Eventos",
-    "home.eventsTitle": "Eventos corporativos y privados con un propÃ³sito claro",
-    "home.eventsDescription": "Desde reuniones ejecutivas y programas de equipo hasta encuentros privados junto al mar, coordinamos el lugar, los proveedores, el flujo de invitados y la ejecuciÃ³n.",
-    "home.eventsButton": "Explorar eventos",
-    "home.collectionEyebrow": "Boutique Aventura",
-    "home.collectionTitle": "Conceptos de fragancia moldeados por cada mundo",
-    "home.collectionDescription": "La boutique presenta actualmente conceptos de fragancias en desarrollo. Los servicios para huÃ©spedes se mantienen en su propio espacio.",
-    "home.collectionButton": "Entrar en la boutique",
-    "home.whyEyebrow": "Por quÃ© Aventura",
-    "home.whyTitle": "OperaciÃ³n local con la atenciÃ³n de un anfitriÃ³n",
-    "home.whyDescription": "Cada plan se revisa desde la perspectiva del huÃ©sped y se gestiona con cuidado prÃ¡ctico sobre el terreno.",
-    "home.why1Title": "A medida, no en serie",
-    "home.why1Text": "El plan cambia segÃºn el huÃ©sped, la ocasiÃ³n, el horario y el ritmo preferido.",
-    "home.why2Title": "Privacidad y discreciÃ³n",
-    "home.why2Text": "Entornos privados y coordinaciÃ³n cuidadosa para familias, ejecutivos e invitados VIP.",
-    "home.why3Title": "Claridad operativa",
-    "home.why3Text": "Programa definido, responsabilidades confirmadas y un Ãºnico contacto.",
-    "experiences.metaTitle": "Experiencias Privadas en Yeda y Arabia Saudita | AVENTURA",
-    "experiences.metaDescription": "Explora el Mar Rojo, la Hora Dorada, Yeda HistÃ³rica, el desierto, Taif y jornadas completas en Yeda con AVENTURA.",
-    "experiences.heroEyebrow": "Viajes privados",
-    "experiences.heroTitle": "Experiencias con sentido de lugar.",
-    "experiences.heroDescription": "Descubre el Mar Rojo, Yeda HistÃ³rica, el desierto, Taif y programas completos de Yeda al ritmo de tus invitados.",
-    "experiences.introEyebrow": "DiseÃ±adas en torno al huÃ©sped",
-    "experiences.introTitle": "Empieza por el entorno. Construiremos el dÃ­a a su alrededor.",
-    "experiences.introText": "Cada experiencia puede reservarse sola o formar parte de un itinerario con transporte, guÃ­as, gastronomÃ­a, hospitalidad y actividades opcionales.",
-    "experiences.seaTitle": "Experiencias en el Mar Rojo",
-    "experiences.seaText": "Agua luminosa por la maÃ±ana, horizonte abierto y un dÃ­a sobre o bajo la superficie. Seleccionamos barco, horario y servicios segÃºn el grupo.",
-    "experiences.seaItem1": "Viajes en yate privado",
-    "experiences.seaItem2": "Hora Dorada: paseo en barco de una hora al atardecer",
-    "experiences.seaItem3": "Buceo y esnÃ³rquel",
-    "experiences.seaItem4": "DÃ­as de playa y resort",
-    "experiences.seaTag1": "Parejas",
-    "experiences.seaTag2": "Familias",
-    "experiences.seaTag3": "Grupos privados",
-    "experiences.historicTitle": "Yeda HistÃ³rica",
-    "experiences.historicText": "Un paseo privado por Al-Balad con un guÃ­a autorizado que conecta la arquitectura, la gente y las historias de la ciudad.",
-    "experiences.historicItem1": "GuÃ­as multilingÃ¼es autorizados",
-    "experiences.historicItem2": "Arquitectura roshan e historias locales",
-    "experiences.historicItem3": "CafÃ© Ã¡rabe, dÃ¡tiles y paradas patrimoniales seleccionadas",
-    "experiences.historicItem4": "Transporte y cena de mariscos disponibles como opciones",
-    "experiences.historicTag1": "Cultura",
-    "experiences.historicTag2": "Arquitectura",
-    "experiences.historicTag3": "Primera visita",
-    "experiences.desertTitle": "Experiencias en el desierto",
-    "experiences.desertText": "Una experiencia privada en el desierto diseÃ±ada en torno a amplias dunas de arena, una ruta 4x4 seleccionada, Last Light y hospitalidad saudÃ­.",
-    "experiences.desertItem1": "Rutas 4x4 entre dunas de arena",
-    "experiences.desertItem2": "Asientos y hospitalidad privada",
-    "experiences.desertItem3": "Cenas organizadas",
-    "experiences.desertItem4": "Programas para grupos pequeÃ±os",
-    "experiences.desertTag1": "Dunas de arena y atardecer",
-    "experiences.desertTag2": "Grupos pequeÃ±os",
-    "experiences.desertTag3": "Ocasiones privadas",
-    "experiences.taifTitle": "Viajes a Taif",
-    "experiences.taifText": "Un dÃ­a privado en las montaÃ±as con miradores, rosas de temporada, detalles locales y un ambiente mÃ¡s pausado.",
-    "experiences.taifItem1": "Rutas y miradores de montaÃ±a",
-    "experiences.taifItem2": "Granjas de rosas de temporada",
-    "experiences.taifItem3": "Mercados y paradas locales de temporada",
-    "experiences.taifItem4": "Restaurantes y cafÃ©s",
-    "experiences.taifTag1": "DÃ­a completo",
-    "experiences.taifTag2": "De temporada",
-    "experiences.taifTag3": "Naturaleza",
-    "experiences.signatureEyebrow": "Viajes distintivos de Yeda",
-    "experiences.signatureTitle": "Ideas sencillas con una mirada memorable",
-    "experiences.signatureText": "Los programas especiales pueden conectar cultura, mar, gastronomÃ­a y hospitalidad sin que el dÃ­a resulte apresurado.",
-    "experiences.signature1Title": "Del mar a Al-Balad",
-    "experiences.signature1Text": "Una tarde de resort, una parada al atardecer en el Club NÃ¡utico y una visita guiada por Yeda HistÃ³rica.",
-    "experiences.signature2Title": "Del mar al desierto",
-    "experiences.signature2Text": "Una maÃ±ana costera y un entorno privado en el desierto con la Ãºltima luz.",
-    "experiences.signature3Title": "Un dÃ­a completo en Yeda",
-    "experiences.signature3Text": "Un dÃ­a equilibrado de ciudad, cultura, gastronomÃ­a y paseo marÃ­timo.",
-    "experiences.requestTitle": "Â¿Quieres combinar varias experiencias?",
-    "experiences.requestText": "IndÃ­canos el nÃºmero de invitados y el tiempo disponible. Propondremos una ruta equilibrada.",
-    "events.metaTitle": "Eventos Corporativos y Privados en Yeda | AVENTURA",
-    "events.metaDescription": "Eventos corporativos, reuniones ejecutivas, programas de equipo, encuentros privados y atenciÃ³n VIP coordinados por AVENTURA.",
-    "events.heroEyebrow": "GestiÃ³n de eventos",
-    "events.heroTitle": "Eventos gestionados desde el primer briefing hasta la llegada de los invitados.",
-    "events.heroDescription": "Aventura planifica y ejecuta eventos corporativos, encuentros privados y programas para huÃ©spedes mediante un plan operativo claro.",
-    "events.introEyebrow": "De la idea a la ejecuciÃ³n",
-    "events.introTitle": "El evento es un momento. El viaje del invitado empieza antes.",
-    "events.introText": "Alineamos objetivo, lugar, horario, hospitalidad, proveedores y flujo para que cada parte apoye la ocasiÃ³n.",
-    "events.corporateEyebrow": "Corporativo",
-    "events.corporateTitle": "EjecuciÃ³n de eventos corporativos",
-    "events.corporateText": "EjecuciÃ³n en sitio para reuniones ejecutivas, reconocimientos, programas de equipo, delegaciones y encuentros corporativos.",
-    "events.privateEyebrow": "Privado",
-    "events.privateTitle": "Eventos privados",
-    "events.privateText": "CumpleaÃ±os, aniversarios, reuniones familiares y celebraciones Ã­ntimas adaptadas al lugar y a los invitados.",
-    "events.vipTitle": "AtenciÃ³n VIP y delegaciones",
-    "events.vipText": "Llegada, transporte, alojamiento, programas privados y atenciÃ³n discreta coordinados.",
-    "events.teamTitle": "Programas de equipo",
-    "events.teamText": "Actividades diseÃ±adas segÃºn los objetivos, el tamaÃ±o del grupo y un entorno adecuado fuera del trabajo habitual.",
-    "events.typesEyebrow": "Lo que coordinamos",
-    "events.typesTitle": "Un formato prÃ¡ctico para cada objetivo",
-    "events.type1Title": "Reuniones ejecutivas",
-    "events.type1Text": "Lugar, elementos de reuniÃ³n, refrigerios y transporte coordinados como un solo programa.",
-    "events.type2Title": "Networking y cenas ejecutivas",
-    "events.type2Text": "SelecciÃ³n del lugar, recepciÃ³n, asientos, hospitalidad y transporte coordinado.",
-    "events.type3Title": "Reconocimientos y ocasiones corporativas",
-    "events.type3Text": "Reconocimientos, hitos de la empresa y encuentros estacionales seleccionados.",
-    "events.type4Title": "DÃ­as de mar, desierto y cultura",
-    "events.type4Text": "Destinos accesibles adaptados a grupos corporativos con logÃ­stica prÃ¡ctica.",
-    "events.type5Title": "Team building",
-    "events.type5Text": "Actividades segÃºn el propÃ³sito, la capacidad y el tiempo del equipo.",
-    "events.type6Title": "Invitados internacionales",
-    "events.type6Text": "Un programa conectado para equipos, socios y delegaciones visitantes.",
-    "events.processEyebrow": "Nuestro proceso",
-    "events.processTitle": "Un plan, cuatro etapas claras",
-    "events.step1Title": "Brief",
-    "events.step1Text": "Entendemos el objetivo, los invitados, la fecha y las limitaciones.",
-    "events.step2Title": "DiseÃ±o",
-    "events.step2Text": "Definimos el formato, el lugar, el flujo y los servicios.",
-    "events.step3Title": "ConfirmaciÃ³n",
-    "events.step3Text": "Documentamos y alineamos proveedores, responsabilidades y horario.",
-    "events.step4Title": "EjecuciÃ³n",
-    "events.step4Text": "La coordinaciÃ³n en sitio mantiene fluido el evento y el viaje del invitado.",
-    "events.requestTitle": "Â¿Planificas un evento en Yeda?",
-    "events.requestText": "EnvÃ­anos la fecha, el nÃºmero de invitados y el objetivo para sugerir el mejor punto de partida.",
-    "services.metaTitle": "Servicios para HuÃ©spedes y Destino | AVENTURA",
-    "services.metaDescription": "PlanificaciÃ³n, transporte, guÃ­as, recepciÃ³n, hospitalidad y gestiÃ³n de destinos en Arabia Saudita.",
-    "services.heroEyebrow": "Servicios para huÃ©spedes",
-    "services.heroTitle": "Los detalles alrededor de la experiencia importan.",
-    "services.heroDescription": "PlanificaciÃ³n, movimiento, bienvenida y apoyo coordinados en torno a un mismo viaje.",
-    "services.introEyebrow": "Una sola coordinaciÃ³n",
-    "services.introTitle": "Servicios que hacen que el dÃ­a fluya",
-    "services.introText": "Reserva un servicio o combina varios en un programa completo para personas, familias, empresas y delegaciones.",
-    "services.s1Title": "PlanificaciÃ³n y conserjerÃ­a",
-    "services.s1Text": "Itinerarios, reservas, recomendaciones y arreglos especiales segÃºn el huÃ©sped.",
-    "services.s2Title": "RecepciÃ³n y asistencia",
-    "services.s2Text": "CoordinaciÃ³n de la llegada y traslado claro del aeropuerto al vehÃ­culo y alojamiento.",
-    "services.s3Title": "Transporte privado",
-    "services.s3Text": "VehÃ­culos adecuados, conductores profesionales y horarios vinculados al programa.",
-    "services.s4Title": "GuÃ­as autorizados",
-    "services.s4Text": "Ãrabe, inglÃ©s y otros idiomas segÃºn disponibilidad y necesidad.",
-    "services.s5Title": "Hospitalidad",
-    "services.s5Text": "Preparativos de llegada, flores, entrega en hotel y detalles prÃ¡cticos.",
-    "services.s6Title": "GestiÃ³n de destinos",
-    "services.s6Text": "CoordinaciÃ³n local para agencias, empresas, delegaciones y programas de varios dÃ­as.",
-    "services.s7Title": "ConfecciÃ³n de thobe",
-    "services.s7Text": "Un sastre visita al huÃ©sped para tomar medidas y elegir tejido, con entrega en menos de 24 horas sujeta a confirmaciÃ³n.",
-    "services.s8Title": "Asistencia con abayas",
-    "services.s8Text": "Una especialista ayuda a elegir una abaya adecuada y coordina entrega rÃ¡pida segÃºn disponibilidad.",
-    "services.journeyEyebrow": "CÃ³mo funciona",
-    "services.journeyTitle": "Una solicitud puede conectar todo el viaje",
-    "services.j1Title": "Antes de llegar",
-    "services.j1Text": "Confirmamos preferencias, programa, reservas y transporte.",
-    "services.j2Title": "A la llegada",
-    "services.j2Text": "Coordinamos recepciÃ³n, traslado y detalles de llegada.",
-    "services.j3Title": "Durante la estancia",
-    "services.j3Text": "Experiencias, restaurantes y solicitudes mediante un solo contacto.",
-    "services.j4Title": "Antes de partir",
-    "services.j4Text": "Revisamos arreglos finales, entregas y traslado.",
-    "collection.metaTitle": "AVENTURA Boutique | Conceptos de fragancia por experiencia",
-    "collection.metaDescription": "Explora conceptos de fragancia de Aventura por experiencia, todos actualmente en desarrollo.",
-    "collection.heroEyebrow": "Boutique Aventura",
-    "collection.heroTitle": "Conceptos de fragancia nacidos de cada experiencia.",
-    "collection.heroDescription": "Explora la direcciÃ³n olfativa de cada mundo de Aventura. Cada concepto sigue en desarrollo hasta aprobar sus muestras, proveedores y calidad.",
-    "collection.introEyebrow": "Conectada con tu experiencia",
-    "collection.introTitle": "Elige una experiencia y mira solo lo que le corresponde",
-    "collection.introText": "Cada concepto de fragancia se conecta con la historia, el lugar y el ritmo de su experiencia.",
-    "collection.boxesEyebrow": "Cajas de experiencias",
-    "collection.boxesTitle": "Cajas de experiencias, prÃ³ximamente.",
-    "collection.box1Title": "Bolsa Playa Mar Rojo",
-    "collection.box1Text": "Una colecciÃ³n prÃ¡ctica presentada dentro de la propia bolsa y lista para el dÃ­a de mar.",
-    "collection.box2Title": "Caja Roshan",
-    "collection.box2Text": "Un recuerdo conciso de Yeda HistÃ³rica, su artesanÃ­a y la hospitalidad saudÃ­.",
-    "collection.box3Title": "Caja Last Light",
-    "collection.box3Text": "Detalles Ãºtiles del desierto con paleta cÃ¡lida y carÃ¡cter saudÃ­ discreto.",
-    "collection.box4Title": "Caja Rosa de Taif",
-    "collection.box4Text": "ColecciÃ³n estacional centrada en la rosa de Taif y productos locales de proveedores fiables.",
-    "collection.perfumeEyebrow": "Laboratorio de aromas Aventura",
-    "collection.perfumeTitle": "Conceptos de fragancias en desarrollo",
-    "collection.perfumeText": "Estos conceptos traducen cada experiencia de Aventura en una direcciÃ³n olfativa. TodavÃ­a no se pueden solicitar ni comprar.",
-    "collection.p1Title": "Mar Rojo",
-    "collection.p1Text": "Luz marina, aire mineral y maderas pulidas.",
-    "collection.p2Title": "Roshan",
-    "collection.p2Text": "Madera de roshan, piedra cÃ¡lida, especias e incienso.",
-    "collection.p3Title": "Last Light",
-    "collection.p3Text": "Maderas secas, arena templada, vetiver y un acorde mineral.",
-    "collection.p4Title": "Rosa de Taif",
-    "collection.p4Text": "Rosa de Taif, aire de montaÃ±a y sutiles notas verdes.",
-    "collection.personalEyebrow": "Empresas y huÃ©spedes ejecutivos",
-    "collection.personalTitle": "Servicios Ãºtiles preparados antes de la llegada",
-    "collection.thobeTitle": "Sastre en tu alojamiento",
-    "collection.thobeText": "El sastre visita para medidas y tejido, y coordina entrega en menos de 24 horas tras confirmar disponibilidad.",
-    "collection.abayaTitle": "Especialista en abayas para la huÃ©sped",
-    "collection.abayaText": "Una especialista visita a la huÃ©sped para tomar las medidas necesarias para el servicio. La abaya adecuada y la entrega se coordinan Ãºnicamente despuÃ©s de la confirmaciÃ³n; no se muestra un catÃ¡logo de abayas listas.",
-    "collection.requestTitle": "DiseÃ±a una solicitud de cotizaciÃ³n alrededor de tu huÃ©sped",
-    "collection.requestText": "Elige productos y servicios disponibles y envÃ­a una sola solicitud de cotizaciÃ³n. Aventura revisarÃ¡ disponibilidad, horario y personalizaciÃ³n antes de emitirla.",
-    "about.metaTitle": "Sobre AVENTURA | Experiencias, Eventos y Hospitalidad",
-    "about.metaDescription": "Descubre la historia, visiÃ³n, misiÃ³n y valores detrÃ¡s de las experiencias y eventos de AVENTURA.",
-    "about.heroEyebrow": "Sobre Aventura",
-    "about.heroTitle": "Una forma diferente de descubrir un lugar y crear momentos.",
-    "about.heroDescription": "Aventura no es solo un viaje. DiseÃ±amos experiencias y eventos con sentido alrededor del huÃ©sped, el momento y los detalles que permanecen.",
-    "about.storyEyebrow": "Nuestro comienzo",
-    "about.storyTitle": "En cada ciudad hay lugares que todos visitanâ€¦",
-    "about.storyText1": "Pero hay lugares a los que solo llegan quienes conocen el verdadero camino. AllÃ­ comenzÃ³ Aventura.",
-    "about.storyText2": "Aventura no naciÃ³ simplemente para vender tours u organizar eventos, sino de comprender que la experiencia no estÃ¡ solo en el lugar, sino en cÃ³mo se vive: en los pequeÃ±os detalles, el momento preciso, el ritmo correcto y la sensaciÃ³n que permanece al terminar.",
-    "about.visionTitle": "VisiÃ³n",
-    "about.visionText": "Ser una referencia de confianza para experiencias y eventos cuidadosamente diseÃ±ados en Arabia Saudita.",
-    "about.missionTitle": "MisiÃ³n",
-    "about.missionText": "Crear viajes y ocasiones personales, bien coordinados y conectados de forma autÃ©ntica con el lugar.",
-    "about.valuesEyebrow": "Nuestros valores",
-    "about.valuesTitle": "Los principios detrÃ¡s de cada experiencia",
-    "about.v1Title": "MaestrÃ­a",
-    "about.v1Text": "Cada detalle tiene su peso y cada momento su valor.",
-    "about.v2Title": "Autenticidad",
-    "about.v2Text": "Presentamos la experiencia como debe vivirse, con honestidad y profundidad, lejos de la repeticiÃ³n.",
-    "about.v3Title": "Privacidad",
-    "about.v3Text": "Cada huÃ©sped disfruta de forma distinta y diseÃ±amos la experiencia en consecuencia.",
-    "about.v4Title": "Calidad",
-    "about.v4Text": "Elegimos lo mejor en cada elemento para asegurar una experiencia completa.",
-    "about.v5Title": "InnovaciÃ³n",
-    "about.v5Text": "Replanteamos destinos, experiencias y eventos de formas nuevas y poco convencionales.",
-    "about.v6Title": "Curiosidad",
-    "about.v6Text": "Buscamos formas mÃ¡s significativas de vivir un lugar.",
-    "about.modelEyebrow": "CÃ³mo trabajamos",
-    "about.modelTitle": "Red local, un coordinador responsable",
-    "about.modelText": "Colaboramos con guÃ­as autorizados, lugares, transportistas, equipos de hospitalidad y especialistas. Aventura sigue siendo el Ãºnico punto de coordinaciÃ³n del programa acordado.",
-    "contact.metaTitle": "Contactar con AVENTURA | Planificar una Experiencia",
-    "contact.metaDescription": "Contacta con AVENTURA en Yeda para planificar una experiencia, evento, programa de huÃ©spedes o itinerario corporativo.",
-    "contact.heroEyebrow": "Contacto",
-    "contact.heroTitle": "Empieza por los invitados, la fecha y la ocasiÃ³n.",
-    "contact.heroDescription": "EnvÃ­a los detalles esenciales y te ayudaremos a convertirlos en una primera direcciÃ³n prÃ¡ctica.",
-    "contact.panelTitle": "Habla con Aventura",
-    "contact.panelText": "El correo electrÃ³nico es el canal principal de reservas; WhatsApp queda disponible como segunda opciÃ³n.",
-    "contact.phoneLabel": "WhatsApp",
-    "contact.email1Label": "Reservas y consultas",
-    "contact.email2Label": "PlanificaciÃ³n de experiencias",
-    "contact.locationLabel": "Sede",
-    "contact.formTitle": "Datos de la solicitud",
-    "contact.formText": "No se realiza ningÃºn pago ni se confirma ninguna reserva aquÃ­. Este formulario solo inicia la conversaciÃ³n de planificaciÃ³n y cotizaciÃ³n.",
-    "contact.nameLabel": "Nombre",
-    "contact.namePlaceholder": "Nombre completo",
-    "contact.companyLabel": "Empresa u organizaciÃ³n",
-    "contact.companyPlaceholder": "Opcional",
-    "contact.phoneFieldLabel": "NÃºmero de telÃ©fono",
-    "contact.phonePlaceholder": "+966 ...",
-    "contact.emailLabel": "Correo electrÃ³nico",
-    "contact.emailPlaceholder": "nombre@ejemplo.com",
-    "contact.typeLabel": "Tipo de solicitud",
-    "contact.typePlaceholder": "Elige una opciÃ³n",
-    "contact.typeExperience": "Experiencia privada",
-    "contact.typeEvent": "Evento",
-    "contact.typeCorporate": "Programa corporativo o delegaciÃ³n",
-    "contact.typeCollection": "Conceptos de fragancias en desarrollo",
-    "contact.typeOther": "Otro",
-    "contact.dateLabel": "Fecha preferida",
-    "contact.guestsLabel": "NÃºmero de invitados",
-    "contact.guestsPlaceholder": "Ejemplo: 6",
-    "contact.messageLabel": "Â¿Hay algÃºn otro detalle importante?",
-    "contact.messagePlaceholder": "AÃ±ade una nota breve y opcional si hay algo mÃ¡s que debamos saber.",
-    "contact.sensitiveDataNotice": "No envÃ­es nÃºmeros de identidad, pasaporte, informaciÃ³n de salud ni otros datos sensibles mediante este formulario.",
-    "contact.privacyNoticePrefix": "Al enviar esta solicitud, Aventura trata tus datos para prepararla y contactar contigo conforme a la",
-    "contact.privacyNoticeTerms": ". Los servicios confirmados se rigen por los",
-    "contact.submit": "Enviar solicitud de reserva",
-    "contact.note": "Elige correo electrÃ³nico o WhatsApp para enviar la solicitud preparada; no confirma una reserva ni un pago.",
-    "contact.error": "Introduce tu nombre y, al menos, un nÃºmero de telÃ©fono o correo electrÃ³nico.",
-    "contact.errorEmail": "Introduce tu correo electrÃ³nico para enviar la solicitud de reserva por email.",
-    "contact.requestIntro": "Solicitud de reserva AVENTURA",
-    "contact.emailSubject": "Solicitud de reserva Aventura",
-    "contact.submitEmail": "Enviar solicitud de reserva",
-    "contact.submitWhatsapp": "Enviar solicitud de reserva por WhatsApp",
-    "contact.noteEmail": "Tu solicitud se enviarÃ¡ directamente a Aventura. No se abrirÃ¡ ninguna aplicaciÃ³n de correo; no confirma una reserva ni un pago.",
-    "contact.noteWhatsapp": "WhatsApp se abrirÃ¡ con la solicitud preparada. PodrÃ¡s revisarla antes de enviarla; no confirma una reserva ni un pago.",
-    "contact.sending": "Enviando tu solicitudâ€¦",
-    "contact.submitError": "No hemos podido enviar tu solicitud. IntÃ©ntalo de nuevo o elige WhatsApp.",
-    "contact.whatsappIntro": "Hola AVENTURA, me gustarÃ­a solicitar apoyo de planificaciÃ³n.",
-    "contact.whatsappName": "Nombre",
-    "contact.whatsappCompany": "Empresa",
-    "contact.whatsappPhone": "TelÃ©fono",
-    "contact.whatsappEmail": "Correo",
-    "contact.whatsappType": "Tipo de solicitud",
-    "contact.whatsappDate": "Fecha preferida",
-    "contact.whatsappGuests": "Invitados",
-    "contact.whatsappMessage": "Detalles",
-    "faq.metaTitle": "Preguntas Frecuentes | AVENTURA",
-    "faq.metaDescription": "Respuestas sobre experiencias, eventos, transporte, guÃ­as, reservas y servicios de AVENTURA.",
-    "faq.heroEyebrow": "InformaciÃ³n Ãºtil",
-    "faq.heroTitle": "Preguntas frecuentes",
-    "faq.heroDescription": "Un punto de partida claro antes de adaptar los detalles a tu solicitud.",
-    "faq.q1": "Â¿CÃ³mo reservo una experiencia?",
-    "faq.a1": "EnvÃ­a la fecha, el nÃºmero de invitados y los intereses por el formulario mediante correo electrÃ³nico, o usa WhatsApp si lo prefieres. Confirmaremos disponibilidad y programa antes de cualquier pago.",
-    "faq.q2": "Â¿Las experiencias son privadas?",
-    "faq.a2": "Nuestros programas principales son privados. Si se propone una opciÃ³n compartida, se indicarÃ¡ claramente antes de confirmar.",
-    "faq.q3": "Â¿Se pueden combinar varias experiencias en un dÃ­a?",
-    "faq.a3": "SÃ­. Equilibramos traslados, clima y ritmo para que el dÃ­a resulte agradable y no apresurado.",
-    "faq.q4": "Â¿Ofrecen transporte?",
-    "faq.a4": "SÃ­. Se puede aÃ±adir transporte privado segÃºn el tamaÃ±o del grupo, la ruta y el nivel de servicio.",
-    "faq.q5": "Â¿Hay guÃ­as autorizados en diferentes idiomas?",
-    "faq.a5": "SÃ­, sujeto a disponibilidad. Ãrabe e inglÃ©s suelen estar disponibles, y se pueden solicitar otros idiomas con antelaciÃ³n.",
-    "faq.q6": "Â¿Aventura organiza eventos corporativos?",
-    "faq.a6": "SÃ­. Coordinamos reuniones, conferencias, lanzamientos, programas de equipo, ocasiones para empleados y delegaciones.",
-    "faq.q7": "Â¿CÃ³mo se determina el precio de la experiencia?",
-    "faq.a7": "Cada experiencia se cotiza tras revisar fecha, horario, grupo, duraciÃ³n, transporte y extras. RecibirÃ¡s una cotizaciÃ³n escrita y clara antes de confirmar.",
-    "faq.q8": "Â¿Se pueden organizar servicios para huÃ©spedes en un hotel?",
-    "faq.a8": "SÃ­. La sastrerÃ­a de thobe, el servicio de abaya y las flores se pueden coordinar para un hotel o alojamiento mediante acuerdo previo.",
-    "faq.q9": "Â¿Con cuÃ¡nta antelaciÃ³n debo contactar?",
-    "faq.a9": "Cuanto antes, mejor, especialmente para fines de semana, grupos grandes y guÃ­as especializados. TambiÃ©n revisamos solicitudes urgentes segÃºn disponibilidad.",
-    "faq.q10": "Â¿QuÃ© ocurre despuÃ©s de enviar la solicitud?",
-    "faq.a10": "Revisamos los datos, hacemos las preguntas necesarias, proponemos una direcciÃ³n y confirmamos disponibilidad. Nada se reserva sin tu aprobaciÃ³n final.",
-    "gallery.metaTitle": "GalerÃ­a Aventura | Lugares, Eventos y Detalles",
-    "gallery.metaDescription": "Una vista del Mar Rojo, Yeda HistÃ³rica, desierto, Taif, eventos y detalles para huÃ©spedes de AVENTURA.",
-    "gallery.heroEyebrow": "Diario visual",
-    "gallery.heroTitle": "Lugares, ambientes y detalles cuidados.",
-    "gallery.heroDescription": "Una direcciÃ³n visual de las experiencias y eventos que diseÃ±amos. Los arreglos finales varÃ­an en cada programa.",
-    "gallery.sea": "Viajes por el Mar Rojo",
-    "gallery.historic": "Yeda HistÃ³rica",
-    "gallery.desert": "La Ãºltima luz del desierto",
-    "gallery.taif": "MontaÃ±as de Taif",
-    "gallery.corporate": "Eventos ejecutivos",
-    "gallery.private": "Encuentros privados",
-    "gallery.collection": "DirecciÃ³n de la colecciÃ³n Aventura",
-    "gallery.jeddah": "Yeda despuÃ©s del atardecer",
-    "gallery.altSea": "Concepto de experiencia en el Mar Rojo",
-    "gallery.altHistoric": "Concepto de experiencia en la Yeda histÃ³rica",
-    "gallery.altDesert": "Experiencia en el desierto al atardecer",
-    "gallery.altTaif": "Concepto de experiencia en las montaÃ±as de Taif",
-    "gallery.altCorporate": "Concepto de evento ejecutivo",
-    "gallery.altPrivate": "Concepto de encuentro privado",
-    "gallery.altCollection": "DirecciÃ³n de la colecciÃ³n Aventura",
-    "gallery.altJeddah": "Yeda despuÃ©s del atardecer",
-    "gallery.disclaimer": "Estas imÃ¡genes presentan la direcciÃ³n visual de Aventura. Lugares, detalles de la experiencia y montajes se confirman por separado para cada solicitud.",
-    "privacy.metaTitle": "PolÃ­tica de Privacidad | AVENTURA",
-    "privacy.metaDescription": "CÃ³mo AVENTURA trata los datos personales enviados a travÃ©s del sitio y los canales de contacto.",
-    "privacy.heroEyebrow": "Legal",
-    "privacy.heroTitle": "PolÃ­tica de privacidad",
-    "privacy.heroDescription": "Una explicaciÃ³n clara de los datos personales que recibimos y cÃ³mo los utilizamos.",
-    "privacy.updated": "Ãšltima actualizaciÃ³n: julio de 2026",
-    "privacy.h1": "1. InformaciÃ³n que proporcionas",
-    "privacy.p1": "Al contactarnos puedes facilitar nombre, telÃ©fono, correo, empresa, paÃ­s, ciudad, fecha, nÃºmero de invitados o datos de colaboraciÃ³n como profesiÃ³n, licencias, portafolio, idiomas y cobertura.",
-    "privacy.h2": "2. CÃ³mo utilizamos la informaciÃ³n",
-    "privacy.p2": "Usamos la informaciÃ³n para responder, preparar propuestas, coordinar servicios, mantener registros y mejorar la comunicaciÃ³n.",
-    "privacy.h3": "3. Proveedores de servicios",
-    "privacy.p3": "Cuando sea necesario para preparar o prestar un servicio aprobado, ciertos datos podrÃ¡n compartirse con guÃ­as, lugares, transportistas o socios seleccionados, solo en la medida necesaria.",
-    "privacy.h4": "4. Preferencias del sitio",
-    "privacy.p4": "El sitio guarda durante un periodo limitado tu idioma y preferencias tÃ©cnicas limitadas en tu dispositivo. Se preparan eventos de interacciÃ³n anÃ³nimos sin nombres, telÃ©fonos, correos ni contenido de mensajes. Actualmente el sitio no procesa pagos en lÃ­nea ni crea cuentas de clientes.",
-    "privacy.h5": "5. WhatsApp y correo",
-    "privacy.p5": "Al continuar por WhatsApp o correo, la comunicaciÃ³n tambiÃ©n estÃ¡ sujeta a las polÃ­ticas del proveedor correspondiente.",
-    "privacy.h6": "6. ConservaciÃ³n y protecciÃ³n",
-    "privacy.p6": "Conservamos la informaciÃ³n durante el tiempo necesario para fines comerciales, contractuales y legales, y aplicamos medidas razonables de protecciÃ³n.",
-    "privacy.h7": "7. Tus opciones",
-    "privacy.p7": "Puedes solicitar la correcciÃ³n o eliminaciÃ³n de informaciÃ³n, salvo aquella que debamos conservar por razones legales o contractuales.",
-    "privacy.h8": "8. Contacto",
-    "privacy.p8": "Para consultas de privacidad, escribe a contact@aventuraksa.com.",
-    "terms.metaTitle": "TÃ©rminos y Condiciones | AVENTURA",
-    "terms.metaDescription": "Las condiciones aplicables a solicitudes del sitio y servicios locales confirmados de AVENTURA.",
-    "terms.heroEyebrow": "Legal",
-    "terms.heroTitle": "TÃ©rminos y condiciones",
-    "terms.heroDescription": "Condiciones claras para solicitudes, servicios confirmados y experiencias de huÃ©spedes.",
-    "notfound.metaTitle": "PÃ¡gina No Encontrada | AVENTURA",
-    "notfound.title": "Esta pÃ¡gina no forma parte del viaje.",
-    "notfound.text": "Es posible que el enlace haya cambiado o que la pÃ¡gina ya no exista.",
-    "notfound.button": "Volver al inicio",
-    "common.madeToOrder": "Preparado por encargo",
-    "nav.corporate": "Empresas",
-    "home.jeddahTitle": "Un dÃ­a completo en Yeda",
-    "home.jeddahText": "Paseo marÃ­timo, Yeda HistÃ³rica, gastronomÃ­a local y paradas seleccionadas en una ruta equilibrada.",
-    "home.corporateButton": "Programas corporativos",
-    "experiences.shopExperience": "Ver productos de la experiencia",
-    "experiences.jeddahEyebrow": "Yeda Â· DÃ­a flexible",
-    "experiences.jeddahTitle": "Un dÃ­a completo en Yeda",
-    "experiences.jeddahText": "Un programa flexible que conecta el paseo marÃ­timo, Yeda HistÃ³rica, gastronomÃ­a local y paradas seleccionadas.",
-    "experiences.jeddahItem1": "Formato de medio dÃ­a o dÃ­a completo",
-    "experiences.jeddahItem2": "GuÃ­a autorizado y transporte coordinado",
-    "experiences.jeddahItem3": "Yeda HistÃ³rica y momentos frente al mar",
-    "experiences.jeddahItem4": "Opciones de comida, cafÃ© y hospitalidad",
-    "experiences.jeddahTag1": "Primera visita",
-    "experiences.jeddahTag2": "Flexible",
-    "experiences.jeddahTag3": "DÃ­a completo",
-    "experiences.goldenTitle": "La Hora Dorada",
-    "experiences.goldenText": "Un paseo privado en barco de una hora, coordinado con la Ãºltima luz y el atardecer sobre el Mar Rojo.",
-    "events.corporateLink": "Ver programas corporativos",
-    "services.requestService": "Solicitar este servicio",
-    "collection.filterAll": "Todas las experiencias",
-    "collection.filterSea": "Mar",
-    "collection.filterHistoric": "Yeda HistÃ³rica",
-    "collection.filterDesert": "Desierto",
-    "collection.filterTaif": "Taif",
-    "collection.filterJeddah": "Firma Aventura",
-    "collection.filterCorporate": "Empresas y ejecutivos",
-    "collection.howEyebrow": "CÃ³mo funciona la boutique",
-    "collection.howTitle": "Crea una sola solicitud alrededor del huÃ©sped",
-    "collection.how1Title": "Elige una experiencia",
-    "collection.how1Text": "Entrar desde una experiencia abre automÃ¡ticamente sus productos relacionados.",
-    "collection.how2Title": "AÃ±ade lo que encaje",
-    "collection.how2Text": "Elige una caja, productos individuales o servicios personales.",
-    "collection.how3Title": "Recibe una cotizaciÃ³n personalizada",
-    "collection.how3Text": "Aventura revisa horario, cantidad, personalizaciÃ³n y disponibilidad antes de confirmar.",
-    "collection.boxesText": "Estas colecciones de vista previa se lanzarÃ¡n solo despuÃ©s de aprobar muestras, materiales y proveedores. AÃºn no estÃ¡n disponibles para solicitar.",
-    "collection.requestBox": "Solicitar esta caja",
-    "collection.box1Item1": "Bolsa de playa Aventura",
-    "collection.box1Item2": "Toalla de playa de secado rÃ¡pido",
-    "collection.box1Item3": "Funda de telÃ©fono resistente a salpicaduras y arena",
-    "collection.box1Item4": "Recipiente tÃ©rmico de viaje",
-    "collection.box1Item5": "OpciÃ³n de perfume marino cuando se lance",
-    "collection.box2Item1": "Recuerdo de madera inspirado en el roshan",
-    "collection.box2Item2": "Tarjetas ilustradas del patrimonio",
-    "collection.box2Item3": "Cuaderno de bolsillo Roshan",
-    "collection.box2Item4": "Estuche de tela inspirado en Al-Balad",
-    "collection.box2Item5": "OpciÃ³n de perfume de Yeda HistÃ³rica cuando se lance",
-    "collection.box3Item1": "Chal ligero de tono neutro",
-    "collection.box3Item2": "Vaso tÃ©rmico de viaje",
-    "collection.box3Item3": "PequeÃ±o recuerdo tejido",
-    "collection.box3Item4": "Estuche de viaje multiuso",
-    "collection.box3Item5": "OpciÃ³n de perfume Last Light cuando se lance",
-    "collection.box4Item1": "Bruma aromÃ¡tica de rosa de Taif",
-    "collection.box4Item2": "JabÃ³n de rosa o crema de manos",
-    "collection.box4Item3": "Saquito perfumado de rosa",
-    "collection.box4Item4": "Cuaderno de bolsillo floral",
-    "collection.box4Item5": "OpciÃ³n de perfume de Taif cuando se lance",
-    "collection.box5Title": "Caja DÃ­a en Yeda",
-    "collection.box5Text": "Una pequeÃ±a muestra de la ciudad para el tour o el dÃ­a completo en Yeda.",
-    "collection.box5Item1": "Cuaderno de bolsillo y tarjeta de ruta ilustrada",
-    "collection.box5Item2": "Recuerdo inspirado en roshan",
-    "collection.box5Item3": "Tarjetas ilustradas del patrimonio",
-    "collection.box5Item4": "Accesorio marino compacto",
-    "collection.box5Item5": "Tarjeta de regalo Aventura",
-    "collection.boxNote": "El contenido es ilustrativo y queda sujeto a la aprobaciÃ³n final de los productos.",
-    "collection.personalText": "Los servicios pueden organizarse por separado o aÃ±adirse a un programa corporativo.",
-    "collection.executive1Title": "RecepciÃ³n y traslado del aeropuerto",
-    "collection.executive1Text": "RecepciÃ³n y asistencia con transporte ejecutivo al hotel o reuniÃ³n.",
-    "collection.executive2Title": "Flores y bienvenida en el hotel",
-    "collection.executive2Text": "Ramo, nota de bienvenida o regalo colocado antes de la llegada.",
-    "collection.executive3Title": "PreparaciÃ³n de reuniones",
-    "collection.executive3Text": "Elementos de reuniÃ³n, refrigerios, flujo de invitados y transporte coordinados.",
-    "collection.executive4Title": "Regalos oficiales y conserjerÃ­a",
-    "collection.executive4Text": "Regalos de empresa adecuados y asistencia prÃ¡ctica durante la estancia.",
-    "corporate.metaTitle": "Experiencias Corporativas y Programas Ejecutivos | AVENTURA",
-    "corporate.metaDescription": "Experiencias corporativas prÃ¡cticas, reuniones ejecutivas, equipos y delegaciones VIP en Yeda.",
-    "corporate.heroEyebrow": "Programas corporativos y ejecutivos",
-    "corporate.heroTitle": "Programas corporativos con un objetivo de negocio claro.",
-    "corporate.heroDescription": "Desde una llegada ejecutiva hasta una reuniÃ³n externa o jornada de equipo, Aventura diseÃ±a un programa prÃ¡ctico que conecta hospitalidad, transporte y el entorno adecuado.",
-    "corporate.heroPrimary": "Solicita una propuesta a medida",
-    "corporate.heroSecondary": "Ver formatos prÃ¡cticos",
-    "corporate.introEyebrow": "Una soluciÃ³n operativa completa",
-    "corporate.introTitle": "Un programa de negocio, no un viaje corporativo prefabricado.",
-    "corporate.introText": "Partimos del objetivoâ€”hospitalidad, reconocimiento, conexiÃ³n o equipoâ€”y diseÃ±amos un programa realista segÃºn invitados, tiempo y presupuesto.",
-    "corporate.include1": "PlanificaciÃ³n",
-    "corporate.include2": "Lugar",
-    "corporate.include3": "Transporte",
-    "corporate.include4": "Hospitalidad",
-    "corporate.include5": "Flores para huÃ©spedes",
-    "corporate.include6": "CoordinaciÃ³n en sitio",
-    "corporate.programsEyebrow": "Programas prÃ¡cticos seleccionados",
-    "corporate.programsTitle": "Alto valor sin complejidad innecesaria",
-    "corporate.programsText": "Formatos con lugares accesibles y servicios fiables, ampliables solo cuando el objetivo lo requiere.",
-    "corporate.program1Title": "Reuniones ejecutivas externas",
-    "corporate.program1Text": "Entorno privado, refrigerios, transporte, elementos de reuniÃ³n y almuerzo o cena opcional.",
-    "corporate.program2Title": "Delegaciones VIP e invitados internacionales",
-    "corporate.program2Text": "RecepciÃ³n, transporte ejecutivo, apoyo en hotel, guÃ­as y un itinerario coordinado.",
-    "corporate.program3Title": "DÃ­as de incentivo y reconocimiento",
-    "corporate.program3Text": "Una jornada de mar, cultura, desierto o Taif con transporte, hospitalidad y reconocimiento sencillo.",
-    "corporate.program4Title": "Team building ligero",
-    "corporate.program4Text": "Retos accesibles, pistas y juegos colaborativos adaptados al lugar y al tiempo.",
-    "corporate.program5Title": "Jornadas de experiencias corporativas",
-    "corporate.program5Text": "Programas privados de Mar Rojo, Yeda HistÃ³rica, desierto o Taif para equipos, clientes o socios.",
-    "corporate.program6Title": "Networking y cenas ejecutivas",
-    "corporate.program6Text": "SelecciÃ³n del lugar, recepciÃ³n, asientos, hospitalidad, transporte y coordinaciÃ³n atenta en el lugar.",
-    "corporate.packagesEyebrow": "Puntos de partida",
-    "corporate.packagesTitle": "Tres programas fÃ¡ciles de adaptar",
-    "corporate.package1Title": "Llegada Ejecutiva",
-    "corporate.package1Text": "CoordinaciÃ³n del aeropuerto, traslado, flores de bienvenida en el hotel y conserjerÃ­a.",
-    "corporate.package2Title": "Media Jornada de Liderazgo",
-    "corporate.package2Text": "Sala externa, refrigerios, almuerzo de trabajo y transporte.",
-    "corporate.package3Title": "DÃ­a de Descubrimiento del Equipo",
-    "corporate.package3Text": "Una experiencia, un reto ligero, comida compartida y transporte de grupo.",
-    "corporate.guestEyebrow": "AtenciÃ³n al huÃ©sped ejecutivo",
-    "corporate.guestTitle": "Apoyo Ãºtil antes de que llegue el huÃ©sped",
-    "corporate.guestText": "Los huÃ©spedes reciben un plan de hospitalidad conectado en lugar de organizar cada detalle por separado.",
-    "corporate.guest1": "RecepciÃ³n en aeropuerto y transporte ejecutivo",
-    "corporate.guest2": "Flores en el hotel, coordinaciÃ³n de llegada y conserjerÃ­a",
-    "corporate.guest3": "Medidas y entrega de thobe en menos de 24 horas, sujeta a confirmaciÃ³n",
-    "corporate.guest4": "SelecciÃ³n de abaya con especialista",
-    "corporate.guestBoutique": "Ver servicios ejecutivos",
-    "corporate.viewEvents": "Â¿Necesitas ejecutar un evento? Explora la gestiÃ³n de eventos",
-    "corporate.requestTitle": "Â¿QuÃ© debe lograr el programa?",
-    "corporate.requestText": "Comparte el objetivo, nÃºmero de invitados y fecha para recomendar el formato mÃ¡s sencillo y eficaz.",
-    "contact.typeService": "Servicio para huÃ©spedes",
-    "contact.requestedItem": "Solicitud especÃ­fica",
-    "experiences.readySeaEyebrow": "Listo para solicitar",
-    "experiences.readySeaTitle": "Experiencias de mar diseÃ±adas segÃºn tu horario",
-    "experiences.readySeaText": "Elige la experiencia, el horario y el grupo. Confirmamos el barco adecuado y preparamos una cotizaciÃ³n personalizada.",
-    "experiences.from": "CotizaciÃ³n",
-    "experiences.perBoat": "por barco privado",
-    "experiences.perYacht": "por yate privado",
-    "experiences.perGroup": "por grupo privado",
-    "experiences.perPerson": "por persona",
-    "experiences.offerGoldenMeta": "60 minutos Â· Sharm Obhur Â· 1â€“4 personas",
-    "experiences.offerGoldenText": "Paseo privado al atardecer con capitÃ¡n, combustible, chalecos, agua, aperitivos y hielo.",
-    "experiences.goldenRates": "CotizaciÃ³n segÃºn fecha, horario y nÃºmero de personas.",
-    "experiences.bayadahTitle": "DÃ­a de Mar en Bayadah",
-    "experiences.offerBayadahMeta": "8 horas Â· De Obhur a Bayadah Â· Hasta 8 personas",
-    "experiences.offerBayadahText": "BaÃ±o y tiempo tranquilo en el mar, con capitÃ¡n, combustible, chalecos, aperitivos y hielo incluidos.",
-    "experiences.bayadahRates": "El barco y la cotizaciÃ³n se confirman segÃºn el grupo y la disponibilidad.",
-    "experiences.grandTitle": "Gran Yate Bayadah",
-    "experiences.offerGrandMeta": "8 horas Â· De Obhur a Bayadah Â· Hasta 23 personas",
-    "experiences.offerGrandText": "Yate amplio y premium para grupos privados con los mismos elementos del dÃ­a de mar.",
-    "experiences.grandRate": "Se prepara una cotizaciÃ³n personalizada para el yate y el programa elegidos.",
-    "experiences.readyHistoricEyebrow": "Formatos de Yeda HistÃ³rica",
-    "experiences.readyHistoricTitle": "GuÃ­a autorizado segÃºn el tamaÃ±o del grupo",
-    "experiences.readyHistoricText": "Todos los recorridos a pie incluyen cafÃ© Ã¡rabe, dÃ¡tiles y un guÃ­a autorizado. Las entradas adicionales de pago se confirman por separado.",
-    "experiences.heritageSmallMeta": "2â€“2,5 horas Â· 1â€“4 personas",
-    "experiences.heritageSmallTitle": "Paseo Privado por el Patrimonio",
-    "experiences.heritageSmallText": "Recorrido a pie por Al-Balad con un guÃ­a autorizado.",
-    "experiences.heritageGroupMeta": "2â€“2,5 horas Â· 5â€“12 personas",
-    "experiences.heritageGroupTitle": "Paseo Patrimonial para Grupos",
-    "experiences.heritageGroupText": "GuÃ­a autorizado y coordinador de Aventura para facilitar el movimiento.",
-    "experiences.heritageStandardMeta": "Traslado de ida y vuelta Â· 1â€“4 personas",
-    "experiences.heritageStandardTitle": "Paseo Patrimonial + Transporte",
-    "experiences.heritageStandardText": "Paseo privado con coche estÃ¡ndar y conductor coordinado desde el hotel.",
-    "experiences.heritageVipMeta": "Transporte VIP ida y vuelta Â· Hasta 6 personas",
-    "experiences.heritageVipTitle": "Paseo Patrimonial + Transporte VIP",
-    "experiences.heritageVipText": "VehÃ­culo ejecutivo y conductor, con coordinador cuando el tamaÃ±o del grupo lo requiera.",
-    "experiences.dinnerNoteTitle": "Cena opcional despuÃ©s del paseo",
-    "experiences.dinnerNoteText": "Elige el estilo de restaurante y el horario; la reserva y la cotizaciÃ³n se confirman con el itinerario completo.",
-    "experiences.stbEyebrow": "DÃ­a distintivo Aventura",
-    "experiences.stbTitle": "Del Mar a Al-Balad",
-    "experiences.stbLead": "Una tarde de resort, una parada al atardecer en el Club NÃ¡utico de Yeda y una visita guiada por Yeda HistÃ³rica en un dÃ­a tranquilo.",
-    "experiences.stbClarity": "La parte del mar es la experiencia del resort. El paseo en barco es opcional, se solicita por separado y se confirma segÃºn disponibilidad; la cena de mariscos tambiÃ©n es opcional.",
-    "experiences.stbStep1Title": "Narcissus Resort",
-    "experiences.stbStep1Text": "Acceso a la playa, comida y bebida refrescante en un ambiente relajado.",
-    "experiences.stbStep2Title": "Club NÃ¡utico de Yeda al atardecer",
-    "experiences.stbStep2Text": "Breve parada en el paseo pÃºblico con una bebida estÃ¡ndar incluida.",
-    "experiences.stbStep3Title": "Yeda HistÃ³rica",
-    "experiences.stbStep3Text": "Paseo con guÃ­a autorizado, cafÃ© Ã¡rabe, dÃ¡tiles y paradas patrimoniales seleccionadas.",
-    "experiences.stbStep4Title": "Cena de mariscos opcional",
-    "experiences.stbStep4Text": "AÃ±ade una cena de mariscos en un restaurante seleccionado de Yeda HistÃ³rica si deseas terminar allÃ­ la noche.",
-    "experiences.stbDurationLabel": "DuraciÃ³n del programa",
-    "experiences.stbDurationValue": "Hasta 8 horas, flexible hasta unas 9",
-    "experiences.stbBaseTitle": "Programa principal",
-    "experiences.stbDinnerTitle": "Con cena de mariscos VIP",
-    "experiences.stbMinimum": "Reserva mÃ­nima: 4 personas",
-    "experiences.stbRateNote": "Horario y vehÃ­culo se confirman segÃºn fecha, hotel y tamaÃ±o del grupo.",
-    "experiences.bookingEyebrow": "Antes de reservar",
-    "experiences.bookingTitle": "Condiciones claras y un plan confirmado",
-    "experiences.bookingText": "Cada cotizaciÃ³n se prepara despuÃ©s de revisar fecha, horario, grupo, disponibilidad e itinerario final.",
-    "experiences.booking1Title": "AntelaciÃ³n",
-    "experiences.booking1Text": "Se recomienda reservar con 2â€“3 dÃ­as. Puede ser posible para el dÃ­a siguiente segÃºn disponibilidad.",
-    "experiences.booking2Title": "Pago y cambios segÃºn la confirmaciÃ³n",
-    "experiences.booking2Text": "El calendario de pagos y cualquier condiciÃ³n de cambio, cancelaciÃ³n o reembolso se confirman por escrito para el servicio especÃ­fico.",
-    "experiences.booking3Title": "Condiciones marÃ­timas",
-    "experiences.booking3Text": "Si el clima o una averÃ­a impiden navegar, la alternativa adecuada y cualquier reembolso se gestionan segÃºn la confirmaciÃ³n escrita del servicio.",
-    "about.storyText3": "DiseÃ±amos cuidadosamente experiencias privadas que unen cultura, mar, historia, desierto y eventos creados para vivirse con profundidad.",
-    "about.storyText4": "Cada experiencia tiene un significado, cada ruta una historia, cada evento una firma distinta y cada huÃ©sped vive un viaje diferente.",
-    "about.storyClosing": "Aventura no es solo un viajeâ€¦ es una forma diferente de descubrir un lugar y crear momentos.",
-    "about.visionEyebrow": "Hacia dÃ³nde vamos",
-    "about.visionText1": "Ser la primera referencia en experiencias y eventos cuidadosamente diseÃ±ados, con una nueva forma de explorar destinos y organizar ocasiones basada en profundidad, calidad y detalles que marcan la diferencia.",
-    "about.visionText2": "Creemos que viajar y celebrar ya no son solo un traslado o una ocasiÃ³n, sino una experiencia completa que merece construirse con maestrÃ­a.",
-    "about.missionEyebrow": "Lo que creamos",
-    "about.missionText1": "Crear experiencias y eventos excepcionales que dejen una huella real en la memoria de nuestros huÃ©spedes.",
-    "about.missionText2": "DiseÃ±amos cada viaje y evento con atenciÃ³n al detalle y construimos la experiencia alrededor de la persona, sus intereses, tiempo y expectativas.",
-    "about.missionText3": "Nuestro objetivo es convertir cada visita y ocasiÃ³n en una historia que merezca ser contada.",
-    "about.valuesText": "Cinco principios guÃ­an cÃ³mo diseÃ±amos, elegimos y realizamos cada viaje y evento.",
-    "about.whyEyebrow": "Â¿Por quÃ© Aventura?",
-    "about.whyTitle": "La diferencia no estÃ¡ en el destinoâ€¦ sino en cÃ³mo lo vives.",
-    "about.whyText1": "En Aventura no ofrecemos un programa prefabricado para todos. Creamos experiencias pensadas para quienes buscan algo diferente.",
-    "about.whyText2": "Desde el primer momento hasta el Ãºltimo detalle, todo se gestiona con precisiÃ³n, organizaciÃ³n y una comprensiÃ³n real de lo que hace excepcional una experiencia.",
-    "about.whyText3": "Ya sea un momento tranquilo junto al mar, un paseo por callejones histÃ³ricos, un evento privado o una experiencia para un equipoâ€¦",
-    "about.whyClosing": "No solo organizamos el viaje. Creamos la huella que permanece despuÃ©s.",
-    "nav.partners": "Colabora con nosotros",
-    "partners.metaTitle": "Colabora con AVENTURA | Turismo, Eventos y Hospitalidad",
-    "partners.metaDescription": "Colabora con AVENTURA como empresa, espacio, operador o profesional independiente en Arabia SaudÃ­ o a nivel internacional.",
-    "partners.heroEyebrow": "Colaboraciones Aventura",
-    "partners.heroTitle": "Aventura da la bienvenida a colaboraciones con propÃ³sito.",
-    "partners.heroDescription": "Aventura da la bienvenida a la colaboraciÃ³n con empresas, espacios, operadores y profesionales dentro y fuera de Arabia SaudÃ­.",
-    "partners.heroButton": "Enviar solicitud de colaboraciÃ³n",
-    "partners.introEyebrow": "EstÃ¡ndares compartidos",
-    "partners.introTitle": "La colaboraciÃ³n adecuada mejora cada experiencia del huÃ©sped.",
-    "partners.introText": "Valoramos la comunicaciÃ³n clara, el cumplimiento, la hospitalidad autÃ©ntica y el respeto por el huÃ©sped. Cada colaboraciÃ³n empieza por entender lo que ambas partes pueden crear bien juntas.",
-    "partners.introStatement": "Aventura da la bienvenida a relaciones que aportan valor real al viaje, al evento y al lugar, sean locales, regionales o internacionales.",
-    "partners.introReach": "Arabia SaudÃ­ Â· Regional Â· Internacional",
-    "partners.localScopeEyebrow": "EjecuciÃ³n local",
-    "partners.localScopeText": "Las agencias de viajes y los hoteles gestionan los vuelos y el alojamiento. Aventura ejecuta las experiencias, los eventos y los servicios locales para huÃ©spedes confirmados con nosotros en Yeda.",
-    "partners.audiencesEyebrow": "Â¿QuiÃ©n puede colaborar?",
-    "partners.audiencesTitle": "Dos caminos, una puerta clara",
-    "partners.audiencesText": "Elige el camino que te describe. La solicitud reÃºne la informaciÃ³n esencial sin pasos innecesarios.",
-    "partners.orgEyebrow": "Empresas y espacios",
-    "partners.orgTitle": "Organizaciones que alojan, operan o ejecutan",
-    "partners.orgText": "Para empresas autorizadas y espacios establecidos que pueden contribuir a un viaje o evento completo.",
-    "partners.orgItem1": "Empresas de turismo y organizadores de eventos",
-    "partners.orgItem2": "Resorts, hoteles, restaurantes, playas y espacios",
-    "partners.orgItem3": "Operadores marÃ­timos, de transporte y de destino",
-    "partners.orgItem4": "Proveedores de hospitalidad, flores y servicios especializados",
-    "partners.proEyebrow": "Profesionales independientes",
-    "partners.proTitle": "Personas cuya experiencia da forma al momento",
-    "partners.proText": "Para profesionales con vocaciÃ³n de servicio, experiencia relevante y las licencias locales necesarias.",
-    "partners.proItem1": "Organizadores, coordinadores y acompaÃ±antes de huÃ©spedes",
-    "partners.proItem2": "FotÃ³grafos y profesionales creativos",
-    "partners.proItem3": "GuÃ­as autorizados, intÃ©rpretes y traductores",
-    "partners.proItem4": "Conductores profesionales y especialistas locales",
-    "partners.scopeEyebrow": "Ãreas de colaboraciÃ³n",
-    "partners.scopeTitle": "Especialidades distintas, conectadas alrededor del huÃ©sped",
-    "partners.scopeText": "Una colaboraciÃ³n puede apoyar un servicio o formar parte de una experiencia, evento o programa de varios dÃ­as.",
-    "partners.scope1Title": "Turismo y destinos",
-    "partners.scope1Text": "Operadores turÃ­sticos, empresas de destino, guÃ­as y especialistas culturales.",
-    "partners.scope2Title": "Eventos y operaciones",
-    "partners.scope2Text": "PlanificaciÃ³n, producciÃ³n, personal, coordinaciÃ³n y ejecuciÃ³n in situ.",
-    "partners.scope3Title": "Espacios y hospitalidad",
-    "partners.scope3Text": "Resorts, restaurantes, hoteles, playas, espacios privados y catering.",
-    "partners.scope4Title": "Mar y transporte",
-    "partners.scope4Text": "Barcos, yates, vehÃ­culos, conductores y logÃ­stica de movimiento.",
-    "partners.scope5Title": "Contenido e idiomas",
-    "partners.scope5Text": "FotografÃ­a, vÃ­deo, interpretaciÃ³n, traducciÃ³n y narrativa.",
-    "partners.scope6Title": "Servicios al huÃ©sped",
-    "partners.scope6Text": "Servicios de llegada, acompaÃ±amiento, conserjerÃ­a, flores y solicitudes especiales.",
-    "partners.processEyebrow": "Camino de colaboraciÃ³n",
-    "partners.processTitle": "Un comienzo considerado antes de cualquier encargo",
-    "partners.processText": "El proceso protege la experiencia del huÃ©sped y aclara las expectativas para ambas partes.",
-    "partners.process1Title": "Enviar",
-    "partners.process1Text": "Comparte tu perfil, zona de servicio y los mejores ejemplos de tu trabajo.",
-    "partners.process2Title": "Revisar",
-    "partners.process2Text": "Revisamos la idoneidad, cobertura y licencias o registros relevantes.",
-    "partners.process3Title": "Conectar",
-    "partners.process3Text": "Una conversaciÃ³n alinea estÃ¡ndares, disponibilidad y condiciones comerciales.",
-    "partners.process4Title": "Confirmar",
-    "partners.process4Text": "Las oportunidades aprobadas se confirman mediante un alcance y acuerdo claros.",
-    "partners.formEyebrow": "Solicitud de colaboraciÃ³n",
-    "partners.formSideTitle": "CuÃ©ntanos quÃ© haces excepcionalmente bien.",
-    "partners.formSideText": "Un perfil breve y preciso nos ayuda a entender dÃ³nde podrÃ­a encajar una futura colaboraciÃ³n.",
-    "partners.formNote1": "Usa formato internacional de telÃ©fono si solicitas desde fuera de Arabia SaudÃ­.",
-    "partners.formNote2": "Comparte una web o portafolio en vez de enviar documentos sensibles.",
-    "partners.formNote3": "Podemos solicitar licencias y documentos durante la revisiÃ³n.",
-    "partners.formNotice": "Enviar la solicitud no supone aprobaciÃ³n automÃ¡tica ni compromiso de asignar trabajo.",
-    "partners.formTitle": "Perfil de colaboraciÃ³n",
-    "partners.formText": "Completa los datos esenciales. WhatsApp abrirÃ¡ un mensaje estructurado para revisar antes de enviarlo.",
-    "partners.typeLegend": "Solicito como",
-    "partners.typeOrgTitle": "Empresa o espacio",
-    "partners.typeOrgText": "OrganizaciÃ³n autorizada, operador o lugar establecido",
-    "partners.typeProTitle": "Profesional independiente",
-    "partners.typeProText": "Persona que ofrece un servicio profesional",
-    "partners.nameLabel": "Nombre / persona de contacto",
-    "partners.namePlaceholder": "Nombre completo",
-    "partners.brandLabel": "OrganizaciÃ³n o nombre profesional",
-    "partners.brandPlaceholder": "Opcional para profesionales",
-    "partners.countryLabel": "PaÃ­s",
-    "partners.countryPlaceholder": "PaÃ­s",
-    "partners.cityLabel": "Ciudad / base operativa",
-    "partners.cityPlaceholder": "Ciudad",
-    "partners.phoneLabel": "TelÃ©fono / WhatsApp",
-    "partners.phonePlaceholder": "+966 ...",
-    "partners.emailLabel": "Correo electrÃ³nico",
-    "partners.emailPlaceholder": "nombre@ejemplo.com",
-    "partners.categoryLabel": "Ãrea principal de colaboraciÃ³n",
-    "partners.categoryPlaceholder": "Elige la categorÃ­a mÃ¡s cercana",
-    "partners.categoryTourism": "Empresa turÃ­stica u operador de destino",
-    "partners.categoryEvents": "Empresa, organizador o coordinador de eventos",
-    "partners.categoryVenue": "Resort, hotel, restaurante, playa o espacio",
-    "partners.categoryMarine": "Operador de barco, yate o actividad marÃ­tima",
-    "partners.categoryTransport": "Empresa de transporte o conductor profesional",
-    "partners.categoryPhoto": "FotÃ³grafo, videÃ³grafo o profesional creativo",
-    "partners.categoryGuide": "GuÃ­a turÃ­stico",
-    "partners.categoryLanguage": "IntÃ©rprete o traductor",
-    "partners.categoryGuest": "AcompaÃ±ante, conserjerÃ­a o servicio de hospitalidad",
-    "partners.categoryOther": "Otro servicio especializado",
-    "partners.websiteLabel": "Web o portafolio",
-    "partners.websitePlaceholder": "https://...",
-    "partners.experienceLabel": "Experiencia / trayectoria",
-    "partners.experiencePlaceholder": "AÃ±os o trabajos relevantes",
-    "partners.licenseLabel": "Licencia o registro",
-    "partners.licensePlaceholder": "Tipo y nÃºmero, si corresponde",
-    "partners.languagesLabel": "Idiomas",
-    "partners.languagesPlaceholder": "Ãrabe, inglÃ©s ...",
-    "partners.coverageLabel": "Cobertura de servicio",
-    "partners.coveragePlaceholder": "Ciudades o paÃ­ses cubiertos",
-    "partners.capacityLabel": "Capacidad y tarifas orientativas",
-    "partners.capacityPlaceholder": "Opcional: equipo, capacidad diaria o rango inicial",
-    "partners.messageLabel": "Presenta tu servicio y colaboraciÃ³n propuesta",
-    "partners.messagePlaceholder": "Â¿QuÃ© ofreces, quÃ© lo distingue y cÃ³mo complementarÃ­a una experiencia o evento de Aventura?",
-    "partners.consentText": "Confirmo que la informaciÃ³n es correcta y acepto que me contacten sobre esta solicitud.",
-    "partners.privacyLink": "PolÃ­tica de privacidad",
-    "partners.submit": "Continuar en WhatsApp",
-    "partners.submitNote": "Puedes revisar el mensaje completo antes de enviarlo.",
-    "partners.error": "Completa los campos obligatorios, elige el tipo de solicitante, indica un nÃºmero de telÃ©fono o correo electrÃ³nico y acepta la confirmaciÃ³n.",
-    "partners.whatsappIntro": "Hola AVENTURA, deseo enviar una solicitud de colaboraciÃ³n.",
-    "partners.contactLabel": "Empresas, espacios y profesionales",
-    "experiences.quoteLabel": "CotizaciÃ³n personalizada",
-    "experiences.quoteText": "Se prepara segÃºn la fecha, duraciÃ³n, nÃºmero de personas y opciones elegidas.",
-    "experiences.quoteButton": "Solicita una propuesta a medida",
-    "experiences.stbBaseQuoteText": "Resort, parada al atardecer, guÃ­a autorizado y transporte se cotizan segÃºn el horario preferido.",
-    "experiences.stbDinnerQuoteText": "Elige el estilo de cena para tus invitados y lo incluiremos en la cotizaciÃ³n personalizada.",
-    "contact.timeLabel": "Hora de inicio preferida",
-    "contact.durationLabel": "Tiempo disponible",
-    "contact.durationPlaceholder": "Elige la opciÃ³n mÃ¡s cercana",
-    "contact.durationShort": "1â€“2 horas",
-    "contact.durationHalf": "Medio dÃ­a",
-    "contact.durationFull": "DÃ­a completo",
-    "contact.durationFlexible": "Flexible",
-    "contact.whatsappTime": "Hora de inicio preferida",
-    "contact.whatsappDuration": "Tiempo disponible",
-    "nav.corporateEvents": "Empresas y eventos",
-    "contact.progressLabel": "Progreso de la solicitud",
-    "contact.step1Short": "Tu plan",
-    "contact.step2Short": "Personaliza tu solicitud",
-    "contact.step3Short": "Contacto",
-    "contact.step1Title": "Empieza con los datos esenciales",
-    "contact.step1Text": "Elige el tipo de solicitud, el horario y el tamaÃ±o del grupo. Todo puede ajustarse tras la revisiÃ³n.",
-    "contact.step2Title": "Elige los detalles que encajan con tu solicitud",
-    "contact.step2Text": "Elige solo las opciones relacionadas con tu solicitud y aÃ±ade una nota breve si es necesario.",
-    "contact.step3Title": "Â¿DÃ³nde enviamos la primera propuesta?",
-    "contact.step3Text": "Introduce tus datos de contacto. No se cobra nada y la solicitud no confirma una reserva.",
-    "contact.objectiveLabel": "Â¿QuÃ© debe lograr este programa?",
-    "contact.objectivePlaceholder": "Elige la opciÃ³n mÃ¡s cercana",
-    "contact.objectiveRelaxation": "RelajaciÃ³n y tiempo privado",
-    "contact.objectiveDiscovery": "Descubrir Yeda y la cultura local",
-    "contact.objectiveHosting": "Recibir invitados o una delegaciÃ³n",
-    "contact.objectiveTeam": "Conectar o reconocer a un equipo",
-    "contact.objectiveCelebration": "Celebrar una ocasiÃ³n",
-    "contact.objectiveFlexible": "Prefiero una recomendaciÃ³n de Aventura",
-    "contact.addonsLegend": "Servicios opcionales de apoyo",
-    "contact.addonsText": "Selecciona lo que puedas necesitar. Aventura confirmarÃ¡ solo lo que encaje en el programa.",
-    "contact.addonTransport": "Transporte privado",
-    "contact.addonGuide": "GuÃ­a acreditado",
-    "contact.addonDining": "Reservas y coordinaciÃ³n gastronÃ³mica",
-    "contact.addonHospitality": "Bienvenida y hospitalidad para invitados",
-    "contact.addonBoutique": "Conceptos de fragancias en desarrollo",
-    "contact.addonConcierge": "Asistencia de concierge",
-    "contact.backButton": "AtrÃ¡s",
-    "contact.nextButton": "Continuar",
-    "contact.stepTypeError": "Elige un tipo de solicitud antes de continuar.",
-    "contact.stepRequiredError": "Completa el campo obligatorio antes de continuar.",
-    "contact.requestReference": "Referencia de solicitud",
-    "contact.successTitle": "Tu solicitud estÃ¡ lista",
-    "contact.successText": "WhatsApp se ha abierto con la solicitud ordenada. Conserva esta referencia:",
-    "contact.successEmailTitle": "Tu solicitud se ha enviado",
-    "contact.successEmailText": "Tu solicitud se enviÃ³ directamente a Aventura. Revisaremos los datos y responderemos por tu mÃ©todo de contacto preferido. Conserva esta referencia:",
-    "contact.successStatus": "Solicitud preparada correctamente. Referencia:",
-    "contact.successEmailStatus": "Solicitud de reserva enviada correctamente. Referencia:",
-    "contact.openWhatsappAgain": "Abrir WhatsApp de nuevo",
-    "contact.copyRequest": "Copiar los datos de la solicitud",
-    "contact.requestCopied": "Solicitud copiada",
-    "partners.successStatus": "Perfil de colaboraciÃ³n preparado. Referencia:",
-    "collection.perfumeCardsStatus": "Las imÃ¡genes son avances conceptuales temporales. Los frascos, embalajes, tamaÃ±os y datos de lanzamiento se presentarÃ¡n al completar el desarrollo de la fragancia.",
-    "collection.productSea3Short": "Funda de telÃ©fono",
-    "collection.productSea3Title": "Funda de telÃ©fono resistente a salpicaduras",
-    "collection.productSea3Text": "Funda sellada para proteger de salpicaduras y arena; no se presenta como equipo de buceo.",
-    "collection.productSea4Short": "Recipiente tÃ©rmico",
-    "collection.productSea4Title": "Recipiente tÃ©rmico de viaje",
-    "collection.productSea4Text": "Recipiente reutilizable y aislado para mantener fresca el agua durante la experiencia marina.",
-    "collection.productDesert4Short": "Estuche de viaje",
-    "collection.productDesert4Title": "Estuche de viaje multiuso",
-    "collection.productDesert4Text": "Estuche compacto de tela para organizar pequeÃ±os objetos personales y mantenerlos alejados de la arena.",
-    "home.processEyebrow": "CÃ³mo trabaja Aventura",
-    "home.processTitle": "De una solicitud a un Ãºnico plan operativo claro",
-    "home.processText": "No imponemos un paquete fijo; revisamos cada solicitud segÃºn disponibilidad, horario y perfil de los invitados.",
-    "home.process1Title": "Comparte lo esencial",
-    "home.process1Text": "Indica la fecha, los invitados, la ocasiÃ³n y cÃ³mo quieres que se sienta la experiencia.",
-    "home.process2Title": "Revisamos y diseÃ±amos",
-    "home.process2Text": "Aventura coordina recorrido, colaboradores, horario, hospitalidad y detalles opcionales para los huÃ©spedes.",
-    "home.process3Title": "Confirma antes de ejecutar",
-    "home.process3Text": "Recibes un alcance claro y una cotizaciÃ³n personalizada antes de confirmar.",
-    "home.processButton": "Solicita una propuesta a medida",
-    "experienceIndex.heroText": "Elige una experiencia para abrir su historia, opciones del programa y los detalles que dan forma al dÃ­a en torno a tus invitados.",
-    "experienceIndex.coreEyebrow": "Elige tu escenario",
-    "experienceIndex.coreTitle": "Cada experiencia tiene ahora su propio mundo",
-    "experienceIndex.coreText": "Abre la experiencia para entender su historia, sus formatos y el ritmo que mejor se adapta a tus invitados.",
-    "experienceIndex.open": "Abrir experiencia",
-    "experienceIndex.back": "Todas las experiencias",
-    "experienceIndex.labelSea": "Mar Rojo Â· Obhur",
-    "experienceIndex.labelHistoric": "Al-Balad Â· Yeda",
-    "experienceIndex.labelDesert": "Last Light Â· Desierto",
-    "experienceIndex.labelTaif": "Rosa de Taif Â· Tierras altas",
-    "experienceIndex.labelJeddahDay": "Yeda Â· DÃ­a flexible",
-    "experienceIndex.labelSignature": "Aventura Â· DÃ­a distintivo",
-    "experienceIndex.seaEyebrow": "Viajes por el mar",
-    "experienceIndex.seaTitle": "Elige el horario y estilo en el agua",
-    "experienceIndex.seaText": "Cada programa marino tiene su propia pÃ¡gina, con un ritmo claro desde la salida hasta el Ãºltimo momento en el agua.",
-    "experienceDetail.productsEyebrow": "Detalles opcionales despuÃ©s de la experiencia",
-    "experienceDetail.productsTitle": "Detalles conectados a esta experiencia",
-    "experienceDetail.productsText": "La experiencia estÃ¡ completa sin ellos. Incluye un detalle solo si encaja con el huÃ©sped y el momento.",
-    "experienceDetail.scentsEyebrow": "Fragancias distintivas de Aventura",
-    "experienceDetail.scentsTitle": "Las dos fragancias de Aventura",
-    "experienceDetail.scentsText": "Esta experiencia no incluye productos adicionales. Descubre After Midnight Noir y After Midnight Velvet, las fragancias distintivas de Aventura, ambas actualmente en desarrollo.",
-    "experienceDetail.boxEyebrow": "Un recuerdo para la ocasiÃ³n",
-    "experienceDetail.boxTitle": "La identidad de la experiencia en una caja pensada",
-    "experienceDetail.boxText": "La caja es opcional. ElÃ­gela solo cuando forme parte del momento que quieres crear para tus invitados.",
-    "experienceDetail.requestTitle": "Â¿Listo para diseÃ±ar la experiencia?",
-    "experienceDetail.requestText": "Comparte la fecha, el nÃºmero de huÃ©spedes y el horario. Los detalles opcionales se incluyen solo si encajan en el plan.",
-    "experienceDetail.requestWithoutProductsText": "Comparte la fecha, el nÃºmero de huÃ©spedes y el horario. Aventura diseÃ±arÃ¡ el dÃ­a en torno a tus invitados.",
-    "experienceDetail.viewProducts": "Ver detalles opcionales",
-    "experienceDetail.viewScents": "Descubre las fragancias de Aventura",
-    "experienceDetail.viewJourney": "Descubre la experiencia",
-    "experienceDetail.planEyebrow": "Tu plan privado",
-    "experienceDetail.planTitle": "Dinos la fecha. Nosotros diseÃ±amos lo demÃ¡s.",
-    "experienceDetail.planText": "Comparte la ocasiÃ³n, el nÃºmero de invitados y el horario preferido. Aventura prepara una ruta pensada y una cotizaciÃ³n clara.",
-    "experienceDetail.planPoint1": "Ritmo y privacidad adaptados a tus invitados",
-    "experienceDetail.planPoint2": "Socios y traslados coordinados por un solo equipo",
-    "experienceDetail.planPoint3": "No se confirma ninguna reserva hasta acordar el plan final",
-    "experienceDetail.planCta": "Solicita una propuesta a medida",
-    "experienceDetail.includeOptional": "Incluir en mi solicitud de experiencia",
-    "experienceDetail.includeBox": "Incluir esta caja de recuerdo",
-    "experienceDetail.reminderEyebrow": "Detalles opcionales",
-    "experienceDetail.reminderTitle": "La experiencia estÃ¡ lista para planificarse",
-    "experienceDetail.reminderText": "Puedes incluir un detalle si encaja con tu invitado, o continuar solo con la experiencia.",
-    "experienceDetail.continueWithout": "Continuar para planificar la experiencia",
-    "experienceDetail.perfumeSeaText": "DirecciÃ³n olfativa marina inspirada en la luz, el aire y el movimiento del Mar Rojo.",
-    "experienceDetail.perfumeRoshanText": "DirecciÃ³n cÃ¡lida inspirada en madera roshan, cafÃ©, especias y Yeda HistÃ³rica.",
-    "experienceDetail.perfumeTaifText": "DirecciÃ³n inspirada en rosa de Taif, aire de montaÃ±a y suaves notas verdes.",
-    "experienceDetail.jeddahBoxTitle": "ColecciÃ³n Signature Yeda",
-    "experienceDetail.jeddahBoxText": "Una colecciÃ³n combinada de Mar Rojo y Roshan para el dÃ­a completo en Yeda o De Mar a Al-Balad.",
-    "journey.sea.eyebrow": "Tu dÃ­a en el Mar Rojo",
-    "journey.sea.title": "Un dÃ­a de mar privado empieza antes de subir al barco",
-    "journey.sea.text": "CuÃ©ntanos el ambiente que buscas y diseÃ±aremos la embarcaciÃ³n, el horario y el ritmo en torno a las personas que compartirÃ¡n el momento.",
-    "journey.sea.step1Title": "Elige el ritmo",
-    "journey.sea.step1Text": "Una escapada corta, un dÃ­a completo o un yate privado: empezamos por cÃ³mo quiere tu grupo pasar el tiempo juntos.",
-    "journey.sea.step2Title": "Sal de Obhur en el momento adecuado",
-    "journey.sea.step2Text": "El barco, el capitÃ¡n, la salida y el confort esencial se coordinan como un comienzo tranquilo del dÃ­a.",
-    "journey.sea.step3Title": "QuÃ©date con el mar para vosotros",
-    "journey.sea.step3Text": "Nada, dÃ©jate llevar o simplemente permanece frente al horizonte. El programa deja espacio para que el momento marque el rumbo.",
-    "journey.golden.eyebrow": "La Hora Dorada Â· Sharm Obhur",
-    "journey.golden.title": "Una hora sin prisa, sincronizada con la Ãºltima luz",
-    "journey.golden.text": "Un paseo privado en barco al atardecer cuando lo importante no es la distancia, sino salir de la orilla en el momento exacto.",
-    "journey.golden.step1Title": "Nombra la ocasiÃ³n",
-    "journey.golden.step1Text": "Una escapada tranquila, una celebraciÃ³n privada o una sorpresa cuidada: todo empieza con el momento que quieres crear.",
-    "journey.golden.step2Title": "Embarca con el dÃ­a aÃºn abierto",
-    "journey.golden.step2Text": "Aventura ajusta la salida desde Obhur para que esa hora sea tuya, no una cita dentro de un horario turÃ­stico fijo.",
-    "journey.golden.step3Title": "Deja que la luz haga el trabajo",
-    "journey.golden.step3Text": "El Ãºltimo tramo es deliberadamente sencillo: mar abierto, barco privado y los Ãºltimos colores del dÃ­a.",
-    "journey.bayadah.eyebrow": "Bayadah Â· Un dÃ­a completo de mar privado",
-    "journey.bayadah.title": "Bayadah es el destino; el dÃ­a entero es vuestro",
-    "journey.bayadah.text": "Una experiencia privada en barco de dÃ­a completo, diseÃ±ada para quienes van a bordo, con tiempo para nadar y dejar que el Mar Rojo marque el ritmo.",
-    "journey.bayadah.step1Title": "Construye el dÃ­a en torno a tu grupo",
-    "journey.bayadah.step1Text": "Empezamos por el nÃºmero de invitados, el ritmo preferido y el tipo de tiempo que el grupo quiere disfrutar en el agua.",
-    "journey.bayadah.step2Title": "Viaja de Obhur a Bayadah",
-    "journey.bayadah.step2Text": "El barco, el capitÃ¡n, el combustible, el equipo de seguridad y los esenciales del dÃ­a se coordinan antes de tu llegada.",
-    "journey.bayadah.step3Title": "QuÃ©date mÃ¡s donde se sienta bien",
-    "journey.bayadah.step3Text": "Nadar y hacer pausas en mar abierto son parte del dÃ­a, no paradas apresuradas entre obligaciones.",
-    "journey.grandBayadah.eyebrow": "Gran Yate Bayadah Â· DÃ­a privado para grupos",
-    "journey.grandBayadah.title": "Un yate mÃ¡s grande con la misma sensaciÃ³n de privacidad",
-    "journey.grandBayadah.text": "Para grupos que quieren compartir el mar sin sentirse dentro de un tour grupal, Aventura construye el dÃ­a en Bayadah alrededor de sus personas y propÃ³sito.",
-    "journey.grandBayadah.step1Title": "Marca el ritmo del grupo",
-    "journey.grandBayadah.step1Text": "Familia, colegas o invitados de honor: empezamos por quiÃ©n viene y cÃ³mo deberÃ­a sentirse a bordo.",
-    "journey.grandBayadah.step2Title": "Haz del yate el lugar",
-    "journey.grandBayadah.step2Text": "El yate privado da al grupo su propio espacio mientras la ruta hacia Bayadah se mantiene coordinada y tranquila.",
-    "journey.grandBayadah.step3Title": "Recibe el dÃ­a a tu manera",
-    "journey.grandBayadah.step3Text": "Deja sitio para conversar, nadar y compartir un dÃ­a de mar que nunca se sienta prefabricado.",
-    "journey.historic.eyebrow": "Yeda HistÃ³rica Â· Un paseo privado",
-    "journey.historic.title": "No solo veas Al-Balad. Entra en su historia.",
-    "journey.historic.text": "Un guÃ­a con licencia adapta la ruta a tus invitados y convierte piedra, madera roshan y callejones tranquilos en una introducciÃ³n personal a la ciudad.",
-    "journey.historic.step1Title": "Empieza con las personas detrÃ¡s del lugar",
-    "journey.historic.step1Text": "Tu guÃ­a establece el contexto, el ritmo y el idioma para que cada invitado se sienta incluido desde el primer paso.",
-    "journey.historic.step2Title": "Recorre la ciudad con intenciÃ³n",
-    "journey.historic.step2Text": "El paseo sigue historias, arquitectura y detalles que no se revelan en una ruta genÃ©rica.",
-    "journey.historic.step3Title": "Sal con un capÃ­tulo, no con una lista",
-    "journey.historic.step3Text": "CafÃ©, dÃ¡tiles y tiempo para observar la ciudad hacen que la experiencia sea humana, no apresurada.",
-    "journey.desert.eyebrow": "Last Light Â· Dunas de arena",
-    "journey.desert.title": "Las dunas de arena no son el fondo. Son la razÃ³n para ir.",
-    "journey.desert.text": "Aventura construye la ruta en torno a la arena, la luz y el grupo para que las dunas de arena se sientan amplias, privadas y completamente distintas de la ciudad.",
-    "journey.desert.step1Title": "Deja atrÃ¡s la ciudad",
-    "journey.desert.step1Text": "La salida y el transporte se planifican para que el paso de la carretera a la arena abierta se sienta fÃ¡cil desde el primer tramo.",
-    "journey.desert.step2Title": "Sigue la lÃ­nea de las dunas",
-    "journey.desert.step2Text": "Se elige una ruta 4Ã—4 para tu grupo, con las dunas de arena como escena principal y no como fondo para una parada preparada.",
-    "journey.desert.step3Title": "Llega a Last Light",
-    "journey.desert.step3Text": "Cuando baja el sol, la hospitalidad saudÃ­ y la calma del paisaje crean un cierre que merece tomarse sin prisa.",
-    "journey.taif.eyebrow": "Tierras altas de Taif Â· Un ritmo mÃ¡s sereno",
-    "journey.taif.title": "Cambia el calor de la ciudad por aire de montaÃ±a y un dÃ­a mÃ¡s tranquilo",
-    "journey.taif.text": "Un viaje privado a Taif reÃºne aire mÃ¡s fresco, contornos de montaÃ±a, rosas y detalles locales de temporada a un ritmo que deja respirar a las tierras altas.",
-    "journey.taif.step1Title": "Asciende hacia un ritmo diferente",
-    "journey.taif.step1Text": "Planificamos la salida alrededor de tu grupo para que el ascenso sea el inicio de la experiencia, no solo un traslado.",
-    "journey.taif.step2Title": "Encuentra la temporada de Taif",
-    "journey.taif.step2Text": "Rosas, huertos y paradas locales se eligen segÃºn lo que las tierras altas ofrecen de verdad en ese momento del aÃ±o.",
-    "journey.taif.step3Title": "Haz una pausa donde se abre la vista",
-    "journey.taif.step3Text": "El dÃ­a deja espacio para el paisaje, el aire y los momentos sin planificar que hacen de Taif algo distinto a Yeda.",
-    "journey.jeddah.eyebrow": "DÃ­a emblemÃ¡tico de Aventura Â· Yeda",
-    "journey.jeddah.title": "Un dÃ­a completo en Yeda no es un paquete; se diseÃ±a alrededor de tus invitados",
-    "journey.jeddah.text": "Desde el paseo marÃ­timo hasta Yeda HistÃ³rica y una parada gastronÃ³mica pensada, Aventura conecta la ciudad a un ritmo personal y sin prisas.",
-    "journey.jeddah.note": "El paseo marÃ­timo, la ciudad antigua y la mesa son capÃ­tulos de un mismo dÃ­a, no tres paradas apresuradas.",
-    "journey.jeddah.step1Title": "Empieza donde debe empezar tu dÃ­a",
-    "journey.jeddah.step1Text": "Definimos el punto de encuentro, el transporte y la primera parada segÃºn tu llegada, energÃ­a e intereses.",
-    "journey.jeddah.step2Title": "Deja que Yeda se despliegue por capÃ­tulos",
-    "journey.jeddah.step2Text": "Tiempo frente al mar, Yeda HistÃ³rica, comida local y paradas seleccionadas se conectan en un ritmo claro y flexible.",
-    "journey.jeddah.step3Title": "Termina con la ciudad aÃºn contigo",
-    "journey.jeddah.step3Text": "El Ãºltimo horario se diseÃ±a alrededor de tu grupo para que el dÃ­a cierre con sentido de lugar, no como otro punto del itinerario.",
-    "journey.seaToBalad.eyebrow": "DÃ­a emblemÃ¡tico de Aventura Â· Del mar a Al-Balad",
-    "journey.seaToBalad.title": "Un dÃ­a que conecta el mar con la historia de la ciudad",
-    "journey.seaToBalad.text": "Una tarde de resort, una pausa en Jeddah Yacht Club y una velada guiada en Yeda HistÃ³rica se convierten en un dÃ­a privado con un cambio de escena claro.",
-    "journey.seaToBalad.note": "La transiciÃ³n es el sentido: luz de dÃ­a junto al agua, atardecer en el Club NÃ¡utico y el carÃ¡cter de Al-Balad al caer la noche.",
-    "journey.seaToBalad.step1Title": "Empieza con el agua",
-    "journey.seaToBalad.step1Text": "El capÃ­tulo de mar se diseÃ±a como una experiencia de resort, dando al dÃ­a un comienzo relajado antes de que aparezca la ciudad.",
-    "journey.seaToBalad.step2Title": "Deja que la luz cambie la escena",
-    "journey.seaToBalad.step2Text": "Una parada al atardecer en Jeddah Yacht Club crea la transiciÃ³n entre una tarde abierta y el carÃ¡cter de Al-Balad.",
-    "journey.seaToBalad.step3Title": "Entra en la noche con un guÃ­a",
-    "journey.seaToBalad.step3Text": "Yeda HistÃ³rica se convierte en el capÃ­tulo final, con la opciÃ³n de continuar la noche con una cena local pensada.",
-    "world.sea.eyebrow": "Primera luz Â· Mar Rojo",
-    "world.sea.title": "Empieza donde se abre el horizonte",
-    "world.sea.text": "Desde el primer mensaje, definimos un ritmo matinal claro en torno al grupo, la embarcaciÃ³n y el espacio que quieres dejar sin planificar.",
-    "world.sea.note": "Golden Hour sigue siendo una experiencia de atardecer independiente. El mundo del Mar Rojo comienza con luz de dÃ­a.",
-    "world.sea.step1Title": "Marca el ritmo",
-    "world.sea.step1Text": "Comparte el horario, el ritmo de los invitados y la privacidad que deseas en el agua.",
-    "world.sea.step2Title": "Entra en mar abierto",
-    "world.sea.step2Text": "La salida desde Obhur se convierte en el inicio del dÃ­a, no en un traslado hacia Ã©l.",
-    "world.sea.step3Title": "Deja espacio para el dÃ­a",
-    "world.sea.step3Text": "El dÃ­a de mar se mantiene flexible: un baÃ±o tranquilo, una conversaciÃ³n o una pausa pueden convertirse en el recuerdo.",
-    "world.historic.eyebrow": "Al-Balad Â· Una historia viva",
-    "world.historic.title": "Entra en la ciudad umbral a umbral",
-    "world.historic.text": "Antes de que empiece el paseo, tu guÃ­a, el ritmo y tus intereses convierten un callejÃ³n en una presentaciÃ³n personal de la Yeda HistÃ³rica.",
-    "world.historic.note": "La historia no tiene prisa. Dejamos espacio para reparar en la madera, la piedra, las voces y los pequeÃ±os detalles.",
-    "world.historic.step1Title": "Conoce a tu guÃ­a",
-    "world.historic.step1Text": "Empieza con las personas y el contexto que dan mÃ¡s sentido a cada puerta.",
-    "world.historic.step2Title": "Lee el Roshan",
-    "world.historic.step2Text": "Recorre sombras, madera tallada e historias que no aparecen en un mapa.",
-    "world.historic.step3Title": "Deja que la ciudad permanezca",
-    "world.historic.step3Text": "Termina con tiempo para asimilar la madera, la piedra y las voces de la ciudad, sin correr hacia una lista fija.",
-    "world.desert.eyebrow": "Last Light Â· Dunas de arena",
-    "world.desert.title": "Sigue las dunas de arena hasta que la luz se calme",
-    "world.desert.text": "El paisaje guÃ­a el programa: amplias lÃ­neas de dunas de arena, una ruta 4Ã—4 elegida para tu grupo y una pausa privada mientras baja el sol.",
-    "world.desert.note": "Este es el mundo desÃ©rtico de Aventura: dunas de arena antes que decoraciÃ³n, silencio antes que espectÃ¡culo.",
-    "world.desert.step1Title": "Deja atrÃ¡s la ciudad",
-    "world.desert.step1Text": "El ritmo cambia cuando la carretera cede el paso a la arena y a la distancia abierta.",
-    "world.desert.step2Title": "Lee la lÃ­nea de las dunas",
-    "world.desert.step2Text": "La ruta sigue el paisaje: las dunas de arena son la escena principal, no un fondo.",
-    "world.desert.step3Title": "Llega a Last Light",
-    "world.desert.step3Text": "InstÃ¡late en la hospitalidad y el resplandor final en un momento pensado para el grupo.",
-    "world.taif.eyebrow": "Primera luz Â· Tierras altas",
-    "world.taif.title": "Llega antes de que despierte la ciudad",
-    "world.taif.text": "Aire fresco, contornos de montaÃ±a y rosas de Taif crean un comienzo mÃ¡s suave fuera del ritmo de Yeda.",
-    "world.taif.note": "La temporada define el detalle; la calma de las tierras altas define todo lo demÃ¡s.",
-    "world.taif.step1Title": "Asciende hacia la maÃ±ana",
-    "world.taif.step1Text": "Deja atrÃ¡s el ritmo de la ciudad para disfrutar de aire mÃ¡s fresco y una vista abierta de la montaÃ±a.",
-    "world.taif.step2Title": "Encuentra la temporada",
-    "world.taif.step2Text": "Rosas, huertos y detalles locales se seleccionan segÃºn lo que las tierras altas ofrecen ahora.",
-    "world.taif.step3Title": "Haz una pausa en la vista",
-    "world.taif.step3Text": "Deja que el paisaje marque el ritmo; el aire, la vista y la calma ya forman parte del recuerdo.",
-    "collection.productDesert3Short": "Recuerdo",
-    "collection.productDesert3Title": "PequeÃ±o recuerdo tejido",
-    "collection.productDesert3Text": "Detalle tejido compacto inspirado en la artesanÃ­a del desierto.",
-    "collection.productTaif4Short": "Cuidado de rosa",
-    "collection.productTaif4Title": "JabÃ³n de rosa o crema de manos",
-    "collection.productTaif4Text": "PequeÃ±o producto local elegido segÃºn temporada y disponibilidad.",
-    "collection.noirTitle": "After Midnight Noir",
-    "collection.velvetTitle": "After Midnight Velvet",
-    "common.seasonal": "De temporada",
-    "collection.exploreButton": "Explorar las colecciones",
-    "collection.filterAria": "Filtrar la boutique por experiencia",
-    "collection.quantity": "Cantidad",
-    "collection.addBox": "AÃ±adir caja a la solicitud de cotizaciÃ³n",
-    "collection.addItem": "AÃ±adir a la solicitud de cotizaciÃ³n",
-    "collection.addService": "AÃ±adir servicio a la solicitud de cotizaciÃ³n",
-    "collection.added": "AÃ±adido a tu solicitud de cotizaciÃ³n",
-    "collection.removeItem": "Eliminar",
-    "collection.boxExecutiveTitle": "Caja de Bienvenida Ejecutiva",
-    "collection.boxExecutiveText": "Una bienvenida refinada en el hotel para ejecutivos, delegaciones y huÃ©spedes internacionales.",
-    "collection.boxExecutiveItem1": "Cuaderno y bolÃ­grafo refinados",
-    "collection.boxExecutiveItem2": "Etiqueta de equipaje refinada",
-    "collection.boxExecutiveItem3": "Tarjeta e itinerario personalizados",
-    "collection.boxExecutiveItem4": "PequeÃ±o recuerdo local",
-    "collection.productsEyebrow": "Productos individuales",
-    "collection.productsTitle": "Productos, prÃ³ximamente.",
-    "collection.productsText": "Estas vistas previas permanecen visibles mientras se aprueban los prototipos, los proveedores y los detalles finales. AÃºn no pueden aÃ±adirse a una solicitud.",
-    "collection.productSea1Short": "Bolsa",
-    "collection.productSea1Title": "Bolsa de playa Aventura",
-    "collection.productSea1Text": "Bolsa prÃ¡ctica que tambiÃ©n puede contener la colecciÃ³n completa Mar Rojo.",
-    "collection.productSea2Short": "Toalla",
-    "collection.productSea2Title": "Toalla de playa de secado rÃ¡pido",
-    "collection.productSea2Text": "Ligera y Ãºtil para resort, barco y playa.",
-    "collection.productHistoric1Short": "Recuerdo",
-    "collection.productHistoric1Title": "Recuerdo de madera Roshan",
-    "collection.productHistoric1Text": "PequeÃ±a pieza local inspirada en las ventanas de Yeda HistÃ³rica.",
-    "collection.productHospitalityShort": "Set de bienvenida",
-    "collection.productHospitalityTitle": "Set de tarjetas de bienvenida",
-    "collection.productHospitalityText": "Tarjetas personalizadas de bienvenida e itinerarios compactos para la llegada de los huÃ©spedes.",
-    "collection.productHistoric2Short": "Tarjetas",
-    "collection.productHistoric2Title": "Tarjetas ilustradas del patrimonio",
-    "collection.productHistoric2Text": "Conjunto compacto inspirado en la arquitectura de Al-Balad.",
-    "collection.productDesert1Short": "Chal",
-    "collection.productDesert1Title": "Chal ligero para el desierto",
-    "collection.productDesert1Text": "Capa neutra y fÃ¡cil de llevar para la tarde mÃ¡s fresca.",
-    "collection.productDesert2Short": "Vaso tÃ©rmico",
-    "collection.productDesert2Title": "Vaso tÃ©rmico de viaje",
-    "collection.productDesert2Text": "Vaso tÃ©rmico reutilizable adecuado para las tardes frescas del desierto.",
-    "collection.productTaif1Short": "Bruma de rosa",
-    "collection.productTaif1Title": "Bruma aromÃ¡tica de rosa de Taif",
-    "collection.productTaif1Text": "Bruma aromÃ¡tica de uso externo, seleccionada localmente segÃºn temporada y disponibilidad.",
-    "collection.productTaif2Short": "Cuaderno floral",
-    "collection.productTaif2Title": "Cuaderno floral de Taif",
-    "collection.productTaif2Text": "Cuaderno compacto con un motivo discreto inspirado en las rosas de Taif.",
-    "collection.productTaif3Short": "Regalo de rosa",
-    "collection.productTaif3Title": "Saquito perfumado de rosa",
-    "collection.productTaif3Text": "Recuerdo ligero para bienvenidas y cajas de experiencias.",
-    "collection.lastLightPending": "DiseÃ±o original de campaÃ±a pendiente",
-    "collection.scentLabName": "Laboratorio de aromas Aventura",
-    "collection.guestServicesEyebrow": "Servicios para huÃ©spedes",
-    "collection.guestServicesTitle": "Los detalles del huÃ©sped se coordinan por separado.",
-    "collection.guestServicesText": "SastrerÃ­a, abaya y flores se coordinan mediante su propia solicitud de servicio para huÃ©spedes.",
-    "collection.boutiqueGatewayAria": "Formas de entrar en la boutique",
-    "collection.boutiqueGatewayEyebrow": "Empieza por la opciÃ³n que te convenga",
-    "collection.boutiqueGatewayTitle": "Elige cÃ³mo quieres explorar la boutique",
-    "collection.boutiqueGatewayText": "Cada concepto de fragancia comienza con un lugar, un ambiente y una experiencia de Aventura.",
-    "collection.executiveServicesEyebrow": "Servicios para huÃ©spedes y ejecutivos",
-    "collection.executiveServicesTitle": "Apoyo cuidado en cada llegada",
-    "collection.executiveServicesText": "Servicios independientes o detalles coordinados dentro de un mismo programa para el huÃ©sped.",
-    "collection.airportWelcomeTitle": "RecepciÃ³n y asistencia en el aeropuerto",
-    "collection.airportWelcomeText": "CoordinaciÃ³n de la llegada desde el punto de encuentro del aeropuerto hasta el vehÃ­culo y alojamiento seleccionados.",
-    "collection.executiveTransportTitle": "Transporte ejecutivo",
-    "collection.executiveTransportText": "VehÃ­culos y conductores coordinados segÃºn el programa, el nÃºmero de huÃ©spedes y el horario preferido.",
-    "collection.meetingSetupTitle": "PreparaciÃ³n de reuniones",
-    "collection.meetingSetupText": "Sala, hospitalidad, transporte y detalles prÃ¡cticos de la reuniÃ³n coordinados segÃºn la agenda.",
-    "collection.officialGiftsTitle": "Regalos oficiales",
-    "collection.officialGiftsText": "Regalo de bienvenida u obsequio oficial preparado segÃºn la ocasiÃ³n, el destinatario y la identidad aprobada.",
-    "collection.conciergeTitle": "Apoyo de conserjerÃ­a",
-    "collection.conciergeText": "Apoyo prÃ¡ctico al huÃ©sped, reservas y solicitudes especiales coordinados mediante un Ãºnico contacto.",
-    "collection.requestService": "Solicitar este servicio",
-    "collection.scentLabInterestNote": "Todos los conceptos de fragancias siguen en desarrollo y se anunciarÃ¡n cuando estÃ©n listos.",
-    "collection.thobePoint1": "Visita privada",
-    "collection.thobePoint2": "SelecciÃ³n de tejido",
-    "collection.thobePoint3": "Entrega rÃ¡pida coordinada",
-    "collection.abayaPoint1": "Asistencia privada",
-    "collection.abayaPoint2": "SelecciÃ³n de talla y estilo",
-    "collection.abayaPoint3": "Entrega coordinada",
-    "collection.flowerTitle": "Flores antes de la llegada",
-    "collection.flowerText": "Se prepara un ramo con tarjeta personal en el hotel o alojamiento antes de la llegada.",
-    "collection.flowerPoint1": "DiseÃ±o segÃºn la ocasiÃ³n",
-    "collection.flowerPoint2": "Tarjeta con mensaje personal",
-    "collection.flowerPoint3": "Entrega antes de la llegada",
-    "collection.selectionLabel": "Tu solicitud de cotizaciÃ³n",
-    "collection.selectionItems": "artÃ­culos",
-    "collection.reviewSelection": "Revisar solicitud de cotizaciÃ³n",
-    "collection.dialogTitle": "Revisa tu solicitud de cotizaciÃ³n",
-    "collection.quoteDisclaimer": "Enviar una solicitud de cotizaciÃ³n no confirma reserva, pago ni disponibilidad. Aventura revisarÃ¡ horario, cantidad y personalizaciÃ³n antes de emitir la cotizaciÃ³n final.",
-    "collection.clearSelection": "Borrar selecciones",
-    "contact.requestedItems": "Detalles y servicios seleccionados",
-    "contact.collectionDetailsTitle": "Detalles de boutique y entrega",
-    "contact.deliveryLocationLabel": "Hotel o lugar de entrega",
-    "contact.deliveryLocationPlaceholder": "Hotel, alojamiento o espacio",
-    "contact.deliveryTimeLabel": "Hora de entrega solicitada",
-    "contact.personalizationLabel": "Nombre, mensaje o logotipo de empresa",
-    "contact.personalizationPlaceholder": "Detalles opcionales de personalizaciÃ³n",
-    "contact.thobeDetailsTitle": "Detalles del servicio de sastrerÃ­a",
-    "contact.serviceLocationLabel": "Hotel o alojamiento",
-    "contact.thobeCountLabel": "NÃºmero de thobes",
-    "contact.visitTimeLabel": "Hora de visita preferida",
-    "contact.requiredDeliveryLabel": "Hora de entrega requerida",
-    "contact.thobePreferenceLabel": "Color o tejido preferido",
-    "contact.optionalPlaceholder": "Opcional",
-    "contact.abayaDetailsTitle": "Detalles del servicio de abaya",
-    "contact.contactVisitTimeLabel": "Hora preferida de contacto o visita",
-    "contact.preferredContactLabel": "MÃ©todo de contacto preferido",
-    "contact.contactWhatsapp": "WhatsApp",
-    "contact.contactEmail": "Correo electrÃ³nico",
-    "contact.preferredResponseText": "Aventura responde por correo electrÃ³nico salvo que prefieras WhatsApp o una llamada.",
-    "contact.sendMethodLegend": "EnvÃ­a tu solicitud de reserva por",
-    "contact.sendMethodText": "El correo electrÃ³nico es el canal principal de reservas; WhatsApp queda disponible como segunda opciÃ³n.",
-    "contact.sendEmail": "Correo electrÃ³nico",
-    "contact.sendWhatsapp": "WhatsApp",
-    "contact.contactCall": "Llamada telefÃ³nica",
-    "contact.contactVisit": "Visita al hotel",
-    "contact.flowerDetailsTitle": "Detalles de entrega de flores",
-    "contact.recipientLabel": "Nombre del destinatario",
-    "contact.occasionLabel": "OcasiÃ³n",
-    "contact.flowerSizeLabel": "TamaÃ±o del ramo",
-    "contact.flowerSizeQuiet": "Sutil",
-    "contact.flowerSizeMedium": "Mediano",
-    "contact.flowerSizeSignature": "Especial",
-    "contact.flowerColorsLabel": "Colores preferidos",
-    "contact.cardMessageLabel": "Mensaje de la tarjeta",
-    "experiences.completeEyebrow": "Completa la experiencia",
-    "experiences.completeSeaTitle": "Detalles de playa listos para el dÃ­a de mar",
-    "experiences.completeHistoricTitle": "Un recuerdo de Al-Balad mÃ¡s allÃ¡ del paseo",
-    "experiences.completeDesertTitle": "Detalles cÃ¡lidos para la Ãºltima luz",
-    "experiences.completeTaifTitle": "Regalos estacionales de las montaÃ±as",
-    "experiences.completeJeddahTitle": "Selecciones de mar y Roshan en un dÃ­a",
-    "experiences.viewCollection": "Ver la colecciÃ³n completa",
-    "collection.viewStoryCard": "Ver tarjeta narrativa",
-    "collection.storyDialogEyebrow": "CampaÃ±a de la fragancia",
-    "collection.storyDialogTitle": "Tarjeta narrativa de la fragancia",
-    "collection.closeStoryCard": "Cerrar la tarjeta narrativa",
-    "collection.noirText": "TÃ© negro, iris, maderas pulidas y una estela nocturna serena.",
-    "collection.velvetText": "Pera suave, jazmÃ­n cÃ¡lido, maderas aterciopeladas y una estela femenina refinada.",
-    "collection.productHistoric3Short": "Cuaderno",
-    "collection.productHistoric3Title": "Cuaderno de bolsillo Roshan",
-    "collection.productHistoric3Text": "Cuaderno compacto con detalles inspirados en las ventanas de madera de Al-Balad.",
-    "collection.productHistoric4Short": "Estuche de tela",
-    "collection.productHistoric4Title": "Estuche de tela inspirado en Al-Balad",
-    "collection.productHistoric4Text": "Estuche ligero con un motivo discreto inspirado en Yeda HistÃ³rica.",
-    "collection.productTaif5Short": "Cuaderno",
-    "collection.productTaif5Title": "Cuaderno de bolsillo floral",
-    "collection.productTaif5Text": "Cuaderno compacto con un motivo sutil inspirado en las rosas de Taif.",
-    "collection.discoveryTitle": "Dos formas sencillas de entrar en la boutique",
-    "collection.discoveryText": "Descubre una colecciÃ³n para tu prÃ³xima experiencia o ve directamente a un producto que ya conoces.",
-    "collection.pathExperienceEyebrow": "Planificas una nueva experiencia",
-    "collection.pathExperienceTitle": "Explorar por experiencia",
-    "collection.pathExperienceText": "Explora conceptos de fragancia inspirados en el mar, Yeda HistÃ³rica, el desierto y Taif.",
-    "collection.pathExperienceAction": "Elegir una experiencia",
-    "collection.pathProductEyebrow": "Cliente habitual o compra directa",
-    "collection.pathProductTitle": "Encontrar un producto",
-    "collection.pathProductText": "Busca por nombre o referencia sin tener que recordar a quÃ© experiencia pertenece.",
-    "collection.pathProductAction": "Empezar a buscar",
-    "collection.searchLabel": "Buscar en la boutique",
-    "collection.searchPlaceholder": "Nombre o referencia del producto",
-    "collection.clearSearch": "Borrar",
-    "collection.typeFilterLabel": "Tipo de producto",
-    "collection.typeFilterAria": "Filtrar la boutique por tipo de producto",
-    "collection.typeAll": "Todos los tipos",
-    "collection.typeFragrance": "Fragancias",
-    "collection.typeBeach": "Esenciales de playa",
-    "collection.typeGift": "Regalos y accesorios",
-    "collection.typeBox": "Cajas completas",
-    "collection.typeService": "Servicios para huÃ©spedes y ejecutivos",
-    "collection.experienceFilterLabel": "ColecciÃ³n de experiencia",
-    "collection.resultsIntro": "Explora por mundo o tipo de producto.",
-    "collection.resultsLabel": "artÃ­culos coincidentes",
-    "collection.clearFilters": "Borrar todos los filtros",
-    "collection.emptyTitle": "No hay artÃ­culos coincidentes",
-    "collection.emptyText": "Prueba otra palabra o elimina uno de los filtros.",
-    "collection.reorderEyebrow": "Para clientes habituales",
-    "collection.reorderTitle": "Solicita de nuevo el mismo artÃ­culo",
-    "collection.reorderText": "Introduce el nombre o referencia y la cantidad. Se aÃ±adirÃ¡ a tu solicitud de cotizaciÃ³n guardada para que Aventura la revise.",
-    "collection.reorderProductLabel": "Nombre o referencia del producto",
-    "collection.reorderProductPlaceholder": "Empieza a escribir el nombre del producto",
-    "collection.reorderButton": "AÃ±adir a la solicitud de cotizaciÃ³n",
-    "collection.reorderNote": "La disponibilidad, el plazo y los detalles se confirman tras la revisiÃ³n de Aventura. Tus selecciones quedan guardadas en este dispositivo durante 30 dÃ­as.",
-    "collection.reorderError": "Elige una referencia vÃ¡lida de las sugerencias o introdÃºcela manualmente.",
-    "collection.reorderSuccess": "AÃ±adido a tu solicitud guardada:",
-    "collection.viewDetails": "Ver detalles",
-    "collection.detailsEyebrow": "Concepto de fragancia",
-    "collection.closeDetails": "Cerrar detalles de la fragancia",
-    "collection.availabilityLabel": "Estado",
-    "collection.preparationLabel": "Desarrollo",
-    "collection.personalizationLabel": "PrÃ³ximo paso",
-    "collection.collectionLabel": "Mundo",
-    "collection.detailsDisclaimer": "Este concepto de fragancia estÃ¡ en desarrollo y aÃºn no estÃ¡ disponible para solicitar o comprar.",
-    "collection.continueBrowsing": "Seguir explorando",
-    "collection.prepDevelopment": "En desarrollo; la fecha de lanzamiento se anunciarÃ¡ despuÃ©s",
-    "collection.prepBox": "Se confirma tras revisar cantidad y personalizaciÃ³n",
-    "collection.prepProduct": "Se confirma tras revisar cantidad y disponibilidad",
-    "collection.prepSeasonal": "Se confirma segÃºn temporada y disponibilidad del proveedor",
-    "collection.prepService": "Se coordina segÃºn lugar, fecha y disponibilidad",
-    "collection.personalizationAvailable": "Se puede revisar nombre, mensaje o identidad corporativa",
-    "collection.personalizationReviewed": "Las opciones se revisan con la solicitud final",
-    "collection.personalizationAfterLaunch": "La fecha de lanzamiento se anunciarÃ¡ tras completar el desarrollo.",
-    "collection.personalizationService": "El servicio se adapta a las necesidades del huÃ©sped",
-    "collection.gatewayHistoricText": "Un concepto de fragancia inspirado en la madera de Roshan, la piedra y la historia viva de Al-Balad.",
-    "collection.gatewaySeaText": "Un concepto de fragancia creado a partir del aire mineral, el mar abierto y la calma de un dÃ­a privado en el mar.",
-    "collection.gatewayDesertText": "Un concepto de fragancia para la calidez seca, la arena mineral y la Ãºltima luz de las dunas.",
-    "collection.gatewayTaifText": "Un concepto de fragancia para la temporada de rosas, el aire de montaÃ±a y el ritmo mÃ¡s pausado de las tierras altas.",
-    "collection.gatewayJeddahText": "After Midnight Noir y Velvet son los conceptos de fragancia distintivos de Aventura.",
-    "guest.metaTitle": "Servicios para huÃ©spedes AVENTURA | Detalles coordinados con atenciÃ³n",
-    "guest.metaDescription": "SastrerÃ­a, abaya y arreglos florales coordinados para huÃ©spedes en Yeda a travÃ©s de un Ãºnico punto de contacto de Aventura.",
-    "guest.heroEyebrow": "Servicios para huÃ©spedes",
-    "guest.heroTitle": "Detalles del huÃ©sped, cuidadosamente coordinados.",
-    "guest.heroDescription": "Desde la visita de un sastre hasta las flores, coordinamos detalles prÃ¡cticos antes de la llegada y durante la estancia mediante un solo punto de contacto.",
-    "guest.heroButton": "Explorar servicios para huÃ©spedes",
-    "guest.servicesEyebrow": "Servicios personales para huÃ©spedes",
-    "guest.servicesTitle": "Tres detalles prÃ¡cticos, una solicitud clara.",
-    "guest.servicesText": "Confirmamos al especialista, la ubicaciÃ³n, el horario y la disponibilidad prÃ¡ctica antes de organizar cualquier servicio.",
-    "guest.thobeTitle": "SastrerÃ­a de thobe saudÃ­ en su alojamiento",
-    "guest.thobeText": "Un sastre visita al huÃ©sped para tomar medidas y elegir tela. La entrega puede coordinarse en menos de 24 horas cuando la solicitud y la disponibilidad estÃ©n confirmadas.",
-    "guest.abayaTitle": "Servicio de abaya para la huÃ©sped",
-    "guest.abayaText": "Una especialista visita a la huÃ©sped para tomar las medidas necesarias para el servicio. La abaya adecuada y la entrega se coordinan Ãºnicamente despuÃ©s de la confirmaciÃ³n; no se muestra un catÃ¡logo de abayas listas.",
-    "guest.flowerTitle": "Flores para la ocasiÃ³n",
-    "guest.flowerText": "Se prepara un ramo y una tarjeta personal para una llegada u ocasiÃ³n y se entrega en el hotel, alojamiento o lugar acordado a la hora convenida.",
-    "guest.requestService": "Solicitar un servicio para el huÃ©sped",
-    "guest.viewService": "Ver servicio para huÃ©spedes",
-    "guest.processEyebrow": "CÃ³mo funciona",
-    "guest.processTitle": "Simple para el huÃ©sped, claro para el equipo.",
-    "guest.step1Title": "Comparta lo esencial",
-    "guest.step1Text": "DÃ­ganos para quiÃ©n es el servicio, dÃ³nde se necesita y el horario preferido.",
-    "guest.step2Title": "Confirmamos el arreglo",
-    "guest.step2Text": "Aventura confirma al especialista adecuado, el tiempo de preparaciÃ³n y los detalles prÃ¡cticos.",
-    "guest.step3Title": "Una entrega coordinada",
-    "guest.step3Text": "La visita, preparaciÃ³n y entrega se gestionan mediante un Ãºnico punto de contacto.",
-    "guest.ctaTitle": "DÃ­ganos quÃ© necesita el huÃ©sped y cuÃ¡ndo.",
-    "guest.ctaText": "Revisaremos la solicitud y responderemos con el arreglo mÃ¡s prÃ¡ctico."
-  }
-};
-}());
+HÂˆ\ÙHİšXİÂ‚ˆÚ[™İËU‘S•TWÒLNˆHÂˆ™[ˆˆÂˆ˜ÛÛ[[Û‹œÚÚ\ˆ”ÚÚ\ÈXZ[ˆÛÛ[‹ˆ˜ÛÛ[[Û‹œ[ˆˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆ˜ÛÛ[[Û‹™^Ü™Hˆ‘^Ü™H‹ˆ˜ÛÛ[[Û‹™\ØÛİ™\ˆˆ‘\ØÛİ™\ˆ[Ü™H‹ˆ˜ÛÛ[[Û‹œ™\]Y\İˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆ˜ÛÛ[[Û‹šY]Ğ[ˆ•šY]È[‹ˆ˜ÛÛ[[Û‹›X\›“[Ü™Hˆ“X\›ˆ[Ü™H‹ˆ˜ÛÛ[[Û‹Ú]Ø\ˆÚ]ÛˆÚ]Ğ\‹ˆ˜ÛÛ[[Û‹˜ÛÛZ[™ÔÛÛÛˆˆÛÛZ[™ÈÛÛÛˆ‹ˆ˜ÛÛ[[Û‹˜]˜Z[X›T™\]Y\İˆ]˜Z[X›HÛˆ™\]Y\İ‹ˆ˜ÛÛ[[Û‹š™YZØ]YHˆ’™YZØ]YH\˜XšXH‹ˆ˜ÛÛ[[Û‹›Ü[Û˜[ˆ“Ü[Û˜[‹ˆ˜œ˜[™YÛ[™Hˆ‘^\šY[˜Ù\È0­È]™[È0­ÈÜÜ][]H‹ˆ›˜]‹šÛYHˆ’ÛYH‹ˆ›˜]‹™^\šY[˜Ù\Èˆ‘^\šY[˜Ù\È‹ˆ›˜]‹™]™[Èˆ‘]™[È‹ˆ›˜]‹œÙ\šXÙ\Èˆ”Ù\šXÙ\È‹ˆ›˜]‹˜ÛÛXİ[Ûˆˆ›İ]\]YH‹ˆ›˜]‹™İY\İÙ\šXÙ\Èˆ‘İY\İÙ\šXÙ\È‹ˆ›˜]‹˜X›İ]ˆX›İ]‹ˆ›˜]‹™Ø[\Hˆ‘Ø[\H‹ˆ›˜]‹˜ÛÛXİˆÛÛXİ‹ˆ™›Ûİ\‹œİ[[X\Hˆ]™[\˜H\ÚYÛœÈš]˜]H›İ\›™^\Ë]™[È[™İY\İ›ÙÜ˜[\ÈÚ]İYÚ[[›š[™Ë\İY\™\œÈ[™[™Ë[ÛˆÛÛÜ™[˜][Û‹ˆ‹ˆ™›Ûİ\‹™^Ü™Hˆ‘^Ü™H‹ˆ™›Ûİ\‹˜ÛÛ\[HˆÛÛ\[H‹ˆ™›Ûİ\‹˜ÛÛXİˆÛÛXİ‹ˆ™›Ûİ\‹™˜\Hˆ‘œ™\]Y[H\ÚÙY]Y\İ[ÛœÈ‹ˆ™›Ûİ\‹œš]˜XŞHˆ”š]˜XŞHÛXŞH‹ˆ™›Ûİ\‹\›\Èˆ•\›\È	ˆÛÛ™][ÛœÈ‹ˆ™›Ûİ\‹œšYÚÈˆ[šYÚÈ™\Ù\™Yˆ‹ˆ™›Ûİ\‹›ØØ][Ûˆˆ’™YZØ]YH\˜XšXH‹ˆ™›Ûİ\‹œš[X\Q[XZ[ˆ‘Ù[™\˜[[œ]Z\šY\È‹ˆ™›Ûİ\‹œÙXÛÛ™\Q[XZ[ˆ‘^\šY[˜ÙH[›š[™È‹ˆ˜İK]Hˆ•[\ÈÚ][İHØ[H^HÈ™Y[ZÙKˆ‹ˆ˜İK™\ØÜš\[Ûˆˆ”Ú\™HHØØØ\Ú[Û‹Ü›İ\Ú^™H[™™Y™\œ™Y]KˆÙHÚ[Ú\HHÛX\ˆ[ˆ\›İ[™[İ\ˆİY\İÈ[™š[Üš]Y\Ëˆ‹ˆ˜İK˜]Ûˆˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆÚ]Ø\›X™[ˆ“Ü[ˆÚ]Ğ\‹ˆšÛYK›Y]U]HˆU‘S•THš]˜]H^\šY[˜Ù\È	ˆ]™[È[ˆØ]YH\˜XšXH‹ˆšÛYK›Y]Q\ØÜš\[Ûˆˆ”š]˜]H^\šY[˜Ù\ËÛÜœÜ˜]H]™[ËİY\İÜÜ][]H[™\İ[˜][Ûˆ›ÙÜ˜[\È\ÚYÛ™YHU‘S•TH[ˆ™YZ[™Ø]YH\˜XšXKˆ‹ˆšÛYKš\›Ñ^YXœ›İÈˆ’™YZ0­ÈØ]YH\˜XšXH‹ˆšÛYKš\›Õ]Hˆ’›İ\›™^\È[™ØØØ\Ú[ÛœËÚ\Y\›İ[™[İKˆ‹ˆšÛYKš\›Ñ\ØÜš\[Ûˆˆ]™[\˜Hœš[™ÜÈÙÙ]\ˆš]˜]H^\šY[˜Ù\Ë]™[X[˜YÙ[Y[[™İY\İÜÜ][]H[ˆÛ™HØ\™Y[HÛÛÜ™[˜]Y›İ\›™^x %œ›ÛHHš\œİYXHÈHš[˜[˜\™]Ù[ˆ‹ˆšÛYKš\›Ôš[X\Hˆ‘^Ü™H^\šY[˜Ù\È‹ˆšÛYKš\›ÔÙXÛÛ™\Hˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆšÛYKœ›ÛÙŒU]Hˆ“ØØ[HÜ›İ[™Y‹ˆšÛYKœ›ÛÙŒU^ˆ’Û›İÛYÙHÙˆ™YZ[™\İYØØ[\™\œÈ‹ˆšÛYKœ›ÛÙŒ•]Hˆ”š]˜]HH\ÚYÛˆ‹ˆšÛYKœ›ÛÙŒ•^ˆ”›ÙÜ˜[\ÈÚ\Y\›İ[™[İ\ˆ[ÜH[™XÙH‹ˆšÛYKœ›ÛÙŒÕ]Hˆ“Û™HÚ[ÙˆÛÛÜ™[˜][Ûˆ‹ˆšÛYKœ›ÛÙŒÕ^ˆ”[›š[™ËÜÜ][]H[™Ü\˜][ÛœÈÙÙ]\ˆ‹ˆšÛYKš[›Ñ^YXœ›İÈˆ]™[\˜H\›ØXÚ‹ˆšÛYKš[›Õ]Hˆ•HXÙHX]\œËˆHØ^H[İH^\šY[˜ÙH]X]\œÈ[Ü™Kˆ‹ˆšÛYKš[›Ñ\ØÜš\[Ûˆˆ‘œ›ÛH\İÜšXÈ™YZÈH™YÙXKH\Ù\[™ZY‹ÙH\ÚYÛˆš]˜]H^\ÈÚ\Y\›İ[™[İ\ˆİY\İËˆ‹ˆšÛYK™^^YXœ›İÈˆ‘^\šY[˜Ù\È‹ˆšÛYK™^]Hˆİ\˜]YØ^\ÈÈ\ØÛİ™\ˆ™YZ[™Ù\İ\›ˆØ]YH\˜XšXH‹ˆšÛYK™^\ØÜš\[Ûˆˆ‘›İ\ˆš]˜]HÛÜ›ËXXÚÚ\Y\›İ[™[İ\ˆİY\İË[YH[™HÚ[™Ùˆ^H[İHØ[ÈÜ™X]Kˆ‹ˆšÛYKœÙXU]Hˆ•H™YÙXH‹ˆšÛYKœÙXU^ˆ”š]˜]HXXÚËİ[œÙ]ÜZ\Ù\Ë]š[™ËÛ›ÜšÙ[[™È[™™\ÛÜ^\Ëˆ‹ˆšÛYKš\İÜšXÕ]Hˆ’\İÜšXÈ™YZ‹ˆšÛYKš\İÜšXÕ^ˆ”İÜšY\Ë\˜Ú]Xİ\™H[™ØØ[ÜÜ][]HÚ]XÙ[œÙYİZY\Ëˆ‹ˆšÛYK™\Ù\]Hˆ•H\Ù\‹ˆšÛYK™\Ù\^ˆ“Ü[ˆ[™ØØ\\Ë›İ\›™^\È[™Ø[Hš]˜]HØ]\š[™ÜËˆ‹ˆšÛYKZY•]Hˆ•ZYˆYÚ[™È‹ˆšÛYKZY•^ˆ“[İ[Z[œË›ÜÙ\ËÙX\ÛÛ˜[ØØ[]Z[È[™HÛÛÛ\ˆÚ[™ÙHÙˆXÙKˆ‹ˆšÛYKœÙ\šXÙ\Ñ^YXœ›İÈˆ‘İY\İ›İ\›™^H‹ˆšÛYKœÙ\šXÙ\Õ]Hˆ”İ\Ü™Y›Ü™H\œš]˜[\š[™ÈH^H[™Y\ˆH]™[‹ˆšÛYKœÙ\šXÙ\Ñ\ØÜš\[Ûˆˆ“Û™HÛÛÜ™[˜]YX[HØ[ˆX[˜YÙHH[İš[™È\ÈÚ[H[İH›Øİ\ÈÛˆ[İ\ˆİY\İËˆ‹ˆšÛYKœÙ\šXÙLU]Hˆ”[›š[™È	ˆÛÛ˜ÚY\™ÙH‹ˆšÛYKœÙ\šXÙLU^ˆHÛX\ˆ][™\˜\K™\Ù\˜][ÛœÈ[™Z[Ü™Y™XÛÛ[Y[™][ÛœËˆ‹ˆšÛYKœÙ\šXÙL•]Hˆ”š]˜]H˜[œÜÜ‹ˆšÛYKœÙ\šXÙL•^ˆÛÛÜ™[˜]Y™ZXÛ\È[™š]™\œÈİZ]YÈHÜ›İ\[™›ÙÜ˜[Kˆ‹ˆšÛYKœÙ\šXÙLÕ]Hˆ“XÙ[œÙYİZY\È‹ˆšÛYKœÙ\šXÙLÕ^ˆ“][[[™İX[İZY\ÈÙ[XİY›ÜˆH^\šY[˜ÙH[™İY\İËˆ‹ˆšÛYKœÙ\šXÙM]Hˆ‘İY\İÜÜ][]H‹ˆšÛYKœÙ\šXÙM^ˆ\œš]˜[ÛÛÜ™[˜][Û‹›İÙ\œËİ[[]™\H[™˜XİXØ[\œÛÛ˜[İ\Üˆ‹ˆšÛYK™]™[Ñ^YXœ›İÈˆ‘]™[È‹ˆšÛYK™]™[Õ]HˆÛÜœÜ˜]H[™š]˜]H]™[ÈÚ]HÛX\ˆ\œÜÙH‹ˆšÛYK™]™[Ñ\ØÜš\[Ûˆˆ‘œ›ÛH^Xİ]]™HYY][™ÜÈ[™X[H›ÙÜ˜[\ÈÈš]˜]HÙX\ÚYHØ]\š[™ÜËÙHÛÛÜ™[˜]HH™[YKİ\Y\œËİY\İ›İÈ[™Û‹\Ú]H^Xİ][Û‹ˆ‹ˆšÛYK™]™[Ğ]Ûˆˆ‘^Ü™H]™[È‹ˆšÛYK˜ÛÛXİ[Û‘^YXœ›İÈˆ]™[\˜H›İ]\]YH‹ˆšÛYK˜ÛÛXİ[Û•]Hˆ‘œ˜YÜ˜[˜ÙHÛÛ˜Ù\ÈÚ\YHXXÚÛÜ›‹ˆšÛYK˜ÛÛXİ[Û‘\ØÜš\[Ûˆˆ•H›İ]\]YHİ\œ™[H™\Ù[Èœ˜YÜ˜[˜ÙHÛÛ˜Ù\È[ˆ]™[ÜY[ˆİY\İÙ\šXÙ\È™[XZ[ˆÙ\\˜]H[œÚYHİY\İÙ\šXÙ\Ëˆ‹ˆšÛYK˜ÛÛXİ[Û]Ûˆˆ‘[\ˆH›İ]\]YH‹ˆšÛYKÚQ^YXœ›İÈˆ•ÚH]™[\˜H‹ˆšÛYKÚU]HˆHØØ[Ü\˜]ÜˆÚ]HÜİ	ÜÈ][[ÛˆÈ]Z[‹ˆšÛYKÚQ\ØÜš\[Ûˆˆ‘]™\H[ˆ\ÈÛÛœÚY\™Yœ›ÛHHİY\İ	ÜÈÚ[ÙˆšY]È[™X[˜YÙYÚ]˜XİXØ[Ø\™HÛˆHÜ›İ[™ˆ‹ˆšÛYKÚLU]Hˆ•Z[Ü™Y›İ[\]Y‹ˆšÛYKÚLU^ˆ•H[ˆÚ[™Ù\ÈÚ]HİY\İØØØ\Ú[Û‹[Z[™È[™™Y™\œ™YXÙKˆ‹ˆšÛYKÚL•]Hˆ”š]˜XŞH[™\ØÜ™][Ûˆ‹ˆšÛYKÚL•^ˆ”š]˜]HÙ][™ÜÈ[™Ø\™Y[ÛÛÜ™[˜][Ûˆ›Üˆ˜[Z[Y\Ë^Xİ]]™\È[™’TİY\İËˆ‹ˆšÛYKÚLÕ]Hˆ“Ü\˜][Û˜[Û\š]H‹ˆšÛYKÚLÕ^ˆHYš[™Y›ÙÜ˜[KÛÛ™š\›YY™\ÜÛœÚXš[]Y\È[™Û™HÚ[ÙˆÛÛXİˆ‹ˆ™^\šY[˜Ù\Ë›Y]U]Hˆ”š]˜]H^\šY[˜Ù\È[ˆ™YZ	ˆØ]YH\˜XšXHU‘S•TH‹ˆ™^\šY[˜Ù\Ë›Y]Q\ØÜš\[Ûˆˆ‘^Ü™H™YÙXKÛÛ[ˆİ\‹\İÜšXÈ™YZ\Ù\ZYˆ[™ÛÛ\]H™YZ^H^\šY[˜Ù\ÈHU‘S•TKˆ‹ˆ™^\šY[˜Ù\Ëš\›Ñ^YXœ›İÈˆ”š]˜]H›İ\›™^\È‹ˆ™^\šY[˜Ù\Ëš\›Õ]Hˆ‘^\šY[˜Ù\ÈÚ]HÙ[œÙHÙˆXÙKˆ‹ˆ™^\šY[˜Ù\Ëš\›Ñ\ØÜš\[Ûˆˆ‘^Ü™HH™YÙXK\İÜšXÈ™YZH\Ù\ZYˆ[™ÛÛ\]H™YZ›ÙÜ˜[\È]HXÙHÚ\Y\›İ[™[İ\ˆİY\İÈ[™[YKˆ‹ˆ™^\šY[˜Ù\Ëš[›Ñ^YXœ›İÈˆ‘\ÚYÛ™Y\›İ[™HİY\İ‹ˆ™^\šY[˜Ù\Ëš[›Õ]Hˆ”İ\Ú]HÙ][™ËˆÙHÚ[Z[H^H\›İ[™]ˆ‹ˆ™^\šY[˜Ù\Ëš[›Õ^ˆ‘XXÚ^\šY[˜ÙHØ[ˆİ[™[Û™HÜˆ™XÛÛYH\ÙˆHÚY\ˆ][™\˜\HÚ]˜[œÜÜİZY\Ë[š[™ËÜÜ][]H[™Ü[Û˜[Xİ]š]Y\Ëˆ‹ˆ™^\šY[˜Ù\ËœÙXU]Hˆ”™YÙXH^\šY[˜Ù\È‹ˆ™^\šY[˜Ù\ËœÙXU^ˆœšYÚ[Ü›š[™ÈØ]\‹Ü[ˆÜš^›ÛœÈ[™H^HÛˆÜˆ™[İÈHİ\™˜XÙKˆÙHÙ[XİH›Ø][Z[™È[™İ\Ü[™ÈÙ\šXÙ\È\›İ[™HÜ›İ\ˆ‹ˆ™^\šY[˜Ù\ËœÙXR][LHˆ”š]˜]HXXÚ›İ\›™^\È‹ˆ™^\šY[˜Ù\ËœÙXR][Lˆˆ‘ÛÛ[ˆİ\ˆHÛ™KZİ\ˆİ[œÙ]›Ø]›İ\›™^H‹ˆ™^\šY[˜Ù\ËœÙXR][LÈˆ‘]š[™È[™Û›ÜšÙ[[™È‹ˆ™^\šY[˜Ù\ËœÙXR][Mˆ™XXÚ[™™\ÛÜ^\È‹ˆ™^\šY[˜Ù\ËœÙXUYÌHˆÛİ\\È‹ˆ™^\šY[˜Ù\ËœÙXUYÌˆˆ‘˜[Z[Y\È‹ˆ™^\šY[˜Ù\ËœÙXUYÌÈˆ”š]˜]HÜ›İ\È‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕ]Hˆ’\İÜšXÈ™YZ‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕ^ˆHš]˜]HØ[È›İYÚ[P˜[YYHHXÙ[œÙYİZYHÚÈÛÛ›™XİÈH\˜Ú]Xİ\™K[ÜH[™İÜšY\ÈÙˆHÚ]Kˆ‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][LHˆ“XÙ[œÙY][[[™İX[İZY\È‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][Lˆˆ”›ÜÚ[ˆ\˜Ú]Xİ\™H[™ØØ[İÜšY\È‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][LÈˆ\˜XšXÈÛÙ™™YK]\È[™Ù[XİY\š]YÙHİÜÈ‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][Mˆ•˜[œÜÜ[™ÙXY›ÛÙ[›™\ˆ]˜Z[X›H\ÈÜ[ÛœÈ‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕYÌHˆİ[\™H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕYÌˆˆ\˜Ú]Xİ\™H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕYÌÈˆ‘š\œİ][YHš\Ú]ÜœÈ‹ˆ™^\šY[˜Ù\Ë™\Ù\]Hˆ‘\Ù\^\šY[˜Ù\È‹ˆ™^\šY[˜Ù\Ë™\Ù\^ˆHš]˜]H\Ù\^\šY[˜ÙHÚ\Y\›İ[™ÚYHØ[™[™\ËHÙ[XİY›İ]K\İYÚ[™Ø]YHÜÜ][]Kˆ‹ˆ™^\šY[˜Ù\Ë™\Ù\][LHˆ›İ]\ÈXÜ›ÜÜÈØ[™[™\È‹ˆ™^\šY[˜Ù\Ë™\Ù\][Lˆˆ”š]˜]HÙX][™È[™ÜÜ][]H‹ˆ™^\šY[˜Ù\Ë™\Ù\][LÈˆ‘[›™\ˆ\œ˜[™Ù[Y[È‹ˆ™^\šY[˜Ù\Ë™\Ù\][Mˆ”›ÙÜ˜[\È›ÜˆÛX[Ü›İ\È‹ˆ™^\šY[˜Ù\Ë™\Ù\YÌHˆ”Ø[™[™\È	ˆİ[œÙ]‹ˆ™^\šY[˜Ù\Ë™\Ù\YÌˆˆ”ÛX[Ü›İ\È‹ˆ™^\šY[˜Ù\Ë™\Ù\YÌÈˆ”š]˜]HØØØ\Ú[ÛœÈ‹ˆ™^\šY[˜Ù\ËZY•]Hˆ•ZYˆ›İ\›™^\È‹ˆ™^\šY[˜Ù\ËZY•^ˆ[Yx &\È[İ[Z[œË›ÜÙH˜\›\È[ˆÙX\ÛÛˆ[™ÛÛœÚY\™YİÜÈÜ™X]HH^H[›ZÙH™YZˆ‹ˆ™^\šY[˜Ù\ËZY’][LHˆ“[İ[Z[ˆ›İ]\È[™šY]ÜÚ[È‹ˆ™^\šY[˜Ù\ËZY’][Lˆˆ”ÙX\ÛÛ˜[›ÜÙH˜\›\È‹ˆ™^\šY[˜Ù\ËZY’][LÈˆ“ØØ[X\šÙ]È[™ÙX\ÛÛ˜[İÜÈ‹ˆ™^\šY[˜Ù\ËZY’][Mˆ‘[š[™È[™ØY°êHİÜÈ‹ˆ™^\šY[˜Ù\ËZY•YÌHˆ‘[^H‹ˆ™^\šY[˜Ù\ËZY•YÌˆˆ”ÙX\ÛÛ˜[‹ˆ™^\šY[˜Ù\ËZY•YÌÈˆ“˜]\™H‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™Q^YXœ›İÈˆ”ÚYÛ˜]\™H™YZ›İ\›™^\È‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™U]Hˆ”Ú[\HYX\ÈÚ]HY[[Ü˜X›HÚ[ÙˆšY]È‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™U^ˆ”ÚYÛ˜]\™H›ÙÜ˜[\ÈØ[ˆÛÛ›™Xİİ[\™KÙXK[š[™È[™ÜÜ][]HÚ]İ]XZÚ[™ÈH^H™Y[\ÚYˆ‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LU]Hˆ‘œ›ÛHHÙXHÈ[P˜[Y‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LU^ˆH™\ÛÜY\››ÛÛ‹HXXÚÛXˆİ[œÙ]İÜ[™HXÙ[œÙYİZYYØ[È›İYÚ\İÜšXÈ™YZˆ‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™L•]Hˆ”ÙXHÈ\Ù\‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™L•^ˆHÛØ\İ[[Ü›š[™È[™Hš]˜]H\Ù\Ù][™È]Hš[˜[YÚˆ‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LÕ]HˆHÛÛ\]H™YZ^H‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LÕ^ˆH˜[[˜ÙY^HÙˆÚ]Kİ[\™K[š[™È[™Ø]\™œ›Û[ÛY[Ëˆ‹ˆ™^\šY[˜Ù\Ëœ™\]Y\İ]Hˆ•Ø[\ÈÈÛÛXš[™H[Ü™H[ˆÛ™H^\šY[˜ÙOÈ‹ˆ™^\šY[˜Ù\Ëœ™\]Y\İ^ˆ•[\ÈH[X™\ˆÙˆİY\İÈ[™]˜Z[X›H[YKˆÙHÚ[İYÙÙ\İH˜[[˜ÙY›İ]Kˆ‹ˆ™]™[Ë›Y]U]HˆÛÜœÜ˜]H	ˆš]˜]H]™[È[ˆ™YZU‘S•TH‹ˆ™]™[Ë›Y]Q\ØÜš\[ÛˆˆÛÜœÜ˜]H]™[Ë^Xİ]]™HYY][™ÜËX[H›ÙÜ˜[\Ëš]˜]HØ]\š[™ÜÈ[™’TİY\İÜİ[™ÈÛÛÜ™[˜]YHU‘S•TKˆ‹ˆ™]™[Ëš\›Ñ^YXœ›İÈˆ‘]™[X[˜YÙ[Y[‹ˆ™]™[Ëš\›Õ]Hˆ‘]™[ÈX[˜YÙYœ›ÛHHš\œİœšYYˆÈİY\İ\œš]˜[ˆ‹ˆ™]™[Ëš\›Ñ\ØÜš\[Ûˆˆ]™[\˜H[œÈ[™[]™\œÈÛÜœÜ˜]H]™[Ëš]˜]HØ]\š[™ÜÈ[™İY\İ›ÙÜ˜[\È›İYÚÛ™HÛX\ˆÜ\˜][™È[‹ˆ‹ˆ™]™[Ëš[›Ñ^YXœ›İÈˆ‘œ›ÛHYXHÈ^Xİ][Ûˆ‹ˆ™]™[Ëš[›Õ]Hˆ•H]™[\ÈÛ™H[ÛY[ˆHİY\İ›İ\›™^Hİ\ÈX\›Y\‹ˆ‹ˆ™]™[Ëš[›Õ^ˆ•ÙH[YÛˆHØš™Xİ]™K™[YK[Z[™ËÜÜ][]Kİ\Y\œÈ[™Û‹\Ú]H›İÈÛÈXXÚ\İ\ÜÈHØØØ\Ú[Û‹ˆ‹ˆ™]™[Ë˜ÛÜœÜ˜]Q^YXœ›İÈˆÛÜœÜ˜]H‹ˆ™]™[Ë˜ÛÜœÜ˜]U]HˆÛÜœÜ˜]H]™[[]™\H‹ˆ™]™[Ë˜ÛÜœÜ˜]U^ˆ“Û‹\Ú]H[]™\H›Üˆ^Xİ]]™HYY][™ÜË™XÛÙÛš][ÛˆØØØ\Ú[ÛœËX[H›ÙÜ˜[\Ëš\Ú][™È[YØ][ÛœÈ[™ÛÛ\[HØ]\š[™ÜËˆ‹ˆ™]™[Ëœš]˜]Q^YXœ›İÈˆ”š]˜]H‹ˆ™]™[Ëœš]˜]U]Hˆ”š]˜]H]™[È‹ˆ™]™[Ëœš]˜]U^ˆš\^\Ë[›š]™\œØ\šY\Ë˜[Z[HØ]\š[™ÜÈ[™[[X]HÙ[Xœ˜][ÛœÈÚ\Y\›İ[™HÙ][™È[™İY\İËˆ‹ˆ™]™[Ëš\]Hˆ•’T	ˆ[YØ][ÛˆÜİ[™È‹ˆ™]™[Ëš\^ˆÛÛÜ™[˜]Y\œš]˜[˜[œÜÜXØÛÛ[[Ù][Ûˆİ\Üš]˜]H›ÙÜ˜[\È[™\ØÜ™Y]İY\İØ\™Kˆ‹ˆ™]™[ËX[U]Hˆ•X[H›ÙÜ˜[\È‹ˆ™]™[ËX[U^ˆXİ]š]Y\È\ÚYÛ™Y\›İ[™X[HÛØ[ËÜ›İ\Ú^™H[™HİZ]X›H[š\›Û›Y[İ]ÚYHH\İX[ÛÜšÜXÙKˆ‹ˆ™]™[Ë\\Ñ^YXœ›İÈˆ•Ú]ÙHÛÛÜ™[˜]H‹ˆ™]™[Ë\\Õ]HˆH˜XİXØ[›Ü›X]›ÜˆXXÚØš™Xİ]™H‹ˆ™]™[Ë\LU]Hˆ‘^Xİ]]™HYY][™ÜÈ‹ˆ™]™[Ë\LU^ˆHİZ]X›HÙ][™ËYY][™È\ÜÙ[X[Ë™Yœ™\ÚY[È[™˜[œÜÜÛÛÜ™[˜]Y\ÈÛ™H›ÙÜ˜[Kˆ‹ˆ™]™[Ë\L•]Hˆ“™]ÛÜšÚ[™È	ˆ^Xİ]]™H[›™\œÈ‹ˆ™]™[Ë\L•^ˆ•™[YHÙ[Xİ[Û‹İY\İ™XÙ\[Û‹ÙX][™ËÜÜ][]H[™ÛÛÜ™[˜]Y˜[œÜÜ][Û‹ˆ‹ˆ™]™[Ë\LÕ]Hˆ”™XÛÙÛš][Ûˆ	ˆÛÛ\[HØØØ\Ú[ÛœÈ‹ˆ™]™[Ë\LÕ^ˆ‘[\ŞYYH™XÛÙÛš][Û‹ÛÛ\[HZ[\İÛ™\È[™Ù[XİYÙX\ÛÛ˜[Ø]\š[™ÜËˆ‹ˆ™]™[Ë\M]Hˆ”ÙXK\Ù\	ˆİ[\˜[^\È‹ˆ™]™[Ë\M^ˆ”™XYH\İ[˜][ÛœÈY\Y›ÜˆÛÛ\[HÜ›İ\ÈÚ]˜XİXØ[İY\İÛÛY›Ü[™ÙÚ\İXÜËˆ‹ˆ™]™[Ë\MU]Hˆ•X[HZ[[™È‹ˆ™]™[Ë\MU^ˆXİ]š]Y\ÈX]ÚYÈHX[IÜÈ\œÜÙKXš[]H[™]˜Z[X›H[YKˆ‹ˆ™]™[Ë\M•]Hˆ’[\›˜][Û˜[İY\İÈ‹ˆ™]™[Ë\M•^ˆHÛÛ›™XİYÜÜ][]H›ÙÜ˜[H›Üˆš\Ú][™ÈX[\Ë\™\œÈ[™[YØ][ÛœËˆ‹ˆ™]™[Ëœ›ØÙ\ÜÑ^YXœ›İÈˆ“İ\ˆ›ØÙ\ÜÈ‹ˆ™]™[Ëœ›ØÙ\ÜÕ]Hˆ“Û™H[‹›İ\ˆÛX\ˆİYÙ\È‹ˆ™]™[Ëœİ\U]HˆœšYYˆ‹ˆ™]™[Ëœİ\U^ˆ•ÙH[™\œİ[™HØš™Xİ]™KİY\İË]H[™Ü\˜][™ÈÛÛœİ˜Z[Ëˆ‹ˆ™]™[Ëœİ\•]Hˆ‘\ÚYÛˆ‹ˆ™]™[Ëœİ\•^ˆ•ÙHÚ\HH›Ü›X]™[YK›İÈ[™İ\Ü[™ÈÙ\šXÙ\Ëˆ‹ˆ™]™[Ëœİ\Õ]HˆÛÛ™š\›H‹ˆ™]™[Ëœİ\Õ^ˆ”İ\Y\œË™\ÜÛœÚXš[]Y\È[™ØÚY[H\™HØİ[Y[Y[™[YÛ™Yˆ‹ˆ™]™[Ëœİ\]Hˆ‘[]™\ˆ‹ˆ™]™[Ëœİ\^ˆ“Û‹\Ú]HÛÛÜ™[˜][ÛˆÙY\ÈHİY\İ›İ\›™^H[™]™[[İš[™ÈÛ[ÛİKˆ‹ˆ™]™[Ëœ™\]Y\İ]Hˆ”[›š[™È[ˆ]™[[ˆ™YZÈ‹ˆ™]™[Ëœ™\]Y\İ^ˆ”Ù[™H]KİY\İÛİ[[™\œÜÙKˆÙHÚ[™\ÜÛ™Ú]HšYÚİ\[™È›Ü›X]ˆ‹ˆœÙ\šXÙ\Ë›Y]U]Hˆ‘İY\İÛÛ˜ÚY\™ÙH	ˆ\İ[˜][ÛˆÙ\šXÙ\ÈU‘S•TH‹ˆœÙ\šXÙ\Ë›Y]Q\ØÜš\[Ûˆˆ”[›š[™Ë˜[œÜÜXÙ[œÙYİZY\ËYY][™\ÜÚ\İİY\İÜÜ][]H[™\İ[˜][ÛˆX[˜YÙ[Y[Ù\šXÙ\È[ˆØ]YH\˜XšXKˆ‹ˆœÙ\šXÙ\Ëš\›Ñ^YXœ›İÈˆ‘İY\İÙ\šXÙ\È‹ˆœÙ\šXÙ\Ëš\›Õ]Hˆ•H]Z[È\›İ[™H^\šY[˜ÙHX]\‹ˆ‹ˆœÙ\šXÙ\Ëš\›Ñ\ØÜš\[Ûˆˆ”[›š[™Ë[İ™[Y[Ù[ÛÛYH[™İ\Ü\™HÛÛÜ™[˜]Y\›İ[™HØ[YHİY\İ›İ\›™^Kˆ‹ˆœÙ\šXÙ\Ëš[›Ñ^YXœ›İÈˆ“Û™HÛÛÜ™[˜]Y^Y\ˆ‹ˆœÙ\šXÙ\Ëš[›Õ]Hˆ”Ù\šXÙ\È]XZÙHH^H™Y[Y™›Ü\ÜÈ‹ˆœÙ\šXÙ\Ëš[›Õ^ˆ›ÛÚÈHÚ[™ÛHÙ\šXÙHÜˆ]\ÈÛÛ›™XİÙ]™\˜[[ÈHÛÛ\]H›ÙÜ˜[H›Üˆ[™]šYX[Ë˜[Z[Y\ËÛÛ\[šY\È[™š\Ú][™È[YØ][ÛœËˆ‹ˆœÙ\šXÙ\ËœÌU]Hˆ”[›š[™È	ˆÛÛ˜ÚY\™ÙH‹ˆœÙ\šXÙ\ËœÌU^ˆ’][™\˜\šY\Ë™\Ù\˜][ÛœË™XÛÛ[Y[™][ÛœÈ[™ÜXÚX[\œ˜[™Ù[Y[È[YÛ™YÈHİY\İˆ‹ˆœÙ\šXÙ\ËœÌ•]Hˆ“YY]	ˆ\ÜÚ\İ‹ˆœÙ\šXÙ\ËœÌ•^ˆ\œš]˜[ÛÛÜ™[˜][Ûˆ[™HÛX\ˆ[™İ™\ˆœ›ÛHZ\œÜÈ™ZXÛH[™XØÛÛ[[Ù][Û‹ˆ‹ˆœÙ\šXÙ\ËœÌÕ]Hˆ”š]˜]H˜[œÜÜ][Ûˆ‹ˆœÙ\šXÙ\ËœÌÕ^ˆ”İZ]X›H™ZXÛ\Ë›Ù™\ÜÚ[Û˜[š]™\œÈ[™[Z[™ÈÛÛÜ™[˜]YÚ]H›ÙÜ˜[Kˆ‹ˆœÙ\šXÙ\ËœÍ]Hˆ“XÙ[œÙYİZY\È‹ˆœÙ\šXÙ\ËœÍ^ˆ\˜XšXË[™Û\Ú[™İ\ˆ[™İXYÙ\ÈÙ[XİYXØÛÜ™[™ÈÈ]˜Z[Xš[]H[™İY\İ™YYËˆ‹ˆœÙ\šXÙ\ËœÍU]Hˆ‘İY\İÜÜ][]H‹ˆœÙ\šXÙ\ËœÍU^ˆ\œš]˜[\œ˜[™Ù[Y[Ë›İÙ\œËİ[[]™\H[™İYÚ[˜XİXØ[]Z[Ëˆ‹ˆœÙ\šXÙ\ËœÍ•]Hˆ‘\İ[˜][ÛˆX[˜YÙ[Y[‹ˆœÙ\šXÙ\ËœÍ•^ˆ“ØØ[ÛÛÜ™[˜][Ûˆ›Üˆ˜]™[YÙ[˜ÚY\ËÛÛ\[šY\Ë[YØ][ÛœÈ[™][KY^H›ÙÜ˜[\Ëˆ‹ˆœÙ\šXÙ\ËœÍÕ]Hˆ•Ø™HZ[Üš[™È‹ˆœÙ\šXÙ\ËœÍÕ^ˆHZ[Üˆš\Ú]ÈHİY\İ›ÜˆYX\İ\™[Y[È[™˜XœšXÈÙ[Xİ[Û‹Ú][]™\H[ˆ[™\ˆİ\œÈİXš™XİÈÛÛ™š\›X][Û‹ˆ‹ˆœÙ\šXÙ\ËœÎ]HˆX˜^XH\ÜÚ\İ[˜ÙH‹ˆœÙ\šXÙ\ËœÎ^ˆHÜXÚX[\İ[ÈHİY\İÙ[XİHİZ]X›HX˜^XKÚ]^Y]Y[]™\H˜\ÙYÛˆ]˜Z[Xš[]Kˆ‹ˆœÙ\šXÙ\Ëš›İ\›™^Q^YXœ›İÈˆ’İÈ]ÛÜšÜÈ‹ˆœÙ\šXÙ\Ëš›İ\›™^U]Hˆ“Û™H™\]Y\İØ[ˆÛÛ›™XİH[\™HİY\İ›İ\›™^H‹ˆœÙ\šXÙ\ËšŒU]Hˆ™Y›Ü™H\œš]˜[‹ˆœÙ\šXÙ\ËšŒU^ˆ”™Y™\™[˜Ù\Ë›ÙÜ˜[K™\Ù\˜][ÛœÈ[™˜[œÜÜ\™HÛÛ™š\›YYˆ‹ˆœÙ\šXÙ\ËšŒ•]Hˆ“Ûˆ\œš]˜[‹ˆœÙ\šXÙ\ËšŒ•^ˆ“YY][İ™[Y[[™\œš]˜[]Z[È\™HÛÛÜ™[˜]Yˆ‹ˆœÙ\šXÙ\ËšŒÕ]Hˆ‘\š[™ÈHİ^H‹ˆœÙ\šXÙ\ËšŒÕ^ˆ‘^\šY[˜Ù\Ë[š[™È[™ÜXÚX[™\]Y\İÈ\™HX[˜YÙY›İYÚÛ™HÛÛXİˆ‹ˆœÙ\šXÙ\Ëš]Hˆ™Y›Ü™H\\\™H‹ˆœÙ\šXÙ\Ëš^ˆ‘š[˜[\œ˜[™Ù[Y[Ë[]™\H[™˜[œÙ™\ˆ\™HÚXÚÙYˆ‹ˆ˜ÛÛXİ[Û‹›Y]U]HˆU‘S•TH›İ]\]YHœ˜YÜ˜[˜ÙHÛÛ˜Ù\ÈH^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹›Y]Q\ØÜš\[Ûˆˆ‘^Ü™H]™[\˜Hœ˜YÜ˜[˜ÙHÛÛ˜Ù\ÈH^\šY[˜ÙK[İ\œ™[H[ˆ]™[ÜY[ˆ‹ˆ˜ÛÛXİ[Û‹š\›Ñ^YXœ›İÈˆ]™[\˜H›İ]\]YH‹ˆ˜ÛÛXİ[Û‹š\›Õ]Hˆ‘œ˜YÜ˜[˜ÙHÛÛ˜Ù\Ë›ÛİY[ˆXXÚ^\šY[˜ÙKˆ‹ˆ˜ÛÛXİ[Û‹š\›Ñ\ØÜš\[Ûˆˆ‘^Ü™HHØÙ[\™Xİ[ÛˆÙˆXXÚ]™[\˜HÛÜ›ˆ]™\HÛÛ˜Ù\™[XZ[œÈ[ˆ]™[ÜY[[[]ÈØ[\\Ëİ\Y\œÈ[™]X[]H\™H\›İ™Yˆ‹ˆ˜ÛÛXİ[Û‹š[›Ñ^YXœ›İÈˆÛÛ›™XİYÈ[İ\ˆ^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹š[›Õ]Hˆ”Ù[Xİ[ˆ^\šY[˜ÙH[™ÙYHÛ›HÚ]™[Û™ÜÈÈ]‹ˆ˜ÛÛXİ[Û‹š[›Õ^ˆ‘XXÚœ˜YÜ˜[˜ÙHÛÛ˜Ù\\ÈÛÛ›™XİYÈHİÜKÙ][™È[™š]HÙˆ]È^\šY[˜ÙKˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş\Ñ^YXœ›İÈˆ‘^\šY[˜ÙH›Ş\È‹ˆ˜ÛÛXİ[Û‹˜›Ş\Õ]Hˆ‘^\šY[˜ÙH›Ş\ËÛÛZ[™ÈÛÛÛ‹ˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞU]Hˆ”™YÙXH™XXÚ˜YÈ‹ˆ˜ÛÛXİ[Û‹˜›ŞU^ˆH˜XİXØ[™XXÚÛÛXİ[Ûˆ™\Ù[Y[œÚYHHİH]Ù[‹™XYH›ÜˆHÙXH^Kˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş•]Hˆ”›ÜÚ[ˆ›Ş‹ˆ˜ÛÛXİ[Û‹˜›Ş•^ˆHÛÛ˜Ú\ÙHY[[ÜHÙˆ\İÜšXÈ™YZØØ[Ü˜Y[™Ø]YHÜÜ][]Kˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞÕ]Hˆ“\İYÚ›Ş‹ˆ˜ÛÛXİ[Û‹˜›ŞÕ^ˆ•\ÙY[\Ù\]Z[ÈÚ]HØ\›H[]H[™H™\İ˜Z[™YØ]YHÚ\˜Xİ\‹ˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş]Hˆ•ZYˆ›ÜÙH›Ş‹ˆ˜ÛÛXİ[Û‹˜›Ş^ˆHÙX\ÛÛ˜[ÛÛXİ[ÛˆÙ[\™YÛˆZYˆ›ÜÙH[™\İYØØ[›ÙXİËˆ‹ˆ˜ÛÛXİ[Û‹œ\™[YQ^YXœ›İÈˆ]™[\˜HØÙ[Xˆ‹ˆ˜ÛÛXİ[Û‹œ\™[YU]Hˆ‘œ˜YÜ˜[˜ÙHÛÛ˜Ù\È[ˆ]™[ÜY[‹ˆ˜ÛÛXİ[Û‹œ\™[YU^ˆ‘œ˜YÜ˜[˜ÙHİÜHØ\™ÎÈ›İKÚ^™H[™][˜Ú]Z[ÈÚ[™H[››İ[˜ÙYÛ˜ÙH]™[ÜY[\ÈÛÛ\]Kˆ‹ˆ˜ÛÛXİ[Û‹œU]Hˆ”ÙXH^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹œU^ˆ™\™Ø[[İÙXHœ™Y^™H[™šYÛÛÙˆ‹ˆ˜ÛÛXİ[Û‹œ•]Hˆ”›ÜÚ[ˆ‹ˆ˜ÛÛXİ[Û‹œ•^ˆ”Ø]YHÛÙ™™YKÜ™Y[ˆšYÈX]™\È[™Ø\›Hœ˜[šÚ[˜Ù[œÙKˆ‹ˆ˜ÛÛXİ[Û‹œÕ]Hˆ“\İYÚ‹ˆ˜ÛÛXİ[Û‹œÕ^ˆ’[š\\ˆ™\œK\Ù\[YH[™Hİ\Ø[™XØÛÜ™ˆ‹ˆ˜ÛÛXİ[Û‹œ]Hˆ•ZYˆ^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹œ^ˆ•ZYˆ›ÜÙKÜ™Y[ˆXH[™Ú]H]\ÚËˆ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^YXœ›İÈˆÛÜœÜ˜]H	ˆ^Xİ]]™HİY\İÈ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[]Hˆ•\ÙY[Ù\šXÙ\È™\\™Y\›İ[™H\œš]˜[‹ˆ˜ÛÛXİ[Û‹Ø™U]Hˆ•Z[ÜˆÈ[İ\ˆXØÛÛ[[Ù][Ûˆ‹ˆ˜ÛÛXİ[Û‹Ø™U^ˆHZ[Üˆš\Ú]È›ÜˆYX\İ\™[Y[È[™˜XœšXÈÙ[Xİ[Û‹[ˆ\œ˜[™Ù\È[]™\H[ˆ[™\ˆİ\œÈY\ˆ]˜Z[Xš[]H\ÈÛÛ™š\›YYˆ‹ˆ˜ÛÛXİ[Û‹˜X˜^XU]HˆX˜^XHÜXÚX[\İ›ÜˆHİY\İ‹ˆ˜ÛÛXİ[Û‹˜X˜^XU^ˆHÜXÚX[\İš\Ú]ÈHİY\İÈZÙHHYX\İ\™[Y[È™\]Z\™Y›ÜˆHÙ\šXÙKˆH\›ÜšX]HX˜^XH[™[]™\H\™HÛÛÜ™[˜]YÛ›HY\ˆÛÛ™š\›X][ÛÈ›È™XYK[XYHØ][ÙİYH\ÈÚİÛ‹ˆ‹ˆ˜ÛÛXİ[Û‹œ™\]Y\İ]HˆZ[H][İH™\]Y\İ\›İ[™[İ\ˆİY\İ‹ˆ˜ÛÛXİ[Û‹œ™\]Y\İ^ˆ”Ù[Xİ™XYH›ÙXİÈ[™Ù\šXÙ\Ë[ˆÙ[™Û™H][İH™\]Y\İˆ]™[\˜H™]šY]ÜÈ]˜Z[Xš[]K[Z[™È[™\œÛÛ˜[^˜][Ûˆ™Y›Ü™H\ÜİZ[™ÈH][İ][Û‹ˆ‹ˆ˜X›İ]›Y]U]HˆX›İ]U‘S•TH^\šY[˜Ù\Ë]™[È	ˆÜÜ][]H‹ˆ˜X›İ]›Y]Q\ØÜš\[Ûˆˆ‘\ØÛİ™\ˆHİÜKš\Ú[Û‹Z\ÜÚ[Ûˆ[™˜[Y\È™Z[™U‘S•TIÜÈØ\™Y[H\ÚYÛ™Y^\šY[˜Ù\È[™]™[Ëˆ‹ˆ˜X›İ]š\›Ñ^YXœ›İÈˆX›İ]]™[\˜H‹ˆ˜X›İ]š\›Õ]HˆHY™™\™[Ø^HÈ\ØÛİ™\ˆHXÙH[™Ü™X]H[ÛY[Ëˆ‹ˆ˜X›İ]š\›Ñ\ØÜš\[Ûˆˆ]™[\˜H\È›İY\™[HH›İ\›™^KˆÙH\ÚYÛˆYX[š[™Ù[š]˜]H^\šY[˜Ù\È[™]™[È\›İ[™HİY\İH[ÛY[[™H]Z[È]™[XZ[‹ˆ‹ˆ˜X›İ]œİÜQ^YXœ›İÈˆ“İ\ˆ™YÚ[›š[™È‹ˆ˜X›İ]œİÜU]Hˆ’[ˆ]™\HÚ]K\™H\™HXÙ\È]™\[Û™Hš\Ú]ø )ˆ‹ˆ˜X›İ]œİÜU^Hˆ]\™H\™HXÙ\È™XXÚYÛ›HHÜÙHÚÈÛ›İÈH™X[Ø^HÈ[Kˆ\È\ÈÚ\™H]™[\˜H™YØ[‹ˆ‹ˆ˜X›İ]œİÜU^ˆˆ]™[\˜HØ\È›İ›Ü›ˆÚ[\HÈÙ[İ\œÈÜˆÜ™Ø[š^™H]™[Ë]œ›ÛHHY\[™\œİ[™[™È]H^\šY[˜ÙH\È›İÛ›H[ˆHXÙx %]\È[ˆHØ^H[İH]™H]ˆ[ˆHÛX[]Z[ËHšYÚ[ÛY[HšYÚš]H[™H™Y[[™È]™[XZ[œÈY\ˆH›İ\›™^HÜˆ]™[[™Ëˆ‹ˆ˜X›İ]š\Ú[Û•]Hˆ•š\Ú[Ûˆ‹ˆ˜X›İ]š\Ú[Û•^ˆ•È™XÛÛYHH\İY™Y™\™[˜ÙH›ÜˆØ\™Y[H\ÚYÛ™Y^\šY[˜Ù\È[™]™[È[ˆØ]YH\˜XšXKˆ‹ˆ˜X›İ]›Z\ÜÚ[Û•]Hˆ“Z\ÜÚ[Ûˆ‹ˆ˜X›İ]›Z\ÜÚ[Û•^ˆ•ÈÜ™X]H›İ\›™^\È[™ØØØ\Ú[ÛœÈ]™Y[\œÛÛ˜[Ù[ÛÛÜ™[˜]Y[™Ù[Z[™[HÛÛ›™XİYÈXÙKˆ‹ˆ˜X›İ]˜[Y\Ñ^YXœ›İÈˆ“İ\ˆ˜[Y\È‹ˆ˜X›İ]˜[Y\Õ]Hˆ•Hš[˜Ú\\È™Z[™]™\H^\šY[˜ÙH‹ˆ˜X›İ]ŒU]Hˆ“X\İ\H‹ˆ˜X›İ]ŒU^ˆ‘]™\H]Z[\È]ÈÙZYÚ[™]™\H[ÛY[\È]È˜[YKˆ‹ˆ˜X›İ]Œ•]Hˆ]][XÚ]H‹ˆ˜X›İ]Œ•^ˆ•ÙH™\Ù[[ˆ^\šY[˜ÙH\È]Úİ[™H]™Y8 %Ú]Û™\İH[™\]Ø^Hœ›ÛH™\]][Û‹ˆ‹ˆ˜X›İ]ŒÕ]Hˆ”š]˜XŞH‹ˆ˜X›İ]ŒÕ^ˆ‘]™\HİY\İ[š›Ş\ÈHXÙHY™™\™[K[™ÙH\ÚYÛˆH^\šY[˜ÙHXØÛÜ™[™ÛKˆ‹ˆ˜X›İ]]Hˆ”]X[]H‹ˆ˜X›İ]^ˆ•ÙHÚÛÜÙHH™\İ[ˆ]™\H[[Y[È[œİ\™HHÛÛ\]H^\šY[˜ÙKˆ‹ˆ˜X›İ]U]Hˆ’[››İ˜][Ûˆ‹ˆ˜X›İ]U^ˆ•ÙH™Z[XYÚ[™H\İ[˜][ÛœË^\šY[˜Ù\È[™]™[È[ˆ™]È[™[˜ÛÛ™[[Û˜[Ø^\Ëˆ‹ˆ˜X›İ]•]Hˆİ\š[ÜÚ]H‹ˆ˜X›İ]•^ˆ•ÙHÙY\ÛÚÚ[™È›Üˆ™]\‹[Ü™HYX[š[™Ù[Ø^\ÈÈ^\šY[˜ÙHHXÙKˆ‹ˆ˜X›İ]›[Ù[^YXœ›İÈˆ’İÈÙHÛÜšÈ‹ˆ˜X›İ]›[Ù[]Hˆ“ØØ[™]ÛÜšËÛ™HXØÛİ[X›HÛÛÜ™[˜]Üˆ‹ˆ˜X›İ]›[Ù[^ˆ•ÙHÛÛX›Ü˜]HÚ]XÙ[œÙYİZY\Ë™[Y\Ë˜[œÜÜ›İšY\œËÜÜ][]HX[\È[™ÜXÚX[\İİ\Y\œËˆ]™[\˜H™[XZ[œÈHÚ[™ÛHÛÛÜ™[˜][™ÈÚ[›ÜˆHYÜ™YY›ÙÜ˜[Kˆ‹ˆ˜ÛÛXİ›Y]U]HˆÛÛXİU‘S•TH[ˆ[ˆ^\šY[˜ÙHÜˆ]™[‹ˆ˜ÛÛXİ›Y]Q\ØÜš\[ÛˆˆÛÛXİU‘S•TH[ˆ™YZÈ[ˆHš]˜]H^\šY[˜ÙK]™[İY\İ›ÙÜ˜[HÜˆÛÜœÜ˜]H][™\˜\Kˆ‹ˆ˜ÛÛXİš\›Ñ^YXœ›İÈˆÛÛXİ‹ˆ˜ÛÛXİš\›Õ]Hˆ”İ\Ú]HİY\İË]H[™ØØØ\Ú[Û‹ˆ‹ˆ˜ÛÛXİš\›Ñ\ØÜš\[Ûˆˆ”Ù[™H\ÜÙ[X[]Z[ËˆÙHÚ[[\›ˆ[H[ÈH˜XİXØ[š\œİ\™Xİ[Û‹ˆ‹ˆ˜ÛÛXİœ[™[]Hˆ•[ÈÈ]™[\˜H‹ˆ˜ÛÛXİœ[™[^ˆ‘[XZ[\ÈHXZ[ˆ›ÛÚÚ[™ÈÚ[›™[ˆÚ]Ğ\™[XZ[œÈ]˜Z[X›H\ÈHÙXÛÛ™Ü[Û‹ˆ‹ˆ˜ÛÛXİœÛ™SX™[ˆ•Ú]Ğ\‹ˆ˜ÛÛXİ™[XZ[SX™[ˆ›ÛÚÚ[™ÜÈ	ˆ[œ]Z\šY\È‹ˆ˜ÛÛXİ™[XZ[“X™[ˆ‘^\šY[˜ÙH[›š[™È‹ˆ˜ÛÛXİ›ØØ][Û“X™[ˆ˜\ÙY[ˆ‹ˆ˜ÛÛXİ™›Ü›U]Hˆ”™\]Y\İ]Z[È‹ˆ˜ÛÛXİ™›Ü›U^ˆ“›È^[Y[\ÈZÙ[ˆ[™›È›ÛÚÚ[™È\ÈÛÛ™š\›YY\™Kˆ\È›Ü›Hİ\ÈH[›š[™È[™][İHÛÛ™\œØ][ÛˆÛ›Kˆ‹ˆ˜ÛÛXİ›˜[YSX™[ˆ“˜[YH‹ˆ˜ÛÛXİ›˜[YTXÙZÛ\ˆˆ–[İ\ˆ[˜[YH‹ˆ˜ÛÛXİ˜ÛÛ\[SX™[ˆÛÛ\[HÜˆÜ™Ø[š^˜][Ûˆ‹ˆ˜ÛÛXİ˜ÛÛ\[TXÙZÛ\ˆˆ“Ü[Û˜[‹ˆ˜ÛÛXİœÛ™QšY[X™[ˆ”Û™H[X™\ˆ‹ˆ˜ÛÛXİœÛ™TXÙZÛ\ˆˆŠÎMˆ‹‹ˆ‹ˆ˜ÛÛXİ™[XZ[X™[ˆ‘[XZ[‹ˆ˜ÛÛXİ™[XZ[XÙZÛ\ˆˆ›˜[YP^[\K˜ÛÛH‹ˆ˜ÛÛXİ\SX™[ˆ”™\]Y\İ\H‹ˆ˜ÛÛXİ\TXÙZÛ\ˆˆÚÛÜÙHÛ™H‹ˆ˜ÛÛXİ\Q^\šY[˜ÙHˆ”š]˜]H^\šY[˜ÙH‹ˆ˜ÛÛXİ\Q]™[ˆ‘]™[‹ˆ˜ÛÛXİ\PÛÜœÜ˜]HˆÛÜœÜ˜]HÜˆ[YØ][Ûˆ›ÙÜ˜[H‹ˆ˜ÛÛXİ\PÛÛXİ[Ûˆˆ‘œ˜YÜ˜[˜ÙHÛÛ˜Ù\È[ˆ]™[ÜY[‹ˆ˜ÛÛXİ\Sİ\ˆˆ“İ\ˆ‹ˆ˜ÛÛXİ™]SX™[ˆ”™Y™\œ™Y]H‹ˆ˜ÛÛXİ™İY\İÓX™[ˆ“[X™\ˆÙˆİY\İÈ‹ˆ˜ÛÛXİ™İY\İÔXÙZÛ\ˆˆ‘^[\Nˆˆ‹ˆ˜ÛÛXİ›Y\ÜØYÙSX™[ˆ[Hİ\ˆ[\Ü[]Z[ÏÈ‹ˆ˜ÛÛXİ›Y\ÜØYÙTXÙZÛ\ˆˆYHÚÜÜ[Û˜[›İHYˆ\™H\È[][™È[ÙHÙHÚİ[Û›İËˆ‹ˆ˜ÛÛXİœÙ[œÚ]]™Q]S›İXÙHˆ”X\ÙHÈ›İÙ[™˜][Û˜[Q[X™\œË\ÜÜÜ[X™\œËX[[™›Ü›X][Û‹Üˆİ\ˆÙ[œÚ]]™H]H›İYÚ\È›Ü›Kˆ‹ˆ˜ÛÛXİœš]˜XŞS›İXÙT™Yš^ˆHÙ[™[™È\È™\]Y\İ]™[\˜H›ØÙ\ÜÙ\È[İ\ˆ]HÈ™\\™HH™\]Y\İ[™ÛÛXİ[İH[™\ˆH‹ˆ˜ÛÛXİœš]˜XŞS›İXÙU\›\Èˆ‹ˆÛÛ™š\›YYÙ\šXÙ\È\™HÛİ™\›™YHH‹ˆ˜ÛÛXİœİX›Z]ˆ”Ù[™›ÛÚÚ[™È™\]Y\İ‹ˆ˜ÛÛXİ››İHˆÚÛÜÙH[XZ[ÜˆÚ]Ğ\ÈÙ[™H™\\™Y™\]Y\İÈ]Ù\È›İÛÛ™š\›HH›ÛÚÚ[™ÈÜˆ^[Y[ˆ‹ˆ˜ÛÛXİ™\œ›Üˆˆ”X\ÙH[\ˆ[İ\ˆ˜[YH[™]X\İHÛ™H[X™\ˆÜˆ[XZ[Y™\ÜËˆ‹ˆ˜ÛÛXİ™\œ›Ü‘[XZ[ˆ”X\ÙH[\ˆ[İ\ˆ[XZ[Y™\ÜÈÈÙ[™H›ÛÚÚ[™È™\]Y\İH[XZ[ˆ‹ˆ˜ÛÛXİœ™\]Y\İ[›ÈˆU‘S•TH›ÛÚÚ[™È™\]Y\İ‹ˆ˜ÛÛXİ™[XZ[İXš™Xİˆ]™[\˜H›ÛÚÚ[™È™\]Y\İ‹ˆ˜ÛÛXİœİX›Z][XZ[ˆ”Ù[™›ÛÚÚ[™È™\]Y\İ‹ˆ˜ÛÛXİœİX›Z]Ú]Ø\ˆ”Ù[™›ÛÚÚ[™È™\]Y\İHÚ]Ğ\‹ˆ˜ÛÛXİ››İQ[XZ[ˆ–[İ\ˆ™\]Y\İÚ[™HÙ[\™XİHÈ]™[\˜Kˆ›È[XZ[\Ú[Ü[È]Ù\È›İÛÛ™š\›HH›ÛÚÚ[™ÈÜˆ^[Y[ˆ‹ˆ˜ÛÛXİ››İUÚ]Ø\ˆ•Ú]Ğ\Ú[Ü[ˆÚ]H™\\™Y™\]Y\İˆ[İHØ[ˆ™]šY]È]™Y›Ü™HÙ[™[™ÎÈ]Ù\È›İÛÛ™š\›HH›ÛÚÚ[™ÈÜˆ^[Y[ˆ‹ˆ˜ÛÛXİœÙ[™[™Èˆ”Ù[™[™È[İ\ˆ™\]Y\İ8 )ˆ‹ˆ˜ÛÛXİœİX›Z]\œ›Üˆˆ•ÙHÛİ[›İÙ[™[İ\ˆ™\]Y\İˆX\ÙHHYØZ[ˆÜˆÚÛÜÙHÚ]Ğ\ˆ‹ˆ˜ÛÛXİÚ]Ø\[›Èˆ’[ÈU‘S•TKHÛİ[ZÙHÈ™\]Y\İ[›š[™Èİ\Üˆ‹ˆ˜ÛÛXİÚ]Ø\˜[YHˆ“˜[YH‹ˆ˜ÛÛXİÚ]Ø\ÛÛ\[HˆÛÛ\[H‹ˆ˜ÛÛXİÚ]Ø\Û™Hˆ”Û™H‹ˆ˜ÛÛXİÚ]Ø\[XZ[ˆ‘[XZ[‹ˆ˜ÛÛXİÚ]Ø\\Hˆ”™\]Y\İ\H‹ˆ˜ÛÛXİÚ]Ø\]Hˆ”™Y™\œ™Y]H‹ˆ˜ÛÛXİÚ]Ø\İY\İÈˆ‘İY\İÈ‹ˆ˜ÛÛXİÚ]Ø\Y\ÜØYÙHˆ‘]Z[È‹ˆ™˜\K›Y]U]Hˆ‘œ™\]Y[H\ÚÙY]Y\İ[ÛœÈU‘S•TH‹ˆ™˜\K›Y]Q\ØÜš\[Ûˆˆ[œİÙ\œÈX›İ]U‘S•TH^\šY[˜Ù\Ë]™[Ëš]˜]H˜[œÜÜİZY\Ë›ÛÚÚ[™ÜÈ[™İY\İÙ\šXÙ\Ëˆ‹ˆ™˜\Kš\›Ñ^YXœ›İÈˆ’[[[™›Ü›X][Ûˆ‹ˆ™˜\Kš\›Õ]Hˆ‘œ™\]Y[H\ÚÙY]Y\İ[ÛœÈ‹ˆ™˜\Kš\›Ñ\ØÜš\[ÛˆˆHÛX\ˆİ\[™ÈÚ[™Y›Ü™HÙHZ[ÜˆH]Z[È\›İ[™[İ\ˆ™\]Y\İˆ‹ˆ™˜\KœLHˆ’İÈÈH›ÛÚÈ[ˆ^\šY[˜ÙOÈ‹ˆ™˜\K˜LHˆ”Ù[™H™Y™\œ™Y]KİY\İÛİ[[™[\™\İÈ›İYÚH™\]Y\İ›Ü›HH[XZ[Üˆ\ÙHÚ]Ğ\Yˆ[İH™Y™\‹ˆÙHÚ[ÛÛ™š\›H]˜Z[Xš[]H[™›İšYHH›ÜÜÙY›ÙÜ˜[H™Y›Ü™H[H^[Y[ˆ‹ˆ™˜\KœLˆˆ\™H^\šY[˜Ù\Èš]˜]OÈ‹ˆ™˜\K˜Lˆˆ“İ\ˆÛÜ™H›ÙÜ˜[\È\™H\ÚYÛ™Y›Üˆš]˜]HİY\İÈ[™Ü›İ\ËˆYˆHÚ\™YÜ[Ûˆ\È]™\ˆİYÙÙ\İY]Ú[™Hİ]YÛX\›H™Y›Ü™HÛÛ™š\›X][Û‹ˆ‹ˆ™˜\KœLÈˆØ[ˆ[İHÛÛXš[™HÙ]™\˜[^\šY[˜Ù\È[ˆÛ™H^OÈ‹ˆ™˜\K˜LÈˆ–Y\ËˆÙH˜[[˜ÙH˜]™[[YKÙX]\ˆ[™İY\İXÙHÛÈHÛÛXš[™Y^H™[XZ[œÈ[š›ŞXX›H˜]\ˆ[ˆ\ÚYˆ‹ˆ™˜\KœMˆ‘È[İH›İšYH˜[œÜÜ][ÛÈ‹ˆ™˜\K˜Mˆ–Y\Ëˆš]˜]H˜[œÜÜ][ÛˆØ[ˆ™HYYXØÛÜ™[™ÈÈÜ›İ\Ú^™K›İ]H[™™\]Z\™YÙ\šXÙH]™[ˆ‹ˆ™˜\KœMHˆ\™HXÙ[œÙYİZY\È]˜Z[X›H[ˆY™™\™[[™İXYÙ\ÏÈ‹ˆ™˜\K˜MHˆ–Y\ËİXš™XİÈ]˜Z[Xš[]Kˆ[™Û\Ú[™\˜XšXÈ\™HÛÛ[[Û›H]˜Z[X›K[™Y][Û˜[[™İXYÙ\ÈØ[ˆ™H™\]Y\İY[ˆY˜[˜ÙKˆ‹ˆ™˜\KœMˆˆØ[ˆ]™[\˜HÜ™Ø[š^™HÛÜœÜ˜]H]™[ÏÈ‹ˆ™˜\K˜Mˆˆ–Y\ËˆÙHÛÛÜ™[˜]HYY][™ÜËÛÛ™™\™[˜Ù\Ë][˜Ú\ËX[H›ÙÜ˜[\Ë[\ŞYYHØØØ\Ú[ÛœÈ[™š\Ú][™È[YØ][Ûˆ›ÙÜ˜[\Ëˆ‹ˆ™˜\KœMÈˆ’İÈ\ÈH^\šY[˜ÙHšXÙYÈ‹ˆ™˜\K˜MÈˆ‘XXÚ^\šY[˜ÙH\È][İYY\ˆ™]šY]Ú[™ÈH]K™Y™\œ™Y[Z[™ËÜ›İ\Ú^™K\˜][Û‹˜[œÜÜ[™Ù[XİYY][ÛœËˆ[İH™XÙZ]™HHÛX\ˆÜš][ˆ][İ][Ûˆ™Y›Ü™HÛÛ™š\›X][Û‹ˆ‹ˆ™˜\KœNˆØ[ˆİY\İÙ\šXÙ\È™H\œ˜[™ÙY]Hİ[È‹ˆ™˜\K˜Nˆ–Y\ËˆØ™HZ[Üš[™ËX˜^XHÙ\šXÙH[™›İÙ\œÈØ[ˆ™HÛÛÜ™[˜]Y›ÜˆHİ[ÜˆXØÛÛ[[Ù][ÛˆHš[Üˆ\œ˜[™Ù[Y[ˆ‹ˆ™˜\KœNHˆ’İÈX\›HÚİ[HÛÛXİ[İOÈ‹ˆ™˜\K˜NHˆ‘X\›Y\ˆ\È™]\‹\ÜXÚX[H›ÜˆÙYZÙ[™Ë\™Ù\ˆÜ›İ\È[™ÜXÚX[\İİZY\ËˆÚÜ[›İXÙH™\]Y\İÈØ[ˆİ[™HÚXÚÙY˜\ÙYÛˆ]˜Z[Xš[]Kˆ‹ˆ™˜\KœLLˆ•Ú]\[œÈY\ˆHÙ[™H™\]Y\İÈ‹ˆ™˜\K˜LLˆ•ÙH™]šY]ÈH]Z[Ë\ÚÈ[H™XÙ\ÜØ\H]Y\İ[ÛœË›ÜÜÙHH\™Xİ[Ûˆ[™ÛÛ™š\›H]˜Z[Xš[]Kˆ›İ[™È\È›ÛÚÙY[[[İH\›İ™HHš[˜[ØÛÜH[™\›\Ëˆ‹ˆ™Ø[\K›Y]U]Hˆ]™[\˜HØ[\HXÙ\Ë]™[È	ˆ]Z[È‹ˆ™Ø[\K›Y]Q\ØÜš\[ÛˆˆHš\İX[™]šY]ÈÙˆ™YÙXK\İÜšXÈ™YZ\Ù\ZY‹]™[È[™İY\İ]Z[ÈHU‘S•TKˆ‹ˆ™Ø[\Kš\›Ñ^YXœ›İÈˆ•š\İX[›İ\›˜[‹ˆ™Ø[\Kš\›Õ]Hˆ”XÙ\ËÙ][™ÜÈ[™İYÚ[]Z[Ëˆ‹ˆ™Ø[\Kš\›Ñ\ØÜš\[ÛˆˆHš\İX[\™Xİ[Ûˆ›ÜˆH^\šY[˜Ù\È[™]™[ÈÙHÚ\Kˆš[˜[\œ˜[™Ù[Y[È˜\HÚ]XXÚ›ÙÜ˜[Kˆ‹ˆ™Ø[\KœÙXHˆ”™YÙXH›İ\›™^\È‹ˆ™Ø[\Kš\İÜšXÈˆ’\İÜšXÈ™YZ‹ˆ™Ø[\K™\Ù\ˆ‘\Ù\]\İYÚ‹ˆ™Ø[\KZYˆˆ•ZYˆYÚ[™È‹ˆ™Ø[\K˜ÛÜœÜ˜]Hˆ‘^Xİ]]™H]™[È‹ˆ™Ø[\Kœš]˜]Hˆ”š]˜]HØ]\š[™ÜÈ‹ˆ™Ø[\K˜ÛÛXİ[Ûˆˆ]™[\˜HÛÛXİ[Ûˆ\™Xİ[Ûˆ‹ˆ™Ø[\Kš™YZˆ’™YZY\ˆİ[œÙ]‹ˆ™Ø[\K˜[ÙXHˆ”™YÙXH^\šY[˜ÙHÛÛ˜Ù\‹ˆ™Ø[\K˜[\İÜšXÈˆ’\İÜšXÈ™YZ^\šY[˜ÙHÛÛ˜Ù\‹ˆ™Ø[\K˜[\Ù\ˆ‘\Ù\^\šY[˜ÙH]İ[œÙ]‹ˆ™Ø[\K˜[ZYˆˆ•ZYˆYÚ[™È^\šY[˜ÙHÛÛ˜Ù\‹ˆ™Ø[\K˜[ÛÜœÜ˜]Hˆ‘^Xİ]]™H]™[ÛÛ˜Ù\‹ˆ™Ø[\K˜[š]˜]Hˆ”š]˜]HØ]\š[™ÈÛÛ˜Ù\‹ˆ™Ø[\K˜[ÛÛXİ[Ûˆˆ]™[\˜HÛÛXİ[Ûˆ\™Xİ[Ûˆ‹ˆ™Ø[\K˜[™YZˆ’™YZY\ˆİ[œÙ]‹ˆ™Ø[\K™\ØÛZ[Y\ˆˆ•\ÙH[XYÙ\È™\Ù[Hš\İX[\™Xİ[ÛˆÙˆ]™[\˜Kˆ™[Y\Ë^\šY[˜ÙH]Z[È[™Ù]\È\™HÛÛ™š\›YYÙ\\˜][H›ÜˆXXÚ™\]Y\İˆ‹ˆœš]˜XŞK›Y]U]Hˆ”š]˜XŞHÛXŞHU‘S•TH‹ˆœš]˜XŞK›Y]Q\ØÜš\[Ûˆˆ’İÈU‘S•TH[™\È\œÛÛ˜[]HİX›Z]Y›İYÚ]ÈÙXœÚ]H[™ÛÛXİÚ[›™[Ëˆ‹ˆœš]˜XŞKš\›Ñ^YXœ›İÈˆ“YØ[‹ˆœš]˜XŞKš\›Õ]Hˆ”š]˜XŞHÛXŞH‹ˆœš]˜XŞKš\›Ñ\ØÜš\[ÛˆˆHÛX\ˆ^[˜][ÛˆÙˆH\œÛÛ˜[]HÙH™XÙZ]™H[™İÈÙH\ÙH]ˆ‹ˆœš]˜XŞK\]Yˆ“\İ\]Yˆ[HŒˆ‹ˆœš]˜XŞKšHˆŒKˆ[™›Ü›X][Ûˆ[İH›İšYH‹ˆœš]˜XŞKœHˆ•Ú[ˆ[İHÛÛXİ\Ë[İHX^H›İšYH[İ\ˆ˜[YKÛ™H[X™\‹[XZ[ÛÛ\[KÛİ[KÚ]K™Y™\œ™Y]KİY\İÛİ[ÜˆÛÛX›Ü˜][Ûˆ]Z[ÈİXÚ\È›Ù™\ÜÚ[Û‹XÙ[œÙ\ËÜ›Û[Ë[™İXYÙ\È[™Ù\šXÙHÛİ™\˜YÙKˆ‹ˆœš]˜XŞKšˆˆŒ‹ˆİÈÙH\ÙH[™›Ü›X][Ûˆ‹ˆœš]˜XŞKœˆˆ•ÙH\ÙHİX›Z]Y[™›Ü›X][ÛˆÈ™\ÜÛ™È[œ]Z\šY\Ë™\\™H›ÜÜØ[ËÛÛÜ™[˜]H™\]Y\İYÙ\šXÙ\ËXZ[Z[ˆ\Ú[™\ÜÈ™XÛÜ™È[™[\›İ™Hİ\ˆİY\İÛÛ[][šXØ][Û‹ˆ‹ˆœš]˜XŞKšÈˆŒËˆÚ\š[™ÈÚ]Ù\šXÙH\™\œÈ‹ˆœš]˜XŞKœÈˆ•Ú[ˆ™XÙ\ÜØ\HÈ™\\™HÜˆ[]™\ˆ[ˆ\›İ™Y™\]Y\İ™[]˜[]Z[ÈX^H™HÚ\™YÚ]Ù[XİY›İšY\œÈİXÚ\ÈİZY\Ë™[Y\Ë˜[œÜÜÛÛ\[šY\ÈÜˆÜÜ][]H\™\œËˆÙHÚ\™HÛ›HÚ]\È™X\ÛÛ˜X›H™YYY›Üˆ]\œÜÙKˆ‹ˆœš]˜XŞKšˆˆÙXœÚ]H™Y™\™[˜Ù\È‹ˆœš]˜XŞKœˆ•HÙXœÚ]HİÜ™\È[İ\ˆ[™İXYÙHÚÚXÙH[™[Z]YXÚšXØ[™Y™\™[˜Ù\ÈÛˆ[İ\ˆ]šXÙH›ÜˆH[Z]Y\š[Ùˆ[›Û[[İ\È[\˜Xİ[Ûˆ]™[È\™H™\\™YÚ]İ]˜[Y\ËÛ™H[X™\œË[XZ[Y™\ÜÙ\ÈÜˆY\ÜØYÙHÛÛ[ˆHÙXœÚ]HÙ\È›İİ\œ™[HZÙHÛ›[™H^[Y[ÈÜˆÜ™X]Hİ\İÛY\ˆXØÛİ[Ëˆ‹ˆœš]˜XŞKšHˆKˆÚ]Ğ\[™[XZ[‹ˆœš]˜XŞKœHˆ’Yˆ[İHÛÛ[YH›İYÚÚ]Ğ\Üˆ[XZ[[İ\ˆÛÛ[][šXØ][Ûˆ\È[ÛÈİXš™XİÈHš]˜XŞH˜XİXÙ\ÈÙˆ]Ù\šXÙH›İšY\‹ˆ‹ˆœš]˜XŞKšˆˆ‹ˆ]H™][[Ûˆ[™›İXİ[Ûˆ‹ˆœš]˜XŞKœˆˆ•ÙH™]Z[ˆ[œ]Z\H[™Ù\šXÙH[™›Ü›X][ÛˆÛ›H\È™YYY›Üˆ\Ú[™\ÜËÛÛ˜XİX[[™YØ[\œÜÙ\Ë[™\H™X\ÛÛ˜X›HYX\İ\™\ÈÈ›İXİ]œ›ÛH[˜]]Üš^™YXØÙ\ÜËˆ‹ˆœš]˜XŞKšÈˆËˆ[İ\ˆÚÚXÙ\È‹ˆœš]˜XŞKœÈˆ–[İHX^H\ÚÈ\ÈÈÛÜœ™XİÜˆ[]H[™›Ü›X][Ûˆ[İH™]š[İ\ÛHİX›Z]YİXš™XİÈ[H[™›Ü›X][ÛˆÙH]\İ™]Z[ˆ›ÜˆYØ[ÜˆÛÛ˜XİX[™X\ÛÛœËˆ‹ˆœš]˜XŞKšˆˆÛÛXİ‹ˆœš]˜XŞKœˆ‘›Üˆš]˜XŞH]Y\İ[ÛœË[XZ[ÛÛXİ]™[\˜ZÜØK˜ÛÛKˆ‹ˆ\›\Ë›Y]U]Hˆ•\›\È	ˆÛÛ™][ÛœÈU‘S•TH‹ˆ\›\Ë›Y]Q\ØÜš\[Ûˆˆ•H\›\È]\HÈU‘S•THÙXœÚ]H™\]Y\İÈ[™ÛÛ™š\›YYØØ[Ù\šXÙ\Ëˆ‹ˆ\›\Ëš\›Ñ^YXœ›İÈˆ“YØ[‹ˆ\›\Ëš\›Õ]Hˆ•\›\È	ˆÛÛ™][ÛœÈ‹ˆ\›\Ëš\›Ñ\ØÜš\[ÛˆˆÛX\ˆ\›\È›Üˆ™\]Y\İËÛÛ™š\›YYÙ\šXÙ\Ë[™İY\İ^\šY[˜Ù\Ëˆ‹ˆ››İ›İ[™›Y]U]Hˆ”YÙH›İ›İ[™U‘S•TH‹ˆ››İ›İ[™]Hˆ•\ÈYÙH\È›İ\ÙˆH›İ\›™^Kˆ‹ˆ››İ›İ[™^ˆ•H[šÈX^H]™HÚ[™ÙYÜˆHYÙHX^H›ÈÛ™Ù\ˆ^\İˆ‹ˆ››İ›İ[™˜]Ûˆˆ”™]\›ˆÛYH‹ˆ˜ÛÛ[[Û‹›XYUÓÜ™\ˆˆ“XYHÈÜ™\ˆ‹ˆ›˜]‹˜ÛÜœÜ˜]HˆÛÜœÜ˜]H‹ˆšÛYKš™YZ]HˆHÛÛ\]H™YZ^H‹ˆšÛYKš™YZ^ˆ•Ø]\™œ›Û\İÜšXÈ™YZØØ[[š[™È[™Ù[XİYÚ]H[ÛY[È[ˆÛ™H˜[[˜ÙY›İ]Kˆ‹ˆšÛYK˜ÛÜœÜ˜]P]ÛˆˆÛÜœÜ˜]H›ÙÜ˜[\È‹ˆ™^\šY[˜Ù\ËœÚÜ^\šY[˜ÙHˆ•šY]È^\šY[˜ÙH›ÙXİÈ‹ˆ™^\šY[˜Ù\Ëš™YZ^YXœ›İÈˆ’™YZ0­È›^X›H^H‹ˆ™^\šY[˜Ù\Ëš™YZ]HˆHÛÛ\]H™YZ^H‹ˆ™^\šY[˜Ù\Ëš™YZ^ˆH›^X›HÚ]H›ÙÜ˜[H]ÛÛ›™XİÈ™YZ	ÜÈØ]\™œ›Û\İÜšXÈ™YZØØ[[š[™È[™Ù[XİYİÜÈ]HÛÛY›ÜX›HXÙKˆ‹ˆ™^\šY[˜Ù\Ëš™YZ][LHˆ’[‹Y^HÜˆ[Y^H›Ü›X]‹ˆ™^\šY[˜Ù\Ëš™YZ][Lˆˆ“XÙ[œÙYİZYH[™ÛÛÜ™[˜]Y˜[œÜÜ‹ˆ™^\šY[˜Ù\Ëš™YZ][LÈˆ’\İÜšXÈ™YZ[™Ø]\™œ›Û[ÛY[È‹ˆ™^\šY[˜Ù\Ëš™YZ][Mˆ‘[š[™ËÛÙ™™YH[™İY\İÜÜ][]HÜ[ÛœÈ‹ˆ™^\šY[˜Ù\Ëš™YZYÌHˆ‘š\œİš\Ú]‹ˆ™^\šY[˜Ù\Ëš™YZYÌˆˆ‘›^X›H‹ˆ™^\šY[˜Ù\Ëš™YZYÌÈˆ‘[^H‹ˆ™^\šY[˜Ù\Ë™ÛÛ[•]Hˆ•HÛÛ[ˆİ\ˆ‹ˆ™^\šY[˜Ù\Ë™ÛÛ[•^ˆHš]˜]HÛ™KZİ\ˆ›Ø]›İ\›™^H[YY›ÜˆHš[˜[YÚ[™İ[œÙ]İ™\ˆH™YÙXKˆ‹ˆ™]™[Ë˜ÛÜœÜ˜]S[šÈˆ•šY]ÈÛÜœÜ˜]H›ÙÜ˜[\È‹ˆœÙ\šXÙ\Ëœ™\]Y\İÙ\šXÙHˆ”™\]Y\İ\ÈÙ\šXÙH‹ˆ˜ÛÛXİ[Û‹™š[\[ˆ[^\šY[˜Ù\È‹ˆ˜ÛÛXİ[Û‹™š[\”ÙXHˆ”ÙXH‹ˆ˜ÛÛXİ[Û‹™š[\’\İÜšXÈˆ’\İÜšXÈ™YZ‹ˆ˜ÛÛXİ[Û‹™š[\‘\Ù\ˆ‘\Ù\‹ˆ˜ÛÛXİ[Û‹™š[\•ZYˆˆ•ZYˆ‹ˆ˜ÛÛXİ[Û‹™š[\’™YZˆ]™[\˜HÚYÛ˜]\™H‹ˆ˜ÛÛXİ[Û‹™š[\ÛÜœÜ˜]HˆÛÜœÜ˜]H	ˆ^Xİ]]™H‹ˆ˜ÛÛXİ[Û‹šİÑ^YXœ›İÈˆ’İÈH›İ]\]YHÛÜšÜÈ‹ˆ˜ÛÛXİ[Û‹šİÕ]HˆZ[Û™H™\]Y\İ\›İ[™HİY\İ‹ˆ˜ÛÛXİ[Û‹šİÌU]HˆÚÛÜÙH[ˆ^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹šİÌU^ˆ‘[\š[™È›İYÚ[ˆ^\šY[˜ÙHYÙHÜ[œÈ]ÈX]Ú[™È›ÙXİÈ]]ÛX]XØ[Kˆ‹ˆ˜ÛÛXİ[Û‹šİÌ•]HˆYÚ]š]È‹ˆ˜ÛÛXİ[Û‹šİÌ•^ˆ”Ù[XİH›Ş[™]šYX[›ÙXİÈÜˆ\œÛÛ˜[İY\İÙ\šXÙ\Ëˆ‹ˆ˜ÛÛXİ[Û‹šİÌÕ]Hˆ”™XÙZ]™HHZ[Ü™Y][İH‹ˆ˜ÛÛXİ[Û‹šİÌÕ^ˆ]™[\˜H™]šY]ÜÈ[Z[™Ë]X[]K\œÛÛ˜[^˜][Ûˆ[™]˜Z[Xš[]H™Y›Ü™HÛÛ™š\›Z[™Ëˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş\Õ^ˆ•\ÙH™]šY]ÈÛÛXİ[ÛœÈÚ[™H™[X\ÙYÛ›HY\ˆØ[\\ËX]\šX[È[™İ\Y\œÈ\™H\›İ™Yˆ^H\™H›İ]˜Z[X›HÈ™\]Y\İY]ˆ‹ˆ˜ÛÛXİ[Û‹œ™\]Y\İ›Şˆ”™\]Y\İ\È›Ş‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LHˆ]™[\˜H™XXÚİH‹ˆ˜ÛÛXİ[Û‹˜›ŞR][Lˆˆ”]ZXÚËYH™XXÚİÙ[‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LÈˆ•Ø]\‹\™\Ú\İ[Û™HÛY]™H›ÜˆÜ˜^H[™Ø[™‹ˆ˜ÛÛXİ[Û‹˜›ŞR][Mˆ’[œİ[]Y˜]™[›\ÚÈ‹ˆ˜ÛÛXİ[Û‹˜›ŞR][MHˆ”ÙXH\™[YHÜ[ÛˆÚ[ˆ™[X\ÙY‹ˆ˜ÛÛXİ[Û‹˜›Ş’][LHˆ”›ÜÚ[‹Z[œÜ\™YÛÛÙ[ˆÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹˜›Ş’][Lˆˆ’[\İ˜]Y\š]YÙHØ\™È‹ˆ˜ÛÛXİ[Û‹˜›Ş’][LÈˆ”›ÜÚ[ˆØÚÙ]›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹˜›Ş’][Mˆ[P˜[Y˜XœšXÈİXÚ‹ˆ˜ÛÛXİ[Û‹˜›Ş’][MHˆ’\İÜšXÈ™YZ\™[YHÜ[ÛˆÚ[ˆ™[X\ÙY‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][LHˆ“YÚ™]]˜[Ú]Û‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][Lˆˆ’[œİ[]Y˜]™[[X›\ˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][LÈˆ”ÛX[Ûİ™[ˆÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][Mˆ“][K]\ÙH˜]™[Ø\ÙH‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][MHˆ“\İYÚ\™[YHÜ[ÛˆÚ[ˆ™[X\ÙY‹ˆ˜ÛÛXİ[Û‹˜›Ş][LHˆ•ZYˆ›ÜÙHZ\İ‹ˆ˜ÛÛXİ[Û‹˜›Ş][Lˆˆ”›ÜÙHÛØ\Üˆ[™Ü™X[H‹ˆ˜ÛÛXİ[Û‹˜›Ş][LÈˆ”ØÙ[Y›ÜÙHØXÚ]‹ˆ˜ÛÛXİ[Û‹˜›Ş][Mˆ‘›Ü˜[ØÚÙ]›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹˜›Ş][MHˆ•ZYˆ\™[YHÜ[ÛˆÚ[ˆ™[X\ÙY‹ˆ˜ÛÛXİ[Û‹˜›ŞU]Hˆ’™YZ^H›Ş‹ˆ˜ÛÛXİ[Û‹˜›ŞU^ˆHÛX[Ü›ÜÜË\ÙXİ[ÛˆÙˆHÚ]H›ÜˆİY\İÈZÚ[™ÈH™YZİ\ˆÜˆÛÛ\]H^Kˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LHˆ”ØÚÙ]Ú]H›İX›ÛÚÈ[™[\İ˜]Y›İ]HØ\™‹ˆ˜ÛÛXİ[Û‹˜›ŞR][Lˆˆ”›ÜÚ[‹Z[œÜ\™YÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LÈˆ’[\İ˜]Y\š]YÙHØ\™È‹ˆ˜ÛÛXİ[Û‹˜›ŞR][MˆÛÛ\XİÙXHXØÙ\ÜÛÜH‹ˆ˜ÛÛXİ[Û‹˜›ŞR][MHˆ]™[\˜HÚYØ\™‹ˆ˜ÛÛXİ[Û‹˜›Ş›İHˆÛÛ[È\™H[\İ˜]]™H[™™[XZ[ˆİXš™XİÈš[˜[›ÙXİ\›İ˜[ˆ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^ˆ”Ù[XİYÙ\šXÙ\ÈØ[ˆ™H\œ˜[™ÙYÙ\\˜][HÜˆYYÈHÛÜœÜ˜]HİY\İ›ÙÜ˜[Kˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LU]HˆZ\œÜÙ[ÛÛYH	ˆ˜[œÙ™\ˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LU^ˆ“YY][™\ÜÚ\İÚ]ÛÛÜ™[˜]Y^Xİ]]™H˜[œÜÜ][ÛˆÈHİ[ÜˆYY][™Ëˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™L•]Hˆ’İ[›İÙ\œÈ	ˆÙ[ÛÛYH‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™L•^ˆH›İÙ\ˆ›İ\]Y]Ù[ÛÛYH›İHÜˆÙ[XİYÚYXÙY™Y›Ü™HHİY\İ\œš]™\Ëˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LÕ]Hˆ“YY][™È™\\˜][Ûˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LÕ^ˆ“YY][™È\ÜÙ[X[Ë™Yœ™\ÚY[ËİY\İ›İÈ[™˜[œÜÜ][ÛˆÛÛÜ™[˜]YÙÙ]\‹ˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™M]Hˆ“Ù™šXÚX[ÚYÈ	ˆÛÛ˜ÚY\™ÙH‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™M^ˆ\›ÜšX]H\Ú[™\ÜÈÚYÈ[™˜XİXØ[\ÜÚ\İ[˜ÙH\š[™ÈHİY\İ	ÜÈİ^Kˆ‹ˆ˜ÛÜœÜ˜]K›Y]U]HˆÛÜœÜ˜]H^\šY[˜Ù\È	ˆ^Xİ]]™HİY\İ›ÙÜ˜[\ÈU‘S•TH‹ˆ˜ÛÜœÜ˜]K›Y]Q\ØÜš\[Ûˆˆ”˜XİXØ[ÛÜœÜ˜]H^\šY[˜Ù\Ë^Xİ]]™HYY][™ÜËX[H›ÙÜ˜[\È[™’T[YØ][ÛˆÜİ[™ÈÛÛÜ™[˜]YHU‘S•TH[ˆ™YZˆ‹ˆ˜ÛÜœÜ˜]Kš\›Ñ^YXœ›İÈˆÛÜœÜ˜]H	ˆ^Xİ]]™H›ÙÜ˜[\È‹ˆ˜ÛÜœÜ˜]Kš\›Õ]HˆÛÜœÜ˜]H›ÙÜ˜[\ÈÚ\Y\›İ[™HÛX\ˆ\Ú[™\ÜÈØš™Xİ]™Kˆ‹ˆ˜ÛÜœÜ˜]Kš\›Ñ\ØÜš\[Ûˆˆ‘œ›ÛH[ˆ^Xİ]]™H\œš]˜[È[ˆÙ™‹\Ú]HYY][™ÈÜˆX[H^K]™[\˜H\ÚYÛœÈH˜XİXØ[›ÙÜ˜[H]ÛÛ›™XİÈÜÜ][]K˜[œÜÜ[™HšYÚÙ][™Ëˆ‹ˆ˜ÛÜœÜ˜]Kš\›Ôš[X\Hˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆ˜ÛÜœÜ˜]Kš\›ÔÙXÛÛ™\Hˆ•šY]È˜XİXØ[›Ü›X]È‹ˆ˜ÛÜœÜ˜]Kš[›Ñ^YXœ›İÈˆHÛÛ\]HÜ\˜][™ÈÛÛ][Ûˆ‹ˆ˜ÛÜœÜ˜]Kš[›Õ]HˆH\Ú[™\ÜÈ›ÙÜ˜[K›İH™XYK[XYHÛÛ\[Hš\ˆ‹ˆ˜ÛÜœÜ˜]Kš[›Õ^ˆ•ÙHİ\Ú]H\Ú[™\ÜÈØš™Xİ]™x %Üİ[™Ë™XÛÙÛš][Û‹ÛÛ›™Xİ[ÛˆÜˆX[H[™ØYÙ[Y[8 %[ˆÚ\HH™X[\İXÈ›ÙÜ˜[H\›İ[™HİY\İË[YH[™YÙ]ˆ‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYLHˆ”[›š[™È‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYLˆˆ•™[YH‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYLÈˆ•˜[œÜÜ‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYMˆ’ÜÜ][]H‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYMHˆ‘İY\İ›İÙ\œÈ‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYMˆˆ“Û‹\Ú]HÛÛÜ™[˜][Ûˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[\Ñ^YXœ›İÈˆ”Ù[XİY˜XİXØ[›ÙÜ˜[\È‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[\Õ]Hˆ’YÚ]˜[YH›Ü›X]ÈÚ]İ][›™XÙ\ÜØ\HÛÛ\^]H‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[\Õ^ˆ•\ÙH›Ü›X]È\ÙHXØÙ\ÜÚX›H™[Y\È[™™[XX›HÙ\šXÙ\Ë[™Ø[ˆ™H^[™YÛ›HÚ[ˆHØš™Xİ]™H™\]Z\™\È]ˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[LU]Hˆ‘^Xİ]]™HÙ™‹\Ú]HYY][™ÜÈ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[LU^ˆHš]˜]HYY][™ÈÙ][™ÈÚ]™Yœ™\ÚY[Ë˜[œÜÜYY][™È\ÜÙ[X[È[™[ˆÜ[Û˜[[˜ÚÜˆ[›™\‹ˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[L•]Hˆ•’T[YØ][ÛœÈ	ˆ[\›˜][Û˜[İY\İÈ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[L•^ˆZ\œÜÙ[ÛÛYK^Xİ]]™H˜[œÜÜİ[İ\ÜXÙ[œÙYİZY\È[™HÛÛÜ™[˜]YİY\İ][™\˜\Kˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[LÕ]Hˆ’[˜Ù[]™H	ˆ™XÛÙÛš][Ûˆ^\È‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[LÕ^ˆH™]Ø\™[™ÈÙXKİ[\˜[\Ù\ÜˆZYˆ^HÚ]˜[œÜÜÜÜ][]H[™HÚ[\H™XÛÙÛš][Ûˆ[ÛY[ˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[M]Hˆ“YÚX[HZ[[™È‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[M^ˆXØÙ\ÜÚX›HÜ›İ\Ú[[™Ù\ËÛYH˜Z[È[™ÛÛX›Ü˜]]™HØ[Y\ÈY\YÈH™[YH[™]˜Z[X›H[YKˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[MU]HˆÛÜœÜ˜]H^\šY[˜ÙH^\È‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[MU^ˆ”š]˜]H™YÙXK\İÜšXÈ™YZ\Ù\ÜˆZYˆ›ÙÜ˜[\È\ÚYÛ™Y›ÜˆX[\ËÛY[ÈÜˆ\Ú[™\ÜÈ\™\œËˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[M•]Hˆ“™]ÛÜšÚ[™È	ˆ^Xİ]]™H[›™\œÈ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[M•^ˆ•™[YHÙ[Xİ[Û‹İY\İ™XÙ\[Û‹ÙX][™ËÜÜ][]K˜[œÜÜ[™İYÚ[Û‹\Ú]HÛÛÜ™[˜][Û‹ˆ‹ˆ˜ÛÜœÜ˜]KœXÚØYÙ\Ñ^YXœ›İÈˆ”™XYHİ\[™ÈÚ[È‹ˆ˜ÛÜœÜ˜]KœXÚØYÙ\Õ]Hˆ•™YH›ÙÜ˜[\È]\™HX\ŞHÈÚ\H‹ˆ˜ÛÜœÜ˜]KœXÚØYÙLU]Hˆ‘^Xİ]]™H\œš]˜[‹ˆ˜ÛÜœÜ˜]KœXÚØYÙLU^ˆZ\œÜÛÛÜ™[˜][Û‹^Xİ]]™H˜[œÙ™\‹İ[Ù[ÛÛYH›İÙ\œÈ[™ÛÛ˜ÚY\™ÙHİ\Üˆ‹ˆ˜ÛÜœÜ˜]KœXÚØYÙL•]Hˆ“XY\œÚ\[‹Q^H‹ˆ˜ÛÜœÜ˜]KœXÚØYÙL•^ˆ“Ù™‹\Ú]HYY][™È›ÛÛK™Yœ™\ÚY[ËÛÜšÚ[™È[˜Ú[™ÛÛÜ™[˜]Y˜[œÜÜˆ‹ˆ˜ÛÜœÜ˜]KœXÚØYÙLÕ]Hˆ•X[H\ØÛİ™\H^H‹ˆ˜ÛÜœÜ˜]KœXÚØYÙLÕ^ˆ“Û™H\İ[˜][Ûˆ^\šY[˜ÙKHYÚX[HÚ[[™ÙKHÚ\™YYX[[™Ü›İ\˜[œÜÜˆ‹ˆ˜ÛÜœÜ˜]K™İY\İ^YXœ›İÈˆ‘^Xİ]]™HİY\İØ\™H‹ˆ˜ÛÜœÜ˜]K™İY\İ]Hˆ•\ÙY[İ\Ü™Y›Ü™HHİY\İ]™[ˆ\œš]™\È‹ˆ˜ÛÜœÜ˜]K™İY\İ^ˆÛÜœÜ˜]H[™^Xİ]]™HİY\İÈØ[ˆ™XÙZ]™HHÛÛ›™XİYÜÜ][]H[ˆ˜]\ˆ[ˆ\œ˜[™Ú[™ÈXXÚ]Z[Ù\\˜][Kˆ‹ˆ˜ÛÜœÜ˜]K™İY\İHˆZ\œÜYY][™^Xİ]]™H˜[œÜÜ][Ûˆ‹ˆ˜ÛÜœÜ˜]K™İY\İˆˆ’İ[›İÙ\œË\œš]˜[ÛÛÜ™[˜][Ûˆ[™ÛÛ˜ÚY\™ÙHİ\Ü‹ˆ˜ÛÜœÜ˜]K™İY\İÈˆ‘^™\ÜÈØ™HYX\İ\™[Y[È[™[]™\H[ˆ[™\ˆİ\œËİXš™XİÈÛÛ™š\›X][Ûˆ‹ˆ˜ÛÜœÜ˜]K™İY\İˆX˜^XHÙ[Xİ[ÛˆÚ]HYXØ]Y™[X[HÜXÚX[\İ‹ˆ˜ÛÜœÜ˜]K™İY\İ›İ]\]YHˆ•šY]È^Xİ]]™HÙ\šXÙ\È‹ˆ˜ÛÜœÜ˜]KšY]Ñ]™[Èˆ“™YY]™[[]™\OÈ^Ü™H]™[X[˜YÙ[Y[‹ˆ˜ÛÜœÜ˜]Kœ™\]Y\İ]Hˆ•Ú]Úİ[H›ÙÜ˜[HXÚY]™OÈ‹ˆ˜ÛÜœÜ˜]Kœ™\]Y\İ^ˆ”Ú\™HHØš™Xİ]™K[X™\ˆÙˆİY\İÈ[™™Y™\œ™Y]KˆÙHÚ[™XÛÛ[Y[™HÚ[\\İ›Ü›X]][]™\œÈHšYÚ™\İ[ˆ‹ˆ˜ÛÛXİ\TÙ\šXÙHˆ‘İY\İÙ\šXÙH‹ˆ˜ÛÛXİœ™\]Y\İY][Hˆ”™\]Y\İY][H‹ˆ™^\šY[˜Ù\Ëœ™XYTÙXQ^YXœ›İÈˆ”™XYHÈ™\]Y\İ‹ˆ™^\šY[˜Ù\Ëœ™XYTÙXU]Hˆ”ÙXH›İ\›™^\ÈÚ\Y\›İ[™[İ\ˆ[Z[™È‹ˆ™^\šY[˜Ù\Ëœ™XYTÙXU^ˆÚÛÜÙHH^\šY[˜ÙK[Z[™È[™Ü›İ\Ú^™KˆÙH[ˆÛÛ™š\›HHİZ]X›H›Ø][™™\\™HHZ[Ü™Y][İ][Û‹ˆ‹ˆ™^\šY[˜Ù\Ë™œ›ÛHˆ”][İ][Ûˆ‹ˆ™^\šY[˜Ù\Ëœ\›Ø]ˆœ\ˆš]˜]H›Ø]‹ˆ™^\šY[˜Ù\Ëœ\–XXÚˆœ\ˆš]˜]HXXÚ‹ˆ™^\šY[˜Ù\Ëœ\‘Ü›İ\ˆœ\ˆš]˜]HÜ›İ\‹ˆ™^\šY[˜Ù\Ëœ\”\œÛÛˆˆœ\ˆ\œÛÛˆ‹ˆ™^\šY[˜Ù\Ë›Ù™™\‘ÛÛ[“Y]HˆŒZ[]\È0­ÈÚ\›HØš\ˆ0­Èx $ÍİY\İÈ‹ˆ™^\šY[˜Ù\Ë›Ù™™\‘ÛÛ[•^ˆHš]˜]Hİ[œÙ]›Ø]›İ\›™^HÚ]Ø\Z[‹Y[ØY™]H™\İËØ]\‹Û˜XÚÜÈ[™XÙKˆ‹ˆ™^\šY[˜Ù\Ë™ÛÛ[”˜]\Èˆ”][İYXØÛÜ™[™ÈÈH]K[Z[™È[™İY\İÛİ[ˆ‹ˆ™^\šY[˜Ù\Ë˜˜^XYZ]Hˆ˜^XYZÙXH^H‹ˆ™^\šY[˜Ù\Ë›Ù™™\˜^XYZY]Hˆİ\œÈ0­ÈØš\ˆÈ˜^XYZ0­È\ÈİY\İÈ‹ˆ™^\šY[˜Ù\Ë›Ù™™\˜^XYZ^ˆ”İÚ[[Z[™È[™[š\œšYY[YH]ÙXKÚ]Ø\Z[‹Y[ØY™]H™\İËÛ˜XÚÜÈ[™XÙH[˜ÛYYˆ‹ˆ™^\šY[˜Ù\Ë˜˜^XYZ˜]\Èˆ•H›Ø]\ÈÙ[XİY[™][İYXØÛÜ™[™ÈÈHÜ›İ\[™]˜Z[Xš[]Kˆ‹ˆ™^\šY[˜Ù\Ë™Ü˜[™]Hˆ‘Ü˜[™˜^XYZXXÚ‹ˆ™^\šY[˜Ù\Ë›Ù™™\‘Ü˜[™Y]Hˆİ\œÈ0­ÈØš\ˆÈ˜^XYZ0­È\ÈŒÈİY\İÈ‹ˆ™^\šY[˜Ù\Ë›Ù™™\‘Ü˜[™^ˆHÜXÚ[İ\È™[Z][HXXÚ›Üˆš]˜]HÜ›İ\ËÚ]HØ[YHÙXKY^H\ÜÙ[X[È[˜ÛYYˆ‹ˆ™^\šY[˜Ù\Ë™Ü˜[™˜]HˆHZ[Ü™Y][İ][Ûˆ\È™\\™Y›ÜˆHš]˜]HXXÚ[™Ù[XİY›ÙÜ˜[Kˆ‹ˆ™^\šY[˜Ù\Ëœ™XYR\İÜšXÑ^YXœ›İÈˆ’\İÜšXÈ™YZ›Ü›X]È‹ˆ™^\šY[˜Ù\Ëœ™XYR\İÜšXÕ]HˆHXÙ[œÙYİZYKØØ[YÈ[İ\ˆÜ›İ\‹ˆ™^\šY[˜Ù\Ëœ™XYR\İÜšXÕ^ˆ[Ø[Ú[™È›Ü›X]È[˜ÛYH\˜XšXÈÛÙ™™YK]\È[™HXÙ[œÙYİZYKˆ[HY][Û˜[ZY[šY\È\™HÛÛ™š\›YYÙ\\˜][Kˆ‹ˆ™^\šY[˜Ù\Ëš\š]YÙTÛX[Y]HˆŒ¸ $Ì‹Hİ\œÈ0­Èx $ÍİY\İÈ‹ˆ™^\šY[˜Ù\Ëš\š]YÙTÛX[]Hˆ”š]˜]H\š]YÙHØ[È‹ˆ™^\šY[˜Ù\Ëš\š]YÙTÛX[^ˆH›Øİ\ÙYØ[Ú[™Èİ\ˆ›İYÚ[P˜[YÚ]HXÙ[œÙYİZYKˆ‹ˆ™^\šY[˜Ù\Ëš\š]YÙQÜ›İ\Y]HˆŒ¸ $Ì‹Hİ\œÈ0­Èx $ÌLˆİY\İÈ‹ˆ™^\šY[˜Ù\Ëš\š]YÙQÜ›İ\]Hˆ’\š]YÙHØ[È›ÜˆÜ›İ\È‹ˆ™^\šY[˜Ù\Ëš\š]YÙQÜ›İ\^ˆ“XÙ[œÙYİZYH\È[ˆ]™[\˜HÜ™Ø[š^™\ˆ›ÜˆÛ[Ûİ\ˆÜ›İ\[İ™[Y[ˆ‹ˆ™^\šY[˜Ù\Ëš\š]YÙTİ[™\™Y]Hˆ”™]\›ˆİ[˜[œÜÜ0­Èx $ÍİY\İÈ‹ˆ™^\šY[˜Ù\Ëš\š]YÙTİ[™\™]Hˆ’\š]YÙHØ[È
+È˜[œÜÜ‹ˆ™^\šY[˜Ù\Ëš\š]YÙTİ[™\™^ˆ•Hš]˜]HØ[ÈÚ]Hİ[™\™Ø\ˆ[™š]™\ˆÛÛÜ™[˜]Yœ›ÛHHİ[ˆ‹ˆ™^\šY[˜Ù\Ëš\š]YÙUš\Y]Hˆ•’T™]\›ˆ˜[œÜÜ0­È\ÈˆİY\İÈ‹ˆ™^\šY[˜Ù\Ëš\š]YÙUš\]Hˆ’\š]YÙHØ[È
+È’T˜[œÜÜ‹ˆ™^\šY[˜Ù\Ëš\š]YÙUš\^ˆ‘^Xİ]]™H™ZXÛH[™š]™\‹Ú][ˆÜ™Ø[š^™\ˆYYÚ[ˆHÜ›İ\Ú^™H™\]Z\™\ÈÛ™Kˆ‹ˆ™^\šY[˜Ù\Ë™[›™\“›İU]Hˆ“Ü[Û˜[[›™\ˆY\ˆHØ[È‹ˆ™^\šY[˜Ù\Ë™[›™\“›İU^ˆÚÛÜÙHH[š[™Èİ[H[™™Y™\œ™Y[Z[™ÎÈH™\İ]\˜[[™][İ][Ûˆ\™HÛÛ™š\›YYÚ]H[][™\˜\Kˆ‹ˆ™^\šY[˜Ù\Ëœİ‘^YXœ›İÈˆ]™[\˜HÚYÛ˜]\™H^H‹ˆ™^\šY[˜Ù\Ëœİ•]Hˆ‘œ›ÛHHÙXHÈ[P˜[Y‹ˆ™^\šY[˜Ù\Ëœİ“XYˆH™\ÛÜY\››ÛÛ‹Hİ[œÙ]İÜ]™YZXXÚÛXˆ[™HXÙ[œÙYİZYY]™[š[™È›İYÚ\İÜšXÈ™YZ8 %Û™H[š\œšYY^Kˆ‹ˆ™^\šY[˜Ù\ËœİÛ\š]Hˆ•HÙXHÚ\\ˆ\ÈH™\ÛÜ^\šY[˜ÙKˆH›Ø]›İ\›™^H\ÈÜ[Û˜[™\]Y\İYÙ\\˜][H[™ÛÛ™š\›YYH]˜Z[Xš[]NÈHÙXY›ÛÙ[›™\ˆ\ÈÜ[Û˜[ÛËˆ‹ˆ™^\šY[˜Ù\Ëœİ”İ\U]Hˆ“˜\˜Ú\Üİ\È™\ÛÜ‹ˆ™^\šY[˜Ù\Ëœİ”İ\U^ˆ™XXÚXØÙ\ÜËHYX[[™H™Yœ™\Ú[™Èš[šÈ[ˆH™[^Y™\ÛÜÙ][™Ëˆ‹ˆ™^\šY[˜Ù\Ëœİ”İ\•]Hˆ’™YZXXÚÛXˆ]İ[œÙ]‹ˆ™^\šY[˜Ù\Ëœİ”İ\•^ˆHÚÜX›XÈ›ÛY[˜YHİÜÚ]Û™Hİ[™\™š[šÈ[˜ÛYYˆ‹ˆ™^\šY[˜Ù\Ëœİ”İ\Õ]Hˆ’\İÜšXÈ™YZ‹ˆ™^\šY[˜Ù\Ëœİ”İ\Õ^ˆHXÙ[œÙYİZYYØ[ÈÚ]\˜XšXÈÛÙ™™YK]\È[™Ù[XİY\š]YÙHİÜËˆ‹ˆ™^\šY[˜Ù\Ëœİ”İ\]Hˆ“Ü[Û˜[ÙXY›ÛÙ[›™\ˆ‹ˆ™^\šY[˜Ù\Ëœİ”İ\^ˆYHÙ[XİYÙXY›ÛÙ[›™\ˆ[ˆ\İÜšXÈ™YZYˆ[İHÚ\ÚÈ[™H]™[š[™È\™Kˆ‹ˆ™^\šY[˜Ù\Ëœİ‘\˜][Û“X™[ˆ”›ÙÜ˜[H\˜][Ûˆ‹ˆ™^\šY[˜Ù\Ëœİ‘\˜][Û•˜[YHˆ•\Èİ\œË›^X›HÈX›İ]H‹ˆ™^\šY[˜Ù\Ëœİ˜\ÙU]HˆÛÜ™H›İ\›™^H‹ˆ™^\šY[˜Ù\Ëœİ‘[›™\•]Hˆ•Ú]’TÙXY›ÛÙ[›™\ˆ‹ˆ™^\šY[˜Ù\Ëœİ“Z[š[][Hˆ“Z[š[][H›ÛÚÚ[™ÎˆİY\İÈ‹ˆ™^\šY[˜Ù\Ëœİ”˜]S›İHˆ‘š[˜[[Z[™È[™™ZXÛH\™HÛÛ™š\›YYY\ˆ™]šY]Ú[™ÈH]Kİ[[™Ü›İ\Ú^™Kˆ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™Ñ^YXœ›İÈˆ™Y›Ü™H[İH›ÛÚÈ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™Õ]HˆÛX\ˆ\›\Ë[ˆHÛÛ™š\›YY[ˆ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™Õ^ˆ‘]™\H][İ][Ûˆ\È™\\™YY\ˆ™]šY]Ú[™ÈH]K[Z[™ËÜ›İ\Ú^™K]˜Z[Xš[]H[™š[˜[][™\˜\Kˆ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™ÌU]Hˆ”™\Ù\˜][Ûˆ[Z[™È‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™ÌU^ˆ›ÛÚÚ[™È¸ $ÌÈ^\ÈZXY\È™Y™\œ™Yˆ™^Y^H\œ˜[™Ù[Y[ÈX^H™HÜÜÚX›HİXš™XİÈ]˜Z[Xš[]Kˆ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™Ì•]Hˆ”^[Y[[™Ú[™Ù\ÈHÛÛ™š\›X][Ûˆ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™Ì•^ˆ•H^[Y[ØÚY[H[™[H\›\È›ÜˆÚ[™ÙKØ[˜Ù[][ÛˆÜˆ™Y[™\™HÛÛ™š\›YY[ˆÜš][™È›ÜˆHÜXÚYšXÈÙ\šXÙKˆ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™ÌÕ]Hˆ“X\š[™HÛÛ™][ÛœÈ‹ˆ™^\šY[˜Ù\Ë˜›ÛÚÚ[™ÌÕ^ˆ’YˆÙX]\ˆÜˆH›Ø]˜][™]™[ÈØZ[[™ËHİZ]X›H[\›˜]]™H[™[H™Y[™\™H[™Y[™\ˆHÜš][ˆÙ\šXÙHÛÛ™š\›X][Û‹ˆ‹ˆ˜X›İ]œİÜU^Èˆ•ÙHØ\™Y[H\ÚYÛˆš]˜]H^\šY[˜Ù\È]œš[™ÈÙÙ]\ˆİ[\™KÙXK\İÜK\Ù\[™]™[ÈÜ™X]YÈ™H]™YÚ]\ˆ‹ˆ˜X›İ]œİÜU^ˆ‘]™\H^\šY[˜ÙHÙHÜ™X]HØ\œšY\ÈYX[š[™Ë]™\H›İ]H\ÈHİÜK]™\H]™[\ÈH\İ[˜İÚYÛ˜]\™H[™]™\HİY\İ]™\ÈH›İ\›™^H[›ZÙH[Hİ\‹ˆ‹ˆ˜X›İ]œİÜPÛÜÚ[™Èˆ]™[\˜H\È›İY\™[HH›İ\›™^x )ˆ]\ÈHY™™\™[Ø^HÈ\ØÛİ™\ˆHXÙH[™Ü™X]H[ÛY[Ëˆ‹ˆ˜X›İ]š\Ú[Û‘^YXœ›İÈˆ•Ú\™HÙH\™HÛÚ[™È‹ˆ˜X›İ]š\Ú[Û•^Hˆ•È™XÛÛYHHXY[™È™Y™\™[˜ÙH›ÜˆØ\™Y[H\ÚYÛ™Y^\šY[˜Ù\È[™]™[ÈH™\Ù[[™ÈH™]ÈØ^HÈ^Ü™H\İ[˜][ÛœÈ[™Ü™Ø[š^™HØØØ\Ú[Ûœø %Û™HZ[Ûˆ\]X[]H[™H]Z[È]XZÙHHY™™\™[˜ÙKˆ‹ˆ˜X›İ]š\Ú[Û•^ˆˆ•ÙH™[Y]™H˜]™[[™]™[È\™H›ÈÛ™Ù\ˆÚ[\H[İ™[Y[Üˆ[ˆØØØ\Ú[Û‹]HÛÛ\]H^\šY[˜ÙHÛÜHÙˆ™Z[™ÈZ[Ú]X\İ\Kˆ‹ˆ˜X›İ]›Z\ÜÚ[Û‘^YXœ›İÈˆ•Ú]ÙHÜ™X]H‹ˆ˜X›İ]›Z\ÜÚ[Û•^Hˆ•ÈÜ™X]H^Ù\[Û˜[^\šY[˜Ù\È[™]™[È]X]™HHÙ[Z[™HX\šÈ[ˆHY[[ÜHÙˆİ\ˆİY\İËˆ‹ˆ˜X›İ]›Z\ÜÚ[Û•^ˆˆ•ÙH\ÚYÛˆ]™\H›İ\›™^H[™]™[Ú][ˆ^YH›Üˆ]Z[Z[[™ÈXXÚ^\šY[˜ÙH\›İ[™H\œÛÛ¸ %Z\ˆ[\™\İË[YH[™^Xİ][ÛœËˆ‹ˆ˜X›İ]›Z\ÜÚ[Û•^Èˆ“İ\ˆÛØ[\ÈÈ\›ˆ]™\Hš\Ú][™]™\HØØØ\Ú[Ûˆ[ÈHİÜHÛÜ[[™Ëˆ‹ˆ˜X›İ]˜[Y\Õ^ˆ‘š]™Hš[˜Ú\\ÈİZYHHØ^HÙH\ÚYÛ‹ÚÛÜÙH[™[]™\ˆ]™\H›İ\›™^H[™]™[ˆ‹ˆ˜X›İ]ÚQ^YXœ›İÈˆ•ÚH]™[\˜OÈ‹ˆ˜X›İ]ÚU]Hˆ•HY™™\™[˜ÙH\È›İ[ˆH\İ[˜][Û¸ )ˆ][ˆİÈ[İH^\šY[˜ÙH]ˆ‹ˆ˜X›İ]ÚU^Hˆ]]™[\˜KÙHÈ›İÙ™™\ˆÛ™H™XYK[XYH›ÙÜ˜[H›Üˆ]™\[Û™KˆÙHÜ™X]HÛÛœÚY\™Y^\šY[˜Ù\È›ÜˆÜÙHÛÚÚ[™È›ÜˆÛÛY][™ÈY™™\™[ˆ‹ˆ˜X›İ]ÚU^ˆˆ‘œ›ÛHHš\œİ[ÛY[ÈH\İ]Z[ÙˆH›İ\›™^HÜˆ]™[]™\][™È\È[™YÚ]H™XÚ\ÙH^YKYÚ[]™[Ü™Ø[š^˜][Ûˆ[™H™X[[™\œİ[™[™ÈÙˆÚ]XZÙ\È[ˆ^\šY[˜ÙH^Ù\[Û˜[ˆ‹ˆ˜X›İ]ÚU^Èˆ•Ú]\ˆ]\ÈHØ[H[ÛY[HHÙXKHØ[È›İYÚ\İÜšXÈ[^\ËHš]˜]H]™[Üˆ[ˆ^\šY[˜ÙH\ÚYÛ™Y›ÜˆHX[x )ˆ‹ˆ˜X›İ]ÚPÛÜÚ[™Èˆ•ÙHÈ›İÚ[\H\œ˜[™ÙHH›İ\›™^KˆÙHÜ™X]HH[\Xİ]™[XZ[œÈY\ˆ]ˆ‹ˆ›˜]‹œ\™\œÈˆ”\™\ˆÚ]\È‹ˆœ\™\œË›Y]U]Hˆ”\™\ˆÚ]U‘S•THİ\š\ÛK]™[È	ˆÜÜ][]H‹ˆœ\™\œË›Y]Q\ØÜš\[Ûˆˆ”\™\ˆÚ]U‘S•TH\ÈHİ\š\ÛHÛÛ\[K™[YKÜ\˜]ÜˆÜˆ[™\[™[›Ù™\ÜÚ[Û˜[[ˆØ]YH\˜XšXHÜˆ[\›˜][Û˜[Kˆ‹ˆœ\™\œËš\›Ñ^YXœ›İÈˆ]™[\˜H\™\œÚ\È‹ˆœ\™\œËš\›Õ]Hˆ]™[\˜HÙ[ÛÛY\ÈYX[š[™Ù[ÛÛX›Ü˜][Û‹ˆ‹ˆœ\™\œËš\›Ñ\ØÜš\[Ûˆˆ]™[\˜HÙ[ÛÛY\ÈÛÛX›Ü˜][ÛˆÚ]ÛÛ\[šY\Ë™[Y\ËÜ\˜]ÜœÈ[™[™\[™[›Ù™\ÜÚ[Û˜[È[ˆØ]YH\˜XšXH[™\›İ[™HÛÜ›ˆ‹ˆœ\™\œËš\›Ğ]Ûˆˆ”İX›Z]HÛÛX›Ü˜][Ûˆ™\]Y\İ‹ˆœ\™\œËš[›Ñ^YXœ›İÈˆZ[ÛˆÚ\™Yİ[™\™È‹ˆœ\™\œËš[›Õ]Hˆ•HšYÚ\™\œÚ\İ™[™İ[œÈ]™\HİY\İ^\šY[˜ÙKˆ‹ˆœ\™\œËš[›Õ^ˆ•ÙH˜[YHÛX\ˆÛÛ[][šXØ][Û‹\[™X›H[]™\K]][XÈÜÜ][]H[™™\ÜXİ›ÜˆHİY\İˆXXÚÛÛX›Ü˜][Ûˆ™YÚ[œÈÚ][™\œİ[™[™ÈÚ]›İÚY\ÈØ[ˆÜ™X]HÙ[ÙÙ]\‹ˆ‹ˆœ\™\œËš[›Ôİ][Y[ˆ]™[\˜HÙ[ÛÛY\È™[][ÛœÚ\È]YÙ[Z[™H˜[YHÈH›İ\›™^KH]™[[™HXÙx %Ú]\ˆØØ[™YÚ[Û˜[Üˆ[\›˜][Û˜[ˆ‹ˆœ\™\œËš[›Ô™XXÚˆ”Ø]YH\˜XšXH0­È™YÚ[Û˜[0­È[\›˜][Û˜[‹ˆœ\™\œË›ØØ[ØÛÜQ^YXœ›İÈˆ“ØØ[[]™\H‹ˆœ\™\œË›ØØ[ØÛÜU^ˆ•˜]™[YÙ[˜ÚY\È[™İ[ÈX[˜YÙH›YÚÈ[™XØÛÛ[[Ù][Û‹ˆ]™[\˜H[]™\œÈHØØ[^\šY[˜Ù\Ë]™[È[™İY\İÙ\šXÙ\ÈÛÛ™š\›YYÚ]\È[ˆ™YZˆ‹ˆœ\™\œË˜]YY[˜Ù\Ñ^YXœ›İÈˆ•ÚÈØ[ˆÛÛX›Ü˜]OÈ‹ˆœ\™\œË˜]YY[˜Ù\Õ]Hˆ•ÛÈ]ËÛ™HÛX\ˆØ]]Ø^H‹ˆœ\™\œË˜]YY[˜Ù\Õ^ˆÚÛÜÙHH]]\ØÜšX™\È[İKˆH\XØ][ÛˆØ\\™\ÈH\ÜÙ[X[]Z[ÈÚ]İ][›™XÙ\ÜØ\Hİ\Ëˆ‹ˆœ\™\œË›Ü™Ñ^YXœ›İÈˆÛÛ\[šY\È	ˆ™[Y\È‹ˆœ\™\œË›Ü™Õ]Hˆ“Ü™Ø[š^˜][ÛœÈ]ÜİÜ\˜]HÜˆ[]™\ˆ‹ˆœ\™\œË›Ü™Õ^ˆ‘›ÜˆXÙ[œÙY\Ú[™\ÜÙ\È[™\İX›\ÚY™[Y\È]Ø[ˆÛÛšX]HÈHÛÛ\]H›İ\›™^HÜˆ]™[ˆ‹ˆœ\™\œË›Ü™Ò][LHˆ•İ\š\ÛHÛÛ\[šY\È[™]™[Ü™Ø[š^™\œÈ‹ˆœ\™\œË›Ü™Ò][Lˆˆ”™\ÛÜËİ[Ë™\İ]\˜[Ë™XXÚ\È[™™[Y\È‹ˆœ\™\œË›Ü™Ò][LÈˆ“X\š[™K˜[œÜÜ[™\İ[˜][ÛˆÜ\˜]ÜœÈ‹ˆœ\™\œË›Ü™Ò][Mˆ’ÜÜ][]K›Ü˜[[™ÜXÚX[\İÙ\šXÙH›İšY\œÈ‹ˆœ\™\œËœ›Ñ^YXœ›İÈˆ’[™\[™[›Ù™\ÜÚ[Û˜[È‹ˆœ\™\œËœ›Õ]Hˆ”[ÜHÚÜÙH^\\ÙHÚ\\ÈH[ÛY[‹ˆœ\™\œËœ›Õ^ˆ‘›Üˆ›Ù™\ÜÚ[Û˜[ÈÚ]Hİ›Û™ÈÙ\šXÙHZ[™Ù]™[]˜[^\šY[˜ÙH[™[H™\]Z\™YØØ[XÙ[œÙ\Ëˆ‹ˆœ\™\œËœ›Ò][LHˆ‘]™[Ü™Ø[š^™\œËÛÛÜ™[˜]ÜœÈ[™İY\İÛÛ\[š[ÛœÈ‹ˆœ\™\œËœ›Ò][Lˆˆ”İÙÜ˜\\œÈ[™Ü™X]]™H›Ù™\ÜÚ[Û˜[È‹ˆœ\™\œËœ›Ò][LÈˆ“XÙ[œÙYİZY\Ë[\œ™]\œÈ[™˜[œÛ]ÜœÈ‹ˆœ\™\œËœ›Ò][Mˆ”›Ù™\ÜÚ[Û˜[š]™\œÈ[™ØØ[ÜXÚX[\İÈ‹ˆœ\™\œËœØÛÜQ^YXœ›İÈˆ\™X\ÈÙˆÛÛX›Ü˜][Ûˆ‹ˆœ\™\œËœØÛÜU]Hˆ‘Y™™\™[ÜXÚX[Y\ËÛÛ›™XİY\›İ[™HİY\İ‹ˆœ\™\œËœØÛÜU^ˆHÛÛX›Ü˜][ÛˆX^Hİ\ÜÛ™HÙ\šXÙHÜˆ™XÛÛYH\ÙˆHÛÛ\]H^\šY[˜ÙK]™[Üˆ][KY^HİY\İ›ÙÜ˜[Kˆ‹ˆœ\™\œËœØÛÜLU]Hˆ•İ\š\ÛH	ˆ\İ[˜][ÛœÈ‹ˆœ\™\œËœØÛÜLU^ˆ•İ\ˆÜ\˜]ÜœË\İ[˜][ÛˆÛÛ\[šY\ËİZY\È[™İ[\˜[ÜXÚX[\İËˆ‹ˆœ\™\œËœØÛÜL•]Hˆ‘]™[È	ˆÜ\˜][ÛœÈ‹ˆœ\™\œËœØÛÜL•^ˆ”[›š[™Ë›ÙXİ[Û‹İY™š[™ËÛÛÜ™[˜][Ûˆ[™Û‹\Ú]H[]™\Kˆ‹ˆœ\™\œËœØÛÜLÕ]Hˆ•™[Y\È	ˆÜÜ][]H‹ˆœ\™\œËœØÛÜLÕ^ˆ”™\ÛÜË™\İ]\˜[Ëİ[Ë™XXÚ\Ëš]˜]HÜXÙ\È[™Ø]\š[™Ëˆ‹ˆœ\™\œËœØÛÜM]Hˆ“X\š[™H	ˆ˜[œÜÜ‹ˆœ\™\œËœØÛÜM^ˆ›Ø]ËXXÚË™ZXÛ\Ë›Ù™\ÜÚ[Û˜[š]™\œÈ[™[İ™[Y[ÙÚ\İXÜËˆ‹ˆœ\™\œËœØÛÜMU]HˆÛÛ[	ˆ[™İXYÙ\È‹ˆœ\™\œËœØÛÜMU^ˆ”İÙÜ˜\KšY[Ë[\œ™]][Û‹˜[œÛ][Ûˆ[™İÜ][[™Ëˆ‹ˆœ\™\œËœØÛÜM•]Hˆ‘İY\İÙ\šXÙ\È‹ˆœ\™\œËœØÛÜM•^ˆ\œš]˜[Ù\šXÙ\ËÛÛ\[š[ÛœËÛÛ˜ÚY\™ÙK›İÙ\œÈ[™ÜXÚX[\İ™\]Y\İËˆ‹ˆœ\™\œËœ›ØÙ\ÜÑ^YXœ›İÈˆÛÛX›Ü˜][Ûˆ]‹ˆœ\™\œËœ›ØÙ\ÜÕ]HˆHÛÛœÚY\™Y™YÚ[›š[™È™Y›Ü™H[H\ÜÚYÛ›Y[‹ˆœ\™\œËœ›ØÙ\ÜÕ^ˆ•H›ØÙ\ÜÈ›İXİÈHİY\İ^\šY[˜ÙH[™Ú]™\È›İ\Y\ÈHÛX\ˆ[™\œİ[™[™ÈÙˆ^Xİ][ÛœËˆ‹ˆœ\™\œËœ›ØÙ\ÜÌU]Hˆ”İX›Z]‹ˆœ\™\œËœ›ØÙ\ÜÌU^ˆ”Ú\™H[İ\ˆ›Ùš[KÙ\šXÙH\™XH[™H™\İ^[\\ÈÙˆ[İ\ˆÛÜšËˆ‹ˆœ\™\œËœ›ØÙ\ÜÌ•]Hˆ”™]šY]È‹ˆœ\™\œËœ›ØÙ\ÜÌ•^ˆ•ÙH™]šY]ÈİZ]Xš[]KÜ\˜][™ÈÛİ™\˜YÙH[™™[]˜[XÙ[œÙ\ÈÜˆ™YÚ\İ˜][ÛœËˆ‹ˆœ\™\œËœ›ØÙ\ÜÌÕ]HˆÛÛ›™Xİ‹ˆœ\™\œËœ›ØÙ\ÜÌÕ^ˆHÚÜÛÛ™\œØ][Ûˆ[YÛœÈÙ\šXÙHİ[™\™Ë]˜Z[Xš[]H[™ÛÛ[Y\˜ÚX[\›\Ëˆ‹ˆœ\™\œËœ›ØÙ\ÜÍ]HˆÛÛ™š\›H‹ˆœ\™\œËœ›ØÙ\ÜÍ^ˆ\›İ™YÜÜ[š]Y\È\™HÛÛ™š\›YY›İYÚHÛX\ˆØÛÜH[™YÜ™Y[Y[ˆ‹ˆœ\™\œË™›Ü›Q^YXœ›İÈˆÛÛX›Ü˜][Ûˆ™\]Y\İ‹ˆœ\™\œË™›Ü›TÚYU]Hˆ•[\ÈÚ][İHÈ^Ù\[Û˜[HÙ[ˆ‹ˆœ\™\œË™›Ü›TÚYU^ˆHÛÛ˜Ú\ÙH[™XØİ\˜]H›Ùš[H[È\È[™\œİ[™Ú\™HH]\™HÛÛX›Ü˜][ÛˆÛİ[š]ˆ‹ˆœ\™\œË™›Ü›S›İLHˆ•\ÙH[ˆ[\›˜][Û˜[Û™H›Ü›X]Yˆ\Z[™Èœ›ÛHİ]ÚYHØ]YH\˜XšXKˆ‹ˆœ\™\œË™›Ü›S›İLˆˆ”Ú\™HHÙXœÚ]HÜˆÜ›Û[È[šÈ[œİXYÙˆÙ[™[™ÈÙ[œÚ]]™HØİ[Y[Ëˆ‹ˆœ\™\œË™›Ü›S›İLÈˆ“XÙ[œÙ\È[™İ\Ü[™ÈØİ[Y[ÈX^H™H™\]Y\İY\š[™È™]šY]Ëˆ‹ˆœ\™\œË™›Ü›S›İXÙHˆ”İX›Z][™ÈH™\]Y\İÙ\È›İÛÛœİ]]H]]ÛX]XÈ\›İ˜[ÜˆHÛÛ[Z]Y[È\ÜÚYÛˆÛÜšËˆ‹ˆœ\™\œË™›Ü›U]HˆÛÛX›Ü˜][Ûˆ›Ùš[H‹ˆœ\™\œË™›Ü›U^ˆÛÛ\]HH\ÜÙ[X[]Z[ËˆÚ]Ğ\Ú[Ü[ˆÚ]HİXİ\™YY\ÜØYÙH][İHØ[ˆ™]šY]È™Y›Ü™HÙ[™[™Ëˆ‹ˆœ\™\œË\SYÙ[™ˆ’H[H\Z[™È\È‹ˆœ\™\œË\SÜ™Õ]HˆHÛÛ\[HÜˆ™[YH‹ˆœ\™\œË\SÜ™Õ^ˆHXÙ[œÙYÜ™Ø[š^˜][Û‹Ü\˜]ÜˆÜˆ\İX›\ÚYXÙH‹ˆœ\™\œË\T›Õ]Hˆ[ˆ[™\[™[›Ù™\ÜÚ[Û˜[‹ˆœ\™\œË\T›Õ^ˆ[ˆ[™]šYX[Ù™™\š[™ÈH›Ù™\ÜÚ[Û˜[Ù\šXÙH‹ˆœ\™\œË›˜[YSX™[ˆ“˜[YHÈÛÛXİ\œÛÛˆ‹ˆœ\™\œË›˜[YTXÙZÛ\ˆˆ‘[˜[YH‹ˆœ\™\œË˜œ˜[™X™[ˆ“Ü™Ø[š^˜][ÛˆÜˆ›Ù™\ÜÚ[Û˜[˜[YH‹ˆœ\™\œË˜œ˜[™XÙZÛ\ˆˆ“Ü[Û˜[›Üˆ[™]šYX[È‹ˆœ\™\œË˜Ûİ[SX™[ˆÛİ[H‹ˆœ\™\œË˜Ûİ[TXÙZÛ\ˆˆÛİ[H‹ˆœ\™\œË˜Ú]SX™[ˆÚ]HÈÜ\˜][™È˜\ÙH‹ˆœ\™\œË˜Ú]TXÙZÛ\ˆˆÚ]H‹ˆœ\™\œËœÛ™SX™[ˆ”Û™HÈÚ]Ğ\‹ˆœ\™\œËœÛ™TXÙZÛ\ˆˆŠÎMˆ‹‹ˆ‹ˆœ\™\œË™[XZ[X™[ˆ‘[XZ[‹ˆœ\™\œË™[XZ[XÙZÛ\ˆˆ›˜[YP^[\K˜ÛÛH‹ˆœ\™\œË˜Ø]YÛÜSX™[ˆ”š[X\HÛÛX›Ü˜][Ûˆ\™XH‹ˆœ\™\œË˜Ø]YÛÜTXÙZÛ\ˆˆÚÛÜÙHHÛÜÙ\İØ]YÛÜH‹ˆœ\™\œË˜Ø]YÛÜUİ\š\ÛHˆ•İ\š\ÛHÛÛ\[HÜˆ\İ[˜][ÛˆÜ\˜]Üˆ‹ˆœ\™\œË˜Ø]YÛÜQ]™[Èˆ‘]™[ÛÛ\[KÜ™Ø[š^™\ˆÜˆÛÛÜ™[˜]Üˆ‹ˆœ\™\œË˜Ø]YÛÜU™[YHˆ”™\ÛÜİ[™\İ]\˜[™XXÚÜˆ™[YH‹ˆœ\™\œË˜Ø]YÛÜSX\š[™Hˆ›Ø]XXÚÜˆX\š[™HÜ\˜]Üˆ‹ˆœ\™\œË˜Ø]YÛÜU˜[œÜÜˆ•˜[œÜÜÛÛ\[HÜˆ›Ù™\ÜÚ[Û˜[š]™\ˆ‹ˆœ\™\œË˜Ø]YÛÜTİÈˆ”İÙÜ˜\\‹šY[ÙÜ˜\\ˆÜˆÜ™X]]™H›Ù™\ÜÚ[Û˜[‹ˆœ\™\œË˜Ø]YÛÜQİZYHˆ•İ\ˆİZYH‹ˆœ\™\œË˜Ø]YÛÜS[™İXYÙHˆ’[\œ™]\ˆÜˆ˜[œÛ]Üˆ‹ˆœ\™\œË˜Ø]YÛÜQİY\İˆ‘İY\İÛÛ\[š[Û‹ÛÛ˜ÚY\™ÙHÜˆÜÜ][]HÙ\šXÙH‹ˆœ\™\œË˜Ø]YÛÜSİ\ˆˆ“İ\ˆÜXÚX[\İÙ\šXÙH‹ˆœ\™\œËÙXœÚ]SX™[ˆ•ÙXœÚ]HÜˆÜ›Û[È[šÈ‹ˆœ\™\œËÙXœÚ]TXÙZÛ\ˆˆšÎ‹ËË‹‹ˆ‹ˆœ\™\œË™^\šY[˜ÙSX™[ˆ‘^\šY[˜ÙHÈ˜XÚÈ™XÛÜ™‹ˆœ\™\œË™^\šY[˜ÙTXÙZÛ\ˆˆ–YX\œÈÜˆ™[]˜[ÛÜšÈ‹ˆœ\™\œË›XÙ[œÙSX™[ˆ“XÙ[œÙHÜˆ™YÚ\İ˜][Ûˆ‹ˆœ\™\œË›XÙ[œÙTXÙZÛ\ˆˆ•\H[™[X™\‹Yˆ\XØX›H‹ˆœ\™\œË›[™İXYÙ\ÓX™[ˆ“[™İXYÙ\È‹ˆœ\™\œË›[™İXYÙ\ÔXÙZÛ\ˆˆ\˜XšXË[™Û\Ú‹‹ˆ‹ˆœ\™\œË˜Ûİ™\˜YÙSX™[ˆ”Ù\šXÙHÛİ™\˜YÙH‹ˆœ\™\œË˜Ûİ™\˜YÙTXÙZÛ\ˆˆÚ]Y\ÈÜˆÛİ[šY\ÈÛİ™\™Y‹ˆœ\™\œË˜Ø\XÚ]SX™[ˆØ\XÚ]H[™[™XØ]]™H˜]\È‹ˆœ\™\œË˜Ø\XÚ]TXÙZÛ\ˆˆ“Ü[Û˜[ˆX[HÚ^™KZ[HØ\XÚ]HÜˆİ\[™È˜[™ÙH‹ˆœ\™\œË›Y\ÜØYÙSX™[ˆ’[›ÙXÙH[İ\ˆÙ\šXÙH[™›ÜÜÙYÛÛX›Ü˜][Ûˆ‹ˆœ\™\œË›Y\ÜØYÙTXÙZÛ\ˆˆ•Ú]È[İH›İšYKÚ]XZÙ\È]\İ[˜İ[™İÈÛİ[]ÛÛ\[Y[[ˆ]™[\˜H^\šY[˜ÙHÜˆ]™[È‹ˆœ\™\œË˜ÛÛœÙ[^ˆ’HÛÛ™š\›H]H[™›Ü›X][Ûˆ\ÈXØİ\˜]H[™YÜ™YHÈ™HÛÛXİYX›İ]\È™\]Y\İˆ‹ˆœ\™\œËœš]˜XŞS[šÈˆ”š]˜XŞHÛXŞH‹ˆœ\™\œËœİX›Z]ˆÛÛ[YHÛˆÚ]Ğ\‹ˆœ\™\œËœİX›Z]›İHˆ–[İHØ[ˆ™]šY]ÈHÛÛ\]HY\ÜØYÙH™Y›Ü™HÙ[™[™È]ˆ‹ˆœ\™\œË™\œ›ÜˆˆÛÛ\]HH™\]Z\™YšY[ËÙ[Xİ[ˆ\XØ[\K›İšYHHÛ™H[X™\ˆÜˆ[XZ[Y™\ÜË[™XØÙ\HÛÛ™š\›X][Û‹ˆ‹ˆœ\™\œËÚ]Ø\[›Èˆ’[ÈU‘S•TKHÛİ[ZÙHÈİX›Z]HÛÛX›Ü˜][Ûˆ™\]Y\İˆ‹ˆœ\™\œË˜ÛÛXİX™[ˆÛÛ\[šY\Ë™[Y\È[™›Ù™\ÜÚ[Û˜[È‹ˆ™^\šY[˜Ù\Ëœ][İSX™[ˆ•Z[Ü™Y][İ][Ûˆ‹ˆ™^\šY[˜Ù\Ëœ][İU^ˆ”™\\™YY\ˆ™]šY]Ú[™ÈH]K\˜][Û‹İY\İÛİ[[™Ù[XİYÜ[ÛœËˆ‹ˆ™^\šY[˜Ù\Ëœ][İP]Ûˆˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆ™^\šY[˜Ù\Ëœİ˜\ÙT][İU^ˆ”™\ÛÜİ[œÙ]İÜXÙ[œÙYİZYH[™ÛÛÜ™[˜]Y˜[œÜÜ\™H][İY\›İ[™[İ\ˆ™Y™\œ™YØÚY[Kˆ‹ˆ™^\šY[˜Ù\Ëœİ‘[›™\”][İU^ˆYH[š[™Èİ[H]İZ]È[İ\ˆİY\İÈ[™ÙHÚ[[˜ÛYH][ˆHZ[Ü™Y][İ][Û‹ˆ‹ˆ˜ÛÛXİ[YSX™[ˆ”™Y™\œ™Yİ\[YH‹ˆ˜ÛÛXİ™\˜][Û“X™[ˆ•[YH]˜Z[X›H‹ˆ˜ÛÛXİ™\˜][Û”XÙZÛ\ˆˆÚÛÜÙHHÛÜÙ\İÜ[Ûˆ‹ˆ˜ÛÛXİ™\˜][Û”ÚÜˆŒx $Ìˆİ\œÈ‹ˆ˜ÛÛXİ™\˜][Û’[ˆˆ’[ˆ^H‹ˆ˜ÛÛXİ™\˜][Û‘[ˆ‘[^H‹ˆ˜ÛÛXİ™\˜][Û‘›^X›Hˆ‘›^X›H‹ˆ˜ÛÛXİÚ]Ø\[YHˆ”™Y™\œ™Yİ\[YH‹ˆ˜ÛÛXİÚ]Ø\\˜][Ûˆˆ•[YH]˜Z[X›H‹ˆ›˜]‹˜ÛÜœÜ˜]Q]™[ÈˆÛÜœÜ˜]H	ˆ]™[È‹ˆ˜ÛÛXİœ›ÙÜ™\ÜÓX™[ˆ”™\]Y\İ›ÙÜ™\ÜÈ‹ˆ˜ÛÛXİœİ\TÚÜˆ–[İ\ˆ[ˆ‹ˆ˜ÛÛXİœİ\”ÚÜˆ•Z[Üˆ[İ\ˆ[ˆ‹ˆ˜ÛÛXİœİ\ÔÚÜˆÛÛXİ‹ˆ˜ÛÛXİœİ\U]Hˆ”İ\Ú]H\ÜÙ[X[]Z[È‹ˆ˜ÛÛXİœİ\U^ˆÚÛÜÙHHÛÜÙ\İ™\]Y\İ\K[Z[™È[™Ü›İ\Ú^™Kˆ]™\][™ÈØ[ˆİ[™HY\İYY\ˆ™]šY]Ëˆ‹ˆ˜ÛÛXİœİ\•]HˆÚÛÜÙHH]Z[È]š][İ\ˆ™\]Y\İ‹ˆ˜ÛÛXİœİ\•^ˆÚÛÜÙHÛ›HHÜ[ÛœÈ™[]YÈ[İ\ˆ™\]Y\İ[ˆYHÚÜ›İHYˆ™YYYˆ‹ˆ˜ÛÛXİœİ\Õ]Hˆ•Ú\™HÚİ[ÙHÙ[™Hš\œİ\™Xİ[ÛÈ‹ˆ˜ÛÛXİœİ\Õ^ˆ‘[\ˆ[İ\ˆÛÛXİ]Z[Ëˆ›È^[Y[\ÈZÙ[ˆ[™H™\]Y\İ\È›İH›ÛÚÚ[™ÈÛÛ™š\›X][Û‹ˆ‹ˆ˜ÛÛXİ›Øš™Xİ]™SX™[ˆ•Ú]Úİ[\È[ˆXÚY]™OÈ‹ˆ˜ÛÛXİ›Øš™Xİ]™TXÙZÛ\ˆˆÚÛÜÙHHÛÜÙ\İÜ[Ûˆ‹ˆ˜ÛÛXİ›Øš™Xİ]™T™[^][Ûˆˆ”™[^][Ûˆ[™š]˜]H[YH‹ˆ˜ÛÛXİ›Øš™Xİ]™Q\ØÛİ™\Hˆ‘\ØÛİ™\ˆ™YZ[™ØØ[İ[\™H‹ˆ˜ÛÛXİ›Øš™Xİ]™RÜİ[™Èˆ’ÜİİY\İÈÜˆH[YØ][Ûˆ‹ˆ˜ÛÛXİ›Øš™Xİ]™UX[HˆÛÛ›™XİÜˆ™]Ø\™HX[H‹ˆ˜ÛÛXİ›Øš™Xİ]™PÙ[Xœ˜][ÛˆˆÙ[Xœ˜]H[ˆØØØ\Ú[Ûˆ‹ˆ˜ÛÛXİ›Øš™Xİ]™Q›^X›Hˆ’HÛİ[ZÙH]™[\˜HÈ™XÛÛ[Y[™‹ˆ˜ÛÛXİ˜YÛœÓYÙ[™ˆ“Ü[Û˜[İ\Ü[™ÈÙ\šXÙ\È‹ˆ˜ÛÛXİ˜YÛœÕ^ˆ”Ù[Xİ[][™È[İHX^H™YYˆ]™[\˜HÚ[ÛÛ™š\›HÛ›HÚ]š]ÈH›ÙÜ˜[Kˆ‹ˆ˜ÛÛXİ˜YÛ•˜[œÜÜˆ”š]˜]H˜[œÜÜ][Ûˆ‹ˆ˜ÛÛXİ˜YÛ‘İZYHˆ“XÙ[œÙYİZYH‹ˆ˜ÛÛXİ˜YÛ‘[š[™Èˆ‘[š[™È\œ˜[™Ù[Y[È‹ˆ˜ÛÛXİ˜YÛ’ÜÜ][]Hˆ‘İY\İÙ[ÛÛYH[™ÜÜ][]H‹ˆ˜ÛÛXİ˜YÛ›İ]\]YHˆ‘œ˜YÜ˜[˜ÙHÛÛ˜Ù\È[ˆ]™[ÜY[‹ˆ˜ÛÛXİ˜YÛÛÛ˜ÚY\™ÙHˆÛÛ˜ÚY\™ÙHİ\Ü‹ˆ˜ÛÛXİ˜˜XÚĞ]Ûˆˆ˜XÚÈ‹ˆ˜ÛÛXİ›™^]ÛˆˆÛÛ[YH‹ˆ˜ÛÛXİœİ\\Q\œ›ÜˆˆÚÛÜÙHH™\]Y\İ\H™Y›Ü™HÛÛ[Z[™Ëˆ‹ˆ˜ÛÛXİœİ\™\]Z\™Y\œ›ÜˆˆÛÛ\]HH™\]Z\™YšY[™Y›Ü™HÛÛ[Z[™Ëˆ‹ˆ˜ÛÛXİœ™\]Y\İ™Y™\™[˜ÙHˆ”™\]Y\İ™Y™\™[˜ÙH‹ˆ˜ÛÛXİœİXØÙ\ÜÕ]Hˆ–[İ\ˆ™\]Y\İ\È™XYH‹ˆ˜ÛÛXİœİXØÙ\ÜÕ^ˆ•Ú]Ğ\\ÈÜ[™YÚ][İ\ˆİXİ\™Y™\]Y\İˆÙY\\È™Y™\™[˜ÙNˆ‹ˆ˜ÛÛXİœİXØÙ\ÜÑ[XZ[]Hˆ–[İ\ˆ™\]Y\İ\È™Y[ˆÙ[‹ˆ˜ÛÛXİœİXØÙ\ÜÑ[XZ[^ˆ–[İ\ˆ™\]Y\İØ\ÈÙ[\™XİHÈ]™[\˜KˆÙHÚ[™]šY]ÈH]Z[È[™™\H›İYÚ[İ\ˆ™Y™\œ™YÛÛXİY]ÙˆÙY\\È™Y™\™[˜ÙNˆ‹ˆ˜ÛÛXİœİXØÙ\ÜÔİ]\Èˆ”™\]Y\İ™\\™YİXØÙ\ÜÙ[Kˆ™Y™\™[˜ÙNˆ‹ˆ˜ÛÛXİœİXØÙ\ÜÑ[XZ[İ]\Èˆ›ÛÚÚ[™È™\]Y\İÙ[İXØÙ\ÜÙ[Kˆ™Y™\™[˜ÙNˆ‹ˆ˜ÛÛXİ›Ü[•Ú]Ø\YØZ[ˆˆ“Ü[ˆÚ]Ğ\YØZ[ˆ‹ˆ˜ÛÛXİ˜ÛÜT™\]Y\İˆÛÜH™\]Y\İ]Z[È‹ˆ˜ÛÛXİœ™\]Y\İÛÜYYˆ”™\]Y\İÛÜYY‹ˆœ\™\œËœİXØÙ\ÜÔİ]\ÈˆÛÛX›Ü˜][Ûˆ›Ùš[H™\\™Yˆ™Y™\™[˜ÙNˆ‹ˆ˜ÛÛXİ[Û‹œ\™[YPØ\™Ôİ]\Èˆ•Hš\İX[È\™H[\Ü˜\HÛÛ˜Ù\™]šY]ÜËˆš[˜[›İ\ËXÚØYÚ[™ËÚ^™\È[™][˜Ú]Z[ÈÚ[™H[›ÙXÙYÛ˜ÙHØÙ[]™[ÜY[\ÈÛÛ\]Kˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXLÔÚÜˆ”Û™HÛY]™H‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXLÕ]Hˆ•Ø]\‹\™\Ú\İ[Û™HÛY]™H‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXLÕ^ˆHÙX[Y›İXİ]™HÛY]™H›ÜˆØ]\ˆÜ˜^H[™Ø[™È]\È›İ™\Ù[Y\È]š[™È\]Z\Y[ˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXMÚÜˆ•\›X[›\ÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXM]Hˆ’[œİ[]Y˜]™[›\ÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXM^ˆH™]\ØX›H[œİ[]Y›\ÚÈ\ÚYÛ™YÈÙY\š[šÚ[™ÈØ]\ˆÛÛÛ\š[™ÈHÙXH^\šY[˜ÙKˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\ÚÜˆ•˜]™[Ø\ÙH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\]Hˆ“][K]\ÙH˜]™[Ø\ÙH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\^ˆHÛÛ\Xİ˜XœšXÈØ\ÙH›ÜˆÛX[\œÛÛ˜[][\Ë\ÚYÛ™YÈÙY\[HÜ™Ø[š^™Y]Ø^Hœ›ÛHØ[™ˆ‹ˆšÛYKœ›ØÙ\ÜÑ^YXœ›İÈˆ’İÈ]™[\˜HÛÜšÜÈ‹ˆšÛYKœ›ØÙ\ÜÕ]Hˆ‘œ›ÛHH™\]Y\İÈÛ™HÛX\ˆÜ\˜][™È[ˆ‹ˆšÛYKœ›ØÙ\ÜÕ^ˆ“›Èš^YXÚØYÙH\È[\ÜÙYˆXXÚ™\]Y\İ\È™]šY]ÙY\›İ[™]˜Z[Xš[]K[Z[™È[™H[ÜH[›Û™Yˆ‹ˆšÛYKœ›ØÙ\ÜÌU]Hˆ”Ú\™HH\ÜÙ[X[È‹ˆšÛYKœ›ØÙ\ÜÌU^ˆ•[\ÈH]KİY\İËØØØ\Ú[Ûˆ[™İÈ[İHØ[H^\šY[˜ÙHÈ™Y[ˆ‹ˆšÛYKœ›ØÙ\ÜÌ•]Hˆ•ÙH™]šY]È[™Ú\H‹ˆšÛYKœ›ØÙ\ÜÌ•^ˆ]™[\˜H[YÛœÈH›İ]K\™\œË[Z[™ËÜÜ][]H[™Ü[Û˜[İY\İ]Z[Ëˆ‹ˆšÛYKœ›ØÙ\ÜÌÕ]HˆÛÛ™š\›H™Y›Ü™H[]™\H‹ˆšÛYKœ›ØÙ\ÜÌÕ^ˆ–[İH™XÙZ]™HHÛX\ˆØÛÜH[™Z[Ü™Y][İ][Ûˆ™Y›Ü™H[Hš[˜[ÛÛ™š\›X][Û‹ˆ‹ˆšÛYKœ›ØÙ\ÜĞ]Ûˆˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆ™^\šY[˜ÙR[™^š\›Õ^ˆÚÛÜÙH[ˆ^\šY[˜ÙHÈÜ[ˆ]ÈİÜK›ÙÜ˜[HÜ[ÛœÈ[™H]Z[È]Ú\HH^H\›İ[™[İ\ˆİY\İËˆ‹ˆ™^\šY[˜ÙR[™^˜ÛÜ™Q^YXœ›İÈˆÚÛÜÙH[İ\ˆÙ][™È‹ˆ™^\šY[˜ÙR[™^˜ÛÜ™U]Hˆ‘]™\H^\šY[˜ÙH›İÈ\È]ÈİÛˆÛÜ›‹ˆ™^\šY[˜ÙR[™^˜ÛÜ™U^ˆ“Ü[ˆH^\šY[˜ÙHÈ[™\œİ[™]ÈİÜK›Ü›X]È[™HXÙH]İZ]È[İ\ˆİY\İËˆ‹ˆ™^\šY[˜ÙR[™^›Ü[ˆˆ“Ü[ˆ^\šY[˜ÙH‹ˆ™^\šY[˜ÙR[™^˜˜XÚÈˆ[^\šY[˜Ù\È‹ˆ™^\šY[˜ÙR[™^›X™[ÙXHˆ”™YÙXH0­ÈØš\ˆ‹ˆ™^\šY[˜ÙR[™^›X™[\İÜšXÈˆ[P˜[Y0­È™YZ‹ˆ™^\šY[˜ÙR[™^›X™[\Ù\ˆ“\İYÚ0­È\Ù\‹ˆ™^\šY[˜ÙR[™^›X™[ZYˆˆ•ZYˆ›ÜÙH0­ÈYÚ[™È‹ˆ™^\šY[˜ÙR[™^›X™[™YZ^Hˆ’™YZ0­È›^X›H^H‹ˆ™^\šY[˜ÙR[™^›X™[ÚYÛ˜]\™Hˆ]™[\˜H0­ÈÚYÛ˜]\™H^H‹ˆ™^\šY[˜ÙR[™^œÙXQ^YXœ›İÈˆ”ÙXH›İ\›™^\È‹ˆ™^\šY[˜ÙR[™^œÙXU]HˆÚÛÜÙHH[YH[™İ[HÛˆHØ]\ˆ‹ˆ™^\šY[˜ÙR[™^œÙXU^ˆ‘XXÚÙXH›ÙÜ˜[H\È]ÈİÛˆYÙKÚ]HÛX\ˆš]Hœ›ÛH\\\™HÈHš[˜[[ÛY[ÛˆHØ]\‹ˆ‹ˆ™^\šY[˜ÙQ]Z[œ›ÙXİÑ^YXœ›İÈˆ“Ü[Û˜[š[š\Ú[™ÈİXÚ\È‹ˆ™^\šY[˜ÙQ]Z[œ›ÙXİÕ]Hˆ‘]Z[ÈÛÛ›™XİYÈ\È^\šY[˜ÙH‹ˆ™^\šY[˜ÙQ]Z[œ›ÙXİÕ^ˆ•H^\šY[˜ÙH\ÈÛÛ\]HÚ]İ][Kˆ[˜ÛYHH]Z[Û›HYˆ]š]È[İ\ˆİY\İ[™H[ÛY[ˆ‹ˆ™^\šY[˜ÙQ]Z[œØÙ[Ñ^YXœ›İÈˆ]™[\˜HÚYÛ˜]\™HØÙ[È‹ˆ™^\šY[˜ÙQ]Z[œØÙ[Õ]Hˆ•HÛÈœ˜YÜ˜[˜Ù\ÈÙˆ]™[\˜H‹ˆ™^\šY[˜ÙQ]Z[œØÙ[Õ^ˆ•\È^\šY[˜ÙH\È›ÈYY›ÙXİËˆ\ØÛİ™\ˆY\ˆZYšYÚ›Ú\ˆ[™Y\ˆZYšYÚ™[™]]™[\˜x &\ÈÚYÛ˜]\™Hœ˜YÜ˜[˜Ù\Ë›İİ\œ™[H[ˆ]™[ÜY[ˆ‹ˆ™^\šY[˜ÙQ]Z[˜›Ş^YXœ›İÈˆHÙY\ØZÙH›ÜˆHØØØ\Ú[Ûˆ‹ˆ™^\šY[˜ÙQ]Z[˜›Ş]Hˆ•H^\šY[˜ÙK[[ˆÛ™HÛÛœÚY\™Y›Ş‹ˆ™^\šY[˜ÙQ]Z[˜›Ş^ˆ•\È\ÈÜ[Û˜[ˆÚÛÜÙHH›ŞÛ›HÚ[ˆ]™[Û™ÜÈÈH[ÛY[[İH\™HÜ™X][™È›Üˆ[İ\ˆİY\İËˆ‹ˆ™^\šY[˜ÙQ]Z[œ™\]Y\İ]Hˆ”™XYHÈÚ\HH^\šY[˜ÙOÈ‹ˆ™^\šY[˜ÙQ]Z[œ™\]Y\İ^ˆ”Ú\™HH]KİY\İÛİ[[™[Z[™ËˆÜ[Û˜[]Z[ÈØ[ˆ™H[˜ÛYYÛ›HYˆ^Hš]H[‹ˆ‹ˆ™^\šY[˜ÙQ]Z[œ™\]Y\İÚ]İ]›ÙXİÕ^ˆ”Ú\™HH]KİY\İÛİ[[™[Z[™Ëˆ]™[\˜HÚ[Ú\HH^H\›İ[™[İ\ˆİY\İËˆ‹ˆ™^\šY[˜ÙQ]Z[šY]Ô›ÙXİÈˆ•šY]ÈÜ[Û˜[]Z[È‹ˆ™^\šY[˜ÙQ]Z[šY]ÔØÙ[Èˆ‘\ØÛİ™\ˆ]™[\˜HØÙ[È‹ˆ™^\šY[˜ÙQ]Z[šY]Ò›İ\›™^Hˆ‘^Ü™HH^\šY[˜ÙH‹ˆ™^\šY[˜ÙQ]Z[œ[‘^YXœ›İÈˆ–[İ\ˆš]˜]H[ˆ‹ˆ™^\šY[˜ÙQ]Z[œ[•]Hˆ•[\ÈH]KˆÙHÚ[Ú\HH™\İˆ‹ˆ™^\šY[˜ÙQ]Z[œ[•^ˆ”Ú\™HHØØØ\Ú[Û‹İY\İÛİ[[™™Y™\œ™Y[Z[™Ëˆ]™[\˜H™\\™\ÈHÛÛœÚY\™Y›İ]H[™ÛX\ˆ][İ][Û‹ˆ‹ˆ™^\šY[˜ÙQ]Z[œ[”Ú[Hˆ”XÙH[™š]˜XŞHÚ\Y\›İ[™[İ\ˆİY\İÈ‹ˆ™^\šY[˜ÙQ]Z[œ[”Ú[ˆˆ”\™\œÈ[™[İ™[Y[ÛÛÜ™[˜]YHÛ™HX[H‹ˆ™^\šY[˜ÙQ]Z[œ[”Ú[Èˆ“›È›ÛÚÚ[™È\ÈÛÛ™š\›YY[[ÙHYÜ™YHHš[˜[[ˆ‹ˆ™^\šY[˜ÙQ]Z[œ[İHˆ”™\]Y\İHZ[Ü™Y›ÜÜØ[‹ˆ™^\šY[˜ÙQ]Z[š[˜ÛYSÜ[Û˜[ˆ’[˜ÛYH[ˆ^H^\šY[˜ÙH™\]Y\İ‹ˆ™^\šY[˜ÙQ]Z[š[˜ÛYP›Şˆ’[˜ÛYH\ÈÙY\ØZÙH›Ş‹ˆ™^\šY[˜ÙQ]Z[œ™[Z[™\‘^YXœ›İÈˆ“Ü[Û˜[š[š\Ú[™ÈİXÚ\È‹ˆ™^\šY[˜ÙQ]Z[œ™[Z[™\•]Hˆ•H^\šY[˜ÙH\È™XYHÈ[ˆ‹ˆ™^\šY[˜ÙQ]Z[œ™[Z[™\•^ˆ–[İHØ[ˆ[˜ÛYHH]Z[Yˆ]İZ]È[İ\ˆİY\İÜˆÛÛ[YHÚ]H^\šY[˜ÙHÛ›Kˆ‹ˆ™^\šY[˜ÙQ]Z[˜ÛÛ[YUÚ]İ]ˆÛÛ[YHÈ[ˆH^\šY[˜ÙH‹ˆ™^\šY[˜ÙQ]Z[œ\™[YTÙXU^ˆHX\š[™Hœ˜YÜ˜[˜ÙH\™Xİ[Ûˆ[œÜ\™YHHYÚZ\ˆ[™[İ™[Y[ÙˆH™YÙXKˆ‹ˆ™^\šY[˜ÙQ]Z[œ\™[YT›ÜÚ[•^ˆHØ\›Hœ˜YÜ˜[˜ÙH\™Xİ[Ûˆ[œÜ\™YH›ÜÚ[ˆÛÛÙÛÙ™™YKÜXÙH[™\İÜšXÈ™YZˆ‹ˆ™^\šY[˜ÙQ]Z[œ\™[YUZY•^ˆHœ˜YÜ˜[˜ÙH\™Xİ[Ûˆ[œÜ\™YHZYˆ›ÜÙK[İ[Z[ˆZ\ˆ[™İXHÜ™Y[ˆ›İ\Ëˆ‹ˆ™^\šY[˜ÙQ]Z[š™YZ›Ş]Hˆ’™YZÚYÛ˜]\™HÛÛXİ[Ûˆ‹ˆ™^\šY[˜ÙQ]Z[š™YZ›Ş^ˆ‘[^H[ˆ™YZ™X]\™\È]™[\˜x &\ÈÛÈÚYÛ˜]\™Hœ˜YÜ˜[˜Ù\ø %Y\ˆZYšYÚ›Ú\ˆ[™Y\ˆZYšYÚ™[™]8 %™\Ù[Y\ÈÙ\\˜]HØ\™Ëˆ‹ˆš›İ\›™^KœÙXK™^YXœ›İÈˆ–[İ\ˆ^HÛˆH™YÙXH‹ˆš›İ\›™^KœÙXK]HˆHš]˜]HÙXH^H™YÚ[œÈ™Y›Ü™HH›Ø]X]™\È‹ˆš›İ\›™^KœÙXK^ˆ•[\ÈH[ÛÙÙˆH^K[™ÙHÚ[Ú\HH›Ø][Z[™È[™XÙH\›İ[™H[ÜH›Ú[š[™È[İKˆ‹ˆš›İ\›™^KœÙXKœİ\U]HˆÚÛÜÙHHš]H‹ˆš›İ\›™^KœÙXKœİ\U^ˆHÚÜ\ØØ\KH[^HÜˆHš]˜]HXXÚˆÙH™YÚ[ˆÚ]İÈ[İ\ˆÜ›İ\Ø[ÈÈÜ[™[YHÙÙ]\‹ˆ‹ˆš›İ\›™^KœÙXKœİ\•]Hˆ“X]™HØš\ˆ]HšYÚ[ÛY[‹ˆš›İ\›™^KœÙXKœİ\•^ˆ•H›Ø]Ø\Z[‹\\\™H[™\ÜÙ[X[ÛÛY›Ü\™HÛÛÜ™[˜]Y\ÈÛ™HX\ŞHİ\ÈH^Kˆ‹ˆš›İ\›™^KœÙXKœİ\Õ]Hˆ’ÙY\HØ]\ˆ›Üˆ[İ\œÙ[™\È‹ˆš›İ\›™^KœÙXKœİ\Õ^ˆ”İÚ[KšYÜˆÚ[\Hİ^Hİ[Ú]HÜš^›Û‹ˆH›ÙÜ˜[H\È›ÛÛH›ÜˆH[ÛY[ÈXYˆ‹ˆš›İ\›™^K™ÛÛ[‹™^YXœ›İÈˆ•HÛÛ[ˆİ\ˆ0­ÈÚ\›HØš\ˆ‹ˆš›İ\›™^K™ÛÛ[‹]Hˆ“Û™H[š\œšYYİ\‹[YYÈHš[˜[YÚ‹ˆš›İ\›™^K™ÛÛ[‹^ˆHš]˜]Hİ[œÙ]›Ø]›İ\›™^H›ÜˆÚ[ˆHÚ[\È›İH\İ[˜ÙK]H™Y[[™ÈÙˆX]š[™ÈHÚÜ™H]^XİHHšYÚ[YKˆ‹ˆš›İ\›™^K™ÛÛ[‹œİ\U]Hˆ“˜[YHHØØØ\Ú[Ûˆ‹ˆš›İ\›™^K™ÛÛ[‹œİ\U^ˆH]ZY]\ØØ\KHš]˜]HÙ[Xœ˜][ÛˆÜˆHİYÚ[İ\œš\ÙH[™YÚ[ˆÚ]H[ÛY[[İHØ[ÈÜ™X]Kˆ‹ˆš›İ\›™^K™ÛÛ[‹œİ\•]Hˆ›Ø\™Ú]H^Hİ[Ü[ˆ‹ˆš›İ\›™^K™ÛÛ[‹œİ\•^ˆ]™[\˜H[YÛœÈH\\\™Hœ›ÛHØš\ˆÛÈHİ\ˆ™[Û™ÜÈÈ[İH˜]\ˆ[ˆHš^Yİ\š\İ[Y]X›Kˆ‹ˆš›İ\›™^K™ÛÛ[‹œİ\Õ]Hˆ“]HYÚÈHÛÜšÈ‹ˆš›İ\›™^K™ÛÛ[‹œİ\Õ^ˆ•Hš[˜[İ™]Ú\È[[[Û˜[HÚ[\NˆÜ[ˆØ]\‹Hš]˜]H›Ø][™H\İÛÛİ\ˆÙˆH^Kˆ‹ˆš›İ\›™^K˜˜^XYZ™^YXœ›İÈˆ˜^XYZ0­ÈH[š]˜]HÙXH^H‹ˆš›İ\›™^K˜˜^XYZ]Hˆ˜^XYZ\ÈH\İ[˜][ÛÈHÚÛH^H\È[İ\œÈ‹ˆš›İ\›™^K˜˜^XYZ^ˆH[Y^Hš]˜]H›Ø]^\šY[˜ÙHÚ\Y\›İ[™H[ÜHÛˆ›Ø\™Ú][YHÈİÚ[H[™]H™YÙXHÙ]HXÙKˆ‹ˆš›İ\›™^K˜˜^XYZœİ\U]HˆZ[H^H\›İ[™[İ\ˆÜ›İ\‹ˆš›İ\›™^K˜˜^XYZœİ\U^ˆ•ÙH™YÚ[ˆÚ]HİY\İÛİ[™Y™\œ™Y[\È[™HÚ[™Ùˆ[YH[İ\ˆÜ›İ\Ø[ÈÛˆHØ]\‹ˆ‹ˆš›İ\›™^K˜˜^XYZœİ\•]Hˆ•˜]™[œ›ÛHØš\ˆÈ˜^XYZ‹ˆš›İ\›™^K˜˜^XYZœİ\•^ˆ•H›Ø]Ø\Z[‹Y[ØY™]H\]Z\Y[[™ÙXKY^H\ÜÙ[X[È\™HÛÛÜ™[˜]Y™Y›Ü™H[İH\œš]™Kˆ‹ˆš›İ\›™^K˜˜^XYZœİ\Õ]Hˆ”İ^HÛ™Ù\ˆÚ\™H]™Y[ÈšYÚ‹ˆš›İ\›™^K˜˜^XYZœİ\Õ^ˆ”İÚ[[Z[™È[™Ü[‹]Ø]\ˆ]\Ù\È\™H\ÙˆH^x %›İ\ÚYİÜÈ™]ÙY[ˆØ›YØ][ÛœËˆ‹ˆš›İ\›™^K™Ü˜[™˜^XYZ™^YXœ›İÈˆ‘Ü˜[™˜^XYZXXÚ0­Èš]˜]HÜ›İ\^H‹ˆš›İ\›™^K™Ü˜[™˜^XYZ]HˆH\™Ù\ˆXXÚÚ]HØ[YH™Y[[™ÈÙˆš]˜XŞH‹ˆš›İ\›™^K™Ü˜[™˜^XYZ^ˆ‘›ÜˆÜ›İ\È]Ø[ÈÚ\™HHÙXHÚ]İ]™Y[[™ÈZÙHHÜ›İ\İ\‹]™[\˜HZ[ÈH˜^XYZ^H\›İ[™[İ\ˆ[ÜH[™\œÜÙKˆ‹ˆš›İ\›™^K™Ü˜[™˜^XYZœİ\U]Hˆ”Ù]HÜ›İ\š]H‹ˆš›İ\›™^K™Ü˜[™˜^XYZœİ\U^ˆ•Ú]\ˆ]\È˜[Z[KÛÛXYİY\ÈÜˆİY\İÈÙˆÛ›İ\‹ÙH™YÚ[ˆÚ]ÚÈ\ÈÛÛZ[™È[™İÈ^HÚİ[™Y[Û˜›Ø\™ˆ‹ˆš›İ\›™^K™Ü˜[™˜^XYZœİ\•]Hˆ“XZÙHHXXÚHÙ][™È‹ˆš›İ\›™^K™Ü˜[™˜^XYZœİ\•^ˆ•Hš]˜]HXXÚÚ]™\ÈHÜ›İ\]ÈİÛˆÜXÙHÚ[HH›İ]HÈ˜^XYZ™[XZ[œÈÛÛÜ™[˜]Y[™Ø[Kˆ‹ˆš›İ\›™^K™Ü˜[™˜^XYZœİ\Õ]Hˆ’ÜİH^H[İ\ˆØ^H‹ˆš›İ\›™^K™Ü˜[™˜^XYZœİ\Õ^ˆ“X]™H›ÛÛH›ÜˆÛÛ™\œØ][Û‹İÚ[[Z[™È[™HÚ\™YÙXH^H]™]™\ˆ™Y[È™K\XÚØYÙYˆ‹ˆš›İ\›™^Kš\İÜšXË™^YXœ›İÈˆ’\İÜšXÈ™YZ0­ÈHš]˜]HØ[È‹ˆš›İ\›™^Kš\İÜšXË]Hˆ‘È›İ\İÙYH[P˜[Yˆ[\ˆ]ÈİÜKˆ‹ˆš›İ\›™^Kš\İÜšXË^ˆHXÙ[œÙYİZYHÚ\\ÈH›İ]H\›İ[™[İ\ˆİY\İË\›š[™ÈİÛ™K›ÜÚ[ˆÛÛÙ[™]ZY][^\È[ÈH\œÛÛ˜[[›ÙXİ[ÛˆÈHÚ]Kˆ‹ˆš›İ\›™^Kš\İÜšXËœİ\U]Hˆ™YÚ[ˆÚ]H[ÜH™Z[™HXÙH‹ˆš›İ\›™^Kš\İÜšXËœİ\U^ˆ–[İ\ˆİZYHÙ]ÈHÛÛ^XÙH[™[™İXYÙHÛÈ]™\HİY\İ™Y[È[˜ÛYYœ›ÛHHš\œİİ\ˆ‹ˆš›İ\›™^Kš\İÜšXËœİ\•]Hˆ“[İ™H›İYÚHÚ]HÚ]\œÜÙH‹ˆš›İ\›™^Kš\İÜšXËœİ\•^ˆ•HØ[È›ÛİÜÈİÜšY\Ë\˜Ú]Xİ\™H[™]Z[È]È›İ™]™X[[\Ù[™\ÈÛˆHÙ[™\šXÈ›İ]Kˆ‹ˆš›İ\›™^Kš\İÜšXËœİ\Õ]Hˆ“X]™HÚ]HÚ\\‹›İHÚXÚÛ\İ‹ˆš›İ\›™^Kš\İÜšXËœİ\Õ^ˆÛÙ™™YK]\È[™[YHÈ›İXÙHHÚ]HÙY\H^\šY[˜ÙH[X[ˆ˜]\ˆ[ˆ\œšYYˆ‹ˆš›İ\›™^K™\Ù\™^YXœ›İÈˆ“\İYÚ0­ÈØ[™[™\È‹ˆš›İ\›™^K™\Ù\]Hˆ•HØ[™[™\È\™H›İH˜XÚÙ›Üˆ^H\™HH™X\ÛÛˆÈÛËˆ‹ˆš›İ\›™^K™\Ù\^ˆ]™[\˜HZ[ÈH›İ]H\›İ[™HØ[™HYÚ[™[İ\ˆÜ›İ\8 %ÛÈH\Ù\™Y[ÈÚYKš]˜]H[™ÛÛ\][H[›ZÙHHÚ]Kˆ‹ˆš›İ\›™^K™\Ù\œİ\U]Hˆ“X]™HHÚ]H™Z[™‹ˆš›İ\›™^K™\Ù\œİ\U^ˆ–[İ\ˆ\\\™H[™˜[œÜÜ\™H[›™YÛÈHÚ[™ÙHœ›ÛH›ØYÈÜ[ˆØ[™™Y[ÈX\ŞHœ›ÛHHš\œİZ[Kˆ‹ˆš›İ\›™^K™\Ù\œİ\•]Hˆ‘›ÛİÈH[™H[™H‹ˆš›İ\›™^K™\Ù\œİ\•^ˆH0åÍ›İ]H\ÈÚÜÙ[ˆ›Üˆ[İ\ˆÜ›İ\Ú]HØ[™[™\È\ÈHXZ[ˆØÙ[™H˜]\ˆ[ˆH˜XÚÙ›Ü›ÜˆHİYÙYİÜˆ‹ˆš›İ\›™^K™\Ù\œİ\Õ]Hˆ\œš]™H]\İYÚ‹ˆš›İ\›™^K™\Ù\œİ\Õ^ˆ\ÈHİ[ˆİÙ\œËØ]YHÜÜ][]H[™H]ZY]ÙˆH[™ØØ\HÜ™X]HHÛÜÚ[™È[ÛY[ÛÜZÚ[™ÈÛİÛKˆ‹ˆš›İ\›™^KZY‹™^YXœ›İÈˆ•ZYˆYÚ[™È0­ÈH]ZY]\ˆš]H‹ˆš›İ\›™^KZY‹]Hˆ•˜YHHÚ]HX]›Üˆ[İ[Z[ˆZ\ˆ[™HÙ[\ˆ^H‹ˆš›İ\›™^KZY‹^ˆHš]˜]HZYˆ›İ\›™^Hœš[™ÜÈÙÙ]\ˆÛÛÛ\ˆZ\‹[İ[Z[ˆÛÛİ\œË›ÜÙ\È[™ÙX\ÛÛ˜[ØØ[]Z[]HXÙH]]ÈHYÚ[™Èœ™X]Kˆ‹ˆš›İ\›™^KZY‹œİ\U]HˆÛ[Xˆ[ÈHY™™\™[š]H‹ˆš›İ\›™^KZY‹œİ\U^ˆ•ÙH[ˆH\\\™H\›İ[™[İ\ˆÜ›İ\ÛÈH›İ\›™^H\Ø\™™Y[ÈZÙHHİ\ÙˆH^\šY[˜ÙK›İH˜[œÙ™\‹ˆ‹ˆš›İ\›™^KZY‹œİ\•]Hˆ“YY]HÙX\ÛÛˆ[ˆZYˆ‹ˆš›İ\›™^KZY‹œİ\•^ˆ”›ÜÙ\ËÜ˜Ú\™È[™ØØ[İÜÈ\™HÚÜÙ[ˆ\›İ[™Ú]HYÚ[™ÈÙ[Z[™[HÙ™™\ˆ]][YHÙˆYX\‹ˆ‹ˆš›İ\›™^KZY‹œİ\Õ]Hˆ”]\ÙHÚ\™HHšY]ÈÜ[œÈ‹ˆš›İ\›™^KZY‹œİ\Õ^ˆ•H^HX]™\ÈÜXÙH›ÜˆH[™ØØ\KHZ\ˆ[™H[œ[›™Y[ÛY[È]XZÙHZYˆ™Y[[›ZÙH™YZˆ‹ˆš›İ\›™^Kš™YZ™^YXœ›İÈˆ]™[\˜HÚYÛ˜]\™H^H0­È™YZ‹ˆš›İ\›™^Kš™YZ]HˆH[™YZ^H\È›İHXÚØYÙKˆ]\ÈÚ\Y\›İ[™[İ\ˆİY\İËˆ‹ˆš›İ\›™^Kš™YZ^ˆ‘œ›ÛHHØ]\™œ›ÛÈ\İÜšXÈ™YZ[™HÛÛœÚY\™Y[š[™ÈİÜ]™[\˜HÛÛ›™XİÈHÚ]H]HXÙH]™Y[È\œÛÛ˜[˜]\ˆ[ˆ\ÚYˆ‹ˆš›İ\›™^Kš™YZ››İHˆ•HØ]\™œ›ÛHÛÚ]H[™HX›H\™HÚ\\œÈÙˆÛ™H^x %›İ™YH\ÚYİÜËˆ‹ˆš›İ\›™^Kš™YZœİ\U]Hˆ”İ\Ú\™H[İ\ˆ^HÚİ[™YÚ[ˆ‹ˆš›İ\›™^Kš™YZœİ\U^ˆ•ÙHÙ]HYY][™ÈÚ[˜[œÜÜ[™š\œİİÜ\›İ[™[İ\ˆ\œš]˜[[™\™ŞH[™[\™\İËˆ‹ˆš›İ\›™^Kš™YZœİ\•]Hˆ“]™YZ[™›Û[ˆÚ\\œÈ‹ˆš›İ\›™^Kš™YZœİ\•^ˆ•Ø]\™œ›Û[YK\İÜšXÈ™YZØØ[[š[™È[™Ù[XİYİÜÈ\™HÛÛ›™XİY[ÈÛ™HÛX\‹›^X›Hš]Kˆ‹ˆš›İ\›™^Kš™YZœİ\Õ]Hˆ‘[™Ú]HÚ]Hİ[Ú][İH‹ˆš›İ\›™^Kš™YZœİ\Õ^ˆ•Hš[˜[[Z[™È\ÈÚ\Y\›İ[™[İ\ˆÜ›İ\ÛÈH^HÛÜÙ\ÈÚ]HÙ[œÙHÙˆXÙH˜]\ˆ[ˆ[›İ\ˆ][HÛˆ[ˆ][™\˜\Kˆ‹ˆš›İ\›™^KœÙXUĞ˜[Y™^YXœ›İÈˆ]™[\˜HÚYÛ˜]\™H^H0­ÈÙXHÈ[P˜[Y‹ˆš›İ\›™^KœÙXUĞ˜[Y]Hˆ“Û™H^H]ÛÛ›™XİÈHÙXHÈHİÜHÙˆHÚ]H‹ˆš›İ\›™^KœÙXUĞ˜[Y^ˆH™\ÛÜY\››ÛÛ‹HXXÚÛXˆ]\ÙH[™HİZYY]™[š[™È[ˆ\İÜšXÈ™YZ™XÛÛYHÛ™Hš]˜]H^HÚ]HÛX\ˆÚ[™ÙHÙˆØÙ[™Kˆ‹ˆš›İ\›™^KœÙXUĞ˜[Y››İHˆ•H˜[œÚ][Ûˆ\ÈHÚ[ˆ^[YÚHHØ]\‹İ[œÙ]]HXXÚÛX‹[ˆHÚ\˜Xİ\ˆÙˆ[P˜[YY\ˆ\šËˆ‹ˆš›İ\›™^KœÙXUĞ˜[Yœİ\U]Hˆ™YÚ[ˆÚ]HØ]\ˆ‹ˆš›İ\›™^KœÙXUĞ˜[Yœİ\U^ˆ•HÙXHÚ\\ˆ\È\ÚYÛ™Y\ÈH™\ÛÜ^\šY[˜ÙKÚ]š[™ÈH^HH™[^Y™YÚ[›š[™È™Y›Ü™HHÚ]HÛÛY\È[ÈšY]Ëˆ‹ˆš›İ\›™^KœÙXUĞ˜[Yœİ\•]Hˆ“]HYÚÚ[™ÙHHØÙ[™H‹ˆš›İ\›™^KœÙXUĞ˜[Yœİ\•^ˆHİ[œÙ]İÜ]™YZXXÚÛXˆÜ™X]\ÈH˜[œÚ][Ûˆ™]ÙY[ˆ[ˆÜ[ˆY\››ÛÛˆ[™HÚ\˜Xİ\ˆÙˆ[P˜[Yˆ‹ˆš›İ\›™^KœÙXUĞ˜[Yœİ\Õ]Hˆ•Ø[È[ÈH]™[š[™ÈÚ]HİZYH‹ˆš›İ\›™^KœÙXUĞ˜[Yœİ\Õ^ˆ’\İÜšXÈ™YZ™XÛÛY\ÈHÛÜÚ[™ÈÚ\\‹Ú]HÜ[ÛˆÈÛÛ[YHH]™[š[™È›İYÚHÛÛœÚY\™YØØ[[›™\‹ˆ‹ˆÛÜ›œÙXK™^YXœ›İÈˆ‘š\œİYÚ0­È™YÙXH‹ˆÛÜ›œÙXK]Hˆ™YÚ[ˆÚ\™HHÜš^›ÛˆÜ[œÈ‹ˆÛÜ›œÙXK^ˆ‘œ›ÛHHš\œİY\ÜØYÙKÙHÙ]HÛX\ˆ[Ü›š[™Èš]H\›İ[™[İ\ˆÜ›İ\H›Ø][™HÜXÙH[İHØ[ÈX]™H[œ[›™Yˆ‹ˆÛÜ›œÙXK››İHˆ•HÛÛ[ˆİ\ˆ™[XZ[œÈ]ÈİÛˆİ[œÙ]^\šY[˜ÙKˆH™YÙXHÛÜ›İ\ÈÚ]^[YÚˆ‹ˆÛÜ›œÙXKœİ\U]Hˆ”Ù]HXÙH‹ˆÛÜ›œÙXKœİ\U^ˆ”Ú\™HH[YKİY\İš]H[™HÚ[™Ùˆš]˜XŞH[İHØ[ÛˆHØ]\‹ˆ‹ˆÛÜ›œÙXKœİ\•]Hˆ”İ\[ÈÜ[ˆØ]\ˆ‹ˆÛÜ›œÙXKœİ\•^ˆ‘\\\™Hœ›ÛHØš\ˆ™XÛÛY\ÈH™YÚ[›š[™ÈÙˆH^K›İH˜[œÙ™\ˆÈ]ˆ‹ˆÛÜ›œÙXKœİ\Õ]Hˆ“X]™H›ÛÛH›ÜˆH^H‹ˆÛÜ›œÙXKœİ\Õ^ˆ•HÙXH^Hİ^\È›^X›KÛÈH]ZY]İÚ[KHÛÛ™\œØ][ÛˆÜˆH]\ÙHØ[ˆ™XÛÛYHHY[[ÜKˆ‹ˆÛÜ›š\İÜšXË™^YXœ›İÈˆ[P˜[Y0­ÈH]š[™ÈİÜH‹ˆÛÜ›š\İÜšXË]Hˆ‘[\ˆHÚ]HÛ™H™\ÚÛ]H[YH‹ˆÛÜ›š\İÜšXË^ˆ™Y›Ü™HHØ[È™YÚ[œËHİZYHÙ]ÈHÛÛ^[™XYÈHÜ›İ\›İYÚH[™\Ë\˜Ú]Xİ\™H[™İÜšY\È][ˆ[š\œšYYXÙKˆ‹ˆÛÜ›š\İÜšXË››İHˆ•HİÜH\È›İ\ÚYˆÙHX]™H›ÛÛHÈ›İXÙHHÛÛÙİÛ™K›ÚXÙ\È[™ÛX[]Z[Ëˆ‹ˆÛÜ›š\İÜšXËœİ\U]Hˆ“YY][İ\ˆİZYH‹ˆÛÜ›š\İÜšXËœİ\U^ˆ™YÚ[ˆÚ]H[ÜH[™ÛÛ^]XZÙH]™\HÛÜØ^H[Ü™HYX[š[™Ù[ˆ‹ˆÛÜ›š\İÜšXËœİ\•]Hˆ”™XYH›ÜÚ[ˆ‹ˆÛÜ›š\İÜšXËœİ\•^ˆ“[İ™H›İYÚÚYİÜËØ\™YÛÛÙ[™İÜšY\È]È›İ\X\ˆÛˆHX\ˆ‹ˆÛÜ›š\İÜšXËœİ\Õ]Hˆ“]HÚ]H[™Ù\ˆ‹ˆÛÜ›š\İÜšXËœİ\Õ^ˆ‘[™Ú][YHÈXœÛÜ˜ˆHÛÛÙİÛ™H[™›ÚXÙ\ÈÙˆHÚ]K˜]\ˆ[ˆ\Ú[™ÈİØ\™HÚXÚÛ\İˆ‹ˆÛÜ›™\Ù\™^YXœ›İÈˆ“\İYÚ0­ÈØ[™[™\È‹ˆÛÜ›™\Ù\]Hˆ‘›ÛİÈHØ[™[™\È[[HYÚÛİÜÈ‹ˆÛÜ›™\Ù\^ˆ•H[™ØØ\HXYÈH›ÙÜ˜[NˆÚYHØ[™[™\ËH0åÍ›İ]HÚÜÙ[ˆ›Üˆ[İ\ˆÜ›İ\[™Hš]˜]H]\ÙH\ÈHİ[ˆİÙ\œËˆ‹ˆÛÜ›™\Ù\››İHˆ•\È\ÈH]™[\˜H\Ù\ÛÜ›ˆØ[™[™\È™Y›Ü™H0êXÛÜ‹Ú[[˜ÙH™Y›Ü™HÜXİXÛKˆ‹ˆÛÜ›™\Ù\œİ\U]Hˆ“X]™HHÚ]H™Z[™‹ˆÛÜ›™\Ù\œİ\U^ˆ•HXÙHÚ[™Ù\È\ÈH›ØYÚ]™\ÈØ^HÈØ[™[™Ü[ˆ\İ[˜ÙKˆ‹ˆÛÜ›™\Ù\œİ\•]Hˆ”™XYH[™H[™H‹ˆÛÜ›™\Ù\œİ\•^ˆ•H›İ]H›ÛİÜÈH[™ØØ\KÚ]HØ[™[™\È\ÈHXZ[ˆØÙ[™x %›İH˜XÚÙ›Üˆ‹ˆÛÜ›™\Ù\œİ\Õ]Hˆ\œš]™H]\İYÚ‹ˆÛÜ›™\Ù\œİ\Õ^ˆ”Ù]H[ÈÜÜ][]H[™Hš[˜[ÛİÈ[ˆH[ÛY[Ú\Y\›İ[™HÜ›İ\ˆ‹ˆÛÜ›ZY‹™^YXœ›İÈˆ‘š\œİYÚ0­ÈYÚ[™È‹ˆÛÜ›ZY‹]Hˆ\œš]™H™Y›Ü™HHÚ]HØZÙ\È‹ˆÛÜ›ZY‹^ˆÛÛÛZ\‹[İ[Z[ˆÛÛİ\œÈ[™ZYˆ›ÜÙ\ÈÜ™X]HHÙ[\ˆİ\İ]ÚYHHš]HÙˆ™YZˆ‹ˆÛÜ›ZY‹››İHˆ•HÙX\ÛÛˆÚ\\ÈH]Z[ÈHØ[HÙˆHYÚ[™ÈÚ\\È]™\][™È[ÙKˆ‹ˆÛÜ›ZY‹œİ\U]HˆÛ[Xˆ[È[Ü›š[™È‹ˆÛÜ›ZY‹œİ\U^ˆ“X]™HHÚ]Hš]H™Z[™›ÜˆÛÛÛ\ˆZ\ˆ[™[ˆÜ[ˆ[İ[Z[ˆšY]Ëˆ‹ˆÛÜ›ZY‹œİ\•]Hˆ“YY]HÙX\ÛÛˆ‹ˆÛÜ›ZY‹œİ\•^ˆ”›ÜÙ\ËÜ˜Ú\™È[™ØØ[]Z[È\™HÙ[XİY\›İ[™Ú]HYÚ[™ÈÙ™™\ˆ›İËˆ‹ˆÛÜ›ZY‹œİ\Õ]Hˆ”]\ÙH]HšY]È‹ˆÛÜ›ZY‹œİ\Õ^ˆ“]H[™ØØ\HÙ]HXÙNÈHZ\‹HšY]È[™H]ZY]\™H[™XYH\ÙˆHY[[ÜKˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\ÔÚÜˆ’ÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\Õ]Hˆ”ÛX[Ûİ™[ˆÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\Õ^ˆHÛÛ\XİÛİ™[ˆ]Z[[œÜ\™YH\Ù\Ü˜Y[™X\ŞHÈØ\œHÛYKˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYÚÜˆ”›ÜÙHØ\™H‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZY]Hˆ”›ÜÙHÛØ\Üˆ[™Ü™X[H‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZY^ˆHÛX[ØØ[HÛİ\˜ÙYØ\™H›ÙXİÙ[XİYXØÛÜ™[™ÈÈÙX\ÛÛˆ[™]˜Z[Xš[]Kˆ‹ˆ˜ÛÛXİ[Û‹››Ú\•]HˆY\ˆZYšYÚ›Ú\ˆ‹ˆ˜ÛÛXİ[Û‹™[™]]HˆY\ˆZYšYÚ™[™]‹ˆ˜ÛÛ[[Û‹œÙX\ÛÛ˜[ˆ”ÙX\ÛÛ˜[‹ˆ˜ÛÛXİ[Û‹™^Ü™P]Ûˆˆ‘^Ü™HHÛÛXİ[ÛœÈ‹ˆ˜ÛÛXİ[Û‹™š[\\šXHˆ‘š[\ˆ›İ]\]YHH^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹œ]X[]Hˆ”]X[]H‹ˆ˜ÛÛXİ[Û‹˜Y›ŞˆY›ŞÈ][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹˜Y][HˆYÈ][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹˜YÙ\šXÙHˆYÙ\šXÙHÈ][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹˜YYˆYYÈ[İ\ˆ][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹œ™[[İ™R][Hˆ”™[[İ™H‹ˆ˜ÛÛXİ[Û‹˜›Ş^Xİ]]™U]Hˆ‘^Xİ]]™HÙ[ÛÛYH›Ş‹ˆ˜ÛÛXİ[Û‹˜›Ş^Xİ]]™U^ˆHÛ\ÚYİ[Ù[ÛÛYH›Üˆ^Xİ]]™\Ë[YØ][ÛœÈ[™[\›˜][Û˜[İY\İËˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş^Xİ]]™R][LHˆ”™Yš[™Y›İX›ÛÚÈ[™[ˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş^Xİ]]™R][Lˆˆ”™Yš[™YYÙØYÙHYÈ‹ˆ˜ÛÛXİ[Û‹˜›Ş^Xİ]]™R][LÈˆ”\œÛÛ˜[Ù[ÛÛYHØ\™[™][™\˜\H‹ˆ˜ÛÛXİ[Û‹˜›Ş^Xİ]]™R][Mˆ”ÛX[ØØ[ÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÑ^YXœ›İÈˆ’[™]šYX[›ÙXİÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÕ]Hˆ”›ÙXİËÛÛZ[™ÈÛÛÛ‹ˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÕ^ˆ•\ÙH›ÙXİ™]šY]ÜÈ™[XZ[ˆš\ÚX›HÚ[H›İİ\\Ëİ\Y\œÈ[™š[˜[]Z[È\™H\›İ™Yˆ^HØ[››İ™HYYÈH™\]Y\İY]ˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXLTÚÜˆ•İH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXLU]Hˆ]™[\˜H™XXÚİH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXLU^ˆH˜XİXØ[™XXÚ˜YÈ]Ø[ˆ[ÛÈÛHÛÛ\]H™YÙXHÛÛXİ[Û‹ˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXL”ÚÜˆ•İÙ[‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXL•]Hˆ”]ZXÚËYH™XXÚİÙ[‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÙXL•^ˆ“YÚÈØ\œH[™\ÙY[›Üˆ™\ÛÜ›Ø][™™XXÚ^\Ëˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌTÚÜˆ’ÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌU]Hˆ”›ÜÚ[ˆÛÛÙ[ˆÙY\ØZÙH‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌU^ˆHÛX[ØØ[H[œÜ\™YYXÙH™XØ[[™ÈHÚ[™İÜÈÙˆ\İÜšXÈ™YZˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÜÜ][]TÚÜˆ•Ù[ÛÛYHÙ]‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÜÜ][]U]Hˆ‘İY\İÙ[ÛÛYHØ\™Ù]‹ˆ˜ÛÛXİ[Û‹œ›ÙXİÜÜ][]U^ˆ”\œÛÛ˜[^™YÙ[ÛÛYHØ\™È[™ÛÛ\Xİ][™\˜\HØ\™È›ÜˆİY\İ\œš]˜[Ëˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌ”ÚÜˆØ\™È‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌ•]Hˆ’[\İ˜]Y\š]YÙHØ\™È‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌ•^ˆHÛÛ\XİÙ][œÜ\™YH[P˜[Y\˜Ú]Xİ\™H[™]È]Z[Ëˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\TÚÜˆ”Ú]Û‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\U]Hˆ“YÚ\Ù\Ú]Û‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\U^ˆH™]]˜[X\ŞK]ËXØ\œH^Y\ˆ›ÜˆHÛÛÛ\ˆ\Ù\]™[š[™Ëˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\”ÚÜˆ•[X›\ˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\•]Hˆ’[œİ[]Y˜]™[[X›\ˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\Ù\•^ˆH™]\ØX›H[œİ[]Y[X›\ˆİZ]YÈÛÛÛ\ˆ\Ù\]™[š[™ÜËˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒTÚÜˆ”›ÜÙHZ\İ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒU]Hˆ•ZYˆ›ÜÙHZ\İ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒU^ˆ[ˆ\›ÛX]XÈ›ÜÙHZ\İ›Üˆ^\›˜[\ÙKÛİ\˜ÙYØØ[H[™ÛÛ™š\›YYXØÛÜ™[™ÈÈÙX\ÛÛˆ[™İ\Y\‹ˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒ”ÚÜˆ‘›Ü˜[›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒ•]Hˆ•ZYˆ›Ü˜[›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒ•^ˆHÛÛ\Xİ›İX›ÛÚÈÚ][ˆ[™\œİ]Y]\›ˆ[œÜ\™YHZYˆ›ÜÙ\Ëˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒÔÚÜˆ”›ÜÙHÚY‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒÕ]Hˆ”ØÙ[Y›ÜÙHØXÚ]‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYŒÕ^ˆHYÚ›ÜÙHÙY\ØZÙHİZ]YÈİ[Ù[ÛÛY\È[™^\šY[˜ÙH›Ş\Ëˆ‹ˆ˜ÛÛXİ[Û‹›\İYÚ[™[™Èˆ“ÜšYÚ[˜[Ø[\ZYÛˆ\ÛÜšÈ[™[™È‹ˆ˜ÛÛXİ[Û‹œØÙ[X“˜[YHˆU‘S•THØÙ[Xˆ‹ˆ˜ÛÛXİ[Û‹™İY\İÙ\šXÙ\Ñ^YXœ›İÈˆ‘İY\İÙ\šXÙ\È‹ˆ˜ÛÛXİ[Û‹™İY\İÙ\šXÙ\Õ]Hˆ‘İY\İ]Z[Ë\œ˜[™ÙYÙ\\˜][Kˆ‹ˆ˜ÛÛXİ[Û‹™İY\İÙ\šXÙ\Õ^ˆ•Z[Üš[™ËX˜^XH[™›İÙ\œÈ\™HÛÛÜ™[˜]Y›İYÚZ\ˆİÛˆİY\İ\Ù\šXÙH™\]Y\İˆ‹ˆ˜ÛÛXİ[Û‹˜›İ]\]YQØ]]Ø^P\šXHˆ›İ]\]YH[H]È‹ˆ˜ÛÛXİ[Û‹˜›İ]\]YQØ]]Ø^Q^YXœ›İÈˆ”İ\Ú]HØ^H]İZ]È[İH‹ˆ˜ÛÛXİ[Û‹˜›İ]\]YQØ]]Ø^U]HˆÚÛÜÙHİÈ[İHØ[È^Ü™HH›İ]\]YH‹ˆ˜ÛÛXİ[Û‹˜›İ]\]YQØ]]Ø^U^ˆ‘XXÚœ˜YÜ˜[˜ÙHÛÛ˜Ù\™YÚ[œÈÚ]Û™HXÙKÛ™H[ÛÙ[™Û™H]™[\˜H^\šY[˜ÙKˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™TÙ\šXÙ\Ñ^YXœ›İÈˆ‘İY\İ	ˆ^Xİ]]™HÙ\šXÙ\È‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™TÙ\šXÙ\Õ]Hˆ•İYÚ[İ\Ü\›İ[™]™\H\œš]˜[‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™TÙ\šXÙ\Õ^ˆ’[™\[™[Ù\šXÙ\ÈÜˆÛÛÜ™[˜]Y]Z[ÈÚ][ˆÛ™HİY\İ›ÙÜ˜[Kˆ‹ˆ˜ÛÛXİ[Û‹˜Z\œÜÙ[ÛÛYU]HˆZ\œÜYY]	ˆ\ÜÚ\İ‹ˆ˜ÛÛXİ[Û‹˜Z\œÜÙ[ÛÛYU^ˆ\œš]˜[ÛÛÜ™[˜][Ûˆœ›ÛHHZ\œÜYY][™ÈÚ[ÈHÙ[XİY™ZXÛH[™XØÛÛ[[Ù][Û‹ˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™U˜[œÜÜ]Hˆ‘^Xİ]]™H˜[œÜÜ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™U˜[œÜÜ^ˆ•™ZXÛ\È[™š]™\œÈÛÛÜ™[˜]Y\›İ[™H›ÙÜ˜[KİY\İÛİ[[™™Y™\œ™Y[Z[™Ëˆ‹ˆ˜ÛÛXİ[Û‹›YY][™ÔÙ]\]Hˆ“YY][™È™\\˜][Ûˆ‹ˆ˜ÛÛXİ[Û‹›YY][™ÔÙ]\^ˆ”›ÛÛKÜÜ][]K˜[œÜÜ[™˜XİXØ[YY][™È]Z[ÈÛÛÜ™[˜]Y\›İ[™HYÙ[™Kˆ‹ˆ˜ÛÛXİ[Û‹›Ù™šXÚX[ÚYÕ]Hˆ“Ù™šXÚX[ÚYÈ‹ˆ˜ÛÛXİ[Û‹›Ù™šXÚX[ÚYÕ^ˆHÛÛœÚY\™YÙ[ÛÛYHÜˆÙ™šXÚX[ÚY™\\™Y\›İ[™HØØØ\Ú[Û‹™XÚ\Y[[™\›İ™YY[]Kˆ‹ˆ˜ÛÛXİ[Û‹˜ÛÛ˜ÚY\™ÙU]HˆÛÛ˜ÚY\™ÙHİ\Ü‹ˆ˜ÛÛXİ[Û‹˜ÛÛ˜ÚY\™ÙU^ˆ”˜XİXØ[İY\İİ\Ü™\Ù\˜][ÛœÈ[™ÜXÚX[™\]Y\İÈÛÛÜ™[˜]Y›İYÚÛ™HÚ[ÙˆÛÛXİˆ‹ˆ˜ÛÛXİ[Û‹œ™\]Y\İÙ\šXÙHˆ”™\]Y\İ\ÈÙ\šXÙH‹ˆ˜ÛÛXİ[Û‹œØÙ[X’[\™\İ›İHˆ‘]™\Hœ˜YÜ˜[˜ÙHÛÛ˜Ù\™[XZ[œÈ[ˆ]™[ÜY[[™Ú[™H[››İ[˜ÙYÚ[ˆ]\È™XYKˆ‹ˆ˜ÛÛXİ[Û‹š[\™\İ]Ûˆˆ“›İYHYHÚ[ˆ]˜Z[X›H‹ˆ˜ÛÛXİ[Û‹š[\™\İ›İ\›™^P]Ûˆˆ‘^Ü™Hœ˜YÜ˜[˜ÙH	ˆ™YÚ\İ\ˆ[\™\İ‹ˆ˜ÛÛXİ[Û‹Ø™TÚ[Hˆ”š]˜]Hš\Ú]‹ˆ˜ÛÛXİ[Û‹Ø™TÚ[ˆˆ‘˜XœšXÈÙ[Xİ[Ûˆ‹ˆ˜ÛÛXİ[Û‹Ø™TÚ[Èˆ‘˜\İÛÛÜ™[˜]Y[]™\H‹ˆ˜ÛÛXİ[Û‹˜X˜^XTÚ[Hˆ”š]˜]H\ÜÚ\İ[˜ÙH‹ˆ˜ÛÛXİ[Û‹˜X˜^XTÚ[ˆˆ”Ú^™H[™İ[HÙ[Xİ[Ûˆ‹ˆ˜ÛÛXİ[Û‹˜X˜^XTÚ[ÈˆÛÛÜ™[˜]Y[]™\H‹ˆ˜ÛÛXİ[Û‹™›İÙ\•]Hˆ‘›İÙ\œÈ™Y›Ü™HHİY\İ\œš]™\È‹ˆ˜ÛÛXİ[Û‹™›İÙ\•^ˆH›İ\]Y][™\œÛÛ˜[Ø\™\™H\œ˜[™ÙY]Hİ[ÜˆXØÛÛ[[Ù][Ûˆ™Y›Ü™HHİY\İ8 &\È\œš]˜[ˆ‹ˆ˜ÛÛXİ[Û‹™›İÙ\”Ú[Hˆ\œ˜[™Ù[Y[HØØØ\Ú[Ûˆ‹ˆ˜ÛÛXİ[Û‹™›İÙ\”Ú[ˆˆ”\œÛÛ˜[Y\ÜØYÙHØ\™‹ˆ˜ÛÛXİ[Û‹™›İÙ\”Ú[Èˆ‘[]™\H™Y›Ü™H\œš]˜[‹ˆ˜ÛÛXİ[Û‹œÙ[Xİ[Û“X™[ˆ–[İ\ˆ][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹œÙ[Xİ[Û’][\Èˆš][\È‹ˆ˜ÛÛXİ[Û‹œ™]šY]ÔÙ[Xİ[Ûˆˆ”™]šY]È][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹™X[ÙÕ]Hˆ”™]šY]È[İ\ˆ][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹œ][İQ\ØÛZ[Y\ˆˆ”Ù[™[™ÈH][İH™\]Y\İÙ\È›İÛÛ™š\›H›ÛÚÚ[™Ë^[Y[Üˆ]˜Z[Xš[]Kˆ]™[\˜H™]šY]ÜÈ[Z[™Ë]X[]H[™\œÛÛ˜[^˜][Ûˆ™Y›Ü™H\ÜİZ[™ÈHš[˜[][İ][Û‹ˆ‹ˆ˜ÛÛXİ[Û‹˜ÛX\”Ù[Xİ[ÛˆˆÛX\ˆÙ[Xİ[ÛœÈ‹ˆ˜ÛÛXİœ™\]Y\İY][\Èˆ”Ù[XİY]Z[È[™Ù\šXÙ\È‹ˆ˜ÛÛXİ˜ÛÛXİ[Û‘]Z[Õ]Hˆ›İ]\]YH[™[]™\H]Z[È‹ˆ˜ÛÛXİ™[]™\SØØ][Û“X™[ˆ’İ[Üˆ[]™\HØØ][Ûˆ‹ˆ˜ÛÛXİ™[]™\SØØ][Û”XÙZÛ\ˆˆ’İ[XØÛÛ[[Ù][ÛˆÜˆ™[YH‹ˆ˜ÛÛXİ™[]™\U[YSX™[ˆ”™\]Y\İY[]™\H[YH‹ˆ˜ÛÛXİœ\œÛÛ˜[^˜][Û“X™[ˆ‘İY\İ˜[YKÚYY\ÜØYÙHÜˆÛÛ\[HÙÛÈ‹ˆ˜ÛÛXİœ\œÛÛ˜[^˜][Û”XÙZÛ\ˆˆ“Ü[Û˜[\œÛÛ˜[^˜][Ûˆ]Z[È‹ˆ˜ÛÛXİØ™Q]Z[Õ]Hˆ•Z[Üš[™ÈÙ\šXÙH]Z[È‹ˆ˜ÛÛXİœÙ\šXÙSØØ][Û“X™[ˆ’İ[ÜˆXØÛÛ[[Ù][Ûˆ‹ˆ˜ÛÛXİØ™PÛİ[X™[ˆ“[X™\ˆÙˆØ™\È‹ˆ˜ÛÛXİš\Ú][YSX™[ˆ”™Y™\œ™Yš\Ú][YH‹ˆ˜ÛÛXİœ™\]Z\™Y[]™\SX™[ˆ”™\]Z\™Y[]™\H[YH‹ˆ˜ÛÛXİØ™T™Y™\™[˜ÙSX™[ˆ”™Y™\œ™YÛÛÜˆÜˆ˜XœšXÈ‹ˆ˜ÛÛXİ›Ü[Û˜[XÙZÛ\ˆˆ“Ü[Û˜[‹ˆ˜ÛÛXİ˜X˜^XQ]Z[Õ]HˆX˜^XHÙ\šXÙH]Z[È‹ˆ˜ÛÛXİ˜ÛÛXİš\Ú][YSX™[ˆ”™Y™\œ™YÛÛXİÜˆš\Ú][YH‹ˆ˜ÛÛXİœ™Y™\œ™YÛÛXİX™[ˆ”™Y™\œ™YÛÛXİY]Ù‹ˆ˜ÛÛXİ˜ÛÛXİÚ]Ø\ˆ•Ú]Ğ\‹ˆ˜ÛÛXİ˜ÛÛXİ[XZ[ˆ‘[XZ[‹ˆ˜ÛÛXİœ™Y™\œ™Y™\ÜÛœÙU^ˆ]™[\˜H™\Y\ÈH[XZ[[›\ÜÈ[İH™\]Y\İÚ]Ğ\ÜˆHÛ™HØ[ˆ‹ˆ˜ÛÛXİœÙ[™Y]ÙYÙ[™ˆ”Ù[™[İ\ˆ›ÛÚÚ[™È™\]Y\İšXH‹ˆ˜ÛÛXİœÙ[™Y]Ù^ˆ‘[XZ[\ÈHXZ[ˆ›ÛÚÚ[™ÈÚ[›™[ˆÚ]Ğ\™[XZ[œÈ]˜Z[X›H\ÈHÙXÛÛ™Ü[Û‹ˆ‹ˆ˜ÛÛXİœÙ[™[XZ[ˆ‘[XZ[‹ˆ˜ÛÛXİœÙ[™Ú]Ø\ˆ•Ú]Ğ\‹ˆ˜ÛÛXİ˜ÛÛXİØ[ˆ”Û™HØ[‹ˆ˜ÛÛXİ˜ÛÛXİš\Ú]ˆ’İ[š\Ú]‹ˆ˜ÛÛXİ™›İÙ\‘]Z[Õ]Hˆ‘›İÙ\ˆ[]™\H]Z[È‹ˆ˜ÛÛXİœ™XÚ\Y[X™[ˆ”™XÚ\Y[˜[YH‹ˆ˜ÛÛXİ›ØØØ\Ú[Û“X™[ˆ“ØØØ\Ú[Ûˆ‹ˆ˜ÛÛXİ™›İÙ\”Ú^™SX™[ˆ›İ\]Y]Ú^™H‹ˆ˜ÛÛXİ™›İÙ\”Ú^™T]ZY]ˆ”İXH‹ˆ˜ÛÛXİ™›İÙ\”Ú^™SYY][Hˆ“YY][H‹ˆ˜ÛÛXİ™›İÙ\”Ú^™TÚYÛ˜]\™Hˆ”ÚYÛ˜]\™H‹ˆ˜ÛÛXİ™›İÙ\ÛÛÜœÓX™[ˆ”™Y™\œ™YÛÛÜœÈ‹ˆ˜ÛÛXİ˜Ø\™Y\ÜØYÙSX™[ˆ‘›İÙ\ˆØ\™Y\ÜØYÙH‹ˆ™^\šY[˜Ù\Ë˜ÛÛ\]Q^YXœ›İÈˆÛÛ\]HH^\šY[˜ÙH‹ˆ™^\šY[˜Ù\Ë˜ÛÛ\]TÙXU]Hˆ™XXÚ]Z[È™XYH›ÜˆHÙXH^H‹ˆ™^\šY[˜Ù\Ë˜ÛÛ\]R\İÜšXÕ]HˆHY[[ÜHÙˆ[P˜[Y™^[Û™HØ[È‹ˆ™^\šY[˜Ù\Ë˜ÛÛ\]Q\Ù\]Hˆ•Ø\›H]Z[È›ÜˆHš[˜[YÚ‹ˆ™^\šY[˜Ù\Ë˜ÛÛ\]UZY•]Hˆ”ÙX\ÛÛ˜[ÚYÈœ›ÛHHYÚ[™È‹ˆ™^\šY[˜Ù\Ë˜ÛÛ\]R™YZ]Hˆ”ÙXH[™›ÜÚ[ˆÙ[Xİ[ÛœÈ[ˆÛ™H^H‹ˆ™^\šY[˜Ù\ËšY]ĞÛÛXİ[Ûˆˆ•šY]ÈHÛÛ\]HÛÛXİ[Ûˆ‹ˆ˜ÛÛXİ[Û‹šY]ÔİÜPØ\™ˆ•šY]ÈİÜHØ\™‹ˆ˜ÛÛXİ[Û‹œİÜQX[ÙÑ^YXœ›İÈˆ‘œ˜YÜ˜[˜ÙHØ[\ZYÛˆ‹ˆ˜ÛÛXİ[Û‹œİÜQX[ÙÕ]Hˆ‘œ˜YÜ˜[˜ÙHİÜHØ\™‹ˆ˜ÛÛXİ[Û‹˜ÛÜÙTİÜPØ\™ˆÛÜÙHİÜHØ\™‹ˆ˜ÛÛXİ[Û‹››Ú\•^ˆ”[šÈ\\‹H›XÚË]XHXØÛÜ™[™ÙY\ÛÛÙˆ‹ˆ˜ÛÛXİ[Û‹™[™]^ˆ”[šÈ\\‹˜\ÛZ[™HØ[X˜XÈ[™˜[š[HXœÛÛ]Kˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌÔÚÜˆ“›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌÕ]Hˆ”›ÜÚ[ˆØÚÙ]›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÌÕ^ˆHÛÛ\Xİ›İX›ÛÚÈÚ]]Z[È[œÜ\™YHHÛÛÙ[ˆ›ÜÚ[ˆÚ[™İÜÈÙˆ[P˜[Yˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÍÚÜˆ”İXÚ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÍ]Hˆ[P˜[Y˜XœšXÈİXÚ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİ\İÜšXÍ^ˆHYÚÙZYÚ˜XœšXÈİXÚÚ][ˆ[™\œİ]Y]\›ˆ[œÜ\™YH\İÜšXÈ™YZˆ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYTÚÜˆ“›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYU]Hˆ‘›Ü˜[ØÚÙ]›İX›ÛÚÈ‹ˆ˜ÛÛXİ[Û‹œ›ÙXİZYU^ˆHÛÛ\Xİ›İX›ÛÚÈÚ]HİXH]\›ˆ[œÜ\™YHZYˆ›ÜÙ\Ëˆ‹ˆ˜ÛÛXİ[Û‹™\ØÛİ™\U]Hˆ•ÛÈX\ŞHØ^\ÈÈ[\ˆH›İ]\]YH‹ˆ˜ÛÛXİ[Û‹™\ØÛİ™\U^ˆ‘\ØÛİ™\ˆHÛÛXİ[Ûˆ\›İ[™[İ\ˆ™^^\šY[˜ÙKÜˆÛÈ\™XİHÈH›ÙXİ[İH[™XYHÛ›İËˆ‹ˆ˜ÛÛXİ[Û‹œ]^\šY[˜ÙQ^YXœ›İÈˆ”[›š[™ÈH™]È›İ\›™^H‹ˆ˜ÛÛXİ[Û‹œ]^\šY[˜ÙU]Hˆ‘^Ü™HH^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹œ]^\šY[˜ÙU^ˆ‘^Ü™Hœ˜YÜ˜[˜ÙHÛÛ˜Ù\È[œÜ\™YHHÙXK\İÜšXÈ™YZH\Ù\[™ZY‹ˆ‹ˆ˜ÛÛXİ[Û‹œ]^\šY[˜ÙPXİ[ÛˆˆÚÛÜÙH[ˆ^\šY[˜ÙH‹ˆ˜ÛÛXİ[Û‹œ]›ÙXİ^YXœ›İÈˆ”™]\›š[™ÈÜˆÚÜ[™È\™XİH‹ˆ˜ÛÛXİ[Û‹œ]›ÙXİ]Hˆ‘š[™H›ÙXİ‹ˆ˜ÛÛXİ[Û‹œ]›ÙXİ^ˆ”ÙX\˜ÚH›ÙXİ˜[YHÜˆ™Y™\™[˜ÙHÚ]İ]™YY[™ÈÈ™[Y[X™\ˆÚXÚ^\šY[˜ÙH]™[Û™ÜÈËˆ‹ˆ˜ÛÛXİ[Û‹œ]›ÙXİXİ[Ûˆˆ”İ\ÙX\˜Ú[™È‹ˆ˜ÛÛXİ[Û‹œÙX\˜ÚX™[ˆ”ÙX\˜ÚH›İ]\]YH‹ˆ˜ÛÛXİ[Û‹œÙX\˜ÚXÙZÛ\ˆˆ”›ÙXİ˜[YHÜˆ™Y™\™[˜ÙH‹ˆ˜ÛÛXİ[Û‹˜ÛX\”ÙX\˜ÚˆÛX\ˆ‹ˆ˜ÛÛXİ[Û‹\Qš[\“X™[ˆ”›ÙXİ\H‹ˆ˜ÛÛXİ[Û‹\Qš[\\šXHˆ‘š[\ˆ›İ]\]YHH›ÙXİ\H‹ˆ˜ÛÛXİ[Û‹\P[ˆ[\\È‹ˆ˜ÛÛXİ[Û‹\Qœ˜YÜ˜[˜ÙHˆ‘œ˜YÜ˜[˜Ù\È‹ˆ˜ÛÛXİ[Û‹\P™XXÚˆ™XXÚ\ÜÙ[X[È‹ˆ˜ÛÛXİ[Û‹\QÚYˆ‘ÚYÈ	ˆXØÙ\ÜÛÜšY\È‹ˆ˜ÛÛXİ[Û‹\P›ŞˆÛÛ\]H›Ş\È‹ˆ˜ÛÛXİ[Û‹\TÙ\šXÙHˆ‘İY\İ	ˆ^Xİ]]™HÙ\šXÙ\È‹ˆ˜ÛÛXİ[Û‹™^\šY[˜ÙQš[\“X™[ˆ‘^\šY[˜ÙHÛÛXİ[Ûˆ‹ˆ˜ÛÛXİ[Û‹œ™\İ[Ò[›Èˆœ›İÜÙHHÛÜ›Üˆ›ÙXİ\Kˆ‹ˆ˜ÛÛXİ[Û‹œ™\İ[ÓX™[ˆ›X]Ú[™È][\È‹ˆ˜ÛÛXİ[Û‹˜ÛX\‘š[\œÈˆÛX\ˆ[š[\œÈ‹ˆ˜ÛÛXİ[Û‹™[\U]Hˆ“›ÈX]Ú[™È][\È‹ˆ˜ÛÛXİ[Û‹™[\U^ˆ•H[›İ\ˆÛÜ™ÜˆÛX\ˆÛ™HÙˆHš[\œËˆ‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\‘^YXœ›İÈˆ‘›Üˆ™]\›š[™ÈİY\İÈ‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\•]Hˆ”™\]Y\İHØ[YH][HYØZ[ˆ‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\•^ˆ‘[\ˆH›ÙXİ˜[YHÜˆ™Y™\™[˜ÙH[™]X[]Kˆ]Ú[™HYYÈ[İ\ˆØ]™Y][İH™\]Y\İ›Üˆ]™[\˜HÈ™]šY]Ëˆ‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\”›ÙXİX™[ˆ”›ÙXİ˜[YHÜˆ™Y™\™[˜ÙH‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\”›ÙXİXÙZÛ\ˆˆ”İ\\[™ÈH›ÙXİ˜[YH‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\]ÛˆˆYÈ][İH™\]Y\İ‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\“›İHˆ]˜Z[Xš[]K™\\˜][Ûˆ[YH[™š[˜[]Z[È\™HÛÛ™š\›YYY\ˆ]™[\˜H™]šY]ÜÈH™\]Y\İˆ[İ\ˆÙ[Xİ[ÛœÈİ^HØ]™YÛˆ\È]šXÙH›ÜˆÌ^\Ëˆ‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\‘\œ›ÜˆˆÚÛÜÙHH˜[Y™Y™\™[˜ÙHœ›ÛHHİYÙÙ\İ[ÛœÈÜˆ[\ˆÛ™HX[X[Kˆ‹ˆ˜ÛÛXİ[Û‹œ™[Ü™\”İXØÙ\ÜÈˆYYÈ[İ\ˆØ]™Y™\]Y\İˆ‹ˆ˜ÛÛXİ[Û‹šY]Ñ]Z[Èˆ•šY]È]Z[È‹ˆ˜ÛÛXİ[Û‹™]Z[Ñ^YXœ›İÈˆ‘œ˜YÜ˜[˜ÙHÛÛ˜Ù\‹ˆ˜ÛÛXİ[Û‹˜ÛÜÙQ]Z[ÈˆÛÜÙHœ˜YÜ˜[˜ÙH]Z[È‹ˆ˜ÛÛXİ[Û‹˜]˜Z[Xš[]SX™[ˆ”İ]\È‹ˆ˜ÛÛXİ[Û‹œ™\\˜][Û“X™[ˆ‘]™[ÜY[‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^˜][Û“X™[ˆ“™^İ\‹ˆ˜ÛÛXİ[Û‹˜ÛÛXİ[Û“X™[ˆ•ÛÜ›‹ˆ˜ÛÛXİ[Û‹™]Z[Ñ\ØÛZ[Y\ˆˆ•\Èœ˜YÜ˜[˜ÙHÛÛ˜Ù\\È[ˆ]™[ÜY[[™\È›İY]]˜Z[X›HÈ™\]Y\İÜˆ\˜Ú\ÙKˆ‹ˆ˜ÛÛXİ[Û‹˜ÛÛ[YPœ›İÜÚ[™ÈˆÛÛ[YHœ›İÜÚ[™È‹ˆ˜ÛÛXİ[Û‹œ™\]™[ÜY[ˆ’[ˆ]™[ÜY[È][˜Ú[Z[™ÈÚ[™H[››İ[˜ÙY]\ˆ‹ˆ˜ÛÛXİ[Û‹œ™\›ŞˆÛÛ™š\›YYY\ˆ]X[]H[™\œÛÛ˜[^˜][Ûˆ™]šY]È‹ˆ˜ÛÛXİ[Û‹œ™\›ÙXİˆÛÛ™š\›YYY\ˆ]X[]H[™İØÚÈ™]šY]È‹ˆ˜ÛÛXİ[Û‹œ™\ÙX\ÛÛ˜[ˆÛÛ™š\›YYXØÛÜ™[™ÈÈÙX\ÛÛˆ[™İ\Y\ˆ]˜Z[Xš[]H‹ˆ˜ÛÛXİ[Û‹œ™\Ù\šXÙHˆ”ØÚY[YXØÛÜ™[™ÈÈØØ][Û‹]H[™]˜Z[Xš[]H‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^˜][Û]˜Z[X›Hˆ‘İY\İ˜[YKY\ÜØYÙHÜˆÛÛ\[HY[]HØ[ˆ™H™]šY]ÙY‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^˜][Û”™]šY]ÙYˆ]˜Z[X›HÜ[ÛœÈ\™H™]šY]ÙYÚ]Hš[˜[™\]Y\İ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^˜][ÛY\“][˜Úˆ“][˜Ú[Z[™ÈÚ[™H[››İ[˜ÙYY\ˆ]™[ÜY[ˆ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^˜][Û”Ù\šXÙHˆ•HÙ\šXÙH\È\œ˜[™ÙY\›İ[™HİY\İ8 &\È™\]Z\™[Y[È‹ˆ˜ÛÛXİ[Û‹™Ø]]Ø^R\İÜšXÕ^ˆHœ˜YÜ˜[˜ÙHÛÛ˜Ù\[œÜ\™YH›ÜÚ[ˆÛÛÙİÛ™H[™H]š[™ÈİÜHÙˆ[P˜[Yˆ‹ˆ˜ÛÛXİ[Û‹™Ø]]Ø^TÙXU^ˆHœ˜YÜ˜[˜ÙHÛÛ˜Ù\Ú\YHZ[™\˜[Z\‹Ü[ˆØ]\ˆ[™HØ[HÙˆHš]˜]HÙXH^Kˆ‹ˆ˜ÛÛXİ[Û‹™Ø]]Ø^Q\Ù\^ˆHœ˜YÜ˜[˜ÙHÛÛ˜Ù\›ÜˆHHØ\›]Z[™\˜[Ø[™[™š[˜[YÚÙˆH[™\Ëˆ‹ˆ˜ÛÛXİ[Û‹™Ø]]Ø^UZY•^ˆHœ˜YÜ˜[˜ÙHÛÛ˜Ù\›Üˆ›ÜÙHÙX\ÛÛ‹[İ[Z[ˆZ\ˆ[™HÛİÙ\ˆYÚ[™š]Kˆ‹ˆ˜ÛÛXİ[Û‹™Ø]]Ø^R™YZ^ˆY\ˆZYšYÚ›Ú\ˆ[™™[™]\™H]™[\˜x &\ÈÚYÛ˜]\™Hœ˜YÜ˜[˜ÙHÛÛ˜Ù\Ëˆ‹ˆ™İY\İ›Y]U]HˆU‘S•THİY\İÙ\šXÙ\ÈİYÚ[İY\İ]Z[È‹ˆ™İY\İ›Y]Q\ØÜš\[Ûˆˆ•Z[Üš[™ËX˜^XH[™›Ü˜[\œ˜[™Ù[Y[ÈÛÛÜ™[˜]Y›ÜˆİY\İÈ[ˆ™YZ›İYÚÛ™H]™[\˜HÚ[ÙˆÛÛXİˆ‹ˆ™İY\İš\›Ñ^YXœ›İÈˆ‘İY\İÙ\šXÙ\È‹ˆ™İY\İš\›Õ]Hˆ‘İY\İ]Z[ËİYÚ[H\œ˜[™ÙYˆ‹ˆ™İY\İš\›Ñ\ØÜš\[Ûˆˆ‘œ›ÛHHZ[Üˆš\Ú]È›İÙ\œËÙHÛÛÜ™[˜]H˜XİXØ[]Z[È™Y›Ü™H\œš]˜[[™\š[™ÈHİ^H›İYÚÛ™HÚ[ÙˆÛÛXİˆ‹ˆ™İY\İš\›Ğ]Ûˆˆ‘^Ü™HİY\İÙ\šXÙ\È‹ˆ™İY\İœÙ\šXÙ\Ñ^YXœ›İÈˆ”\œÛÛ˜[İY\İÙ\šXÙ\È‹ˆ™İY\İœÙ\šXÙ\Õ]Hˆ•™YH˜XİXØ[]Z[ËÛ™HÛX\ˆ™\]Y\İˆ‹ˆ™İY\İœÙ\šXÙ\Õ^ˆ•ÙHÛÛ™š\›HHÜXÚX[\İØØ][Û‹[Z[™È[™˜XİXØ[]˜Z[Xš[]H™Y›Ü™H[HÙ\šXÙH\È\œ˜[™ÙYˆ‹ˆ™İY\İØ™U]Hˆ”Ø]YHØ™HZ[Üš[™È][İ\ˆXØÛÛ[[Ù][Ûˆ‹ˆ™İY\İØ™U^ˆHZ[Üˆš\Ú]ÈHİY\İ›ÜˆYX\İ\™[Y[È[™˜XœšXÈÙ[Xİ[Û‹ˆ[]™\HØ[ˆ™HÛÛÜ™[˜]Y[ˆ[™\ˆİ\œÈÚ[ˆH™\]Y\İ[™]˜Z[Xš[]H\™HÛÛ™š\›YYˆ‹ˆ™İY\İ˜X˜^XU]HˆX˜^XHÙ\šXÙH›ÜˆHİY\İ‹ˆ™İY\İ˜X˜^XU^ˆHÜXÚX[\İš\Ú]ÈHİY\İÈZÙHHYX\İ\™[Y[È™\]Z\™Y›ÜˆHÙ\šXÙKˆH\›ÜšX]HX˜^XH[™[]™\H\™HÛÛÜ™[˜]YÛ›HY\ˆÛÛ™š\›X][ÛÈ›È™XYK[XYHØ][ÙİYH\ÈÚİÛ‹ˆ‹ˆ™İY\İ™›İÙ\•]Hˆ‘›İÙ\œÈ›ÜˆHØØØ\Ú[Ûˆ‹ˆ™İY\İ™›İÙ\•^ˆH›İ\]Y][™\œÛÛ˜[Ø\™\™H\œ˜[™ÙY›Üˆ[ˆ\œš]˜[ÜˆØØØ\Ú[Ûˆ[™[]™\™YÈHİ[XØÛÛ[[Ù][ÛˆÜˆ™[YH]HYÜ™YY[YKˆ‹ˆ™İY\İœ™\]Y\İÙ\šXÙHˆ”™\]Y\İHİY\İÙ\šXÙH‹ˆ™İY\İšY]ÔÙ\šXÙHˆ•šY]ÈİY\İÙ\šXÙH‹ˆ™İY\İœ›ØÙ\ÜÑ^YXœ›İÈˆ’İÈ]ÛÜšÜÈ‹ˆ™İY\İœ›ØÙ\ÜÕ]Hˆ”Ú[\H›ÜˆHİY\İÛX\ˆ›ÜˆHX[Kˆ‹ˆ™İY\İœİ\U]Hˆ”Ú\™HH\ÜÙ[X[È‹ˆ™İY\İœİ\U^ˆ•[\ÈÚÈHÙ\šXÙH\È›Ü‹Ú\™H]\È™YYY[™H™Y™\œ™Y[Z[™Ëˆ‹ˆ™İY\İœİ\•]Hˆ•ÙHÛÛ™š\›HH\œ˜[™Ù[Y[‹ˆ™İY\İœİ\•^ˆ]™[\˜HÛÛ™š\›\ÈHšYÚÜXÚX[\İ™\\˜][Ûˆ[YH[™˜XİXØ[]Z[Ëˆ‹ˆ™İY\İœİ\Õ]Hˆ“Û™HÛÛÜ™[˜]Y[]™\H‹ˆ™İY\İœİ\Õ^ˆ•Hš\Ú]™\\˜][Ûˆ[™[]™\H\™HX[˜YÙY›İYÚÛ™HÚ[ÙˆÛÛXİˆ‹ˆ™İY\İ˜İU]Hˆ•[\ÈÚ]HİY\İ™YYÈ[™Ú[‹ˆ‹ˆ™İY\İ˜İU^ˆ•ÙHÚ[™]šY]ÈH™\]Y\İ[™™]\›ˆÚ]H[Üİ˜XİXØ[\œ˜[™Ù[Y[ˆ‚ˆKˆ˜\ˆˆÂˆ˜ÛÛ[[Û‹œÚÚ\ˆ¶)öa6)öa¶*¶`¶)öa6)va6bH6)öa6av+v*¶b6bH6)öa6,v)¶b¶,öbˆ‹ˆ˜ÛÛ[[Û‹œ[ˆˆ¶)ö-öa6*6.v,v-¶)öbÈ6av+¶-v-v)öbÈ‹ˆ˜ÛÛ[[Û‹™^Ü™Hˆ¶)ö,ö*¶`ö-6`H‹ˆ˜ÛÛ[[Û‹™\ØÛİ™\ˆˆ¶)ö`ö*¶-6`H6)öa6av,¶b¶+È‹ˆ˜ÛÛ[[Û‹œ™\]Y\İˆ¶)ö-öa6*6.v,v-¶)öbÈ6av+¶-v-v)öbÈ‹ˆ˜ÛÛ[[Û‹šY]Ğ[ˆ¶.v,v-ˆ6)öa6`öa‹ˆ˜ÛÛ[[Û‹›X\›“[Ü™Hˆ¶)ö.v,v`H6)öa6av,¶b¶+È‹ˆ˜ÛÛ[[Û‹Ú]Ø\ˆ¶*¶b6)ö-va6.v*6,H6b6)ö*¶,ö)ö*‹ˆ˜ÛÛ[[Û‹˜ÛÛZ[™ÔÛÛÛˆˆ¶`¶,vb¶*6bö)È‹ˆ˜ÛÛ[[Û‹˜]˜Z[X›T™\]Y\İˆ¶av*¶)ö+H6+v,ö*6)öa6-öa6*‹ˆ˜ÛÛ[[Û‹š™YZØ]YHˆ¶+6+ö*v#6)öa6avava6`ö*H6)öa6.v,v*6b¶*H6)öa6,ö.vb6+öb¶*H‹ˆ˜ÛÛ[[Û‹›Ü[Û˜[ˆ¶)ö+¶*¶b¶)ö,vbˆ‹ˆ˜œ˜[™YÛ[™Hˆ¶*¶+6)ö,v*0­È6`v.v)öa6b¶)ö*ˆ0­È6-¶b¶)ö`v*H‹ˆ›˜]‹šÛYHˆ¶)öa6,v)¶b¶,öb¶*H‹ˆ›˜]‹™^\šY[˜Ù\Èˆ¶)öa6*¶+6)ö,v*‹ˆ›˜]‹™]™[Èˆ¶)öa6`v.v)öa6b¶)ö*ˆ‹ˆ›˜]‹œÙ\šXÙ\Èˆ¶)öa6+¶+öav)ö*ˆ‹ˆ›˜]‹˜ÛÛXİ[Ûˆˆ¶)öa6*6b6*¶b¶`È‹ˆ›˜]‹™İY\İÙ\šXÙ\Èˆ¶+¶+öav)ö*ˆ6)öa6-¶b¶b6`H‹ˆ›˜]‹˜X›İ]ˆ¶avaˆ6a¶+vaˆ‹ˆ›˜]‹™Ø[\Hˆ¶)öa6av.v,v-ˆ‹ˆ›˜]‹˜ÛÛXİˆ¶*¶b6)ö-va6av.va¶)È‹ˆ™›Ûİ\‹œİ[[X\Hˆ¶*¶-vavaH6(ö`va¶*¶b6,v)È6,v+va6)ö*ˆ6+¶)ö-v*H6b6`v.v)öa6b¶)ö*ˆ6b6*6,v)öav+6-¶b¶)ö`v*v#6avaˆ6+¶a6)öa6*¶+¶-öb¶-È6av+ö,vb6,È6b6-6,v`ö)ö(H6avb6*öb6`¶b¶aˆ6b6)v+ö)ö,v*H6av*6)ö-6,v*H6a6a6*¶a¶`vb¶,ˆ‹ˆ™›Ûİ\‹™^Ü™Hˆ¶)ö,ö*¶`ö-6`H‹ˆ™›Ûİ\‹˜ÛÛ\[Hˆ¶(ö`va¶*¶b6,v)È‹ˆ™›Ûİ\‹˜ÛÛXİˆ¶)öa6*¶b6)ö-va‹ˆ™›Ûİ\‹™˜\Hˆ¶)öa6(ö,ö)¶a6*H6)öa6-6)ö)¶.v*H‹ˆ™›Ûİ\‹œš]˜XŞHˆ¶,öb¶)ö,ö*H6)öa6+¶-vb6-vb¶*H‹ˆ™›Ûİ\‹\›\Èˆ¶)öa6-6,vb6-È6b6)öa6(ö+v`ö)öaH‹ˆ™›Ûİ\‹œšYÚÈˆ¶+6avb¶.H6)öa6+v`¶b6`ˆ6av+v`vb6.6*Kˆ‹ˆ™›Ûİ\‹›ØØ][Ûˆˆ¶+6+ö*v#6)öa6avava6`ö*H6)öa6.v,v*6b¶*H6)öa6,ö.vb6+öb¶*H‹ˆ™›Ûİ\‹œš[X\Q[XZ[ˆ¶)öa6)ö,ö*¶`v,ö)ö,v)ö*ˆ6)öa6.v)öav*H‹ˆ™›Ûİ\‹œÙXÛÛ™\Q[XZ[ˆ¶*¶+¶-öb¶-È6)öa6*¶+6)ö,v*‹ˆ˜İK]Hˆ¶-v`H6a6a¶)È6)öa6)v+v,ö)ö,È6)öa6,6bˆ6*¶,vb¶+öaÈ6a6aö,6)È6)öa6b¶b6aKˆ‹ˆ˜İK™\ØÜš\[Ûˆˆ¶-6)ö,v`öa¶)È6)öa6ava¶)ö,ö*6*H6b6.v+ö+È6)öa6-¶b¶b6`H6b6)öa6*¶)ö,vb¶+ˆ6)öa6ava¶)ö,ö*6#6b6,öa¶-vavaH6)ö*¶+6)öaöbö)È6b6)ö-¶+vbö)È6b¶a¶)ö,ö*6(öb6a6b6b¶)ö*¶`öaKˆ‹ˆ˜İK˜]Ûˆˆ¶)ö-öa6*6.v,v-¶)öbÈ6av+¶-v-v)öbÈ‹ˆÚ]Ø\›X™[ˆ¶`v*¶+H6b6)ö*¶,ö)ö*‹ˆšÛYK›Y]U]Hˆ¶(ö`va¶*¶b6,v)È6*¶+6)ö,v*6+¶)ö-v*H6b6`v.v)öa6b¶)ö*ˆ6`vbˆ6)öa6,ö.vb6+öb¶*H‹ˆšÛYK›Y]Q\ØÜš\[Ûˆˆ¶*¶+6)ö,v*6+¶)ö-v*H6b6`v.v)öa6b¶)ö*ˆ6-6,v`ö)ö*ˆ6b6-¶b¶)ö`v*H6a6a6-¶b¶b6`H6b6*6,v)öav+6b6+6aö)ö*ˆ6*¶-vavavaö)È6(ö`va¶*¶b6,v)È6`vbˆ6+6+ö*H6b6)öa6,ö.vb6+öb¶*Kˆ‹ˆšÛYKš\›Ñ^YXœ›İÈˆ¶+6+ö*H0­È6)öa6avava6`ö*H6)öa6.v,v*6b¶*H6)öa6,ö.vb6+öb¶*H‹ˆšÛYKš\›Õ]Hˆ¶,v+va6)ö*ˆ6b6ava¶)ö,ö*6)ö*ˆ6*¶cö-vavaH6+vb6a6`Ëˆ‹ˆšÛYKš\›Ñ\ØÜš\[Ûˆˆ¶*¶+6av.H6(ö`va¶*¶b6,v)È6*6b¶aˆ6)öa6*¶+6)ö,v*6)öa6+¶)ö-v*H6b6)v+ö)ö,v*H6)öa6`v.v)öa6b¶)ö*ˆ6b6-¶b¶)ö`v*H6)öa6-¶b¶b6`H6`vbˆ6,v+va6*H6b6)ö+v+ö*H6ava¶,ö`¶*H6*6.va¶)öb¶*v#6avaˆ6)öa6`v`ö,v*H6)öa6(öb6a6bH6+v*¶bH6a6+v.6*H6)öa6b6+ö)ö.Kˆ‹ˆšÛYKš\›Ôš[X\Hˆ¶)ö,ö*¶`ö-6`H6)öa6*¶+6)ö,v*‹ˆšÛYKš\›ÔÙXÛÛ™\Hˆ¶)ö-öa6*6.v,v-¶)öbÈ6av+¶-v-v)öbÈ‹ˆšÛYKœ›ÛÙŒU]Hˆ¶+¶*6,v*H6av+va6b¶*H‹ˆšÛYKœ›ÛÙŒU^ˆ¶av.v,v`v*H6*6+6+ö*H6b6-6*6`ö*H6avaˆ6)öa6-6,v`ö)ö(H6)öa6av+va6b¶b¶aˆ‹ˆšÛYKœ›ÛÙŒ•]Hˆ¶+¶-vb6-vb¶*H6avaˆ6)öa6*6+ö)öb¶*H‹ˆšÛYKœ›ÛÙŒ•^ˆ¶*6,v)öav+6*¶*¶a¶)ö,ö*6av.H6-¶b¶b6`v`È6b6b6*¶b¶,v*H6b¶b6avaöaH‹ˆšÛYKœ›ÛÙŒÕ]Hˆ¶+6aö*H6*¶a¶,öb¶`ˆ6b6)ö+v+ö*H‹ˆšÛYKœ›ÛÙŒÕ^ˆ¶)öa6*¶+¶-öb¶-È6b6)öa6-¶b¶)ö`v*H6b6)öa6*¶-6.¶b¶a6`vbˆ6av,ö)ö,H6b6)ö+v+È‹ˆšÛYKš[›Ñ^YXœ›İÈˆ¶(ö,öa6b6*6(ö`va¶*¶b6,v)È‹ˆšÛYKš[›Õ]Hˆ¶)öa6av`ö)öaˆ6avaöav#6a6`öaˆ6-ö,vb¶`¶*H6.vb¶-6aÈ6(öaöaKˆ‹ˆšÛYKš[›Ñ\ØÜš\[Ûˆˆ¶avaˆ6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6)va6bH6)öa6*6+v,H6b6)öa6-v+v,v)ö(H6b6)öa6-ö)ö)¶`v#6a¶-vavdvaH6(öb¶)öav)öbÈ6+¶)ö-v*H6*¶*¶-6`öa6+vb6a6-¶b¶b6`v`Ëˆ‹ˆšÛYK™^^YXœ›İÈˆ¶)öa6*¶+6)ö,v*‹ˆšÛYK™^]Hˆ¶*¶+6)ö,v*6av+¶*¶)ö,v*H6a6)ö`ö*¶-6)ö`H6+6+ö*H6b6.¶,v*6)öa6avava6`ö*H‹ˆšÛYK™^\ØÜš\[Ûˆˆ¶(ö,v*6.v*H6.vb6)öa6aH6+¶)ö-v*v#6b¶cö-vavdvc¶aH6`öa6c6ava¶aö)È6+vb6a6-¶b¶b6`v`È6b6b6`¶*¶`öaH6b6a¶b6.H6)öa6b¶b6aH6)öa6,6bˆ6*¶,v.¶*6b6aˆ6`vbˆ6-va¶.vaËˆ‹ˆšÛYKœÙXU]Hˆ¶)öa6*6+v,H6)öa6(ö+vav,H‹ˆšÛYKœÙXU^ˆ¶b¶+¶b6*ˆ6+¶)ö-v*H6b6,v+va6)ö*ˆ6.¶,vb6*6b6.¶b6-H6b6ava¶*¶+6.v)ö*ˆ6*6+v,vb¶*Kˆ‹ˆšÛYKš\İÜšXÕ]Hˆ¶+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H‹ˆšÛYKš\İÜšXÕ^ˆ¶+v`ö)öb¶)ö*ˆ6b6.vav)ö,v*H6b6-¶b¶)ö`v*H6av+va6b¶*H6av.H6av,v-6+öb¶aˆ6av,v+¶-vb¶a‹ˆ‹ˆšÛYK™\Ù\]Hˆ¶)öa6-v+v,v)ö(H‹ˆšÛYK™\Ù\^ˆ¶av,ö)ö+v)ö*ˆ6av`v*¶b6+v*H6b6,v+va6)ö*ˆ6+ö`v.H6,v*6)ö.vbˆ6b6+6a6,ö)ö*ˆ6+¶)ö-v*H6aö)ö+ö)¶*Kˆ‹ˆšÛYKZY•]Hˆ¶av,v*¶`v.v)ö*ˆ6)öa6-ö)ö)¶`H‹ˆšÛYKZY•^ˆ¶+6*6)öa6b6b6,v+È6b6*¶`v)ö-vb¶a6av+va6b¶*H6avb6,öavb¶*H6b6(ö+6b6)ö(H6(ö`ö*ö,H6)ö.v*¶+ö)öa6bö)Ëˆ‹ˆšÛYKœÙ\šXÙ\Ñ^YXœ›İÈˆ¶,v+va6*H6)öa6-¶b¶`H‹ˆšÛYKœÙ\šXÙ\Õ]Hˆ¶+ö.vaH6`¶*6a6)öa6b6-vb6a6b6(ö*öa¶)ö(H6)öa6b¶b6aH6b6+v*¶bH6a¶aö)öb¶*H6)öa6*6,va¶)öav+‹ˆšÛYKœÙ\šXÙ\Ñ\ØÜš\[Ûˆˆ¶`v,vb¶`ˆ6*¶a¶,öb¶`ˆ6b6)ö+v+È6b¶+öb¶,H6)öa6*¶`v)ö-vb¶a6a6*¶*¶av`öaˆ6(öa¶*ˆ6avaˆ6)öa6*¶,v`öb¶,ˆ6.va6bH6-¶b¶b6`v`Ëˆ‹ˆšÛYKœÙ\šXÙLU]Hˆ¶)öa6*¶+¶-öb¶-È6b6)öa6`öb6a¶,öb¶,v+‹ˆšÛYKœÙ\šXÙLU^ˆ¶*6,va¶)öav+6b6)ö-¶+H6b6+v+6b6,¶)ö*ˆ6b6)ö`¶*¶,v)ö+v)ö*ˆ6av-vavav*H6+v,ö*6)öa6-¶b¶`Kˆ‹ˆšÛYKœÙ\šXÙL•]Hˆ¶)öa6a¶`¶a6)öa6+¶)ö-H‹ˆšÛYKœÙ\šXÙL•^ˆ¶av,v`ö*6)ö*ˆ6b6,ö)ö)¶`¶b6aˆ6ava¶)ö,ö*6b6aˆ6a6a6av+6avb6.v*H6b6av,ö)ö,H6)öa6*6,va¶)öav+ˆ‹ˆšÛYKœÙ\šXÙLÕ]Hˆ¶av,v-6+öb6aˆ6av,v+¶-vb6aˆ‹ˆšÛYKœÙ\šXÙLÕ^ˆ¶av,v-6+öb6aˆ6*6.v+ö*H6a6.¶)ö*ˆ6b¶*¶aH6)ö+¶*¶b¶)ö,vaöaH6+v,ö*6)öa6*¶+6,v*6*H6b6)öa6-¶b¶b6`Kˆ‹ˆšÛYKœÙ\šXÙM]Hˆ¶-¶b¶)ö`v*H6)öa6-¶b¶b6`H‹ˆšÛYKœÙ\šXÙM^ˆ¶*¶a¶,öb¶`ˆ6)öa6b6-vb6a6b6)öa6b6,v+È6b6)öa6*¶,öa6b¶aH6a6a6`va¶+ö`ˆ6b6)öa6+ö.vaH6)öa6.vava6bˆ6)öa6-6+¶-vb‹ˆ‹ˆšÛYK™]™[Ñ^YXœ›İÈˆ¶)öa6`v.v)öa6b¶)ö*ˆ‹ˆšÛYK™]™[Õ]Hˆ¶`v.v)öa6b¶)ö*ˆ6-6,v`ö)ö*ˆ6b6ava¶)ö,ö*6)ö*ˆ6+¶)ö-v*H6a6aö)È6aö+ö`H6b6)ö-¶+H‹ˆšÛYK™]™[Ñ\ØÜš\[Ûˆˆ¶avaˆ6)öa6)ö+6*¶av)ö.v)ö*ˆ6)öa6*¶a¶`vb¶,6b¶*H6b6*6,v)öav+6)öa6`v,v`ˆ6)va6bH6)öa6*¶+6av.v)ö*ˆ6)öa6+¶)ö-v*H6.va6bH6)öa6*6+v,v#6a¶a¶,ö`ˆ6)öa6avb6`¶.H6b6)öa6avb6,v+öb¶aˆ6b6+v,v`ö*H6)öa6-¶b¶b6`H6b6)öa6*¶a¶`vb¶,6)öa6avb¶+ö)öa¶b‹ˆ‹ˆšÛYK™]™[Ğ]Ûˆˆ¶)ö,ö*¶`ö-6`H6)öa6`v.v)öa6b¶)ö*ˆ‹ˆšÛYK˜ÛÛXİ[Û‘^YXœ›İÈˆ¶*6b6*¶b¶`È6(ö`va¶*¶b6,v)È‹ˆšÛYK˜ÛÛXİ[Û•]Hˆ¶*¶-vb6,v)ö*ˆ6.v-ö,vb¶*H6b¶-vb6.¶aö)È6`öa6.v)öa6aH‹ˆšÛYK˜ÛÛXİ[Û‘\ØÜš\[Ûˆˆ¶b¶.v,v-ˆ6)öa6*6b6*¶b¶`È6+v)öa6b¶bö)È6*¶-vb6,v)ö*ˆ6.v-ö,vb¶*H6`¶b¶+È6)öa6*¶-öb6b¶,Kˆ6b6*¶*6`¶bH6+¶+öav)ö*ˆ6)öa6-¶b¶b6`H6`vbˆ6av,ö)ö,H6av,ö*¶`¶a6+ö)ö+¶a6+¶+öav)ö*ˆ6)öa6-¶b¶b6`Kˆ‹ˆšÛYK˜ÛÛXİ[Û]Ûˆˆ¶+ö+¶b6a6)öa6*6b6*¶b¶`È‹ˆšÛYKÚQ^YXœ›İÈˆ¶a6av)ö,6)È6(ö`va¶*¶b6,v)È‹ˆšÛYKÚU]Hˆ¶*¶-6.¶b¶a6av+va6bˆ6*6.va¶)öb¶*H6)öa6av-¶b¶`H6a6a6*¶`v)ö-vb¶a‹ˆšÛYKÚQ\ØÜš\[Ûˆˆ¶a¶,v)ö+6.H6`öa6+¶-ö*H6avaˆ6ava¶.6b6,H6)öa6-¶b¶`H6b6a¶+öb¶,vaö)È6*6)öaö*¶av)öaH6.vava6bˆ6.va6bH6(ö,v-ˆ6)öa6b6)ö`¶.Kˆ‹ˆšÛYKÚLU]Hˆ¶av+¶-v-v*H6b6a6b¶,ö*ˆ6+6)öaö,¶*H‹ˆšÛYKÚLU^ˆ¶*¶*¶.¶b¶,H6)öa6+¶-ö*H6+v,ö*6)öa6-¶b¶`H6b6)öa6ava¶)ö,ö*6*H6b6)öa6*¶b6`¶b¶*ˆ6b6)öa6b6*¶b¶,v*H6)öa6av`v-¶a6*Kˆ‹ˆšÛYKÚL•]Hˆ¶)öa6+¶-vb6-vb¶*H6b6)öa6aö+öb6(H‹ˆšÛYKÚL•^ˆ¶+¶b¶)ö,v)ö*ˆ6+¶)ö-v*H6b6*¶a¶,öb¶`ˆ6av*¶+v`v.6a6a6.v)ö)¶a6)ö*ˆ6b6)öa6*¶a¶`vb¶,6b¶b¶aˆ6b6-¶b¶b6`H’Tˆ‹ˆšÛYKÚLÕ]Hˆ¶b6-¶b6+H6*¶-6.¶b¶a6bˆ‹ˆšÛYKÚLÕ^ˆ¶*6,va¶)öav+6av+v+ö+È6b6av,ö)6b6a6b¶)ö*ˆ6av)6`ö+ö*H6b6a¶`¶-ö*H6*¶b6)ö-va6b6)ö+v+ö*Kˆ‹ˆ™^\šY[˜Ù\Ë›Y]U]Hˆ¶*¶+6)ö,v*6+¶)ö-v*H6`vbˆ6+6+ö*H6b6)öa6,ö.vb6+öb¶*H6(ö`va¶*¶b6,v)È‹ˆ™^\šY[˜Ù\Ë›Y]Q\ØÜš\[Ûˆˆ¶)ö`ö*¶-6`H6*¶+6)ö,v*6)öa6*6+v,H6b6)öa6,ö)ö.v*H6)öa6,6aö*6b¶*H6b6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6b6)öa6-v+v,v)ö(H6b6)öa6-ö)ö)¶`H6b6b¶b6aH6+6+ö*H6)öa6av*¶`ö)öava6avaˆ6(ö`va¶*¶b6,v)Ëˆ‹ˆ™^\šY[˜Ù\Ëš\›Ñ^YXœ›İÈˆ¶,v+va6)ö*ˆ6+¶)ö-v*H‹ˆ™^\šY[˜Ù\Ëš\›Õ]Hˆ¶*¶+6)ö,v*6*¶+vava6,vb6+H6)öa6av`ö)öa‹ˆ‹ˆ™^\šY[˜Ù\Ëš\›Ñ\ØÜš\[Ûˆˆ¶)ö`ö*¶-6`H6)öa6*6+v,H6)öa6(ö+vav,H6b6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6b6)öa6-v+v,v)ö(H6b6)öa6-ö)ö)¶`H6b6*6,v)öav+6+6+ö*H6)öa6av*¶`ö)öava6*H6*6)vb¶`¶)ö.H6b¶a¶)ö,ö*6)öa6-¶b¶b6`H6b6)öa6b6`¶*‹ˆ‹ˆ™^\šY[˜Ù\Ëš[›Ñ^YXœ›İÈˆ¶av-vavav*H6+vb6a6)öa6-¶b¶`H‹ˆ™^\šY[˜Ù\Ëš[›Õ]Hˆ¶)ö*6+ö(È6*6)öa6av`ö)öa¶#6b6,öa¶*6a¶bˆ6)öa6b¶b6aH6avaˆ6+vb6a6aËˆ‹ˆ™^\šY[˜Ù\Ëš[›Õ^ˆ¶b¶av`öaˆ6+v+6,ˆ6`öa6*¶+6,v*6*H6av,ö*¶`¶a6*H6(öb6+öav+6aö)È6`vbˆ6*6,va¶)öav+6(öb6,ö.H6b¶-6ava6)öa6a¶`¶a6b6)öa6av,v-6+öb¶aˆ6b6)öa6av-ö)ö.vaH6b6)öa6-¶b¶)ö`v*H6b6)öa6(öa¶-6-ö*H6)öa6)ö+¶*¶b¶)ö,vb¶*Kˆ‹ˆ™^\šY[˜Ù\ËœÙXU]Hˆ¶*¶+6)ö,v*6)öa6*6+v,H6)öa6(ö+vav,H‹ˆ™^\šY[˜Ù\ËœÙXU^ˆ¶-v*6)ö+H6av-6,v`ˆ6.va6bH6)öa6av)ö(H6b6(ö`v`ˆ6av`v*¶b6+H6b6b¶b6aH6`vb6`ˆ6,ö-ö+H6)öa6*6+v,H6(öb6*¶+v*¶aËˆ6a¶+¶*¶)ö,H6)öa6`¶)ö,v*6b6)öa6*¶b6`¶b¶*ˆ6b6)öa6+¶+öav)ö*ˆ6)öa6ava¶)ö,ö*6*H6a6a6av+6avb6.v*Kˆ‹ˆ™^\šY[˜Ù\ËœÙXR][LHˆ¶,v+va6)ö*ˆ6b¶+¶b6*ˆ6+¶)ö-v*H‹ˆ™^\šY[˜Ù\ËœÙXR][Lˆˆ¶)öa6,ö)ö.v*H6)öa6,6aö*6b¶*Nˆ6,v+va6*H6`¶)ö,v*6a6av+ö*H6,ö)ö.v*H6b6`¶*ˆ6)öa6.¶,vb6*‹ˆ™^\šY[˜Ù\ËœÙXR][LÈˆ¶)öa6.¶b6-H6b6)öa6,öa¶b6,v`öa6b¶a¶+‹ˆ™^\šY[˜Ù\ËœÙXR][Mˆ¶(öb¶)öaH6)öa6-6)ö-ö)ˆ6b6)öa6ava¶*¶+6.v)ö*ˆ‹ˆ™^\šY[˜Ù\ËœÙXUYÌHˆ¶)öa6(ö,¶b6)ö+‹ˆ™^\šY[˜Ù\ËœÙXUYÌˆˆ¶)öa6.v)ö)¶a6)ö*ˆ‹ˆ™^\šY[˜Ù\ËœÙXUYÌÈˆ¶)öa6av+6avb6.v)ö*ˆ6)öa6+¶)ö-v*H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕ]Hˆ¶+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕ^ˆ¶+6b6a6*H6+¶)ö-v*H6`vbˆ6)öa6*6a6+È6b¶`¶b6+öaö)È6av,v-6+È6av,v+¶-H6b¶,v*6-È6*6b¶aˆ6.vav)ö,v*H6)öa6av+öb¶a¶*H6b6(öaöa6aö)È6b6+v`ö)öb¶)ö*¶aö)Ëˆ‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][LHˆ¶av,v-6+öb6aˆ6av,v+¶-vb6aˆ6*6.v+ö*H6a6.¶)ö*ˆ‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][Lˆˆ¶.vav)ö,v*H6)öa6,vb6)ö-6b¶aˆ6b6)öa6+v`ö)öb¶)ö*ˆ6)öa6av+va6b¶*H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][LÈˆ¶)öa6`¶aöb6*H6)öa6.v,v*6b¶*H6b6)öa6*¶av,H6b6av+v-ö)ö*ˆ6*¶,v)ö*öb¶*H6av+¶*¶)ö,v*H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÒ][Mˆ¶)öa6a¶`¶a6b6)öa6.v-6)ö(H6)öa6*6+v,vbˆ6av*¶)ö+v)öaˆ6`ö+¶b¶)ö,v)ö*ˆ6)v-¶)ö`vb¶*H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕYÌHˆ¶)öa6*ö`¶)ö`v*H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕYÌˆˆ¶)öa6.vav)ö,v*H‹ˆ™^\šY[˜Ù\Ëš\İÜšXÕYÌÈˆ¶)öa6,¶b6)ö,H6a6(öb6a6av,v*H‹ˆ™^\šY[˜Ù\Ë™\Ù\]Hˆ¶*¶+6)ö,v*6)öa6-v+v,v)ö(H‹ˆ™^\šY[˜Ù\Ë™\Ù\^ˆ¶*¶+6,v*6*H6-v+v,v)öb6b¶*H6+¶)ö-v*H6*¶*¶-6`öa6+vb6a6`ö*ö*6)öaˆ6,vava6b¶*H6b6)ö,ö.v*H6b6av,ö)ö,H6+ö`v.H6,v*6)ö.vbˆ6av+¶*¶)ö,H6b\İYÚ6b6)öa6-¶b¶)ö`v*H6)öa6,ö.vb6+öb¶*Kˆ‹ˆ™^\šY[˜Ù\Ë™\Ù\][LHˆ¶av,ö)ö,v)ö*ˆ6+ö`v.H6,v*6)ö.vbˆ6*6b¶aˆ6`ö*ö*6)öaˆ6,vava6b¶*H‹ˆ™^\šY[˜Ù\Ë™\Ù\][Lˆˆ¶+6a6,ö*H6b6-¶b¶)ö`v*H6+¶)ö-v*H‹ˆ™^\šY[˜Ù\Ë™\Ù\][LÈˆ¶*¶,v*¶b¶*6)ö*ˆ6)öa6.v-6)ö(H‹ˆ™^\šY[˜Ù\Ë™\Ù\][Mˆ¶*6,v)öav+6a6a6av+6avb6.v)ö*ˆ6)öa6-v.¶b¶,v*H‹ˆ™^\šY[˜Ù\Ë™\Ù\YÌHˆ¶`ö*ö*6)öaˆ6,vava6b¶*H6b6)öa6.¶,vb6*‹ˆ™^\šY[˜Ù\Ë™\Ù\YÌˆˆ¶av+6avb6.v)ö*ˆ6-v.¶b¶,v*H‹ˆ™^\šY[˜Ù\Ë™\Ù\YÌÈˆ¶ava¶)ö,ö*6)ö*ˆ6+¶)ö-v*H‹ˆ™^\šY[˜Ù\ËZY•]Hˆ¶,v+va6)ö*ˆ6)öa6-ö)ö)¶`H‹ˆ™^\šY[˜Ù\ËZY•^ˆ¶+6*6)öa6)öa6aö+ö)È6b6av,¶)ö,v.H6)öa6b6,v+È6`vbˆ6avb6,öavaö)È6b6av+v-ö)ö*ˆ6av+ö,vb6,ö*H6*¶ava¶+H6)öa6-¶b¶`H6b¶b6av)öbÈ6av+¶*¶a6`v)öbËˆ‹ˆ™^\šY[˜Ù\ËZY’][LHˆ¶-ö,v`ˆ6+6*6a6b¶*H6b6)v-öa6)öa6)ö*ˆ‹ˆ™^\šY[˜Ù\ËZY’][Lˆˆ¶av,¶)ö,v.H6)öa6b6,v+È6)öa6avb6,öavb¶*H‹ˆ™^\šY[˜Ù\ËZY’][LÈˆ¶(ö,öb6)ö`ˆ6b6av+v-ö)ö*ˆ6av+va6b¶*H6avb6,öavb¶*H‹ˆ™^\šY[˜Ù\ËZY’][Mˆ¶av-ö)ö.vaH6b6av`¶)öaöcH6av+¶*¶)ö,v*H‹ˆ™^\šY[˜Ù\ËZY•YÌHˆ¶b¶b6aH6`ö)öava‹ˆ™^\šY[˜Ù\ËZY•YÌˆˆ¶avb6,öavb¶*H‹ˆ™^\šY[˜Ù\ËZY•YÌÈˆ¶)öa6-ö*6b¶.v*H‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™Q^YXœ›İÈˆ¶*¶+6)ö,v*6+6+ö*H6)öa6avavb¶,¶*H‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™U]Hˆ¶(ö`v`ö)ö,H6*6,öb¶-ö*H6*6,6`ö,vbH6avavb¶,¶*H‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™U^ˆ¶b¶av`öaˆ6a6*6,v)öav+6a¶)È6)öa6avavb¶,¶*H6(öaˆ6*¶+6av.H6)öa6*ö`¶)ö`v*H6b6)öa6*6+v,H6b6)öa6-ö.v)öaH6b6)öa6-¶b¶)ö`v*H6+öb6aˆ6(öaˆ6b¶-v*6+H6)öa6b¶b6aH6av,¶+ö+vavbö)Ëˆ‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LU]Hˆ¶avaˆ6)öa6*6+v,H6)va6bH6)öa6*6a6+È‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LU^ˆ¶.6aöb¶,v*H6`vbˆ6)öa6ava¶*¶+6.v#6b6*¶b6`¶`H6b6`¶*ˆ6)öa6.¶,vb6*6`vbˆ6a¶)ö+öbˆ6+6+ö*H6a6a6b¶+¶b6*¶#6b6+6b6a6*H6av,v+¶-v*H6`vbˆ6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*Kˆ‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™L•]Hˆ¶avaˆ6)öa6*6+v,H6)va6bH6)öa6-v+v,v)ö(H‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™L•^ˆ¶-v*6)ö+H6.va6bH6)öa6,ö)ö+va6b6+6a6,ö*H6-v+v,v)öb6b¶*H6+¶)ö-v*H6av.H6)öa6-¶b6(H6)öa6(ö+¶b¶,Kˆ‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LÕ]Hˆ¶b¶b6aH6+6+ö*H6)öa6av*¶`ö)öava‹ˆ™^\šY[˜Ù\ËœÚYÛ˜]\™LÕ^ˆ¶b¶b6aH6av*¶b6)ö,¶aˆ6b¶+6av.H6)öa6av+öb¶a¶*H6b6)öa6*ö`¶)ö`v*H6b6)öa6-ö.v)öaH6b6)öa6b6)ö+6aö*H6)öa6*6+v,vb¶*Kˆ‹ˆ™^\šY[˜Ù\Ëœ™\]Y\İ]Hˆ¶aöa6*¶,v.¶*6`vbˆ6+öav+6(ö`ö*ö,H6avaˆ6*¶+6,v*6*v'È‹ˆ™^\šY[˜Ù\Ëœ™\]Y\İ^ˆ¶(ö,v,öa6a6a¶)È6.v+ö+È6)öa6-¶b¶b6`H6b6)öa6b6`¶*ˆ6)öa6av*¶)ö+H6b6,öa¶`¶*¶,v+H6av,ö)ö,vbö)È6av*¶b6)ö,¶a¶bö)Ëˆ‹ˆ™]™[Ë›Y]U]Hˆ¶`v.v)öa6b¶)ö*ˆ6)öa6-6,v`ö)ö*ˆ6b6)öa6ava¶)ö,ö*6)ö*ˆ6)öa6+¶)ö-v*H6`vbˆ6+6+ö*H6(ö`va¶*¶b6,v)È‹ˆ™]™[Ë›Y]Q\ØÜš\[Ûˆˆ¶*¶a¶,öb¶`ˆ6`v.v)öa6b¶)ö*ˆ6)öa6-6,v`ö)ö*ˆ6b6)öa6)ö+6*¶av)ö.v)ö*ˆ6)öa6*¶a¶`vb¶,6b¶*H6b6*6,v)öav+6)öa6`v,v`ˆ6b6)öa6ava¶)ö,ö*6)ö*ˆ6)öa6+¶)ö-v*H6b6)ö,ö*¶-¶)ö`v*H6-¶b¶b6`H’Tˆ‹ˆ™]™[Ëš\›Ñ^YXœ›İÈˆ¶)v+ö)ö,v*H6)öa6`v.v)öa6b¶)ö*ˆ‹ˆ™]™[Ëš\›Õ]Hˆ¶`v.v)öa6b¶)ö*ˆ6*¶cö+ö)ö,H6avaˆ6(öb6a6`v`ö,v*H6+v*¶bH6b6-vb6a6)öa6-¶b¶b6`Kˆ‹ˆ™]™[Ëš\›Ñ\ØÜš\[Ûˆˆ¶*¶+¶-ö-È6(ö`va¶*¶b6,v)È6b6*¶a¶`v,6`v.v)öa6b¶)ö*ˆ6)öa6-6,v`ö)ö*ˆ6b6)öa6ava¶)ö,ö*6)ö*ˆ6)öa6+¶)ö-v*H6b6*6,v)öav+6)öa6-¶b¶b6`H6-¶avaˆ6+¶-ö*H6*¶-6.¶b¶a6b6)ö+v+ö*H6b6)ö-¶+v*Kˆ‹ˆ™]™[Ëš[›Ñ^YXœ›İÈˆ¶avaˆ6)öa6`v`ö,v*H6)va6bH6)öa6*¶a¶`vb¶,‹ˆ™]™[Ëš[›Õ]Hˆ¶)öa6`v.v)öa6b¶*H6a6+v.6*H6b6)ö+v+ö*v#6a6`öaˆ6,v+va6*H6)öa6-¶b¶`H6*¶*6+ö(È6`¶*6a6aö)Ëˆ‹ˆ™]™[Ëš[›Õ^ˆ¶a¶b6+vdv+È6)öa6aö+ö`H6b6)öa6avb6`¶.H6b6)öa6*¶b6`¶b¶*ˆ6b6)öa6-¶b¶)ö`v*H6b6)öa6avb6,v+öb¶aˆ6b6+v,v`ö*H6)öa6*¶a¶`vb¶,6+v*¶bH6b¶+¶+öaH6`öa6+6,¶(H6)öa6ava¶)ö,ö*6*Kˆ‹ˆ™]™[Ë˜ÛÜœÜ˜]Q^YXœ›İÈˆ¶`v.v)öa6b¶)ö*ˆ6)öa6-6,v`ö)ö*ˆ‹ˆ™]™[Ë˜ÛÜœÜ˜]U]Hˆ¶*¶a¶`vb¶,6`v.v)öa6b¶)ö*ˆ6)öa6-6,v`ö)ö*ˆ‹ˆ™]™[Ë˜ÛÜœÜ˜]U^ˆ¶a¶+öb¶,H6*¶a¶`vb¶,6)öa6)ö+6*¶av)ö.v)ö*ˆ6)öa6*¶a¶`vb¶,6b¶*H6b6+v`va6)ö*ˆ6)öa6*¶`ö,vb¶aH6b6*6,v)öav+6)öa6`v,v`ˆ6b6)ö,ö*¶`¶*6)öa6)öa6b6`vb6+È6b6*¶`v)ö-vb¶a6aö)È6)öa6avb¶+ö)öa¶b¶*Kˆ‹ˆ™]™[Ëœš]˜]Q^YXœ›İÈˆ¶ava¶)ö,ö*6)ö*ˆ6+¶)ö-v*H‹ˆ™]™[Ëœš]˜]U]Hˆ¶)öa6ava¶)ö,ö*6)ö*ˆ6)öa6+¶)ö-v*H‹ˆ™]™[Ëœš]˜]U^ˆ¶(ö.vb¶)ö+È6avb¶a6)ö+È6b6,6`ö,vb¶)ö*ˆ6,öa¶b6b¶*H6b6*¶+6av.v)ö*ˆ6.v)ö)¶a6b¶*H6b6)ö+v*¶`v)öa6)ö*ˆ6-v.¶b¶,v*H6*¶cö-vavaH6+vb6a6)öa6av`ö)öaˆ6b6)öa6-¶b¶b6`Kˆ‹ˆ™]™[Ëš\]Hˆ¶)ö,ö*¶-¶)ö`v*H6`ö*6)ö,H6)öa6-¶b¶b6`H6b6)öa6b6`vb6+È‹ˆ™]™[Ëš\^ˆ¶*¶a¶,öb¶`ˆ6)öa6b6-vb6a6b6)öa6a¶`¶a6b6+ö.vaH6)öa6)v`¶)öav*H6b6)öa6*6,v)öav+6)öa6+¶)ö-v*H6b6)öa6.va¶)öb¶*H6*6)öa6-¶b¶`H6*6+¶-vb6-vb¶*Kˆ‹ˆ™]™[ËX[U]Hˆ¶*6,v)öav+6)öa6`v,v`ˆ‹ˆ™]™[ËX[U^ˆ¶(öa¶-6-ö*H6*¶cö-vavaH6b6`v`ˆ6(öaö+ö)ö`H6)öa6`v,vb¶`ˆ6b6.v+ö+È6)öa6av-6)ö,v`öb¶aˆ6b6*6b¶)¶*H6ava¶)ö,ö*6*H6+¶)ö,v+6av`ö)öaˆ6)öa6.vava6)öa6av.v*¶)ö+Ëˆ‹ˆ™]™[Ë\\Ñ^YXœ›İÈˆ¶av)È6)öa6,6bˆ6a¶a¶,ö`¶aÈ‹ˆ™]™[Ë\\Õ]Hˆ¶-vb¶.¶*H6.vava6b¶*H6a6`öa6aö+ö`H‹ˆ™]™[Ë\LU]Hˆ¶)öa6)ö+6*¶av)ö.v)ö*ˆ6)öa6*¶a¶`vb¶,6b¶*H‹ˆ™]™[Ë\LU^ˆ¶avb6`¶.H6ava¶)ö,ö*6b6*¶+6aöb¶,¶)ö*ˆ6)öa6)ö+6*¶av)ö.H6b6)öa6-¶b¶)ö`v*H6b6)öa6a¶`¶a6-¶avaˆ6*6,va¶)öav+6b6)ö+v+Ëˆ‹ˆ™]™[Ë\L•]Hˆ¶.v-6)ö(H6)öa6.va6)ö`¶)ö*ˆ6b6)öa6)ö+6*¶av)ö.v)ö*ˆ6)öa6*¶a¶`vb¶,6b¶*H‹ˆ™]™[Ë\L•^ˆ¶)ö+¶*¶b¶)ö,H6)öa6avb6`¶.H6b6)ö,ö*¶`¶*6)öa6)öa6-¶b¶b6`H6b6*¶,v*¶b¶*6)öa6+6a6,ö)ö*ˆ6b6)öa6-¶b¶)ö`v*H6b6)öa6a¶`¶aˆ‹ˆ™]™[Ë\LÕ]Hˆ¶)öa6*¶`ö,vb¶aH6b6ava¶)ö,ö*6)ö*ˆ6)öa6-6,v`ö*H‹ˆ™]™[Ë\LÕ^ˆ¶*¶`ö,vb¶aH6)öa6avb6.6`vb¶aˆ6b6)va¶+6)ö,¶)ö*ˆ6)öa6-6,v`ö*H6b6*6.v-ˆ6)öa6ava¶)ö,ö*6)ö*ˆ6)öa6avb6,öavb¶*H6)öa6av+¶*¶)ö,v*Kˆ‹ˆ™]™[Ë\M]Hˆ¶(öb¶)öaH6*6+v,vb¶*H6b6-v+v,v)öb6b¶*H6b6*ö`¶)ö`vb¶*H‹ˆ™]™[Ë\M^ˆ¶b6+6aö)ö*ˆ6+6)öaö,¶*H6*¶cö`öb¶dv`H6a6av+6avb6.v)ö*ˆ6)öa6-6,v`ö)ö*ˆ6av.H6,v)ö+v*H6)öa6-¶b¶b6`H6b6,öaöb6a6*H6)öa6*¶-6.¶b¶aˆ‹ˆ™]™[Ë\MU]Hˆ¶*6a¶)ö(H6)öa6`v,vb¶`ˆ‹ˆ™]™[Ë\MU^ˆ¶(öa¶-6-ö*H6*¶a¶)ö,ö*6aö+ö`H6)öa6`v,vb¶`ˆ6b6`¶+ö,v)ö*¶aÈ6b6)öa6b6`¶*ˆ6)öa6av*¶)ö+Kˆ‹ˆ™]™[Ë\M•]Hˆ¶)öa6-¶b¶b6`H6)öa6+öb6a6b¶b6aˆ‹ˆ™]™[Ë\M•^ˆ¶*6,va¶)öav+6-¶b¶)ö`v*H6av*¶-va6a6a6`v,v`ˆ6b6)öa6-6,v`ö)ö(H6b6)öa6b6`vb6+È6)öa6,¶)ö)¶,v*Kˆ‹ˆ™]™[Ëœ›ØÙ\ÜÑ^YXœ›İÈˆ¶-ö,vb¶`¶*H6)öa6.vava‹ˆ™]™[Ëœ›ØÙ\ÜÕ]Hˆ¶+¶-ö*H6b6)ö+v+ö*H6b6(ö,v*6.H6av,v)ö+va6b6)ö-¶+v*H‹ˆ™]™[Ëœİ\U]Hˆ¶`vaöaH6)öa6-öa6*‹ˆ™]™[Ëœİ\U^ˆ¶a¶`vaöaH6)öa6aö+ö`H6b6)öa6-¶b¶b6`H6b6)öa6*¶)ö,vb¶+ˆ6b6)öa6`¶b¶b6+È6)öa6*¶-6.¶b¶a6b¶*Kˆ‹ˆ™]™[Ëœİ\•]Hˆ¶)öa6*¶-vavb¶aH‹ˆ™]™[Ëœİ\•^ˆ¶a¶-vavaH6)öa6-vb¶.¶*H6b6)öa6avb6`¶.H6b6)öa6+v,v`ö*H6b6)öa6+¶+öav)ö*ˆ6)öa6av,ö)öa¶+ö*Kˆ‹ˆ™]™[Ëœİ\Õ]Hˆ¶)öa6*¶(ö`öb¶+È‹ˆ™]™[Ëœİ\Õ^ˆ¶a¶b6*ö`ˆ6)öa6avb6,v+öb¶aˆ6b6)öa6av,ö)6b6a6b¶)ö*ˆ6b6)öa6+6+öb6a6b6a¶*¶(ö`ö+È6avaˆ6*¶b6)ö`v`¶aö)Ëˆ‹ˆ™]™[Ëœİ\]Hˆ¶)öa6*¶a¶`vb¶,‹ˆ™]™[Ëœİ\^ˆ¶b¶+v)ö`v.6)öa6*¶a¶,öb¶`ˆ6)öa6avb¶+ö)öa¶bˆ6.va6bH6,öa6)ö,ö*H6+v,v`ö*H6)öa6-¶b¶b6`H6b6)öa6`v.v)öa6b¶*Kˆ‹ˆ™]™[Ëœ™\]Y\İ]Hˆ¶*¶+¶-ö-È6a6`v.v)öa6b¶*H6`vbˆ6+6+ö*v'È‹ˆ™]™[Ëœ™\]Y\İ^ˆ¶(ö,v,öa6)öa6*¶)ö,vb¶+ˆ6b6.v+ö+È6)öa6-¶b¶b6`H6b6)öa6aö+ö`H6b6,öa¶`¶*¶,v+H6a¶`¶-ö*H6)öa6*6+ö)öb¶*H6)öa6ava¶)ö,ö*6*Kˆ‹ˆœÙ\šXÙ\Ë›Y]U]Hˆ¶+¶+öav)ö*ˆ6)öa6-¶b¶b6`H6b6)öa6`öb6a¶,öb¶,v+6b6)v+ö)ö,v*H6)öa6b6+6aö)ö*ˆ6(ö`va¶*¶b6,v)È‹ˆœÙ\šXÙ\Ë›Y]Q\ØÜš\[Ûˆˆ¶+¶+öav)ö*ˆ6)öa6*¶+¶-öb¶-È6b6)öa6a¶`¶a6b6)öa6av,v-6+öb¶aˆ6)öa6av,v+¶-vb¶aˆ6b6)öa6)ö,ö*¶`¶*6)öa6b6-¶b¶)ö`v*H6)öa6-¶b¶b6`H6b6)v+ö)ö,v*H6)öa6b6+6aö)ö*ˆ6`vbˆ6)öa6,ö.vb6+öb¶*Kˆ‹ˆœÙ\šXÙ\Ëš\›Ñ^YXœ›İÈˆ¶+¶+öav)ö*ˆ6)öa6-¶b¶b6`H‹ˆœÙ\šXÙ\Ëš\›Õ]Hˆ¶)öa6*¶`v)ö-vb¶a6)öa6av+vb¶-ö*H6*6)öa6*¶+6,v*6*H6*¶-va¶.H6)öa6`v,v`‹ˆ‹ˆœÙ\šXÙ\Ëš\›Ñ\ØÜš\[Ûˆˆ¶b¶*¶aH6*¶a¶,öb¶`ˆ6)öa6*¶+¶-öb¶-È6b6)öa6+v,v`ö*H6b6)öa6)ö,ö*¶`¶*6)öa6b6)öa6+ö.vaH6+vb6a6,v+va6*H6-¶b¶`H6b6)ö+v+ö*Kˆ‹ˆœÙ\šXÙ\Ëš[›Ñ^YXœ›İÈˆ¶-ö*6`¶*H6*¶a¶,öb¶`ˆ6b6)ö+v+ö*H‹ˆœÙ\šXÙ\Ëš[›Õ]Hˆ¶+¶+öav)ö*ˆ6*¶+6.va6)öa6b¶b6aH6(ö`ö*ö,H6,öa6)ö,ö*H‹ˆœÙ\šXÙ\Ëš[›Õ^ˆ¶)ö+v+6,ˆ6+¶+öav*H6ava¶`v,v+ö*H6(öb6+ö.va¶)È6a¶,v*6-È6.v+ö*H6+¶+öav)ö*ˆ6`vbˆ6*6,va¶)öav+6av*¶`ö)öava6a6a6(ö`v,v)ö+È6b6)öa6.v)ö)¶a6)ö*ˆ6b6)öa6-6,v`ö)ö*ˆ6b6)öa6b6`vb6+È6)öa6,¶)ö)¶,v*Kˆ‹ˆœÙ\šXÙ\ËœÌU]Hˆ¶)öa6*¶+¶-öb¶-È6b6)öa6`öb6a¶,öb¶,v+‹ˆœÙ\šXÙ\ËœÌU^ˆ¶+6+ö)öb6a6b6+v+6b6,¶)ö*ˆ6b6)ö`¶*¶,v)ö+v)ö*ˆ6b6*¶,v*¶b¶*6)ö*ˆ6+¶)ö-v*H6*¶*¶b6)ö`v`ˆ6av.H6)öa6-¶b¶`Kˆ‹ˆœÙ\šXÙ\ËœÌ•]Hˆ¶)öa6)ö,ö*¶`¶*6)öa6b6)öa6av,ö)ö.v+ö*H‹ˆœÙ\šXÙ\ËœÌ•^ˆ¶*¶a¶,öb¶`ˆ6)öa6b6-vb6a6b6)öa6)öa¶*¶`¶)öa6)öa6b6)ö-¶+H6avaˆ6)öa6av-ö)ö,H6)va6bH6)öa6av,v`ö*6*H6b6av`¶,H6)öa6)v`¶)öav*Kˆ‹ˆœÙ\šXÙ\ËœÌÕ]Hˆ¶)öa6a¶`¶a6)öa6+¶)ö-H‹ˆœÙ\šXÙ\ËœÌÕ^ˆ¶av,v`ö*6)ö*ˆ6ava¶)ö,ö*6*H6b6,ö)ö)¶`¶b6aˆ6av+v*¶,v`vb6aˆ6b6*¶b6`¶b¶*ˆ6av*¶b6)ö`v`ˆ6av.H6)öa6*6,va¶)öav+ˆ‹ˆœÙ\šXÙ\ËœÍ]Hˆ¶)öa6av,v-6+öb6aˆ6)öa6av,v+¶-vb6aˆ‹ˆœÙ\šXÙ\ËœÍ^ˆ¶)öa6.v,v*6b¶*H6b6)öa6)va¶+6a6b¶,¶b¶*H6b6a6.¶)ö*ˆ6(ö+¶,vbH6+v,ö*6)öa6*¶b6`v,H6b6)ö+v*¶b¶)ö+6)öa6-¶b¶`Kˆ‹ˆœÙ\šXÙ\ËœÍU]Hˆ¶-¶b¶)ö`v*H6)öa6-¶b¶b6`H‹ˆœÙ\šXÙ\ËœÍU^ˆ¶*¶,v*¶b¶*6)ö*ˆ6)öa6b6-vb6a6b6)öa6b6,v+È6b6)öa6*¶,öa6b¶aH6a6a6`va¶+ö`ˆ6b6*¶`v)ö-vb¶a6.vava6b¶*H6av+ö,vb6,ö*Kˆ‹ˆœÙ\šXÙ\ËœÍ•]Hˆ¶)v+ö)ö,v*H6)öa6b6+6aö)ö*ˆ‹ˆœÙ\šXÙ\ËœÍ•^ˆ¶*¶a¶,öb¶`ˆ6av+va6bˆ6a6b6`ö)öa6)ö*ˆ6)öa6,ö`v,H6b6)öa6-6,v`ö)ö*ˆ6b6)öa6b6`vb6+È6b6)öa6*6,v)öav+6)öa6avav*¶+ö*H6a6.v+ö*H6(öb¶)öaKˆ‹ˆœÙ\šXÙ\ËœÍÕ]Hˆ¶*¶`v-vb¶a6)öa6*öb6*‹ˆœÙ\šXÙ\ËœÍÕ^ˆ¶b¶,¶b6,H6)öa6+¶b¶)ö-È6av`¶,H6)v`¶)öav*H6)öa6-¶b¶`H6a6(ö+¶,6)öa6av`¶)ö,ö)ö*ˆ6b6)ö+¶*¶b¶)ö,H6)öa6`¶av)ö-6#6av.H6)öa6*¶,öa6b¶aH6+¶a6)öa6(ö`¶a6avaˆ6,ö)ö.v*H6+v,ö*6)öa6*¶(ö`öb¶+Ëˆ‹ˆœÙ\šXÙ\ËœÎ]Hˆ¶+¶+öav*H6)öa6.v*6)öb¶*H‹ˆœÙ\šXÙ\ËœÎ^ˆ¶*¶,ö)ö.v+È6av+¶*¶-v*H6)öa6-¶b¶`v*H6`vbˆ6)ö+¶*¶b¶)ö,H6)öa6.v*6)öb¶*H6)öa6ava¶)ö,ö*6*H6av.H6*¶,v*¶b¶*6)öa6*¶,öa6b¶aH6)öa6,ö,vb¶.H6+v,ö*6)öa6*¶b6`v,Kˆ‹ˆœÙ\šXÙ\Ëš›İ\›™^Q^YXœ›İÈˆ¶`öb¶`H6*¶.vava‹ˆœÙ\šXÙ\Ëš›İ\›™^U]Hˆ¶-öa6*6b6)ö+v+È6b¶av`öa¶aÈ6,v*6-È6,v+va6*H6)öa6-¶b¶`H6`ö)öava6*H‹ˆœÙ\šXÙ\ËšŒU]Hˆ¶`¶*6a6)öa6b6-vb6a‹ˆœÙ\šXÙ\ËšŒU^ˆ¶*¶(ö`öb¶+È6)öa6*¶`v-¶b¶a6)ö*ˆ6b6)öa6*6,va¶)öav+6b6)öa6+v+6b6,¶)ö*ˆ6b6)öa6a¶`¶aˆ‹ˆœÙ\šXÙ\ËšŒ•]Hˆ¶.va¶+È6)öa6b6-vb6a‹ˆœÙ\šXÙ\ËšŒ•^ˆ¶*¶a¶,öb¶`ˆ6)öa6)ö,ö*¶`¶*6)öa6b6)öa6+v,v`ö*H6b6*¶`v)ö-vb¶a6)öa6b6-vb6aˆ‹ˆœÙ\šXÙ\ËšŒÕ]Hˆ¶(ö*öa¶)ö(H6)öa6)v`¶)öav*H‹ˆœÙ\šXÙ\ËšŒÕ^ˆ¶)v+ö)ö,v*H6)öa6*¶+6)ö,v*6b6)öa6av-ö)ö.vaH6b6)öa6-öa6*6)ö*ˆ6)öa6+¶)ö-v*H6.v*6,H6a¶`¶-ö*H6*¶b6)ö-va6b6)ö+v+ö*Kˆ‹ˆœÙ\šXÙ\Ëš]Hˆ¶`¶*6a6)öa6av.¶)ö+ö,v*H‹ˆœÙ\šXÙ\Ëš^ˆ¶av,v)ö+6.v*H6)öa6*¶,v*¶b¶*6)ö*ˆ6)öa6(ö+¶b¶,v*H6b6)öa6*¶b6-vb¶a6b6)öa6a¶`¶aˆ‹ˆ˜ÛÛXİ[Û‹›Y]U]Hˆ¶*6b6*¶b¶`È6(ö`va¶*¶b6,v)È6*¶-vb6,v)ö*ˆ6.v-ö,vb¶*H6av,ö*¶b6+v)ö*H6avaˆ6)öa6*¶+6)ö,v*‹ˆ˜ÛÛXİ[Û‹›Y]Q\ØÜš\[Ûˆˆ¶)ö,ö*¶`ö-6`H6)öa6*¶-vb6,v)ö*ˆ6)öa6.v-ö,vb¶*H6a6(ö`va¶*¶b6,v)È6*6+v,ö*6)öa6*¶+6,v*6*v&È6b6+6avb¶.vaö)È6`¶b¶+È6)öa6*¶-öb6b¶,H6+v)öa6b¶)öbËˆ‹ˆ˜ÛÛXİ[Û‹š\›Ñ^YXœ›İÈˆ¶*6b6*¶b¶`È6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİ[Û‹š\›Õ]Hˆ¶*¶-vb6,v)ö*ˆ6.v-ö,vb¶*H6*¶a¶-öa6`ˆ6avaˆ6`öa6*¶+6,v*6*Kˆ‹ˆ˜ÛÛXİ[Û‹š\›Ñ\ØÜš\[Ûˆˆ¶)ö,ö*¶`ö-6`H6)öa6)ö*¶+6)öaÈ6)öa6.v-ö,vbˆ6a6`öa6.v)öa6aH6avaˆ6.vb6)öa6aH6(ö`va¶*¶b6,v)Ëˆ6b¶*6`¶bH6`öa6*¶-vb6,H6`¶b¶+È6)öa6*¶-öb6b¶,H6+v*¶bH6)ö.v*¶av)ö+È6.vb¶a¶)ö*¶aÈ6b6avb6,v+öb¶aÈ6b6+6b6+ö*¶aËˆ‹ˆ˜ÛÛXİ[Û‹š[›Ñ^YXœ›İÈˆ¶av,v*¶*6-ö*H6*6)öa6*¶+6,v*6*H‹ˆ˜ÛÛXİ[Û‹š[›Õ]Hˆ¶)ö+¶*¶,H6)öa6*¶+6,v*6*H6b6-6)öaö+È6av)È6b¶,v*¶*6-È6*6aö)È6`v`¶-È‹ˆ˜ÛÛXİ[Û‹š[›Õ^ˆ¶`öa6*¶-vb6,H6.v-ö,vbˆ6b¶,v*¶*6-È6*6`¶-v*H6*¶+6,v*6*¶aÈ6b6av`ö)öa¶aö)È6b6)vb¶`¶)ö.vaö)Ëˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş\Ñ^YXœ›İÈˆ¶*6b6`ö,ö)ö*ˆ6)öa6*¶+6)ö,v*‹ˆ˜ÛÛXİ[Û‹˜›Ş\Õ]Hˆ¶*6b6`ö,ö)ö*ˆ6)öa6*¶+6)ö,v*6`¶,vb¶*6bö)Ëˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞU]Hˆ¶+v`¶b¶*6*H6)öa6*6+v,H6)öa6(ö+vav,H‹ˆ˜ÛÛXİ[Û‹˜›ŞU^ˆ¶av+6avb6.v*H6-6)ö-ö)¶b¶*H6.vava6b¶*H6*¶`¶+öaH6+ö)ö+¶a6)öa6+v`¶b¶*6*H6a¶`v,öaö)È6b6*¶`öb6aˆ6+6)öaö,¶*H6a6a6)ö,ö*¶+¶+ö)öaH6`vbˆ6)öa6b¶b6aH6)öa6*6+v,vb‹ˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş•]Hˆ¶*6b6`ö,È6,vb6-6)öaˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş•^ˆ¶,6)ö`ö,v*H6av+¶*¶-v,v*H6avaˆ6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6b6)öa6+v,v`H6)öa6av+va6b¶*H6b6)öa6-¶b¶)ö`v*H6)öa6,ö.vb6+öb¶*Kˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞÕ]Hˆ¶*6b6`ö,È6(¶+¶,H6-¶b6(H‹ˆ˜ÛÛXİ[Û‹˜›ŞÕ^ˆ¶*¶`v)ö-vb¶a6-v+v,v)öb6b¶*H6av`vb¶+ö*H6*6(öa6b6)öaˆ6+ö)ö`v)¶*H6b6aöb6b¶*H6,ö.vb6+öb¶*H6aö)ö+ö)¶*Kˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş]Hˆ¶*6b6`ö,È6b6,v+È6)öa6-ö)ö)¶`H‹ˆ˜ÛÛXİ[Û‹˜›Ş^ˆ¶av+6avb6.v*H6avb6,öavb¶*H6*¶*¶av+vb6,H6+vb6a6b6,v+È6)öa6-ö)ö)¶`H6b6ava¶*¶+6)ö*ˆ6av+va6b¶*H6avaˆ6avb6,v+öb¶aˆ6avb6*öb6`¶b¶a‹ˆ‹ˆ˜ÛÛXİ[Û‹œ\™[YQ^YXœ›İÈˆ¶av+¶*¶*6,H6.v-öb6,H6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİ[Û‹œ\™[YU]Hˆ¶*¶-vb6,v)ö*ˆ6.v-ö,vb¶*H6`¶b¶+È6)öa6*¶-öb6b¶,H‹ˆ˜ÛÛXİ[Û‹œ\™[YU^ˆ¶*6-ö)ö`¶)ö*ˆ6*¶.v,vb¶`vb¶*H6a6a6.v-öb6,v&È6,ö*¶cö.va6aˆ6*¶`v)ö-vb¶a6)öa6.v*6b6*H6b6)öa6(ö+v+6)öaH6.va¶+È6)ö`ö*¶av)öa6)öa6*¶-öb6b¶,Kˆ‹ˆ˜ÛÛXİ[Û‹œU]Hˆ¶,öbˆ6)v`ö,ö*6b¶,vb¶a¶,È‹ˆ˜ÛÛXİ[Û‹œU^ˆ¶*6,v.¶avb6*¶#6a¶,öb¶aH6)öa6*6+v,v#6b6+¶-6*6-ö)ö`vcKˆ‹ˆ˜ÛÛXİ[Û‹œ•]Hˆ¶,vb6-6)öaˆ‹ˆ˜ÛÛXİ[Û‹œ•^ˆ¶`¶aöb6*H6,ö.vb6+öb¶*v#6(öb6,v)ö`ˆ6*¶b¶aˆ6+¶-¶,v)ö(v#6b6a6*6)öaˆ6+ö)ö`v)‹ˆ‹ˆ˜ÛÛXİ[Û‹œÕ]Hˆ¶a6)ö,ö*ˆ6a6)öb¶*ˆ‹ˆ˜ÛÛXİ[Û‹œÕ^ˆ¶*¶b6*ˆ6)öa6.v,v.v,v#6a6b¶aH6)öa6-v+v,v)ö(v#6b6(ö`öb6,v+È6)öa6,vav)öa6)öa6,ö)ö+¶a¶*Kˆ‹ˆ˜ÛÛXİ[Û‹œ]Hˆ¶*¶+6,v*6*H6)öa6-ö)ö)¶`H‹ˆ˜ÛÛXİ[Û‹œ^ˆ¶b6,v+È6)öa6-ö)ö)¶`v#6-6)öbˆ6(ö+¶-¶,v#6b6av,ö`È6(ö*6b¶-‹ˆ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^YXœ›İÈˆ¶-¶b¶b6`H6)öa6-6,v`ö)ö*ˆ6b6)öa6*¶a¶`vb¶,6b¶b6aˆ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[]Hˆ¶+¶+öav)ö*ˆ6av`vb¶+ö*H6*¶cö+6aö,ˆ6`¶*6a6)öa6b6-vb6a‹ˆ˜ÛÛXİ[Û‹Ø™U]Hˆ¶+¶b¶)ö-È6)va6bH6av`¶,H6)v`¶)öav*¶`È‹ˆ˜ÛÛXİ[Û‹Ø™U^ˆ¶b¶,¶b6,v`È6)öa6+¶b¶)ö-È6a6(ö+¶,6)öa6av`¶)ö,ö)ö*ˆ6b6)ö+¶*¶b¶)ö,H6)öa6`¶av)ö-6#6*öaH6b¶cö,v*¶*6*¶,öa6b¶aH6)öa6*öb6*6+¶a6)öa6(ö`¶a6avaˆ6,ö)ö.v*H6*6.v+È6*¶(ö`öb¶+È6)öa6)vav`ö)öa¶b¶*Kˆ‹ˆ˜ÛÛXİ[Û‹˜X˜^XU]Hˆ¶av+¶*¶-v*H6.v*6)öb¶)ö*ˆ6a6a6-¶b¶`v*H‹ˆ˜ÛÛXİ[Û‹˜X˜^XU^ˆ¶*¶,¶b6,H6av+¶*¶-v*H6)öa6-¶b¶`v*H6a6(ö+¶,6)öa6av`¶)ö,ö)ö*ˆ6)öa6a6)ö,¶av*H6a6a6+¶+öav*v&È6*öaH6*¶cöa¶,ödv`ˆ6)öa6.v*6)ö(v*H6)öa6ava¶)ö,ö*6*H6b6)öa6*¶,öa6b¶aH6*6.v+È6)öa6*¶(ö`öb¶+È6`v`¶-Ëˆ6a6)È6a¶.v,v-ˆ6`ö*¶)öa6b6+6.v*6)öb¶)ö*ˆ6+6)öaö,¶bö)Ëˆ‹ˆ˜ÛÛXİ[Û‹œ™\]Y\İ]Hˆ¶-vavdvaH6-öa6*6.v,v-ˆ6)öa6,ö.v,H6+vb6a6-¶b¶`v`È‹ˆ˜ÛÛXİ[Û‹œ™\]Y\İ^ˆ¶)ö+¶*¶,H6)öa6ava¶*¶+6)ö*ˆ6b6)öa6+¶+öav)ö*ˆ6)öa6+6)öaö,¶*H6*öaH6(ö,v,öa6-öa6*6.v,v-ˆ6,ö.v,H6b6)ö+v+öbö)ö&È6*¶,v)ö+6.H6(ö`va¶*¶b6,v)È6)öa6*¶b6`v,H6b6)öa6*¶b6`¶b¶*ˆ6b6)öa6*¶+¶-vb¶-H6`¶*6a6)v-v+ö)ö,H6)öa6.v,v-‹ˆ‹ˆ˜X›İ]›Y]U]Hˆ¶avaˆ6a¶+vaˆ6(ö`va¶*¶b6,v)È6a6a6*¶+6)ö,v*6b6)öa6`v.v)öa6b¶)ö*ˆ6b6)öa6-¶b¶)ö`v*H‹ˆ˜X›İ]›Y]Q\ØÜš\[Ûˆˆ¶*¶.v,vdv`H6.va6bH6`¶-v*H6(ö`va¶*¶b6,v)È6b6,v)6b¶*¶aö)È6b6,v,ö)öa6*¶aö)È6b6`¶b¶avaö)È6`vbˆ6*¶-vavb¶aH6)öa6*¶+6)ö,v*6b6)öa6`v.v)öa6b¶)ö*ˆ6*6.va¶)öb¶*Kˆ‹ˆ˜X›İ]š\›Ñ^YXœ›İÈˆ¶.vaˆ6(ö`va¶*¶b6,v)È‹ˆ˜X›İ]š\›Õ]Hˆ¶-ö,vb¶`¶*H6av+¶*¶a6`v*H6a6)ö`ö*¶-6)ö`H6)öa6av`ö)öaˆ6b6-va¶)ö.v*H6)öa6a6+v.6)ö*‹ˆ‹ˆ˜X›İ]š\›Ñ\ØÜš\[Ûˆˆ¶(ö`va¶*¶b6,v)È6a6b¶,ö*ˆ6av+6,v+È6,v+va6*v#6*6a6*¶+6)ö,v*6b6`v.v)öa6b¶)ö*ˆ6av-vavav*H6+vb6a6)öa6-¶b¶`H6b6)öa6a6+v.6*H6b6)öa6*¶`v)ö-vb¶a6)öa6*¶bˆ6*¶*6`¶bKˆ‹ˆ˜X›İ]œİÜQ^YXœ›İÈˆ¶*6+ö)öb¶*H6(ö`va¶*¶b6,v)È‹ˆ˜X›İ]œİÜU]Hˆ¶`vbˆ6`öa6av+öb¶a¶*H6*¶b6+6+È6(öav)ö`öaˆ6b¶,¶b6,vaö)È6)öa6+6avb¶.x )ˆ‹ˆ˜X›İ]œİÜU^Hˆ¶a6`öaˆ6aöa¶)ö`È6(öav)ö`öaˆ6a6)È6b¶-va6)va6b¶aö)È6)va6)È6avaˆ6b¶.v,v`H6)öa6-ö,vb¶`ˆ6)öa6+v`¶b¶`¶bˆ6)va6b¶aö)Ëˆ6aöa¶)È6*6+ö(ö*ˆ6(ö`va¶*¶b6,v)Ëˆ‹ˆ˜X›İ]œİÜU^ˆˆ¶a6aH6*¶b6a6+È6(ö`va¶*¶b6,v)È6`ö`v`ö,v*H6a6*6b¶.H6)öa6+6b6a6)ö*ˆ6(öb6*¶a¶.6b¶aH6)öa6`v.v)öa6b¶)ö*ˆ6`v`¶-ö#6*6a6avaˆ6`vaöaH6.vavb¶`ˆ6*6(öaˆ6)öa6*¶+6,v*6*H6a6b¶,ö*ˆ6`vbˆ6)öa6av`ö)öaˆ6`v`¶-ø )ˆ6*6a6`vbˆ6)öa6-ö,vb¶`¶*H6)öa6*¶bˆ6*¶.vb¶-6aÈ6*6aö)Ëˆ6`vbˆ6)öa6*¶`v)ö-vb¶a6)öa6-v.¶b¶,v*v#6`vbˆ6)öa6a6+v.6*H6)öa6ava¶)ö,ö*6*v#6`vbˆ6)öa6)vb¶`¶)ö.H6)öa6-v+vb¶+v#6b6`vbˆ6)öa6-6.vb6,H6)öa6,6bˆ6b¶*6`¶bH6*6.v+È6)öa¶*¶aö)ö(H6)öa6,v+va6*H6(öb6)öa6`v.v)öa6b¶*Kˆ‹ˆ˜X›İ]š\Ú[Û•]Hˆ¶)öa6,v)6b¶*H‹ˆ˜X›İ]š\Ú[Û•^ˆ¶(öaˆ6a¶-v*6+H6av,v+6.vbö)È6avb6*öb6`¶bö)È6a6a6*¶+6)ö,v*6b6)öa6`v.v)öa6b¶)ö*ˆ6)öa6av-vavav*H6*6.va¶)öb¶*H6`vbˆ6)öa6avava6`ö*H6)öa6.v,v*6b¶*H6)öa6,ö.vb6+öb¶*Kˆ‹ˆ˜X›İ]›Z\ÜÚ[Û•]Hˆ¶)öa6,v,ö)öa6*H‹ˆ˜X›İ]›Z\ÜÚ[Û•^ˆ¶-va¶)ö.v*H6,v+va6)ö*ˆ6b6ava¶)ö,ö*6)ö*ˆ6-6+¶-vb¶*H6b6ava¶,ö`¶*H6b6av,v*¶*6-ö*H6*6)öa6av`ö)öaˆ6*6-v+ö`‹ˆ‹ˆ˜X›İ]˜[Y\Ñ^YXœ›İÈˆ¶`¶b¶ava¶)È‹ˆ˜X›İ]˜[Y\Õ]Hˆ¶)öa6av*6)ö+ö)ˆ6)öa6*¶bˆ6*¶`¶`H6+¶a6`H6`öa6*¶+6,v*6*H‹ˆ˜X›İ]ŒU]Hˆ¶)öa6)v*¶`¶)öaˆ‹ˆ˜X›İ]ŒU^ˆ¶`öa6*¶`v-vb¶a6*H6a6aö)È6b6,¶a¶aö)ö#6b6`öa6a6+v.6*H6a6aö)È6`¶b¶av*¶aö)Ëˆ‹ˆ˜X›İ]Œ•]Hˆ¶)öa6(ö-v)öa6*H‹ˆ˜X›İ]Œ•^ˆ¶a¶`¶+öaH6)öa6*¶+6,v*6*H6`öav)È6b¶+6*6(öaˆ6*¶cö.v)ö-6#6*6-v+ö`ˆ6b6.vav`ˆ6*6.vb¶+ö)öbÈ6.vaˆ6)öa6*¶`ö,v)ö,Kˆ‹ˆ˜X›İ]ŒÕ]Hˆ¶)öa6+¶-vb6-vb¶*H‹ˆ˜X›İ]ŒÕ^ˆ¶a6`öa6-¶b¶`H6-ö,vb¶`¶*¶aÈ6)öa6+¶)ö-v*H6`vbˆ6)öa6)ö,ö*¶av*¶)ö.v#6b6a¶+vaˆ6a¶-vavaH6)öa6*¶+6,v*6*H6b6`v`ˆ6,6a6`Ëˆ‹ˆ˜X›İ]]Hˆ¶)öa6+6b6+ö*H‹ˆ˜X›İ]^ˆ¶a¶+¶*¶)ö,H6)öa6(ö`v-¶a6`vbˆ6`öa6.va¶-v,H6a6a¶-¶avaˆ6*¶+6,v*6*H6av*¶`ö)öava6*Kˆ‹ˆ˜X›İ]U]Hˆ¶)öa6)ö*6*¶`ö)ö,H‹ˆ˜X›İ]U^ˆ¶a¶.vb¶+È6*¶`¶+öb¶aH6)öa6b6+6aö)ö*ˆ6b6)öa6*¶+6)ö,v*6b6)öa6`v.v)öa6b¶)ö*ˆ6*6(ö,ö)öa6b¶*6+6+öb¶+ö*H6b6.¶b¶,H6*¶`¶a6b¶+öb¶*Kˆ‹ˆ˜X›İ]•]Hˆ¶)öa6`v-¶b6a‹ˆ˜X›İ]•^ˆ¶a¶*6+v*È6+ö)ö)¶avbö)È6.vaˆ6-ö,v`ˆ6(ö.vav`ˆ6b6(ö`v-¶a6a6)ö`ö*¶-6)ö`H6)öa6av`ö)öa‹ˆ‹ˆ˜X›İ]›[Ù[^YXœ›İÈˆ¶-ö,vb¶`¶*H6.vava6a¶)È‹ˆ˜X›İ]›[Ù[]Hˆ¶-6*6`ö*H6av+va6b¶*H6b6ava¶,ö`ˆ6b6)ö+v+È6av,ö)6b6a‹ˆ˜X›İ]›[Ù[^ˆ¶a¶*¶.v)öb6aˆ6av.H6av,v-6+öb¶aˆ6av,v+¶-vb¶aˆ6b6avb6)ö`¶.H6b6av,¶b6+öbˆ6a¶`¶a6b6`v,v`ˆ6-¶b¶)ö`v*H6b6avb6,v+öb¶aˆ6av*¶+¶-v-vb¶a¶#6b6*¶*6`¶bH6(ö`va¶*¶b6,v)È6a¶`¶-ö*H6)öa6*¶a¶,öb¶`ˆ6)öa6b6)ö+v+ö*H6a6a6*6,va¶)öav+6)öa6av*¶`v`ˆ6.va6b¶aËˆ‹ˆ˜ÛÛXİ›Y]U]Hˆ¶*¶b6)ö-va6av.H6(ö`va¶*¶b6,v)È6+¶-ö-È6a6*¶+6,v*6*H6(öb6`v.v)öa6b¶*H‹ˆ˜ÛÛXİ›Y]Q\ØÜš\[Ûˆˆ¶*¶b6)ö-va6av.H6(ö`va¶*¶b6,v)È6`vbˆ6+6+ö*H6a6*¶+¶-öb¶-È6*¶+6,v*6*H6+¶)ö-v*H6(öb6`v.v)öa6b¶*H6(öb6*6,va¶)öav+6-¶b¶b6`H6(öb6*6,va¶)öav+6-6,v`ö)ö*‹ˆ‹ˆ˜ÛÛXİš\›Ñ^YXœ›İÈˆ¶*¶b6)ö-va6av.va¶)È‹ˆ˜ÛÛXİš\›Õ]Hˆ¶)ö*6+ö(È6*6)öa6-¶b¶b6`H6b6)öa6*¶)ö,vb¶+ˆ6b6)öa6ava¶)ö,ö*6*Kˆ‹ˆ˜ÛÛXİš\›Ñ\ØÜš\[Ûˆˆ¶(ö,v,öa6)öa6*¶`v)ö-vb¶a6)öa6(ö,ö)ö,öb¶*H6b6,öa¶,ö)ö.v+ö`È6.va6bH6*¶+vb6b¶a6aö)È6)va6bH6)ö*¶+6)öaÈ6.vava6bˆ6(öb6a6b‹ˆ‹ˆ˜ÛÛXİœ[™[]Hˆ¶*¶+v+ö*È6av.H6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİœ[™[^ˆ¶)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶bˆ6aöb6b6,öb¶a6*H6)öa6+v+6,ˆ6)öa6(ö,ö)ö,öb¶*v#6b6b¶*6`¶bH6b6)ö*¶,ö)ö*6+¶b¶)ö,v)öbÈ6*ö)öa¶b¶)öbËˆ‹ˆ˜ÛÛXİœÛ™SX™[ˆ¶b6)ö*¶,ö)ö*‹ˆ˜ÛÛXİ™[XZ[SX™[ˆ¶)öa6+v+6b6,¶)ö*ˆ6b6)öa6)ö,ö*¶`v,ö)ö,v)ö*ˆ‹ˆ˜ÛÛXİ™[XZ[“X™[ˆ¶*¶+¶-öb¶-È6)öa6*¶+6)ö,v*‹ˆ˜ÛÛXİ›ØØ][Û“X™[ˆ¶av`¶,va¶)È‹ˆ˜ÛÛXİ™›Ü›U]Hˆ¶*¶`v)ö-vb¶a6)öa6-öa6*‹ˆ˜ÛÛXİ™›Ü›U^ˆ¶a6)È6b¶*¶aH6+ö`v.H6(öbˆ6av*6a6.ˆ6b6a6)È6b¶*¶(ö`ö+È6(öbˆ6+v+6,ˆ6aöa¶)ö&È6aö,6)È6)öa6a¶avb6,6+6b¶*6+ö(È6av+v)ö+ö*ö*H6)öa6*¶+¶-öb¶-È6b6-öa6*6.v,v-ˆ6)öa6,ö.v,H6`v`¶-Ëˆ‹ˆ˜ÛÛXİ›˜[YSX™[ˆ¶)öa6)ö,öaH‹ˆ˜ÛÛXİ›˜[YTXÙZÛ\ˆˆ¶)öa6)ö,öaH6)öa6`ö)öava‹ˆ˜ÛÛXİ˜ÛÛ\[SX™[ˆ¶)öa6-6,v`ö*H6(öb6)öa6+6aö*H‹ˆ˜ÛÛXİ˜ÛÛ\[TXÙZÛ\ˆˆ¶)ö+¶*¶b¶)ö,vbˆ‹ˆ˜ÛÛXİœÛ™QšY[X™[ˆ¶,v`¶aH6)öa6aö)ö*¶`H‹ˆ˜ÛÛXİœÛ™TXÙZÛ\ˆˆŠÎMˆ‹‹ˆ‹ˆ˜ÛÛXİ™[XZ[X™[ˆ¶)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶bˆ‹ˆ˜ÛÛXİ™[XZ[XÙZÛ\ˆˆ›˜[YP^[\K˜ÛÛH‹ˆ˜ÛÛXİ\SX™[ˆ¶a¶b6.H6)öa6-öa6*‹ˆ˜ÛÛXİ\TXÙZÛ\ˆˆ¶)ö+¶*¶,H6)öa6a¶b6.H‹ˆ˜ÛÛXİ\Q^\šY[˜ÙHˆ¶*¶+6,v*6*H6+¶)ö-v*H‹ˆ˜ÛÛXİ\Q]™[ˆ¶`v.v)öa6b¶*H‹ˆ˜ÛÛXİ\PÛÜœÜ˜]Hˆ¶*6,va¶)öav+6-6,v`ö*H6(öb6b6`v+È‹ˆ˜ÛÛXİ\PÛÛXİ[Ûˆˆ¶*¶-vb6,v)ö*ˆ6.v-ö,vb¶*H6`¶b¶+È6)öa6*¶-öb6b¶,H‹ˆ˜ÛÛXİ\Sİ\ˆˆ¶(ö+¶,vbH‹ˆ˜ÛÛXİ™]SX™[ˆ¶)öa6*¶)ö,vb¶+ˆ6)öa6av`v-¶a‹ˆ˜ÛÛXİ™İY\İÓX™[ˆ¶.v+ö+È6)öa6-¶b¶b6`H‹ˆ˜ÛÛXİ™İY\İÔXÙZÛ\ˆˆ¶av*ö)öaˆˆ‹ˆ˜ÛÛXİ›Y\ÜØYÙSX™[ˆ¶aöa6*¶b6+6+È6*¶`v)ö-vb¶a6avaöav*H6(ö+¶,vbv'È‹ˆ˜ÛÛXİ›Y\ÜØYÙTXÙZÛ\ˆˆ¶)ö`ö*¶*6aö)È6aöa¶)È6)vaˆ6b6+6+ö*ˆ8 %6aö,6aÈ6)öa6+¶)öa¶*H6)ö+¶*¶b¶)ö,vb¶*Kˆ‹ˆ˜ÛÛXİœÙ[œÚ]]™Q]S›İXÙHˆ¶b¶,v+6bH6.v+öaH6)v,v,ö)öa6(ö,v`¶)öaH6)öa6aöb6b¶*H6(öb6)öa6+6b6)ö,¶)ö*ˆ6(öb6)öa6av.va6b6av)ö*ˆ6)öa6-v+vb¶*H6(öb6(öbˆ6*6b¶)öa¶)ö*ˆ6+v,ö)ö,ö*H6.v*6,H6aö,6)È6)öa6a¶avb6,6+ˆ‹ˆ˜ÛÛXİœš]˜XŞS›İXÙT™Yš^ˆ¶*6)v,v,ö)öa6)öa6-öa6*6#6*¶*¶.v)öava6(ö`va¶*¶b6,v)È6av.H6*6b¶)öa¶)ö*¶`È6a6)v.v+ö)ö+È6)öa6-öa6*6b6)öa6*¶b6)ö-va6*6-6(öa¶aÈ6b6`v`ˆ‹ˆ˜ÛÛXİœš]˜XŞS›İXÙU\›\Èˆ¶&È6b6*¶cö-ö*6`ˆ‹ˆ˜ÛÛXİœİX›Z]ˆ¶)v,v,ö)öa6-öa6*6)öa6+v+6,ˆ‹ˆ˜ÛÛXİ››İHˆ¶)ö+¶*¶,H6)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶bˆ6(öb6b6)ö*¶,ö)ö*6a6)v,v,ö)öa6)öa6-öa6*6)öa6av,v*¶*6&È6b6a6)È6b¶.va¶bˆ6,6a6`È6*¶(ö`öb¶+È6+v+6,ˆ6(öb6+ö`v.Kˆ‹ˆ˜ÛÛXİ™\œ›Üˆˆ¶`v-¶a6bö)ö#6(ö+ö+¶a6)öa6)ö,öaH6b6,v`¶aH6)öa6aö)ö*¶`H6(öb6)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶bˆ6.va6bH6)öa6(ö`¶aˆ‹ˆ˜ÛÛXİ™\œ›Ü‘[XZ[ˆ¶`v-¶a6bö)ö#6(ö+ö+¶a6*6,vb¶+ö`È6)öa6)va6`ö*¶,vb6a¶bˆ6a6)v,v,ö)öa6-öa6*6)öa6+v+6,ˆ6.v*6,H6)öa6*6,vb¶+Ëˆ‹ˆ˜ÛÛXİœ™\]Y\İ[›Èˆ¶-öa6*6+v+6,ˆ6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİ™[XZ[İXš™Xİˆ¶-öa6*6+v+6,ˆ6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİœİX›Z][XZ[ˆ¶)v,v,ö)öa6-öa6*6)öa6+v+6,ˆ‹ˆ˜ÛÛXİœİX›Z]Ú]Ø\ˆ¶)v,v,ö)öa6-öa6*6)öa6+v+6,ˆ6.v*6,H6b6)ö*¶,ö)ö*‹ˆ˜ÛÛXİ››İQ[XZ[ˆ¶,öb¶cö,v,öa6-öa6*6`È6av*6)ö-6,v*H6)va6bH6(ö`va¶*¶b6,v)È6+öb6aˆ6`v*¶+H6*¶-ö*6b¶`ˆ6)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶b¶&È6b6a6)È6b¶.va¶bˆ6,6a6`È6*¶(ö`öb¶+È6+v+6,ˆ6(öb6+ö`v.Kˆ‹ˆ˜ÛÛXİ››İUÚ]Ø\ˆ¶,öb¶`v*¶+H6b6)ö*¶,ö)ö*6b6`vb¶aÈ6-öa6*6`È6)öa6av,v*¶*ˆ6b¶av`öa¶`È6av,v)ö+6.v*¶aÈ6`¶*6a6)öa6)v,v,ö)öa6&È6b6a6)È6b¶.va¶bˆ6,6a6`È6*¶(ö`öb¶+È6+v+6,ˆ6(öb6+ö`v.Kˆ‹ˆ˜ÛÛXİœÙ[™[™Èˆ¶+6)ö,vcH6)v,v,ö)öa6-öa6*6`ø )ˆ‹ˆ˜ÛÛXİœİX›Z]\œ›Üˆˆ¶*¶.v,6,H6)v,v,ö)öa6-öa6*6`Ëˆ6+v)öb6a6av,v*H6(ö+¶,vbH6(öb6)ö+¶*¶,H6b6)ö*¶,ö)ö*ˆ‹ˆ˜ÛÛXİÚ]Ø\[›Èˆ¶av,v+v*6bö)È6(ö`va¶*¶b6,v)ö#6(ö,v.¶*6`vbˆ6-öa6*6av,ö)ö.v+ö*H6a6*¶+¶-öb¶-È6*6,va¶)öav+ˆ‹ˆ˜ÛÛXİÚ]Ø\˜[YHˆ¶)öa6)ö,öaH‹ˆ˜ÛÛXİÚ]Ø\ÛÛ\[Hˆ¶)öa6+6aö*H‹ˆ˜ÛÛXİÚ]Ø\Û™Hˆ¶)öa6aö)ö*¶`H‹ˆ˜ÛÛXİÚ]Ø\[XZ[ˆ¶)öa6*6,vb¶+È‹ˆ˜ÛÛXİÚ]Ø\\Hˆ¶a¶b6.H6)öa6-öa6*‹ˆ˜ÛÛXİÚ]Ø\]Hˆ¶)öa6*¶)ö,vb¶+ˆ6)öa6av`v-¶a‹ˆ˜ÛÛXİÚ]Ø\İY\İÈˆ¶.v+ö+È6)öa6-¶b¶b6`H‹ˆ˜ÛÛXİÚ]Ø\Y\ÜØYÙHˆ¶)öa6*¶`v)ö-vb¶a‹ˆ™˜\K›Y]U]Hˆ¶)öa6(ö,ö)¶a6*H6)öa6-6)ö)¶.v*H6(ö`va¶*¶b6,v)È‹ˆ™˜\K›Y]Q\ØÜš\[Ûˆˆ¶)v+6)ö*6)ö*ˆ6+vb6a6*¶+6)ö,v*6(ö`va¶*¶b6,v)È6b6`v.v)öa6b¶)ö*¶aö)È6b6)öa6a¶`¶a6)öa6+¶)ö-H6b6)öa6av,v-6+öb¶aˆ6b6)öa6+v+6,ˆ6b6+¶+öav)ö*ˆ6)öa6-¶b¶b6`Kˆ‹ˆ™˜\Kš\›Ñ^YXœ›İÈˆ¶av.va6b6av)ö*ˆ6av`vb¶+ö*H‹ˆ™˜\Kš\›Õ]Hˆ¶)öa6(ö,ö)¶a6*H6)öa6-6)ö)¶.v*H‹ˆ™˜\Kš\›Ñ\ØÜš\[Ûˆˆ¶a¶`¶-ö*H6*6+ö)öb¶*H6b6)ö-¶+v*H6`¶*6a6(öaˆ6a¶-vavaH6)öa6*¶`v)ö-vb¶a6+v,ö*6-öa6*6`Ëˆ‹ˆ™˜\KœLHˆ¶`öb¶`H6(ö+v+6,ˆ6*¶+6,v*6*v'È‹ˆ™˜\K˜LHˆ¶(ö,v,öa6)öa6*¶)ö,vb¶+ˆ6)öa6av`v-¶a6b6.v+ö+È6)öa6-¶b¶b6`H6b6)öa6)öaö*¶av)öav)ö*ˆ6.v*6,H6a¶avb6,6+6)öa6-öa6*6*6)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶b¶#6(öb6)ö,ö*¶+¶+öaH6b6)ö*¶,ö)ö*6)v,6)È6`v-¶dva6*‹ˆ6a¶)6`ö+È6)öa6*¶b6`v,H6b6a¶,v,öa6)öa6*6,va¶)öav+6)öa6av`¶*¶,v+H6`¶*6a6(öbˆ6+ö`v.v*Kˆ‹ˆ™˜\KœLˆˆ¶aöa6)öa6*¶+6)ö,v*6+¶)ö-v*v'È‹ˆ™˜\K˜Lˆˆ¶*6,v)öav+6a¶)È6)öa6(ö,ö)ö,öb¶*H6av-vavav*H6a6a6-¶b¶b6`H6b6)öa6av+6avb6.v)ö*ˆ6)öa6+¶)ö-v*Kˆ6b6)v,6)È6*¶aH6)ö`¶*¶,v)ö+H6+¶b¶)ö,H6av-6*¶,v`È6`v,öb¶*¶aH6*¶b6-¶b¶+vaÈ6`¶*6a6)öa6*¶(ö`öb¶+Ëˆ‹ˆ™˜\KœLÈˆ¶aöa6b¶av`öaˆ6+öav+6(ö`ö*ö,H6avaˆ6*¶+6,v*6*H6`vbˆ6b¶b6aH6b6)ö+v+ö'È‹ˆ™˜\K˜LÈˆ¶a¶.vav#6b6a¶b6)ö,¶aˆ6b6`¶*ˆ6)öa6*¶a¶`¶a6b6)öa6-ö`¶,È6b6b6*¶b¶,v*H6)öa6-¶b¶b6`H6+v*¶bH6b¶*6`¶bH6)öa6b¶b6aH6avav*¶.vbö)È6b6.¶b¶,H6av,¶+ö+vaKˆ‹ˆ™˜\KœMˆ¶aöa6*¶b6`v,vb6aˆ6)öa6a¶`¶a6'È‹ˆ™˜\K˜Mˆ¶a¶.vav#6b¶av`öaˆ6)v-¶)ö`v*H6)öa6a¶`¶a6)öa6+¶)ö-H6*6+v,ö*6.v+ö+È6)öa6-¶b¶b6`H6b6)öa6av,ö)ö,H6b6av,ö*¶b6bH6)öa6+¶+öav*H6)öa6av-öa6b6*ˆ‹ˆ™˜\KœMHˆ¶aöa6b¶b6+6+È6av,v-6+öb6aˆ6av,v+¶-vb6aˆ6*6a6.¶)ö*ˆ6av+¶*¶a6`v*v'È‹ˆ™˜\K˜MHˆ¶a¶.vaH6+v,ö*6)öa6*¶b6`v,Kˆ6)öa6.v,v*6b¶*H6b6)öa6)va¶+6a6b¶,¶b¶*H6av*¶)ö+v*¶)öaˆ6.¶)öa6*6bö)ö#6b6b¶av`öaˆ6-öa6*6a6.¶)ö*ˆ6)v-¶)ö`vb¶*H6av,ö*6`¶bö)Ëˆ‹ˆ™˜\KœMˆˆ¶aöa6*¶a¶.6aH6(ö`va¶*¶b6,v)È6`v.v)öa6b¶)ö*ˆ6a6a6-6,v`ö)ö*¶'È‹ˆ™˜\K˜Mˆˆ¶a¶.vav#6a¶a¶,ö`ˆ6)öa6)ö+6*¶av)ö.v)ö*ˆ6b6)öa6av)6*¶av,v)ö*ˆ6b6)öa6)v-öa6)ö`¶)ö*ˆ6b6*6,v)öav+6)öa6`v,v`ˆ6b6ava¶)ö,ö*6)ö*ˆ6)öa6avb6.6`vb¶aˆ6b6*6,v)öav+6)öa6b6`vb6+È6)öa6,¶)ö)¶,v*Kˆ‹ˆ™˜\KœMÈˆ¶`öb¶`H6b¶*¶aH6*¶+v+öb¶+È6,ö.v,H6)öa6*¶+6,v*6*v'È‹ˆ™˜\K˜MÈˆ¶b¶cö.v+È6.v,v-ˆ6)öa6,ö.v,H6*6.v+È6av,v)ö+6.v*H6)öa6*¶)ö,vb¶+ˆ6b6)öa6*¶b6`¶b¶*ˆ6)öa6ava¶)ö,ö*6b6.v+ö+È6)öa6-¶b¶b6`H6b6)öa6av+ö*H6b6)öa6a¶`¶a6b6)öa6)v-¶)ö`v)ö*ˆ6)öa6av+¶*¶)ö,v*v#6b6b¶-va6a6a6-¶b¶`H6.v,v-ˆ6av`ö*¶b6*6b6b6)ö-¶+H6`¶*6a6)öa6*¶(ö`öb¶+Ëˆ‹ˆ™˜\KœNˆ¶aöa6b¶av`öaˆ6*¶,v*¶b¶*6+¶+öav)ö*ˆ6)öa6-¶b¶b6`H6`vbˆ6)öa6`va¶+ö`¶'È‹ˆ™˜\K˜Nˆ¶a¶.vav#6b¶av`öaˆ6*¶a¶,öb¶`ˆ6*¶`v-vb¶a6)öa6*öb6*6b6+¶+öav*H6)öa6.v*6)öb¶*H6b6)öa6b6,v+È6`vbˆ6)öa6`va¶+ö`ˆ6(öb6av`¶,H6)öa6)v`¶)öav*H6*6*¶,v*¶b¶*6av,ö*6`‹ˆ‹ˆ™˜\KœNHˆ¶av*¶bH6b¶+6*6(öaˆ6(ö*¶b6)ö-va6av.v`öav'È‹ˆ™˜\K˜NHˆ¶`öa6av)È6`ö)öaˆ6(ö*6`ö,H6`ö)öaˆ6(ö`v-¶a6#6+¶-vb6-vbö)È6a6.v-öa6*H6a¶aö)öb¶*H6)öa6(ö,ö*6b6.H6b6)öa6av+6avb6.v)ö*ˆ6)öa6`ö*6b¶,v*H6b6)öa6av,v-6+öb¶aˆ6)öa6av*¶+¶-v-vb¶a‹ˆ6b6b¶av`öaˆ6)öa6*¶+v`¶`ˆ6avaˆ6)öa6-öa6*6)ö*ˆ6)öa6.v)ö+6a6*H6+v,ö*6)öa6*¶b6`v,Kˆ‹ˆ™˜\KœLLˆ¶av)ö,6)È6b¶+v+ö*È6*6.v+È6)v,v,ö)öa6)öa6-öa6*6'È‹ˆ™˜\K˜LLˆ¶a¶,v)ö+6.H6)öa6*¶`v)ö-vb¶a6b6a¶-ö,v+H6)öa6(ö,ö)¶a6*H6)öa6-¶,vb6,vb¶*H6b6a¶`¶*¶,v+H6)ö*¶+6)öaöbö)È6b6a¶)6`ö+È6)öa6*¶b6`v,Kˆ6a6)È6b¶*¶aH6(öbˆ6+v+6,ˆ6+v*¶bH6*¶b6)ö`v`ˆ6.va6bH6)öa6a¶-ö)ö`ˆ6b6)öa6-6,vb6-È6)öa6a¶aö)ö)¶b¶*Kˆ‹ˆ™Ø[\K›Y]U]Hˆ¶av.v,v-ˆ6(ö`va¶*¶b6,v)È6(öav)ö`öaˆ6b6`v.v)öa6b¶)ö*ˆ6b6*¶`v)ö-vb¶a‹ˆ™Ø[\K›Y]Q\ØÜš\[Ûˆˆ¶a¶.6,v*H6*6-v,vb¶*H6.va6bH6)öa6*6+v,H6)öa6(ö+vav,H6b6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6b6)öa6-v+v,v)ö(H6b6)öa6-ö)ö)¶`H6b6)öa6`v.v)öa6b¶)ö*ˆ6b6*¶`v)ö-vb¶a6)öa6-¶b¶b6`H6avaˆ6(ö`va¶*¶b6,v)Ëˆ‹ˆ™Ø[\Kš\›Ñ^YXœ›İÈˆ¶)öa6av+6a6*H6)öa6*6-v,vb¶*H‹ˆ™Ø[\Kš\›Õ]Hˆ¶(öav)ö`öaˆ6b6(ö+6b6)ö(H6b6*¶`v)ö-vb¶a6av+ö,vb6,ö*Kˆ‹ˆ™Ø[\Kš\›Ñ\ØÜš\[Ûˆˆ¶)ö*¶+6)öaÈ6*6-v,vbˆ6a6a6*¶+6)ö,v*6b6)öa6`v.v)öa6b¶)ö*ˆ6)öa6*¶bˆ6a¶-vavavaö)ö#6b6*¶+¶*¶a6`H6)öa6*¶,v*¶b¶*6)ö*ˆ6)öa6a¶aö)ö)¶b¶*H6avaˆ6*6,va¶)öav+6)va6bH6(¶+¶,Kˆ‹ˆ™Ø[\KœÙXHˆ¶,v+va6)ö*ˆ6)öa6*6+v,H6)öa6(ö+vav,H‹ˆ™Ø[\Kš\İÜšXÈˆ¶+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H‹ˆ™Ø[\K™\Ù\ˆ¶-¶b6(H6)öa6-v+v,v)ö(H6)öa6(ö+¶b¶,H‹ˆ™Ø[\KZYˆˆ¶av,v*¶`v.v)ö*ˆ6)öa6-ö)ö)¶`H‹ˆ™Ø[\K˜ÛÜœÜ˜]Hˆ¶)öa6`v.v)öa6b¶)ö*ˆ6)öa6*¶a¶`vb¶,6b¶*H‹ˆ™Ø[\Kœš]˜]Hˆ¶)öa6ava¶)ö,ö*6)ö*ˆ6)öa6+¶)ö-v*H‹ˆ™Ø[\K˜ÛÛXİ[Ûˆˆ¶)ö*¶+6)öaÈ6av+6avb6.v*H6(ö`va¶*¶b6,v)È‹ˆ™Ø[\Kš™YZˆ¶+6+ö*H6*6.v+È6)öa6.¶,vb6*‹ˆ™Ø[\K˜[ÙXHˆ¶*¶-vb6,H6a6*¶+6,v*6*H6)öa6*6+v,H6)öa6(ö+vav,H‹ˆ™Ø[\K˜[\İÜšXÈˆ¶*¶-vb6,H6a6*¶+6,v*6*H6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H‹ˆ™Ø[\K˜[\Ù\ˆ¶*¶+6,v*6*H6-v+v,v)öb6b¶*H6b6`¶*ˆ6)öa6.¶,vb6*‹ˆ™Ø[\K˜[ZYˆˆ¶*¶-vb6,H6a6*¶+6,v*6*H6av,v*¶`v.v)ö*ˆ6)öa6-ö)ö)¶`H‹ˆ™Ø[\K˜[ÛÜœÜ˜]Hˆ¶*¶-vb6,H6a6`v.v)öa6b¶*H6*¶a¶`vb¶,6b¶*H‹ˆ™Ø[\K˜[š]˜]Hˆ¶*¶-vb6,H6a6ava¶)ö,ö*6*H6+¶)ö-v*H‹ˆ™Ø[\K˜[ÛÛXİ[Ûˆˆ¶)ö*¶+6)öaÈ6av+6avb6.v*H6(ö`va¶*¶b6,v)È‹ˆ™Ø[\K˜[™YZˆ¶+6+ö*H6*6.v+È6)öa6.¶,vb6*‹ˆ™Ø[\K™\ØÛZ[Y\ˆˆ¶*¶`¶+öaH6aö,6aÈ6)öa6-vb6,H6)öa6)ö*¶+6)öaÈ6)öa6*6-v,vbˆ6a6(ö`va¶*¶b6,v)Ëˆ6b¶*¶aH6*¶(ö`öb¶+È6)öa6avb6)ö`¶.H6b6*¶`v)ö-vb¶a6)öa6*¶+6,v*6*H6b6)öa6*¶+6aöb¶,¶)ö*ˆ6*6-6`öa6ava¶`v-va6a6`öa6-öa6*ˆ‹ˆœš]˜XŞK›Y]U]Hˆ¶,öb¶)ö,ö*H6)öa6+¶-vb6-vb¶*H6(ö`va¶*¶b6,v)È‹ˆœš]˜XŞK›Y]Q\ØÜš\[Ûˆˆ¶`öb¶`vb¶*H6*¶.v)öava6(ö`va¶*¶b6,v)È6av.H6)öa6*6b¶)öa¶)ö*ˆ6)öa6-6+¶-vb¶*H6)öa6av,v,öa6*H6.v*6,H6)öa6avb6`¶.H6b6`¶a¶b6)ö*ˆ6)öa6*¶b6)ö-vaˆ‹ˆœš]˜XŞKš\›Ñ^YXœ›İÈˆ¶`¶)öa¶b6a¶bˆ‹ˆœš]˜XŞKš\›Õ]Hˆ¶,öb¶)ö,ö*H6)öa6+¶-vb6-vb¶*H‹ˆœš]˜XŞKš\›Ñ\ØÜš\[Ûˆˆ¶*¶b6-¶b¶+H6b6)ö-¶+H6a6a6*6b¶)öa¶)ö*ˆ6)öa6-6+¶-vb¶*H6)öa6*¶bˆ6a¶,ö*¶`¶*6a6aö)È6b6`öb¶`H6a¶,ö*¶+¶+öavaö)Ëˆ‹ˆœš]˜XŞK\]Yˆ¶(¶+¶,H6*¶+v+öb¶*Îˆ6b¶b6a6b¶bŒˆ‹ˆœš]˜XŞKšHˆŒKˆ6)öa6av.va6b6av)ö*ˆ6)öa6*¶bˆ6*¶`¶+öavaö)È‹ˆœš]˜XŞKœHˆ¶.va¶+È6)öa6*¶b6)ö-va6av.va¶)È6`¶+È6*¶,¶b6+öa¶)È6*6)öa6)ö,öaH6b6,v`¶aH6)öa6aö)ö*¶`H6b6)öa6*6,vb¶+È6b6)öa6+6aö*H6b6)öa6+öb6a6*H6b6)öa6av+öb¶a¶*H6b6)öa6*¶)ö,vb¶+ˆ6b6.v+ö+È6)öa6-¶b¶b6`v#6(öb6*6*¶`v)ö-vb¶a6-öa6*6)öa6*¶.v)öb6aˆ6av*öa6)öa6avaöa¶*H6b6)öa6*¶,v)ö+¶b¶-H6b6av.v,v-ˆ6)öa6(ö.vav)öa6b6)öa6a6.¶)ö*ˆ6b6a¶-ö)ö`ˆ6*¶`¶+öb¶aH6)öa6+¶+öav*Kˆ‹ˆœš]˜XŞKšˆˆŒ‹ˆ6`öb¶`vb¶*H6)ö,ö*¶+¶+ö)öaH6)öa6av.va6b6av)ö*ˆ‹ˆœš]˜XŞKœˆˆ¶a¶,ö*¶+¶+öaH6)öa6av.va6b6av)ö*ˆ6a6a6,v+È6.va6bH6)öa6)ö,ö*¶`v,ö)ö,v)ö*ˆ6b6)v.v+ö)ö+È6)öa6.v,vb6-ˆ6b6*¶a¶,öb¶`ˆ6)öa6+¶+öav)ö*ˆ6)öa6av-öa6b6*6*H6b6)öa6)ö+v*¶`v)ö.6*6)öa6,ö+6a6)ö*ˆ6)öa6*¶+6)ö,vb¶*H6b6*¶+v,öb¶aˆ6*¶b6)ö-va6a¶)È6av.H6)öa6-¶b¶b6`Kˆ‹ˆœš]˜XŞKšÈˆŒËˆ6)öa6av-6)ö,v`ö*H6av.H6av,¶b6+öbˆ6)öa6+¶+öav)ö*ˆ‹ˆœš]˜XŞKœÈˆ¶.va¶+È6)öa6+v)ö+6*H6a6)v.v+ö)ö+È6(öb6*¶a¶`vb¶,6-öa6*6av.v*¶av+ö#6`¶+È6a¶-6)ö,v`È6)öa6*¶`v)ö-vb¶a6,6)ö*ˆ6)öa6-va6*H6av.H6av,¶b6+öb¶aˆ6av+¶*¶)ö,vb¶aˆ6av*öa6)öa6av,v-6+öb¶aˆ6b6)öa6avb6)ö`¶.H6b6-6,v`ö)ö*ˆ6)öa6a¶`¶a6b6-6,v`ö)ö(H6)öa6-¶b¶)ö`v*v#6b6*6)öa6`¶+ö,H6)öa6av-öa6b6*6`v`¶-Ëˆ‹ˆœš]˜XŞKšˆˆ6*¶`v-¶b¶a6)ö*ˆ6)öa6avb6`¶.H‹ˆœš]˜XŞKœˆ¶b¶+v`v.6)öa6avb6`¶.H6.va6bH6+6aö)ö,¶`È6a6`v*¶,v*H6av+v+öb6+ö*H6)ö+¶*¶b¶)ö,H6)öa6a6.¶*H6b6*6.v-ˆ6)öa6*¶`v-¶b¶a6)ö*ˆ6)öa6*¶`¶a¶b¶*Kˆ6b6*¶cö+6aö,ˆ6(ö+v+ö)ö*È6*¶`v)ö.va6av+6aöb6a6*H6+öb6aˆ6)öa6)ö,öaH6(öb6,v`¶aH6)öa6aö)ö*¶`H6(öb6)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶bˆ6(öb6av+v*¶b6bH6)öa6,v,ö)öa6*Kˆ6b6a6)È6b¶,ö*¶+¶+öaH6)öa6avb6`¶.H6+v)öa6b¶bö)È6a6*¶+v-vb¶a6)öa6av+ö`vb6.v)ö*ˆ6)öa6)va6`ö*¶,vb6a¶b¶*H6(öb6)va¶-6)ö(H6+v,ö)ö*6)ö*ˆ6a6a6.vava6)ö(Kˆ‹ˆœš]˜XŞKšHˆKˆ6b6)ö*¶,ö)ö*6b6)öa6*6,vb¶+È6)öa6)va6`ö*¶,vb6a¶bˆ‹ˆœš]˜XŞKœHˆ¶.va¶+È6)öa6av*¶)ö*6.v*H6.v*6,H6b6)ö*¶,ö)ö*6(öb6)öa6*6,vb¶+ö#6b¶+¶-¶.H6*¶b6)ö-va6`È6`ö,6a6`È6a6,öb¶)ö,ö)ö*ˆ6)öa6+¶-vb6-vb¶*H6)öa6+¶)ö-v*H6*6av`¶+öaH6*¶a6`È6)öa6+¶+öav*Kˆ‹ˆœš]˜XŞKšˆˆ‹ˆ6)öa6)ö+v*¶`v)ö.6*6)öa6*6b¶)öa¶)ö*ˆ6b6+vav)öb¶*¶aö)È‹ˆœš]˜XŞKœˆˆ¶a¶+v*¶`v.6*6*6b¶)öa¶)ö*ˆ6)öa6-öa6*6b6)öa6+¶+öav*H6a6a6av+ö*H6)öa6a6)ö,¶av*H6a6a6(ö.¶,v)ö-ˆ6)öa6*¶+6)ö,vb¶*H6b6)öa6*¶.v)ö`¶+öb¶*H6b6)öa6a¶.6)öavb¶*v#6b6a¶-ö*6`ˆ6)v+6,v)ö(v)ö*ˆ6av.v`¶b6a6*H6a6+vav)öb¶*¶aö)È6avaˆ6)öa6b6-vb6a6.¶b¶,H6)öa6av-v,v+Kˆ‹ˆœš]˜XŞKšÈˆËˆ6+¶b¶)ö,v)ö*¶`È‹ˆœš]˜XŞKœÈˆ¶b¶av`öa¶`È6-öa6*6*¶-v+vb¶+H6(öb6+v,6`H6av.va6b6av)ö*ˆ6,ö*6`ˆ6(öaˆ6`¶+öav*¶aö)ö#6av.H6av,v)ö.v)ö*H6av)È6b¶a6,¶aH6)öa6)ö+v*¶`v)ö.6*6aÈ6a6(ö,ö*6)ö*6a¶.6)öavb¶*H6(öb6*¶.v)ö`¶+öb¶*Kˆ‹ˆœš]˜XŞKšˆˆ6)öa6*¶b6)ö-va‹ˆœš]˜XŞKœˆ¶a6a6)ö,ö*¶`v,ö)ö,v)ö*ˆ6)öa6av*¶.va6`¶*H6*6)öa6+¶-vb6-vb¶*H6*¶b6)ö-va6.v*6,HÛÛXİ]™[\˜ZÜØK˜ÛÛKˆ‹ˆ\›\Ë›Y]U]Hˆ¶)öa6-6,vb6-È6b6)öa6(ö+v`ö)öaH6(ö`va¶*¶b6,v)È‹ˆ\›\Ë›Y]Q\ØÜš\[Ûˆˆ¶)öa6-6,vb6-È6)öa6*¶bˆ6*¶-ö*6`ˆ6.va6bH6-öa6*6)ö*ˆ6)öa6avb6`¶.H6b6+¶+öav)ö*ˆ6(ö`va¶*¶b6,v)È6)öa6av+va6b¶*H6)öa6av)6`ö+ö*Kˆ‹ˆ\›\Ëš\›Ñ^YXœ›İÈˆ¶`¶)öa¶b6a¶bˆ‹ˆ\›\Ëš\›Õ]Hˆ¶)öa6-6,vb6-È6b6)öa6(ö+v`ö)öaH‹ˆ\›\Ëš\›Ñ\ØÜš\[Ûˆˆ¶-6,vb6-È6b6)ö-¶+v*H6a6a6-öa6*6)ö*ˆ6b6)öa6+¶+öav)ö*ˆ6)öa6av)6`ö+ö*H6b6*¶+6)ö,v*6)öa6-¶b¶b6`Kˆ‹ˆ››İ›İ[™›Y]U]Hˆ¶)öa6-v`v+v*H6.¶b¶,H6avb6+6b6+ö*H6(ö`va¶*¶b6,v)È‹ˆ››İ›İ[™]Hˆ¶aö,6aÈ6)öa6-v`v+v*H6a6b¶,ö*ˆ6-¶avaˆ6)öa6,v+va6*Kˆ‹ˆ››İ›İ[™^ˆ¶,v*6av)È6*¶.¶b¶,H6)öa6,v)ö*6-È6(öb6a6aH6*¶.v+È6)öa6-v`v+v*H6avb6+6b6+ö*Kˆ‹ˆ››İ›İ[™˜]Ûˆˆ¶)öa6.vb6+ö*H6a6a6,v)¶b¶,öb¶*H‹ˆ˜ÛÛ[[Û‹›XYUÓÜ™\ˆˆ¶b¶+6aödv,ˆ6+v,ö*6)öa6-öa6*‹ˆ›˜]‹˜ÛÜœÜ˜]Hˆ¶)öa6-6,v`ö)ö*ˆ‹ˆšÛYKš™YZ]Hˆ¶b¶b6aH6av*¶`ö)öava6`vbˆ6+6+ö*H‹ˆšÛYKš™YZ^ˆ¶)öa6b6)ö+6aö*H6)öa6*6+v,vb¶*H6b6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6b6)öa6av-ö)ö.vaH6)öa6av+va6b¶*H6b6av+v-ö)ö*ˆ6av+¶*¶)ö,v*H6-¶avaˆ6av,ö)ö,H6av*¶b6)ö,¶a‹ˆ‹ˆšÛYK˜ÛÜœÜ˜]P]Ûˆˆ¶*6,v)öav+6)öa6-6,v`ö)ö*ˆ‹ˆ™^\šY[˜Ù\ËœÚÜ^\šY[˜ÙHˆ¶.v,v-ˆ6ava¶*¶+6)ö*ˆ6)öa6*¶+6,v*6*H‹ˆ™^\šY[˜Ù\Ëš™YZ^YXœ›İÈˆ¶+6+ö*H0­È6b¶b6aH6av,vaˆ‹ˆ™^\šY[˜Ù\Ëš™YZ]Hˆ¶b¶b6aH6+6+ö*H6)öa6av*¶`ö)öava‹ˆ™^\šY[˜Ù\Ëš™YZ^ˆ¶*6,va¶)öav+6av,vaˆ6b¶,v*6-È6)öa6b6)ö+6aö*H6)öa6*6+v,vb¶*H6*6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6b6)öa6av-ö)ö.vaH6)öa6av+va6b¶*H6b6av+v-ö)ö*ˆ6av+¶*¶)ö,v*H6*6)vb¶`¶)ö.H6av,vb¶+Kˆ‹ˆ™^\šY[˜Ù\Ëš™YZ][LHˆ¶+¶b¶)ö,H6a¶-v`H6b¶b6aH6(öb6b¶b6aH6`ö)öava‹ˆ™^\šY[˜Ù\Ëš™YZ][Lˆˆ¶av,v-6+È6,öb¶)ö+vbˆ6av,v+¶-H6b6a¶`¶a6ava¶,ö`ˆ‹ˆ™^\šY[˜Ù\Ëš™YZ][LÈˆ¶+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6b6a6+v.6)ö*ˆ6.va6bH6)öa6b6)ö+6aö*H6)öa6*6+v,vb¶*H‹ˆ™^\šY[˜Ù\Ëš™YZ][Mˆ¶+¶b¶)ö,v)ö*ˆ6)öa6-ö.v)öaH6b6)öa6`¶aöb6*H6b6-¶b¶)ö`v*H6)öa6-¶b¶b6`H‹ˆ™^\šY[˜Ù\Ëš™YZYÌHˆ¶)öa6,¶b¶)ö,v*H6)öa6(öb6a6bH‹ˆ™^\šY[˜Ù\Ëš™YZYÌˆˆ¶av,va¶*H‹ˆ™^\šY[˜Ù\Ëš™YZYÌÈˆ¶b¶b6aH6`ö)öava‹ˆ™^\šY[˜Ù\Ë™ÛÛ[•]Hˆ¶)öa6,ö)ö.v*H6)öa6,6aö*6b¶*H‹ˆ™^\šY[˜Ù\Ë™ÛÛ[•^ˆ¶,v+va6*H6+¶)ö-v*H6*6)öa6`¶)ö,v*6a6av+ö*H6,ö)ö.v*H6*¶cöb6`¶dv*ˆ6av.H6(¶+¶,H6-¶b6(H6b6.¶,vb6*6)öa6-6av,È6`vb6`ˆ6)öa6*6+v,H6)öa6(ö+vav,Kˆ‹ˆ™]™[Ë˜ÛÜœÜ˜]S[šÈˆ¶.v,v-ˆ6*6,v)öav+6)öa6-6,v`ö)ö*ˆ‹ˆœÙ\šXÙ\Ëœ™\]Y\İÙ\šXÙHˆ¶)ö-öa6*6aö,6aÈ6)öa6+¶+öav*H‹ˆ˜ÛÛXİ[Û‹™š[\[ˆ¶+6avb¶.H6)öa6*¶+6)ö,v*‹ˆ˜ÛÛXİ[Û‹™š[\”ÙXHˆ¶)öa6*6+v,H‹ˆ˜ÛÛXİ[Û‹™š[\’\İÜšXÈˆ¶+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H‹ˆ˜ÛÛXİ[Û‹™š[\‘\Ù\ˆ¶)öa6-v+v,v)ö(H‹ˆ˜ÛÛXİ[Û‹™š[\•ZYˆˆ¶)öa6-ö)ö)¶`H‹ˆ˜ÛÛXİ[Û‹™š[\’™YZˆ¶*¶b6`¶b¶.H6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİ[Û‹™š[\ÛÜœÜ˜]Hˆ¶)öa6-6,v`ö)ö*ˆ6b6)öa6*¶a¶`vb¶,6b¶b6aˆ‹ˆ˜ÛÛXİ[Û‹šİÑ^YXœ›İÈˆ¶`öb¶`H6b¶.vava6)öa6*6b6*¶b¶`È‹ˆ˜ÛÛXİ[Û‹šİÕ]Hˆ¶)ö*6a¶d6-öa6*6bö)È6b6)ö+v+öbö)È6+vb6a6)öa6-¶b¶`H‹ˆ˜ÛÛXİ[Û‹šİÌU]Hˆ¶)ö+¶*¶,H6)öa6*¶+6,v*6*H‹ˆ˜ÛÛXİ[Û‹šİÌU^ˆ¶.va¶+È6)öa6+ö+¶b6a6avaˆ6-v`v+v*H6)öa6*¶+6,v*6*H6*¶.6aö,H6ava¶*¶+6)ö*¶aö)È6)öa6av,v*¶*6-ö*H6*¶a6`¶)ö)¶b¶bö)Ëˆ‹ˆ˜ÛÛXİ[Û‹šİÌ•]Hˆ¶(ö-¶`H6av)È6b¶a¶)ö,ö*6`È‹ˆ˜ÛÛXİ[Û‹šİÌ•^ˆ¶)ö+¶*¶,H6*6b6`ö,öbö)È6(öb6ava¶*¶+6)ö*ˆ6ava¶`v,v+ö*H6(öb6+¶+öav)ö*ˆ6-6+¶-vb¶*H6a6a6-¶b¶`Kˆ‹ˆ˜ÛÛXİ[Û‹šİÌÕ]Hˆ¶)ö,ö*¶a6aH6.v,v-¶bö)È6av+¶-v-vbö)È‹ˆ˜ÛÛXİ[Û‹šİÌÕ^ˆ¶*¶,v)ö+6.H6(ö`va¶*¶b6,v)È6)öa6*¶b6`¶b¶*ˆ6b6)öa6`öavb¶*H6b6)öa6*¶+¶-vb¶-H6b6)öa6*¶b6`v,H6`¶*6a6)öa6*¶(ö`öb¶+Ëˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş\Õ^ˆ¶aö,6aÈ6av+6avb6.v)ö*ˆ6)ö,ö*¶.v,v)ö-¶b¶*H6,ö*¶cö-ö,v+H6*6.v+È6)ö.v*¶av)ö+È6)öa6.vb¶a¶)ö*ˆ6b6)öa6+¶)öav)ö*ˆ6b6)öa6avb6,v+öb¶a‹ˆ6b6aöbˆ6.¶b¶,H6av*¶)ö+v*H6a6a6-öa6*6+v)öa6b¶bö)Ëˆ‹ˆ˜ÛÛXİ[Û‹œ™\]Y\İ›Şˆ¶)ö-öa6*6aö,6)È6)öa6*6b6`ö,È‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LHˆ¶+v`¶b¶*6*H6-6)ö-ö)ˆ6*6aöb6b¶*H6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİ[Û‹˜›ŞR][Lˆˆ¶ava¶-6`v*H6-6)ö-ö)ˆ6,ö,vb¶.v*H6)öa6+6`v)ö`H‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LÈˆ¶+v)ö`v.6*H6aö)ö*¶`H6av`¶)öb6av*H6a6,v,6)ö,6)öa6av)ö(H6b6)öa6,vav)öa‹ˆ˜ÛÛXİ[Û‹˜›ŞR][Mˆ¶.v*6b6*H6avb¶)öaÈ6av.v,¶b6a6*H6+v,v)ö,vb¶bö)È‹ˆ˜ÛÛXİ[Û‹˜›ŞR][MHˆ¶+¶b¶)ö,H6.v-ö,H6)öa6*6+v,H6.va¶+È6)v-öa6)ö`¶aÈ‹ˆ˜ÛÛXİ[Û‹˜›Ş’][LHˆ¶*¶,6`ö)ö,H6+¶-6*6bˆ6av,ö*¶b6+vbH6avaˆ6)öa6,vb6-6)öaˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş’][Lˆˆ¶*6-ö)ö`¶)ö*ˆ6*¶,v)ö*öb¶*H6av-vb6,v*H‹ˆ˜ÛÛXİ[Û‹˜›Ş’][LÈˆ¶+ö`v*¶,H6+6b¶*6*6a¶`¶b6-6)öa6,vb6-6)öaˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş’][Mˆ¶+v`¶b¶*6*H6`¶av)ö-6b¶*H6-v.¶b¶,v*H6*6aöb6b¶*H6)öa6*6a6+È‹ˆ˜ÛÛXİ[Û‹˜›Ş’][MHˆ¶+¶b¶)ö,H6.v-ö,H6+6+ö*H6)öa6*¶)ö,vb¶+¶b¶*H6.va¶+È6)v-öa6)ö`¶aÈ‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][LHˆ¶-6)öa6+¶`vb¶`H6*6a6b6aˆ6av+v)öb¶+È‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][Lˆˆ¶`öb6*6,v+va6)ö*ˆ6av.v,¶b6a6+v,v)ö,vb¶bö)È‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][LÈˆ¶*¶,6`ö)ö,H6ava¶,öb6+6-v.¶b¶,H‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][Mˆ¶+v)ö`v.6*H6,ö`v,H6av*¶.v+ö+ö*H6)öa6)ö,ö*¶+¶+ö)öaH‹ˆ˜ÛÛXİ[Û‹˜›ŞÒ][MHˆ¶+¶b¶)ö,H6.v-ö,H\İYÚ6.va¶+È6)v-öa6)ö`¶aÈ‹ˆ˜ÛÛXİ[Û‹˜›Ş][LHˆ¶,v,6)ö,6b6,v+È6-ö)ö)¶`vbˆ6.v-ö,vbˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş][Lˆˆ¶-v)ö*6b6aˆ6*6)öa6b6,v+È6(öb6`ö,vb¶aH6a6a6b¶+öb¶aˆ‹ˆ˜ÛÛXİ[Û‹˜›Ş][LÈˆ¶`öb¶,È6b6,v+È6av.v-ö,H‹ˆ˜ÛÛXİ[Û‹˜›Ş][Mˆ¶+ö`v*¶,H6+6b¶*6*6a¶`¶b6-6)öa6b6,v+È‹ˆ˜ÛÛXİ[Û‹˜›Ş][MHˆ¶+¶b¶)ö,H6.v-ö,H6)öa6-ö)ö)¶`H6.va¶+È6)v-öa6)ö`¶aÈ‹ˆ˜ÛÛXİ[Û‹˜›ŞU]Hˆ¶*6b6`ö,È6b¶b6aH6+6+ö*H‹ˆ˜ÛÛXİ[Û‹˜›ŞU^ˆ¶av+¶*¶)ö,v)ö*ˆ6-v.¶b¶,v*H6avaˆ6aöb6b¶*H6)öa6av+öb¶a¶*H6a6-¶b¶b6`H6+6b6a6*H6+6+ö*H6(öb6)öa6b¶b6aH6)öa6`ö)öavaˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LHˆ¶+ö`v*¶,H6+6b¶*6b6*6-ö)ö`¶*H6av,ö)ö,H6av-vb6,v*H‹ˆ˜ÛÛXİ[Û‹˜›ŞR][Lˆˆ¶`¶-ö.v*H6*¶,6`ö)ö,vb¶*H6av,ö*¶b6+v)ö*H6avaˆ6)öa6,vb6-6)öaˆ‹ˆ˜ÛÛXİ[Û‹˜›ŞR][LÈˆ¶*6-ö)ö`¶)ö*ˆ6*¶,v)ö*öb¶*H6av-vb6,v*H‹ˆ˜ÛÛXİ[Û‹˜›ŞR][Mˆ¶)v`ö,ö,öb6)ö,H6*6+v,vbˆ6-v.¶b¶,H‹ˆ˜ÛÛXİ[Û‹˜›ŞR][MHˆ¶*6-ö)ö`¶*H6aö+öb¶*H6avaˆ6(ö`va¶*¶b6,v)È‹ˆ˜ÛÛXİ[Û‹˜›Ş›İHˆ¶)öa6av+v*¶b6b¶)ö*ˆ6)öa6av.v,vb6-¶*H6)ö,ö*¶,v-6)ö+öb¶*H6b6*¶*6`¶bH6+¶)ö-¶.v*H6a6a6)ö.v*¶av)ö+È6)öa6a¶aö)ö)¶bˆ6a6a6ava¶*¶+6)ö*‹ˆ‹ˆ˜ÛÛXİ[Û‹œ\œÛÛ˜[^ˆ¶b¶av`öaˆ6*¶,v*¶b¶*6)öa6+¶+öav)ö*ˆ6ava¶`v-va6*H6(öb6)v-¶)ö`v*¶aö)È6)va6bH6*6,va¶)öav+6av*¶`ö)öava6a6-¶b¶b6`H6)öa6-6,v`ö)ö*‹ˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LU]Hˆ¶)öa6)ö,ö*¶`¶*6)öa6`vbˆ6)öa6av-ö)ö,H6b6)öa6a¶`¶a‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LU^ˆ¶)ö,ö*¶`¶*6)öa6b6av,ö)ö.v+ö*H6av.H6a¶`¶a6*¶a¶`vb¶,6bˆ6ava¶,ö`ˆ6)va6bH6)öa6`va¶+ö`ˆ6(öb6)öa6)ö+6*¶av)ö.Kˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™L•]Hˆ¶)öa6b6,v+È6b6)öa6*¶,v+vb¶*6`vbˆ6)öa6`va¶+ö`ˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™L•^ˆ¶*6)ö`¶*H6b6,v+È6(öb6*6-ö)ö`¶*H6*¶,v+vb¶*6(öb6aö+öb¶*H6av+¶*¶)ö,v*H6*¶b6-¶.H6`¶*6a6b6-vb6a6)öa6-¶b¶`Kˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LÕ]Hˆ¶*¶+6aöb¶,ˆ6)öa6)ö+6*¶av)ö.H‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™LÕ^ˆ¶(ö,ö)ö,öb¶)ö*ˆ6)öa6)ö+6*¶av)ö.H6b6)öa6-¶b¶)ö`v*H6b6+v,v`ö*H6)öa6-¶b¶b6`H6b6)öa6a¶`¶a6-¶avaˆ6*¶a¶,öb¶`ˆ6b6)ö+v+Ëˆ‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™M]Hˆ¶)öa6aö+ö)öb¶)È6)öa6,v,öavb¶*H6b6)öa6`öb6a¶,öb¶,v+‹ˆ˜ÛÛXİ[Û‹™^Xİ]]™M^ˆ¶aö+ö)öb¶)È6(ö.vav)öa6ava¶)ö,ö*6*H6b6av,ö)ö.v+ö*H6.vava6b¶*H6+¶a6)öa6)v`¶)öav*H6)öa6-¶b¶`Kˆ‹ˆ˜ÛÜœÜ˜]K›Y]U]Hˆ¶*¶+6)ö,v*6)öa6-6,v`ö)ö*ˆ6b6*6,v)öav+6)öa6-¶b¶b6`H6)öa6*¶a¶`vb¶,6b¶b¶aˆ6(ö`va¶*¶b6,v)È‹ˆ˜ÛÜœÜ˜]K›Y]Q\ØÜš\[Ûˆˆ¶*¶+6)ö,v*6-6,v`ö)ö*ˆ6.vava6b¶*H6b6)ö+6*¶av)ö.v)ö*ˆ6*¶a¶`vb¶,6b¶*H6b6*6,v)öav+6`v,v`ˆ6b6)ö,ö*¶`¶*6)öa6b6`vb6+È6*¶a¶.6avaö)È6(ö`va¶*¶b6,v)È6`vbˆ6+6+ö*Kˆ‹ˆ˜ÛÜœÜ˜]Kš\›Ñ^YXœ›İÈˆ¶*6,v)öav+6)öa6-6,v`ö)ö*ˆ6b6)öa6*¶a¶`vb¶,6b¶b¶aˆ‹ˆ˜ÛÜœÜ˜]Kš\›Õ]Hˆ¶*6,v)öav+6-6,v`ö)ö*ˆ6b6*¶a¶`vb¶,6b¶b¶aˆ6*¶*6+ö(È6*6aö+ö`H6.vava6b6)ö-¶+Kˆ‹ˆ˜ÛÜœÜ˜]Kš\›Ñ\ØÜš\[Ûˆˆ¶avaˆ6)ö,ö*¶`¶*6)öa6)öa6-¶b¶`H6)öa6*¶a¶`vb¶,6bˆ6)va6bH6)ö+6*¶av)ö.H6+¶)ö,v+6)öa6av`¶,H6(öb6b¶b6aH6a6a6`v,vb¶`¶#6*¶-vavaH6(ö`va¶*¶b6,v)È6*6,va¶)öav+6bö)È6.vava6b¶bö)È6b¶,v*6-È6)öa6-¶b¶)ö`v*H6b6)öa6a¶`¶a6b6)öa6av`ö)öaˆ6)öa6ava¶)ö,ö*ˆ‹ˆ˜ÛÜœÜ˜]Kš\›Ôš[X\Hˆ¶)ö-öa6*6.v,v-¶)öbÈ6av+¶-v-v)öbÈ‹ˆ˜ÛÜœÜ˜]Kš\›ÔÙXÛÛ™\Hˆ¶.v,v-ˆ6)öa6*6,v)öav+6)öa6.vava6b¶*H‹ˆ˜ÛÜœÜ˜]Kš[›Ñ^YXœ›İÈˆ¶+va6*¶-6.¶b¶a6bˆ6av*¶`ö)öava‹ˆ˜ÛÜœÜ˜]Kš[›Õ]Hˆ¶*6,va¶)öav+6.vava6#6a6)È6,v+va6*H6-6,v`ö)ö*ˆ6+6)öaö,¶*Kˆ‹ˆ˜ÛÜœÜ˜]Kš[›Õ^ˆ¶a¶*6+ö(È6*6)öa6aö+ö`Nˆ6)öa6)ö,ö*¶-¶)ö`v*H6(öb6)öa6*¶`ö,vb¶aH6(öb6*6a¶)ö(H6)öa6.va6)ö`¶)ö*ˆ6(öb6*¶`v)ö.va6)öa6`v,vb¶`¶#6*öaH6a¶-vavaH6*6,va¶)öav+6bö)È6b6)ö`¶.vb¶bö)È6b¶a¶)ö,ö*6)öa6-¶b¶b6`H6b6)öa6b6`¶*ˆ6b6)öa6avb¶,¶)öa¶b¶*Kˆ‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYLHˆ¶)öa6*¶+¶-öb¶-È‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYLˆˆ¶)öa6avb6`¶.H‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYLÈˆ¶)öa6a¶`¶a‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYMˆ¶)öa6-¶b¶)ö`v*H‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYMHˆ¶b6,v+È6)öa6-¶b¶b6`H‹ˆ˜ÛÜœÜ˜]Kš[˜ÛYMˆˆ¶)öa6*¶a¶,öb¶`ˆ6)öa6avb¶+ö)öa¶bˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[\Ñ^YXœ›İÈˆ¶*6,v)öav+6.vava6b¶*H6av+¶*¶)ö,v*H‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[\Õ]Hˆ¶`¶b¶av*H6.v)öa6b¶*H6+öb6aˆ6*¶.v`¶b¶+È6.¶b¶,H6-¶,vb6,vbˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[\Õ^ˆ¶*¶.v*¶av+È6aö,6aÈ6)öa6*6,v)öav+6.va6bH6avb6)ö`¶.H6av*¶)ö+v*H6b6+¶+öav)ö*ˆ6avb6*öb6`¶*v#6b6a6)È6*¶*¶b6,ö.H6)va6)È6)v,6)È6)ö+v*¶)ö+6)öa6aö+ö`H6,6a6`Ëˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[LU]Hˆ¶)ö+6*¶av)ö.v)ö*ˆ6*¶a¶`vb¶,6b¶*H6+¶)ö,v+6)öa6av`ö*¶*‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[LU^ˆ¶avb6`¶.H6+¶)ö-H6av.H6-¶b¶)ö`v*H6b6a¶`¶a6b6*¶+6aöb¶,¶)ö*ˆ6(ö,ö)ö,öb¶*H6a6a6)ö+6*¶av)ö.H6b6+¶b¶)ö,H6.¶+ö)ö(H6(öb6.v-6)ö(Kˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[L•]Hˆ¶)öa6b6`vb6+È6b6`ö*6)ö,H6)öa6-¶b¶b6`H6)öa6+öb6a6b¶b¶aˆ‹ˆ˜ÛÜœÜ˜]Kœ›ÙÜ˜[L•^ˆ¶)ö,ö*¶`¶*6)öa6`vbˆ6)öa6av-ö)ö,H6b6a¶`¶a6*¶a¶`vb¶,6bˆ6b6+ö.vaH6)öa6`va¶+ö`ˆ6b6av,v-6+öb6aˆ6av=çm¢G§²ÚîÆ­y×GW2#¢-Š­˜RŠ­ŠÍ˜}˜­‹"Š}˜M‹}˜MŠ‚Š˜mŠÍŠ}ŠÒâŠ}˜M˜]‹ŠÍ‹“¢"À¢&6öçF7Bç7V66W74VÖ–Å7FGW2#¢-Š­˜RŠ]‹‹=Š}˜B‹}˜MŠ‚Š}˜MŠİŠÍ‹"Š˜mŠÍŠ}ŠÒâŠ}˜M˜]‹ŠÍ‹“¢"À¢&6öçF7Bæ÷Våv†G6v–â#¢-˜Š­ŠÒ˜Š}Š­‹=Š}Š‚˜]‹Š’Š=Ší‹˜’"À¢&6öçF7Bæ6÷•&WVW7B#¢-˜m‹=ŠâŠ­˜Š}‹]˜­˜BŠ}˜M‹}˜MŠ‚"À¢&6öçF7Bç&WVW7D6÷–VB#¢-Š­˜R˜m‹=ŠâŠ}˜M‹}˜MŠ‚"À¢''FæW'2ç7V66W757FGW2#¢-Š­˜RŠ­ŠÍ˜}˜­‹"˜]˜M˜Š}˜MŠ­‹Š}˜˜bâŠ}˜M˜]‹ŠÍ‹“¢"À¢&6öÆÆV7F–öâçW&gVÖT6&G57FGW2#¢-Š}˜M˜]‹Šm˜­Š}Š¢Š}˜MŠİŠ}˜M˜­Š’Š­‹]˜‹Š}Š¢˜]ŠM˜-Š­Š’â‹=Š­˜ı‹mŠ}˜Š}˜M‹Š˜Š}Š¢˜Š}˜MŠ­‹­˜M˜­˜˜Š}˜MŠ=ŠİŠÍŠ}˜R˜˜]˜‹ŠòŠ}˜MŠ]‹}˜MŠ}˜"Š‹ŠòŠ}˜=Š­˜]Š}˜BŠ­‹}˜˜­‹Š}˜M‹‹}‹â"À¢&6öÆÆV7F–öâç&öGV7E6V56†÷'B#¢-ŠİŠ}˜‹Š’Š}˜M˜}Š}Š­˜"À¢&6öÆÆV7F–öâç&öGV7E6V5F—FÆR#¢-ŠİŠ}˜‹Š’˜}Š}Š­˜˜]˜-Š}˜˜]Š’˜M˜M‹‹Š}‹"À¢&6öÆÆV7F–öâç&öGV7E6V5FW‡B#¢-ŠİŠ}˜‹Š’˜]Šİ˜=˜]Š’˜MŠİ˜]Š}˜­Š’Š}˜M˜}Š}Š­˜˜]˜b‹‹Š}‹Š}˜M˜]Š}Š˜Š}˜M‹˜]Š}˜MˆÂ˜˜MŠrŠ­˜ı˜-Šı™˜í˜R‹˜M˜’Š=˜m˜}Šr˜]‹Šı™Š’˜M˜M‹­˜‹Râ"À¢&6öÆÆV7F–öâç&öGV7E6VE6†÷'B#¢-‹Š˜Š’Šİ‹Š}‹˜­Š’"À¢&6öÆÆV7F–öâç&öGV7E6VEF—FÆR#¢-‹Š˜Š’˜]˜­Š}˜r˜]‹‹-˜˜MŠ’Šİ‹Š}‹˜­˜½Šr"À¢&6öÆÆV7F–öâç&öGV7E6VEFW‡B#¢-‹Š˜Š’˜-Š}Š˜MŠ’˜MŠ]‹Š}ŠıŠ’Š}˜MŠ}‹=Š­ŠíŠıŠ}˜RŠ­‹=Š}‹Šò‹˜M˜’Š]Š˜-Š}Š˜]˜­Š}˜rŠ}˜M‹M‹Š‚ŠŠ}‹ŠıŠ’Ší˜MŠ}˜BŠ}˜MŠ­ŠÍ‹ŠŠ’Š}˜MŠŠİ‹˜­Š’â"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CE6†÷'B#¢-ŠİŠ}˜‹Š’‹=˜‹"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CEF—FÆR#¢-ŠİŠ}˜‹Š’‹=˜‹˜]Š­‹ŠıŠıŠ’Š}˜MŠ}‹=Š­ŠíŠıŠ}˜R"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CEFW‡B#¢-ŠİŠ}˜‹Š’˜-˜]Š}‹M˜­Š’‹]‹­˜­‹Š’˜M˜MŠ=‹­‹Š}‹bŠ}˜M‹MŠí‹]˜­ŠˆÂŠ­‹=Š}‹Šò‹˜M˜’Š­‹Š­˜­Š˜}Šr˜Šİ˜]Š}˜­Š­˜}Šr˜]˜bŠ}˜M‹˜]Š}˜Bâ"À¢&†öÖRç&ö6W74W–V'&÷r#¢-˜=˜­˜Š­‹˜]˜BŠ=˜˜mŠ­˜‹Šr"À¢&†öÖRç&ö6W75F—FÆR#¢-˜]˜bŠ}˜M‹}˜MŠ‚Š]˜M˜’Ší‹}Š’Š­‹M‹­˜­˜M˜­Š’˜Š}ŠİŠıŠ’˜˜Š}‹mŠİŠ’"À¢&†öÖRç&ö6W75FW‡B#¢-˜MŠr˜m˜‹‹bŠŠ}˜-Š’Š½Š}ŠŠ­Š‰²Š˜B˜m‹Š}ŠÍ‹’˜=˜B‹}˜MŠ‚Šİ‹=Š‚Š}˜MŠ­˜˜‹˜Š}˜MŠ­˜˜-˜­Š¢˜‹}Š˜­‹Š’Š}˜M‹m˜­˜˜â"À¢&†öÖRç&ö6W73F—FÆR#¢-‹MŠ}‹˜=˜mŠrŠ}˜MŠ=‹=Š}‹=˜­Š}Š¢"À¢&†öÖRç&ö6W73FW‡B#¢-Š=ŠíŠ‹˜mŠrŠŠ}˜MŠ­Š}‹˜­Šâ˜Š}˜M‹m˜­˜˜˜Š}˜M˜]˜mŠ}‹=ŠŠ’˜Š}˜M‹M‹˜‹Š}˜M‹˜¢Š­‹˜­ŠòŠ=˜bŠ­Šİ˜]˜M˜rŠ}˜MŠ­ŠÍ‹ŠŠ’â"À¢&†öÖRç&ö6W73%F—FÆR#¢-˜m‹Š}ŠÍ‹’˜˜m‹]˜]˜R"À¢&†öÖRç&ö6W73%FW‡B#¢-Š­˜m‹=˜"Š=˜˜mŠ­˜‹ŠrŠ}˜M˜]‹=Š}‹˜Š}˜M‹M‹˜=Š}Š˜Š}˜MŠ­˜˜-˜­Š¢˜Š}˜M‹m˜­Š}˜Š’˜Š­˜Š}‹]˜­˜BŠ}˜M‹m˜­˜Š}˜MŠ}ŠíŠ­˜­Š}‹˜­Š’â"À¢&†öÖRç&ö6W735F—FÆR#¢-Š­Š=˜=˜­Šò˜Š}‹mŠÒ˜-Š˜BŠ}˜MŠ­˜m˜˜­‹"À¢&†öÖRç&ö6W735FW‡B#¢-˜­‹]˜M˜2˜m‹}Š}˜"‹˜]˜B˜Š}‹mŠÒ˜‹‹‹b‹=‹‹˜]Ší‹]‹R˜-Š˜BŠ=˜¢Š­Š=˜=˜­Šò˜m˜}Š}Šm˜¢â"À¢&†öÖRç&ö6W74'WGFöâ#¢-Š}‹}˜MŠ‚‹‹‹mŠ}˜²˜]Ší‹]‹]Š}˜²"À¢&W‡W&–Væ6T–æFW‚æ†W&õFW‡B#¢-Š}ŠíŠ­‹Š}˜MŠ­ŠÍ‹ŠŠ’˜MŠ­˜Š­ŠÒ˜-‹]Š­˜}Šr˜Ší˜­Š}‹Š}Š¢Š‹˜mŠ}˜]ŠÍ˜}Šr˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜MŠ­˜¢Š­‹]˜‹¢Š}˜M˜­˜˜RŠİ˜˜B‹m˜­˜˜˜2â"À¢&W‡W&–Væ6T–æFW‚æ6÷&TW–V'&÷r#¢-Š}ŠíŠ­‹‹Š}˜M˜]˜2"À¢&W‡W&–Væ6T–æFW‚æ6÷&UF—FÆR#¢-˜M˜=˜BŠ­ŠÍ‹ŠŠ’Š}˜MŠ-˜b‹Š}˜M˜]˜}ŠrŠ}˜MŠíŠ}‹R"À¢&W‡W&–Væ6T–æFW‚æ6÷&UFW‡B#¢-Š}˜Š­ŠÒŠ}˜MŠ­ŠÍ‹ŠŠ’˜MŠ­˜˜}˜R˜-‹]Š­˜}Šr˜‹]˜­‹­˜}Šr˜Š}˜MŠ]˜­˜-Š}‹’Š}˜M‹˜¢˜­˜mŠ}‹=Š‚‹m˜­˜˜˜2â"À¢&W‡W&–Væ6T–æFW‚æ÷Vâ#¢-˜Š­ŠÒ‹]˜ŠİŠ’Š}˜MŠ­ŠÍ‹ŠŠ’"À¢&W‡W&–Væ6T–æFW‚æ&6²#¢-ŠÍ˜]˜­‹’Š}˜MŠ­ŠÍŠ}‹Š‚"À¢&W‡W&–Væ6T–æFW‚æÆ&VÅ6V#¢-Š}˜MŠŠİ‹Š}˜MŠ=Šİ˜]‹+rŠ=ŠŠİ‹"À¢&W‡W&–Væ6T–æFW‚æÆ&VÄ†—7F÷&–2#¢-Š}˜MŠ˜MŠò+rŠÍŠıŠ’"À¢&W‡W&–Væ6T–æFW‚æÆ&VÄFW6W'B#¢$Æ7BÆ–v‡B+rŠ}˜M‹]Šİ‹Š}Š"À¢&W‡W&–Væ6T–æFW‚æÆ&VÅF–b#¢-˜‹ŠòŠ}˜M‹}Š}Šm˜+rŠ}˜M˜]‹Š­˜‹Š}Š¢"À¢&W‡W&–Væ6T–æFW‚æÆ&VÄ¦VFF„F’#¢-ŠÍŠıŠ’+r˜­˜˜R˜]‹˜b"À¢&W‡W&–Væ6T–æFW‚æÆ&VÅ6–væGW&R#¢-Š=˜˜mŠ­˜‹Šr+r˜­˜˜R˜]˜]˜­‹""À¢&W‡W&–Væ6T–æFW‚ç6VW–V'&÷r#¢-‹Šİ˜MŠ}Š¢Š}˜MŠŠİ‹"À¢&W‡W&–Væ6T–æFW‚ç6VF—FÆR#¢-Š}ŠíŠ­‹Š}˜MŠ­˜˜-˜­Š¢˜Š=‹=˜M˜Š‚Š}˜M‹Šİ˜MŠ’Š}˜MŠŠİ‹˜­Š’"À¢&W‡W&–Væ6T–æFW‚ç6VFW‡B#¢-˜M˜=˜BŠ‹˜mŠ}˜]ŠÂŠŠİ‹˜¢‹]˜ŠİŠ­˜rŠ}˜MŠíŠ}‹]ŠˆÂŠŠ]˜­˜-Š}‹’˜Š}‹mŠÒ˜]˜bŠ}˜MŠ}˜m‹}˜MŠ}˜"ŠİŠ­˜’Š}˜M˜MŠİ‹Š’Š}˜MŠ=Ší˜­‹Š’‹˜M˜’Š}˜M˜]Š}Šâ"À¢&W‡W&–Væ6TFWF–Âç&öGV7G4W–V'&÷r#¢-˜M˜]‹=Š}Š¢Š}ŠíŠ­˜­Š}‹˜­Š’Š‹ŠòŠ}˜MŠ­ŠÍ‹ŠŠ’"À¢&W‡W&–Væ6TFWF–Âç&öGV7G5F—FÆR#¢-Š­˜Š}‹]˜­˜B˜]‹Š­Š‹}Š’Š˜}‹˜rŠ}˜MŠ­ŠÍ‹ŠŠ’"À¢&W‡W&–Væ6TFWF–Âç&öGV7G5FW‡B#¢-Š}˜MŠ­ŠÍ‹ŠŠ’˜]˜=Š­˜]˜MŠ’Šı˜˜m˜}ŠrâŠ=‹m˜Š}˜MŠ­˜‹]˜­˜MŠ’˜˜-‹rŠ]‹Šr˜=Š}˜mŠ¢Š­˜mŠ}‹=Š‚‹m˜­˜˜2˜Š}˜M˜MŠİ‹Š’â"À¢&W‡W&–Væ6TFWF–Âç66VçG4W–V'&÷r#¢-‹‹}‹ŠrŠ=˜˜mŠ­˜‹ŠrŠ}˜M˜]˜]˜­‹-Š}˜b"À¢&W‡W&–Væ6TFWF–Âç66VçG5F—FÆR#¢-‹‹}‹ŠrŠ=˜˜mŠ­˜‹Šr˜M˜}‹˜rŠ}˜MŠ­ŠÍ‹ŠŠ’"À¢&W‡W&–Væ6TFWF–Âç66VçG5FW‡B#¢-˜MŠrŠ­Š­‹m˜]˜b˜}‹˜rŠ}˜MŠ­ŠÍ‹ŠŠ’˜]˜mŠ­ŠÍŠ}Š¢Š]‹mŠ}˜˜­Š’âŠ}‹=Š­˜=‹M˜gFW"Ö–Fæ–v‡Bæö—"˜„gFW"Ö–Fæ–v‡BfVÇfWMˆÂ‹‹}‹˜¢Š=˜˜mŠ­˜‹ŠrŠ}˜M˜]˜]˜­‹-˜­˜mˆÂ˜˜=˜MŠ}˜}˜]Šr˜-˜­ŠòŠ}˜MŠ­‹}˜˜­‹â"À¢&W‡W&–Væ6TFWF–Âæ&÷„W–V'&÷r#¢-Š­‹˜=Š}‹˜M˜M˜]˜mŠ}‹=ŠŠ’"À¢&W‡W&–Væ6TFWF–Âæ&÷…F—FÆR#¢-˜}˜˜­Š’Š}˜MŠ­ŠÍ‹ŠŠ’˜˜¢Š˜˜=‹2˜Š}ŠİŠò˜]Šı‹˜‹2"À¢&W‡W&–Væ6TFWF–Âæ&÷…FW‡B#¢-Š}˜MŠ˜˜=‹2Š}ŠíŠ­˜­Š}‹˜¢âŠ}ŠíŠ­‹˜r˜˜-‹r‹˜mŠı˜]Šr˜­˜=˜˜bŠÍ‹-ŠŠ}˜²˜]˜mŠ}‹=ŠŠ}˜²˜]˜bŠ}˜M˜MŠİ‹Š’Š}˜MŠ­˜¢Š­‹]˜m‹˜}Šr˜M‹m˜­˜˜˜2â"À¢&W‡W&–Væ6TFWF–Âç&WVW7EF—FÆR#¢-ŠÍŠ}˜}‹"˜MŠ­‹]˜]˜­˜RŠ}˜MŠ­ŠÍ‹ŠŠ‰ò"À¢&W‡W&–Væ6TFWF–Âç&WVW7EFW‡B#¢-Š=‹‹=˜BŠ}˜MŠ­Š}‹˜­Šâ˜‹ŠıŠòŠ}˜M‹m˜­˜˜˜Š}˜MŠ­˜˜-˜­Š­ˆÂ˜˜­˜]˜=˜bŠ]‹mŠ}˜Š’Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜MŠ}ŠíŠ­˜­Š}‹˜­Š’˜˜-‹rŠ]‹Šr˜=Š}˜mŠ¢˜]˜mŠ}‹=ŠŠ’˜M˜MŠí‹}Š’â"À¢&W‡W&–Væ6TFWF–Âç&WVW7Ev—F†÷WE&öGV7G5FW‡B#¢-Š=‹‹=˜BŠ}˜MŠ­Š}‹˜­Šâ˜‹ŠıŠòŠ}˜M‹m˜­˜˜˜Š}˜MŠ­˜˜-˜­Š­ˆÂ˜‹=˜m‹]˜]˜RŠ}˜M˜­˜˜RŠ˜]Šr˜­˜mŠ}‹=Š‚‹m˜­˜˜˜2â"À¢&W‡W&–Væ6TFWF–Âçf–Wu&öGV7G2#¢-‹‹‹bŠ}˜MŠ­˜Š}‹]˜­˜BŠ}˜MŠ}ŠíŠ­˜­Š}‹˜­Š’"À¢&W‡W&–Væ6TFWF–Âçf–Wu66VçG2#¢-Š}‹=Š­˜=‹M˜‹‹}‹˜¢Š=˜˜mŠ­˜‹Šr"À¢&W‡W&–Væ6TFWF–Âçf–Wt¦÷W&æW’#¢-Š}˜=Š­‹M˜Š­˜Š}‹]˜­˜BŠ}˜MŠ­ŠÍ‹ŠŠ’"À¢&W‡W&–Væ6TFWF–ÂçÆäW–V'&÷r#¢-Ší‹}Š­˜2Š}˜MŠíŠ}‹]Š’"À¢&W‡W&–Væ6TFWF–ÂçÆåF—FÆR#¢-Š=ŠíŠ‹˜mŠrŠŠ}˜M˜]˜‹ŠıˆÂ˜˜mŠİ˜b˜m‹]˜]˜RŠ}˜MŠŠ}˜-˜¢â"À¢&W‡W&–Væ6TFWF–ÂçÆåFW‡B#¢-‹MŠ}‹˜=˜mŠrŠ}˜M˜]˜mŠ}‹=ŠŠ’˜‹ŠıŠòŠ}˜M‹m˜­˜˜˜Š}˜MŠ­˜˜-˜­Š¢Š}˜M˜]˜‹m˜BâŠ­˜ı‹ŠòŠ=˜˜mŠ­˜‹Šr˜]‹=Š}‹Š}˜²˜]Šı‹˜‹=Š}˜²˜‹‹‹b‹=‹‹˜Š}‹mŠİŠ}˜²â"À¢&W‡W&–Væ6TFWF–ÂçÆåö–çC#¢-Š]˜­˜-Š}‹’˜Ší‹]˜‹]˜­Š’˜˜˜"‹m˜­˜˜˜2"À¢&W‡W&–Væ6TFWF–ÂçÆåö–çC"#¢-Š­˜m‹=˜­˜"Š}˜M‹M‹˜=Š}Š˜Š}˜MŠ­˜m˜-˜MŠ}Š¢‹Š‹˜‹˜­˜"˜Š}ŠİŠò"À¢&W‡W&–Væ6TFWF–ÂçÆåö–çC2#¢-˜MŠr˜­Š­˜RŠ­Š=˜=˜­ŠòŠ}˜MŠİŠÍ‹"˜-Š˜BŠ}‹Š­˜]Š}ŠòŠ}˜MŠí‹}Š’Š}˜M˜m˜}Š}Šm˜­Š’"À¢&W‡W&–Væ6TFWF–ÂçÆä7F#¢-Š}‹}˜MŠ‚‹‹‹mŠ}˜²˜]Ší‹]‹]Š}˜²"À¢&W‡W&–Væ6TFWF–Âæ–æ6ÇVFT÷F–öæÂ#¢-Š=‹m˜˜}ŠrŠ]˜M˜’‹}˜MŠ‚Š}˜MŠ­ŠÍ‹ŠŠ’"À¢&W‡W&–Væ6TFWF–Âæ–æ6ÇVFT&÷‚#¢-Š=‹m˜Š˜˜=‹2Š}˜MŠ­‹˜=Š}‹Š]˜M˜’Š}˜M‹}˜MŠ‚"À¢&W‡W&–Væ6TFWF–Âç&VÖ–æFW$W–V'&÷r#¢-˜M˜]‹=Š}Š¢Š}ŠíŠ­˜­Š}‹˜­Š’"À¢&W‡W&–Væ6TFWF–Âç&VÖ–æFW%F—FÆR#¢-Š}˜MŠ­ŠÍ‹ŠŠ’ŠÍŠ}˜}‹-Š’˜M˜MŠ­Ší‹}˜­‹r"À¢&W‡W&–Væ6TFWF–Âç&VÖ–æFW%FW‡B#¢-˜­˜]˜=˜m˜2Š]‹mŠ}˜Š’Š­˜‹]˜­˜MŠ’Š]‹Šr˜=Š}˜mŠ¢Š­˜mŠ}‹=Š‚‹m˜­˜˜=ˆÂŠ=˜‚˜]Š­Š}Š‹Š’‹}˜MŠ‚Š}˜MŠ­ŠÍ‹ŠŠ’˜˜-‹râ"À¢&W‡W&–Væ6TFWF–Âæ6öçF–çVUv—F†÷WB#¢-Š­Š}Š‹’˜MŠ­Ší‹}˜­‹rŠ}˜MŠ­ŠÍ‹ŠŠ’"À¢&W‡W&–Væ6TFWF–ÂçW&gVÖU6VFW‡B#¢-Š}Š­ŠÍŠ}˜r‹‹}‹˜¢ŠŠİ‹˜¢˜]‹=Š­˜Šİ˜’˜]˜b‹m˜ŠŠ}˜MŠŠİ‹Š}˜MŠ=Šİ˜]‹˜˜}˜Š}Šm˜r˜Šİ‹˜=Š­˜râ"À¢&W‡W&–Væ6TFWF–ÂçW&gVÖU&÷6†åFW‡B#¢-Š}Š­ŠÍŠ}˜r‹‹}‹˜¢ŠıŠ}˜Šb˜]‹=Š­˜Šİ˜’˜]˜bŠí‹MŠ‚Š}˜M‹˜‹MŠ}˜b˜Š}˜M˜-˜}˜Š’˜Š}˜MŠ­˜Š}Š˜B˜ŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’â"À¢&W‡W&–Væ6TFWF–ÂçW&gVÖUF–eFW‡B#¢-Š}Š­ŠÍŠ}˜r‹‹}‹˜¢˜]‹=Š­˜Šİ˜’˜]˜bŠ}˜M˜‹ŠòŠ}˜M‹}Š}Šm˜˜¢˜˜}˜Š}ŠŠ}˜MŠÍŠŠ}˜B˜Š}˜M˜m˜ŠİŠ}Š¢Š}˜MŠí‹m‹Š}ŠŠ}˜M˜}Š}ŠıŠmŠ’â"À¢&W‡W&–Væ6TFWF–Âæ¦VFF„&÷…F—FÆR#¢-˜]ŠÍ˜]˜‹Š’ŠÍŠıŠ’Š}˜M˜]˜]˜­‹-Š’"À¢&W‡W&–Væ6TFWF–Âæ¦VFF„&÷…FW‡B#¢-˜­˜ı‹‹‹b˜]‹’˜­˜˜R˜=Š}˜]˜B˜˜¢ŠÍŠıŠ’‹‹}‹ŠrŠ=˜˜mŠ­˜‹ŠrŠ}˜M˜]˜]˜­‹-Š}˜c¢gFW"Ö–Fæ–v‡Bæö—"˜„gFW"Ö–Fæ–v‡BfVÇfWMˆÂŠŠ‹}Š}˜-Š­˜­˜b˜]˜m˜‹]˜MŠ­˜­˜bâ"À¢&¦÷W&æW’ç6VæW–V'&÷r#¢-˜­˜˜]˜2Š}˜MŠíŠ}‹R‹˜M˜’Š}˜MŠŠİ‹Š}˜MŠ=Šİ˜]‹"À¢&¦÷W&æW’ç6VçF—FÆR#¢-˜­ŠŠıŠ2˜­˜˜RŠ}˜MŠŠİ‹Š}˜MŠíŠ}‹R˜-Š˜BŠ=˜bŠ­‹]‹ŠòŠ]˜M˜’Š}˜M˜-Š}‹Š‚"À¢&¦÷W&æW’ç6VçFW‡B#¢-Š=ŠíŠ‹˜mŠrŠŠ]Šİ‹=Š}‹2Š}˜M˜­˜˜RŠ}˜M‹˜¢Š­‹˜­Šı˜}ˆÂ˜‹=˜m‹]˜]˜RŠ}˜M˜-Š}‹Š‚˜Š}˜MŠ­˜˜-˜­Š¢˜Š}˜MŠ]˜­˜-Š}‹’Šİ˜˜BŠ}˜M‹m˜­˜˜Š}˜M‹˜­˜b˜­‹MŠ}‹˜=˜˜m˜2Š}˜M˜MŠİ‹Š’â"À¢&¦÷W&æW’ç6Vç7FWF—FÆR#¢-Š}ŠíŠ­‹Š]˜­˜-Š}‹’Š}˜M˜­˜˜R"À¢&¦÷W&æW’ç6Vç7FWFW‡B#¢-‹Šİ˜MŠ’˜-‹]˜­‹Š’Š=˜‚˜­˜˜RŠŠİ‹˜¢˜=Š}˜]˜BŠ=˜‚˜­ŠíŠ¢ŠíŠ}‹]‰²˜mŠŠıŠ2ŠŠ}˜M‹}‹˜­˜-Š’Š}˜MŠ­˜¢˜­‹‹­Š‚‹m˜­˜˜˜2Š=˜b˜­˜-‹m˜ŠrŠ˜}ŠrŠ}˜M˜˜-Š¢˜]‹Š}˜²â"À¢&¦÷W&æW’ç6Vç7FW%F—FÆR#¢-Š}˜m‹}˜M˜"˜]˜bŠ=ŠŠİ‹˜˜¢Š}˜M˜˜-Š¢Š}˜M˜]˜mŠ}‹=Š‚"À¢&¦÷W&æW’ç6Vç7FW%FW‡B#¢-˜­˜ı˜m‹=˜"Š}˜M˜-Š}‹Š‚˜Š}˜M˜-Š‹}Š}˜b˜˜˜-Š¢Š}˜MŠ}˜m‹}˜MŠ}˜"˜˜‹=Š}Šm˜BŠ}˜M‹Š}ŠİŠ’Š}˜MŠ=‹=Š}‹=˜­Š’˜=ŠŠıŠ}˜­Š’˜Š}ŠİŠıŠ’˜}Š}ŠıŠmŠ’˜M˜M˜­˜˜Râ"À¢&¦÷W&æW’ç6Vç7FW5F—FÆR#¢-Š}ŠÍ‹˜BŠ}˜MŠŠİ‹˜M˜=˜R˜ŠİŠı˜=˜R"À¢&¦÷W&æW’ç6Vç7FW5FW‡B#¢-Š}‹=ŠŠİ˜ŠrŠ=˜‚Š}Š­‹˜=˜Šr˜M˜MŠ=˜˜"˜]‹=Š}ŠİŠ’˜}Š}ŠıŠmŠ’â˜­Š˜-˜’˜˜¢Š}˜MŠ‹˜mŠ}˜]ŠÂ˜]ŠÍŠ}˜BŠ­˜-˜Šı˜rŠ}˜M˜MŠİ‹Š’˜m˜‹=˜}Šrâ"À¢&¦÷W&æW’ævöÆFVâæW–V'&÷r#¢-Š}˜M‹=Š}‹Š’Š}˜M‹˜}Š˜­Š’+r‹M‹˜RŠ=ŠŠİ‹"À¢&¦÷W&æW’ævöÆFVâçF—FÆR#¢-‹=Š}‹Š’˜}Š}ŠıŠmŠ’Š­˜ı‹mŠ‹r˜]‹’Š-Ší‹‹m˜Š"À¢&¦÷W&æW’ævöÆFVâçFW‡B#¢-‹Šİ˜MŠ’˜-Š}‹Š‚ŠíŠ}‹]Š’‹˜mŠòŠ}˜M‹­‹˜ŠˆÂŠİ˜­˜b˜MŠrŠ­˜=˜˜bŠ}˜M˜˜=‹Š’˜˜¢Š}˜M˜]‹=Š}˜Š’Š˜B˜˜¢Š]Šİ‹=Š}‹2˜]‹­Š}Šı‹Š’Š}˜M‹MŠ}‹}Šb˜˜¢Š}˜M˜˜-Š¢Š}˜M‹]Šİ˜­ŠÒŠ­˜]Š}˜]Š}˜²â"À¢&¦÷W&æW’ævöÆFVâç7FWF—FÆR#¢-ŠİŠı™ŠòŠ}˜M˜]˜mŠ}‹=ŠŠ’"À¢&¦÷W&æW’ævöÆFVâç7FWFW‡B#¢-˜]˜}‹Š‚˜}Š}ŠıŠbŠ=˜‚Š}ŠİŠ­˜Š}˜BŠíŠ}‹RŠ=˜‚˜]˜Š}ŠÍŠ=Š’˜]Šı‹˜‹=Š‰²Š­ŠŠıŠ2Š}˜MŠ­ŠÍ‹ŠŠ’˜]˜bŠ}˜M˜MŠİ‹Š’Š}˜MŠ­˜¢Š­‹˜­Šò‹]˜m‹˜}Šrâ"À¢&¦÷W&æW’ævöÆFVâç7FW%F—FÆR#¢-Š}‹]‹Šò˜Š}˜M˜-Š}Šı˜R˜]˜bŠ}˜M˜­˜˜R˜]Šr‹-Š}˜B˜]˜Š­˜ŠİŠ}˜²"À¢&¦÷W&æW’ævöÆFVâç7FW%FW‡B#¢-Š­‹mŠ‹rŠ=˜˜mŠ­˜‹ŠrŠ}˜MŠ}˜m‹}˜MŠ}˜"˜]˜bŠ=ŠŠİ‹˜M˜­˜=˜˜b˜}‹ŠrŠ}˜M˜˜-Š¢˜M˜=ˆÂ˜MŠr˜]ŠÍ‹Šò˜]˜‹Šò‹m˜]˜bŠÍŠı˜˜B‹=˜­Š}Šİ˜¢Š½Š}ŠŠ¢â"À¢&¦÷W&æW’ævöÆFVâç7FW5F—FÆR#¢-Šı‹’Š}˜M‹m˜Š˜­‹]˜m‹’Š}˜M˜]‹M˜}Šò"À¢&¦÷W&æW’ævöÆFVâç7FW5FW‡B#¢-Š}˜M˜m˜}Š}˜­Š’˜]˜-‹]˜ŠıŠ’˜˜¢Š‹=Š}‹}Š­˜}Šs¢˜]Š}Š˜]˜Š­˜ŠÒ˜˜-Š}‹Š‚ŠíŠ}‹R˜Š-Ší‹Š=˜M˜Š}˜bŠ}˜M˜­˜˜Râ"À¢&¦÷W&æW’æ&–F‚æW–V'&÷r#¢-Š˜­Š}‹mŠ’+r˜­˜˜RŠŠİ‹˜¢ŠíŠ}‹R˜=Š}˜]˜B"À¢&¦÷W&æW’æ&–F‚çF—FÆR#¢-Š˜­Š}‹mŠ’˜}˜¢Š}˜M˜ŠÍ˜}ŠˆÂ˜Š}˜M˜­˜˜R˜=˜M˜r˜M˜=˜R"À¢&¦÷W&æW’æ&–F‚çFW‡B#¢-Š­ŠÍ‹ŠŠ’˜-Š}‹Š‚ŠíŠ}‹]Š’˜M˜­˜˜R˜=Š}˜]˜BŠ­˜ı‹]˜]˜RŠİ˜˜B˜]˜b‹˜M˜’˜]Š­˜m˜}ˆÂ˜]‹’˜˜-Š¢˜M˜M‹=ŠŠ}ŠİŠ’˜Š­‹˜2Š}˜MŠŠİ‹Š}˜MŠ=Šİ˜]‹˜­ŠİŠıŠòŠ}˜MŠ]˜­˜-Š}‹’â"À¢&¦÷W&æW’æ&–F‚ç7FWF—FÆR#¢-Š}Š˜m™Š}˜M˜­˜˜RŠİ˜˜B˜]ŠÍ˜]˜‹Š­˜2"À¢&¦÷W&æW’æ&–F‚ç7FWFW‡B#¢-˜mŠŠıŠ2Š‹ŠıŠòŠ}˜M‹m˜­˜˜˜Š}˜MŠ]˜­˜-Š}‹’Š}˜M˜]˜‹m˜B˜˜m˜‹’Š}˜M˜˜-Š¢Š}˜M‹˜¢Š­‹‹­Š‚˜]ŠÍ˜]˜‹Š­˜2˜˜¢˜-‹mŠ}Šm˜r‹˜M˜’Š}˜M˜]Š}Šâ"À¢&¦÷W&æW’æ&–F‚ç7FW%F—FÆR#¢-Š}˜m‹}˜M˜"˜]˜bŠ=ŠŠİ‹Š]˜M˜’Š˜­Š}‹mŠ’"À¢&¦÷W&æW’æ&–F‚ç7FW%FW‡B#¢-˜­˜ı˜m‹=˜"Š}˜M˜-Š}‹Š‚˜Š}˜M˜-Š‹}Š}˜b˜Š}˜M˜˜-˜Šò˜˜]‹ŠıŠ}Š¢Š}˜M‹=˜MŠ}˜]Š’˜Š­˜Š}‹]˜­˜BŠ}˜M˜­˜˜RŠ}˜MŠŠİ‹˜¢˜-Š˜B˜‹]˜˜M˜=˜Râ"À¢&¦÷W&æW’æ&–F‚ç7FW5F—FÆR#¢-Š}Š˜-˜âŠ=‹}˜˜BŠİ˜­Š²˜­ŠŠı˜‚Š}˜MŠ=˜]‹˜]˜mŠ}‹=ŠŠ}˜²"À¢&¦÷W&æW’æ&–F‚ç7FW5FW‡B#¢-Š}˜M‹=ŠŠ}ŠİŠ’˜Š}˜MŠ­˜˜-˜Š}Š¢˜˜¢Š}˜MŠŠİ‹Š}˜M˜]˜Š­˜ŠÒŠÍ‹-Š˜]˜bŠ}˜M˜­˜˜]ˆÂ˜MŠr˜]Šİ‹}Š}Š¢˜]‹=Š­‹ŠÍ˜MŠ’Š˜­˜bŠ}˜MŠ­‹-Š}˜]Š}Š¢Š=Ší‹˜’â"À¢&¦÷W&æW’æw&æD&–F‚æW–V'&÷r#¢-˜­ŠíŠ¢Š˜­Š}‹mŠ’Š}˜M˜=Š˜­‹+r˜­˜˜RŠíŠ}‹R˜M˜M˜]ŠÍ˜]˜‹Š}Š¢"À¢&¦÷W&æW’æw&æD&–F‚çF—FÆR#¢-˜­ŠíŠ¢Š=˜=Š‹˜]‹’Š}˜MŠ]Šİ‹=Š}‹2˜m˜‹=˜rŠŠ}˜MŠí‹]˜‹]˜­Š’"À¢&¦÷W&æW’æw&æD&–F‚çFW‡B#¢-˜M˜M˜]ŠÍ˜]˜‹Š}Š¢Š}˜MŠ­˜¢Š­‹˜­Šò˜]‹MŠ}‹˜=Š’Š}˜MŠŠİ‹˜]˜bŠı˜˜bŠ=˜bŠ­ŠŠı˜‚˜˜¢‹Šİ˜MŠ’ŠÍ˜]Š}‹˜­ŠˆÂŠ­Š˜m˜¢Š=˜˜mŠ­˜‹Šr˜­˜˜RŠ˜­Š}‹mŠ’Šİ˜˜BŠ}˜M‹m˜­˜˜˜‹=ŠŠ‚Š}ŠÍŠ­˜]Š}‹˜}˜Râ"À¢&¦÷W&æW’æw&æD&–F‚ç7FWF—FÆR#¢-ŠİŠıŠòŠ]˜­˜-Š}‹’Š}˜M˜]ŠÍ˜]˜‹Š’"À¢&¦÷W&æW’æw&æD&–F‚ç7FWFW‡B#¢-‹Š}Šm˜MŠ’Š=˜‚‹-˜]˜MŠ}ŠŠ=˜‚‹m˜­˜˜˜]˜}˜]˜˜m‰²˜mŠŠıŠ2Š˜]˜b‹=˜­Šİ‹m‹˜ŠŠ}˜M‹M‹˜‹Š}˜M‹˜¢˜­ŠÍŠ‚Š=˜b˜­‹˜­‹M˜rŠ}˜MŠÍ˜]˜­‹’‹˜M˜’˜]Š­˜bŠ}˜M˜­ŠíŠ¢â"À¢&¦÷W&æW’æw&æD&–F‚ç7FW%F—FÆR#¢-Š}ŠÍ‹˜BŠ}˜M˜­ŠíŠ¢˜}˜‚Š}˜M˜]˜=Š}˜b"À¢&¦÷W&æW’æw&æD&–F‚ç7FW%FW‡B#¢-˜­˜]˜mŠÒŠ}˜M˜­ŠíŠ¢Š}˜MŠíŠ}‹RŠ}˜M˜]ŠÍ˜]˜‹Š’˜]‹=Š}ŠİŠ­˜}ŠrŠ}˜MŠíŠ}‹]ŠˆÂŠ˜­˜m˜]Šr˜­Š˜-˜’Ší‹rŠ}˜M‹=˜­‹Š]˜M˜’Š˜­Š}‹mŠ’˜]˜m‹=˜-Š}˜²˜˜}Š}ŠıŠmŠ}˜²â"À¢&¦÷W&æW’æw&æD&–F‚ç7FW5F—FÆR#¢-Š}‹=Š­‹m˜Š}˜M˜­˜˜RŠ‹}‹˜­˜-Š­˜2"À¢&¦÷W&æW’æw&æD&–F‚ç7FW5FW‡B#¢-Š}Š­‹˜2˜]‹=Š}ŠİŠ’˜M˜MŠİŠı˜­Š²˜Š}˜M‹=ŠŠ}ŠİŠ’˜˜­˜˜RŠŠİ‹˜¢˜]‹MŠ­‹˜2˜MŠr˜­‹M‹‹Š=˜¢‹MŠí‹RŠ=˜m˜rŠŠ}˜-Š’ŠÍŠ}˜}‹-Š’â"À¢&¦÷W&æW’æ†—7F÷&–2æW–V'&÷r#¢-ŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’+rŠÍ˜˜MŠ’ŠíŠ}‹]Š’"À¢&¦÷W&æW’æ†—7F÷&–2çF—FÆR#¢-˜MŠrŠ­‹MŠ}˜}ŠòŠ}˜MŠ˜MŠò˜˜-‹}‰²Š}ŠıŠí˜BŠ]˜M˜’Šİ˜=Š}˜­Š­˜}Šr"À¢&¦÷W&æW’æ†—7F÷&–2çFW‡B#¢-˜­‹]˜]˜RŠ}˜M˜]‹‹MŠòŠ}˜M˜]‹Ší‹RŠ}˜M˜]‹=Š}‹Šİ˜˜B‹m˜­˜˜˜=ˆÂ˜M˜­Šİ˜™˜BŠ}˜MŠİŠÍ‹˜Ší‹MŠ‚Š}˜M‹˜‹MŠ}˜b˜Š}˜MŠ=‹-˜-Š’Š}˜M˜}Š}ŠıŠmŠ’Š]˜M˜’˜]ŠıŠí˜B‹MŠí‹]˜¢˜M˜M˜]Šı˜­˜mŠ’â"À¢&¦÷W&æW’æ†—7F÷&–2ç7FWF—FÆR#¢-Š}ŠŠıŠ2ŠŠ}˜M˜mŠ}‹2˜‹Š}ŠŠ}˜M˜]˜=Š}˜b"À¢&¦÷W&æW’æ†—7F÷&–2ç7FWFW‡B#¢-˜­ŠİŠıŠò˜]‹‹MŠı˜2Š}˜M‹=˜­Š}˜"˜Š}˜MŠ]˜­˜-Š}‹’˜Š}˜M˜M‹­ŠˆÂ˜M˜­‹M‹‹˜=˜B‹m˜­˜ŠŠ=˜m˜rŠıŠ}Ší˜BŠ}˜MŠİ˜=Š}˜­Š’˜]˜bŠ}˜MŠí‹}˜Š’Š}˜MŠ=˜˜M˜’â"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW%F—FÆR#¢-Š­Šİ‹˜2˜˜¢Š}˜M˜]Šı˜­˜mŠ’Š˜}Šı˜"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW%FW‡B#¢-Š­Š­Š‹’Š}˜MŠÍ˜˜MŠ’Š}˜MŠİ˜=Š}˜­Š}Š¢˜Š}˜M‹˜]Š}‹Š’˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜MŠ­˜¢˜MŠrŠ­‹˜}‹˜˜¢˜]‹=Š}‹‹Š}˜RŠ=˜‚‹˜M˜’Ší‹˜­‹}Š’â"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW5F—FÆR#¢-‹­Š}Šı‹Š˜‹]˜B˜MŠrŠ˜-Š}Šm˜]Š’"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW5FW‡B#¢-Š}˜M˜-˜}˜Š’˜Š}˜MŠ­˜]‹˜˜˜-Š¢˜]˜MŠ}Šİ‹Š’Š}˜M˜]Šı˜­˜mŠ’Š­ŠÍ‹˜BŠ}˜MŠ­ŠÍ‹ŠŠ’Š]˜m‹=Š}˜m˜­Š’˜MŠr˜]‹=Š­‹ŠÍ˜MŠ’â"À¢&¦÷W&æW’æFW6W'BæW–V'&÷r#¢$Æ7BÆ–v‡B+r˜=Š½ŠŠ}˜b‹˜]˜M˜­Š’"À¢&¦÷W&æW’æFW6W'BçF—FÆR#¢-Š}˜M˜=Š½ŠŠ}˜bŠ}˜M‹˜]˜M˜­Š’˜M˜­‹=Š¢Ší˜M˜˜­Š‰²Š]˜m˜}Šr‹=ŠŠ‚Š}˜M‹˜}Š}Š‚"À¢&¦÷W&æW’æFW6W'BçFW‡B#¢-Š­Š˜m˜¢Š=˜˜mŠ­˜‹ŠrŠ}˜M˜]‹=Š}‹Šİ˜˜BŠ}˜M‹˜]˜B˜Š}˜M‹m˜Š˜Š}˜M˜]ŠÍ˜]˜‹ŠˆÂ˜MŠ­ŠŠı˜‚Š}˜M‹]Šİ‹Š}Š˜Š}‹=‹Š’˜ŠíŠ}‹]Š’˜˜]ŠíŠ­˜M˜Š’Š­˜]Š}˜]Š}˜²‹˜bŠ}˜M˜]Šı˜­˜mŠ’â"À¢&¦÷W&æW’æFW6W'Bç7FWF—FÆR#¢-Š}Š­‹˜2Š}˜M˜]Šı˜­˜mŠ’Ší˜M˜˜2"À¢&¦÷W&æW’æFW6W'Bç7FWFW‡B#¢-˜­˜ıŠí‹}‹rŠ}˜MŠ}˜m‹}˜MŠ}˜"˜Š}˜MŠ­˜m˜-˜BŠŠİ˜­Š²˜­˜=˜˜bŠ}˜MŠ}˜mŠ­˜-Š}˜B˜]˜bŠ}˜M‹}‹˜­˜"Š]˜M˜’Š}˜M‹˜]˜BŠ}˜M˜]˜Š­˜ŠÒ‹=˜M‹=Š}˜²˜]˜m‹Š}˜MŠŠıŠ}˜­Š’â"À¢&¦÷W&æW’æFW6W'Bç7FW%F—FÆR#¢-Š}Š­Š‹’Ší‹rŠ}˜M˜=Š½ŠŠ}˜b"À¢&¦÷W&æW’æFW6W'Bç7FW%FW‡B#¢-˜­˜ıŠíŠ­Š}‹˜]‹=Š}‹Šı˜‹’‹ŠŠ}‹˜¢˜M˜]ŠÍ˜]˜‹Š­˜=ˆÂ˜Š­Š˜-˜’Š}˜M˜=Š½ŠŠ}˜bŠ}˜M‹˜]˜M˜­Š’˜}˜¢Š}˜M˜]‹M˜}ŠòŠ}˜MŠ=‹=Š}‹=˜¢˜MŠrŠí˜M˜˜­Š’˜MŠ­˜˜-˜˜]‹]‹}˜m‹’â"À¢&¦÷W&æW’æFW6W'Bç7FW5F—FÆR#¢-‹]˜BŠ]˜M˜’Æ7BÆ–v‡B"À¢&¦÷W&æW’æFW6W'Bç7FW5FW‡B#¢-Šİ˜­˜bŠ­˜mŠí˜‹bŠ}˜M‹M˜]‹=ˆÂŠ­‹]˜m‹’Š}˜M‹m˜­Š}˜Š’Š}˜M‹=‹˜Šı˜­Š’˜˜}Šı˜ŠŠ}˜M˜]˜=Š}˜bŠíŠ­Š}˜]Š}˜²˜­‹=Š­Šİ˜"Š=˜b˜­˜ıŠMŠí‹ŠŠ‹}Šâ"À¢&¦÷W&æW’çF–bæW–V'&÷r#¢-˜]‹Š­˜‹Š}Š¢Š}˜M‹}Š}Šm˜+rŠ]˜­˜-Š}‹’Š=˜}ŠıŠ2"À¢&¦÷W&æW’çF–bçF—FÆR#¢-Š}‹=Š­ŠŠı˜BŠİ‹Š}‹Š’Š}˜M˜]Šı˜­˜mŠ’Š˜}˜Š}ŠŠ}˜MŠÍŠ˜B˜˜­˜˜RŠ=˜=Š½‹˜}Šı˜ŠŠ}˜²"À¢&¦÷W&æW’çF–bçFW‡B#¢-Š­ŠÍ˜]‹’‹Šİ˜MŠ’Š}˜M‹}Š}Šm˜Š}˜MŠíŠ}‹]Š’Š}˜M˜}˜Š}ŠŠ}˜MŠ=Š‹Šò˜Ší‹}˜‹rŠ}˜MŠÍŠŠ}˜B˜Š}˜M˜‹Šò˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M˜]Šİ˜M˜­Š’Š}˜M˜]˜‹=˜]˜­Š’ŠŠ]˜­˜-Š}‹’˜­Š­‹˜2˜M˜M˜]‹Š­˜‹Š}Š¢˜]‹=Š}ŠİŠ­˜}Šrâ"À¢&¦÷W&æW’çF–bç7FWF—FÆR#¢-Š}‹]‹ŠòŠ]˜M˜’Š]˜­˜-Š}‹’˜]ŠíŠ­˜M˜"À¢&¦÷W&æW’çF–bç7FWFW‡B#¢-˜mŠí‹}‹rŠ}˜MŠ}˜m‹}˜MŠ}˜"Šİ˜˜B˜]ŠÍ˜]˜‹Š­˜2˜MŠ­‹]ŠŠÒŠ}˜M‹Šİ˜MŠ’Š]˜M˜’Š}˜MŠ=‹˜M˜’ŠŠıŠ}˜­Š’Š}˜MŠ­ŠÍ‹ŠŠˆÂ˜MŠr˜]ŠÍ‹ŠòŠ}˜mŠ­˜-Š}˜Bâ"À¢&¦÷W&æW’çF–bç7FW%F—FÆR#¢-Š}˜MŠ­˜-™Š˜]˜‹=˜RŠ}˜M‹}Š}Šm˜"À¢&¦÷W&æW’çF–bç7FW%FW‡B#¢-˜­˜ıŠíŠ­Š}‹Š}˜M˜‹Šò˜Š}˜MŠ‹=Š}Š­˜­˜b˜Š}˜MŠ­˜˜-˜Š}Š¢Š}˜M˜]Šİ˜M˜­Š’˜˜˜"˜]ŠrŠ­˜-Šı˜]˜rŠ}˜M˜]‹Š­˜‹Š}Š¢˜‹˜MŠ}˜²˜˜¢‹˜M˜2Š}˜M˜˜-Š¢˜]˜bŠ}˜M‹=˜mŠ’â"À¢&¦÷W&æW’çF–bç7FW5F—FÆR#¢-Š­˜˜-˜Šİ˜­Š²Š­˜m˜Š­ŠÒŠ}˜MŠ]‹}˜MŠ}˜MŠ’"À¢&¦÷W&æW’çF–bç7FW5FW‡B#¢-˜­Š˜-˜’˜˜¢Š}˜M˜­˜˜R˜]‹=Š}ŠİŠ’˜M˜M˜]‹M˜}Šò˜Š}˜M˜}˜Š}Š˜Š}˜M˜MŠİ‹Š}Š¢‹­˜­‹Š}˜M˜]Ší‹}‹r˜M˜}ŠrŠ}˜MŠ­˜¢Š­ŠÍ‹˜BŠ}˜M‹}Š}Šm˜˜]ŠíŠ­˜M˜Š’‹˜bŠÍŠıŠ’â"À¢&¦÷W&æW’æ¦VFF‚æW–V'&÷r#¢-˜­˜˜RŠ=˜˜mŠ­˜‹ŠrŠ}˜M˜]˜]˜­‹"+rŠÍŠıŠ’"À¢&¦÷W&æW’æ¦VFF‚çF—FÆR#¢-˜­˜˜RŠÍŠıŠ’Š}˜M˜=Š}˜]˜B˜M˜­‹2ŠŠ}˜-Š‰²Š˜B˜­˜ıŠ˜m˜’Šİ˜˜B‹m˜­˜˜˜2"À¢&¦÷W&æW’æ¦VFF‚çFW‡B#¢-˜]˜bŠ}˜M˜Š}ŠÍ˜}Š’Š}˜MŠŠİ‹˜­Š’Š]˜M˜’ŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’˜Š­˜˜-˜‹‹MŠ}Š˜]Šı‹˜‹=ˆÂŠ­‹Š‹rŠ=˜˜mŠ­˜‹ŠrŠ}˜M˜]Šı˜­˜mŠ’ŠŠ]˜­˜-Š}‹’‹MŠí‹]˜¢˜MŠr˜]‹=Š­‹ŠÍ˜Bâ"À¢&¦÷W&æW’æ¦VFF‚ææ÷FR#¢-Š}˜M˜Š}ŠÍ˜}Š’˜Š}˜M˜]Šı˜­˜mŠ’Š}˜M˜-Šı˜­˜]Š’˜Š}˜M‹}Š}˜˜MŠ’˜‹]˜˜B˜M˜­˜˜R˜Š}ŠİŠıˆÂ˜MŠrŠ½˜MŠ}Š²˜]Šİ‹}Š}Š¢˜]‹=Š­‹ŠÍ˜MŠ’â"À¢&¦÷W&æW’æ¦VFF‚ç7FWF—FÆR#¢-Š}ŠŠıŠ2˜]˜bŠ}˜M˜]˜=Š}˜bŠ}˜M‹˜¢˜­˜mŠ}‹=Š‚˜­˜˜]˜2"À¢&¦÷W&æW’æ¦VFF‚ç7FWFW‡B#¢-˜mŠİŠıŠò˜m˜-‹}Š’Š}˜M˜M˜-Š}Š˜Š}˜MŠ­˜m˜-˜B˜Š=˜˜B˜]Šİ‹}Š’ŠŠİ‹=Š‚˜‹]˜˜M˜2˜‹}Š}˜-Š­˜2˜Š}˜}Š­˜]Š}˜]Š}Š­˜2â"À¢&¦÷W&æW’æ¦VFF‚ç7FW%F—FÆR#¢-Šı‹’ŠÍŠıŠ’Š­‹˜}‹‹˜M˜’‹M˜=˜B˜‹]˜˜B"À¢&¦÷W&æW’æ¦VFF‚ç7FW%FW‡B#¢-˜˜-Š¢‹˜M˜’Š}˜M˜Š}ŠÍ˜}Š’Š}˜MŠŠİ‹˜­Š’˜ŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’˜‹}‹Š}˜R˜]Šİ˜M˜¢˜Š­˜˜-˜Š}Š¢˜]ŠíŠ­Š}‹Š’Š­Š­‹]˜B˜˜¢Š]˜­˜-Š}‹’˜Š}ŠİŠò˜Š}‹mŠÒ˜˜]‹˜bâ"À¢&¦÷W&æW’æ¦VFF‚ç7FW5F—FÆR#¢-Š}ŠíŠ­˜R˜Š}˜M˜­˜˜R˜]Šr‹-Š}˜B˜]‹˜2"À¢&¦÷W&æW’æ¦VFF‚ç7FW5FW‡B#¢-˜­˜ı‹]˜]˜RŠ}˜MŠ­˜˜-˜­Š¢Š}˜MŠ=Ší˜­‹Šİ˜˜B˜]ŠÍ˜]˜‹Š­˜=ˆÂ˜M˜­˜mŠ­˜}˜¢Š}˜M˜­˜˜RŠŠ]Šİ‹=Š}‹2ŠŠ}˜M˜]˜=Š}˜b˜MŠr˜=Š˜mŠòŠ-Ší‹˜˜¢ŠÍŠı˜˜Bâ"À¢&¦÷W&æW’ç6VFô&ÆBæW–V'&÷r#¢-˜­˜˜RŠ=˜˜mŠ­˜‹ŠrŠ}˜M˜]˜]˜­‹"+r˜]˜bŠ}˜MŠŠİ‹Š]˜M˜’Š}˜MŠ˜MŠò"À¢&¦÷W&æW’ç6VFô&ÆBçF—FÆR#¢-˜­˜˜R˜Š}ŠİŠò˜­‹Š‹rŠ}˜MŠŠİ‹ŠŠİ˜=Š}˜­Š’Š}˜M˜]Šı˜­˜mŠ’"À¢&¦÷W&æW’ç6VFô&ÆBçFW‡B#¢-‹‹]‹˜˜¢Š}˜M˜]˜mŠ­ŠÍ‹’˜Š­˜˜-˜˜˜¢˜mŠ}Šı˜¢ŠÍŠıŠ’˜M˜M˜­Ší˜Š¢˜ŠÍ˜˜MŠ’˜]‹=Š}Šm˜­Š’˜]‹‹MŠıŠ’˜˜¢ŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’Š­‹]ŠŠÒ˜­˜˜]Š}˜²ŠíŠ}‹]Š}˜²˜Š}‹mŠÒŠ}˜MŠ­Šİ˜˜BŠ˜­˜bŠ}˜M˜]‹MŠ}˜}Šòâ"À¢&¦÷W&æW’ç6VFô&ÆBææ÷FR#¢-Š}˜MŠ}˜mŠ­˜-Š}˜B˜}˜‚Š}˜M˜˜=‹Š“¢‹m˜ŠŠ}˜M˜m˜}Š}‹˜-‹Š‚Š}˜M˜]Š}ŠˆÂ˜‹­‹˜Š‚˜˜¢˜mŠ}Šı˜¢Š}˜M˜­Ší˜Š­ˆÂŠ½˜R‹}Š}Š‹’Š}˜MŠ˜MŠòŠ‹ŠòŠİ˜M˜˜BŠ}˜M‹˜MŠ}˜Râ"À¢&¦÷W&æW’ç6VFô&ÆBç7FWF—FÆR#¢-Š}ŠŠıŠ2˜]‹’Š}˜M˜]Š}Š"À¢&¦÷W&æW’ç6VFô&ÆBç7FWFW‡B#¢-˜­˜ı‹]˜]˜R˜‹]˜BŠ}˜MŠŠİ‹˜=Š­ŠÍ‹ŠŠ’˜]˜mŠ­ŠÍ‹ˆÂ˜M˜­˜]˜mŠÒŠ}˜M˜­˜˜RŠŠıŠ}˜­Š’˜}Š}ŠıŠmŠ’˜-Š˜BŠ=˜bŠ­‹˜}‹Š}˜M˜]Šı˜­˜mŠ’˜˜¢Š}˜M˜]‹M˜}Šòâ"À¢&¦÷W&æW’ç6VFô&ÆBç7FW%F—FÆR#¢-Šı‹’Š}˜M‹m˜Š˜­‹­˜­™‹Š}˜M˜]‹M˜}Šò"À¢&¦÷W&æW’ç6VFô&ÆBç7FW%FW‡B#¢-˜­‹]˜m‹’Š­˜˜-˜Š}˜M‹­‹˜Š‚˜˜¢˜mŠ}Šı˜¢ŠÍŠıŠ’˜M˜M˜­Ší˜Š¢Š}˜mŠ­˜-Š}˜MŠ}˜²Š˜­˜b‹‹]‹˜]˜Š­˜ŠÒ˜‹MŠí‹]˜­Š’Š}˜MŠ˜MŠòâ"À¢&¦÷W&æW’ç6VFô&ÆBç7FW5F—FÆR#¢-Š}ŠıŠí˜BŠ]˜M˜’Š}˜M˜]‹=Š}Š˜]‹’˜]‹‹MŠò"À¢&¦÷W&æW’ç6VFô&ÆBç7FW5FW‡B#¢-Š­‹]ŠŠÒŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’Š}˜M˜‹]˜BŠ}˜MŠ=Ší˜­‹ˆÂ˜]‹’Ší˜­Š}‹˜]˜Š}‹]˜MŠ’Š}˜M˜]‹=Š}ŠŠ‹‹MŠ}Š˜]Šİ˜M˜¢˜]Šı‹˜‹2â"À¢'v÷&ÆBç6VæW–V'&÷r#¢-‹m˜ŠŠ}˜M‹]ŠŠ}ŠÒ+rŠ}˜MŠŠİ‹Š}˜MŠ=Šİ˜]‹"À¢'v÷&ÆBç6VçF—FÆR#¢-Š}ŠŠıŠ2˜]˜bŠİ˜­Š²˜­˜m˜Š­ŠÒŠ}˜MŠ=˜˜""À¢'v÷&ÆBç6VçFW‡B#¢-˜]˜bŠ=˜˜B‹‹=Š}˜MŠ’˜m‹mŠ‹rŠ]˜­˜-Š}‹Š}˜²‹]ŠŠ}Šİ˜­Š}˜²˜Š}‹mŠİŠ}˜²Šİ˜˜B˜]ŠÍ˜]˜‹Š­˜2˜Š}˜M˜-Š}‹Š‚˜Š}˜M˜]‹=Š}ŠİŠ’Š}˜MŠ­˜¢Š­‹˜­ŠòŠ=˜bŠ­Š˜-˜’Š˜MŠrŠÍŠı˜˜Bâ"À¢'v÷&ÆBç6Vææ÷FR#¢-Š­Š˜-˜’Š}˜M‹=Š}‹Š’Š}˜M‹˜}Š˜­Š’Š­ŠÍ‹ŠŠ’‹­‹˜Š‚˜]‹=Š­˜-˜MŠ’â‹Š}˜M˜RŠ}˜MŠŠİ‹Š}˜MŠ=Šİ˜]‹˜­ŠŠıŠ2˜]‹’‹m˜ŠŠ}˜M˜m˜}Š}‹â"À¢'v÷&ÆBç6Vç7FWF—FÆR#¢-ŠİŠıŠòŠ}˜MŠ]˜­˜-Š}‹’"À¢'v÷&ÆBç6Vç7FWFW‡B#¢-Š=ŠíŠ‹˜mŠrŠŠ}˜M˜˜-Š¢˜Š]˜­˜-Š}‹’Š}˜M‹m˜­˜˜˜˜]‹=Š­˜˜’Š}˜MŠí‹]˜‹]˜­Š’Š}˜M‹˜¢Š­‹‹­Š‚Š˜r‹˜M˜’Š}˜M˜]Š}Šâ"À¢'v÷&ÆBç6Vç7FW%F—FÆR#¢-Š}˜m‹}˜M˜"˜mŠİ˜‚Š}˜MŠŠİ‹Š}˜M˜]˜Š­˜ŠÒ"À¢'v÷&ÆBç6Vç7FW%FW‡B#¢-˜­‹]ŠŠÒŠ}˜MŠ}˜m‹}˜MŠ}˜"˜]˜bŠ=ŠŠİ‹ŠŠıŠ}˜­Š’Š}˜M˜­˜˜]ˆÂ˜MŠr˜]ŠÍ‹ŠòŠ}˜mŠ­˜-Š}˜BŠ]˜M˜­˜râ"À¢'v÷&ÆBç6Vç7FW5F—FÆR#¢-Š}Š­‹˜2˜]‹=Š}ŠİŠ’˜M˜M˜­˜˜R"À¢'v÷&ÆBç6Vç7FW5FW‡B#¢-˜­Š˜-˜’Š}˜M˜­˜˜RŠ}˜MŠŠİ‹˜¢˜]‹˜mŠ}˜½ˆÂ˜˜­˜]˜=˜b˜M‹=ŠŠ}ŠİŠ’˜}Š}ŠıŠmŠ’Š=˜‚ŠİŠı˜­Š²Š=˜‚Š­˜˜-˜˜-‹]˜­‹Š=˜b˜­‹]ŠŠÒ˜}˜‚Š}˜M‹˜=‹˜’â"À¢'v÷&ÆBæ†—7F÷&–2æW–V'&÷r#¢-Š}˜MŠ˜MŠò+rŠİ˜=Š}˜­Š’Šİ˜­™Š’"À¢'v÷&ÆBæ†—7F÷&–2çF—FÆR#¢-Š}ŠıŠí˜BŠ}˜M˜]Šı˜­˜mŠ’‹Š­ŠŠ˜²Š‹Šò‹Š­ŠŠ’"À¢'v÷&ÆBæ†—7F÷&–2çFW‡B#¢-˜-Š˜BŠŠıŠŠ}˜MŠÍ˜˜MŠˆÂ˜­˜-Šı™˜RŠ}˜M˜]‹‹MŠò‹=˜­Š}˜"Š}˜M˜]˜=Š}˜b˜˜­˜-˜ŠòŠ}˜M˜]ŠÍ˜]˜‹Š’Š˜­˜bŠ}˜MŠ=‹-˜-Š’˜Š}˜M‹˜]Š}‹Š’˜Š}˜MŠİ˜=Š}˜­Š}Š¢Š˜}Šı˜Šâ"À¢'v÷&ÆBæ†—7F÷&–2ææ÷FR#¢-˜MŠrŠ­˜ı‹=Š­‹ŠÍ˜BŠ}˜MŠİ˜=Š}˜­Š’â˜mŠ­‹˜2˜]‹=Š}ŠİŠ’˜M˜]˜MŠ}Šİ‹Š’Š}˜MŠí‹MŠ‚˜Š}˜MŠİŠÍ‹˜Š}˜MŠ=‹]˜Š}Š¢˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M‹]‹­˜­‹Š’â"À¢'v÷&ÆBæ†—7F÷&–2ç7FWF—FÆR#¢-Š­‹‹™˜Š]˜M˜’˜]‹‹MŠı˜2"À¢'v÷&ÆBæ†—7F÷&–2ç7FWFW‡B#¢-Š}ŠŠıŠ2ŠŠ}˜M˜mŠ}‹2˜Š}˜M‹=˜­Š}˜"Š}˜M˜M‹˜­˜b˜­˜]˜mŠİŠ}˜b˜=˜BŠŠ}Š‚˜]‹˜m˜’Š=‹˜]˜"â"À¢'v÷&ÆBæ†—7F÷&–2ç7FW%F—FÆR#¢-Š}˜-‹Š2Š}˜M‹˜‹MŠ}˜b"À¢'v÷&ÆBæ†—7F÷&–2ç7FW%FW‡B#¢-Š­˜m˜-™˜BŠ˜­˜bŠ}˜M‹˜MŠ}˜B˜Š}˜MŠí‹MŠ‚Š}˜M˜]˜mŠİ˜Š¢˜Š}˜MŠİ˜=Š}˜­Š}Š¢Š}˜MŠ­˜¢˜MŠrŠ­‹˜}‹‹˜M˜’Š}˜MŠí‹˜­‹}Š’â"À¢'v÷&ÆBæ†—7F÷&–2ç7FW5F—FÆR#¢-Šı‹’Š}˜M˜]Šı˜­˜mŠ’Š­Š˜-˜’˜]‹˜2"À¢'v÷&ÆBæ†—7F÷&–2ç7FW5FW‡B#¢-Š}ŠíŠ­˜RŠ˜˜-Š¢˜­‹=˜]ŠÒ˜M˜2ŠŠ}‹=Š­˜­‹Š}Š‚Š}˜MŠí‹MŠ‚˜Š}˜MŠİŠÍ‹˜Š=‹]˜Š}Š¢Š}˜M˜]Šı˜­˜mŠˆÂŠŠı˜MŠ}˜²˜]˜bŠ}˜MŠ}‹=Š­‹ŠÍŠ}˜B˜mŠİ˜‚˜-Š}Šm˜]Š’Š½Š}ŠŠ­Š’â"À¢'v÷&ÆBæFW6W'BæW–V'&÷r#¢$Æ7BÆ–v‡B+r˜=Š½ŠŠ}˜b‹˜]˜M˜­Š’"À¢'v÷&ÆBæFW6W'BçF—FÆR#¢-Š}Š­Š‹’Š}˜M˜=Š½ŠŠ}˜bŠ}˜M‹˜]˜M˜­Š’ŠİŠ­˜’˜­˜}ŠıŠ2Š}˜M‹m˜Š"À¢'v÷&ÆBæFW6W'BçFW‡B#¢-Š}˜M˜]‹M˜}ŠòŠ}˜M‹}Š˜­‹˜¢˜­˜-˜ŠòŠ}˜MŠ‹˜mŠ}˜]ŠÃ¢Š}˜]Š­ŠıŠ}ŠıŠ}Š¢˜=Š½ŠŠ}˜b‹˜]˜M˜­ŠˆÂ˜˜]‹=Š}‹Šı˜‹’‹ŠŠ}‹˜¢˜]ŠíŠ­Š}‹˜M˜]ŠÍ˜]˜‹Š­˜=ˆÂ˜Š­˜˜-˜ŠíŠ}‹R˜]‹’Š}˜mŠí˜Š}‹bŠ}˜M‹M˜]‹2â"À¢'v÷&ÆBæFW6W'Bææ÷FR#¢-˜}‹Šr˜}˜‚‹Š}˜M˜RŠ=˜˜mŠ­˜‹ŠrŠ}˜M‹]Šİ‹Š}˜˜£¢˜=Š½ŠŠ}˜b‹˜]˜M˜­Š’˜-Š˜BŠ}˜MŠı˜­˜=˜‹ˆÂ˜Š}˜M˜}Šı˜Š˜-Š˜BŠ}˜MŠ}‹=Š­‹‹Š}‹bâ"À¢'v÷&ÆBæFW6W'Bç7FWF—FÆR#¢-Š}Š­‹˜2Š}˜M˜]Šı˜­˜mŠ’Ší˜M˜˜2"À¢'v÷&ÆBæFW6W'Bç7FWFW‡B#¢-˜­Š­‹­˜­‹Š}˜MŠ]˜­˜-Š}‹’Šİ˜­˜b˜­˜‹=ŠÒŠ}˜M‹}‹˜­˜"Š}˜M˜]ŠÍŠ}˜B˜M˜M‹˜]Š}˜B˜Š}˜MŠ}˜]Š­ŠıŠ}ŠòŠ}˜M˜]˜Š­˜ŠÒâ"À¢'v÷&ÆBæFW6W'Bç7FW%F—FÆR#¢-Š}˜-‹Š2Ší‹rŠ}˜M˜=Š½ŠŠ}˜b"À¢'v÷&ÆBæFW6W'Bç7FW%FW‡B#¢-˜­Š­Š‹’Š}˜M˜]‹=Š}‹‹}Š˜­‹Š’Š}˜M˜]˜=Š}˜mˆÂ˜Š}˜M˜=Š½ŠŠ}˜bŠ}˜M‹˜]˜M˜­Š’˜}˜¢Š}˜M˜]‹M˜}ŠòŠ}˜M‹Šm˜­‹=˜¢˜˜M˜­‹=Š¢Ší˜M˜˜­Š’â"À¢'v÷&ÆBæFW6W'Bç7FW5F—FÆR#¢-‹]˜BŠ]˜M˜’Æ7BÆ–v‡B"À¢'v÷&ÆBæFW6W'Bç7FW5FW‡B#¢-Š}‹=Š­˜-‹˜]‹’Š}˜M‹m˜­Š}˜Š’˜Š}˜M˜˜}ŠÂŠ}˜MŠ=Ší˜­‹˜˜¢˜MŠİ‹Š’˜]‹]˜]˜]Š’˜M˜M˜]ŠÍ˜]˜‹Š’â"À¢'v÷&ÆBçF–bæW–V'&÷r#¢-‹m˜ŠŠ}˜M˜ŠÍ‹+rŠ}˜M˜]‹Š­˜‹Š}Š¢"À¢'v÷&ÆBçF–bçF—FÆR#¢-‹]˜B˜-Š˜BŠ=˜bŠ­‹=Š­˜­˜-‹‚Š}˜M˜]Šı˜­˜mŠ’"À¢'v÷&ÆBçF–bçFW‡B#¢-˜}˜Š}ŠŠŠ}‹Šò˜Ší‹}˜‹rŠÍŠ˜M˜­Š’˜˜‹Šò‹}Š}Šm˜˜¢Š­˜]˜mŠÒŠŠıŠ}˜­Š’Š=˜}ŠıŠ2ŠíŠ}‹ŠÂŠ]˜­˜-Š}‹’ŠÍŠıŠ’â"À¢'v÷&ÆBçF–bææ÷FR#¢-˜­‹M˜=™˜BŠ}˜M˜]˜‹=˜RŠ}˜MŠ­˜Š}‹]˜­˜MˆÂ˜˜­‹M˜=™˜B˜}Šı˜ŠŠ}˜M˜]‹Š­˜‹Š}Š¢˜=˜B˜]Šr‹ŠıŠr‹˜M˜2â"À¢'v÷&ÆBçF–bç7FWF—FÆR#¢-Š}‹]‹ŠòŠ]˜M˜’Š}˜M‹]ŠŠ}ŠÒ"À¢'v÷&ÆBçF–bç7FWFW‡B#¢-Š}Š­‹˜2Š]˜­˜-Š}‹’Š}˜M˜]Šı˜­˜mŠ’˜‹Š}Š˜2˜M˜}˜Š}ŠŠ=Š‹Šò˜Š]‹}˜MŠ}˜MŠ’ŠÍŠ˜M˜­Š’˜]˜Š­˜ŠİŠ’â"À¢'v÷&ÆBçF–bç7FW%F—FÆR#¢-Š}˜MŠ­˜-™ŠŠ}˜M˜]˜‹=˜R"À¢'v÷&ÆBçF–bç7FW%FW‡B#¢-˜­˜ıŠíŠ­Š}‹Š}˜M˜‹Šò˜Š}˜MŠ‹=Š}Š­˜­˜b˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M˜]Šİ˜M˜­Š’ŠŠİ‹=Š‚˜]ŠrŠ­˜-Šı˜]˜rŠ}˜M˜]‹Š­˜‹Š}Š¢Š}˜MŠ-˜bâ"À¢'v÷&ÆBçF–bç7FW5F—FÆR#¢-Š­˜˜-˜‹˜mŠòŠ}˜MŠ]‹}˜MŠ}˜MŠ’"À¢'v÷&ÆBçF–bç7FW5FW‡B#¢-Šı‹’Š}˜M˜]‹M˜}ŠòŠ}˜M‹}Š˜­‹˜¢˜­ŠİŠıŠòŠ}˜MŠ]˜­˜-Š}‹‰²˜Š}˜M˜}˜Š}Š˜Š}˜MŠ]‹}˜MŠ}˜MŠ’˜Š}˜M˜}Šı˜Š˜}˜¢ŠŠ}˜M˜‹˜BŠÍ‹-Š˜]˜bŠ}˜M‹˜=‹˜’â"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C56†÷'B#¢-Š}˜MŠ­‹˜=Š}‹"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C5F—FÆR#¢-Š­‹˜=Š}‹˜]˜m‹=˜ŠÂ‹]‹­˜­‹"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C5FW‡B#¢-˜-‹}‹Š’˜]˜m‹=˜ŠÍŠ’‹]‹­˜­‹Š’˜]‹=Š­˜ŠİŠ}Š’˜]˜bŠ}˜MŠİ‹˜Š}˜M‹]Šİ‹Š}˜˜­Š’˜˜­‹=˜}˜BŠİ˜]˜M˜}Šr˜=Š­‹˜=Š}‹â"À¢&6öÆÆV7F–öâç&öGV7EF–cE6†÷'B#¢-‹˜mŠ}˜­Š’Š}˜M˜‹Šò"À¢&6öÆÆV7F–öâç&öGV7EF–cEF—FÆR#¢-‹]Š}Š˜˜b˜‹ŠòŠ=˜‚˜=‹˜­˜R˜M˜M˜­Šı˜­˜b"À¢&6öÆÆV7F–öâç&öGV7EF–cEFW‡B#¢-˜]˜mŠ­ŠÂ‹˜mŠ}˜­Š’˜]Šİ˜M˜¢‹]‹­˜­‹˜­˜ıŠíŠ­Š}‹Šİ‹=Š‚Š}˜M˜]˜‹=˜R˜Š}˜MŠ­˜˜‹â"À¢&6öÆÆV7F–öâææö—%F—FÆR#¢$gFW"Ö–Fæ–v‡Bæö—""À¢&6öÆÆV7F–öâçfVÇfWEF—FÆR#¢$gFW"Ö–Fæ–v‡BfVÇfWB"À¢&6öÖÖöâç6V6öæÂ#¢-˜]˜‹=˜]˜¢"À¢&6öÆÆV7F–öâæW‡Æ÷&T'WGFöâ#¢-Š­‹]˜ŠÒŠ}˜M˜]ŠÍ˜]˜‹Š}Š¢"À¢&6öÆÆV7F–öâæf–ÇFW$&–#¢-Š­‹]˜˜­Š’Š}˜MŠ˜Š­˜­˜2Šİ‹=Š‚Š}˜MŠ­ŠÍ‹ŠŠ’"À¢&6öÆÆV7F–öâçVçF—G’#¢-Š}˜M˜=˜]˜­Š’"À¢&6öÆÆV7F–öâæFD&÷‚#¢-Š=‹m˜Š}˜MŠ˜˜=‹2Š]˜M˜’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâæFD—FVÒ#¢-Š=‹m˜Š]˜M˜’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâæFE6W'f–6R#¢-Š=‹m˜Š}˜MŠíŠı˜]Š’Š]˜M˜’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâæFFVB#¢-Š­˜]Š¢Š}˜MŠ]‹mŠ}˜Š’Š]˜M˜’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâç&VÖ÷fT—FVÒ#¢-Š]‹-Š}˜MŠ’"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fUF—FÆR#¢-Š˜˜=‹2Š}˜MŠ­‹Šİ˜­Š‚Š}˜MŠ­˜m˜˜­‹˜¢"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fUFW‡B#¢-Š­‹Šİ˜­Š‚‹Š}˜-˜Ò˜˜¢Š}˜M˜˜mŠı˜"˜M˜MŠ­˜m˜˜­‹˜­˜­˜b˜Š}˜M˜˜˜Šò˜Š}˜M‹m˜­˜˜Š}˜MŠı˜˜M˜­˜­˜bâ"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓ#¢-Šı˜Š­‹˜˜-˜M˜R‹Š}˜-˜­Š}˜b"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓ"#¢-Š‹}Š}˜-Š’Š=˜]Š­‹Š’Š=˜m˜­˜-Š’"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓ2#¢-Š‹}Š}˜-Š’Š­‹Šİ˜­Š‚˜˜]‹=Š}‹ŠŠ}‹=˜RŠ}˜M‹m˜­˜"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓB#¢-Š­‹˜=Š}‹˜]Šİ˜M˜¢‹]‹­˜­‹"À¢&6öÆÆV7F–öâç&öGV7G4W–V'&÷r#¢-Š}˜M˜]˜mŠ­ŠÍŠ}Š¢Š}˜M˜]˜m˜‹ŠıŠ’"À¢&6öÆÆV7F–öâç&öGV7G5F—FÆR#¢-Š}˜M˜]˜mŠ­ŠÍŠ}Š¢˜-‹˜­Š˜½Šrâ"À¢&6öÆÆV7F–öâç&öGV7G5FW‡B#¢-Š­Š˜-˜’˜}‹˜rŠ}˜M˜]‹Š}˜­˜mŠ}Š¢˜]‹Šm˜­Š’Š=Š½˜mŠ}ŠŠ}‹Š­˜]Š}ŠòŠ}˜M˜m˜]Š}‹ŠÂŠ}˜MŠ=˜˜M˜­Š’˜Š}˜M˜]˜‹Šı˜­˜b˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M˜m˜}Š}Šm˜­ŠˆÂ˜˜MŠr˜­˜]˜=˜bŠ]‹mŠ}˜Š­˜}ŠrŠ]˜M˜’‹}˜MŠ‚ŠİŠ}˜M˜­˜½Šrâ"À¢&6öÆÆV7F–öâç&öGV7E6V6†÷'B#¢-Š}˜MŠİ˜-˜­ŠŠ’"À¢&6öÆÆV7F–öâç&öGV7E6VF—FÆR#¢-Šİ˜-˜­ŠŠ’‹MŠ}‹}ŠbŠ=˜˜mŠ­˜‹Šr"À¢&6öÆÆV7F–öâç&öGV7E6VFW‡B#¢-Šİ˜-˜­ŠŠ’‹˜]˜M˜­Š’˜M˜M‹MŠ}‹}Šb˜˜­˜]˜=˜bŠ}‹=Š­ŠíŠıŠ}˜]˜}Šr˜MŠİ˜]˜B˜]ŠÍ˜]˜‹Š’Š}˜MŠŠİ‹˜=Š}˜]˜MŠ’â"À¢&6öÆÆV7F–öâç&öGV7E6V%6†÷'B#¢-Š}˜M˜]˜m‹M˜Š’"À¢&6öÆÆV7F–öâç&öGV7E6V%F—FÆR#¢-˜]˜m‹M˜Š’‹MŠ}‹}Šb‹=‹˜­‹Š’Š}˜MŠÍ˜Š}˜"À¢&6öÆÆV7F–öâç&öGV7E6V%FW‡B#¢-Ší˜˜­˜Š’˜‹=˜}˜MŠ’Š}˜MŠİ˜]˜B˜˜]˜mŠ}‹=ŠŠ’˜M˜M˜]˜mŠ­ŠÍ‹’˜Š}˜M˜-Š}‹Š‚˜Š}˜M‹MŠ}‹}Šbâ"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–36†÷'B#¢-Š­‹˜=Š}‹"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3F—FÆR#¢-Š­‹˜=Š}‹Ší‹MŠ˜¢˜]‹=Š­˜Šİ˜’˜]˜bŠ}˜M‹˜‹MŠ}˜b"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3FW‡B#¢-˜-‹}‹Š’‹]‹­˜­‹Š’˜]‹=Š­˜ŠİŠ}Š’˜]Šİ˜M˜­˜½Šr˜]˜b˜m˜Š}˜‹ŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’â"À¢&6öÆÆV7F–öâç&öGV7D†÷7—FÆ—G•6†÷'B#¢-˜]ŠÍ˜]˜‹Š’Š­‹Šİ˜­Š‚"À¢&6öÆÆV7F–öâç&öGV7D†÷7—FÆ—G•F—FÆR#¢-˜]ŠÍ˜]˜‹Š’Š‹}Š}˜-Š}Š¢Š­‹Šİ˜­Š‚ŠŠ}˜M‹m˜­˜˜"À¢&6öÆÆV7F–öâç&öGV7D†÷7—FÆ—G•FW‡B#¢-Š‹}Š}˜-Š}Š¢Š­‹Šİ˜­Š‚˜]Ší‹]‹]Š’˜Š‹}Š}˜-Š}Š¢˜]‹=Š}‹‹]‹­˜­‹Š’˜MŠ}‹=Š­˜-ŠŠ}˜BŠ}˜M‹m˜­˜˜â"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3%6†÷'B#¢-Š‹}Š}˜-Š}Š¢"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3%F—FÆR#¢-Š‹}Š}˜-Š}Š¢Š­‹Š}Š½˜­Š’˜]‹]˜‹Š’"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3%FW‡B#¢-˜]ŠÍ˜]˜‹Š’˜]ŠíŠ­‹]‹Š’˜]‹=Š­˜ŠİŠ}Š’˜]˜b‹˜]Š}‹Š’Š}˜MŠ˜MŠò˜Š­˜Š}‹]˜­˜M˜}Šrâ"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C6†÷'B#¢-Š}˜M‹MŠ}˜B"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CF—FÆR#¢-‹MŠ}˜B‹]Šİ‹Š}˜˜¢Ší˜˜­˜"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CFW‡B#¢-‹}Š˜-Š’Ší˜˜­˜Š’˜˜]ŠİŠ}˜­ŠıŠ’˜­‹=˜}˜BŠİ˜]˜M˜}Šr˜MŠ=ŠÍ˜Š}ŠŠ}˜M˜]‹=Š}ŠŠ}˜M‹]Šİ‹Š}˜˜¢â"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C%6†÷'B#¢-Š}˜M˜=˜Š‚Š}˜MŠİ‹Š}‹˜¢"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C%F—FÆR#¢-˜=˜Š‚‹Šİ˜MŠ}Š¢˜]‹‹-˜˜BŠİ‹Š}‹˜­˜½Šr"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C%FW‡B#¢-˜=˜Š‚˜-Š}Š˜B˜MŠ]‹Š}ŠıŠ’Š}˜MŠ}‹=Š­ŠíŠıŠ}˜R˜˜]˜mŠ}‹=Š‚˜MŠ=ŠÍ˜Š}ŠŠ}˜M˜]‹=Š}ŠŠ}˜M‹]Šİ‹Š}˜˜¢â"À¢&6öÆÆV7F–öâç&öGV7EF–c6†÷'B#¢-‹‹Š}‹Š}˜M˜‹Šò"À¢&6öÆÆV7F–öâç&öGV7EF–cF—FÆR#¢-‹‹Š}‹˜‹Šò‹}Š}Šm˜˜¢‹‹}‹˜¢"À¢&6öÆÆV7F–öâç&öGV7EF–cFW‡B#¢-‹‹Š}‹˜‹Šò‹‹}‹˜¢˜M˜MŠ}‹=Š­ŠíŠıŠ}˜RŠ}˜MŠíŠ}‹ŠÍ˜­ˆÂ˜­˜ıŠíŠ­Š}‹˜]˜b˜]˜‹Šò˜]Šİ˜M˜¢Šİ‹=Š‚Š}˜M˜]˜‹=˜R˜Š}˜MŠ­˜˜‹â"À¢&6öÆÆV7F–öâç&öGV7EF–c%6†÷'B#¢-Šı˜Š­‹Š˜m˜-˜‹BŠ}˜M˜‹Šò"À¢&6öÆÆV7F–öâç&öGV7EF–c%F—FÆR#¢-Šı˜Š­‹Š˜m˜-˜‹B˜‹ŠòŠ}˜M‹}Š}Šm˜"À¢&6öÆÆV7F–öâç&öGV7EF–c%FW‡B#¢-Šı˜Š­‹‹]‹­˜­‹Š˜m˜-˜‹B˜}Š}ŠıŠmŠ’˜]‹=Š­˜ŠİŠ}Š’˜]˜b˜‹ŠòŠ}˜M‹}Š}Šm˜â"À¢&6öÆÆV7F–öâç&öGV7EF–c56†÷'B#¢-˜}Šı˜­Š’Š}˜M˜‹Šò"À¢&6öÆÆV7F–öâç&öGV7EF–c5F—FÆR#¢-˜=˜­‹2˜‹Šò˜]‹‹}‹"À¢&6öÆÆV7F–öâç&öGV7EF–c5FW‡B#¢-Š­‹˜=Š}‹Ší˜˜­˜˜]˜mŠ}‹=Š‚˜M˜MŠ­‹Šİ˜­Š‚˜˜¢Š}˜M˜˜mŠı˜"˜Š˜˜=‹=Š}Š¢Š}˜MŠ­ŠÍŠ}‹Š‚â"À¢&6öÆÆV7F–öâæÆ7DÆ–v‡EVæF–ær#¢-Š}˜MŠ­‹]˜]˜­˜RŠ}˜MŠ=‹]˜M˜¢˜M˜MŠ‹}Š}˜-Š’˜-˜­ŠòŠ}˜MŠ]‹ŠıŠ}Šò"À¢&6öÆÆV7F–öâç66VçDÆ$æÖR#¢-˜]ŠíŠ­Š‹‹‹}˜‹Š=˜˜mŠ­˜‹Šr"À¢&6öÆÆV7F–öâæwVW7E6W'f–6W4W–V'&÷r#¢-ŠíŠı˜]Š}Š¢Š}˜M‹m˜­˜˜"À¢&6öÆÆV7F–öâæwVW7E6W'f–6W5F—FÆR#¢-Š­˜Š}‹]˜­˜BŠ}˜M‹m˜­˜Š­˜ı‹Š­Š‚˜˜¢˜]‹=Š}‹˜]‹=Š­˜-˜Bâ"À¢&6öÆÆV7F–öâæwVW7E6W'f–6W5FW‡B#¢-˜­˜ı˜m‹=™˜"Š­˜‹]˜­˜BŠ}˜MŠ½˜Š‚˜Š}˜M‹ŠŠ}˜­Š’˜Š}˜M˜‹Šò‹Š‹‹}˜MŠ‚ŠíŠ}‹RŠŠíŠı˜]Š}Š¢Š}˜M‹m˜­˜˜â"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv”&–#¢-˜]‹=Š}‹Š}Š¢ŠıŠí˜˜BŠ}˜MŠ˜Š­˜­˜2"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv”W–V'&÷r#¢-Š}ŠŠıŠ2ŠŠ}˜M‹}‹˜­˜-Š’Š}˜MŠ­˜¢Š­˜mŠ}‹=Š˜2"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv•F—FÆR#¢-Š}ŠíŠ­‹‹}‹˜­˜-Š’Š}‹=Š­˜=‹MŠ}˜Š}˜MŠ˜Š­˜­˜2"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv•FW‡B#¢-˜­ŠŠıŠ2˜=˜BŠ­‹]˜‹‹‹}‹˜¢˜]˜b˜]˜=Š}˜b˜˜]‹-Š}ŠÂ˜Š­ŠÍ‹ŠŠ’˜Š}ŠİŠıŠ’˜]˜bŠ=˜˜mŠ­˜‹Šrâ"À¢&6öÆÆV7F–öâæW†V7WF—fU6W'f–6W4W–V'&÷r#¢-ŠíŠı˜]Š}Š¢Š}˜M‹m˜­˜˜˜Š}˜MŠ­˜m˜˜­‹˜­˜­˜b"À¢&6öÆÆV7F–öâæW†V7WF—fU6W'f–6W5F—FÆR#¢-Šı‹˜R˜]Šı‹˜‹2Šİ˜˜B˜=˜B˜‹]˜˜B"À¢&6öÆÆV7F–öâæW†V7WF—fU6W'f–6W5FW‡B#¢-ŠíŠı˜]Š}Š¢˜]‹=Š­˜-˜MŠ’Š=˜‚Š­˜Š}‹]˜­˜B˜]˜m‹=˜-Š’‹m˜]˜bŠ‹˜mŠ}˜]ŠÂ‹m˜­˜˜Š}ŠİŠòâ"À¢&6öÆÆV7F–öâæ—'÷'EvVÆ6öÖUF—FÆR#¢-Š}‹=Š­˜-ŠŠ}˜B˜Š­˜m‹=˜­˜"Š}˜M˜]‹}Š}‹"À¢&6öÆÆV7F–öâæ—'÷'EvVÆ6öÖUFW‡B#¢-Š­˜m‹=˜­˜"˜‹]˜˜BŠ}˜M‹m˜­˜˜]˜b˜m˜-‹}Š’Š}˜MŠ}‹=Š­˜-ŠŠ}˜B˜˜¢Š}˜M˜]‹}Š}‹Š]˜M˜’Š}˜M‹=˜­Š}‹Š’˜˜]˜=Š}˜bŠ}˜MŠ]˜-Š}˜]Š’Š}˜M˜]ŠİŠıŠı˜­˜bâ"À¢&6öÆÆV7F–öâæW†V7WF—fUG&ç7÷'EF—FÆR#¢-Š}˜M˜m˜-˜BŠ}˜MŠ­˜m˜˜­‹˜¢"À¢&6öÆÆV7F–öâæW†V7WF—fUG&ç7÷'EFW‡B#¢-Š­˜m‹=˜­˜"Š}˜M‹=˜­Š}‹Š’˜Š}˜M‹=Š}Šm˜"ŠŠİ‹=Š‚Š}˜MŠ‹˜mŠ}˜]ŠÂ˜‹ŠıŠòŠ}˜M‹m˜­˜˜˜Š}˜MŠ­˜˜-˜­Š¢Š}˜M˜]˜‹m˜Bâ"À¢&6öÆÆV7F–öâæÖVWF–æu6WGWF—FÆR#¢-Š­ŠÍ˜}˜­‹"Š}˜MŠ}ŠÍŠ­˜]Š}‹Š}Š¢"À¢&6öÆÆV7F–öâæÖVWF–æu6WGWFW‡B#¢-Š­˜m‹=˜­˜"Š}˜M˜-Š}‹Š’˜Š}˜M‹m˜­Š}˜Š’˜Š}˜M˜m˜-˜B˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M‹˜]˜M˜­Š’˜M˜MŠ}ŠÍŠ­˜]Š}‹’˜˜˜"ŠÍŠı˜˜BŠ}˜MŠ=‹˜]Š}˜Bâ"À¢&6öÆÆV7F–öâæöff–6–Äv–gG5F—FÆR#¢-Š}˜M˜}ŠıŠ}˜­ŠrŠ}˜M‹‹=˜]˜­Š’"À¢&6öÆÆV7F–öâæöff–6–Äv–gG5FW‡B#¢-Š­ŠÍ˜}˜­‹"˜}Šı˜­Š’Š­‹Šİ˜­Š‚Š=˜‚˜}Šı˜­Š’‹‹=˜]˜­Š’ŠŠİ‹=Š‚Š}˜M˜]˜mŠ}‹=ŠŠ’˜Š}˜M˜]‹=Š­˜M˜R˜Š}˜M˜}˜˜­Š’Š}˜M˜]‹Š­˜]ŠıŠ’â"À¢&6öÆÆV7F–öâæ6öæ6–W&vUF—FÆR#¢-Šı‹˜RŠ}˜M˜=˜˜m‹=˜­‹ŠÂ"À¢&6öÆÆV7F–öâæ6öæ6–W&vUFW‡B#¢-Š­˜m‹=˜­˜"Š}˜MŠı‹˜RŠ}˜M‹˜]˜M˜¢˜M˜M‹m˜­˜˜Š}˜MŠİŠÍ˜‹-Š}Š¢˜Š}˜M‹}˜MŠŠ}Š¢Š}˜MŠíŠ}‹]Š’‹Š‹˜m˜-‹}Š’Š­˜Š}‹]˜B˜Š}ŠİŠıŠ’â"À¢&6öÆÆV7F–öâç&WVW7E6W'f–6R#¢-Š}‹}˜MŠ‚˜}‹˜rŠ}˜MŠíŠı˜]Š’"À¢&6öÆÆV7F–öâç66VçDÆ$–çFW&W7Dæ÷FR#¢-ŠÍ˜]˜­‹’Š­‹]˜‹Š}Š¢Š}˜M‹‹}˜‹˜]Šr‹-Š}˜MŠ¢˜-˜­ŠòŠ}˜MŠ­‹}˜˜­‹ˆÂ˜‹=˜­˜ı‹˜M˜b‹˜m˜}Šr‹˜mŠòŠÍŠ}˜}‹-˜­Š­˜}Šrâ"À¢&6öÆÆV7F–öâæ–çFW&W7D'WGFöâ#¢-Š=Š˜M‹­˜m˜¢‹˜mŠòŠ}˜MŠ­˜˜‹"À¢&6öÆÆV7F–öâæ–çFW&W7D¦÷W&æW”'WGFöâ#¢-Š}˜=Š­‹M˜Š}˜M‹‹}‹˜‹=ŠÍ™˜BŠ}˜}Š­˜]Š}˜]˜2"À¢&6öÆÆV7F–öâçF†ö&Uö–çC#¢-‹-˜­Š}‹Š’ŠíŠ}‹]Š’"À¢&6öÆÆV7F–öâçF†ö&Uö–çC"#¢-Š}ŠíŠ­˜­Š}‹Š}˜M˜-˜]Š}‹B"À¢&6öÆÆV7F–öâçF†ö&Uö–çC2#¢-Š­‹=˜M˜­˜R‹=‹˜­‹’˜˜]˜m‹=˜""À¢&6öÆÆV7F–öâæ&–ö–çC#¢-˜]‹=Š}‹ŠıŠ’ŠíŠ}‹]Š’"À¢&6öÆÆV7F–öâæ&–ö–çC"#¢-Š}ŠíŠ­˜­Š}‹Š}˜M˜]˜-Š}‹2˜Š}˜MŠ=‹=˜M˜Š‚"À¢&6öÆÆV7F–öâæ&–ö–çC2#¢-Š­‹=˜M˜­˜R˜]˜m‹=˜""À¢&6öÆÆV7F–öâæfÆ÷vW%F—FÆR#¢-ŠŠ}˜-Š’˜‹Šò˜-Š˜B˜‹]˜˜BŠ}˜M‹m˜­˜"À¢&6öÆÆV7F–öâæfÆ÷vW%FW‡B#¢-Š­˜ı‹Š­Š‚ŠŠ}˜-Š’˜‹Šò˜Š‹}Š}˜-Š’‹MŠí‹]˜­Š’˜˜¢Š}˜M˜˜mŠı˜"Š=˜‚˜]˜-‹Š}˜MŠ]˜-Š}˜]Š’˜-Š˜B˜‹]˜˜BŠ}˜M‹m˜­˜â"À¢&6öÆÆV7F–öâæfÆ÷vW%ö–çC#¢-Š­˜m‹=˜­˜"Šİ‹=Š‚Š}˜M˜]˜mŠ}‹=ŠŠ’"À¢&6öÆÆV7F–öâæfÆ÷vW%ö–çC"#¢-Š‹}Š}˜-Š’Š‹‹=Š}˜MŠ’‹MŠí‹]˜­Š’"À¢&6öÆÆV7F–öâæfÆ÷vW%ö–çC2#¢-Š­˜‹]˜­˜B˜-Š˜BŠ}˜M˜‹]˜˜B"À¢&6öÆÆV7F–öâç6VÆV7F–öäÆ&VÂ#¢-‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâç6VÆV7F–öä—FV×2#¢-‹˜mŠ}‹]‹"À¢&6öÆÆV7F–öâç&Wf–Wu6VÆV7F–öâ#¢-‹Š}ŠÍ‹’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâæF–ÆöuF—FÆR#¢-‹Š}ŠÍ‹’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâçV÷FTF—66Æ–ÖW"#¢-Š]‹‹=Š}˜B‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹˜MŠr˜­ŠM˜=ŠòŠ}˜MŠİŠÍ‹"Š=˜‚Š}˜MŠı˜‹’Š=˜‚Š}˜MŠ­˜˜‹âŠ­‹Š}ŠÍ‹’Š=˜˜mŠ­˜‹ŠrŠ}˜M˜]˜‹Šò˜Š}˜M˜=˜]˜­Š’˜Š}˜MŠ­Ší‹]˜­‹R˜-Š˜BŠ]‹]ŠıŠ}‹‹‹‹bŠ}˜M‹=‹‹Š}˜M˜m˜}Š}Šm˜¢â"À¢&6öÆÆV7F–öâæ6ÆV%6VÆV7F–öâ#¢-˜]‹=ŠÒŠ}˜MŠ}ŠíŠ­˜­Š}‹Š}Š¢"À¢&6öçF7Bç&WVW7FVD—FV×2#¢-Š}˜MŠ­˜Š}‹]˜­˜B˜Š}˜MŠíŠı˜]Š}Š¢Š}˜M˜]ŠíŠ­Š}‹Š’"À¢&6öçF7Bæ6öÆÆV7F–öäFWF–Ç5F—FÆR#¢-Š­˜Š}‹]˜­˜BŠ}˜MŠ˜Š­˜­˜2˜Š}˜MŠ­˜‹]˜­˜B"À¢&6öçF7BæFVÆ—fW'”Æö6F–öäÆ&VÂ#¢-Š}˜M˜˜mŠı˜"Š=˜‚˜]˜˜-‹’Š}˜MŠ­‹=˜M˜­˜R"À¢&6öçF7BæFVÆ—fW'”Æö6F–öåÆ6V†öÆFW"#¢-Š}˜M˜˜mŠı˜"Š=˜‚˜]˜-‹Š}˜MŠ]˜-Š}˜]Š’Š=˜‚˜]˜˜-‹’Š}˜M˜‹Š}˜M˜­Š’"À¢&6öçF7BæFVÆ—fW'•F–ÖTÆ&VÂ#¢-˜˜-Š¢Š}˜MŠ­‹=˜M˜­˜RŠ}˜M˜]‹}˜M˜Š‚"À¢&6öçF7BçW'6öæÆ—¦F–öäÆ&VÂ#¢-Š}‹=˜RŠ}˜M‹m˜­˜Š=˜‚‹‹=Š}˜MŠ’Š}˜MŠ]˜}ŠıŠ}ŠŠ=˜‚‹M‹Š}‹Š}˜M‹M‹˜=Š’"À¢&6öçF7BçW'6öæÆ—¦F–öåÆ6V†öÆFW"#¢-Š­˜Š}‹]˜­˜BŠ}˜MŠ­Ší‹]˜­‹RŠ]˜b˜ŠÍŠıŠ¢"À¢&6öçF7BçF†ö&TFWF–Ç5F—FÆR#¢-Š­˜Š}‹]˜­˜BŠíŠı˜]Š’Š­˜‹]˜­˜BŠ}˜MŠ½˜Š‚"À¢&6öçF7Bç6W'f–6TÆö6F–öäÆ&VÂ#¢-Š}˜M˜˜mŠı˜"Š=˜‚˜]˜-‹Š}˜MŠ]˜-Š}˜]Š’"À¢&6öçF7BçF†ö&T6÷VçDÆ&VÂ#¢-‹ŠıŠòŠ}˜MŠ=Š½˜Š}Š‚"À¢&6öçF7Bçf—6—EF–ÖTÆ&VÂ#¢-˜]˜‹ŠòŠ}˜M‹-˜­Š}‹Š’Š}˜M˜]˜‹m˜B"À¢&6öçF7Bç&WV—&VDFVÆ—fW'”Æ&VÂ#¢-˜]˜‹ŠòŠ}˜MŠ­‹=˜M˜­˜RŠ}˜M˜]‹}˜M˜Š‚"À¢&6öçF7BçF†ö&U&VfW&Væ6TÆ&VÂ#¢-Š}˜M˜M˜˜bŠ=˜‚Š}˜M˜-˜]Š}‹BŠ}˜M˜]˜‹m˜B"À¢&6öçF7Bæ÷F–öæÅÆ6V†öÆFW"#¢-Š}ŠíŠ­˜­Š}‹˜¢"À¢&6öçF7Bæ&–FWF–Ç5F—FÆR#¢-Š­˜Š}‹]˜­˜BŠíŠı˜]Š’Š}˜M‹ŠŠ}˜­Š’"À¢&6öçF7Bæ6öçF7Ef—6—EF–ÖTÆ&VÂ#¢-˜]˜‹ŠòŠ}˜MŠ­˜Š}‹]˜BŠ=˜‚Š}˜M‹-˜­Š}‹Š’Š}˜M˜]˜‹m˜B"À¢&6öçF7Bç&VfW'&VD6öçF7DÆ&VÂ#¢-‹}‹˜­˜-Š’Š}˜MŠ­˜Š}‹]˜BŠ}˜M˜]˜‹m˜MŠ’"À¢&6öçF7Bæ6öçF7Ev†G6#¢-˜Š}Š­‹=Š}Š‚"À¢&6öçF7Bæ6öçF7DVÖ–Â#¢-Š}˜MŠ‹˜­ŠòŠ}˜MŠ]˜M˜=Š­‹˜˜m˜¢"À¢&6öçF7Bç&VfW'&VE&W7öç6UFW‡B#¢-Š­‹ŠòŠ=˜˜mŠ­˜‹Šr‹Š‹Š}˜MŠ‹˜­ŠòŠ}˜MŠ]˜M˜=Š­‹˜˜m˜¢˜]Šr˜M˜RŠ­˜‹m™˜B˜Š}Š­‹=Š}Š‚Š=˜‚Š}˜MŠ}Š­‹]Š}˜BŠ}˜M˜}Š}Š­˜˜¢â"À¢&6öçF7Bç6VæDÖWF†öDÆVvVæB#¢-Š=‹‹=˜B‹}˜MŠ‚ŠİŠÍ‹-˜2‹Š‹"À¢&6öçF7Bç6VæDÖWF†öEFW‡B#¢-Š}˜MŠ‹˜­ŠòŠ}˜MŠ]˜M˜=Š­‹˜˜m˜¢˜}˜‚˜‹=˜­˜MŠ’Š}˜MŠİŠÍ‹"Š}˜MŠ=‹=Š}‹=˜­ŠˆÂ˜˜­Š˜-˜’˜Š}Š­‹=Š}Š‚Ší˜­Š}‹Š}˜²Š½Š}˜m˜­Š}˜²â"À¢&6öçF7Bç6VæDVÖ–Â#¢-Š}˜MŠ‹˜­ŠòŠ}˜MŠ]˜M˜=Š­‹˜˜m˜¢"À¢&6öçF7Bç6VæEv†G6#¢-˜Š}Š­‹=Š}Š‚"À¢&6öçF7Bæ6öçF7D6ÆÂ#¢-Š}Š­‹]Š}˜B˜}Š}Š­˜˜¢"À¢&6öçF7Bæ6öçF7Ef—6—B#¢-‹-˜­Š}‹Š’Š}˜M˜˜mŠı˜""À¢&6öçF7BæfÆ÷vW$FWF–Ç5F—FÆR#¢-Š­˜Š}‹]˜­˜BŠ­˜‹]˜­˜BŠ}˜M˜‹Šò"À¢&6öçF7Bç&V6—–VçDÆ&VÂ#¢-Š}‹=˜RŠ}˜M˜]‹=Š­˜M˜R"À¢&6öçF7Bæö666–öäÆ&VÂ#¢-Š}˜M˜]˜mŠ}‹=ŠŠ’"À¢&6öçF7BæfÆ÷vW%6—¦TÆ&VÂ#¢-ŠİŠÍ˜RŠ}˜MŠŠ}˜-Š’"À¢&6öçF7BæfÆ÷vW%6—¦UV–WB#¢-˜}Š}ŠıŠmŠ’"À¢&6öçF7BæfÆ÷vW%6—¦TÖVF—VÒ#¢-˜]Š­˜‹=‹}Š’"À¢&6öçF7BæfÆ÷vW%6—¦U6–væGW&R#¢-˜]˜]˜­‹-Š’"À¢&6öçF7BæfÆ÷vW$6öÆ÷'4Æ&VÂ#¢-Š}˜MŠ=˜M˜Š}˜bŠ}˜M˜]˜‹m˜MŠ’"À¢&6öçF7Bæ6&DÖW76vTÆ&VÂ#¢-˜m‹RŠ‹}Š}˜-Š’Š}˜M˜‹Šò"À¢&W‡W&–Væ6W2æ6ö×ÆWFTW–V'&÷r#¢-Š=˜=˜]˜BŠ­ŠÍ‹ŠŠ­˜2"À¢&W‡W&–Væ6W2æ6ö×ÆWFU6VF—FÆR#¢-Š­˜Š}‹]˜­˜B‹MŠ}‹}Šm˜­Š’ŠÍŠ}˜}‹-Š’˜M˜M˜­˜˜RŠ}˜MŠŠİ‹˜¢"À¢&W‡W&–Væ6W2æ6ö×ÆWFT†—7F÷&–5F—FÆR#¢-‹˜=‹˜’˜]˜bŠ}˜MŠ˜MŠòŠ­Š˜-˜’Š‹ŠòŠ}˜MŠÍ˜˜MŠ’"À¢&W‡W&–Væ6W2æ6ö×ÆWFTFW6W'EF—FÆR#¢-Š­˜Š}‹]˜­˜BŠıŠ}˜ŠmŠ’˜M˜MŠİ‹Š}Š¢Š}˜M‹m˜ŠŠ}˜MŠ=Ší˜­‹"À¢&W‡W&–Væ6W2æ6ö×ÆWFUF–eF—FÆR#¢-˜}ŠıŠ}˜­Šr˜]˜‹=˜]˜­Š’˜]˜bŠ}˜M˜]‹Š­˜‹Š}Š¢"À¢&W‡W&–Væ6W2æ6ö×ÆWFT¦VFF…F—FÆR#¢-˜]ŠíŠ­Š}‹Š}Š¢Š}˜MŠŠİ‹˜‹˜‹MŠ}˜b˜˜¢˜­˜˜R˜Š}ŠİŠò"À¢&W‡W&–Væ6W2çf–Wt6öÆÆV7F–öâ#¢-‹‹‹bŠ}˜M˜]ŠÍ˜]˜‹Š’˜=Š}˜]˜MŠ’"À¢&6öÆÆV7F–öâçf–Wu7F÷'”6&B#¢-‹‹‹bŠ‹}Š}˜-Š’Š}˜M˜-‹]Š’"À¢&6öÆÆV7F–öâç7F÷'”F–ÆötW–V'&÷r#¢-Šİ˜]˜MŠ’Š}˜M‹‹}‹"À¢&6öÆÆV7F–öâç7F÷'”F–ÆöuF—FÆR#¢-Š‹}Š}˜-Š’˜-‹]Š’Š}˜M‹‹}‹"À¢&6öÆÆV7F–öâæ6Æ÷6U7F÷'”6&B#¢-Š]‹­˜MŠ}˜"Š‹}Š}˜-Š’Š}˜M˜-‹]Š’"À¢&6öÆÆV7F–öâææö—%FW‡B#¢-˜˜M˜˜B˜‹Šı˜­ˆÂŠ=˜=˜‹ŠòŠ}˜M‹MŠ}˜¢Š}˜MŠ=‹=˜ŠıˆÂ˜Ší‹MŠ‚Š}˜MŠ=‹‹"â"À¢&6öÆÆV7F–öâçfVÇfWEFW‡B#¢-˜˜M˜˜B˜‹Šı˜­ˆÂ˜­Š}‹=˜]˜­˜b‹=Š}˜]ŠŠ}˜=ˆÂ˜˜Š}˜m˜­˜MŠrŠ=Š‹=˜˜M˜Š¢â"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–356†÷'B#¢-Šı˜Š­‹ŠÍ˜­Š‚"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–35F—FÆR#¢-Šı˜Š­‹ŠÍ˜­Š‚Š˜m˜-˜‹BŠ}˜M‹˜‹MŠ}˜b"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–35FW‡B#¢-Šı˜Š­‹‹]‹­˜­‹ŠŠ­˜Š}‹]˜­˜B˜]‹=Š­˜ŠİŠ}Š’˜]˜b‹˜Š}‹M˜­˜bŠ}˜MŠ˜MŠòŠ}˜MŠí‹MŠ˜­Š’â"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3E6†÷'B#¢-Šİ˜-˜­ŠŠ’˜-˜]Š}‹M˜­Š’"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3EF—FÆR#¢-Šİ˜-˜­ŠŠ’˜-˜]Š}‹M˜­Š’‹]‹­˜­‹Š’Š˜}˜˜­Š’Š}˜MŠ˜MŠò"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3EFW‡B#¢-Šİ˜-˜­ŠŠ’˜-˜]Š}‹M˜­Š’Ší˜˜­˜Š’Š˜m˜-˜‹B˜}Š}ŠıŠmŠ’˜]‹=Š­˜ŠİŠ}Š’˜]˜bŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’â"À¢&6öÆÆV7F–öâç&öGV7EF–cU6†÷'B#¢-Šı˜Š­‹ŠÍ˜­Š‚"À¢&6öÆÆV7F–öâç&öGV7EF–cUF—FÆR#¢-Šı˜Š­‹ŠÍ˜­Š‚Š˜m˜-˜‹BŠ}˜M˜‹Šò"À¢&6öÆÆV7F–öâç&öGV7EF–cUFW‡B#¢-Šı˜Š­‹‹]‹­˜­‹Š˜m˜-˜‹B˜}Š}ŠıŠmŠ’˜]‹=Š­˜ŠİŠ}Š’˜]˜b˜‹ŠòŠ}˜M‹}Š}Šm˜â"À¢&6öÆÆV7F–öâæF—66÷fW'•F—FÆR#¢-‹}‹˜­˜-Š­Š}˜b˜Š}‹mŠİŠ­Š}˜b˜MŠıŠí˜˜BŠ}˜MŠ˜Š­˜­˜2"À¢&6öÆÆV7F–öâæF—66÷fW'•FW‡B#¢-Š}˜=Š­‹M˜˜]ŠÍ˜]˜‹Š’˜]‹Š­Š‹}Š’ŠŠ­ŠÍ‹ŠŠ­˜2Š}˜M˜-Š}Šı˜]ŠˆÂŠ=˜‚Š}˜mŠ­˜-˜B˜]ŠŠ}‹M‹Š’Š]˜M˜’˜]˜mŠ­ŠÂŠ­‹‹˜˜r˜Š­‹˜­Šò‹}˜MŠ˜râ"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6TW–V'&÷r#¢-Š­Ší‹}‹r˜MŠ­ŠÍ‹ŠŠ’ŠÍŠı˜­ŠıŠ’"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6UF—FÆR#¢-Š­‹]˜ŠÒŠİ‹=Š‚Š}˜MŠ­ŠÍ‹ŠŠ’"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6UFW‡B#¢-Š}‹=Š­˜=‹M˜Š}˜MŠ­‹]˜‹Š}Š¢Š}˜M‹‹}‹˜­Š’Š}˜M˜]‹=Š­˜ŠİŠ}Š’˜]˜bŠ}˜MŠŠİ‹˜ŠÍŠıŠ’Š}˜MŠ­Š}‹˜­Ší˜­Š’˜Š}˜M‹]Šİ‹Š}Š˜Š}˜M‹}Š}Šm˜â"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6T7F–öâ#¢-Š}ŠíŠ­‹Š­ŠÍ‹ŠŠ’"À¢&6öÆÆV7F–öâçF…&öGV7DW–V'&÷r#¢-‹˜]˜­˜B‹Š}ŠmŠòŠ=˜‚Š­ŠŠİŠ²˜]ŠŠ}‹M‹Š’"À¢&6öÆÆV7F–öâçF…&öGV7EF—FÆR#¢-Š}ŠŠİŠ²‹˜b˜]˜mŠ­ŠÂ"À¢&6öÆÆV7F–öâçF…&öGV7EFW‡B#¢-Š}ŠŠİŠ²ŠŠ}‹=˜RŠ}˜M˜]˜mŠ­ŠÂŠ=˜‚‹˜]‹-˜r˜]˜bŠı˜˜bŠ}˜MŠİŠ}ŠÍŠ’Š]˜M˜’Š­‹˜=‹Š}˜MŠ­ŠÍ‹ŠŠ’Š}˜MŠ­˜¢˜­˜mŠ­˜]˜¢Š]˜M˜­˜}Šrâ"À¢&6öÆÆV7F–öâçF…&öGV7D7F–öâ#¢-Š}ŠŠıŠ2Š}˜MŠŠİŠ²"À¢&6öÆÆV7F–öâç6V&6„Æ&VÂ#¢-Š}˜MŠŠİŠ²˜˜¢Š}˜MŠ˜Š­˜­˜2"À¢&6öÆÆV7F–öâç6V&6…Æ6V†öÆFW"#¢-Š}‹=˜RŠ}˜M˜]˜mŠ­ŠÂŠ=˜‚‹˜]‹-˜r"À¢&6öÆÆV7F–öâæ6ÆV%6V&6‚#¢-˜]‹=ŠÒ"À¢&6öÆÆV7F–öâçG—Tf–ÇFW$Æ&VÂ#¢-˜m˜‹’Š}˜M˜]˜mŠ­ŠÂ"À¢&6öÆÆV7F–öâçG—Tf–ÇFW$&–#¢-Š­‹]˜˜­Š’Š}˜MŠ˜Š­˜­˜2Šİ‹=Š‚˜m˜‹’Š}˜M˜]˜mŠ­ŠÂ"À¢&6öÆÆV7F–öâçG—TÆÂ#¢-ŠÍ˜]˜­‹’Š}˜MŠ=˜m˜Š}‹’"À¢&6öÆÆV7F–öâçG—Tg&w&æ6R#¢-Š}˜M‹‹}˜‹"À¢&6öÆÆV7F–öâçG—T&V6‚#¢-˜]‹=Š­˜M‹-˜]Š}Š¢Š}˜MŠŠİ‹˜Š}˜M‹MŠ}‹}Šb"À¢&6öÆÆV7F–öâçG—Tv–gB#¢-Š}˜M˜}ŠıŠ}˜­Šr˜Š}˜MŠ]˜=‹=‹=˜Š}‹Š}Š¢"À¢&6öÆÆV7F–öâçG—T&÷‚#¢-Š}˜MŠ˜˜=‹=Š}Š¢Š}˜M˜=Š}˜]˜MŠ’"À¢&6öÆÆV7F–öâçG—U6W'f–6R#¢-ŠíŠı˜]Š}Š¢Š}˜M‹m˜­˜˜˜Š}˜MŠ­˜m˜˜­‹˜­˜­˜b"À¢&6öÆÆV7F–öâæW‡W&–Væ6Tf–ÇFW$Æ&VÂ#¢-˜]ŠÍ˜]˜‹Š’Š}˜MŠ­ŠÍ‹ŠŠ’"À¢&6öÆÆV7F–öâç&W7VÇG4–çG&ò#¢-Š­‹]˜™ŠÒŠİ‹=Š‚Š}˜M‹Š}˜M˜RŠ=˜‚˜m˜‹’Š}˜M˜]˜mŠ­ŠÂâ"À¢&6öÆÆV7F–öâç&W7VÇG4Æ&VÂ#¢-‹˜m‹]‹˜½Šr˜]‹}Š}Š˜-˜½Šr"À¢&6öÆÆV7F–öâæ6ÆV$f–ÇFW'2#¢-˜]‹=ŠÒŠÍ˜]˜­‹’Š}˜M˜˜MŠ}Š­‹"À¢&6öÆÆV7F–öâæV×G•F—FÆR#¢-˜MŠrŠ­˜ŠÍŠò‹˜mŠ}‹]‹˜]‹}Š}Š˜-Š’"À¢&6öÆÆV7F–öâæV×G•FW‡B#¢-ŠÍ‹™Š‚˜=˜M˜]Š’Š=Ší‹˜’Š=˜‚Š}˜]‹=ŠÒŠ=ŠİŠòŠ}˜M˜˜MŠ}Š­‹â"À¢&6öÆÆV7F–öâç&V÷&FW$W–V'&÷r#¢-˜M˜M‹m˜­˜˜Š}˜M‹Š}ŠmŠı˜­˜b"À¢&6öÆÆV7F–öâç&V÷&FW%F—FÆR#¢-Š}‹}˜MŠ‚Š}˜M˜]˜mŠ­ŠÂ˜m˜‹=˜r˜]‹Š’Š=Ší‹˜’"À¢&6öÆÆV7F–öâç&V÷&FW%FW‡B#¢-Š=ŠıŠí˜BŠ}‹=˜RŠ}˜M˜]˜mŠ­ŠÂŠ=˜‚‹˜]‹-˜r˜Š}˜M˜=˜]˜­ŠˆÂ˜‹=˜­˜ı‹mŠ}˜Š]˜M˜’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹Š}˜M˜]Šİ˜˜‹‚˜MŠ­‹Š}ŠÍ‹˜rŠ=˜˜mŠ­˜‹Šrâ"À¢&6öÆÆV7F–öâç&V÷&FW%&öGV7DÆ&VÂ#¢-Š}‹=˜RŠ}˜M˜]˜mŠ­ŠÂŠ=˜‚‹˜]‹-˜r"À¢&6öÆÆV7F–öâç&V÷&FW%&öGV7EÆ6V†öÆFW"#¢-Š}ŠŠıŠ2Š˜=Š­Š}ŠŠ’Š}‹=˜RŠ}˜M˜]˜mŠ­ŠÂ"À¢&6öÆÆV7F–öâç&V÷&FW$'WGFöâ#¢-Š=‹m˜Š]˜M˜’‹}˜MŠ‚‹‹‹bŠ}˜M‹=‹‹"À¢&6öÆÆV7F–öâç&V÷&FW$æ÷FR#¢-˜­˜ıŠM˜=ŠòŠ}˜MŠ­˜˜‹˜˜]ŠıŠ’Š}˜MŠ­ŠÍ˜}˜­‹"˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M˜m˜}Š}Šm˜­Š’Š‹Šò˜]‹Š}ŠÍ‹Š’Š=˜˜mŠ­˜‹Šr˜M˜M‹}˜MŠ‚âŠ­Š˜-˜’Š}ŠíŠ­˜­Š}‹Š}Š­˜2˜]Šİ˜˜‹Š’‹˜M˜’˜}‹ŠrŠ}˜MŠÍ˜}Š}‹"˜M˜]ŠıŠ’3˜­˜˜]˜½Šrâ"À¢&6öÆÆV7F–öâç&V÷&FW$W'&÷"#¢-Š}ŠíŠ­‹‹˜]‹-˜½Šr‹]Šİ˜­Šİ˜½Šr˜]˜bŠ}˜MŠ}˜-Š­‹Š}ŠİŠ}Š¢Š=˜‚Š=ŠıŠí˜M˜r˜­Šı˜˜­˜½Šrâ"À¢&6öÆÆV7F–öâç&V÷&FW%7V66W72#¢-Š­˜]Š¢Š}˜MŠ]‹mŠ}˜Š’Š]˜M˜’‹}˜MŠ˜2Š}˜M˜]Šİ˜˜‹ƒ¢"À¢&6öÆÆV7F–öâçf–WtFWF–Ç2#¢-‹‹‹bŠ}˜MŠ­˜Š}‹]˜­˜B"À¢&6öÆÆV7F–öâæFWF–Ç4W–V'&÷r#¢-Š­‹]˜™‹‹‹}‹˜¢"À¢&6öÆÆV7F–öâæ6Æ÷6TFWF–Ç2#¢-Š]‹­˜MŠ}˜"Š­˜Š}‹]˜­˜BŠ}˜M‹‹}‹"À¢&6öÆÆV7F–öâæf–Æ&–Æ—G”Æ&VÂ#¢-Š}˜MŠİŠ}˜MŠ’"À¢&6öÆÆV7F–öâç&W&F–öäÆ&VÂ#¢-Š}˜MŠ­‹}˜˜­‹"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öäÆ&VÂ#¢-Š}˜MŠí‹}˜Š’Š}˜MŠ­Š}˜M˜­Š’"À¢&6öÆÆV7F–öâæ6öÆÆV7F–öäÆ&VÂ#¢-Š}˜M‹Š}˜M˜R"À¢&6öÆÆV7F–öâæFWF–Ç4F—66Æ–ÖW"#¢-˜}‹ŠrŠ}˜MŠ­‹]˜™‹Š}˜M‹‹}‹˜¢˜-˜­ŠòŠ}˜MŠ­‹}˜˜­‹˜˜M˜­‹2˜]Š­Š}Šİ˜½Šr˜M˜M‹}˜MŠ‚Š=˜‚Š}˜M‹M‹Š}ŠŠ‹Šòâ"À¢&6öÆÆV7F–öâæ6öçF–çVT'&÷w6–ær#¢-˜]Š­Š}Š‹Š’Š}˜MŠ­‹]˜ŠÒ"À¢&6öÆÆV7F–öâç&WFWfVÆ÷ÖVçB#¢-˜-˜­ŠòŠ}˜MŠ­‹}˜˜­‹ˆÂ˜˜­˜ı‹˜M˜b˜]˜‹ŠòŠ}˜M‹}‹ŠÒ˜MŠ}Šİ˜-˜½Šr"À¢&6öÆÆV7F–öâç&W&÷‚#¢-Š­˜ıŠİŠıŠòŠ‹Šò˜]‹Š}ŠÍ‹Š’Š}˜M˜=˜]˜­Š’˜Š}˜MŠ­Ší‹]˜­‹R"À¢&6öÆÆV7F–öâç&W&öGV7B#¢-Š­˜ıŠİŠıŠòŠ‹Šò˜]‹Š}ŠÍ‹Š’Š}˜M˜=˜]˜­Š’˜Š}˜MŠ­˜˜‹"À¢&6öÆÆV7F–öâç&W6V6öæÂ#¢-Š­˜ıŠİŠıŠòŠİ‹=Š‚Š}˜M˜]˜‹=˜R˜Š­˜˜‹Š}˜M˜]˜‹Šò"À¢&6öÆÆV7F–öâç&W6W'f–6R#¢-Š­˜ı˜m‹=˜"Šİ‹=Š‚Š}˜M˜]˜˜-‹’˜Š}˜M˜]˜‹Šò˜Š}˜MŠ­˜˜‹"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öäf–Æ&ÆR#¢-˜­˜]˜=˜b˜]‹Š}ŠÍ‹Š’Š]‹mŠ}˜Š’Š}‹=˜RŠ}˜M‹m˜­˜Š=˜‚Š}˜M‹‹=Š}˜MŠ’Š=˜‚˜}˜˜­Š’Š}˜M‹M‹˜=Š’"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öå&Wf–WvVB#¢-Š­˜ı‹Š}ŠÍ‹’Š}˜MŠí˜­Š}‹Š}Š¢Š}˜M˜]Š­Š}ŠİŠ’˜]‹’Š}˜M‹}˜MŠ‚Š}˜M˜m˜}Š}Šm˜¢"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öägFW$ÆVæ6‚#¢-˜­˜ı‹˜M˜b˜]˜‹ŠòŠ}˜MŠ]‹}˜MŠ}˜"Š‹ŠòŠ}˜=Š­˜]Š}˜BŠ}˜MŠ­‹}˜˜­‹â"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öå6W'f–6R#¢-Š­˜ı‹Š­Š‚Š}˜MŠíŠı˜]Š’˜˜˜"Š}ŠİŠ­˜­Š}ŠÍŠ}Š¢Š}˜M‹m˜­˜"À¢&6öÆÆV7F–öâævFWv”†—7F÷&–5FW‡B#¢-Š­‹]˜‹‹‹}‹˜¢˜]‹=Š­˜Šİ˜’˜]˜bŠí‹MŠ‚Š}˜M‹˜‹MŠ}˜b˜Š}˜MŠİŠÍ‹˜Šİ˜=Š}˜­Š’Š}˜MŠ˜MŠòŠ}˜MŠİ˜­Š’â"À¢&6öÆÆV7F–öâævFWv•6VFW‡B#¢-Š­‹]˜‹‹‹}‹˜¢˜­Š­‹M˜=˜B˜]˜bŠ}˜M˜}˜Š}ŠŠ}˜M˜]‹Šı˜m˜¢˜Š}˜M˜]Š}ŠŠ}˜M˜]˜Š­˜ŠÒ˜˜}Šı˜ŠŠ}˜M˜­˜˜RŠ}˜MŠŠİ‹˜¢Š}˜MŠíŠ}‹Râ"À¢&6öÆÆV7F–öâævFWv”FW6W'EFW‡B#¢-Š­‹]˜‹‹‹}‹˜¢˜MŠı˜ŠŠ}˜M‹˜]Š}˜BŠ}˜MŠÍŠ}˜˜Š}˜M‹˜]˜BŠ}˜M˜]‹Šı˜m˜¢˜Š}˜M‹m˜ŠŠ}˜MŠ=Ší˜­‹˜˜˜"Š}˜M˜=Š½ŠŠ}˜bâ"À¢&6öÆÆV7F–öâævFWv•F–eFW‡B#¢-Š­‹]˜‹‹‹}‹˜¢˜M˜]˜‹=˜RŠ}˜M˜‹Šò˜˜}˜Š}ŠŠ}˜MŠÍŠŠ}˜B˜Š}˜MŠ]˜­˜-Š}‹’Š}˜M˜}Š}ŠıŠb˜M˜M˜]‹Š­˜‹Š}Š¢â"À¢&6öÆÆV7F–öâævFWv”¦VFF…FW‡B#¢$gFW"Ö–Fæ–v‡Bæö—"˜„gFW"Ö–Fæ–v‡BfVÇfWB˜}˜]ŠrŠ}˜MŠ­‹]˜‹Š}˜bŠ}˜M‹‹}‹˜­Š}˜b˜]˜bŠ­˜˜-˜­‹’Š=˜˜mŠ­˜‹Šrâ"À¢&wVW7BæÖWFF—FÆR#¢-ŠíŠı˜]Š}Š¢‹m˜­˜˜Š=˜˜mŠ­˜‹ŠrÂŠ­˜Š}‹]˜­˜BŠ}˜M‹m˜­˜Š}˜M˜]‹Š­ŠŠ’Š‹˜mŠ}˜­Š’"À¢&wVW7BæÖWFFW67&—F–öâ#¢-Š­˜m‹=˜­˜"Š­˜‹]˜­˜BŠ}˜MŠ½˜Š‚˜Š}˜M‹ŠŠ}˜­Š’˜Š}˜M˜‹Šò˜M˜M‹m˜­˜˜˜˜¢ŠÍŠıŠ’‹Š‹˜m˜-‹}Š’Š­˜Š}‹]˜B˜Š}ŠİŠıŠ’˜]˜bŠ=˜˜mŠ­˜‹Šrâ"À¢&wVW7Bæ†W&ôW–V'&÷r#¢-ŠíŠı˜]Š}Š¢Š}˜M‹m˜­˜˜"À¢&wVW7Bæ†W&õF—FÆR#¢-Š­˜Š}‹]˜­˜BŠ}˜M‹m˜­˜ˆÂ˜]‹Š­ŠŠ’Š‹˜mŠ}˜­Š’â"À¢&wVW7Bæ†W&ôFW67&—F–öâ#¢-˜]˜b‹-˜­Š}‹Š’Š}˜MŠí˜­Š}‹rŠ]˜M˜’Š­˜m‹=˜­˜"Š}˜M˜‹ŠıˆÂ˜m‹Š­Š‚Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M‹˜]˜M˜­Š’˜-Š˜BŠ}˜M˜‹]˜˜B˜Š=Š½˜mŠ}ŠŠ}˜MŠ]˜-Š}˜]Š’‹Š‹˜m˜-‹}Š’Š­˜Š}‹]˜B˜Š}ŠİŠıŠ’â"À¢&wVW7Bæ†W&ô'WGFöâ#¢-Š}‹=Š­˜=‹M˜ŠíŠı˜]Š}Š¢Š}˜M‹m˜­˜˜"À¢&wVW7Bç6W'f–6W4W–V'&÷r#¢-ŠíŠı˜]Š}Š¢Š}˜M‹m˜­˜˜Š}˜M‹MŠí‹]˜­Š’"À¢&wVW7Bç6W'f–6W5F—FÆR#¢-Š½˜MŠ}Š²Š­˜Š}‹]˜­˜B‹˜]˜M˜­ŠˆÂŠ‹}˜MŠ‚˜Š}ŠİŠò˜Š}‹mŠÒâ"À¢&wVW7Bç6W'f–6W5FW‡B#¢-˜mŠM˜=ŠòŠ}˜M˜]ŠíŠ­‹R˜Š}˜M˜]˜˜-‹’˜Š}˜M˜]˜‹Šò˜Š}˜MŠ]Š­Š}ŠİŠ’Š}˜M‹˜]˜M˜­Š’˜-Š˜BŠ­‹Š­˜­Š‚Š=˜¢ŠíŠı˜]Š’â"À¢&wVW7BçF†ö&UF—FÆR#¢-Š­˜‹]˜­˜BŠ½˜Š‚‹=‹˜Šı˜¢˜˜¢˜]˜-‹Š}˜MŠ]˜-Š}˜]Š’"À¢&wVW7BçF†ö&UFW‡B#¢-˜­‹-˜‹Š}˜MŠí˜­Š}‹rŠ}˜M‹m˜­˜˜MŠ=Ší‹Š}˜M˜]˜-Š}‹=Š}Š¢˜Š}ŠíŠ­˜­Š}‹Š}˜M˜-˜]Š}‹Bâ˜­˜]˜=˜bŠ­˜m‹=˜­˜"Š}˜MŠ­‹=˜M˜­˜RŠí˜MŠ}˜BŠ=˜-˜B˜]˜b#B‹=Š}‹Š’‹˜mŠòŠ­Š=˜=˜­ŠòŠ}˜M‹}˜MŠ‚˜Š}˜MŠ­˜˜‹â"À¢&wVW7Bæ&–F—FÆR#¢-ŠíŠı˜]Š’‹ŠŠ}˜­Š’˜M˜M‹m˜­˜Š’"À¢&wVW7Bæ&–FW‡B#¢-Š­‹-˜‹˜]ŠíŠ­‹]Š’Š}˜M‹m˜­˜Š’˜MŠ=Ší‹Š}˜M˜]˜-Š}‹=Š}Š¢Š}˜M˜MŠ}‹-˜]Š’˜M˜MŠíŠı˜]Š‰²Š½˜RŠ­˜ı˜m‹=™˜"Š}˜M‹ŠŠ}ŠŠ’Š}˜M˜]˜mŠ}‹=ŠŠ’˜Š}˜MŠ­‹=˜M˜­˜RŠ‹ŠòŠ}˜MŠ­Š=˜=˜­Šò˜˜-‹râ˜MŠr˜m‹‹‹b˜=Š­Š}˜M˜ŠÂ‹ŠŠ}˜­Š}Š¢ŠÍŠ}˜}‹-˜½Šrâ"À¢&wVW7BæfÆ÷vW%F—FÆR#¢-˜‹Šò˜M˜M˜]˜mŠ}‹=ŠŠ’"À¢&wVW7BæfÆ÷vW%FW‡B#¢-˜m‹Š­Š‚ŠŠ}˜-Š’˜‹Šò˜Š‹}Š}˜-Š’‹MŠí‹]˜­Š’˜M˜M˜‹]˜˜BŠ=˜‚˜M˜M˜]˜mŠ}‹=ŠŠˆÂ˜˜m‹=˜M˜]˜}ŠrŠ]˜M˜’Š}˜M˜˜mŠı˜"Š=˜‚˜]˜-‹Š}˜MŠ]˜-Š}˜]Š’Š=˜‚Š}˜M˜]˜˜-‹’˜˜¢Š}˜M˜]˜‹ŠòŠ}˜M˜]Š­˜˜"‹˜M˜­˜râ"À¢&wVW7Bç&WVW7E6W'f–6R#¢-Š}‹}˜MŠ‚ŠíŠı˜]Š’˜M˜M‹m˜­˜"À¢&wVW7Bçf–Wu6W'f–6R#¢-‹‹‹bŠíŠı˜]Š’Š}˜M‹m˜­˜˜"À¢&wVW7Bç&ö6W74W–V'&÷r#¢-˜=˜­˜Š­‹˜]˜B"À¢&wVW7Bç&ö6W75F—FÆR#¢-‹=˜}˜MŠ’˜M˜M‹m˜­˜ˆÂ˜˜Š}‹mŠİŠ’˜M˜M˜‹˜­˜"â"À¢&wVW7Bç7FWF—FÆR#¢-‹MŠ}‹˜2Š}˜MŠ=‹=Š}‹=˜­Š}Š¢"À¢&wVW7Bç7FWFW‡B#¢-Š=ŠíŠ‹˜mŠr˜M˜]˜bŠ}˜MŠíŠı˜]Š’˜Š=˜­˜bŠ­ŠİŠ­Š}ŠÍ˜}Šr˜Š}˜M˜]˜‹ŠòŠ}˜M˜]˜‹m˜Bâ"À¢&wVW7Bç7FW%F—FÆR#¢-˜mŠM˜=ŠòŠ}˜MŠ­‹Š­˜­Š‚"À¢&wVW7Bç7FW%FW‡B#¢-Š­ŠM˜=ŠòŠ=˜˜mŠ­˜‹ŠrŠ}˜M˜]ŠíŠ­‹RŠ}˜M˜]˜mŠ}‹=Š‚˜˜]ŠıŠ’Š}˜MŠ­ŠÍ˜}˜­‹"˜Š}˜MŠ­˜Š}‹]˜­˜BŠ}˜M‹˜]˜M˜­Š’â"À¢&wVW7Bç7FW5F—FÆR#¢-Š­˜m˜˜­‹˜]˜m‹=˜"˜Š}ŠİŠò"À¢&wVW7Bç7FW5FW‡B#¢-Š­ŠıŠ}‹Š}˜M‹-˜­Š}‹Š’˜Š}˜MŠ­ŠÍ˜}˜­‹"˜Š}˜MŠ­‹=˜M˜­˜R‹Š‹˜m˜-‹}Š’Š­˜Š}‹]˜B˜Š}ŠİŠıŠ’â"À¢&wVW7Bæ7FF—FÆR#¢-Š=ŠíŠ‹˜mŠr˜]ŠrŠ}˜M‹˜¢˜­ŠİŠ­Š}ŠÍ˜rŠ}˜M‹m˜­˜˜˜]Š­˜’â"À¢&wVW7Bæ7FFW‡B#¢-˜m‹Š}ŠÍ‹’Š}˜M‹}˜MŠ‚˜˜m‹˜ŠòŠ]˜M˜­˜2ŠŠ}˜MŠ­‹Š­˜­Š‚Š}˜M‹˜]˜M˜¢Š}˜MŠ=˜m‹=Š‚â ¢ÒÀ¢&W2#¢°¢&6öÖÖöâç6¶—#¢$—"Â6öçFVæ–Fò&–æ6—Â"À¢&6öÖÖöâçÆâ#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢&6öÖÖöâæW‡Æ÷&R#¢$W‡Æ÷&""À¢&6öÖÖöâæF—66÷fW"#¢$FW67V'&—"Ü:2"À¢&6öÖÖöâç&WVW7B#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢&6öÖÖöâçf–WtÆÂ#¢%fW"FöFò"À¢&6öÖÖöâæÆV&äÖ÷&R#¢$Ü:2–æf÷&Ö6œ;6â"À¢&6öÖÖöâçv†G6#¢$†&Æ"÷"v†G4"À¢&6öÖÖöâæ6öÖ–æu6ööâ#¢%,;7†–ÖÖVçFR"À¢&6öÖÖöâæf–Æ&ÆU&WVW7B#¢$F—7öæ–&ÆR&¦ò6öÆ–6—GVB"À¢&6öÖÖöâæ¦VFF…6VF’#¢%–VFÂ&&–6VF—F"À¢&6öÖÖöâæ÷F–öæÂ#¢$÷6–öæÂ"À¢&'&æBçFvÆ–æR#¢$W‡W&–Væ6–2+rWfVçF÷2+r†÷7—FÆ–FB"À¢&æbæ†öÖR#¢$–æ–6–ò"À¢&æbæW‡W&–Væ6W2#¢$W‡W&–Væ6–2"À¢&æbæWfVçG2#¢$WfVçF÷2"À¢&æbç6W'f–6W2#¢%6W'f–6–÷2"À¢&æbæ6öÆÆV7F–öâ#¢$&÷WF—VR"À¢&æbæwVW7E6W'f–6W2#¢%6W'f–6–÷2&‡\:—7VFW2"À¢&æbæ&÷WB#¢$æ÷6÷G&÷2"À¢&æbævÆÆW'’#¢$vÆW,:Ö"À¢&æbæ6öçF7B#¢$6öçF7Fò"À¢&fö÷FW"ç7VÖÖ'’#¢$fVçGW&F—6\;f–¦W2&—fF÷2ÂWfVçF÷2’&öw&Ö2&‡\:—7VFW2ÖVF–çFRVæÆæ–f–66œ;6âFVçFÂ6ö6–÷2FR6öæf–ç¦’6ö÷&F–æ6œ;6âF—&V7Fâ"À¢&fö÷FW"æW‡Æ÷&R#¢$W‡Æ÷&""À¢&fö÷FW"æ6ö×ç’#¢$V×&W6"À¢&fö÷FW"æ6öçF7B#¢$6öçF7Fò"À¢&fö÷FW"æf#¢%&VwVçF2g&V7VVçFW2"À¢&fö÷FW"ç&—f7’#¢%öÌ:×F–6FR&—f6–FB"À¢&fö÷FW"çFW&×2#¢%L:—&Ö–æ÷2’6öæF–6–öæW2"À¢&fö÷FW"ç&–v‡G2#¢%FöF÷2Æ÷2FW&V6†÷2&W6W'fF÷2â"À¢&fö÷FW"æÆö6F–öâ#¢%–VFÂ&&–6VF—F"À¢&fö÷FW"ç&–Ö'”VÖ–Â#¢$6öç7VÇF2vVæW&ÆW2"À¢&fö÷FW"ç6V6öæF'”VÖ–Â#¢%Ææ–f–66œ;6âFRW‡W&–Væ6–2"À¢&7FçF—FÆR#¢$7\:–çFæ÷2<;6ÖòV–W&W2VR6R6–VçFVÂL:Öâ"À¢&7FæFW67&—F–öâ#¢$6ö×'FRÆö66œ;6âÂVÂì;¦ÖW&òFR–çf—FF÷2’ÆfV6†â7&V&VÖ÷2VæF—&V66œ;6â6Æ&6V|;¦âGW2&–÷&–FFW2â"À¢&7Fæ'WGFöâ#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢'v†G6æÆ&VÂ#¢$'&—"v†G4"À¢&†öÖRæÖWFF—FÆR#¢$dTåEU$ÂW‡W&–Væ6–2&—fF2’WfVçF÷2Vâ&&–6VF—F"À¢&†öÖRæÖWFFW67&—F–öâ#¢$W‡W&–Væ6–2&—fF2ÂWfVçF÷26÷'÷&F—f÷2Â†÷7—FÆ–FB’&öw&Ö2FRFW7F–æòF—6\;F÷2÷"dTåEU$Vâ–VF’&&–6VF—Fâ"À¢&†öÖRæ†W&ôW–V'&÷r#¢%–VF+r&&–6VF—F"À¢&†öÖRæ†W&õF—FÆR#¢%f–¦W2’ö66–öæW2ÂF—6\;F÷2GRÖVF–Fâ"À¢&†öÖRæ†W&ôFW67&—F–öâ#¢$fVçGW&&\;¦æRW‡W&–Væ6–2&—fF2ÂvW7Fœ;6âFRWfVçF÷2’†÷7—FÆ–FBVâVâ6öÆò&V6÷'&–Fò6ö÷&F–æFòÂFW6FRÆ&–ÖW&–FV†7FÆFW7VF–Fâ"À¢&†öÖRæ†W&õ&–Ö'’#¢$W‡Æ÷&"W‡W&–Væ6–2"À¢&†öÖRæ†W&õ6V6öæF'’#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢&†öÖRç&ööcF—FÆR#¢$6öæö6–Ö–VçFòÆö6Â"À¢&†öÖRç&ööcFW‡B#¢%–VF’Væ&VBFR6ö6–÷2Æö6ÆW2FR6öæf–ç¦"À¢&†öÖRç&ööc%F—FÆR#¢%&—f6–FBFW6FRVÂF—6\;ò"À¢&†öÖRç&ööc%FW‡B#¢%&öw&Ö2FFF÷2GW2–çf—FF÷2’7R&—FÖò"À¢&†öÖRç&ööc5F—FÆR#¢%Vâ6öÆò6ö÷&F–æF÷""À¢&†öÖRç&ööc5FW‡B#¢%Ææ–f–66œ;6âÂ†÷7—FÆ–FB’÷W&6œ;6â6öæV7FF2"À¢&†öÖRæ–çG&ôW–V'&÷r#¢$VÂVæf÷VRfVçGW&"À¢&†öÖRæ–çG&õF—FÆR#¢$VÂÇVv"–×÷'Fâ<;6ÖòÆòf—fW2–×÷'F;¦âÜ:2â"À¢&†öÖRæ–çG&ôFW67&—F–öâ#¢$FW6FR–VF†—7L;7&–6†7FVÂÖ"&ö¦òÂVÂFW6–W'Fò’F–bÂF—6\;Ö÷2L:Ö2&—fF÷2Vç6F÷2VâF÷&æòGW2–çf—FF÷2â"À¢&†öÖRæW‡W–V'&÷r#¢$W‡W&–Væ6–2"À¢&†öÖRæW‡F—FÆR#¢$W‡W&–Væ6–26VÆV66–öæF2&FW67V'&—"–VF’VÂöW7FRFR&&–6VF—F"À¢&†öÖRæW‡FW67&—F–öâ#¢$7VG&ò×VæF÷2&—fF÷2Â6FVæòF—6\;FòVâF÷&æòGW2–çf—FF÷2ÂgVW7G&òF–V×ò’VÂF—òFRL:ÖVRVW,:–—27&V"â"À¢&†öÖRç6VF—FÆR#¢$VÂÖ"&ö¦ò"À¢&†öÖRç6VFW‡B#¢%–FW2&—fF÷2Â7'V6W&÷2ÂF&FV6W"Â'V6Vò’L:Ö2FR&W6÷'Bâ"À¢&†öÖRæ†—7F÷&–5F—FÆR#¢%–VF†—7L;7&–6"À¢&†öÖRæ†—7F÷&–5FW‡B#¢$†—7F÷&–2Â'V—FV7GW&’†÷7—FÆ–FBÆö6Â6öâw\:Ö2WF÷&—¦F÷2â"À¢&†öÖRæFW6W'EF—FÆR#¢$VÂFW6–W'Fò"À¢&†öÖRæFW6W'EFW‡B#¢%—6¦W2&–W'F÷2Â&V6÷'&–F÷2GƒB’Væ7VVçG&÷2&—fF÷2G&çV–Æ÷2â"À¢&†öÖRçF–eF—FÆR#¢$Æ2ÖöçF;2FRF–b"À¢&†öÖRçF–eFW‡B#¢$ÖöçF;2Â&÷62ÂFWFÆÆW2Æö6ÆW2FRFV×÷&F’Vâ&—FÖòÜ:2g&W66òâ"À¢&†öÖRç6W'f–6W4W–V'&÷r#¢%f–¦RFVÂ‡\:—7VB"À¢&†öÖRç6W'f–6W5F—FÆR#¢$÷–òçFW2FRÆÆÆVvFÂGW&çFRVÂL:Ö’†7FVÂf–æÂ"À¢&†öÖRç6W'f–6W4FW67&—F–öâ#¢%VâWV—ò6ö÷&F–æFòvW7F–öæÆ÷2FWFÆÆW2&VRL;¢VVF26VçG&'FRVâGW2–çf—FF÷2â"À¢&†öÖRç6W'f–6SF—FÆR#¢%Ææ–f–66œ;6â’6öç6W&¦W,:Ö"À¢&†öÖRç6W'f–6SFW‡B#¢$—F–æW&&–ò6Æ&òÂ&W6W'f2’&V6öÖVæF6–öæW2W'6öæÆ—¦F2â"À¢&†öÖRç6W'f–6S%F—FÆR#¢%G&ç7÷'FR&—fFò"À¢&†öÖRç6W'f–6S%FW‡B#¢%fVŒ:Ö7VÆ÷2’6öæGV7F÷&W2FV7VF÷2Âw'Wò’Â&öw&Öâ"À¢&†öÖRç6W'f–6S5F—FÆR#¢$w\:Ö2WF÷&—¦F÷2"À¢&†öÖRç6W'f–6S5FW‡B#¢$w\:Ö2×VÇF–Æ–æ|;ÆW26VÆV66–öæF÷2&ÆW‡W&–Væ6–’Æ÷2‡\:—7VFW2â"À¢&†öÖRç6W'f–6SEF—FÆR#¢$†÷7—FÆ–FB"À¢&†öÖRç6W'f–6SEFW‡B#¢$6ö÷&F–æ6œ;6âFRÆÆVvFÂfÆ÷&W2ÂVçG&VvVâ†÷FVÂ’÷–òW'6öæÂ,:7F–6òâ"À¢&†öÖRæWfVçG4W–V'&÷r#¢$WfVçF÷2"À¢&†öÖRæWfVçG5F—FÆR#¢$WfVçF÷26÷'÷&F—f÷2’&—fF÷26öâVâ&÷;76—Fò6Æ&ò"À¢&†öÖRæWfVçG4FW67&—F–öâ#¢$FW6FR&WVæ–öæW2V¦V7WF—f2’&öw&Ö2FRWV—ò†7FVæ7VVçG&÷2&—fF÷2§VçFòÂÖ"Â6ö÷&F–æÖ÷2VÂÇVv"ÂÆ÷2&÷fVVF÷&W2ÂVÂfÇV¦òFR–çf—FF÷2’ÆV¦V7V6œ;6ââ"À¢&†öÖRæWfVçG4'WGFöâ#¢$W‡Æ÷&"WfVçF÷2"À¢&†öÖRæ6öÆÆV7F–öäW–V'&÷r#¢$&÷WF—VRfVçGW&"À¢&†öÖRæ6öÆÆV7F–öåF—FÆR#¢$6öæ6WF÷2FRg&væ6–ÖöÆFVF÷2÷"6F×VæFò"À¢&†öÖRæ6öÆÆV7F–öäFW67&—F–öâ#¢$Æ&÷WF—VR&W6VçF7GVÆÖVçFR6öæ6WF÷2FRg&væ6–2VâFW6'&öÆÆòâÆ÷26W'f–6–÷2&‡\:—7VFW26RÖçF–VæVâVâ7R&÷–òW76–òâ"À¢&†öÖRæ6öÆÆV7F–öä'WGFöâ#¢$VçG&"VâÆ&÷WF—VR"À¢&†öÖRçv‡”W–V'&÷r#¢%÷"\:’fVçGW&"À¢&†öÖRçv‡•F—FÆR#¢$÷W&6œ;6âÆö6Â6öâÆFVæ6œ;6âFRVâæf—G&œ;6â"À¢&†öÖRçv‡”FW67&—F–öâ#¢$6FÆâ6R&Wf—6FW6FRÆW'7V7F—fFVÂ‡\:—7VB’6RvW7F–öæ6öâ7V–FFò,:7F–6ò6ö'&RVÂFW'&Væòâ"À¢&†öÖRçv‡“F—FÆR#¢$ÖVF–FÂæòVâ6W&–R"À¢&†öÖRçv‡“FW‡B#¢$VÂÆâ6Ö&–6V|;¦âVÂ‡\:—7VBÂÆö66œ;6âÂVÂ†÷&&–ò’VÂ&—FÖò&VfW&–Fòâ"À¢&†öÖRçv‡“%F—FÆR#¢%&—f6–FB’F—67&V6œ;6â"À¢&†öÖRçv‡“%FW‡B#¢$VçF÷&æ÷2&—fF÷2’6ö÷&F–æ6œ;6â7V–FF÷6&fÖ–Æ–2ÂV¦V7WF—f÷2R–çf—FF÷2d•â"À¢&†öÖRçv‡“5F—FÆR#¢$6Æ&–FB÷W&F—f"À¢&†öÖRçv‡“5FW‡B#¢%&öw&ÖFVf–æ–FòÂ&W7öç6&–Æ–FFW26öæf—&ÖF2’Vâ;¦æ–6ò6öçF7Fòâ"À¢&W‡W&–Væ6W2æÖWFF—FÆR#¢$W‡W&–Væ6–2&—fF2Vâ–VF’&&–6VF—FÂdTåEU$"À¢&W‡W&–Væ6W2æÖWFFW67&—F–öâ#¢$W‡Æ÷&VÂÖ"&ö¦òÂÆ†÷&F÷&FÂ–VF†—7L;7&–6ÂVÂFW6–W'FòÂF–b’¦÷&æF26ö×ÆWF2Vâ–VF6öâdTåEU$â"À¢&W‡W&–Væ6W2æ†W&ôW–V'&÷r#¢%f–¦W2&—fF÷2"À¢&W‡W&–Væ6W2æ†W&õF—FÆR#¢$W‡W&–Væ6–26öâ6VçF–FòFRÇVv"â"À¢&W‡W&–Væ6W2æ†W&ôFW67&—F–öâ#¢$FW67V'&RVÂÖ"&ö¦òÂ–VF†—7L;7&–6ÂVÂFW6–W'FòÂF–b’&öw&Ö26ö×ÆWF÷2FR–VFÂ&—FÖòFRGW2–çf—FF÷2â"À¢&W‡W&–Væ6W2æ–çG&ôW–V'&÷r#¢$F—6\;F2VâF÷&æòÂ‡\:—7VB"À¢&W‡W&–Væ6W2æ–çG&õF—FÆR#¢$V×–W¦÷"VÂVçF÷&æòâ6öç7G'V—&VÖ÷2VÂL:Ö7RÇ&VFVF÷"â"À¢&W‡W&–Væ6W2æ–çG&õFW‡B#¢$6FW‡W&–Væ6–VVFR&W6W'f'6R6öÆòf÷&Ö"'FRFRVâ—F–æW&&–ò6öâG&ç7÷'FRÂw\:Ö2Âv7G&öæöÜ:ÖÂ†÷7—FÆ–FB’7F—f–FFW2÷6–öæÆW2â"À¢&W‡W&–Væ6W2ç6VF—FÆR#¢$W‡W&–Væ6–2VâVÂÖ"&ö¦ò"À¢&W‡W&–Væ6W2ç6VFW‡B#¢$wVÇVÖ–æ÷6÷"ÆÖ;æÂ†÷&—¦öçFR&–W'Fò’VâL:Ö6ö'&Rò&¦òÆ7WW&f–6–Râ6VÆV66–öæÖ÷2&&6òÂ†÷&&–ò’6W'f–6–÷26V|;¦âVÂw'Wòâ"À¢&W‡W&–Væ6W2ç6V—FVÓ#¢%f–¦W2Vâ–FR&—fFò"À¢&W‡W&–Væ6W2ç6V—FVÓ"#¢$†÷&F÷&F¢6VòVâ&&6òFRVæ†÷&ÂF&FV6W""À¢&W‡W&–Væ6W2ç6V—FVÓ2#¢$'V6Vò’W6ì;7'VVÂ"À¢&W‡W&–Væ6W2ç6V—FVÓB#¢$L:Ö2FRÆ–’&W6÷'B"À¢&W‡W&–Væ6W2ç6VFs#¢%&V¦2"À¢&W‡W&–Væ6W2ç6VFs"#¢$fÖ–Æ–2"À¢&W‡W&–Væ6W2ç6VFs2#¢$w'W÷2&—fF÷2"À¢&W‡W&–Væ6W2æ†—7F÷&–5F—FÆR#¢%–VF†—7L;7&–6"À¢&W‡W&–Væ6W2æ†—7F÷&–5FW‡B#¢%Vâ6Vò&—fFò÷"ÂÔ&ÆB6öâVâw\:ÖWF÷&—¦FòVR6öæV7FÆ'V—FV7GW&ÂÆvVçFR’Æ2†—7F÷&–2FRÆ6—VFBâ"À¢&W‡W&–Væ6W2æ†—7F÷&–4—FVÓ#¢$w\:Ö2×VÇF–Æ–æ|;ÆW2WF÷&—¦F÷2"À¢&W‡W&–Væ6W2æ†—7F÷&–4—FVÓ"#¢$'V—FV7GW&&÷6†âR†—7F÷&–2Æö6ÆW2"À¢&W‡W&–Væ6W2æ†—7F÷&–4—FVÓ2#¢$6l:’:&&RÂL:F–ÆW2’&F2G&–Ööæ–ÆW26VÆV66–öæF2"À¢&W‡W&–Væ6W2æ†—7F÷&–4—FVÓB#¢%G&ç7÷'FR’6VæFRÖ&—66÷2F—7öæ–&ÆW26öÖò÷6–öæW2"À¢&W‡W&–Væ6W2æ†—7F÷&–5Fs#¢$7VÇGW&"À¢&W‡W&–Væ6W2æ†—7F÷&–5Fs"#¢$'V—FV7GW&"À¢&W‡W&–Væ6W2æ†—7F÷&–5Fs2#¢%&–ÖW&f—6—F"À¢&W‡W&–Væ6W2æFW6W'EF—FÆR#¢$W‡W&–Væ6–2VâVÂFW6–W'Fò"À¢&W‡W&–Væ6W2æFW6W'EFW‡B#¢%VæW‡W&–Væ6–&—fFVâVÂFW6–W'FòF—6\;FVâF÷&æò×Æ–2GVæ2FR&VæÂVæ'WFGƒB6VÆV66–öæFÂÆ7BÆ–v‡B’†÷7—FÆ–FB6VL:Òâ"À¢&W‡W&–Væ6W2æFW6W'D—FVÓ#¢%'WF2GƒBVçG&RGVæ2FR&Væ"À¢&W‡W&–Væ6W2æFW6W'D—FVÓ"#¢$6–VçF÷2’†÷7—FÆ–FB&—fF"À¢&W‡W&–Væ6W2æFW6W'D—FVÓ2#¢$6Væ2÷&væ—¦F2"À¢&W‡W&–Væ6W2æFW6W'D—FVÓB#¢%&öw&Ö2&w'W÷2WV\;÷2"À¢&W‡W&–Væ6W2æFW6W'EFs#¢$GVæ2FR&Væ’F&FV6W""À¢&W‡W&–Væ6W2æFW6W'EFs"#¢$w'W÷2WV\;÷2"À¢&W‡W&–Væ6W2æFW6W'EFs2#¢$ö66–öæW2&—fF2"À¢&W‡W&–Væ6W2çF–eF—FÆR#¢%f–¦W2F–b"À¢&W‡W&–Væ6W2çF–eFW‡B#¢$Æ2ÖöçF;2FRÂ†FÂÆ÷26×÷2FR&÷62VâFV×÷&F’&F27V–FF÷6ÖVçFRVÆVv–F27&VâVâL:ÖF—7F–çFòâ"À¢&W‡W&–Væ6W2çF–d—FVÓ#¢%'WF2’Ö—&F÷&W2FRÖöçF;"À¢&W‡W&–Væ6W2çF–d—FVÓ"#¢$w&æ¦2FR&÷62FRFV×÷&F"À¢&W‡W&–Væ6W2çF–d—FVÓ2#¢$ÖW&6F÷2’&F2Æö6ÆW2FRFV×÷&F"À¢&W‡W&–Væ6W2çF–d—FVÓB#¢%&W7FW&çFW2’6l:—2"À¢&W‡W&–Væ6W2çF–eFs#¢$L:Ö6ö×ÆWFò"À¢&W‡W&–Væ6W2çF–eFs"#¢$FRFV×÷&F"À¢&W‡W&–Væ6W2çF–eFs2#¢$æGW&ÆW¦"À¢&W‡W&–Væ6W2ç6–væGW&TW–V'&÷r#¢%f–¦W2F—7F–çF—f÷2FR–VF"À¢&W‡W&–Væ6W2ç6–væGW&UF—FÆR#¢$–FV26Væ6–ÆÆ26öâVæÖ—&FÖVÖ÷&&ÆR"À¢&W‡W&–Væ6W2ç6–væGW&UFW‡B#¢$Æ÷2&öw&Ö2W7V6–ÆW2VVFVâ6öæV7F"7VÇGW&ÂÖ"Âv7G&öæöÜ:Ö’†÷7—FÆ–FB6–âVRVÂL:Ö&W7VÇFR&W7W&Fòâ"À¢&W‡W&–Væ6W2ç6–væGW&SF—FÆR#¢$FVÂÖ"ÂÔ&ÆB"À¢&W‡W&–Væ6W2ç6–væGW&SFW‡B#¢%VæF&FRFR&W6÷'BÂVæ&FÂF&FV6W"VâVÂ6ÇV"ì:WF–6ò’Væf—6—FwV–F÷"–VF†—7L;7&–6â"À¢&W‡W&–Væ6W2ç6–væGW&S%F—FÆR#¢$FVÂÖ"ÂFW6–W'Fò"À¢&W‡W&–Væ6W2ç6–væGW&S%FW‡B#¢%VæÖ;æ6÷7FW&’VâVçF÷&æò&—fFòVâVÂFW6–W'Fò6öâÆ;¦ÇF–ÖÇW¢â"À¢&W‡W&–Væ6W2ç6–væGW&S5F—FÆR#¢%VâL:Ö6ö×ÆWFòVâ–VF"À¢&W‡W&–Væ6W2ç6–væGW&S5FW‡B#¢%VâL:ÖWV–Æ–'&FòFR6—VFBÂ7VÇGW&Âv7G&öæöÜ:Ö’6VòÖ,:×F–Öòâ"À¢&W‡W&–Væ6W2ç&WVW7EF—FÆR#¢,+õV–W&W26öÖ&–æ"f&–2W‡W&–Væ6–3ò"À¢&W‡W&–Væ6W2ç&WVW7EFW‡B#¢$–æL:Ö6æ÷2VÂì;¦ÖW&òFR–çf—FF÷2’VÂF–V×òF—7öæ–&ÆRâ&÷öæG&VÖ÷2Væ'WFWV–Æ–'&Fâ"À¢&WfVçG2æÖWFF—FÆR#¢$WfVçF÷26÷'÷&F—f÷2’&—fF÷2Vâ–VFÂdTåEU$"À¢&WfVçG2æÖWFFW67&—F–öâ#¢$WfVçF÷26÷'÷&F—f÷2Â&WVæ–öæW2V¦V7WF—f2Â&öw&Ö2FRWV—òÂVæ7VVçG&÷2&—fF÷2’FVæ6œ;6âd•6ö÷&F–æF÷2÷"dTåEU$â"À¢&WfVçG2æ†W&ôW–V'&÷r#¢$vW7Fœ;6âFRWfVçF÷2"À¢&WfVçG2æ†W&õF—FÆR#¢$WfVçF÷2vW7F–öæF÷2FW6FRVÂ&–ÖW"'&–Vf–ær†7FÆÆÆVvFFRÆ÷2–çf—FF÷2â"À¢&WfVçG2æ†W&ôFW67&—F–öâ#¢$fVçGW&Ææ–f–6’V¦V7WFWfVçF÷26÷'÷&F—f÷2ÂVæ7VVçG&÷2&—fF÷2’&öw&Ö2&‡\:—7VFW2ÖVF–çFRVâÆâ÷W&F—fò6Æ&òâ"À¢&WfVçG2æ–çG&ôW–V'&÷r#¢$FRÆ–FVÆV¦V7V6œ;6â"À¢&WfVçG2æ–çG&õF—FÆR#¢$VÂWfVçFòW2VâÖöÖVçFòâVÂf–¦RFVÂ–çf—FFòV×–W¦çFW2â"À¢&WfVçG2æ–çG&õFW‡B#¢$Æ–æVÖ÷2ö&¦WF—fòÂÇVv"Â†÷&&–òÂ†÷7—FÆ–FBÂ&÷fVVF÷&W2’fÇV¦ò&VR6F'FR÷–RÆö66œ;6ââ"À¢&WfVçG2æ6÷'÷&FTW–V'&÷r#¢$6÷'÷&F—fò"À¢&WfVçG2æ6÷'÷&FUF—FÆR#¢$V¦V7V6œ;6âFRWfVçF÷26÷'÷&F—f÷2"À¢&WfVçG2æ6÷'÷&FUFW‡B#¢$V¦V7V6œ;6âVâ6—F–ò&&WVæ–öæW2V¦V7WF—f2Â&V6öæö6–Ö–VçF÷2Â&öw&Ö2FRWV—òÂFVÆVv6–öæW2’Væ7VVçG&÷26÷'÷&F—f÷2â"À¢&WfVçG2ç&—fFTW–V'&÷r#¢%&—fFò"À¢&WfVçG2ç&—fFUF—FÆR#¢$WfVçF÷2&—fF÷2"À¢&WfVçG2ç&—fFUFW‡B#¢$7V×ÆV;÷2Âæ—fW'6&–÷2Â&WVæ–öæW2fÖ–Æ–&W2’6VÆV'&6–öæW2:ÖçF–Ö2FFF2ÂÇVv"’Æ÷2–çf—FF÷2â"À¢&WfVçG2çf—F—FÆR#¢$FVæ6œ;6âd•’FVÆVv6–öæW2"À¢&WfVçG2çf—FW‡B#¢$ÆÆVvFÂG&ç7÷'FRÂÆö¦Ö–VçFòÂ&öw&Ö2&—fF÷2’FVæ6œ;6âF—67&WF6ö÷&F–æF÷2â"À¢&WfVçG2çFVÕF—FÆR#¢%&öw&Ö2FRWV—ò"À¢&WfVçG2çFVÕFW‡B#¢$7F—f–FFW2F—6\;F26V|;¦âÆ÷2ö&¦WF—f÷2ÂVÂFÖ;òFVÂw'Wò’VâVçF÷&æòFV7VFògVW&FVÂG&&¦ò†&—GVÂâ"À¢&WfVçG2çG—W4W–V'&÷r#¢$ÆòVR6ö÷&F–æÖ÷2"À¢&WfVçG2çG—W5F—FÆR#¢%Vâf÷&ÖFò,:7F–6ò&6Fö&¦WF—fò"À¢&WfVçG2çG—SF—FÆR#¢%&WVæ–öæW2V¦V7WF—f2"À¢&WfVçG2çG—SFW‡B#¢$ÇVv"ÂVÆVÖVçF÷2FR&WVæœ;6âÂ&Vg&–vW&–÷2’G&ç7÷'FR6ö÷&F–æF÷26öÖòVâ6öÆò&öw&Öâ"À¢&WfVçG2çG—S%F—FÆR#¢$æWGv÷&¶–ær’6Væ2V¦V7WF—f2"À¢&WfVçG2çG—S%FW‡B#¢%6VÆV66œ;6âFVÂÇVv"Â&V6W6œ;6âÂ6–VçF÷2Â†÷7—FÆ–FB’G&ç7÷'FR6ö÷&F–æFòâ"À¢&WfVçG2çG—S5F—FÆR#¢%&V6öæö6–Ö–VçF÷2’ö66–öæW26÷'÷&F—f2"À¢&WfVçG2çG—S5FW‡B#¢%&V6öæö6–Ö–VçF÷2Â†—F÷2FRÆV×&W6’Væ7VVçG&÷2W7F6–öæÆW26VÆV66–öæF÷2â"À¢&WfVçG2çG—SEF—FÆR#¢$L:Ö2FRÖ"ÂFW6–W'Fò’7VÇGW&"À¢&WfVçG2çG—SEFW‡B#¢$FW7F–æ÷266W6–&ÆW2FFF÷2w'W÷26÷'÷&F—f÷26öâÆö|:×7F–6,:7F–6â"À¢&WfVçG2çG—SUF—FÆR#¢%FVÒ'V–ÆF–ær"À¢&WfVçG2çG—SUFW‡B#¢$7F—f–FFW26V|;¦âVÂ&÷;76—FòÂÆ66–FB’VÂF–V×òFVÂWV—òâ"À¢&WfVçG2çG—SeF—FÆR#¢$–çf—FF÷2–çFW&æ6–öæÆW2"À¢&WfVçG2çG—SeFW‡B#¢%Vâ&öw&Ö6öæV7FFò&WV—÷2Â6ö6–÷2’FVÆVv6–öæW2f—6—FçFW2â"À¢&WfVçG2ç&ö6W74W–V'&÷r#¢$çVW7G&ò&ö6W6ò"À¢&WfVçG2ç&ö6W75F—FÆR#¢%VâÆâÂ7VG&òWF26Æ&2"À¢&WfVçG2ç7FWF—FÆR#¢$'&–Vb"À¢&WfVçG2ç7FWFW‡B#¢$VçFVæFVÖ÷2VÂö&¦WF—fòÂÆ÷2–çf—FF÷2ÂÆfV6†’Æ2Æ–Ö—F6–öæW2â"À¢&WfVçG2ç7FW%F—FÆR#¢$F—6\;ò"À¢&WfVçG2ç7FW%FW‡B#¢$FVf–æ–Ö÷2VÂf÷&ÖFòÂVÂÇVv"ÂVÂfÇV¦ò’Æ÷26W'f–6–÷2â"À¢&WfVçG2ç7FW5F—FÆR#¢$6öæf—&Ö6œ;6â"À¢&WfVçG2ç7FW5FW‡B#¢$Fö7VÖVçFÖ÷2’Æ–æVÖ÷2&÷fVVF÷&W2Â&W7öç6&–Æ–FFW2’†÷&&–òâ"À¢&WfVçG2ç7FWEF—FÆR#¢$V¦V7V6œ;6â"À¢&WfVçG2ç7FWEFW‡B#¢$Æ6ö÷&F–æ6œ;6âVâ6—F–òÖçF–VæRfÇV–FòVÂWfVçFò’VÂf–¦RFVÂ–çf—FFòâ"À¢&WfVçG2ç&WVW7EF—FÆR#¢,+õÆæ–f–62VâWfVçFòVâ–VFò"À¢&WfVçG2ç&WVW7EFW‡B#¢$Vçl:Öæ÷2ÆfV6†ÂVÂì;¦ÖW&òFR–çf—FF÷2’VÂö&¦WF—fò&7VvW&—"VÂÖV¦÷"VçFòFR'F–Fâ"À¢'6W'f–6W2æÖWFF—FÆR#¢%6W'f–6–÷2&‡\:—7VFW2’FW7F–æòÂdTåEU$"À¢'6W'f–6W2æÖWFFW67&—F–öâ#¢%Ææ–f–66œ;6âÂG&ç7÷'FRÂw\:Ö2Â&V6W6œ;6âÂ†÷7—FÆ–FB’vW7Fœ;6âFRFW7F–æ÷2Vâ&&–6VF—Fâ"À¢'6W'f–6W2æ†W&ôW–V'&÷r#¢%6W'f–6–÷2&‡\:—7VFW2"À¢'6W'f–6W2æ†W&õF—FÆR#¢$Æ÷2FWFÆÆW2Ç&VFVF÷"FRÆW‡W&–Væ6––×÷'Fââ"À¢'6W'f–6W2æ†W&ôFW67&—F–öâ#¢%Ææ–f–66œ;6âÂÖ÷f–Ö–VçFòÂ&–VçfVæ–F’÷–ò6ö÷&F–æF÷2VâF÷&æòVâÖ—6Öòf–¦Râ"À¢'6W'f–6W2æ–çG&ôW–V'&÷r#¢%Væ6öÆ6ö÷&F–æ6œ;6â"À¢'6W'f–6W2æ–çG&õF—FÆR#¢%6W'f–6–÷2VR†6VâVRVÂL:ÖfÇW–"À¢'6W'f–6W2æ–çG&õFW‡B#¢%&W6W'fVâ6W'f–6–òò6öÖ&–æf&–÷2VâVâ&öw&Ö6ö×ÆWFò&W'6öæ2ÂfÖ–Æ–2ÂV×&W62’FVÆVv6–öæW2â"À¢'6W'f–6W2ç3F—FÆR#¢%Ææ–f–66œ;6â’6öç6W&¦W,:Ö"À¢'6W'f–6W2ç3FW‡B#¢$—F–æW&&–÷2Â&W6W'f2Â&V6öÖVæF6–öæW2’'&VvÆ÷2W7V6–ÆW26V|;¦âVÂ‡\:—7VBâ"À¢'6W'f–6W2ç3%F—FÆR#¢%&V6W6œ;6â’6—7FVæ6–"À¢'6W'f–6W2ç3%FW‡B#¢$6ö÷&F–æ6œ;6âFRÆÆÆVvF’G&6ÆFò6Æ&òFVÂW&÷VW'FòÂfVŒ:Ö7VÆò’Æö¦Ö–VçFòâ"À¢'6W'f–6W2ç35F—FÆR#¢%G&ç7÷'FR&—fFò"À¢'6W'f–6W2ç35FW‡B#¢%fVŒ:Ö7VÆ÷2FV7VF÷2Â6öæGV7F÷&W2&öfW6–öæÆW2’†÷&&–÷2f–æ7VÆF÷2Â&öw&Öâ"À¢'6W'f–6W2ç3EF—FÆR#¢$w\:Ö2WF÷&—¦F÷2"À¢'6W'f–6W2ç3EFW‡B#¢,8&&RÂ–ævÌ:—2’÷G&÷2–F–öÖ26V|;¦âF—7öæ–&–Æ–FB’æV6W6–FBâ"À¢'6W'f–6W2ç3UF—FÆR#¢$†÷7—FÆ–FB"À¢'6W'f–6W2ç3UFW‡B#¢%&W&F—f÷2FRÆÆVvFÂfÆ÷&W2ÂVçG&VvVâ†÷FVÂ’FWFÆÆW2,:7F–6÷2â"À¢'6W'f–6W2ç3eF—FÆR#¢$vW7Fœ;6âFRFW7F–æ÷2"À¢'6W'f–6W2ç3eFW‡B#¢$6ö÷&F–æ6œ;6âÆö6Â&vVæ6–2ÂV×&W62ÂFVÆVv6–öæW2’&öw&Ö2FRf&–÷2L:Ö2â"À¢'6W'f–6W2ç3uF—FÆR#¢$6öæfV66œ;6âFRF†ö&R"À¢'6W'f–6W2ç3uFW‡B#¢%Vâ67G&Rf—6—FÂ‡\:—7VB&FöÖ"ÖVF–F2’VÆVv—"FV¦–FòÂ6öâVçG&VvVâÖVæ÷2FR#B†÷&27V¦WF6öæf—&Ö6œ;6ââ"À¢'6W'f–6W2ç3…F—FÆR#¢$6—7FVæ6–6öâ&–2"À¢'6W'f–6W2ç3…FW‡B#¢%VæW7V6–Æ—7F—VFVÆVv—"Væ&–FV7VF’6ö÷&F–æVçG&Vv,:–F6V|;¦âF—7öæ–&–Æ–FBâ"À¢'6W'f–6W2æ¦÷W&æW”W–V'&÷r#¢$<;6ÖògVæ6–öæ"À¢'6W'f–6W2æ¦÷W&æW•F—FÆR#¢%Væ6öÆ–6—GVBVVFR6öæV7F"FöFòVÂf–¦R"À¢'6W'f–6W2æ£F—FÆR#¢$çFW2FRÆÆVv""À¢'6W'f–6W2æ£FW‡B#¢$6öæf—&ÖÖ÷2&VfW&Væ6–2Â&öw&ÖÂ&W6W'f2’G&ç7÷'FRâ"À¢'6W'f–6W2æ£%F—FÆR#¢$ÆÆÆVvF"À¢'6W'f–6W2æ£%FW‡B#¢$6ö÷&F–æÖ÷2&V6W6œ;6âÂG&6ÆFò’FWFÆÆW2FRÆÆVvFâ"À¢'6W'f–6W2æ£5F—FÆR#¢$GW&çFRÆW7Fæ6–"À¢'6W'f–6W2æ£5FW‡B#¢$W‡W&–Væ6–2Â&W7FW&çFW2’6öÆ–6—GVFW2ÖVF–çFRVâ6öÆò6öçF7Fòâ"À¢'6W'f–6W2æ£EF—FÆR#¢$çFW2FR'F—""À¢'6W'f–6W2æ£EFW‡B#¢%&Wf—6Ö÷2'&VvÆ÷2f–æÆW2ÂVçG&Vv2’G&6ÆFòâ"À¢&6öÆÆV7F–öâæÖWFF—FÆR#¢$dTåEU$&÷WF—VRÂ6öæ6WF÷2FRg&væ6–÷"W‡W&–Væ6–"À¢&6öÆÆV7F–öâæÖWFFW67&—F–öâ#¢$W‡Æ÷&6öæ6WF÷2FRg&væ6–FRfVçGW&÷"W‡W&–Væ6–ÂFöF÷27GVÆÖVçFRVâFW6'&öÆÆòâ"À¢&6öÆÆV7F–öâæ†W&ôW–V'&÷r#¢$&÷WF—VRfVçGW&"À¢&6öÆÆV7F–öâæ†W&õF—FÆR#¢$6öæ6WF÷2FRg&væ6–æ6–F÷2FR6FW‡W&–Væ6–â"À¢&6öÆÆV7F–öâæ†W&ôFW67&—F–öâ#¢$W‡Æ÷&ÆF—&V66œ;6âöÆfF—fFR6F×VæFòFRfVçGW&â6F6öæ6WFò6–wVRVâFW6'&öÆÆò†7F&ö&"7W2×VW7G&2Â&÷fVVF÷&W2’6Æ–FBâ"À¢&6öÆÆV7F–öâæ–çG&ôW–V'&÷r#¢$6öæV7FF6öâGRW‡W&–Væ6–"À¢&6öÆÆV7F–öâæ–çG&õF—FÆR#¢$VÆ–vRVæW‡W&–Væ6–’Ö—&6öÆòÆòVRÆR6÷'&W7öæFR"À¢&6öÆÆV7F–öâæ–çG&õFW‡B#¢$6F6öæ6WFòFRg&væ6–6R6öæV7F6öâÆ†—7F÷&–ÂVÂÇVv"’VÂ&—FÖòFR7RW‡W&–Væ6–â"À¢&6öÆÆV7F–öâæ&÷†W4W–V'&÷r#¢$6¦2FRW‡W&–Væ6–2"À¢&6öÆÆV7F–öâæ&÷†W5F—FÆR#¢$6¦2FRW‡W&–Væ6–2Â,;7†–ÖÖVçFRâ"À¢&6öÆÆV7F–öâæ&÷ƒF—FÆR#¢$&öÇ6Æ–Ö"&ö¦ò"À¢&6öÆÆV7F–öâæ&÷ƒFW‡B#¢%Væ6öÆV66œ;6â,:7F–6&W6VçFFFVçG&òFRÆ&÷–&öÇ6’Æ—7F&VÂL:ÖFRÖ"â"À¢&6öÆÆV7F–öâæ&÷ƒ%F—FÆR#¢$6¦&÷6†â"À¢&6öÆÆV7F–öâæ&÷ƒ%FW‡B#¢%Vâ&V7VW&Fò6öæ6—6òFR–VF†—7L;7&–6Â7R'FW6ì:Ö’Æ†÷7—FÆ–FB6VL:Òâ"À¢&6öÆÆV7F–öâæ&÷ƒ5F—FÆR#¢$6¦Æ7BÆ–v‡B"À¢&6öÆÆV7F–öâæ&÷ƒ5FW‡B#¢$FWFÆÆW2;§F–ÆW2FVÂFW6–W'Fò6öâÆWF<:Æ–F’6,:7FW"6VL:ÒF—67&WFòâ"À¢&6öÆÆV7F–öâæ&÷ƒEF—FÆR#¢$6¦&÷6FRF–b"À¢&6öÆÆV7F–öâæ&÷ƒEFW‡B#¢$6öÆV66œ;6âW7F6–öæÂ6VçG&FVâÆ&÷6FRF–b’&öGV7F÷2Æö6ÆW2FR&÷fVVF÷&W2f–&ÆW2â"À¢&6öÆÆV7F–öâçW&gVÖTW–V'&÷r#¢$Æ&÷&F÷&–òFR&öÖ2fVçGW&"À¢&6öÆÆV7F–öâçW&gVÖUF—FÆR#¢$6öæ6WF÷2FRg&væ6–2VâFW6'&öÆÆò"À¢&6öÆÆV7F–öâçW&gVÖUFW‡B#¢%F&¦WF2FR&W6VçF6œ;6âFRÆ2g&væ6–3²Æ÷2FWFÆÆW2FRg&66òÂFÖ;ò’Æç¦Ö–VçFò6RçVæ6–,:âÂ6ö×ÆWF"VÂFW6'&öÆÆòâ"À¢&6öÆÆV7F–öâçF—FÆR#¢%6VW‡W&–Væ6R"À¢&6öÆÆV7F–öâçFW‡B#¢$&W&vÖ÷FÂ'&—6Ö&–æ’ÖFW&FRFW&—fâ"À¢&6öÆÆV7F–öâç%F—FÆR#¢%&÷6†â"À¢&6öÆÆV7F–öâç%FW‡B#¢$6l:’6VL:ÒÂ†ö¦2fW&FW2FR†–wVW&R–æ6–Vç6ò<:Æ–Fòâ"À¢&6öÆÆV7F–öâç5F—FÆR#¢$Æ7BÆ–v‡B"À¢&6öÆÆV7F–öâç5FW‡B#¢$&–FRVæV'&òÂÆ–ÖFVÂFW6–W'Fò’Vâ6÷&FRFR&Væ6Æ–VçFRâ"À¢&6öÆÆV7F–öâçEF—FÆR#¢$W‡W&–Væ6–F–b"À¢&6öÆÆV7F–öâçEFW‡B#¢%&÷6FRF–bÂL:’fW&FR’ÆÖ—¦6ÆR&Ææ6òâ"À¢&6öÆÆV7F–öâçW'6öæÄW–V'&÷r#¢$V×&W62’‡\:—7VFW2V¦V7WF—f÷2"À¢&6öÆÆV7F–öâçW'6öæÅF—FÆR#¢%6W'f–6–÷2;§F–ÆW2&W&F÷2çFW2FRÆÆÆVvF"À¢&6öÆÆV7F–öâçF†ö&UF—FÆR#¢%67G&RVâGRÆö¦Ö–VçFò"À¢&6öÆÆV7F–öâçF†ö&UFW‡B#¢$VÂ67G&Rf—6—F&ÖVF–F2’FV¦–FòÂ’6ö÷&F–æVçG&VvVâÖVæ÷2FR#B†÷&2G&26öæf—&Ö"F—7öæ–&–Æ–FBâ"À¢&6öÆÆV7F–öâæ&–F—FÆR#¢$W7V6–Æ—7FVâ&–2&Æ‡\:—7VB"À¢&6öÆÆV7F–öâæ&–FW‡B#¢%VæW7V6–Æ—7Ff—6—FÆ‡\:—7VB&FöÖ"Æ2ÖVF–F2æV6W6&–2&VÂ6W'f–6–òâÆ&–FV7VF’ÆVçG&Vv6R6ö÷&F–æâ;¦æ–6ÖVçFRFW7\:—2FRÆ6öæf—&Ö6œ;6ã²æò6R×VW7G&Vâ6L:ÆövòFR&–2Æ—7F2â"À¢&6öÆÆV7F–öâç&WVW7EF—FÆR#¢$F—6\;Væ6öÆ–6—GVBFR6÷F—¦6œ;6âÇ&VFVF÷"FRGR‡\:—7VB"À¢&6öÆÆV7F–öâç&WVW7EFW‡B#¢$VÆ–vR&öGV7F÷2’6W'f–6–÷2F—7öæ–&ÆW2’Vçl:ÖVæ6öÆ6öÆ–6—GVBFR6÷F—¦6œ;6ââfVçGW&&Wf—6,:F—7öæ–&–Æ–FBÂ†÷&&–ò’W'6öæÆ—¦6œ;6âçFW2FRVÖ—F—&Æâ"À¢&&÷WBæÖWFF—FÆR#¢%6ö'&RdTåEU$ÂW‡W&–Væ6–2ÂWfVçF÷2’†÷7—FÆ–FB"À¢&&÷WBæÖWFFW67&—F–öâ#¢$FW67V'&RÆ†—7F÷&–Âf—6œ;6âÂÖ—6œ;6â’fÆ÷&W2FWG,:2FRÆ2W‡W&–Væ6–2’WfVçF÷2FRdTåEU$â"À¢&&÷WBæ†W&ôW–V'&÷r#¢%6ö'&RfVçGW&"À¢&&÷WBæ†W&õF—FÆR#¢%Væf÷&ÖF–fW&VçFRFRFW67V'&—"VâÇVv"’7&V"ÖöÖVçF÷2â"À¢&&÷WBæ†W&ôFW67&—F–öâ#¢$fVçGW&æòW26öÆòVâf–¦RâF—6\;Ö÷2W‡W&–Væ6–2’WfVçF÷26öâ6VçF–FòÇ&VFVF÷"FVÂ‡\:—7VBÂVÂÖöÖVçFò’Æ÷2FWFÆÆW2VRW&ÖæV6Vââ"À¢&&÷WBç7F÷'”W–V'&÷r#¢$çVW7G&ò6öÖ–Vç¦ò"À¢&&÷WBç7F÷'•F—FÆR#¢$Vâ6F6—VFB†’ÇVv&W2VRFöF÷2f—6—Fî(
+b"À¢&&÷WBç7F÷'•FW‡C#¢%W&ò†’ÇVv&W2Æ÷2VR6öÆòÆÆVvâV–VæW26öæö6VâVÂfW&FFW&ò6Ö–æòâÆÌ:Ò6öÖVç¬;2fVçGW&â"À¢&&÷WBç7F÷'•FW‡C"#¢$fVçGW&æòæ6œ;26–×ÆVÖVçFR&fVæFW"F÷W'2R÷&væ—¦"WfVçF÷2Â6–æòFR6ö×&VæFW"VRÆW‡W&–Væ6–æòW7L:6öÆòVâVÂÇVv"Â6–æòVâ<;6Öò6Rf—fS¢VâÆ÷2WV\;÷2FWFÆÆW2ÂVÂÖöÖVçFò&V6—6òÂVÂ&—FÖò6÷'&V7Fò’Æ6Vç66œ;6âVRW&ÖæV6RÂFW&Ö–æ"â"À¢&&÷WBçf—6–öåF—FÆR#¢%f—6œ;6â"À¢&&÷WBçf—6–öåFW‡B#¢%6W"Væ&VfW&Væ6–FR6öæf–ç¦&W‡W&–Væ6–2’WfVçF÷27V–FF÷6ÖVçFRF—6\;F÷2Vâ&&–6VF—Fâ"À¢&&÷WBæÖ—76–öåF—FÆR#¢$Ö—6œ;6â"À¢&&÷WBæÖ—76–öåFW‡B#¢$7&V"f–¦W2’ö66–öæW2W'6öæÆW2Â&–Vâ6ö÷&F–æF÷2’6öæV7FF÷2FRf÷&ÖWL:–çF–66öâVÂÇVv"â"À¢&&÷WBçfÇVW4W–V'&÷r#¢$çVW7G&÷2fÆ÷&W2"À¢&&÷WBçfÇVW5F—FÆR#¢$Æ÷2&–æ6—–÷2FWG,:2FR6FW‡W&–Væ6–"À¢&&÷WBçcF—FÆR#¢$ÖW7G,:Ö"À¢&&÷WBçcFW‡B#¢$6FFWFÆÆRF–VæR7RW6ò’6FÖöÖVçFò7RfÆ÷"â"À¢&&÷WBçc%F—FÆR#¢$WFVçF–6–FB"À¢&&÷WBçc%FW‡B#¢%&W6VçFÖ÷2ÆW‡W&–Væ6–6öÖòFV&Rf—f—'6RÂ6öâ†öæW7F–FB’&ögVæF–FBÂÆV¦÷2FRÆ&WWF–6œ;6ââ"À¢&&÷WBçc5F—FÆR#¢%&—f6–FB"À¢&&÷WBçc5FW‡B#¢$6F‡\:—7VBF—6g'WFFRf÷&ÖF—7F–çF’F—6\;Ö÷2ÆW‡W&–Væ6–Vâ6öç6V7VVæ6–â"À¢&&÷WBçcEF—FÆR#¢$6Æ–FB"À¢&&÷WBçcEFW‡B#¢$VÆVv–Ö÷2ÆòÖV¦÷"Vâ6FVÆVÖVçFò&6VwW&"VæW‡W&–Væ6–6ö×ÆWFâ"À¢&&÷WBçcUF—FÆR#¢$–ææ÷f6œ;6â"À¢&&÷WBçcUFW‡B#¢%&WÆçFVÖ÷2FW7F–æ÷2ÂW‡W&–Væ6–2’WfVçF÷2FRf÷&Ö2çVWf2’ö6ò6öçfVæ6–öæÆW2â"À¢&&÷WBçceF—FÆR#¢$7W&–÷6–FB"À¢&&÷WBçceFW‡B#¢$'W66Ö÷2f÷&Ö2Ü:26–væ–f–6F—f2FRf—f—"VâÇVv"â"À¢&&÷WBæÖöFVÄW–V'&÷r#¢$<;6ÖòG&&¦Ö÷2"À¢&&÷WBæÖöFVÅF—FÆR#¢%&VBÆö6ÂÂVâ6ö÷&F–æF÷"&W7öç6&ÆR"À¢&&÷WBæÖöFVÅFW‡B#¢$6öÆ&÷&Ö÷26öâw\:Ö2WF÷&—¦F÷2ÂÇVv&W2ÂG&ç7÷'F—7F2ÂWV—÷2FR†÷7—FÆ–FB’W7V6–Æ—7F2âfVçGW&6–wVR6–VæFòVÂ;¦æ–6òVçFòFR6ö÷&F–æ6œ;6âFVÂ&öw&Ö6÷&FFòâ"À¢&6öçF7BæÖWFF—FÆR#¢$6öçF7F"6öâdTåEU$ÂÆæ–f–6"VæW‡W&–Væ6–"À¢&6öçF7BæÖWFFW67&—F–öâ#¢$6öçF7F6öâdTåEU$Vâ–VF&Ææ–f–6"VæW‡W&–Væ6–ÂWfVçFòÂ&öw&ÖFR‡\:—7VFW2ò—F–æW&&–ò6÷'÷&F—fòâ"À¢&6öçF7Bæ†W&ôW–V'&÷r#¢$6öçF7Fò"À¢&6öçF7Bæ†W&õF—FÆR#¢$V×–W¦÷"Æ÷2–çf—FF÷2ÂÆfV6†’Æö66œ;6ââ"À¢&6öçF7Bæ†W&ôFW67&—F–öâ#¢$Vçl:ÖÆ÷2FWFÆÆW2W6Væ6–ÆW2’FR—VF&VÖ÷26öçfW'F—&Æ÷2VâVæ&–ÖW&F—&V66œ;6â,:7F–6â"À¢&6öçF7BçæVÅF—FÆR#¢$†&Æ6öâfVçGW&"À¢&6öçF7BçæVÅFW‡B#¢$VÂ6÷'&VòVÆV7G,;6æ–6òW2VÂ6æÂ&–æ6—ÂFR&W6W'f3²v†G4VVFF—7öæ–&ÆR6öÖò6VwVæF÷6œ;6ââ"À¢&6öçF7Bç†öæTÆ&VÂ#¢%v†G4"À¢&6öçF7BæVÖ–ÃÆ&VÂ#¢%&W6W'f2’6öç7VÇF2"À¢&6öçF7BæVÖ–Ã$Æ&VÂ#¢%Ææ–f–66œ;6âFRW‡W&–Væ6–2"À¢&6öçF7BæÆö6F–öäÆ&VÂ#¢%6VFR"À¢&6öçF7Bæf÷&ÕF—FÆR#¢$FF÷2FRÆ6öÆ–6—GVB"À¢&6öçF7Bæf÷&ÕFW‡B#¢$æò6R&VÆ—¦æ–æ|;¦âvòæ’6R6öæf—&Öæ–æwVæ&W6W'f\:ÒâW7FRf÷&×VÆ&–ò6öÆò–æ–6–Æ6öçfW'66œ;6âFRÆæ–f–66œ;6â’6÷F—¦6œ;6ââ"À¢&6öçF7BææÖTÆ&VÂ#¢$æöÖ'&R"À¢&6öçF7BææÖUÆ6V†öÆFW"#¢$æöÖ'&R6ö×ÆWFò"À¢&6öçF7Bæ6ö×ç”Æ&VÂ#¢$V×&W6R÷&væ—¦6œ;6â"À¢&6öçF7Bæ6ö×ç•Æ6V†öÆFW"#¢$÷6–öæÂ"À¢&6öçF7Bç†öæTf–VÆDÆ&VÂ#¢$ì;¦ÖW&òFRFVÌ:–föæò"À¢&6öçF7Bç†öæUÆ6V†öÆFW"#¢"³“cbâââ"À¢&6öçF7BæVÖ–ÄÆ&VÂ#¢$6÷'&VòVÆV7G,;6æ–6ò"À¢&6öçF7BæVÖ–ÅÆ6V†öÆFW"#¢&æöÖ'&TV¦V×Æòæ6öÒ"À¢&6öçF7BçG—TÆ&VÂ#¢%F—òFR6öÆ–6—GVB"À¢&6öçF7BçG—UÆ6V†öÆFW"#¢$VÆ–vRVæ÷6œ;6â"À¢&6öçF7BçG—TW‡W&–Væ6R#¢$W‡W&–Væ6–&—fF"À¢&6öçF7BçG—TWfVçB#¢$WfVçFò"À¢&6öçF7BçG—T6÷'÷&FR#¢%&öw&Ö6÷'÷&F—fòòFVÆVv6œ;6â"À¢&6öçF7BçG—T6öÆÆV7F–öâ#¢$6öæ6WF÷2FRg&væ6–2VâFW6'&öÆÆò"À¢&6öçF7BçG—T÷F†W"#¢$÷G&ò"À¢&6öçF7BæFFTÆ&VÂ#¢$fV6†&VfW&–F"À¢&6öçF7BæwVW7G4Æ&VÂ#¢$ì;¦ÖW&òFR–çf—FF÷2"À¢&6öçF7BæwVW7G5Æ6V†öÆFW"#¢$V¦V×Æó¢b"À¢&6öçF7BæÖW76vTÆ&VÂ#¢,+ô†’Æ|;¦â÷G&òFWFÆÆR–×÷'FçFSò"À¢&6öçF7BæÖW76vUÆ6V†öÆFW"#¢$;FRVææ÷F'&WfR’÷6–öæÂ6’†’ÆvòÜ:2VRFV&Ö÷26&W"â"À¢&6öçF7Bç6Vç6—F—fTFFæ÷F–6R#¢$æòVçl:ÖW2ì;¦ÖW&÷2FR–FVçF–FBÂ6÷'FRÂ–æf÷&Ö6œ;6âFR6ÇVBæ’÷G&÷2FF÷26Vç6–&ÆW2ÖVF–çFRW7FRf÷&×VÆ&–òâ"À¢&6öçF7Bç&—f7”æ÷F–6U&Vf—‚#¢$ÂVçf–"W7F6öÆ–6—GVBÂfVçGW&G&FGW2FF÷2&&W&&Æ’6öçF7F"6öçF–vò6öæf÷&ÖRÆ"À¢&6öçF7Bç&—f7”æ÷F–6UFW&×2#¢"âÆ÷26W'f–6–÷26öæf—&ÖF÷26R&–vVâ÷"Æ÷2"À¢&6öçF7Bç7V&Ö—B#¢$Vçf–"6öÆ–6—GVBFR&W6W'f"À¢&6öçF7Bææ÷FR#¢$VÆ–vR6÷'&VòVÆV7G,;6æ–6òòv†G4&Vçf–"Æ6öÆ–6—GVB&W&F²æò6öæf—&ÖVæ&W6W'fæ’Vâvòâ"À¢&6öçF7BæW'&÷"#¢$–çG&öGV6RGRæöÖ'&R’ÂÂÖVæ÷2ÂVâì;¦ÖW&òFRFVÌ:–föæòò6÷'&VòVÆV7G,;6æ–6òâ"À¢&6öçF7BæW'&÷$VÖ–Â#¢$–çG&öGV6RGR6÷'&VòVÆV7G,;6æ–6ò&Vçf–"Æ6öÆ–6—GVBFR&W6W'f÷"VÖ–Ââ"À¢&6öçF7Bç&WVW7D–çG&ò#¢%6öÆ–6—GVBFR&W6W'fdTåEU$"À¢&6öçF7BæVÖ–Å7V&¦V7B#¢%6öÆ–6—GVBFR&W6W'ffVçGW&"À¢&6öçF7Bç7V&Ö—DVÖ–Â#¢$Vçf–"6öÆ–6—GVBFR&W6W'f"À¢&6öçF7Bç7V&Ö—Ev†G6#¢$Vçf–"6öÆ–6—GVBFR&W6W'f÷"v†G4"À¢&6öçF7Bææ÷FTVÖ–Â#¢%GR6öÆ–6—GVB6RVçf–,:F—&V7FÖVçFRfVçGW&âæò6R'&—,:æ–æwVæÆ–66œ;6âFR6÷'&Vó²æò6öæf—&ÖVæ&W6W'fæ’Vâvòâ"À¢&6öçF7Bææ÷FUv†G6#¢%v†G46R'&—,:6öâÆ6öÆ–6—GVB&W&FâöG,:2&Wf—6&ÆçFW2FRVçf–&Æ²æò6öæf—&ÖVæ&W6W'fæ’Vâvòâ"À¢&6öçF7Bç6VæF–ær#¢$Vçf–æFòGR6öÆ–6—GVN(
+b"À¢&6öçF7Bç7V&Ö—DW'&÷"#¢$æò†VÖ÷2öF–FòVçf–"GR6öÆ–6—GVBâ–çL:–çFÆòFRçVWfòòVÆ–vRv†G4â"À¢&6öçF7Bçv†G6–çG&ò#¢$†öÆdTåEU$ÂÖRwW7F,:Ö6öÆ–6—F"÷–òFRÆæ–f–66œ;6ââ"À¢&6öçF7Bçv†G6æÖR#¢$æöÖ'&R"À¢&6öçF7Bçv†G66ö×ç’#¢$V×&W6"À¢&6öçF7Bçv†G6†öæR#¢%FVÌ:–föæò"À¢&6öçF7Bçv†G6VÖ–Â#¢$6÷'&Vò"À¢&6öçF7Bçv†G6G—R#¢%F—òFR6öÆ–6—GVB"À¢&6öçF7Bçv†G6FFR#¢$fV6†&VfW&–F"À¢&6öçF7Bçv†G6wVW7G2#¢$–çf—FF÷2"À¢&6öçF7Bçv†G6ÖW76vR#¢$FWFÆÆW2"À¢&fæÖWFF—FÆR#¢%&VwVçF2g&V7VVçFW2ÂdTåEU$"À¢&fæÖWFFW67&—F–öâ#¢%&W7VW7F26ö'&RW‡W&–Væ6–2ÂWfVçF÷2ÂG&ç7÷'FRÂw\:Ö2Â&W6W'f2’6W'f–6–÷2FRdTåEU$â"À¢&fæ†W&ôW–V'&÷r#¢$–æf÷&Ö6œ;6â;§F–Â"À¢&fæ†W&õF—FÆR#¢%&VwVçF2g&V7VVçFW2"À¢&fæ†W&ôFW67&—F–öâ#¢%VâVçFòFR'F–F6Æ&òçFW2FRFF"Æ÷2FWFÆÆW2GR6öÆ–6—GVBâ"À¢&fç#¢,+ô<;6Öò&W6W'fòVæW‡W&–Væ6–ò"À¢&fæ#¢$Vçl:ÖÆfV6†ÂVÂì;¦ÖW&òFR–çf—FF÷2’Æ÷2–çFW&W6W2÷"VÂf÷&×VÆ&–òÖVF–çFR6÷'&VòVÆV7G,;6æ–6òÂòW6v†G46’Æò&Vf–W&W2â6öæf—&Ö&VÖ÷2F—7öæ–&–Æ–FB’&öw&ÖçFW2FR7VÇV–W"vòâ"À¢&fç"#¢,+ôÆ2W‡W&–Væ6–26öâ&—fF3ò"À¢&fæ"#¢$çVW7G&÷2&öw&Ö2&–æ6—ÆW26öâ&—fF÷2â6’6R&÷öæRVæ÷6œ;6â6ö×'F–FÂ6R–æF–6,:6Æ&ÖVçFRçFW2FR6öæf—&Ö"â"À¢&fç2#¢,+õ6RVVFVâ6öÖ&–æ"f&–2W‡W&–Væ6–2VâVâL:Öò"À¢&fæ2#¢%<:ÒâWV–Æ–'&Ö÷2G&6ÆF÷2Â6Æ–Ö’&—FÖò&VRVÂL:Ö&W7VÇFRw&F&ÆR’æò&W7W&Fòâ"À¢&fçB#¢,+ôög&V6VâG&ç7÷'FSò"À¢&fæB#¢%<:Òâ6RVVFR;F—"G&ç7÷'FR&—fFò6V|;¦âVÂFÖ;òFVÂw'WòÂÆ'WF’VÂæ—fVÂFR6W'f–6–òâ"À¢&fçR#¢,+ô†’w\:Ö2WF÷&—¦F÷2VâF–fW&VçFW2–F–öÖ3ò"À¢&fæR#¢%<:ÒÂ7V¦WFòF—7öæ–&–Æ–FBâ8&&RR–ævÌ:—27VVÆVâW7F"F—7öæ–&ÆW2Â’6RVVFVâ6öÆ–6—F"÷G&÷2–F–öÖ26öâçFVÆ6œ;6ââ"À¢&fçb#¢,+ôfVçGW&÷&væ—¦WfVçF÷26÷'÷&F—f÷3ò"À¢&fæb#¢%<:Òâ6ö÷&F–æÖ÷2&WVæ–öæW2Â6öæfW&Væ6–2ÂÆç¦Ö–VçF÷2Â&öw&Ö2FRWV—òÂö66–öæW2&V×ÆVF÷2’FVÆVv6–öæW2â"À¢&fçr#¢,+ô<;6Öò6RFWFW&Ö–æVÂ&V6–òFRÆW‡W&–Væ6–ò"À¢&fær#¢$6FW‡W&–Væ6–6R6÷F—¦G&2&Wf—6"fV6†Â†÷&&–òÂw'WòÂGW&6œ;6âÂG&ç7÷'FR’W‡G&2â&V6–&—,:2Væ6÷F—¦6œ;6âW67&—F’6Æ&çFW2FR6öæf—&Ö"â"À¢&fç‚#¢,+õ6RVVFVâ÷&væ—¦"6W'f–6–÷2&‡\:—7VFW2VâVâ†÷FVÃò"À¢&fæ‚#¢%<:ÒâÆ67G&W,:ÖFRF†ö&RÂVÂ6W'f–6–òFR&–’Æ2fÆ÷&W26RVVFVâ6ö÷&F–æ"&Vâ†÷FVÂòÆö¦Ö–VçFòÖVF–çFR7VW&Fò&Wf–òâ"À¢&fç’#¢,+ô6öâ7\:çFçFVÆ6œ;6âFV&ò6öçF7F#ò"À¢&fæ’#¢$7VçFòçFW2ÂÖV¦÷"ÂW7V6–ÆÖVçFR&f–æW2FR6VÖæÂw'W÷2w&æFW2’w\:Ö2W7V6–Æ—¦F÷2âFÖ&œ:–â&Wf—6Ö÷26öÆ–6—GVFW2W&vVçFW26V|;¦âF—7öæ–&–Æ–FBâ"À¢&fç#¢,+õ\:’ö7W'&RFW7\:—2FRVçf–"Æ6öÆ–6—GVCò"À¢&fæ#¢%&Wf—6Ö÷2Æ÷2FF÷2Â†6VÖ÷2Æ2&VwVçF2æV6W6&–2Â&÷öæVÖ÷2VæF—&V66œ;6â’6öæf—&ÖÖ÷2F—7öæ–&–Æ–FBâæF6R&W6W'f6–âGR&ö&6œ;6âf–æÂâ"À¢&vÆÆW'’æÖWFF—FÆR#¢$vÆW,:ÖfVçGW&ÂÇVv&W2ÂWfVçF÷2’FWFÆÆW2"À¢&vÆÆW'’æÖWFFW67&—F–öâ#¢%Væf—7FFVÂÖ"&ö¦òÂ–VF†—7L;7&–6ÂFW6–W'FòÂF–bÂWfVçF÷2’FWFÆÆW2&‡\:—7VFW2FRdTåEU$â"À¢&vÆÆW'’æ†W&ôW–V'&÷r#¢$F–&–òf—7VÂ"À¢&vÆÆW'’æ†W&õF—FÆR#¢$ÇVv&W2ÂÖ&–VçFW2’FWFÆÆW27V–FF÷2â"À¢&vÆÆW'’æ†W&ôFW67&—F–öâ#¢%VæF—&V66œ;6âf—7VÂFRÆ2W‡W&–Væ6–2’WfVçF÷2VRF—6\;Ö÷2âÆ÷2'&VvÆ÷2f–æÆW2f,:ÖâVâ6F&öw&Öâ"À¢&vÆÆW'’ç6V#¢%f–¦W2÷"VÂÖ"&ö¦ò"À¢&vÆÆW'’æ†—7F÷&–2#¢%–VF†—7L;7&–6"À¢&vÆÆW'’æFW6W'B#¢$Æ;¦ÇF–ÖÇW¢FVÂFW6–W'Fò"À¢&vÆÆW'’çF–b#¢$ÖöçF;2FRF–b"À¢&vÆÆW'’æ6÷'÷&FR#¢$WfVçF÷2V¦V7WF—f÷2"À¢&vÆÆW'’ç&—fFR#¢$Væ7VVçG&÷2&—fF÷2"À¢&vÆÆW'’æ6öÆÆV7F–öâ#¢$F—&V66œ;6âFRÆ6öÆV66œ;6âfVçGW&"À¢&vÆÆW'’æ¦VFF‚#¢%–VFFW7\:—2FVÂF&FV6W""À¢&vÆÆW'’æÇE6V#¢$6öæ6WFòFRW‡W&–Væ6–VâVÂÖ"&ö¦ò"À¢&vÆÆW'’æÇD†—7F÷&–2#¢$6öæ6WFòFRW‡W&–Væ6–VâÆ–VF†—7L;7&–6"À¢&vÆÆW'’æÇDFW6W'B#¢$W‡W&–Væ6–VâVÂFW6–W'FòÂF&FV6W""À¢&vÆÆW'’æÇEF–b#¢$6öæ6WFòFRW‡W&–Væ6–VâÆ2ÖöçF;2FRF–b"À¢&vÆÆW'’æÇD6÷'÷&FR#¢$6öæ6WFòFRWfVçFòV¦V7WF—fò"À¢&vÆÆW'’æÇE&—fFR#¢$6öæ6WFòFRVæ7VVçG&ò&—fFò"À¢&vÆÆW'’æÇD6öÆÆV7F–öâ#¢$F—&V66œ;6âFRÆ6öÆV66œ;6âfVçGW&"À¢&vÆÆW'’æÇD¦VFF‚#¢%–VFFW7\:—2FVÂF&FV6W""À¢&vÆÆW'’æF—66Æ–ÖW"#¢$W7F2–Ü:vVæW2&W6VçFâÆF—&V66œ;6âf—7VÂFRfVçGW&âÇVv&W2ÂFWFÆÆW2FRÆW‡W&–Væ6–’ÖöçF¦W26R6öæf—&Öâ÷"6W&Fò&6F6öÆ–6—GVBâ"À¢'&—f7’æÖWFF—FÆR#¢%öÌ:×F–6FR&—f6–FBÂdTåEU$"À¢'&—f7’æÖWFFW67&—F–öâ#¢$<;6ÖòdTåEU$G&FÆ÷2FF÷2W'6öæÆW2Vçf–F÷2G&l:—2FVÂ6—F–ò’Æ÷26æÆW2FR6öçF7Fòâ"À¢'&—f7’æ†W&ôW–V'&÷r#¢$ÆVvÂ"À¢'&—f7’æ†W&õF—FÆR#¢%öÌ:×F–6FR&—f6–FB"À¢'&—f7’æ†W&ôFW67&—F–öâ#¢%VæW‡Æ–66œ;6â6Æ&FRÆ÷2FF÷2W'6öæÆW2VR&V6–&–Ö÷2’<;6ÖòÆ÷2WF–Æ—¦Ö÷2â"À¢'&—f7’çWFFVB#¢,9¦ÇF–Ö7GVÆ—¦6œ;6ã¢§VÆ–òFR##b"À¢'&—f7’æƒ#¢#â–æf÷&Ö6œ;6âVR&÷÷&6–öæ2"À¢'&—f7’ç#¢$Â6öçF7F&æ÷2VVFW2f6–Æ—F"æöÖ'&RÂFVÌ:–föæòÂ6÷'&VòÂV×&W6Â:×2Â6—VFBÂfV6†Âì;¦ÖW&òFR–çf—FF÷2òFF÷2FR6öÆ&÷&6œ;6â6öÖò&öfW6œ;6âÂÆ–6Væ6–2Â÷'FföÆ–òÂ–F–öÖ2’6ö&W'GW&â"À¢'&—f7’æƒ"#¢#"â<;6ÖòWF–Æ—¦Ö÷2Æ–æf÷&Ö6œ;6â"À¢'&—f7’ç"#¢%W6Ö÷2Æ–æf÷&Ö6œ;6â&&W7öæFW"Â&W&"&÷VW7F2Â6ö÷&F–æ"6W'f–6–÷2ÂÖçFVæW"&Vv—7G&÷2’ÖV¦÷&"Æ6ö×Væ–66œ;6ââ"À¢'&—f7’æƒ2#¢#2â&÷fVVF÷&W2FR6W'f–6–÷2"À¢'&—f7’ç2#¢$7VæFò6VæV6W6&–ò&&W&"ò&W7F"Vâ6W'f–6–ò&ö&FòÂ6–W'F÷2FF÷2öG,:â6ö×'F—'6R6öâw\:Ö2ÂÇVv&W2ÂG&ç7÷'F—7F2ò6ö6–÷26VÆV66–öæF÷2Â6öÆòVâÆÖVF–FæV6W6&–â"À¢'&—f7’æƒB#¢#Bâ&VfW&Væ6–2FVÂ6—F–ò"À¢'&—f7’çB#¢$VÂ6—F–òwV&FGW&çFRVâW&–öFòÆ–Ö—FFòGR–F–öÖ’&VfW&Væ6–2L:–6æ–62Æ–Ö—FF2VâGRF—7÷6—F—fòâ6R&W&âWfVçF÷2FR–çFW&66œ;6âì;6æ–Ö÷26–âæöÖ'&W2ÂFVÌ:–föæ÷2Â6÷'&V÷2æ’6öçFVæ–FòFRÖVç6¦W2â7GVÆÖVçFRVÂ6—F–òæò&ö6W6v÷2VâÌ:ÖæVæ’7&V7VVçF2FR6Æ–VçFW2â"À¢'&—f7’æƒR#¢#Râv†G4’6÷'&Vò"À¢'&—f7’çR#¢$Â6öçF–çV"÷"v†G4ò6÷'&VòÂÆ6ö×Væ–66œ;6âFÖ&œ:–âW7L:7V¦WFÆ2öÌ:×F–62FVÂ&÷fVVF÷"6÷'&W7öæF–VçFRâ"À¢'&—f7’æƒb#¢#bâ6öç6W'f6œ;6â’&÷FV66œ;6â"À¢'&—f7’çb#¢$6öç6W'fÖ÷2Æ–æf÷&Ö6œ;6âGW&çFRVÂF–V×òæV6W6&–ò&f–æW26öÖW&6–ÆW2Â6öçG&7GVÆW2’ÆVvÆW2Â’Æ–6Ö÷2ÖVF–F2&¦öæ&ÆW2FR&÷FV66œ;6ââ"À¢'&—f7’æƒr#¢#râGW2÷6–öæW2"À¢'&—f7’çr#¢%VVFW26öÆ–6—F"Æ6÷'&V66œ;6âòVÆ–Ö–æ6œ;6âFR–æf÷&Ö6œ;6âÂ6ÇfòVVÆÆVRFV&Ö÷26öç6W'f"÷"&¦öæW2ÆVvÆW2ò6öçG&7GVÆW2â"À¢'&—f7’æƒ‚#¢#‚â6öçF7Fò"À¢'&—f7’ç‚#¢%&6öç7VÇF2FR&—f6–FBÂW67&–&R6öçF7DfVçGW&·6æ6öÒâ"À¢'FW&×2æÖWFF—FÆR#¢%L:—&Ö–æ÷2’6öæF–6–öæW2ÂdTåEU$"À¢'FW&×2æÖWFFW67&—F–öâ#¢$Æ26öæF–6–öæW2Æ–6&ÆW26öÆ–6—GVFW2FVÂ6—F–ò’6W'f–6–÷2Æö6ÆW26öæf—&ÖF÷2FRdTåEU$â"À¢'FW&×2æ†W&ôW–V'&÷r#¢$ÆVvÂ"À¢'FW&×2æ†W&õF—FÆR#¢%L:—&Ö–æ÷2’6öæF–6–öæW2"À¢'FW&×2æ†W&ôFW67&—F–öâ#¢$6öæF–6–öæW26Æ&2&6öÆ–6—GVFW2Â6W'f–6–÷26öæf—&ÖF÷2’W‡W&–Væ6–2FR‡\:—7VFW2â"À¢&æ÷Ff÷VæBæÖWFF—FÆR#¢%:v–ææòVæ6öçG&FÂdTåEU$"À¢&æ÷Ff÷VæBçF—FÆR#¢$W7F:v–ææòf÷&Ö'FRFVÂf–¦Râ"À¢&æ÷Ff÷VæBçFW‡B#¢$W2÷6–&ÆRVRVÂVæÆ6R†–6Ö&–FòòVRÆ:v–æ–æòW†—7Fâ"À¢&æ÷Ff÷VæBæ'WGFöâ#¢%föÇfW"Â–æ–6–ò"À¢&6öÖÖöâæÖFUFô÷&FW"#¢%&W&Fò÷"Væ6&vò"À¢&æbæ6÷'÷&FR#¢$V×&W62"À¢&†öÖRæ¦VFF…F—FÆR#¢%VâL:Ö6ö×ÆWFòVâ–VF"À¢&†öÖRæ¦VFF…FW‡B#¢%6VòÖ,:×F–ÖòÂ–VF†—7L;7&–6Âv7G&öæöÜ:ÖÆö6Â’&F26VÆV66–öæF2VâVæ'WFWV–Æ–'&Fâ"À¢&†öÖRæ6÷'÷&FT'WGFöâ#¢%&öw&Ö26÷'÷&F—f÷2"À¢&W‡W&–Væ6W2ç6†÷W‡W&–Væ6R#¢%fW"&öGV7F÷2FRÆW‡W&–Væ6–"À¢&W‡W&–Væ6W2æ¦VFF„W–V'&÷r#¢%–VF+rL:ÖfÆW†–&ÆR"À¢&W‡W&–Væ6W2æ¦VFF…F—FÆR#¢%VâL:Ö6ö×ÆWFòVâ–VF"À¢&W‡W&–Væ6W2æ¦VFF…FW‡B#¢%Vâ&öw&ÖfÆW†–&ÆRVR6öæV7FVÂ6VòÖ,:×F–ÖòÂ–VF†—7L;7&–6Âv7G&öæöÜ:ÖÆö6Â’&F26VÆV66–öæF2â"À¢&W‡W&–Væ6W2æ¦VFF„—FVÓ#¢$f÷&ÖFòFRÖVF–òL:ÖòL:Ö6ö×ÆWFò"À¢&W‡W&–Væ6W2æ¦VFF„—FVÓ"#¢$w\:ÖWF÷&—¦Fò’G&ç7÷'FR6ö÷&F–æFò"À¢&W‡W&–Væ6W2æ¦VFF„—FVÓ2#¢%–VF†—7L;7&–6’ÖöÖVçF÷2g&VçFRÂÖ""À¢&W‡W&–Væ6W2æ¦VFF„—FVÓB#¢$÷6–öæW2FR6öÖ–FÂ6l:’’†÷7—FÆ–FB"À¢&W‡W&–Væ6W2æ¦VFF…Fs#¢%&–ÖW&f—6—F"À¢&W‡W&–Væ6W2æ¦VFF…Fs"#¢$fÆW†–&ÆR"À¢&W‡W&–Væ6W2æ¦VFF…Fs2#¢$L:Ö6ö×ÆWFò"À¢&W‡W&–Væ6W2ævöÆFVåF—FÆR#¢$Æ†÷&F÷&F"À¢&W‡W&–Væ6W2ævöÆFVåFW‡B#¢%Vâ6Vò&—fFòVâ&&6òFRVæ†÷&Â6ö÷&F–æFò6öâÆ;¦ÇF–ÖÇW¢’VÂF&FV6W"6ö'&RVÂÖ"&ö¦òâ"À¢&WfVçG2æ6÷'÷&FTÆ–æ²#¢%fW"&öw&Ö26÷'÷&F—f÷2"À¢'6W'f–6W2ç&WVW7E6W'f–6R#¢%6öÆ–6—F"W7FR6W'f–6–ò"À¢&6öÆÆV7F–öâæf–ÇFW$ÆÂ#¢%FöF2Æ2W‡W&–Væ6–2"À¢&6öÆÆV7F–öâæf–ÇFW%6V#¢$Ö""À¢&6öÆÆV7F–öâæf–ÇFW$†—7F÷&–2#¢%–VF†—7L;7&–6"À¢&6öÆÆV7F–öâæf–ÇFW$FW6W'B#¢$FW6–W'Fò"À¢&6öÆÆV7F–öâæf–ÇFW%F–b#¢%F–b"À¢&6öÆÆV7F–öâæf–ÇFW$¦VFF‚#¢$f—&ÖfVçGW&"À¢&6öÆÆV7F–öâæf–ÇFW$6÷'÷&FR#¢$V×&W62’V¦V7WF—f÷2"À¢&6öÆÆV7F–öâæ†÷tW–V'&÷r#¢$<;6ÖògVæ6–öæÆ&÷WF—VR"À¢&6öÆÆV7F–öâæ†÷uF—FÆR#¢$7&VVæ6öÆ6öÆ–6—GVBÇ&VFVF÷"FVÂ‡\:—7VB"À¢&6öÆÆV7F–öâæ†÷sF—FÆR#¢$VÆ–vRVæW‡W&–Væ6–"À¢&6öÆÆV7F–öâæ†÷sFW‡B#¢$VçG&"FW6FRVæW‡W&–Væ6–'&RWFöÜ:F–6ÖVçFR7W2&öGV7F÷2&VÆ6–öæF÷2â"À¢&6öÆÆV7F–öâæ†÷s%F—FÆR#¢$;FRÆòVRVæ6¦R"À¢&6öÆÆV7F–öâæ†÷s%FW‡B#¢$VÆ–vRVæ6¦Â&öGV7F÷2–æF—f–GVÆW2ò6W'f–6–÷2W'6öæÆW2â"À¢&6öÆÆV7F–öâæ†÷s5F—FÆR#¢%&V6–&RVæ6÷F—¦6œ;6âW'6öæÆ—¦F"À¢&6öÆÆV7F–öâæ†÷s5FW‡B#¢$fVçGW&&Wf—6†÷&&–òÂ6çF–FBÂW'6öæÆ—¦6œ;6â’F—7öæ–&–Æ–FBçFW2FR6öæf—&Ö"â"À¢&6öÆÆV7F–öâæ&÷†W5FW‡B#¢$W7F26öÆV66–öæW2FRf—7F&Wf–6RÆç¦,:â6öÆòFW7\:—2FR&ö&"×VW7G&2ÂÖFW&–ÆW2’&÷fVVF÷&W2â;¦âæòW7L:âF—7öæ–&ÆW2&6öÆ–6—F"â"À¢&6öÆÆV7F–öâç&WVW7D&÷‚#¢%6öÆ–6—F"W7F6¦"À¢&6öÆÆV7F–öâæ&÷ƒ—FVÓ#¢$&öÇ6FRÆ–fVçGW&"À¢&6öÆÆV7F–öâæ&÷ƒ—FVÓ"#¢%FöÆÆFRÆ–FR6V6Fò,:–Fò"À¢&6öÆÆV7F–öâæ&÷ƒ—FVÓ2#¢$gVæFFRFVÌ:–föæò&W6—7FVçFR6Ç–6GW&2’&Væ"À¢&6öÆÆV7F–öâæ&÷ƒ—FVÓB#¢%&V6—–VçFRL:—&Ö–6òFRf–¦R"À¢&6öÆÆV7F–öâæ&÷ƒ—FVÓR#¢$÷6œ;6âFRW&gVÖRÖ&–æò7VæFò6RÆæ6R"À¢&6öÆÆV7F–öâæ&÷ƒ$—FVÓ#¢%&V7VW&FòFRÖFW&–ç7—&FòVâVÂ&÷6†â"À¢&6öÆÆV7F–öâæ&÷ƒ$—FVÓ"#¢%F&¦WF2–ÇW7G&F2FVÂG&–Ööæ–ò"À¢&6öÆÆV7F–öâæ&÷ƒ$—FVÓ2#¢$7VFW&æòFR&öÇ6–ÆÆò&÷6†â"À¢&6öÆÆV7F–öâæ&÷ƒ$—FVÓB#¢$W7GV6†RFRFVÆ–ç7—&FòVâÂÔ&ÆB"À¢&6öÆÆV7F–öâæ&÷ƒ$—FVÓR#¢$÷6œ;6âFRW&gVÖRFR–VF†—7L;7&–67VæFò6RÆæ6R"À¢&6öÆÆV7F–öâæ&÷ƒ4—FVÓ#¢$6†ÂÆ–vW&òFRFöæòæWWG&ò"À¢&6öÆÆV7F–öâæ&÷ƒ4—FVÓ"#¢%f6òL:—&Ö–6òFRf–¦R"À¢&6öÆÆV7F–öâæ&÷ƒ4—FVÓ2#¢%WV\;ò&V7VW&FòFV¦–Fò"À¢&6öÆÆV7F–öâæ&÷ƒ4—FVÓB#¢$W7GV6†RFRf–¦R×VÇF—W6ò"À¢&6öÆÆV7F–öâæ&÷ƒ4—FVÓR#¢$÷6œ;6âFRW&gVÖRÆ7BÆ–v‡B7VæFò6RÆæ6R"À¢&6öÆÆV7F–öâæ&÷ƒD—FVÓ#¢$''VÖ&öÜ:F–6FR&÷6FRF–b"À¢&6öÆÆV7F–öâæ&÷ƒD—FVÓ"#¢$¦,;6âFR&÷6ò7&VÖFRÖæ÷2"À¢&6öÆÆV7F–öâæ&÷ƒD—FVÓ2#¢%6V—FòW&gVÖFòFR&÷6"À¢&6öÆÆV7F–öâæ&÷ƒD—FVÓB#¢$7VFW&æòFR&öÇ6–ÆÆòfÆ÷&Â"À¢&6öÆÆV7F–öâæ&÷ƒD—FVÓR#¢$÷6œ;6âFRW&gVÖRFRF–b7VæFò6RÆæ6R"À¢&6öÆÆV7F–öâæ&÷ƒUF—FÆR#¢$6¦L:ÖVâ–VF"À¢&6öÆÆV7F–öâæ&÷ƒUFW‡B#¢%VæWV\;×VW7G&FRÆ6—VFB&VÂF÷W"òVÂL:Ö6ö×ÆWFòVâ–VFâ"À¢&6öÆÆV7F–öâæ&÷ƒT—FVÓ#¢$7VFW&æòFR&öÇ6–ÆÆò’F&¦WFFR'WF–ÇW7G&F"À¢&6öÆÆV7F–öâæ&÷ƒT—FVÓ"#¢%&V7VW&Fò–ç7—&FòVâ&÷6†â"À¢&6öÆÆV7F–öâæ&÷ƒT—FVÓ2#¢%F&¦WF2–ÇW7G&F2FVÂG&–Ööæ–ò"À¢&6öÆÆV7F–öâæ&÷ƒT—FVÓB#¢$66W6÷&–òÖ&–æò6ö×7Fò"À¢&6öÆÆV7F–öâæ&÷ƒT—FVÓR#¢%F&¦WFFR&VvÆòfVçGW&"À¢&6öÆÆV7F–öâæ&÷„æ÷FR#¢$VÂ6öçFVæ–FòW2–ÇW7G&F—fò’VVF7V¦WFòÆ&ö&6œ;6âf–æÂFRÆ÷2&öGV7F÷2â"À¢&6öÆÆV7F–öâçW'6öæÅFW‡B#¢$Æ÷26W'f–6–÷2VVFVâ÷&væ—¦'6R÷"6W&Fòò;F—'6RVâ&öw&Ö6÷'÷&F—fòâ"À¢&6öÆÆV7F–öâæW†V7WF—fSF—FÆR#¢%&V6W6œ;6â’G&6ÆFòFVÂW&÷VW'Fò"À¢&6öÆÆV7F–öâæW†V7WF—fSFW‡B#¢%&V6W6œ;6â’6—7FVæ6–6öâG&ç7÷'FRV¦V7WF—fòÂ†÷FVÂò&WVæœ;6ââ"À¢&6öÆÆV7F–öâæW†V7WF—fS%F—FÆR#¢$fÆ÷&W2’&–VçfVæ–FVâVÂ†÷FVÂ"À¢&6öÆÆV7F–öâæW†V7WF—fS%FW‡B#¢%&ÖòÂæ÷FFR&–VçfVæ–Fò&VvÆò6öÆö6FòçFW2FRÆÆÆVvFâ"À¢&6öÆÆV7F–öâæW†V7WF—fS5F—FÆR#¢%&W&6œ;6âFR&WVæ–öæW2"À¢&6öÆÆV7F–öâæW†V7WF—fS5FW‡B#¢$VÆVÖVçF÷2FR&WVæœ;6âÂ&Vg&–vW&–÷2ÂfÇV¦òFR–çf—FF÷2’G&ç7÷'FR6ö÷&F–æF÷2â"À¢&6öÆÆV7F–öâæW†V7WF—fSEF—FÆR#¢%&VvÆ÷2öf–6–ÆW2’6öç6W&¦W,:Ö"À¢&6öÆÆV7F–öâæW†V7WF—fSEFW‡B#¢%&VvÆ÷2FRV×&W6FV7VF÷2’6—7FVæ6–,:7F–6GW&çFRÆW7Fæ6–â"À¢&6÷'÷&FRæÖWFF—FÆR#¢$W‡W&–Væ6–26÷'÷&F—f2’&öw&Ö2V¦V7WF—f÷2ÂdTåEU$"À¢&6÷'÷&FRæÖWFFW67&—F–öâ#¢$W‡W&–Væ6–26÷'÷&F—f2,:7F–62Â&WVæ–öæW2V¦V7WF—f2ÂWV—÷2’FVÆVv6–öæW2d•Vâ–VFâ"À¢&6÷'÷&FRæ†W&ôW–V'&÷r#¢%&öw&Ö26÷'÷&F—f÷2’V¦V7WF—f÷2"À¢&6÷'÷&FRæ†W&õF—FÆR#¢%&öw&Ö26÷'÷&F—f÷26öâVâö&¦WF—fòFRæVvö6–ò6Æ&òâ"À¢&6÷'÷&FRæ†W&ôFW67&—F–öâ#¢$FW6FRVæÆÆVvFV¦V7WF—f†7FVæ&WVæœ;6âW‡FW&æò¦÷&æFFRWV—òÂfVçGW&F—6\;Vâ&öw&Ö,:7F–6òVR6öæV7F†÷7—FÆ–FBÂG&ç7÷'FR’VÂVçF÷&æòFV7VFòâ"À¢&6÷'÷&FRæ†W&õ&–Ö'’#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢&6÷'÷&FRæ†W&õ6V6öæF'’#¢%fW"f÷&ÖF÷2,:7F–6÷2"À¢&6÷'÷&FRæ–çG&ôW–V'&÷r#¢%Væ6öÇV6œ;6â÷W&F—f6ö×ÆWF"À¢&6÷'÷&FRæ–çG&õF—FÆR#¢%Vâ&öw&ÖFRæVvö6–òÂæòVâf–¦R6÷'÷&F—fò&Vf'&–6Fòâ"À¢&6÷'÷&FRæ–çG&õFW‡B#¢%'F–Ö÷2FVÂö&¦WF—fş(	F†÷7—FÆ–FBÂ&V6öæö6–Ö–VçFòÂ6öæW†œ;6âòWV—ş(	G’F—6\;Ö÷2Vâ&öw&Ö&VÆ—7F6V|;¦â–çf—FF÷2ÂF–V×ò’&W7WVW7Fòâ"À¢&6÷'÷&FRæ–æ6ÇVFS#¢%Ææ–f–66œ;6â"À¢&6÷'÷&FRæ–æ6ÇVFS"#¢$ÇVv""À¢&6÷'÷&FRæ–æ6ÇVFS2#¢%G&ç7÷'FR"À¢&6÷'÷&FRæ–æ6ÇVFSB#¢$†÷7—FÆ–FB"À¢&6÷'÷&FRæ–æ6ÇVFSR#¢$fÆ÷&W2&‡\:—7VFW2"À¢&6÷'÷&FRæ–æ6ÇVFSb#¢$6ö÷&F–æ6œ;6âVâ6—F–ò"À¢&6÷'÷&FRç&öw&×4W–V'&÷r#¢%&öw&Ö2,:7F–6÷26VÆV66–öæF÷2"À¢&6÷'÷&FRç&öw&×5F—FÆR#¢$ÇFòfÆ÷"6–â6ö×ÆV¦–FB–ææV6W6&–"À¢&6÷'÷&FRç&öw&×5FW‡B#¢$f÷&ÖF÷26öâÇVv&W266W6–&ÆW2’6W'f–6–÷2f–&ÆW2Â×Æ–&ÆW26öÆò7VæFòVÂö&¦WF—fòÆò&WV–W&Râ"À¢&6÷'÷&FRç&öw&ÓF—FÆR#¢%&WVæ–öæW2V¦V7WF—f2W‡FW&æ2"À¢&6÷'÷&FRç&öw&ÓFW‡B#¢$VçF÷&æò&—fFòÂ&Vg&–vW&–÷2ÂG&ç7÷'FRÂVÆVÖVçF÷2FR&WVæœ;6â’Æ×VW'¦òò6Væ÷6–öæÂâ"À¢&6÷'÷&FRç&öw&Ó%F—FÆR#¢$FVÆVv6–öæW2d•R–çf—FF÷2–çFW&æ6–öæÆW2"À¢&6÷'÷&FRç&öw&Ó%FW‡B#¢%&V6W6œ;6âÂG&ç7÷'FRV¦V7WF—fòÂ÷–òVâ†÷FVÂÂw\:Ö2’Vâ—F–æW&&–ò6ö÷&F–æFòâ"À¢&6÷'÷&FRç&öw&Ó5F—FÆR#¢$L:Ö2FR–æ6VçF—fò’&V6öæö6–Ö–VçFò"À¢&6÷'÷&FRç&öw&Ó5FW‡B#¢%Væ¦÷&æFFRÖ"Â7VÇGW&ÂFW6–W'FòòF–b6öâG&ç7÷'FRÂ†÷7—FÆ–FB’&V6öæö6–Ö–VçFò6Væ6–ÆÆòâ"À¢&6÷'÷&FRç&öw&ÓEF—FÆR#¢%FVÒ'V–ÆF–ærÆ–vW&ò"À¢&6÷'÷&FRç&öw&ÓEFW‡B#¢%&WF÷266W6–&ÆW2Â—7F2’§VVv÷26öÆ&÷&F—f÷2FFF÷2ÂÇVv"’ÂF–V×òâ"À¢&6÷'÷&FRç&öw&ÓUF—FÆR#¢$¦÷&æF2FRW‡W&–Væ6–26÷'÷&F—f2"À¢&6÷'÷&FRç&öw&ÓUFW‡B#¢%&öw&Ö2&—fF÷2FRÖ"&ö¦òÂ–VF†—7L;7&–6ÂFW6–W'FòòF–b&WV—÷2Â6Æ–VçFW2ò6ö6–÷2â"À¢&6÷'÷&FRç&öw&ÓeF—FÆR#¢$æWGv÷&¶–ær’6Væ2V¦V7WF—f2"À¢&6÷'÷&FRç&öw&ÓeFW‡B#¢%6VÆV66œ;6âFVÂÇVv"Â&V6W6œ;6âÂ6–VçF÷2Â†÷7—FÆ–FBÂG&ç7÷'FR’6ö÷&F–æ6œ;6âFVçFVâVÂÇVv"â"À¢&6÷'÷&FRç6¶vW4W–V'&÷r#¢%VçF÷2FR'F–F"À¢&6÷'÷&FRç6¶vW5F—FÆR#¢%G&W2&öw&Ö2l:6–ÆW2FRFF""À¢&6÷'÷&FRç6¶vSF—FÆR#¢$ÆÆVvFV¦V7WF—f"À¢&6÷'÷&FRç6¶vSFW‡B#¢$6ö÷&F–æ6œ;6âFVÂW&÷VW'FòÂG&6ÆFòÂfÆ÷&W2FR&–VçfVæ–FVâVÂ†÷FVÂ’6öç6W&¦W,:Öâ"À¢&6÷'÷&FRç6¶vS%F—FÆR#¢$ÖVF–¦÷&æFFRÆ–FW&¦vò"À¢&6÷'÷&FRç6¶vS%FW‡B#¢%6ÆW‡FW&æÂ&Vg&–vW&–÷2ÂÆ×VW'¦òFRG&&¦ò’G&ç7÷'FRâ"À¢&6÷'÷&FRç6¶vS5F—FÆR#¢$L:ÖFRFW67V'&–Ö–VçFòFVÂWV—ò"À¢&6÷'÷&FRç6¶vS5FW‡B#¢%VæW‡W&–Væ6–ÂVâ&WFòÆ–vW&òÂ6öÖ–F6ö×'F–F’G&ç7÷'FRFRw'Wòâ"À¢&6÷'÷&FRæwVW7DW–V'&÷r#¢$FVæ6œ;6âÂ‡\:—7VBV¦V7WF—fò"À¢&6÷'÷&FRæwVW7EF—FÆR#¢$÷–ò;§F–ÂçFW2FRVRÆÆVwVRVÂ‡\:—7VB"À¢&6÷'÷&FRæwVW7EFW‡B#¢$Æ÷2‡\:—7VFW2&V6–&VâVâÆâFR†÷7—FÆ–FB6öæV7FFòVâÇVv"FR÷&væ—¦"6FFWFÆÆR÷"6W&Fòâ"À¢&6÷'÷&FRæwVW7C#¢%&V6W6œ;6âVâW&÷VW'Fò’G&ç7÷'FRV¦V7WF—fò"À¢&6÷'÷&FRæwVW7C"#¢$fÆ÷&W2VâVÂ†÷FVÂÂ6ö÷&F–æ6œ;6âFRÆÆVvF’6öç6W&¦W,:Ö"À¢&6÷'÷&FRæwVW7C2#¢$ÖVF–F2’VçG&VvFRF†ö&RVâÖVæ÷2FR#B†÷&2Â7V¦WF6öæf—&Ö6œ;6â"À¢&6÷'÷&FRæwVW7CB#¢%6VÆV66œ;6âFR&–6öâW7V6–Æ—7F"À¢&6÷'÷&FRæwVW7D&÷WF—VR#¢%fW"6W'f–6–÷2V¦V7WF—f÷2"À¢&6÷'÷&FRçf–WtWfVçG2#¢,+ôæV6W6—F2V¦V7WF"VâWfVçFóòW‡Æ÷&ÆvW7Fœ;6âFRWfVçF÷2"À¢&6÷'÷&FRç&WVW7EF—FÆR#¢,+õ\:’FV&RÆöw&"VÂ&öw&Öò"À¢&6÷'÷&FRç&WVW7EFW‡B#¢$6ö×'FRVÂö&¦WF—fòÂì;¦ÖW&òFR–çf—FF÷2’fV6†&&V6öÖVæF"VÂf÷&ÖFòÜ:26Væ6–ÆÆò’Vf–6¢â"À¢&6öçF7BçG—U6W'f–6R#¢%6W'f–6–ò&‡\:—7VFW2"À¢&6öçF7Bç&WVW7FVD—FVÒ#¢%6öÆ–6—GVBW7V<:Öf–6"À¢&W‡W&–Væ6W2ç&VG•6VW–V'&÷r#¢$Æ—7Fò&6öÆ–6—F""À¢&W‡W&–Væ6W2ç&VG•6VF—FÆR#¢$W‡W&–Væ6–2FRÖ"F—6\;F26V|;¦âGR†÷&&–ò"À¢&W‡W&–Væ6W2ç&VG•6VFW‡B#¢$VÆ–vRÆW‡W&–Væ6–ÂVÂ†÷&&–ò’VÂw'Wòâ6öæf—&ÖÖ÷2VÂ&&6òFV7VFò’&W&Ö÷2Væ6÷F—¦6œ;6âW'6öæÆ—¦Fâ"À¢&W‡W&–Væ6W2æg&öÒ#¢$6÷F—¦6œ;6â"À¢&W‡W&–Væ6W2çW$&öB#¢'÷"&&6ò&—fFò"À¢&W‡W&–Væ6W2çW%–6‡B#¢'÷"–FR&—fFò"À¢&W‡W&–Væ6W2çW$w&÷W#¢'÷"w'Wò&—fFò"À¢&W‡W&–Væ6W2çW%W'6öâ#¢'÷"W'6öæ"À¢&W‡W&–Væ6W2æöffW$vöÆFVäÖWF#¢#cÖ–çWF÷2+r6†&Òö&‡W"+r(	3BW'6öæ2"À¢&W‡W&–Væ6W2æöffW$vöÆFVåFW‡B#¢%6Vò&—fFòÂF&FV6W"6öâ6—L:âÂ6öÖ'W7F–&ÆRÂ6†ÆV6÷2ÂwVÂW&—F—f÷2’†–VÆòâ"À¢&W‡W&–Væ6W2ævöÆFVå&FW2#¢$6÷F—¦6œ;6â6V|;¦âfV6†Â†÷&&–ò’ì;¦ÖW&òFRW'6öæ2â"À¢&W‡W&–Væ6W2æ&–F…F—FÆR#¢$L:ÖFRÖ"Vâ&–F‚"À¢&W‡W&–Væ6W2æöffW$&–F„ÖWF#¢#‚†÷&2+rFRö&‡W"&–F‚+r†7F‚W'6öæ2"À¢&W‡W&–Væ6W2æöffW$&–F…FW‡B#¢$&;ò’F–V×òG&çV–ÆòVâVÂÖ"Â6öâ6—L:âÂ6öÖ'W7F–&ÆRÂ6†ÆV6÷2ÂW&—F—f÷2’†–VÆò–æ6ÇV–F÷2â"À¢&W‡W&–Væ6W2æ&–F…&FW2#¢$VÂ&&6ò’Æ6÷F—¦6œ;6â6R6öæf—&Öâ6V|;¦âVÂw'Wò’ÆF—7öæ–&–Æ–FBâ"À¢&W‡W&–Væ6W2æw&æEF—FÆR#¢$w&â–FR&–F‚"À¢&W‡W&–Væ6W2æöffW$w&æDÖWF#¢#‚†÷&2+rFRö&‡W"&–F‚+r†7F#2W'6öæ2"À¢&W‡W&–Væ6W2æöffW$w&æEFW‡B#¢%–FR×Æ–ò’&VÖ—VÒ&w'W÷2&—fF÷26öâÆ÷2Ö—6Ö÷2VÆVÖVçF÷2FVÂL:ÖFRÖ"â"À¢&W‡W&–Væ6W2æw&æE&FR#¢%6R&W&Væ6÷F—¦6œ;6âW'6öæÆ—¦F&VÂ–FR’VÂ&öw&ÖVÆVv–F÷2â"À¢&W‡W&–Væ6W2ç&VG”†—7F÷&–4W–V'&÷r#¢$f÷&ÖF÷2FR–VF†—7L;7&–6"À¢&W‡W&–Væ6W2ç&VG”†—7F÷&–5F—FÆR#¢$w\:ÖWF÷&—¦Fò6V|;¦âVÂFÖ;òFVÂw'Wò"À¢&W‡W&–Væ6W2ç&VG”†—7F÷&–5FW‡B#¢%FöF÷2Æ÷2&V6÷'&–F÷2–R–æ6ÇW–Vâ6l:’:&&RÂL:F–ÆW2’Vâw\:ÖWF÷&—¦FòâÆ2VçG&F2F–6–öæÆW2FRvò6R6öæf—&Öâ÷"6W&Fòâ"À¢&W‡W&–Væ6W2æ†W&—FvU6ÖÆÄÖWF#¢#.(	3"ÃR†÷&2+r(	3BW'6öæ2"À¢&W‡W&–Væ6W2æ†W&—FvU6ÖÆÅF—FÆR#¢%6Vò&—fFò÷"VÂG&–Ööæ–ò"À¢&W‡W&–Væ6W2æ†W&—FvU6ÖÆÅFW‡B#¢%&V6÷'&–Fò–R÷"ÂÔ&ÆB6öâVâw\:ÖWF÷&—¦Fòâ"À¢&W‡W&–Væ6W2æ†W&—FvTw&÷WÖWF#¢#.(	3"ÃR†÷&2+r^(	3"W'6öæ2"À¢&W‡W&–Væ6W2æ†W&—FvTw&÷WF—FÆR#¢%6VòG&–Ööæ–Â&w'W÷2"À¢&W‡W&–Væ6W2æ†W&—FvTw&÷WFW‡B#¢$w\:ÖWF÷&—¦Fò’6ö÷&F–æF÷"FRfVçGW&&f6–Æ—F"VÂÖ÷f–Ö–VçFòâ"À¢&W‡W&–Væ6W2æ†W&—FvU7FæF&DÖWF#¢%G&6ÆFòFR–F’gVVÇF+r(	3BW'6öæ2"À¢&W‡W&–Væ6W2æ†W&—FvU7FæF&EF—FÆR#¢%6VòG&–Ööæ–Â²G&ç7÷'FR"À¢&W‡W&–Væ6W2æ†W&—FvU7FæF&EFW‡B#¢%6Vò&—fFò6öâ6ö6†RW7L:æF"’6öæGV7F÷"6ö÷&F–æFòFW6FRVÂ†÷FVÂâ"À¢&W‡W&–Væ6W2æ†W&—FvUf—ÖWF#¢%G&ç7÷'FRd•–F’gVVÇF+r†7FbW'6öæ2"À¢&W‡W&–Væ6W2æ†W&—FvUf—F—FÆR#¢%6VòG&–Ööæ–Â²G&ç7÷'FRd•"À¢&W‡W&–Væ6W2æ†W&—FvUf—FW‡B#¢%fVŒ:Ö7VÆòV¦V7WF—fò’6öæGV7F÷"Â6öâ6ö÷&F–æF÷"7VæFòVÂFÖ;òFVÂw'WòÆò&WV–W&â"À¢&W‡W&–Væ6W2æF–ææW$æ÷FUF—FÆR#¢$6Væ÷6–öæÂFW7\:—2FVÂ6Vò"À¢&W‡W&–Væ6W2æF–ææW$æ÷FUFW‡B#¢$VÆ–vRVÂW7F–ÆòFR&W7FW&çFR’VÂ†÷&&–ó²Æ&W6W'f’Æ6÷F—¦6œ;6â6R6öæf—&Öâ6öâVÂ—F–æW&&–ò6ö×ÆWFòâ"À¢&W‡W&–Væ6W2ç7F$W–V'&÷r#¢$L:ÖF—7F–çF—fòfVçGW&"À¢&W‡W&–Væ6W2ç7F%F—FÆR#¢$FVÂÖ"ÂÔ&ÆB"À¢&W‡W&–Væ6W2ç7F$ÆVB#¢%VæF&FRFR&W6÷'BÂVæ&FÂF&FV6W"VâVÂ6ÇV"ì:WF–6òFR–VF’Væf—6—FwV–F÷"–VF†—7L;7&–6VâVâL:ÖG&çV–Æòâ"À¢&W‡W&–Væ6W2ç7F$6Æ&—G’#¢$Æ'FRFVÂÖ"W2ÆW‡W&–Væ6–FVÂ&W6÷'BâVÂ6VòVâ&&6òW2÷6–öæÂÂ6R6öÆ–6—F÷"6W&Fò’6R6öæf—&Ö6V|;¦âF—7öæ–&–Æ–FC²Æ6VæFRÖ&—66÷2FÖ&œ:–âW2÷6–öæÂâ"À¢&W‡W&–Væ6W2ç7F%7FWF—FÆR#¢$æ&6—77W2&W6÷'B"À¢&W‡W&–Væ6W2ç7F%7FWFW‡B#¢$66W6òÆÆ–Â6öÖ–F’&V&–F&Vg&W66çFRVâVâÖ&–VçFR&VÆ¦Fòâ"À¢&W‡W&–Væ6W2ç7F%7FW%F—FÆR#¢$6ÇV"ì:WF–6òFR–VFÂF&FV6W""À¢&W‡W&–Væ6W2ç7F%7FW%FW‡B#¢$'&WfR&FVâVÂ6Vò;¦&Æ–6ò6öâVæ&V&–FW7L:æF"–æ6ÇV–Fâ"À¢&W‡W&–Væ6W2ç7F%7FW5F—FÆR#¢%–VF†—7L;7&–6"À¢&W‡W&–Væ6W2ç7F%7FW5FW‡B#¢%6Vò6öâw\:ÖWF÷&—¦FòÂ6l:’:&&RÂL:F–ÆW2’&F2G&–Ööæ–ÆW26VÆV66–öæF2â"À¢&W‡W&–Væ6W2ç7F%7FWEF—FÆR#¢$6VæFRÖ&—66÷2÷6–öæÂ"À¢&W‡W&–Væ6W2ç7F%7FWEFW‡B#¢$;FRVæ6VæFRÖ&—66÷2VâVâ&W7FW&çFR6VÆV66–öæFòFR–VF†—7L;7&–66’FW6V2FW&Ö–æ"ÆÌ:ÒÆæö6†Râ"À¢&W‡W&–Væ6W2ç7F$GW&F–öäÆ&VÂ#¢$GW&6œ;6âFVÂ&öw&Ö"À¢&W‡W&–Væ6W2ç7F$GW&F–öåfÇVR#¢$†7F‚†÷&2ÂfÆW†–&ÆR†7FVæ2’"À¢&W‡W&–Væ6W2ç7F$&6UF—FÆR#¢%&öw&Ö&–æ6—Â"À¢&W‡W&–Væ6W2ç7F$F–ææW%F—FÆR#¢$6öâ6VæFRÖ&—66÷2d•"À¢&W‡W&–Væ6W2ç7F$Ö–æ–×VÒ#¢%&W6W'fÜ:Öæ–Ö¢BW'6öæ2"À¢&W‡W&–Væ6W2ç7F%&FTæ÷FR#¢$†÷&&–ò’fVŒ:Ö7VÆò6R6öæf—&Öâ6V|;¦âfV6†Â†÷FVÂ’FÖ;òFVÂw'Wòâ"À¢&W‡W&–Væ6W2æ&öö¶–ætW–V'&÷r#¢$çFW2FR&W6W'f""À¢&W‡W&–Væ6W2æ&öö¶–æuF—FÆR#¢$6öæF–6–öæW26Æ&2’VâÆâ6öæf—&ÖFò"À¢&W‡W&–Væ6W2æ&öö¶–æuFW‡B#¢$6F6÷F—¦6œ;6â6R&W&FW7\:—2FR&Wf—6"fV6†Â†÷&&–òÂw'WòÂF—7öæ–&–Æ–FBR—F–æW&&–òf–æÂâ"À¢&W‡W&–Væ6W2æ&öö¶–æsF—FÆR#¢$çFVÆ6œ;6â"À¢&W‡W&–Væ6W2æ&öö¶–æsFW‡B#¢%6R&V6öÖ–VæF&W6W'f"6öâ.(	32L:Ö2âVVFR6W"÷6–&ÆR&VÂL:Ö6–wV–VçFR6V|;¦âF—7öæ–&–Æ–FBâ"À¢&W‡W&–Væ6W2æ&öö¶–æs%F—FÆR#¢%vò’6Ö&–÷26V|;¦âÆ6öæf—&Ö6œ;6â"À¢&W‡W&–Væ6W2æ&öö¶–æs%FW‡B#¢$VÂ6ÆVæF&–òFRv÷2’7VÇV–W"6öæF–6œ;6âFR6Ö&–òÂ6æ6VÆ6œ;6âò&VVÖ&öÇ6ò6R6öæf—&Öâ÷"W67&—Fò&VÂ6W'f–6–òW7V<:Öf–6òâ"À¢&W‡W&–Væ6W2æ&öö¶–æs5F—FÆR#¢$6öæF–6–öæW2Ö,:×F–Ö2"À¢&W‡W&–Væ6W2æ&öö¶–æs5FW‡B#¢%6’VÂ6Æ–ÖòVæfW,:Ö–×–FVâæfVv"ÂÆÇFW&æF—fFV7VF’7VÇV–W"&VVÖ&öÇ6ò6RvW7F–öæâ6V|;¦âÆ6öæf—&Ö6œ;6âW67&—FFVÂ6W'f–6–òâ"À¢&&÷WBç7F÷'•FW‡C2#¢$F—6\;Ö÷27V–FF÷6ÖVçFRW‡W&–Væ6–2&—fF2VRVæVâ7VÇGW&ÂÖ"Â†—7F÷&–ÂFW6–W'Fò’WfVçF÷27&VF÷2&f—f—'6R6öâ&ögVæF–FBâ"À¢&&÷WBç7F÷'•FW‡CB#¢$6FW‡W&–Væ6–F–VæRVâ6–væ–f–6FòÂ6F'WFVæ†—7F÷&–Â6FWfVçFòVæf—&ÖF—7F–çF’6F‡\:—7VBf—fRVâf–¦RF–fW&VçFRâ"À¢&&÷WBç7F÷'”6Æ÷6–ær#¢$fVçGW&æòW26öÆòVâf–¦^(
+bW2Væf÷&ÖF–fW&VçFRFRFW67V'&—"VâÇVv"’7&V"ÖöÖVçF÷2â"À¢&&÷WBçf—6–öäW–V'&÷r#¢$†6–L;6æFRfÖ÷2"À¢&&÷WBçf—6–öåFW‡C#¢%6W"Æ&–ÖW&&VfW&Væ6–VâW‡W&–Væ6–2’WfVçF÷27V–FF÷6ÖVçFRF—6\;F÷2Â6öâVæçVWff÷&ÖFRW‡Æ÷&"FW7F–æ÷2’÷&væ—¦"ö66–öæW2&6FVâ&ögVæF–FBÂ6Æ–FB’FWFÆÆW2VRÖ&6âÆF–fW&Væ6–â"À¢&&÷WBçf—6–öåFW‡C"#¢$7&VVÖ÷2VRf–¦"’6VÆV'&"–æò6öâ6öÆòVâG&6ÆFòòVæö66œ;6âÂ6–æòVæW‡W&–Væ6–6ö×ÆWFVRÖW&V6R6öç7G'V—'6R6öâÖW7G,:Öâ"À¢&&÷WBæÖ—76–öäW–V'&÷r#¢$ÆòVR7&VÖ÷2"À¢&&÷WBæÖ—76–öåFW‡C#¢$7&V"W‡W&–Væ6–2’WfVçF÷2W†6W6–öæÆW2VRFV¦VâVæ‡VVÆÆ&VÂVâÆÖVÖ÷&–FRçVW7G&÷2‡\:—7VFW2â"À¢&&÷WBæÖ—76–öåFW‡C"#¢$F—6\;Ö÷26Ff–¦R’WfVçFò6öâFVæ6œ;6âÂFWFÆÆR’6öç7G'V–Ö÷2ÆW‡W&–Væ6–Ç&VFVF÷"FRÆW'6öæÂ7W2–çFW&W6W2ÂF–V×ò’W‡V7FF—f2â"À¢&&÷WBæÖ—76–öåFW‡C2#¢$çVW7G&òö&¦WF—fòW26öçfW'F—"6Ff—6—F’ö66œ;6âVâVæ†—7F÷&–VRÖW&W¦66W"6öçFFâ"À¢&&÷WBçfÇVW5FW‡B#¢$6–æ6ò&–æ6—–÷2w\:Öâ<;6ÖòF—6\;Ö÷2ÂVÆVv–Ö÷2’&VÆ—¦Ö÷26Ff–¦R’WfVçFòâ"À¢&&÷WBçv‡”W–V'&÷r#¢,+õ÷"\:’fVçGW&ò"À¢&&÷WBçv‡•F—FÆR#¢$ÆF–fW&Væ6–æòW7L:VâVÂFW7F–æş(
+b6–æòVâ<;6ÖòÆòf—fW2â"À¢&&÷WBçv‡•FW‡C#¢$VâfVçGW&æòög&V6VÖ÷2Vâ&öw&Ö&Vf'&–6Fò&FöF÷2â7&VÖ÷2W‡W&–Væ6–2Vç6F2&V–VæW2'W66âÆvòF–fW&VçFRâ"À¢&&÷WBçv‡•FW‡C"#¢$FW6FRVÂ&–ÖW"ÖöÖVçFò†7FVÂ;¦ÇF–ÖòFWFÆÆRÂFöFò6RvW7F–öæ6öâ&V6—6œ;6âÂ÷&væ—¦6œ;6â’Væ6ö×&Vç6œ;6â&VÂFRÆòVR†6RW†6W6–öæÂVæW‡W&–Væ6–â"À¢&&÷WBçv‡•FW‡C2#¢%–6VVâÖöÖVçFòG&çV–Æò§VçFòÂÖ"ÂVâ6Vò÷"6ÆÆV¦öæW2†—7L;7&–6÷2ÂVâWfVçFò&—fFòòVæW‡W&–Væ6–&VâWV—ş(
+b"À¢&&÷WBçv‡”6Æ÷6–ær#¢$æò6öÆò÷&væ—¦Ö÷2VÂf–¦Râ7&VÖ÷2Æ‡VVÆÆVRW&ÖæV6RFW7\:—2â"À¢&æbç'FæW'2#¢$6öÆ&÷&6öâæ÷6÷G&÷2"À¢''FæW'2æÖWFF—FÆR#¢$6öÆ&÷&6öâdTåEU$ÂGW&—6ÖòÂWfVçF÷2’†÷7—FÆ–FB"À¢''FæW'2æÖWFFW67&—F–öâ#¢$6öÆ&÷&6öâdTåEU$6öÖòV×&W6ÂW76–òÂ÷W&F÷"ò&öfW6–öæÂ–æFWVæF–VçFRVâ&&–6VL:Òòæ—fVÂ–çFW&æ6–öæÂâ"À¢''FæW'2æ†W&ôW–V'&÷r#¢$6öÆ&÷&6–öæW2fVçGW&"À¢''FæW'2æ†W&õF—FÆR#¢$fVçGW&FÆ&–VçfVæ–F6öÆ&÷&6–öæW26öâ&÷;76—Fòâ"À¢''FæW'2æ†W&ôFW67&—F–öâ#¢$fVçGW&FÆ&–VçfVæ–FÆ6öÆ&÷&6œ;6â6öâV×&W62ÂW76–÷2Â÷W&F÷&W2’&öfW6–öæÆW2FVçG&ò’gVW&FR&&–6VL:Òâ"À¢''FæW'2æ†W&ô'WGFöâ#¢$Vçf–"6öÆ–6—GVBFR6öÆ&÷&6œ;6â"À¢''FæW'2æ–çG&ôW–V'&÷r#¢$W7L:æF&W26ö×'F–F÷2"À¢''FæW'2æ–çG&õF—FÆR#¢$Æ6öÆ&÷&6œ;6âFV7VFÖV¦÷&6FW‡W&–Væ6–FVÂ‡\:—7VBâ"À¢''FæW'2æ–çG&õFW‡B#¢%fÆ÷&Ö÷2Æ6ö×Væ–66œ;6â6Æ&ÂVÂ7V×Æ–Ö–VçFòÂÆ†÷7—FÆ–FBWL:–çF–6’VÂ&W7WFò÷"VÂ‡\:—7VBâ6F6öÆ&÷&6œ;6âV×–W¦÷"VçFVæFW"ÆòVRÖ&2'FW2VVFVâ7&V"&–Vâ§VçF2â"À¢''FæW'2æ–çG&õ7FFVÖVçB#¢$fVçGW&FÆ&–VçfVæ–F&VÆ6–öæW2VR÷'FâfÆ÷"&VÂÂf–¦RÂÂWfVçFò’ÂÇVv"Â6VâÆö6ÆW2Â&Vv–öæÆW2ò–çFW&æ6–öæÆW2â"À¢''FæW'2æ–çG&õ&V6‚#¢$&&–6VL:Ò+r&Vv–öæÂ+r–çFW&æ6–öæÂ"À¢''FæW'2æÆö6Å66÷TW–V'&÷r#¢$V¦V7V6œ;6âÆö6Â"À¢''FæW'2æÆö6Å66÷UFW‡B#¢$Æ2vVæ6–2FRf–¦W2’Æ÷2†÷FVÆW2vW7F–öæâÆ÷2gVVÆ÷2’VÂÆö¦Ö–VçFòâfVçGW&V¦V7WFÆ2W‡W&–Væ6–2ÂÆ÷2WfVçF÷2’Æ÷26W'f–6–÷2Æö6ÆW2&‡\:—7VFW26öæf—&ÖF÷26öâæ÷6÷G&÷2Vâ–VFâ"À¢''FæW'2æVF–Væ6W4W–V'&÷r#¢,+õVœ:–âVVFR6öÆ&÷&#ò"À¢''FæW'2æVF–Væ6W5F—FÆR#¢$F÷26Ö–æ÷2ÂVæVW'F6Æ&"À¢''FæW'2æVF–Væ6W5FW‡B#¢$VÆ–vRVÂ6Ö–æòVRFRFW67&–&RâÆ6öÆ–6—GVB&\;¦æRÆ–æf÷&Ö6œ;6âW6Væ6–Â6–â6÷2–ææV6W6&–÷2â"À¢''FæW'2æ÷&tW–V'&÷r#¢$V×&W62’W76–÷2"À¢''FæW'2æ÷&uF—FÆR#¢$÷&væ—¦6–öæW2VRÆö¦âÂ÷W&âòV¦V7WFâ"À¢''FæW'2æ÷&uFW‡B#¢%&V×&W62WF÷&—¦F2’W76–÷2W7F&ÆV6–F÷2VRVVFVâ6öçG&–'V—"Vâf–¦RòWfVçFò6ö×ÆWFòâ"À¢''FæW'2æ÷&t—FVÓ#¢$V×&W62FRGW&—6Öò’÷&væ—¦F÷&W2FRWfVçF÷2"À¢''FæW'2æ÷&t—FVÓ"#¢%&W6÷'G2Â†÷FVÆW2Â&W7FW&çFW2ÂÆ–2’W76–÷2"À¢''FæW'2æ÷&t—FVÓ2#¢$÷W&F÷&W2Ö,:×F–Ö÷2ÂFRG&ç7÷'FR’FRFW7F–æò"À¢''FæW'2æ÷&t—FVÓB#¢%&÷fVVF÷&W2FR†÷7—FÆ–FBÂfÆ÷&W2’6W'f–6–÷2W7V6–Æ—¦F÷2"À¢''FæW'2ç&ôW–V'&÷r#¢%&öfW6–öæÆW2–æFWVæF–VçFW2"À¢''FæW'2ç&õF—FÆR#¢%W'6öæ27W–W‡W&–Væ6–Ff÷&ÖÂÖöÖVçFò"À¢''FæW'2ç&õFW‡B#¢%&&öfW6–öæÆW26öâfö66œ;6âFR6W'f–6–òÂW‡W&–Væ6–&VÆWfçFR’Æ2Æ–6Væ6–2Æö6ÆW2æV6W6&–2â"À¢''FæW'2ç&ô—FVÓ#¢$÷&væ—¦F÷&W2Â6ö÷&F–æF÷&W2’6ö×;çFW2FR‡\:—7VFW2"À¢''FæW'2ç&ô—FVÓ"#¢$f÷L;6w&f÷2’&öfW6–öæÆW27&VF—f÷2"À¢''FæW'2ç&ô—FVÓ2#¢$w\:Ö2WF÷&—¦F÷2Â–çL:—'&WFW2’G&GV7F÷&W2"À¢''FæW'2ç&ô—FVÓB#¢$6öæGV7F÷&W2&öfW6–öæÆW2’W7V6–Æ—7F2Æö6ÆW2"À¢''FæW'2ç66÷TW–V'&÷r#¢,8&V2FR6öÆ&÷&6œ;6â"À¢''FæW'2ç66÷UF—FÆR#¢$W7V6–Æ–FFW2F—7F–çF2Â6öæV7FF2Ç&VFVF÷"FVÂ‡\:—7VB"À¢''FæW'2ç66÷UFW‡B#¢%Væ6öÆ&÷&6œ;6âVVFR÷–"Vâ6W'f–6–òòf÷&Ö"'FRFRVæW‡W&–Væ6–ÂWfVçFòò&öw&ÖFRf&–÷2L:Ö2â"À¢''FæW'2ç66÷SF—FÆR#¢%GW&—6Öò’FW7F–æ÷2"À¢''FæW'2ç66÷SFW‡B#¢$÷W&F÷&W2GW,:×7F–6÷2ÂV×&W62FRFW7F–æòÂw\:Ö2’W7V6–Æ—7F27VÇGW&ÆW2â"À¢''FæW'2ç66÷S%F—FÆR#¢$WfVçF÷2’÷W&6–öæW2"À¢''FæW'2ç66÷S%FW‡B#¢%Ææ–f–66œ;6âÂ&öGV66œ;6âÂW'6öæÂÂ6ö÷&F–æ6œ;6â’V¦V7V6œ;6â–â6—GRâ"À¢''FæW'2ç66÷S5F—FÆR#¢$W76–÷2’†÷7—FÆ–FB"À¢''FæW'2ç66÷S5FW‡B#¢%&W6÷'G2Â&W7FW&çFW2Â†÷FVÆW2ÂÆ–2ÂW76–÷2&—fF÷2’6FW&–ærâ"À¢''FæW'2ç66÷SEF—FÆR#¢$Ö"’G&ç7÷'FR"À¢''FæW'2ç66÷SEFW‡B#¢$&&6÷2Â–FW2ÂfVŒ:Ö7VÆ÷2Â6öæGV7F÷&W2’Æö|:×7F–6FRÖ÷f–Ö–VçFòâ"À¢''FæW'2ç66÷SUF—FÆR#¢$6öçFVæ–FòR–F–öÖ2"À¢''FæW'2ç66÷SUFW‡B#¢$f÷Föw&l:ÖÂl:ÖFVòÂ–çFW'&WF6œ;6âÂG&GV66œ;6â’æ'&F—fâ"À¢''FæW'2ç66÷SeF—FÆR#¢%6W'f–6–÷2Â‡\:—7VB"À¢''FæW'2ç66÷SeFW‡B#¢%6W'f–6–÷2FRÆÆVvFÂ6ö×;Ö–VçFòÂ6öç6W&¦W,:ÖÂfÆ÷&W2’6öÆ–6—GVFW2W7V6–ÆW2â"À¢''FæW'2ç&ö6W74W–V'&÷r#¢$6Ö–æòFR6öÆ&÷&6œ;6â"À¢''FæW'2ç&ö6W75F—FÆR#¢%Vâ6öÖ–Vç¦ò6öç6–FW&FòçFW2FR7VÇV–W"Væ6&vò"À¢''FæW'2ç&ö6W75FW‡B#¢$VÂ&ö6W6ò&÷FVvRÆW‡W&–Væ6–FVÂ‡\:—7VB’6Æ&Æ2W‡V7FF—f2&Ö&2'FW2â"À¢''FæW'2ç&ö6W73F—FÆR#¢$Vçf–""À¢''FæW'2ç&ö6W73FW‡B#¢$6ö×'FRGRW&f–ÂÂ¦öæFR6W'f–6–ò’Æ÷2ÖV¦÷&W2V¦V×Æ÷2FRGRG&&¦òâ"À¢''FæW'2ç&ö6W73%F—FÆR#¢%&Wf—6""À¢''FæW'2ç&ö6W73%FW‡B#¢%&Wf—6Ö÷2Æ–FöæV–FBÂ6ö&W'GW&’Æ–6Væ6–2ò&Vv—7G&÷2&VÆWfçFW2â"À¢''FæW'2ç&ö6W735F—FÆR#¢$6öæV7F""À¢''FæW'2ç&ö6W735FW‡B#¢%Væ6öçfW'66œ;6âÆ–æVW7L:æF&W2ÂF—7öæ–&–Æ–FB’6öæF–6–öæW26öÖW&6–ÆW2â"À¢''FæW'2ç&ö6W73EF—FÆR#¢$6öæf—&Ö""À¢''FæW'2ç&ö6W73EFW‡B#¢$Æ2÷÷'GVæ–FFW2&ö&F26R6öæf—&ÖâÖVF–çFRVâÆ6æ6R’7VW&Fò6Æ&÷2â"À¢''FæW'2æf÷&ÔW–V'&÷r#¢%6öÆ–6—GVBFR6öÆ&÷&6œ;6â"À¢''FæW'2æf÷&Õ6–FUF—FÆR#¢$7\:–çFæ÷2\:’†6W2W†6W6–öæÆÖVçFR&–Vââ"À¢''FæW'2æf÷&Õ6–FUFW‡B#¢%VâW&f–Â'&WfR’&V6—6òæ÷2—VFVçFVæFW"L;6æFRöG,:ÖVæ6¦"VægWGW&6öÆ&÷&6œ;6ââ"À¢''FæW'2æf÷&Ôæ÷FS#¢%W6f÷&ÖFò–çFW&æ6–öæÂFRFVÌ:–föæò6’6öÆ–6—F2FW6FRgVW&FR&&–6VL:Òâ"À¢''FæW'2æf÷&Ôæ÷FS"#¢$6ö×'FRVævV"ò÷'FföÆ–òVâfW¢FRVçf–"Fö7VÖVçF÷26Vç6–&ÆW2â"À¢''FæW'2æf÷&Ôæ÷FS2#¢%öFVÖ÷26öÆ–6—F"Æ–6Væ6–2’Fö7VÖVçF÷2GW&çFRÆ&Wf—6œ;6ââ"À¢''FæW'2æf÷&Ôæ÷F–6R#¢$Vçf–"Æ6öÆ–6—GVBæò7WöæR&ö&6œ;6âWFöÜ:F–6æ’6ö×&öÖ—6òFR6–væ"G&&¦òâ"À¢''FæW'2æf÷&ÕF—FÆR#¢%W&f–ÂFR6öÆ&÷&6œ;6â"À¢''FæW'2æf÷&ÕFW‡B#¢$6ö×ÆWFÆ÷2FF÷2W6Væ6–ÆW2âv†G4'&—,:VâÖVç6¦RW7G'V7GW&Fò&&Wf—6"çFW2FRVçf–&Æòâ"À¢''FæW'2çG—TÆVvVæB#¢%6öÆ–6—Fò6öÖò"À¢''FæW'2çG—T÷&uF—FÆR#¢$V×&W6òW76–ò"À¢''FæW'2çG—T÷&uFW‡B#¢$÷&væ—¦6œ;6âWF÷&—¦FÂ÷W&F÷"òÇVv"W7F&ÆV6–Fò"À¢''FæW'2çG—U&õF—FÆR#¢%&öfW6–öæÂ–æFWVæF–VçFR"À¢''FæW'2çG—U&õFW‡B#¢%W'6öæVRög&V6RVâ6W'f–6–ò&öfW6–öæÂ"À¢''FæW'2ææÖTÆ&VÂ#¢$æöÖ'&RòW'6öæFR6öçF7Fò"À¢''FæW'2ææÖUÆ6V†öÆFW"#¢$æöÖ'&R6ö×ÆWFò"À¢''FæW'2æ'&æDÆ&VÂ#¢$÷&væ—¦6œ;6âòæöÖ'&R&öfW6–öæÂ"À¢''FæW'2æ'&æEÆ6V†öÆFW"#¢$÷6–öæÂ&&öfW6–öæÆW2"À¢''FæW'2æ6÷VçG'”Æ&VÂ#¢%:×2"À¢''FæW'2æ6÷VçG'•Æ6V†öÆFW"#¢%:×2"À¢''FæW'2æ6—G”Æ&VÂ#¢$6—VFBò&6R÷W&F—f"À¢''FæW'2æ6—G•Æ6V†öÆFW"#¢$6—VFB"À¢''FæW'2ç†öæTÆ&VÂ#¢%FVÌ:–föæòòv†G4"À¢''FæW'2ç†öæUÆ6V†öÆFW"#¢"³“cbâââ"À¢''FæW'2æVÖ–ÄÆ&VÂ#¢$6÷'&VòVÆV7G,;6æ–6ò"À¢''FæW'2æVÖ–ÅÆ6V†öÆFW"#¢&æöÖ'&TV¦V×Æòæ6öÒ"À¢''FæW'2æ6FVv÷'”Æ&VÂ#¢,8&V&–æ6—ÂFR6öÆ&÷&6œ;6â"À¢''FæW'2æ6FVv÷'•Æ6V†öÆFW"#¢$VÆ–vRÆ6FVv÷,:ÖÜ:26W&6æ"À¢''FæW'2æ6FVv÷'•F÷W&—6Ò#¢$V×&W6GW,:×7F–6R÷W&F÷"FRFW7F–æò"À¢''FæW'2æ6FVv÷'”WfVçG2#¢$V×&W6Â÷&væ—¦F÷"ò6ö÷&F–æF÷"FRWfVçF÷2"À¢''FæW'2æ6FVv÷'•fVçVR#¢%&W6÷'BÂ†÷FVÂÂ&W7FW&çFRÂÆ–òW76–ò"À¢''FæW'2æ6FVv÷'”Ö&–æR#¢$÷W&F÷"FR&&6òÂ–FRò7F—f–FBÖ,:×F–Ö"À¢''FæW'2æ6FVv÷'•G&ç7÷'B#¢$V×&W6FRG&ç7÷'FRò6öæGV7F÷"&öfW6–öæÂ"À¢''FæW'2æ6FVv÷'•†÷Fò#¢$f÷L;6w&fòÂf–F\;6w&fòò&öfW6–öæÂ7&VF—fò"À¢''FæW'2æ6FVv÷'”wV–FR#¢$w\:ÖGW,:×7F–6ò"À¢''FæW'2æ6FVv÷'”ÆæwVvR#¢$–çL:—'&WFRòG&GV7F÷""À¢''FæW'2æ6FVv÷'”wVW7B#¢$6ö×;çFRÂ6öç6W&¦W,:Öò6W'f–6–òFR†÷7—FÆ–FB"À¢''FæW'2æ6FVv÷'”÷F†W"#¢$÷G&ò6W'f–6–òW7V6–Æ—¦Fò"À¢''FæW'2çvV'6—FTÆ&VÂ#¢%vV"ò÷'FföÆ–ò"À¢''FæW'2çvV'6—FUÆ6V†öÆFW"#¢&‡GG3¢òòâââ"À¢''FæW'2æW‡W&–Væ6TÆ&VÂ#¢$W‡W&–Væ6–òG&–V7F÷&–"À¢''FæW'2æW‡W&–Væ6UÆ6V†öÆFW"#¢$;÷2òG&&¦÷2&VÆWfçFW2"À¢''FæW'2æÆ–6Vç6TÆ&VÂ#¢$Æ–6Væ6–ò&Vv—7G&ò"À¢''FæW'2æÆ–6Vç6UÆ6V†öÆFW"#¢%F—ò’ì;¦ÖW&òÂ6’6÷'&W7öæFR"À¢''FæW'2æÆæwVvW4Æ&VÂ#¢$–F–öÖ2"À¢''FæW'2æÆæwVvW5Æ6V†öÆFW"#¢,8&&RÂ–ævÌ:—2âââ"À¢''FæW'2æ6÷fW&vTÆ&VÂ#¢$6ö&W'GW&FR6W'f–6–ò"À¢''FæW'2æ6÷fW&vUÆ6V†öÆFW"#¢$6—VFFW2ò:×6W27V&–W'F÷2"À¢''FæW'2æ66—G”Æ&VÂ#¢$66–FB’F&–f2÷&–VçFF—f2"À¢''FæW'2æ66—G•Æ6V†öÆFW"#¢$÷6–öæÃ¢WV—òÂ66–FBF–&–ò&ævò–æ–6–Â"À¢''FæW'2æÖW76vTÆ&VÂ#¢%&W6VçFGR6W'f–6–ò’6öÆ&÷&6œ;6â&÷VW7F"À¢''FæW'2æÖW76vUÆ6V†öÆFW"#¢,+õ\:’ög&V6W2Â\:’ÆòF—7F–æwVR’<;6Öò6ö×ÆVÖVçF,:ÖVæW‡W&–Væ6–òWfVçFòFRfVçGW&ò"À¢''FæW'2æ6öç6VçEFW‡B#¢$6öæf—&ÖòVRÆ–æf÷&Ö6œ;6âW26÷'&V7F’6WFòVRÖR6öçF7FVâ6ö'&RW7F6öÆ–6—GVBâ"À¢''FæW'2ç&—f7”Æ–æ²#¢%öÌ:×F–6FR&—f6–FB"À¢''FæW'2ç7V&Ö—B#¢$6öçF–çV"Vâv†G4"À¢''FæW'2ç7V&Ö—Dæ÷FR#¢%VVFW2&Wf—6"VÂÖVç6¦R6ö×ÆWFòçFW2FRVçf–&Æòâ"À¢''FæW'2æW'&÷"#¢$6ö×ÆWFÆ÷26×÷2ö&Æ–vF÷&–÷2ÂVÆ–vRVÂF—òFR6öÆ–6—FçFRÂ–æF–6Vâì;¦ÖW&òFRFVÌ:–föæòò6÷'&VòVÆV7G,;6æ–6ò’6WFÆ6öæf—&Ö6œ;6ââ"À¢''FæW'2çv†G6–çG&ò#¢$†öÆdTåEU$ÂFW6VòVçf–"Væ6öÆ–6—GVBFR6öÆ&÷&6œ;6ââ"À¢''FæW'2æ6öçF7DÆ&VÂ#¢$V×&W62ÂW76–÷2’&öfW6–öæÆW2"À¢&W‡W&–Væ6W2çV÷FTÆ&VÂ#¢$6÷F—¦6œ;6âW'6öæÆ—¦F"À¢&W‡W&–Væ6W2çV÷FUFW‡B#¢%6R&W&6V|;¦âÆfV6†ÂGW&6œ;6âÂì;¦ÖW&òFRW'6öæ2’÷6–öæW2VÆVv–F2â"À¢&W‡W&–Væ6W2çV÷FT'WGFöâ#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢&W‡W&–Væ6W2ç7F$&6UV÷FUFW‡B#¢%&W6÷'BÂ&FÂF&FV6W"Âw\:ÖWF÷&—¦Fò’G&ç7÷'FR6R6÷F—¦â6V|;¦âVÂ†÷&&–ò&VfW&–Fòâ"À¢&W‡W&–Væ6W2ç7F$F–ææW%V÷FUFW‡B#¢$VÆ–vRVÂW7F–ÆòFR6Væ&GW2–çf—FF÷2’Æò–æ6ÇV—&VÖ÷2VâÆ6÷F—¦6œ;6âW'6öæÆ—¦Fâ"À¢&6öçF7BçF–ÖTÆ&VÂ#¢$†÷&FR–æ–6–ò&VfW&–F"À¢&6öçF7BæGW&F–öäÆ&VÂ#¢%F–V×òF—7öæ–&ÆR"À¢&6öçF7BæGW&F–öåÆ6V†öÆFW"#¢$VÆ–vRÆ÷6œ;6âÜ:26W&6æ"À¢&6öçF7BæGW&F–öå6†÷'B#¢#(	3"†÷&2"À¢&6öçF7BæGW&F–öä†Æb#¢$ÖVF–òL:Ö"À¢&6öçF7BæGW&F–öägVÆÂ#¢$L:Ö6ö×ÆWFò"À¢&6öçF7BæGW&F–öäfÆW†–&ÆR#¢$fÆW†–&ÆR"À¢&6öçF7Bçv†G6F–ÖR#¢$†÷&FR–æ–6–ò&VfW&–F"À¢&6öçF7Bçv†G6GW&F–öâ#¢%F–V×òF—7öæ–&ÆR"À¢&æbæ6÷'÷&FTWfVçG2#¢$V×&W62’WfVçF÷2"À¢&6öçF7Bç&öw&W74Æ&VÂ#¢%&öw&W6òFRÆ6öÆ–6—GVB"À¢&6öçF7Bç7FW6†÷'B#¢%GRÆâ"À¢&6öçF7Bç7FW%6†÷'B#¢%W'6öæÆ—¦GR6öÆ–6—GVB"À¢&6öçF7Bç7FW56†÷'B#¢$6öçF7Fò"À¢&6öçF7Bç7FWF—FÆR#¢$V×–W¦6öâÆ÷2FF÷2W6Væ6–ÆW2"À¢&6öçF7Bç7FWFW‡B#¢$VÆ–vRVÂF—òFR6öÆ–6—GVBÂVÂ†÷&&–ò’VÂFÖ;òFVÂw'WòâFöFòVVFR§W7F'6RG&2Æ&Wf—6œ;6ââ"À¢&6öçF7Bç7FW%F—FÆR#¢$VÆ–vRÆ÷2FWFÆÆW2VRVæ6¦â6öâGR6öÆ–6—GVB"À¢&6öçF7Bç7FW%FW‡B#¢$VÆ–vR6öÆòÆ2÷6–öæW2&VÆ6–öæF26öâGR6öÆ–6—GVB’;FRVææ÷F'&WfR6’W2æV6W6&–òâ"À¢&6öçF7Bç7FW5F—FÆR#¢,+ôL;6æFRVçf–Ö÷2Æ&–ÖW&&÷VW7Fò"À¢&6öçF7Bç7FW5FW‡B#¢$–çG&öGV6RGW2FF÷2FR6öçF7Fòâæò6R6ö'&æF’Æ6öÆ–6—GVBæò6öæf—&ÖVæ&W6W'fâ"À¢&6öçF7Bæö&¦V7F—fTÆ&VÂ#¢,+õ\:’FV&RÆöw&"W7FR&öw&Öò"À¢&6öçF7Bæö&¦V7F—fUÆ6V†öÆFW"#¢$VÆ–vRÆ÷6œ;6âÜ:26W&6æ"À¢&6öçF7Bæö&¦V7F—fU&VÆ†F–öâ#¢%&VÆ¦6œ;6â’F–V×ò&—fFò"À¢&6öçF7Bæö&¦V7F—fTF—66÷fW'’#¢$FW67V'&—"–VF’Æ7VÇGW&Æö6Â"À¢&6öçF7Bæö&¦V7F—fT†÷7F–ær#¢%&V6–&—"–çf—FF÷2òVæFVÆVv6œ;6â"À¢&6öçF7Bæö&¦V7F—fUFVÒ#¢$6öæV7F"ò&V6öæö6W"VâWV—ò"À¢&6öçF7Bæö&¦V7F—fT6VÆV'&F–öâ#¢$6VÆV'&"Væö66œ;6â"À¢&6öçF7Bæö&¦V7F—fTfÆW†–&ÆR#¢%&Vf–W&òVæ&V6öÖVæF6œ;6âFRfVçGW&"À¢&6öçF7BæFFöç4ÆVvVæB#¢%6W'f–6–÷2÷6–öæÆW2FR÷–ò"À¢&6öçF7BæFFöç5FW‡B#¢%6VÆV66–öæÆòVRVVF2æV6W6—F"âfVçGW&6öæf—&Ö,:6öÆòÆòVRVæ6¦RVâVÂ&öw&Öâ"À¢&6öçF7BæFFöåG&ç7÷'B#¢%G&ç7÷'FR&—fFò"À¢&6öçF7BæFFöäwV–FR#¢$w\:Ö7&VF—FFò"À¢&6öçF7BæFFöäF–æ–ær#¢%&W6W'f2’6ö÷&F–æ6œ;6âv7G&öì;6Ö–6"À¢&6öçF7BæFFöä†÷7—FÆ—G’#¢$&–VçfVæ–F’†÷7—FÆ–FB&–çf—FF÷2"À¢&6öçF7BæFFöä&÷WF—VR#¢$6öæ6WF÷2FRg&væ6–2VâFW6'&öÆÆò"À¢&6öçF7BæFFöä6öæ6–W&vR#¢$6—7FVæ6–FR6öæ6–W&vR"À¢&6öçF7Bæ&6´'WGFöâ#¢$G,:2"À¢&6öçF7BææW‡D'WGFöâ#¢$6öçF–çV""À¢&6öçF7Bç7FWG—TW'&÷"#¢$VÆ–vRVâF—òFR6öÆ–6—GVBçFW2FR6öçF–çV"â"À¢&6öçF7Bç7FW&WV—&VDW'&÷"#¢$6ö×ÆWFVÂ6×òö&Æ–vF÷&–òçFW2FR6öçF–çV"â"À¢&6öçF7Bç&WVW7E&VfW&Væ6R#¢%&VfW&Væ6–FR6öÆ–6—GVB"À¢&6öçF7Bç7V66W75F—FÆR#¢%GR6öÆ–6—GVBW7L:Æ—7F"À¢&6öçF7Bç7V66W75FW‡B#¢%v†G46R†&–W'Fò6öâÆ6öÆ–6—GVB÷&FVæFâ6öç6W'fW7F&VfW&Væ6–¢"À¢&6öçF7Bç7V66W74VÖ–ÅF—FÆR#¢%GR6öÆ–6—GVB6R†Vçf–Fò"À¢&6öçF7Bç7V66W74VÖ–ÅFW‡B#¢%GR6öÆ–6—GVB6RVçfœ;2F—&V7FÖVçFRfVçGW&â&Wf—6&VÖ÷2Æ÷2FF÷2’&W7öæFW&VÖ÷2÷"GRÜ:—FöFòFR6öçF7Fò&VfW&–Fòâ6öç6W'fW7F&VfW&Væ6–¢"À¢&6öçF7Bç7V66W757FGW2#¢%6öÆ–6—GVB&W&F6÷'&V7FÖVçFRâ&VfW&Væ6–¢"À¢&6öçF7Bç7V66W74VÖ–Å7FGW2#¢%6öÆ–6—GVBFR&W6W'fVçf–F6÷'&V7FÖVçFRâ&VfW&Væ6–¢"À¢&6öçF7Bæ÷Våv†G6v–â#¢$'&—"v†G4FRçVWfò"À¢&6öçF7Bæ6÷•&WVW7B#¢$6÷–"Æ÷2FF÷2FRÆ6öÆ–6—GVB"À¢&6öçF7Bç&WVW7D6÷–VB#¢%6öÆ–6—GVB6÷–F"À¢''FæW'2ç7V66W757FGW2#¢%W&f–ÂFR6öÆ&÷&6œ;6â&W&Fòâ&VfW&Væ6–¢"À¢&6öÆÆV7F–öâçW&gVÖT6&G57FGW2#¢$Æ2–Ü:vVæW26öâfæ6W26öæ6WGVÆW2FV×÷&ÆW2âÆ÷2g&66÷2ÂVÖ&Æ¦W2ÂFÖ;÷2’FF÷2FRÆç¦Ö–VçFò6R&W6VçF,:âÂ6ö×ÆWF"VÂFW6'&öÆÆòFRÆg&væ6–â"À¢&6öÆÆV7F–öâç&öGV7E6V56†÷'B#¢$gVæFFRFVÌ:–föæò"À¢&6öÆÆV7F–öâç&öGV7E6V5F—FÆR#¢$gVæFFRFVÌ:–föæò&W6—7FVçFR6Ç–6GW&2"À¢&6öÆÆV7F–öâç&öGV7E6V5FW‡B#¢$gVæF6VÆÆF&&÷FVvW"FR6Ç–6GW&2’&Væ²æò6R&W6VçF6öÖòWV—òFR'V6Vòâ"À¢&6öÆÆV7F–öâç&öGV7E6VE6†÷'B#¢%&V6—–VçFRL:—&Ö–6ò"À¢&6öÆÆV7F–öâç&öGV7E6VEF—FÆR#¢%&V6—–VçFRL:—&Ö–6òFRf–¦R"À¢&6öÆÆV7F–öâç&öGV7E6VEFW‡B#¢%&V6—–VçFR&WWF–Æ—¦&ÆR’—6ÆFò&ÖçFVæW"g&W66VÂwVGW&çFRÆW‡W&–Væ6–Ö&–æâ"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CE6†÷'B#¢$W7GV6†RFRf–¦R"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CEF—FÆR#¢$W7GV6†RFRf–¦R×VÇF—W6ò"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CEFW‡B#¢$W7GV6†R6ö×7FòFRFVÆ&÷&væ—¦"WV\;÷2ö&¦WF÷2W'6öæÆW2’ÖçFVæW&Æ÷2ÆV¦F÷2FRÆ&Væâ"À¢&†öÖRç&ö6W74W–V'&÷r#¢$<;6ÖòG&&¦fVçGW&"À¢&†öÖRç&ö6W75F—FÆR#¢$FRVæ6öÆ–6—GVBVâ;¦æ–6òÆâ÷W&F—fò6Æ&ò"À¢&†öÖRç&ö6W75FW‡B#¢$æò–×öæVÖ÷2VâVWFRf–¦ó²&Wf—6Ö÷26F6öÆ–6—GVB6V|;¦âF—7öæ–&–Æ–FBÂ†÷&&–ò’W&f–ÂFRÆ÷2–çf—FF÷2â"À¢&†öÖRç&ö6W73F—FÆR#¢$6ö×'FRÆòW6Væ6–Â"À¢&†öÖRç&ö6W73FW‡B#¢$–æF–6ÆfV6†ÂÆ÷2–çf—FF÷2ÂÆö66œ;6â’<;6ÖòV–W&W2VR6R6–VçFÆW‡W&–Væ6–â"À¢&†öÖRç&ö6W73%F—FÆR#¢%&Wf—6Ö÷2’F—6\;Ö÷2"À¢&†öÖRç&ö6W73%FW‡B#¢$fVçGW&6ö÷&F–æ&V6÷'&–FòÂ6öÆ&÷&F÷&W2Â†÷&&–òÂ†÷7—FÆ–FB’FWFÆÆW2÷6–öæÆW2&Æ÷2‡\:—7VFW2â"À¢&†öÖRç&ö6W735F—FÆR#¢$6öæf—&ÖçFW2FRV¦V7WF""À¢&†öÖRç&ö6W735FW‡B#¢%&V6–&W2VâÆ6æ6R6Æ&ò’Væ6÷F—¦6œ;6âW'6öæÆ—¦FçFW2FR6öæf—&Ö"â"À¢&†öÖRç&ö6W74'WGFöâ#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢&W‡W&–Væ6T–æFW‚æ†W&õFW‡B#¢$VÆ–vRVæW‡W&–Væ6–&'&—"7R†—7F÷&–Â÷6–öæW2FVÂ&öw&Ö’Æ÷2FWFÆÆW2VRFâf÷&ÖÂL:ÖVâF÷&æòGW2–çf—FF÷2â"À¢&W‡W&–Væ6T–æFW‚æ6÷&TW–V'&÷r#¢$VÆ–vRGRW66Væ&–ò"À¢&W‡W&–Væ6T–æFW‚æ6÷&UF—FÆR#¢$6FW‡W&–Væ6–F–VæR†÷&7R&÷–ò×VæFò"À¢&W‡W&–Væ6T–æFW‚æ6÷&UFW‡B#¢$'&RÆW‡W&–Væ6–&VçFVæFW"7R†—7F÷&–Â7W2f÷&ÖF÷2’VÂ&—FÖòVRÖV¦÷"6RFFGW2–çf—FF÷2â"À¢&W‡W&–Væ6T–æFW‚æ÷Vâ#¢$'&—"W‡W&–Væ6–"À¢&W‡W&–Væ6T–æFW‚æ&6²#¢%FöF2Æ2W‡W&–Væ6–2"À¢&W‡W&–Væ6T–æFW‚æÆ&VÅ6V#¢$Ö"&ö¦ò+rö&‡W""À¢&W‡W&–Væ6T–æFW‚æÆ&VÄ†—7F÷&–2#¢$ÂÔ&ÆB+r–VF"À¢&W‡W&–Væ6T–æFW‚æÆ&VÄFW6W'B#¢$Æ7BÆ–v‡B+rFW6–W'Fò"À¢&W‡W&–Væ6T–æFW‚æÆ&VÅF–b#¢%&÷6FRF–b+rF–W'&2ÇF2"À¢&W‡W&–Væ6T–æFW‚æÆ&VÄ¦VFF„F’#¢%–VF+rL:ÖfÆW†–&ÆR"À¢&W‡W&–Væ6T–æFW‚æÆ&VÅ6–væGW&R#¢$fVçGW&+rL:ÖF—7F–çF—fò"À¢&W‡W&–Væ6T–æFW‚ç6VW–V'&÷r#¢%f–¦W2÷"VÂÖ""À¢&W‡W&–Væ6T–æFW‚ç6VF—FÆR#¢$VÆ–vRVÂ†÷&&–ò’W7F–ÆòVâVÂwV"À¢&W‡W&–Væ6T–æFW‚ç6VFW‡B#¢$6F&öw&ÖÖ&–æòF–VæR7R&÷–:v–æÂ6öâVâ&—FÖò6Æ&òFW6FRÆ6Æ–F†7FVÂ;¦ÇF–ÖòÖöÖVçFòVâVÂwVâ"À¢&W‡W&–Væ6TFWF–Âç&öGV7G4W–V'&÷r#¢$FWFÆÆW2÷6–öæÆW2FW7\:—2FRÆW‡W&–Væ6–"À¢&W‡W&–Væ6TFWF–Âç&öGV7G5F—FÆR#¢$FWFÆÆW26öæV7FF÷2W7FW‡W&–Væ6–"À¢&W‡W&–Væ6TFWF–Âç&öGV7G5FW‡B#¢$ÆW‡W&–Væ6–W7L:6ö×ÆWF6–âVÆÆ÷2â–æ6ÇW–RVâFWFÆÆR6öÆò6’Væ6¦6öâVÂ‡\:—7VB’VÂÖöÖVçFòâ"À¢&W‡W&–Væ6TFWF–Âç66VçG4W–V'&÷r#¢$g&væ6–2F—7F–çF—f2FRfVçGW&"À¢&W‡W&–Væ6TFWF–Âç66VçG5F—FÆR#¢$Æ2F÷2g&væ6–2FRfVçGW&"À¢&W‡W&–Væ6TFWF–Âç66VçG5FW‡B#¢$W7FW‡W&–Væ6–æò–æ6ÇW–R&öGV7F÷2F–6–öæÆW2âFW67V'&RgFW"Ö–Fæ–v‡Bæö—"’gFW"Ö–Fæ–v‡BfVÇfWBÂÆ2g&væ6–2F—7F–çF—f2FRfVçGW&ÂÖ&27GVÆÖVçFRVâFW6'&öÆÆòâ"À¢&W‡W&–Væ6TFWF–Âæ&÷„W–V'&÷r#¢%Vâ&V7VW&Fò&Æö66œ;6â"À¢&W‡W&–Væ6TFWF–Âæ&÷…F—FÆR#¢$Æ–FVçF–FBFRÆW‡W&–Væ6–VâVæ6¦Vç6F"À¢&W‡W&–Væ6TFWF–Âæ&÷…FW‡B#¢$Æ6¦W2÷6–öæÂâVÌ:ÖvVÆ6öÆò7VæFòf÷&ÖR'FRFVÂÖöÖVçFòVRV–W&W27&V"&GW2–çf—FF÷2â"À¢&W‡W&–Væ6TFWF–Âç&WVW7EF—FÆR#¢,+ôÆ—7Fò&F—6\;"ÆW‡W&–Væ6–ò"À¢&W‡W&–Væ6TFWF–Âç&WVW7EFW‡B#¢$6ö×'FRÆfV6†ÂVÂì;¦ÖW&òFR‡\:—7VFW2’VÂ†÷&&–òâÆ÷2FWFÆÆW2÷6–öæÆW26R–æ6ÇW–Vâ6öÆò6’Væ6¦âVâVÂÆââ"À¢&W‡W&–Væ6TFWF–Âç&WVW7Ev—F†÷WE&öGV7G5FW‡B#¢$6ö×'FRÆfV6†ÂVÂì;¦ÖW&òFR‡\:—7VFW2’VÂ†÷&&–òâfVçGW&F—6\;,:VÂL:ÖVâF÷&æòGW2–çf—FF÷2â"À¢&W‡W&–Væ6TFWF–Âçf–Wu&öGV7G2#¢%fW"FWFÆÆW2÷6–öæÆW2"À¢&W‡W&–Væ6TFWF–Âçf–Wu66VçG2#¢$FW67V'&RÆ2g&væ6–2FRfVçGW&"À¢&W‡W&–Væ6TFWF–Âçf–Wt¦÷W&æW’#¢$FW67V'&RÆW‡W&–Væ6–"À¢&W‡W&–Væ6TFWF–ÂçÆäW–V'&÷r#¢%GRÆâ&—fFò"À¢&W‡W&–Væ6TFWF–ÂçÆåF—FÆR#¢$F–æ÷2ÆfV6†âæ÷6÷G&÷2F—6\;Ö÷2ÆòFVÜ:2â"À¢&W‡W&–Væ6TFWF–ÂçÆåFW‡B#¢$6ö×'FRÆö66œ;6âÂVÂì;¦ÖW&òFR–çf—FF÷2’VÂ†÷&&–ò&VfW&–FòâfVçGW&&W&Væ'WFVç6F’Væ6÷F—¦6œ;6â6Æ&â"À¢&W‡W&–Væ6TFWF–ÂçÆåö–çC#¢%&—FÖò’&—f6–FBFFF÷2GW2–çf—FF÷2"À¢&W‡W&–Væ6TFWF–ÂçÆåö–çC"#¢%6ö6–÷2’G&6ÆF÷26ö÷&F–æF÷2÷"Vâ6öÆòWV—ò"À¢&W‡W&–Væ6TFWF–ÂçÆåö–çC2#¢$æò6R6öæf—&Öæ–æwVæ&W6W'f†7F6÷&F"VÂÆâf–æÂ"À¢&W‡W&–Væ6TFWF–ÂçÆä7F#¢%6öÆ–6—FVæ&÷VW7FÖVF–F"À¢&W‡W&–Væ6TFWF–Âæ–æ6ÇVFT÷F–öæÂ#¢$–æ6ÇV—"VâÖ’6öÆ–6—GVBFRW‡W&–Væ6–"À¢&W‡W&–Væ6TFWF–Âæ–æ6ÇVFT&÷‚#¢$–æ6ÇV—"W7F6¦FR&V7VW&Fò"À¢&W‡W&–Væ6TFWF–Âç&VÖ–æFW$W–V'&÷r#¢$FWFÆÆW2÷6–öæÆW2"À¢&W‡W&–Væ6TFWF–Âç&VÖ–æFW%F—FÆR#¢$ÆW‡W&–Væ6–W7L:Æ—7F&Ææ–f–6'6R"À¢&W‡W&–Væ6TFWF–Âç&VÖ–æFW%FW‡B#¢%VVFW2–æ6ÇV—"VâFWFÆÆR6’Væ6¦6öâGR–çf—FFòÂò6öçF–çV"6öÆò6öâÆW‡W&–Væ6–â"À¢&W‡W&–Væ6TFWF–Âæ6öçF–çVUv—F†÷WB#¢$6öçF–çV"&Ææ–f–6"ÆW‡W&–Væ6–"À¢&W‡W&–Væ6TFWF–ÂçW&gVÖU6VFW‡B#¢$F—&V66œ;6âöÆfF—fÖ&–æ–ç7—&FVâÆÇW¢ÂVÂ—&R’VÂÖ÷f–Ö–VçFòFVÂÖ"&ö¦òâ"À¢&W‡W&–Væ6TFWF–ÂçW&gVÖU&÷6†åFW‡B#¢$F—&V66œ;6â<:Æ–F–ç7—&FVâÖFW&&÷6†âÂ6l:’ÂW7V6–2’–VF†—7L;7&–6â"À¢&W‡W&–Væ6TFWF–ÂçW&gVÖUF–eFW‡B#¢$F—&V66œ;6â–ç7—&FVâ&÷6FRF–bÂ—&RFRÖöçF;’7VfW2æ÷F2fW&FW2â"À¢&W‡W&–Væ6TFWF–Âæ¦VFF„&÷…F—FÆR#¢$6öÆV66œ;6â6–væGW&R–VF"À¢&W‡W&–Væ6TFWF–Âæ¦VFF„&÷…FW‡B#¢$VÂL:Ö6ö×ÆWFòVâ–VF&W6VçFÆ2F÷2g&væ6–2–ç6–væ–FRfVçGW&(	DgFW"Ö–Fæ–v‡Bæö—"’gFW"Ö–Fæ–v‡BfVÇfWN(	BVâF&¦WF2–æFWVæF–VçFW2â"À¢&¦÷W&æW’ç6VæW–V'&÷r#¢%GRL:ÖVâVÂÖ"&ö¦ò"À¢&¦÷W&æW’ç6VçF—FÆR#¢%VâL:ÖFRÖ"&—fFòV×–W¦çFW2FR7V&—"Â&&6ò"À¢&¦÷W&æW’ç6VçFW‡B#¢$7\:–çFæ÷2VÂÖ&–VçFRVR'W662’F—6\;&VÖ÷2ÆVÖ&&66œ;6âÂVÂ†÷&&–ò’VÂ&—FÖòVâF÷&æòÆ2W'6öæ2VR6ö×'F—,:âVÂÖöÖVçFòâ"À¢&¦÷W&æW’ç6Vç7FWF—FÆR#¢$VÆ–vRVÂ&—FÖò"À¢&¦÷W&æW’ç6Vç7FWFW‡B#¢%VæW66F6÷'FÂVâL:Ö6ö×ÆWFòòVâ–FR&—fFó¢V×W¦Ö÷2÷"<;6ÖòV–W&RGRw'Wò6"VÂF–V×ò§VçF÷2â"À¢&¦÷W&æW’ç6Vç7FW%F—FÆR#¢%6ÂFRö&‡W"VâVÂÖöÖVçFòFV7VFò"À¢&¦÷W&æW’ç6Vç7FW%FW‡B#¢$VÂ&&6òÂVÂ6—L:âÂÆ6Æ–F’VÂ6öæf÷'BW6Væ6–Â6R6ö÷&F–æâ6öÖòVâ6öÖ–Vç¦òG&çV–ÆòFVÂL:Öâ"À¢&¦÷W&æW’ç6Vç7FW5F—FÆR#¢%\:–FFR6öâVÂÖ"&f÷6÷G&÷2"À¢&¦÷W&æW’ç6Vç7FW5FW‡B#¢$æFÂL:–¦FRÆÆWf"ò6–×ÆVÖVçFRW&ÖæV6Rg&VçFRÂ†÷&—¦öçFRâVÂ&öw&ÖFV¦W76–ò&VRVÂÖöÖVçFòÖ'VRVÂ'VÖ&òâ"À¢&¦÷W&æW’ævöÆFVâæW–V'&÷r#¢$Æ†÷&F÷&F+r6†&Òö&‡W""À¢&¦÷W&æW’ævöÆFVâçF—FÆR#¢%Væ†÷&6–â&—6Â6–æ7&öæ—¦F6öâÆ;¦ÇF–ÖÇW¢"À¢&¦÷W&æW’ævöÆFVâçFW‡B#¢%Vâ6Vò&—fFòVâ&&6òÂF&FV6W"7VæFòÆò–×÷'FçFRæòW2ÆF—7Fæ6–Â6–æò6Æ—"FRÆ÷&–ÆÆVâVÂÖöÖVçFòW†7Fòâ"À¢&¦÷W&æW’ævöÆFVâç7FWF—FÆR#¢$æöÖ'&Æö66œ;6â"À¢&¦÷W&æW’ævöÆFVâç7FWFW‡B#¢%VæW66FG&çV–ÆÂVæ6VÆV'&6œ;6â&—fFòVæ6÷'&W67V–FF¢FöFòV×–W¦6öâVÂÖöÖVçFòVRV–W&W27&V"â"À¢&¦÷W&æW’ævöÆFVâç7FW%F—FÆR#¢$VÖ&&66öâVÂL:Ö;¦â&–W'Fò"À¢&¦÷W&æW’ævöÆFVâç7FW%FW‡B#¢$fVçGW&§W7FÆ6Æ–FFW6FRö&‡W"&VRW6†÷&6VGW–ÂæòVæ6—FFVçG&òFRVâ†÷&&–òGW,:×7F–6òf–¦òâ"À¢&¦÷W&æW’ævöÆFVâç7FW5F—FÆR#¢$FV¦VRÆÇW¢†vVÂG&&¦ò"À¢&¦÷W&æW’ævöÆFVâç7FW5FW‡B#¢$VÂ;¦ÇF–ÖòG&ÖòW2FVÆ–&W&FÖVçFR6Væ6–ÆÆó¢Ö"&–W'FòÂ&&6ò&—fFò’Æ÷2;¦ÇF–Ö÷26öÆ÷&W2FVÂL:Öâ"À¢&¦÷W&æW’æ&–F‚æW–V'&÷r#¢$&–F‚+rVâL:Ö6ö×ÆWFòFRÖ"&—fFò"À¢&¦÷W&æW’æ&–F‚çF—FÆR#¢$&–F‚W2VÂFW7F–æó²VÂL:ÖVçFW&òW2gVW7G&ò"À¢&¦÷W&æW’æ&–F‚çFW‡B#¢%VæW‡W&–Væ6–&—fFVâ&&6òFRL:Ö6ö×ÆWFòÂF—6\;F&V–VæW2fâ&÷&FòÂ6öâF–V×ò&æF"’FV¦"VRVÂÖ"&ö¦òÖ'VRVÂ&—FÖòâ"À¢&¦÷W&æW’æ&–F‚ç7FWF—FÆR#¢$6öç7G'W–RVÂL:ÖVâF÷&æòGRw'Wò"À¢&¦÷W&æW’æ&–F‚ç7FWFW‡B#¢$V×W¦Ö÷2÷"VÂì;¦ÖW&òFR–çf—FF÷2ÂVÂ&—FÖò&VfW&–Fò’VÂF—òFRF–V×òVRVÂw'WòV–W&RF—6g'WF"VâVÂwVâ"À¢&¦÷W&æW’æ&–F‚ç7FW%F—FÆR#¢%f–¦FRö&‡W"&–F‚"À¢&¦÷W&æW’æ&–F‚ç7FW%FW‡B#¢$VÂ&&6òÂVÂ6—L:âÂVÂ6öÖ'W7F–&ÆRÂVÂWV—òFR6VwW&–FB’Æ÷2W6Væ6–ÆW2FVÂL:Ö6R6ö÷&F–æâçFW2FRGRÆÆVvFâ"À¢&¦÷W&æW’æ&–F‚ç7FW5F—FÆR#¢%\:–FFRÜ:2FöæFR6R6–VçF&–Vâ"À¢&¦÷W&æW’æ&–F‚ç7FW5FW‡B#¢$æF"’†6W"W62VâÖ"&–W'Fò6öâ'FRFVÂL:ÖÂæò&F2&W7W&F2VçG&Rö&Æ–v6–öæW2â"À¢&¦÷W&æW’æw&æD&–F‚æW–V'&÷r#¢$w&â–FR&–F‚+rL:Ö&—fFò&w'W÷2"À¢&¦÷W&æW’æw&æD&–F‚çF—FÆR#¢%Vâ–FRÜ:2w&æFR6öâÆÖ—6Ö6Vç66œ;6âFR&—f6–FB"À¢&¦÷W&æW’æw&æD&–F‚çFW‡B#¢%&w'W÷2VRV–W&Vâ6ö×'F—"VÂÖ"6–â6VçF—'6RFVçG&òFRVâF÷W"w'WÂÂfVçGW&6öç7G'W–RVÂL:ÖVâ&–F‚Ç&VFVF÷"FR7W2W'6öæ2’&÷;76—Fòâ"À¢&¦÷W&æW’æw&æD&–F‚ç7FWF—FÆR#¢$Ö&6VÂ&—FÖòFVÂw'Wò"À¢&¦÷W&æW’æw&æD&–F‚ç7FWFW‡B#¢$fÖ–Æ–Â6öÆVv2ò–çf—FF÷2FR†öæ÷#¢V×W¦Ö÷2÷"Vœ:–âf–VæR’<;6ÖòFV&W,:Ö6VçF—'6R&÷&Fòâ"À¢&¦÷W&æW’æw&æD&–F‚ç7FW%F—FÆR#¢$†¢FVÂ–FRVÂÇVv""À¢&¦÷W&æW’æw&æD&–F‚ç7FW%FW‡B#¢$VÂ–FR&—fFòFÂw'Wò7R&÷–òW76–òÖ–VçG&2Æ'WF†6–&–F‚6RÖçF–VæR6ö÷&F–æF’G&çV–Æâ"À¢&¦÷W&æW’æw&æD&–F‚ç7FW5F—FÆR#¢%&V6–&RVÂL:ÖGRÖæW&"À¢&¦÷W&æW’æw&æD&–F‚ç7FW5FW‡B#¢$FV¦6—F–ò&6öçfW'6"ÂæF"’6ö×'F—"VâL:ÖFRÖ"VRçVæ66R6–VçF&Vf'&–6Fòâ"À¢&¦÷W&æW’æ†—7F÷&–2æW–V'&÷r#¢%–VF†—7L;7&–6+rVâ6Vò&—fFò"À¢&¦÷W&æW’æ†—7F÷&–2çF—FÆR#¢$æò6öÆòfV2ÂÔ&ÆBâVçG&Vâ7R†—7F÷&–â"À¢&¦÷W&æW’æ†—7F÷&–2çFW‡B#¢%Vâw\:Ö6öâÆ–6Væ6–FFÆ'WFGW2–çf—FF÷2’6öçf–W'FR–VG&ÂÖFW&&÷6†â’6ÆÆV¦öæW2G&çV–Æ÷2VâVæ–çG&öGV66œ;6âW'6öæÂÆ6—VFBâ"À¢&¦÷W&æW’æ†—7F÷&–2ç7FWF—FÆR#¢$V×–W¦6öâÆ2W'6öæ2FWG,:2FVÂÇVv""À¢&¦÷W&æW’æ†—7F÷&–2ç7FWFW‡B#¢%GRw\:ÖW7F&ÆV6RVÂ6öçFW‡FòÂVÂ&—FÖò’VÂ–F–öÖ&VR6F–çf—FFò6R6–VçF–æ6ÇV–FòFW6FRVÂ&–ÖW"6òâ"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW%F—FÆR#¢%&V6÷'&RÆ6—VFB6öâ–çFVæ6œ;6â"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW%FW‡B#¢$VÂ6Vò6–wVR†—7F÷&–2Â'V—FV7GW&’FWFÆÆW2VRæò6R&WfVÆâVâVæ'WFvVì:—&–6â"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW5F—FÆR#¢%6Â6öâVâ6:×GVÆòÂæò6öâVæÆ—7F"À¢&¦÷W&æW’æ†—7F÷&–2ç7FW5FW‡B#¢$6l:’ÂL:F–ÆW2’F–V×ò&ö'6W'f"Æ6—VFB†6VâVRÆW‡W&–Væ6–6V‡VÖæÂæò&W7W&Fâ"À¢&¦÷W&æW’æFW6W'BæW–V'&÷r#¢$Æ7BÆ–v‡B+rGVæ2FR&Væ"À¢&¦÷W&æW’æFW6W'BçF—FÆR#¢$Æ2GVæ2FR&Vææò6öâVÂföæFòâ6öâÆ&¬;6â&—"â"À¢&¦÷W&æW’æFW6W'BçFW‡B#¢$fVçGW&6öç7G'W–RÆ'WFVâF÷&æòÆ&VæÂÆÇW¢’VÂw'Wò&VRÆ2GVæ2FR&Væ6R6–VçFâ×Æ–2Â&—fF2’6ö×ÆWFÖVçFRF—7F–çF2FRÆ6—VFBâ"À¢&¦÷W&æW’æFW6W'Bç7FWF—FÆR#¢$FV¦G,:2Æ6—VFB"À¢&¦÷W&æW’æFW6W'Bç7FWFW‡B#¢$Æ6Æ–F’VÂG&ç7÷'FR6RÆæ–f–6â&VRVÂ6òFRÆ6'&WFW&Æ&Væ&–W'F6R6–VçFl:6–ÂFW6FRVÂ&–ÖW"G&Öòâ"À¢&¦÷W&æW’æFW6W'Bç7FW%F—FÆR#¢%6–wVRÆÌ:ÖæVFRÆ2GVæ2"À¢&¦÷W&æW’æFW6W'Bç7FW%FW‡B#¢%6RVÆ–vRVæ'WFL9sB&GRw'WòÂ6öâÆ2GVæ2FR&Væ6öÖòW66Væ&–æ6—Â’æò6öÖòföæFò&Væ&F&W&Fâ"À¢&¦÷W&æW’æFW6W'Bç7FW5F—FÆR#¢$ÆÆVvÆ7BÆ–v‡B"À¢&¦÷W&æW’æFW6W'Bç7FW5FW‡B#¢$7VæFò&¦VÂ6öÂÂÆ†÷7—FÆ–FB6VL:Ò’Æ6ÆÖFVÂ—6¦R7&VâVâ6–W'&RVRÖW&V6RFöÖ'6R6–â&—6â"À¢&¦÷W&æW’çF–bæW–V'&÷r#¢%F–W'&2ÇF2FRF–b+rVâ&—FÖòÜ:26W&Væò"À¢&¦÷W&æW’çF–bçF—FÆR#¢$6Ö&–VÂ6Æ÷"FRÆ6—VFB÷"—&RFRÖöçF;’VâL:ÖÜ:2G&çV–Æò"À¢&¦÷W&æW’çF–bçFW‡B#¢%Vâf–¦R&—fFòF–b&\;¦æR—&RÜ:2g&W66òÂ6öçF÷&æ÷2FRÖöçF;Â&÷62’FWFÆÆW2Æö6ÆW2FRFV×÷&FVâ&—FÖòVRFV¦&W7—&"Æ2F–W'&2ÇF2â"À¢&¦÷W&æW’çF–bç7FWF—FÆR#¢$66–VæFR†6–Vâ&—FÖòF–fW&VçFR"À¢&¦÷W&æW’çF–bç7FWFW‡B#¢%Ææ–f–6Ö÷2Æ6Æ–FÇ&VFVF÷"FRGRw'Wò&VRVÂ66Vç6ò6VVÂ–æ–6–òFRÆW‡W&–Væ6–Âæò6öÆòVâG&6ÆFòâ"À¢&¦÷W&æW’çF–bç7FW%F—FÆR#¢$Væ7VVçG&ÆFV×÷&FFRF–b"À¢&¦÷W&æW’çF–bç7FW%FW‡B#¢%&÷62Â‡VW'F÷2’&F2Æö6ÆW26RVÆ–vVâ6V|;¦âÆòVRÆ2F–W'&2ÇF2ög&V6VâFRfW&FBVâW6RÖöÖVçFòFVÂ;òâ"À¢&¦÷W&æW’çF–bç7FW5F—FÆR#¢$†¢VæW6FöæFR6R'&RÆf—7F"À¢&¦÷W&æW’çF–bç7FW5FW‡B#¢$VÂL:ÖFV¦W76–ò&VÂ—6¦RÂVÂ—&R’Æ÷2ÖöÖVçF÷26–âÆæ–f–6"VR†6VâFRF–bÆvòF—7F–çFò–VFâ"À¢&¦÷W&æW’æ¦VFF‚æW–V'&÷r#¢$L:ÖVÖ&ÆVÜ:F–6òFRfVçGW&+r–VF"À¢&¦÷W&æW’æ¦VFF‚çF—FÆR#¢%VâL:Ö6ö×ÆWFòVâ–VFæòW2VâVWFS²6RF—6\;Ç&VFVF÷"FRGW2–çf—FF÷2"À¢&¦÷W&æW’æ¦VFF‚çFW‡B#¢$FW6FRVÂ6VòÖ,:×F–Öò†7F–VF†—7L;7&–6’Væ&Fv7G&öì;6Ö–6Vç6FÂfVçGW&6öæV7FÆ6—VFBVâ&—FÖòW'6öæÂ’6–â&—62â"À¢&¦÷W&æW’æ¦VFF‚ææ÷FR#¢$VÂ6VòÖ,:×F–ÖòÂÆ6—VFBçF–wV’ÆÖW66öâ6:×GVÆ÷2FRVâÖ—6ÖòL:ÖÂæòG&W2&F2&W7W&F2â"À¢&¦÷W&æW’æ¦VFF‚ç7FWF—FÆR#¢$V×–W¦FöæFRFV&RV×W¦"GRL:Ö"À¢&¦÷W&æW’æ¦VFF‚ç7FWFW‡B#¢$FVf–æ–Ö÷2VÂVçFòFRVæ7VVçG&òÂVÂG&ç7÷'FR’Æ&–ÖW&&F6V|;¦âGRÆÆVvFÂVæW&|:ÖR–çFW&W6W2â"À¢&¦÷W&æW’æ¦VFF‚ç7FW%F—FÆR#¢$FV¦VR–VF6RFW7Æ–VwVR÷"6:×GVÆ÷2"À¢&¦÷W&æW’æ¦VFF‚ç7FW%FW‡B#¢%F–V×òg&VçFRÂÖ"Â–VF†—7L;7&–6Â6öÖ–FÆö6Â’&F26VÆV66–öæF26R6öæV7FâVâVâ&—FÖò6Æ&ò’fÆW†–&ÆRâ"À¢&¦÷W&æW’æ¦VFF‚ç7FW5F—FÆR#¢%FW&Ö–æ6öâÆ6—VFB;¦â6öçF–vò"À¢&¦÷W&æW’æ¦VFF‚ç7FW5FW‡B#¢$VÂ;¦ÇF–Öò†÷&&–ò6RF—6\;Ç&VFVF÷"FRGRw'Wò&VRVÂL:Ö6–W'&R6öâ6VçF–FòFRÇVv"Âæò6öÖò÷G&òVçFòFVÂ—F–æW&&–òâ"À¢&¦÷W&æW’ç6VFô&ÆBæW–V'&÷r#¢$L:ÖVÖ&ÆVÜ:F–6òFRfVçGW&+rFVÂÖ"ÂÔ&ÆB"À¢&¦÷W&æW’ç6VFô&ÆBçF—FÆR#¢%VâL:ÖVR6öæV7FVÂÖ"6öâÆ†—7F÷&–FRÆ6—VFB"À¢&¦÷W&æW’ç6VFô&ÆBçFW‡B#¢%VæF&FRFR&W6÷'BÂVæW6Vâ¦VFF‚–6‡B6ÇV"’VæfVÆFwV–FVâ–VF†—7L;7&–66R6öçf–W'FVâVâVâL:Ö&—fFò6öâVâ6Ö&–òFRW66Væ6Æ&òâ"À¢&¦÷W&æW’ç6VFô&ÆBææ÷FR#¢$ÆG&ç6–6œ;6âW2VÂ6VçF–Fó¢ÇW¢FRL:Ö§VçFòÂwVÂF&FV6W"VâVÂ6ÇV"ì:WF–6ò’VÂ6,:7FW"FRÂÔ&ÆBÂ6W"Ææö6†Râ"À¢&¦÷W&æW’ç6VFô&ÆBç7FWF—FÆR#¢$V×–W¦6öâVÂwV"À¢&¦÷W&æW’ç6VFô&ÆBç7FWFW‡B#¢$VÂ6:×GVÆòFRÖ"6RF—6\;6öÖòVæW‡W&–Væ6–FR&W6÷'BÂFæFòÂL:ÖVâ6öÖ–Vç¦ò&VÆ¦FòçFW2FRVR&W¦6Æ6—VFBâ"À¢&¦÷W&æW’ç6VFô&ÆBç7FW%F—FÆR#¢$FV¦VRÆÇW¢6Ö&–RÆW66Væ"À¢&¦÷W&æW’ç6VFô&ÆBç7FW%FW‡B#¢%Væ&FÂF&FV6W"Vâ¦VFF‚–6‡B6ÇV"7&VÆG&ç6–6œ;6âVçG&RVæF&FR&–W'F’VÂ6,:7FW"FRÂÔ&ÆBâ"À¢&¦÷W&æW’ç6VFô&ÆBç7FW5F—FÆR#¢$VçG&VâÆæö6†R6öâVâw\:Ö"À¢&¦÷W&æW’ç6VFô&ÆBç7FW5FW‡B#¢%–VF†—7L;7&–66R6öçf–W'FRVâVÂ6:×GVÆòf–æÂÂ6öâÆ÷6œ;6âFR6öçF–çV"Ææö6†R6öâVæ6VæÆö6ÂVç6Fâ"À¢'v÷&ÆBç6VæW–V'&÷r#¢%&–ÖW&ÇW¢+rÖ"&ö¦ò"À¢'v÷&ÆBç6VçF—FÆR#¢$V×–W¦FöæFR6R'&RVÂ†÷&—¦öçFR"À¢'v÷&ÆBç6VçFW‡B#¢$FW6FRVÂ&–ÖW"ÖVç6¦RÂFVf–æ–Ö÷2Vâ&—FÖòÖF–æÂ6Æ&òVâF÷&æòÂw'WòÂÆVÖ&&66œ;6â’VÂW76–òVRV–W&W2FV¦"6–âÆæ–f–6"â"À¢'v÷&ÆBç6Vææ÷FR#¢$vöÆFVâ†÷W"6–wVR6–VæFòVæW‡W&–Væ6–FRF&FV6W"–æFWVæF–VçFRâVÂ×VæFòFVÂÖ"&ö¦ò6öÖ–Vç¦6öâÇW¢FRL:Öâ"À¢'v÷&ÆBç6Vç7FWF—FÆR#¢$Ö&6VÂ&—FÖò"À¢'v÷&ÆBç6Vç7FWFW‡B#¢$6ö×'FRVÂ†÷&&–òÂVÂ&—FÖòFRÆ÷2–çf—FF÷2’Æ&—f6–FBVRFW6V2VâVÂwVâ"À¢'v÷&ÆBç6Vç7FW%F—FÆR#¢$VçG&VâÖ"&–W'Fò"À¢'v÷&ÆBç6Vç7FW%FW‡B#¢$Æ6Æ–FFW6FRö&‡W"6R6öçf–W'FRVâVÂ–æ–6–òFVÂL:ÖÂæòVâVâG&6ÆFò†6–:–Ââ"À¢'v÷&ÆBç6Vç7FW5F—FÆR#¢$FV¦W76–ò&VÂL:Ö"À¢'v÷&ÆBç6Vç7FW5FW‡B#¢$VÂL:ÖFRÖ"6RÖçF–VæRfÆW†–&ÆS¢Vâ&;òG&çV–ÆòÂVæ6öçfW'66œ;6âòVæW6VVFVâ6öçfW'F—'6RVâVÂ&V7VW&Fòâ"À¢'v÷&ÆBæ†—7F÷&–2æW–V'&÷r#¢$ÂÔ&ÆB+rVæ†—7F÷&–f—f"À¢'v÷&ÆBæ†—7F÷&–2çF—FÆR#¢$VçG&VâÆ6—VFBVÖ'&ÂVÖ'&Â"À¢'v÷&ÆBæ†—7F÷&–2çFW‡B#¢$çFW2FR6öÖVç¦"VÂ6VòÂVÂw\:Ö&W6VçFVÂ6öçFW‡Fò’6ö×;Âw'Wò÷"Æ÷26ÆÆV¦öæW2ÂÆ'V—FV7GW&’Æ2†—7F÷&–26–â&—62â"À¢'v÷&ÆBæ†—7F÷&–2ææ÷FR#¢$Æ†—7F÷&–æòF–VæR&—6âFV¦Ö÷2W76–ò&&W&"VâÆÖFW&ÂÆ–VG&ÂÆ2fö6W2’Æ÷2WV\;÷2FWFÆÆW2â"À¢'v÷&ÆBæ†—7F÷&–2ç7FWF—FÆR#¢$6öæö6RGRw\:Ö"À¢'v÷&ÆBæ†—7F÷&–2ç7FWFW‡B#¢$V×–W¦6öâÆ2W'6öæ2’VÂ6öçFW‡FòVRFâÜ:26VçF–Fò6FVW'Fâ"À¢'v÷&ÆBæ†—7F÷&–2ç7FW%F—FÆR#¢$ÆVRVÂ&÷6†â"À¢'v÷&ÆBæ†—7F÷&–2ç7FW%FW‡B#¢%&V6÷'&R6öÖ'&2ÂÖFW&FÆÆFR†—7F÷&–2VRæò&V6VâVâVâÖâ"À¢'v÷&ÆBæ†—7F÷&–2ç7FW5F—FÆR#¢$FV¦VRÆ6—VFBW&ÖæW¦6"À¢'v÷&ÆBæ†—7F÷&–2ç7FW5FW‡B#¢%FW&Ö–æ6öâF–V×ò&6–Ö–Æ"ÆÖFW&ÂÆ–VG&’Æ2fö6W2FRÆ6—VFBÂ6–â6÷'&W"†6–VæÆ—7Ff–¦â"À¢'v÷&ÆBæFW6W'BæW–V'&÷r#¢$Æ7BÆ–v‡B+rGVæ2FR&Væ"À¢'v÷&ÆBæFW6W'BçF—FÆR#¢%6–wVRÆ2GVæ2FR&Væ†7FVRÆÇW¢6R6ÆÖR"À¢'v÷&ÆBæFW6W'BçFW‡B#¢$VÂ—6¦Rw\:ÖVÂ&öw&Ö¢×Æ–2Ì:ÖæV2FRGVæ2FR&VæÂVæ'WFL9sBVÆVv–F&GRw'Wò’VæW6&—fFÖ–VçG&2&¦VÂ6öÂâ"À¢'v÷&ÆBæFW6W'Bææ÷FR#¢$W7FRW2VÂ×VæFòFW<:—'F–6òFRfVçGW&¢GVæ2FR&VæçFW2VRFV6÷&6œ;6âÂ6–ÆVæ6–òçFW2VRW7V7L:7VÆòâ"À¢'v÷&ÆBæFW6W'Bç7FWF—FÆR#¢$FV¦G,:2Æ6—VFB"À¢'v÷&ÆBæFW6W'Bç7FWFW‡B#¢$VÂ&—FÖò6Ö&–7VæFòÆ6'&WFW&6VFRVÂ6òÆ&Væ’ÆF—7Fæ6–&–W'Fâ"À¢'v÷&ÆBæFW6W'Bç7FW%F—FÆR#¢$ÆVRÆÌ:ÖæVFRÆ2GVæ2"À¢'v÷&ÆBæFW6W'Bç7FW%FW‡B#¢$Æ'WF6–wVRVÂ—6¦S¢Æ2GVæ2FR&Væ6öâÆW66Væ&–æ6—ÂÂæòVâföæFòâ"À¢'v÷&ÆBæFW6W'Bç7FW5F—FÆR#¢$ÆÆVvÆ7BÆ–v‡B"À¢'v÷&ÆBæFW6W'Bç7FW5FW‡B#¢$–ç7L:ÆFRVâÆ†÷7—FÆ–FB’VÂ&W7ÆæF÷"f–æÂVâVâÖöÖVçFòVç6Fò&VÂw'Wòâ"À¢'v÷&ÆBçF–bæW–V'&÷r#¢%&–ÖW&ÇW¢+rF–W'&2ÇF2"À¢'v÷&ÆBçF–bçF—FÆR#¢$ÆÆVvçFW2FRVRFW7–W'FRÆ6—VFB"À¢'v÷&ÆBçF–bçFW‡B#¢$—&Rg&W66òÂ6öçF÷&æ÷2FRÖöçF;’&÷62FRF–b7&VâVâ6öÖ–Vç¦òÜ:27VfRgVW&FVÂ&—FÖòFR–VFâ"À¢'v÷&ÆBçF–bææ÷FR#¢$ÆFV×÷&FFVf–æRVÂFWFÆÆS²Æ6ÆÖFRÆ2F–W'&2ÇF2FVf–æRFöFòÆòFVÜ:2â"À¢'v÷&ÆBçF–bç7FWF—FÆR#¢$66–VæFR†6–ÆÖ;æ"À¢'v÷&ÆBçF–bç7FWFW‡B#¢$FV¦G,:2VÂ&—FÖòFRÆ6—VFB&F—6g'WF"FR—&RÜ:2g&W66ò’Væf—7F&–W'FFRÆÖöçF;â"À¢'v÷&ÆBçF–bç7FW%F—FÆR#¢$Væ7VVçG&ÆFV×÷&F"À¢'v÷&ÆBçF–bç7FW%FW‡B#¢%&÷62Â‡VW'F÷2’FWFÆÆW2Æö6ÆW26R6VÆV66–öæâ6V|;¦âÆòVRÆ2F–W'&2ÇF2ög&V6Vâ†÷&â"À¢'v÷&ÆBçF–bç7FW5F—FÆR#¢$†¢VæW6VâÆf—7F"À¢'v÷&ÆBçF–bç7FW5FW‡B#¢$FV¦VRVÂ—6¦RÖ'VRVÂ&—FÖó²VÂ—&RÂÆf—7F’Æ6ÆÖ–f÷&Öâ'FRFVÂ&V7VW&Fòâ"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C56†÷'B#¢%&V7VW&Fò"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C5F—FÆR#¢%WV\;ò&V7VW&FòFV¦–Fò"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C5FW‡B#¢$FWFÆÆRFV¦–Fò6ö×7Fò–ç7—&FòVâÆ'FW6ì:ÖFVÂFW6–W'Fòâ"À¢&6öÆÆV7F–öâç&öGV7EF–cE6†÷'B#¢$7V–FFòFR&÷6"À¢&6öÆÆV7F–öâç&öGV7EF–cEF—FÆR#¢$¦,;6âFR&÷6ò7&VÖFRÖæ÷2"À¢&6öÆÆV7F–öâç&öGV7EF–cEFW‡B#¢%WV\;ò&öGV7FòÆö6ÂVÆVv–Fò6V|;¦âFV×÷&F’F—7öæ–&–Æ–FBâ"À¢&6öÆÆV7F–öâææö—%F—FÆR#¢$gFW"Ö–Fæ–v‡Bæö—""À¢&6öÆÆV7F–öâçfVÇfWEF—FÆR#¢$gFW"Ö–Fæ–v‡BfVÇfWB"À¢&6öÖÖöâç6V6öæÂ#¢$FRFV×÷&F"À¢&6öÆÆV7F–öâæW‡Æ÷&T'WGFöâ#¢$W‡Æ÷&"Æ26öÆV66–öæW2"À¢&6öÆÆV7F–öâæf–ÇFW$&–#¢$f–ÇG&"Æ&÷WF—VR÷"W‡W&–Væ6–"À¢&6öÆÆV7F–öâçVçF—G’#¢$6çF–FB"À¢&6öÆÆV7F–öâæFD&÷‚#¢$;F—"6¦Æ6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâæFD—FVÒ#¢$;F—"Æ6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâæFE6W'f–6R#¢$;F—"6W'f–6–òÆ6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâæFFVB#¢$;F–FòGR6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâç&VÖ÷fT—FVÒ#¢$VÆ–Ö–æ""À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fUF—FÆR#¢$6¦FR&–VçfVæ–FV¦V7WF—f"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fUFW‡B#¢%Væ&–VçfVæ–F&Vf–æFVâVÂ†÷FVÂ&V¦V7WF—f÷2ÂFVÆVv6–öæW2’‡\:—7VFW2–çFW&æ6–öæÆW2â"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓ#¢$7VFW&æò’&öÌ:Öw&fò&Vf–æF÷2"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓ"#¢$WF—VWFFRWV—¦R&Vf–æF"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓ2#¢%F&¦WFR—F–æW&&–òW'6öæÆ—¦F÷2"À¢&6öÆÆV7F–öâæ&÷„W†V7WF—fT—FVÓB#¢%WV\;ò&V7VW&FòÆö6Â"À¢&6öÆÆV7F–öâç&öGV7G4W–V'&÷r#¢%&öGV7F÷2–æF—f–GVÆW2"À¢&6öÆÆV7F–öâç&öGV7G5F—FÆR#¢%&öGV7F÷2Â,;7†–ÖÖVçFRâ"À¢&6öÆÆV7F–öâç&öGV7G5FW‡B#¢$W7F2f—7F2&Wf–2W&ÖæV6Vâf—6–&ÆW2Ö–VçG&26R'VV&âÆ÷2&÷F÷F—÷2ÂÆ÷2&÷fVVF÷&W2’Æ÷2FWFÆÆW2f–æÆW2â;¦âæòVVFVâ;F—'6RVæ6öÆ–6—GVBâ"À¢&6öÆÆV7F–öâç&öGV7E6V6†÷'B#¢$&öÇ6"À¢&6öÆÆV7F–öâç&öGV7E6VF—FÆR#¢$&öÇ6FRÆ–fVçGW&"À¢&6öÆÆV7F–öâç&öGV7E6VFW‡B#¢$&öÇ6,:7F–6VRFÖ&œ:–âVVFR6öçFVæW"Æ6öÆV66œ;6â6ö×ÆWFÖ"&ö¦òâ"À¢&6öÆÆV7F–öâç&öGV7E6V%6†÷'B#¢%FöÆÆ"À¢&6öÆÆV7F–öâç&öGV7E6V%F—FÆR#¢%FöÆÆFRÆ–FR6V6Fò,:–Fò"À¢&6öÆÆV7F–öâç&öGV7E6V%FW‡B#¢$Æ–vW&’;§F–Â&&W6÷'BÂ&&6ò’Æ–â"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–36†÷'B#¢%&V7VW&Fò"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3F—FÆR#¢%&V7VW&FòFRÖFW&&÷6†â"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3FW‡B#¢%WV\;–W¦Æö6Â–ç7—&FVâÆ2fVçFæ2FR–VF†—7L;7&–6â"À¢&6öÆÆV7F–öâç&öGV7D†÷7—FÆ—G•6†÷'B#¢%6WBFR&–VçfVæ–F"À¢&6öÆÆV7F–öâç&öGV7D†÷7—FÆ—G•F—FÆR#¢%6WBFRF&¦WF2FR&–VçfVæ–F"À¢&6öÆÆV7F–öâç&öGV7D†÷7—FÆ—G•FW‡B#¢%F&¦WF2W'6öæÆ—¦F2FR&–VçfVæ–FR—F–æW&&–÷26ö×7F÷2&ÆÆÆVvFFRÆ÷2‡\:—7VFW2â"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3%6†÷'B#¢%F&¦WF2"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3%F—FÆR#¢%F&¦WF2–ÇW7G&F2FVÂG&–Ööæ–ò"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3%FW‡B#¢$6öæ§VçFò6ö×7Fò–ç7—&FòVâÆ'V—FV7GW&FRÂÔ&ÆBâ"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C6†÷'B#¢$6†Â"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CF—FÆR#¢$6†ÂÆ–vW&ò&VÂFW6–W'Fò"À¢&6öÆÆV7F–öâç&öGV7DFW6W'CFW‡B#¢$6æWWG&’l:6–ÂFRÆÆWf"&ÆF&FRÜ:2g&W66â"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C%6†÷'B#¢%f6òL:—&Ö–6ò"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C%F—FÆR#¢%f6òL:—&Ö–6òFRf–¦R"À¢&6öÆÆV7F–öâç&öGV7DFW6W'C%FW‡B#¢%f6òL:—&Ö–6ò&WWF–Æ—¦&ÆRFV7VFò&Æ2F&FW2g&W662FVÂFW6–W'Fòâ"À¢&6öÆÆV7F–öâç&öGV7EF–c6†÷'B#¢$''VÖFR&÷6"À¢&6öÆÆV7F–öâç&öGV7EF–cF—FÆR#¢$''VÖ&öÜ:F–6FR&÷6FRF–b"À¢&6öÆÆV7F–öâç&öGV7EF–cFW‡B#¢$''VÖ&öÜ:F–6FRW6òW‡FW&æòÂ6VÆV66–öæFÆö6ÆÖVçFR6V|;¦âFV×÷&F’F—7öæ–&–Æ–FBâ"À¢&6öÆÆV7F–öâç&öGV7EF–c%6†÷'B#¢$7VFW&æòfÆ÷&Â"À¢&6öÆÆV7F–öâç&öGV7EF–c%F—FÆR#¢$7VFW&æòfÆ÷&ÂFRF–b"À¢&6öÆÆV7F–öâç&öGV7EF–c%FW‡B#¢$7VFW&æò6ö×7Fò6öâVâÖ÷F—fòF—67&WFò–ç7—&FòVâÆ2&÷62FRF–bâ"À¢&6öÆÆV7F–öâç&öGV7EF–c56†÷'B#¢%&VvÆòFR&÷6"À¢&6öÆÆV7F–öâç&öGV7EF–c5F—FÆR#¢%6V—FòW&gVÖFòFR&÷6"À¢&6öÆÆV7F–öâç&öGV7EF–c5FW‡B#¢%&V7VW&FòÆ–vW&ò&&–VçfVæ–F2’6¦2FRW‡W&–Væ6–2â"À¢&6öÆÆV7F–öâæÆ7DÆ–v‡EVæF–ær#¢$F—6\;ò÷&–v–æÂFR6×;VæF–VçFR"À¢&6öÆÆV7F–öâç66VçDÆ$æÖR#¢$Æ&÷&F÷&–òFR&öÖ2fVçGW&"À¢&6öÆÆV7F–öâæwVW7E6W'f–6W4W–V'&÷r#¢%6W'f–6–÷2&‡\:—7VFW2"À¢&6öÆÆV7F–öâæwVW7E6W'f–6W5F—FÆR#¢$Æ÷2FWFÆÆW2FVÂ‡\:—7VB6R6ö÷&F–æâ÷"6W&Fòâ"À¢&6öÆÆV7F–öâæwVW7E6W'f–6W5FW‡B#¢%67G&W,:ÖÂ&–’fÆ÷&W26R6ö÷&F–æâÖVF–çFR7R&÷–6öÆ–6—GVBFR6W'f–6–ò&‡\:—7VFW2â"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv”&–#¢$f÷&Ö2FRVçG&"VâÆ&÷WF—VR"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv”W–V'&÷r#¢$V×–W¦÷"Æ÷6œ;6âVRFR6öçfVæv"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv•F—FÆR#¢$VÆ–vR<;6ÖòV–W&W2W‡Æ÷&"Æ&÷WF—VR"À¢&6öÆÆV7F–öâæ&÷WF—VTvFWv•FW‡B#¢$6F6öæ6WFòFRg&væ6–6öÖ–Vç¦6öâVâÇVv"ÂVâÖ&–VçFR’VæW‡W&–Væ6–FRfVçGW&â"À¢&6öÆÆV7F–öâæW†V7WF—fU6W'f–6W4W–V'&÷r#¢%6W'f–6–÷2&‡\:—7VFW2’V¦V7WF—f÷2"À¢&6öÆÆV7F–öâæW†V7WF—fU6W'f–6W5F—FÆR#¢$÷–ò7V–FFòVâ6FÆÆVvF"À¢&6öÆÆV7F–öâæW†V7WF—fU6W'f–6W5FW‡B#¢%6W'f–6–÷2–æFWVæF–VçFW2òFWFÆÆW26ö÷&F–æF÷2FVçG&òFRVâÖ—6Öò&öw&Ö&VÂ‡\:—7VBâ"À¢&6öÆÆV7F–öâæ—'÷'EvVÆ6öÖUF—FÆR#¢%&V6W6œ;6â’6—7FVæ6–VâVÂW&÷VW'Fò"À¢&6öÆÆV7F–öâæ—'÷'EvVÆ6öÖUFW‡B#¢$6ö÷&F–æ6œ;6âFRÆÆÆVvFFW6FRVÂVçFòFRVæ7VVçG&òFVÂW&÷VW'Fò†7FVÂfVŒ:Ö7VÆò’Æö¦Ö–VçFò6VÆV66–öæF÷2â"À¢&6öÆÆV7F–öâæW†V7WF—fUG&ç7÷'EF—FÆR#¢%G&ç7÷'FRV¦V7WF—fò"À¢&6öÆÆV7F–öâæW†V7WF—fUG&ç7÷'EFW‡B#¢%fVŒ:Ö7VÆ÷2’6öæGV7F÷&W26ö÷&F–æF÷26V|;¦âVÂ&öw&ÖÂVÂì;¦ÖW&òFR‡\:—7VFW2’VÂ†÷&&–ò&VfW&–Fòâ"À¢&6öÆÆV7F–öâæÖVWF–æu6WGWF—FÆR#¢%&W&6œ;6âFR&WVæ–öæW2"À¢&6öÆÆV7F–öâæÖVWF–æu6WGWFW‡B#¢%6ÆÂ†÷7—FÆ–FBÂG&ç7÷'FR’FWFÆÆW2,:7F–6÷2FRÆ&WVæœ;6â6ö÷&F–æF÷26V|;¦âÆvVæFâ"À¢&6öÆÆV7F–öâæöff–6–Äv–gG5F—FÆR#¢%&VvÆ÷2öf–6–ÆW2"À¢&6öÆÆV7F–öâæöff–6–Äv–gG5FW‡B#¢%&VvÆòFR&–VçfVæ–FRö'6WV–òöf–6–Â&W&Fò6V|;¦âÆö66œ;6âÂVÂFW7F–æF&–ò’Æ–FVçF–FB&ö&Fâ"À¢&6öÆÆV7F–öâæ6öæ6–W&vUF—FÆR#¢$÷–òFR6öç6W&¦W,:Ö"À¢&6öÆÆV7F–öâæ6öæ6–W&vUFW‡B#¢$÷–ò,:7F–6òÂ‡\:—7VBÂ&W6W'f2’6öÆ–6—GVFW2W7V6–ÆW26ö÷&F–æF÷2ÖVF–çFRVâ;¦æ–6ò6öçF7Fòâ"À¢&6öÆÆV7F–öâç&WVW7E6W'f–6R#¢%6öÆ–6—F"W7FR6W'f–6–ò"À¢&6öÆÆV7F–öâç66VçDÆ$–çFW&W7Dæ÷FR#¢%FöF÷2Æ÷26öæ6WF÷2FRg&væ6–26–wVVâVâFW6'&öÆÆò’6RçVæ6–,:â7VæFòW7L:–âÆ—7F÷2â"À¢&6öÆÆV7F–öâæ–çFW&W7D'WGFöâ#¢$l:×6ÖR7VæFòW7L:’F—7öæ–&ÆR"À¢&6öÆÆV7F–öâæ–çFW&W7D¦÷W&æW”'WGFöâ#¢$FW67V'&RÆg&væ6–’&Vv—7G&GR–çFW,:—2"À¢&6öÆÆV7F–öâçF†ö&Uö–çC#¢%f—6—F&—fF"À¢&6öÆÆV7F–öâçF†ö&Uö–çC"#¢%6VÆV66œ;6âFRFV¦–Fò"À¢&6öÆÆV7F–öâçF†ö&Uö–çC2#¢$VçG&Vv,:–F6ö÷&F–æF"À¢&6öÆÆV7F–öâæ&–ö–çC#¢$6—7FVæ6–&—fF"À¢&6öÆÆV7F–öâæ&–ö–çC"#¢%6VÆV66œ;6âFRFÆÆ’W7F–Æò"À¢&6öÆÆV7F–öâæ&–ö–çC2#¢$VçG&Vv6ö÷&F–æF"À¢&6öÆÆV7F–öâæfÆ÷vW%F—FÆR#¢$fÆ÷&W2çFW2FRÆÆÆVvF"À¢&6öÆÆV7F–öâæfÆ÷vW%FW‡B#¢%6R&W&Vâ&Öò6öâF&¦WFW'6öæÂVâVÂ†÷FVÂòÆö¦Ö–VçFòçFW2FRÆÆÆVvFâ"À¢&6öÆÆV7F–öâæfÆ÷vW%ö–çC#¢$F—6\;ò6V|;¦âÆö66œ;6â"À¢&6öÆÆV7F–öâæfÆ÷vW%ö–çC"#¢%F&¦WF6öâÖVç6¦RW'6öæÂ"À¢&6öÆÆV7F–öâæfÆ÷vW%ö–çC2#¢$VçG&VvçFW2FRÆÆÆVvF"À¢&6öÆÆV7F–öâç6VÆV7F–öäÆ&VÂ#¢%GR6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâç6VÆV7F–öä—FV×2#¢&'L:Ö7VÆ÷2"À¢&6öÆÆV7F–öâç&Wf–Wu6VÆV7F–öâ#¢%&Wf—6"6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâæF–ÆöuF—FÆR#¢%&Wf—6GR6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâçV÷FTF—66Æ–ÖW"#¢$Vçf–"Væ6öÆ–6—GVBFR6÷F—¦6œ;6âæò6öæf—&Ö&W6W'fÂvòæ’F—7öæ–&–Æ–FBâfVçGW&&Wf—6,:†÷&&–òÂ6çF–FB’W'6öæÆ—¦6œ;6âçFW2FRVÖ—F—"Æ6÷F—¦6œ;6âf–æÂâ"À¢&6öÆÆV7F–öâæ6ÆV%6VÆV7F–öâ#¢$&÷'&"6VÆV66–öæW2"À¢&6öçF7Bç&WVW7FVD—FV×2#¢$FWFÆÆW2’6W'f–6–÷26VÆV66–öæF÷2"À¢&6öçF7Bæ6öÆÆV7F–öäFWF–Ç5F—FÆR#¢$FWFÆÆW2FR&÷WF—VR’VçG&Vv"À¢&6öçF7BæFVÆ—fW'”Æö6F–öäÆ&VÂ#¢$†÷FVÂòÇVv"FRVçG&Vv"À¢&6öçF7BæFVÆ—fW'”Æö6F–öåÆ6V†öÆFW"#¢$†÷FVÂÂÆö¦Ö–VçFòòW76–ò"À¢&6öçF7BæFVÆ—fW'•F–ÖTÆ&VÂ#¢$†÷&FRVçG&Vv6öÆ–6—FF"À¢&6öçF7BçW'6öæÆ—¦F–öäÆ&VÂ#¢$æöÖ'&RÂÖVç6¦RòÆöv÷F—òFRV×&W6"À¢&6öçF7BçW'6öæÆ—¦F–öåÆ6V†öÆFW"#¢$FWFÆÆW2÷6–öæÆW2FRW'6öæÆ—¦6œ;6â"À¢&6öçF7BçF†ö&TFWF–Ç5F—FÆR#¢$FWFÆÆW2FVÂ6W'f–6–òFR67G&W,:Ö"À¢&6öçF7Bç6W'f–6TÆö6F–öäÆ&VÂ#¢$†÷FVÂòÆö¦Ö–VçFò"À¢&6öçF7BçF†ö&T6÷VçDÆ&VÂ#¢$ì;¦ÖW&òFRF†ö&W2"À¢&6öçF7Bçf—6—EF–ÖTÆ&VÂ#¢$†÷&FRf—6—F&VfW&–F"À¢&6öçF7Bç&WV—&VDFVÆ—fW'”Æ&VÂ#¢$†÷&FRVçG&Vv&WVW&–F"À¢&6öçF7BçF†ö&U&VfW&Væ6TÆ&VÂ#¢$6öÆ÷"òFV¦–Fò&VfW&–Fò"À¢&6öçF7Bæ÷F–öæÅÆ6V†öÆFW"#¢$÷6–öæÂ"À¢&6öçF7Bæ&–FWF–Ç5F—FÆR#¢$FWFÆÆW2FVÂ6W'f–6–òFR&–"À¢&6öçF7Bæ6öçF7Ef—6—EF–ÖTÆ&VÂ#¢$†÷&&VfW&–FFR6öçF7Fòòf—6—F"À¢&6öçF7Bç&VfW'&VD6öçF7DÆ&VÂ#¢$Ü:—FöFòFR6öçF7Fò&VfW&–Fò"À¢&6öçF7Bæ6öçF7Ev†G6#¢%v†G4"À¢&6öçF7Bæ6öçF7DVÖ–Â#¢$6÷'&VòVÆV7G,;6æ–6ò"À¢&6öçF7Bç&VfW'&VE&W7öç6UFW‡B#¢$fVçGW&&W7öæFR÷"6÷'&VòVÆV7G,;6æ–6ò6ÇfòVR&Vf–W&2v†G4òVæÆÆÖFâ"À¢&6öçF7Bç6VæDÖWF†öDÆVvVæB#¢$Vçl:ÖGR6öÆ–6—GVBFR&W6W'f÷""À¢&6öçF7Bç6VæDÖWF†öEFW‡B#¢$VÂ6÷'&VòVÆV7G,;6æ–6òW2VÂ6æÂ&–æ6—ÂFR&W6W'f3²v†G4VVFF—7öæ–&ÆR6öÖò6VwVæF÷6œ;6ââ"À¢&6öçF7Bç6VæDVÖ–Â#¢$6÷'&VòVÆV7G,;6æ–6ò"À¢&6öçF7Bç6VæEv†G6#¢%v†G4"À¢&6öçF7Bæ6öçF7D6ÆÂ#¢$ÆÆÖFFVÆVl;6æ–6"À¢&6öçF7Bæ6öçF7Ef—6—B#¢%f—6—FÂ†÷FVÂ"À¢&6öçF7BæfÆ÷vW$FWF–Ç5F—FÆR#¢$FWFÆÆW2FRVçG&VvFRfÆ÷&W2"À¢&6öçF7Bç&V6—–VçDÆ&VÂ#¢$æöÖ'&RFVÂFW7F–æF&–ò"À¢&6öçF7Bæö666–öäÆ&VÂ#¢$ö66œ;6â"À¢&6öçF7BæfÆ÷vW%6—¦TÆ&VÂ#¢%FÖ;òFVÂ&Öò"À¢&6öçF7BæfÆ÷vW%6—¦UV–WB#¢%7WF–Â"À¢&6öçF7BæfÆ÷vW%6—¦TÖVF—VÒ#¢$ÖVF–æò"À¢&6öçF7BæfÆ÷vW%6—¦U6–væGW&R#¢$W7V6–Â"À¢&6öçF7BæfÆ÷vW$6öÆ÷'4Æ&VÂ#¢$6öÆ÷&W2&VfW&–F÷2"À¢&6öçF7Bæ6&DÖW76vTÆ&VÂ#¢$ÖVç6¦RFRÆF&¦WF"À¢&W‡W&–Væ6W2æ6ö×ÆWFTW–V'&÷r#¢$6ö×ÆWFÆW‡W&–Væ6–"À¢&W‡W&–Væ6W2æ6ö×ÆWFU6VF—FÆR#¢$FWFÆÆW2FRÆ–Æ—7F÷2&VÂL:ÖFRÖ""À¢&W‡W&–Væ6W2æ6ö×ÆWFT†—7F÷&–5F—FÆR#¢%Vâ&V7VW&FòFRÂÔ&ÆBÜ:2ÆÌ:FVÂ6Vò"À¢&W‡W&–Væ6W2æ6ö×ÆWFTFW6W'EF—FÆR#¢$FWFÆÆW2<:Æ–F÷2&Æ;¦ÇF–ÖÇW¢"À¢&W‡W&–Væ6W2æ6ö×ÆWFUF–eF—FÆR#¢%&VvÆ÷2W7F6–öæÆW2FRÆ2ÖöçF;2"À¢&W‡W&–Væ6W2æ6ö×ÆWFT¦VFF…F—FÆR#¢%6VÆV66–öæW2FRÖ"’&÷6†âVâVâL:Ö"À¢&W‡W&–Væ6W2çf–Wt6öÆÆV7F–öâ#¢%fW"Æ6öÆV66œ;6â6ö×ÆWF"À¢&6öÆÆV7F–öâçf–Wu7F÷'”6&B#¢%fW"F&¦WFæ'&F—f"À¢&6öÆÆV7F–öâç7F÷'”F–ÆötW–V'&÷r#¢$6×;FRÆg&væ6–"À¢&6öÆÆV7F–öâç7F÷'”F–ÆöuF—FÆR#¢%F&¦WFæ'&F—fFRÆg&væ6–"À¢&6öÆÆV7F–öâæ6Æ÷6U7F÷'”6&B#¢$6W'&"ÆF&¦WFæ'&F—f"À¢&6öÆÆV7F–öâææö—%FW‡B#¢%–Ö–VçF&÷6ÂVâ6÷&FRFRL:’æVw&ò’ÖFW&FR6VG&òâ"À¢&6öÆÆV7F–öâçfVÇfWEFW‡B#¢%–Ö–VçF&÷6Â¦¦Ü:Öâ6Ö&2’'6öÇWFòFRf–æ–ÆÆâ"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–356†÷'B#¢$7VFW&æò"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–35F—FÆR#¢$7VFW&æòFR&öÇ6–ÆÆò&÷6†â"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–35FW‡B#¢$7VFW&æò6ö×7Fò6öâFWFÆÆW2–ç7—&F÷2VâÆ2fVçFæ2FRÖFW&FRÂÔ&ÆBâ"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3E6†÷'B#¢$W7GV6†RFRFVÆ"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3EF—FÆR#¢$W7GV6†RFRFVÆ–ç7—&FòVâÂÔ&ÆB"À¢&6öÆÆV7F–öâç&öGV7D†—7F÷&–3EFW‡B#¢$W7GV6†RÆ–vW&ò6öâVâÖ÷F—fòF—67&WFò–ç7—&FòVâ–VF†—7L;7&–6â"À¢&6öÆÆV7F–öâç&öGV7EF–cU6†÷'B#¢$7VFW&æò"À¢&6öÆÆV7F–öâç&öGV7EF–cUF—FÆR#¢$7VFW&æòFR&öÇ6–ÆÆòfÆ÷&Â"À¢&6öÆÆV7F–öâç&öGV7EF–cUFW‡B#¢$7VFW&æò6ö×7Fò6öâVâÖ÷F—fò7WF–Â–ç7—&FòVâÆ2&÷62FRF–bâ"À¢&6öÆÆV7F–öâæF—66÷fW'•F—FÆR#¢$F÷2f÷&Ö26Væ6–ÆÆ2FRVçG&"VâÆ&÷WF—VR"À¢&6öÆÆV7F–öâæF—66÷fW'•FW‡B#¢$FW67V'&RVæ6öÆV66œ;6â&GR,;7†–ÖW‡W&–Væ6–òfRF—&V7FÖVçFRVâ&öGV7FòVR–6öæö6W2â"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6TW–V'&÷r#¢%Ææ–f–62VæçVWfW‡W&–Væ6–"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6UF—FÆR#¢$W‡Æ÷&"÷"W‡W&–Væ6–"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6UFW‡B#¢$W‡Æ÷&6öæ6WF÷2FRg&væ6––ç7—&F÷2VâVÂÖ"Â–VF†—7L;7&–6ÂVÂFW6–W'Fò’F–bâ"À¢&6öÆÆV7F–öâçF„W‡W&–Væ6T7F–öâ#¢$VÆVv—"VæW‡W&–Væ6–"À¢&6öÆÆV7F–öâçF…&öGV7DW–V'&÷r#¢$6Æ–VçFR†&—GVÂò6ö×&F—&V7F"À¢&6öÆÆV7F–öâçF…&öGV7EF—FÆR#¢$Væ6öçG&"Vâ&öGV7Fò"À¢&6öÆÆV7F–öâçF…&öGV7EFW‡B#¢$'W66÷"æöÖ'&Rò&VfW&Væ6–6–âFVæW"VR&V6÷&F"\:’W‡W&–Væ6–W'FVæV6Râ"À¢&6öÆÆV7F–öâçF…&öGV7D7F–öâ#¢$V×W¦"'W66""À¢&6öÆÆV7F–öâç6V&6„Æ&VÂ#¢$'W66"VâÆ&÷WF—VR"À¢&6öÆÆV7F–öâç6V&6…Æ6V†öÆFW"#¢$æöÖ'&Rò&VfW&Væ6–FVÂ&öGV7Fò"À¢&6öÆÆV7F–öâæ6ÆV%6V&6‚#¢$&÷'&""À¢&6öÆÆV7F–öâçG—Tf–ÇFW$Æ&VÂ#¢%F—òFR&öGV7Fò"À¢&6öÆÆV7F–öâçG—Tf–ÇFW$&–#¢$f–ÇG&"Æ&÷WF—VR÷"F—òFR&öGV7Fò"À¢&6öÆÆV7F–öâçG—TÆÂ#¢%FöF÷2Æ÷2F—÷2"À¢&6öÆÆV7F–öâçG—Tg&w&æ6R#¢$g&væ6–2"À¢&6öÆÆV7F–öâçG—T&V6‚#¢$W6Væ6–ÆW2FRÆ–"À¢&6öÆÆV7F–öâçG—Tv–gB#¢%&VvÆ÷2’66W6÷&–÷2"À¢&6öÆÆV7F–öâçG—T&÷‚#¢$6¦26ö×ÆWF2"À¢&6öÆÆV7F–öâçG—U6W'f–6R#¢%6W'f–6–÷2&‡\:—7VFW2’V¦V7WF—f÷2"À¢&6öÆÆV7F–öâæW‡W&–Væ6Tf–ÇFW$Æ&VÂ#¢$6öÆV66œ;6âFRW‡W&–Væ6–"À¢&6öÆÆV7F–öâç&W7VÇG4–çG&ò#¢$W‡Æ÷&÷"×VæFòòF—òFR&öGV7Fòâ"À¢&6öÆÆV7F–öâç&W7VÇG4Æ&VÂ#¢&'L:Ö7VÆ÷26ö–æ6–FVçFW2"À¢&6öÆÆV7F–öâæ6ÆV$f–ÇFW'2#¢$&÷'&"FöF÷2Æ÷2f–ÇG&÷2"À¢&6öÆÆV7F–öâæV×G•F—FÆR#¢$æò†’'L:Ö7VÆ÷26ö–æ6–FVçFW2"À¢&6öÆÆV7F–öâæV×G•FW‡B#¢%'VV&÷G&Æ'&òVÆ–Ö–æVæòFRÆ÷2f–ÇG&÷2â"À¢&6öÆÆV7F–öâç&V÷&FW$W–V'&÷r#¢%&6Æ–VçFW2†&—GVÆW2"À¢&6öÆÆV7F–öâç&V÷&FW%F—FÆR#¢%6öÆ–6—FFRçVWfòVÂÖ—6Öò'L:Ö7VÆò"À¢&6öÆÆV7F–öâç&V÷&FW%FW‡B#¢$–çG&öGV6RVÂæöÖ'&Rò&VfW&Væ6–’Æ6çF–FBâ6R;F—,:GR6öÆ–6—GVBFR6÷F—¦6œ;6âwV&FF&VRfVçGW&Æ&Wf—6Râ"À¢&6öÆÆV7F–öâç&V÷&FW%&öGV7DÆ&VÂ#¢$æöÖ'&Rò&VfW&Væ6–FVÂ&öGV7Fò"À¢&6öÆÆV7F–öâç&V÷&FW%&öGV7EÆ6V†öÆFW"#¢$V×–W¦W67&–&—"VÂæöÖ'&RFVÂ&öGV7Fò"À¢&6öÆÆV7F–öâç&V÷&FW$'WGFöâ#¢$;F—"Æ6öÆ–6—GVBFR6÷F—¦6œ;6â"À¢&6öÆÆV7F–öâç&V÷&FW$æ÷FR#¢$ÆF—7öæ–&–Æ–FBÂVÂÆ¦ò’Æ÷2FWFÆÆW26R6öæf—&ÖâG&2Æ&Wf—6œ;6âFRfVçGW&âGW26VÆV66–öæW2VVFâwV&FF2VâW7FRF—7÷6—F—fòGW&çFR3L:Ö2â"À¢&6öÆÆV7F–öâç&V÷&FW$W'&÷"#¢$VÆ–vRVæ&VfW&Væ6–l:Æ–FFRÆ27VvW&Væ6–2ò–çG&öL;¦6VÆÖçVÆÖVçFRâ"À¢&6öÆÆV7F–öâç&V÷&FW%7V66W72#¢$;F–FòGR6öÆ–6—GVBwV&FF¢"À¢&6öÆÆV7F–öâçf–WtFWF–Ç2#¢%fW"FWFÆÆW2"À¢&6öÆÆV7F–öâæFWF–Ç4W–V'&÷r#¢$6öæ6WFòFRg&væ6–"À¢&6öÆÆV7F–öâæ6Æ÷6TFWF–Ç2#¢$6W'&"FWFÆÆW2FRÆg&væ6–"À¢&6öÆÆV7F–öâæf–Æ&–Æ—G”Æ&VÂ#¢$W7FFò"À¢&6öÆÆV7F–öâç&W&F–öäÆ&VÂ#¢$FW6'&öÆÆò"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öäÆ&VÂ#¢%,;7†–Öò6ò"À¢&6öÆÆV7F–öâæ6öÆÆV7F–öäÆ&VÂ#¢$×VæFò"À¢&6öÆÆV7F–öâæFWF–Ç4F—66Æ–ÖW"#¢$W7FR6öæ6WFòFRg&væ6–W7L:VâFW6'&öÆÆò’;¦âæòW7L:F—7öæ–&ÆR&6öÆ–6—F"ò6ö×&"â"À¢&6öÆÆV7F–öâæ6öçF–çVT'&÷w6–ær#¢%6VwV—"W‡Æ÷&æFò"À¢&6öÆÆV7F–öâç&WFWfVÆ÷ÖVçB#¢$VâFW6'&öÆÆó²ÆfV6†FRÆç¦Ö–VçFò6RçVæ6–,:FW7\:—2"À¢&6öÆÆV7F–öâç&W&÷‚#¢%6R6öæf—&ÖG&2&Wf—6"6çF–FB’W'6öæÆ—¦6œ;6â"À¢&6öÆÆV7F–öâç&W&öGV7B#¢%6R6öæf—&ÖG&2&Wf—6"6çF–FB’F—7öæ–&–Æ–FB"À¢&6öÆÆV7F–öâç&W6V6öæÂ#¢%6R6öæf—&Ö6V|;¦âFV×÷&F’F—7öæ–&–Æ–FBFVÂ&÷fVVF÷""À¢&6öÆÆV7F–öâç&W6W'f–6R#¢%6R6ö÷&F–æ6V|;¦âÇVv"ÂfV6†’F—7öæ–&–Æ–FB"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öäf–Æ&ÆR#¢%6RVVFR&Wf—6"æöÖ'&RÂÖVç6¦Rò–FVçF–FB6÷'÷&F—f"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öå&Wf–WvVB#¢$Æ2÷6–öæW26R&Wf—6â6öâÆ6öÆ–6—GVBf–æÂ"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öägFW$ÆVæ6‚#¢$ÆfV6†FRÆç¦Ö–VçFò6RçVæ6–,:G&26ö×ÆWF"VÂFW6'&öÆÆòâ"À¢&6öÆÆV7F–öâçW'6öæÆ—¦F–öå6W'f–6R#¢$VÂ6W'f–6–ò6RFFÆ2æV6W6–FFW2FVÂ‡\:—7VB"À¢&6öÆÆV7F–öâævFWv”†—7F÷&–5FW‡B#¢%Vâ6öæ6WFòFRg&væ6––ç7—&FòVâÆÖFW&FR&÷6†âÂÆ–VG&’Æ†—7F÷&–f—fFRÂÔ&ÆBâ"À¢&6öÆÆV7F–öâævFWv•6VFW‡B#¢%Vâ6öæ6WFòFRg&væ6–7&VFò'F—"FVÂ—&RÖ–æW&ÂÂVÂÖ"&–W'Fò’Æ6ÆÖFRVâL:Ö&—fFòVâVÂÖ"â"À¢&6öÆÆV7F–öâævFWv”FW6W'EFW‡B#¢%Vâ6öæ6WFòFRg&væ6–&Æ6Æ–FW¢6V6ÂÆ&VæÖ–æW&Â’Æ;¦ÇF–ÖÇW¢FRÆ2GVæ2â"À¢&6öÆÆV7F–öâævFWv•F–eFW‡B#¢%Vâ6öæ6WFòFRg&væ6–&ÆFV×÷&FFR&÷62ÂVÂ—&RFRÖöçF;’VÂ&—FÖòÜ:2W6FòFRÆ2F–W'&2ÇF2â"À¢&6öÆÆV7F–öâævFWv”¦VFF…FW‡B#¢$gFW"Ö–Fæ–v‡Bæö—"’fVÇfWB6öâÆ÷26öæ6WF÷2FRg&væ6–F—7F–çF—f÷2FRfVçGW&â"À¢&wVW7BæÖWFF—FÆR#¢%6W'f–6–÷2&‡\:—7VFW2dTåEU$ÂFWFÆÆW26ö÷&F–æF÷26öâFVæ6œ;6â"À¢&wVW7BæÖWFFW67&—F–öâ#¢%67G&W,:ÖÂ&–’'&VvÆ÷2fÆ÷&ÆW26ö÷&F–æF÷2&‡\:—7VFW2Vâ–VFG&l:—2FRVâ;¦æ–6òVçFòFR6öçF7FòFRfVçGW&â"À¢&wVW7Bæ†W&ôW–V'&÷r#¢%6W'f–6–÷2&‡\:—7VFW2"À¢&wVW7Bæ†W&õF—FÆR#¢$FWFÆÆW2FVÂ‡\:—7VBÂ7V–FF÷6ÖVçFR6ö÷&F–æF÷2â"À¢&wVW7Bæ†W&ôFW67&—F–öâ#¢$FW6FRÆf—6—FFRVâ67G&R†7FÆ2fÆ÷&W2Â6ö÷&F–æÖ÷2FWFÆÆW2,:7F–6÷2çFW2FRÆÆÆVvF’GW&çFRÆW7Fæ6–ÖVF–çFRVâ6öÆòVçFòFR6öçF7Fòâ"À¢&wVW7Bæ†W&ô'WGFöâ#¢$W‡Æ÷&"6W'f–6–÷2&‡\:—7VFW2"À¢&wVW7Bç6W'f–6W4W–V'&÷r#¢%6W'f–6–÷2W'6öæÆW2&‡\:—7VFW2"À¢&wVW7Bç6W'f–6W5F—FÆR#¢%G&W2FWFÆÆW2,:7F–6÷2ÂVæ6öÆ–6—GVB6Æ&â"À¢&wVW7Bç6W'f–6W5FW‡B#¢$6öæf—&ÖÖ÷2ÂW7V6–Æ—7FÂÆV&–66œ;6âÂVÂ†÷&&–ò’ÆF—7öæ–&–Æ–FB,:7F–6çFW2FR÷&væ—¦"7VÇV–W"6W'f–6–òâ"À¢&wVW7BçF†ö&UF—FÆR#¢%67G&W,:ÖFRF†ö&R6VL:ÒVâ7RÆö¦Ö–VçFò"À¢&wVW7BçF†ö&UFW‡B#¢%Vâ67G&Rf—6—FÂ‡\:—7VB&FöÖ"ÖVF–F2’VÆVv—"FVÆâÆVçG&VvVVFR6ö÷&F–æ'6RVâÖVæ÷2FR#B†÷&27VæFòÆ6öÆ–6—GVB’ÆF—7öæ–&–Æ–FBW7L:–â6öæf—&ÖF2â"À¢&wVW7Bæ&–F—FÆR#¢%6W'f–6–òFR&–&Æ‡\:—7VB"À¢&wVW7Bæ&–FW‡B#¢%VæW7V6–Æ—7Ff—6—FÆ‡\:—7VB&FöÖ"Æ2ÖVF–F2æV6W6&–2&VÂ6W'f–6–òâÆ&–FV7VF’ÆVçG&Vv6R6ö÷&F–æâ;¦æ–6ÖVçFRFW7\:—2FRÆ6öæf—&Ö6œ;6ã²æò6R×VW7G&Vâ6L:ÆövòFR&–2Æ—7F2â"À¢&wVW7BæfÆ÷vW%F—FÆR#¢$fÆ÷&W2&Æö66œ;6â"À¢&wVW7BæfÆ÷vW%FW‡B#¢%6R&W&Vâ&Öò’VæF&¦WFW'6öæÂ&VæÆÆVvFRö66œ;6â’6RVçG&VvVâVÂ†÷FVÂÂÆö¦Ö–VçFòòÇVv"6÷&FFòÆ†÷&6öçfVæ–Fâ"À¢&wVW7Bç&WVW7E6W'f–6R#¢%6öÆ–6—F"Vâ6W'f–6–ò&VÂ‡\:—7VB"À¢&wVW7Bçf–Wu6W'f–6R#¢%fW"6W'f–6–ò&‡\:—7VFW2"À¢&wVW7Bç&ö6W74W–V'&÷r#¢$<;6ÖògVæ6–öæ"À¢&wVW7Bç&ö6W75F—FÆR#¢%6–×ÆR&VÂ‡\:—7VBÂ6Æ&ò&VÂWV—òâ"À¢&wVW7Bç7FWF—FÆR#¢$6ö×'FÆòW6Væ6–Â"À¢&wVW7Bç7FWFW‡B#¢$L:Övæ÷2&Vœ:–âW2VÂ6W'f–6–òÂL;6æFR6RæV6W6—F’VÂ†÷&&–ò&VfW&–Fòâ"À¢&wVW7Bç7FW%F—FÆR#¢$6öæf—&ÖÖ÷2VÂ'&VvÆò"À¢&wVW7Bç7FW%FW‡B#¢$fVçGW&6öæf—&ÖÂW7V6–Æ—7FFV7VFòÂVÂF–V×òFR&W&6œ;6â’Æ÷2FWFÆÆW2,:7F–6÷2â"À¢&wVW7Bç7FW5F—FÆR#¢%VæVçG&Vv6ö÷&F–æF"À¢&wVW7Bç7FW5FW‡B#¢$Æf—6—FÂ&W&6œ;6â’VçG&Vv6RvW7F–öæâÖVF–çFRVâ;¦æ–6òVçFòFR6öçF7Fòâ"À¢&wVW7Bæ7FF—FÆR#¢$L:Övæ÷2\:’æV6W6—FVÂ‡\:—7VB’7\:æFòâ"À¢&wVW7Bæ7FFW‡B#¢%&Wf—6&VÖ÷2Æ6öÆ–6—GVB’&W7öæFW&VÖ÷26öâVÂ'&VvÆòÜ:2,:7F–6òâ ¢Ğ§Ó°§Ò‚’“°

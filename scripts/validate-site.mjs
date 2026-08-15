@@ -298,16 +298,21 @@ if (/amassiri@aventuraksa\.com|Waseem@aventuraksa\.com/i.test(searchableText)) {
 }
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-if (/sunset-moment|experience-sunset-moment/i.test(searchableText + sitemap) || htmlFiles.includes("experience-sunset-moment.html")) {
+const sitemapFiles = ["sitemap-ar.xml", "sitemap-en.xml", "sitemap-es.xml"];
+const sitemapContents = sitemapFiles.map((file) => fs.readFileSync(path.join(root, file), "utf8"));
+if (/sunset-moment|experience-sunset-moment/i.test(searchableText + sitemap + sitemapContents.join("\n")) || htmlFiles.includes("experience-sunset-moment.html")) {
   fail("experiences", "the retired 30-minute Sunset Moment program remains public");
 }
 const customDomainPath = path.join(root, "CNAME");
 if (fs.existsSync(customDomainPath) && fs.readFileSync(customDomainPath, "utf8").trim() !== "aventuraksa.com") {
   fail("CNAME", "must point GitHub Pages at aventuraksa.com when the custom domain is enabled");
 }
+for (const file of sitemapFiles) {
+  if (!sitemap.includes(`<loc>https://aventuraksa.com/${file}</loc>`)) fail("sitemap.xml", `missing ${file}`);
+}
 for (const file of publicFiles) {
   const expected = file === "index.html" ? "https://aventuraksa.com/" : `https://aventuraksa.com/${file}`;
-  if (!sitemap.includes(`<loc>${expected}</loc>`)) fail("sitemap.xml", `missing ${file}`);
+  if (!sitemapContents[0].includes(`<loc>${expected}</loc>`)) fail("sitemap-ar.xml", `missing ${file}`);
 }
 
 if (errors.length) {

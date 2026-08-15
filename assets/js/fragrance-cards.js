@@ -8,21 +8,30 @@
   var experienceId = root.getAttribute("data-experience-id") || "";
   var cards = {
     sea: [
-      { id: "sea-experience", name: "Sea Experience", image: "assets/images/fragrance-cards/sea-experience.webp" }
+      { id: "sea-experience", name: "Sea Experience", image: "assets/images/fragrance-cards/sea-experience.webp?v=20260815-1" }
     ],
     historic: [
-      { id: "roshan", name: "Roshan", image: "assets/images/fragrance-cards/roshan.webp" }
+      { id: "roshan", name: "Roshan", image: "assets/images/fragrance-cards/roshan.webp?v=20260815-1" }
     ],
     desert: [
-      { id: "last-light", name: "Last Light", image: "assets/images/fragrance-cards/last-light.webp" }
+      { id: "last-light", name: "Last Light", image: "assets/images/fragrance-cards/last-light.webp?v=20260815-1" }
     ],
     taif: [
-      { id: "taif-experience", name: "Taif Experience", image: "assets/images/fragrance-cards/taif-experience.webp" }
+      { id: "taif-experience", name: "Taif Experience", image: "assets/images/fragrance-cards/taif-experience.webp?v=20260815-1" }
     ],
     jeddah: [
-      { id: "after-midnight-noir", name: "After Midnight Noir", image: "assets/images/fragrance-cards/after-midnight-noir.webp" },
-      { id: "after-midnight-velvet", name: "After Midnight Velvet", image: "assets/images/fragrance-cards/after-midnight-velvet.webp" }
+      { id: "after-midnight-noir", name: "After Midnight Noir", image: "assets/images/fragrance-cards/after-midnight-noir.webp?v=20260815-1" },
+      { id: "after-midnight-velvet", name: "After Midnight Velvet", image: "assets/images/fragrance-cards/after-midnight-velvet.webp?v=20260815-1" }
     ]
+  };
+
+  var localizedNames = {
+    "sea-experience": { ar: "سي إكسبيرينس", en: "Sea Experience", es: "Sea Experience" },
+    roshan: { ar: "روشان", en: "Roshan", es: "Roshan" },
+    "last-light": { ar: "لاست لايت", en: "Last Light", es: "Last Light" },
+    "taif-experience": { ar: "تجربة الطائف", en: "Taif Experience", es: "Experiencia Taif" },
+    "after-midnight-noir": { ar: "After Midnight Noir", en: "After Midnight Noir", es: "After Midnight Noir" },
+    "after-midnight-velvet": { ar: "After Midnight Velvet", en: "After Midnight Velvet", es: "After Midnight Velvet" }
   };
 
   if (!cards[experienceId]) return;
@@ -87,10 +96,14 @@
     return copy[language()][key] || copy.en[key] || key;
   }
 
+  function displayName(card) {
+    return (localizedNames[card.id] && localizedNames[card.id][language()]) || card.name;
+  }
+
   function cardMarkup(card) {
     return [
       '<article class="aventura-fragrance-card" data-fragrance-id="' + card.id + '">',
-      '  <div class="aventura-fragrance-card-media"><img src="' + card.image + '" alt="' + card.name + '" loading="eager" decoding="async"></div>',
+      '  <div class="aventura-fragrance-card-media"><img src="' + card.image + '" alt="' + displayName(card) + '" loading="eager" decoding="async"></div>',
       '  <div class="aventura-fragrance-card-actions">',
       '    <span class="status coming" data-fragrance-copy="soon">' + t("soon") + '</span>',
       '    <button class="btn btn-outline-dark aventura-fragrance-interest" type="button" data-fragrance-interest="' + card.id + '" data-fragrance-name="' + card.name + '">' + t("interest") + '</button>',
@@ -152,7 +165,7 @@
   function trackInterest(card) {
     var params = {
       product_id: card.id,
-      product_name: card.name,
+      product_name: displayName(card),
       page_path: location.pathname,
       page_language: document.documentElement.lang || ""
     };
@@ -181,11 +194,11 @@
       button.addEventListener("click", function () {
         activeCard = cards[experienceId].find(function (card) { return card.id === button.getAttribute("data-fragrance-interest"); });
         if (!activeCard) return;
-        fragranceField.value = activeCard.name;
-        dialogName.textContent = activeCard.name;
+        fragranceField.value = displayName(activeCard);
+        dialogName.textContent = displayName(activeCard);
         status.textContent = "";
         form.reset();
-        fragranceField.value = activeCard.name;
+        fragranceField.value = displayName(activeCard);
         if (typeof dialog.showModal === "function") dialog.showModal(); else dialog.setAttribute("open", "");
       });
     });
@@ -203,11 +216,11 @@
       event.preventDefault();
       if (!activeCard) return;
       var data = new FormData(form);
-      data.set("fragrance", activeCard.name);
+      data.set("fragrance", displayName(activeCard));
       data.set("fragrance_id", activeCard.id);
       data.set("page", location.href);
       data.set("language", document.documentElement.lang || "");
-      data.set("_subject", "اهتمام بعطر — " + activeCard.name);
+      data.set("_subject", "اهتمام بعطر — " + displayName(activeCard));
       data.set("_captcha", "false");
       submit.disabled = true;
       submit.textContent = t("sending");
@@ -223,7 +236,7 @@
           status.textContent = t("success");
           trackInterest(activeCard);
           form.reset();
-          fragranceField.value = activeCard.name;
+          fragranceField.value = displayName(activeCard);
         })
         .catch(function () { status.textContent = t("error"); })
         .finally(function () {

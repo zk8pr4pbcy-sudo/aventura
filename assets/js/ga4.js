@@ -282,11 +282,11 @@
 
   function patchPerfumeStoryPaths() {
     var storyPaths = {
-      "perfume-roshan": "assets/images/fragrance-cards/roshan.webp",
-      "perfume-sea": "assets/images/fragrance-cards/sea-experience.webp",
-      "perfume-taif": "assets/images/fragrance-cards/taif-experience.webp",
-      "perfume-noir": "assets/images/fragrance-cards/after-midnight-noir.webp",
-      "perfume-velvet": "assets/images/fragrance-cards/after-midnight-velvet.webp"
+      "perfume-roshan": "assets/images/fragrance-cards/roshan.webp?v=20260815-1",
+      "perfume-sea": "assets/images/fragrance-cards/sea-experience.webp?v=20260815-1",
+      "perfume-taif": "assets/images/fragrance-cards/taif-experience.webp?v=20260815-1",
+      "perfume-noir": "assets/images/fragrance-cards/after-midnight-noir.webp?v=20260815-1",
+      "perfume-velvet": "assets/images/fragrance-cards/after-midnight-velvet.webp?v=20260815-1"
     };
 
     Object.keys(storyPaths).forEach(function (id) {
@@ -341,11 +341,13 @@
     var card = document.createElement("article");
     card.className = "perfume-card perfume-card-with-actions";
     card.setAttribute("data-qa-last-light", "");
+    card.setAttribute("data-product-id", "perfume-last-light");
+    card.setAttribute("data-boutique-item", "");
     card.setAttribute("data-category", "desert");
     card.setAttribute("data-product-type", "fragrance");
     card.innerHTML = [
       '<div class="perfume-card-media">',
-      '  <img src="assets/images/fragrance-cards/last-light.webp" width="900" height="1125" loading="eager" decoding="async" alt="Last Light">',
+      '  <img src="assets/images/fragrance-cards/last-light.webp?v=20260815-1" width="900" height="1125" loading="eager" decoding="async" alt="Last Light">',
       '  <button class="perfume-story-trigger" type="button" data-qa-last-light-story><span data-qa-last-light-story-label></span></button>',
       '</div>',
       '<div class="perfume-card-copy"><h3 data-qa-last-light-title></h3><p data-qa-last-light-text></p></div>',
@@ -405,7 +407,7 @@
         var image = dialog.querySelector("[data-perfume-story-image]");
         var title = dialog.querySelector("[data-perfume-story-title]");
         if (image) {
-          image.src = "assets/images/fragrance-cards/last-light.webp";
+          image.src = "assets/images/fragrance-cards/last-light.webp?v=20260815-1";
           image.alt = textFor("collection.p3Title", "Last Light");
         }
         if (title) title.textContent = textFor("collection.p3Title", "Last Light");
@@ -434,6 +436,37 @@
     syncVisibility();
   }
 
+  function addBoutiqueFragranceCtas() {
+    if (!document.body || document.body.getAttribute("data-page") !== "collection") return;
+    var destinations = {
+      "perfume-sea": "experience-sea.html#aventura-fragrances",
+      "perfume-roshan": "experience-historic-jeddah.html#aventura-fragrances",
+      "perfume-last-light": "experience-desert.html#aventura-fragrances",
+      "perfume-taif": "experience-taif.html#aventura-fragrances",
+      "perfume-noir": "experience-jeddah-day.html#aventura-fragrances",
+      "perfume-velvet": "experience-jeddah-day.html#aventura-fragrances"
+    };
+    document.querySelectorAll('.perfume-card[data-product-id]').forEach(function (card) {
+      var existing = card.querySelector('[data-boutique-fragrance-interest]');
+      if (existing) {
+        existing.textContent = textFor('collection.interestJourneyButton', 'Explore fragrance & register interest');
+        return;
+      }
+      var id = card.getAttribute('data-product-id');
+      if (!destinations[id]) return;
+      var action = document.createElement('a');
+      action.className = 'perfume-interest-button';
+      action.href = destinations[id];
+      action.setAttribute('data-boutique-fragrance-interest', id);
+      action.textContent = textFor('collection.interestJourneyButton', 'Explore fragrance & register interest');
+      action.addEventListener('click', function () {
+        event('product_interest_click', { product_id: id, source: 'boutique', page_language: document.documentElement.lang || '' });
+      });
+      var copy = card.querySelector('.perfume-card-copy');
+      if (copy) copy.appendChild(action);
+    });
+  }
+
   function normalizeRenderedSpanish() {
     if ((document.documentElement.lang || "").toLowerCase() !== "es") return;
     var replacements = {
@@ -454,6 +487,7 @@
     patchCorporateGuestServicesLink();
     patchContactRequestTypes();
     addLastLightToBoutique();
+    addBoutiqueFragranceCtas();
     normalizeRenderedSpanish();
     applySeoEnhancements();
   }
@@ -466,6 +500,7 @@
     window.setTimeout(function () {
       patchLaunchCopy();
       patchPerfumeStoryPaths();
+      addBoutiqueFragranceCtas();
       normalizeRenderedSpanish();
       applySeoEnhancements();
     }, 0);
