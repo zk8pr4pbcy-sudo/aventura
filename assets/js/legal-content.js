@@ -9,7 +9,7 @@
   var documents = {
     ar: {
       privacy: {
-        lead: "آخر تحديث: 9 أغسطس 2026",
+        lead: "آخر تحديث: 15 أغسطس 2026",
         identity: [
           "جهة التحكم بالبيانات: مؤسسة أفنتورا لتنظيم وإدارة الفعاليات، منشأة سعودية مسجلة بالسجل التجاري رقم 4030583057.",
           "لأسئلة الخصوصية أو ممارسة الحقوق: contact@aventuraksa.com — يرجى كتابة «الخصوصية» في عنوان الرسالة."
@@ -32,7 +32,8 @@
                 "بيانات الطلب: نوع الخدمة، التاريخ والوقت، عدد الضيوف، اللغة، تفاصيل البرنامج أو الفعالية، التفضيلات، وخيارات النقل أو الضيافة التي تذكرها.",
                 "بيانات خدمات الضيوف عند إدخالها: اسم المستلم، موقع الفندق أو التسليم، وقت الزيارة أو التسليم، رسالة البطاقة، وتفضيلات الثوب أو العباية أو الورد.",
                 "بيانات التعاون: بيانات التواصل، نوع الخدمة، التراخيص أو الروابط المهنية التي تختار مشاركتها، اللغات، نطاق العمل والرسالة التعريفية.",
-                "بيانات تقنية محدودة على جهازك: اختيار اللغة، اختيارات البوتيك، وتذكير عرض المنتجات. لا ننشئ حسابات للعملاء ولا نجمع بيانات دفع عبر الموقع حاليًا."
+                "بيانات الاهتمام بالعطور: الاسم ووسيلة التواصل والعطر الذي اخترته، وذلك فقط عندما تختار تسجيل اهتمامك وتمنح الموافقة المطلوبة.",
+                "بيانات تقنية واستخدامية محدودة: اختيار اللغة، اختيارات البوتيك، وتذكير عرض المنتجات، وبيانات استخدام الموقع في Google Analytics 4 عند موافقتك على التحليلات الاختيارية. لا ننشئ حسابات للعملاء ولا نجمع بيانات دفع عبر الموقع حاليًا."
               ]},
               { type: "callout", text: "يرجى عدم إرسال أرقام الهوية أو الجوازات أو البيانات الصحية أو أي معلومات حساسة عبر نموذج الموقع أو واتساب. إذا وصلت إلينا بيانات لا نحتاجها، سنتخذ ما يلزم لحذفها أو تقليل استخدامها وفق النظام." }
             ]
@@ -40,7 +41,7 @@
           {
             heading: "3. مصادر البيانات وطريقة جمعها",
             blocks: [
-              { type: "p", text: "تصلنا البيانات مباشرة منك عبر نموذج الطلب، البريد الإلكتروني، واتساب أو نموذج التعاون. وقد تصلنا من شركة أو وكالة سفر أو جهة عمل تطلب خدمة محلية نيابة عن ضيوفها؛ ويتعين على تلك الجهة أن تكون مخولة بالمشاركة وأن تبلغ أصحاب البيانات عند الاقتضاء. وعند تلقّي بيانات من هذه الجهات، تُشعر أفنتورا صاحب البيانات بهذه السياسة أو تتيحها له في الوقت الذي يقتضيه النظام، ما لم يوجد استثناء نظامي." },
+              { type: "p", text: "تصلنا البيانات مباشرة منك عبر نموذج الطلب أو نموذج الاهتمام بالعطور أو البريد الإلكتروني أو واتساب أو نموذج التعاون. وقد تصلنا من شركة أو وكالة سفر أو جهة عمل تطلب خدمة محلية نيابة عن ضيوفها؛ ويتعين على تلك الجهة أن تكون مخولة بالمشاركة وأن تبلغ أصحاب البيانات عند الاقتضاء. وعند تلقّي بيانات من هذه الجهات، تُشعر أفنتورا صاحب البيانات بهذه السياسة أو تتيحها له في الوقت الذي يقتضيه النظام، ما لم يوجد استثناء نظامي." },
               { type: "p", text: "الحقول المطلوبة في النموذج محدودة بما يلزم لبدء الطلب. أما التفاصيل الإضافية، مثل موقع الفندق أو رسالة البطاقة، فهي اختيارية ما لم تكن ضرورية للخدمة التي طلبتها." }
             ]
           },
@@ -52,6 +53,7 @@
                 "تنسيق وتنفيذ فعالية أو تجربة أو خدمة ضيف مؤكدة، بما في ذلك التواصل مع المورد المناسب بالقدر اللازم.",
                 "إدارة العلاقة مع عملاء الشركات والشركاء، وحفظ السجلات التشغيلية والمالية والالتزامات النظامية.",
                 "حماية الموقع وعمليات أفنتورا، ومعالجة الشكاوى أو النزاعات، وتحسين تجربة الطلب دون استخدام بيانات النموذج للتسويق المباشر.",
+                "إبلاغك عند توفر عطر محدد فقط إذا سجلت اهتمامك ومنحت موافقة منفصلة لهذا الغرض.",
                 "استخدام صور أو مقاطع ضيوف فقط عندما تمنح موافقة منفصلة ومحددة لهذا الغرض."
               ]},
               { type: "p", text: "لا نبيع البيانات الشخصية ولا نؤجرها ولا نستخدم بيانات نموذج الطلب لإرسال مواد تسويقية ما لم تطلب أنت ذلك بوضوح وبشكل منفصل." }
@@ -60,7 +62,7 @@
           {
             heading: "5. المسوغات النظامية",
             blocks: [
-              { type: "p", text: "تعالج أفنتورا البيانات عند الحاجة لاتخاذ خطوات بطلب منك قبل التعاقد أو لتنفيذ اتفاقية مؤكدة، وللوفاء بالتزامات نظامية مثل حفظ السجلات، ولتحقيق مصلحة مشروعة متوازنة كأمن العمليات ومنع إساءة الاستخدام. نعتمد على موافقة صريحة واختيارية للصور والمقاطع، أو لأي غرض لا يلزم لتقديم الخدمة. ولا يؤثر رفض موافقة الصور أو سحبها في الخدمة الأساسية." }
+              { type: "p", text: "تعالج أفنتورا البيانات عند الحاجة لاتخاذ خطوات بطلب منك قبل التعاقد أو لتنفيذ اتفاقية مؤكدة، وللوفاء بالتزامات نظامية مثل حفظ السجلات، ولتحقيق مصلحة مشروعة متوازنة كأمن العمليات ومنع إساءة الاستخدام. نعتمد على موافقة صريحة واختيارية للصور والمقاطع، ولتسجيل الاهتمام بالعطور، وللتحليلات الاختيارية. ولا يؤثر رفض هذه الموافقات أو سحبها في الخدمة الأساسية." }
             ]
           },
           {
@@ -69,17 +71,19 @@
               { type: "p", text: "نفصح عن الحد الأدنى اللازم من البيانات فقط، ولأغراض محددة، إلى الجهات التالية عند الحاجة:" },
               { type: "list", items: [
                 "FormSubmit عند اختيار إرسال الطلب عبر البريد من نموذج الموقع. يعالج مزود الخدمة بيانات الإرسال لإيصالها إلى أفنتورا، وتذكر وثائقه أن أرشيف الإرسالات يحتفظ به لمدة تصل إلى 30 يومًا.",
+                "Google Analytics 4 عند موافقتك على التحليلات الاختيارية. نقيس به استخدام الموقع وأحداثًا عامة مثل نوع الطلب أو قناة الإرسال أو ضغطات واتساب أو الاهتمام بالعطر، ولا نرسل إليه الاسم أو رقم الهاتف أو البريد الإلكتروني أو محتوى الرسائل.",
                 "مقدمو البريد الإلكتروني وواتساب عندما تختار التواصل عبر تلك القنوات، وتخضع معالجة تلك الخدمات كذلك لسياساتها الخاصة.",
                 "الموردون المختارون لتنفيذ خدمة مؤكدة أو إعداد عرض دقيق، مثل المرشدين المرخصين عند الحاجة، شركات النقل، المواقع، القوارب، المصورين، أو مزودي الورد والخياطة؛ ولا نشارك إلا البيانات اللازمة للخدمة.",
                 "العميل من الشركة أو الوكالة الذي قدم الطلب نيابة عن الضيف، والجهات الحكومية أو القضائية متى تطلب النظام ذلك."
               ]},
-              { type: "p", text: "قد تنطوي خدمات FormSubmit والبريد الإلكتروني وواتساب على معالجة أو وصول إلى البيانات من خارج المملكة العربية السعودية. عند حدوث نقل دولي، تعمل أفنتورا على أن يكون ذلك وفق المتطلبات والضمانات المطبقة في نظام حماية البيانات الشخصية." }
+              { type: "p", text: "قد تنطوي خدمات FormSubmit وGoogle والبريد الإلكتروني وواتساب على معالجة أو وصول إلى البيانات من خارج المملكة العربية السعودية. عند حدوث نقل دولي، تعمل أفنتورا على أن يكون ذلك وفق المتطلبات والضمانات المطبقة في نظام حماية البيانات الشخصية." }
             ]
           },
           {
             heading: "7. التخزين المحلي وملفات الارتباط",
             blocks: [
-              { type: "p", text: "لا يستخدم الموقع حاليًا ملفات تعريف ارتباط إعلانية أو أدوات تحليل خارجية أو بكسلات تسويقية. يحفظ على جهازك اختيار اللغة إلى أن تحذفه من المتصفح. كما يحتفظ باختيارات البوتيك وتذكيرات عرض المنتجات لمدة تصل إلى 30 يومًا، ثم يتوقف عن استخدامها. وتبقى أحداث التفاعل المجهّزة داخل المتصفح مجهولة ولا تتضمن الاسم أو الهاتف أو البريد أو محتوى الرسائل." }
+              { type: "p", text: "لا يستخدم الموقع ملفات تعريف ارتباط إعلانية أو بكسلات تسويقية. نستخدم Google Analytics 4 فقط بعد موافقتك على التحليلات الاختيارية، لقياس الصفحات والميزات المستخدمة وأحداث التفاعل العامة. أعددنا GA4 من دون Google Signals أو تخصيص إعلاني، ولا نرسل إليه الاسم أو رقم الهاتف أو البريد الإلكتروني أو محتوى الرسائل. يحفظ الموقع اختيار اللغة إلى أن تحذفه من المتصفح، كما يحتفظ باختيارات البوتيك وتذكيرات عرض المنتجات لمدة تصل إلى 30 يومًا. يمكنك قبول أو رفض التحليلات عند أول زيارة، وتغيير اختيارك من الزر أدناه." },
+              { type: "analytics-control", label: "إدارة تفضيلات التحليلات" }
             ]
           },
           {
@@ -90,6 +94,8 @@
                 "الطلبات غير المؤكدة والمراسلات ذات الصلة: حتى 12 شهرًا من آخر تواصل، ثم تُحذف أو تُخفى هويتها ما لم يوجد سبب مشروع للاحتفاظ بها مدة أطول.",
                 "سجلات الخدمات المؤكدة والعروض المعتمدة: حتى 5 سنوات من انتهاء الخدمة، مع الاحتفاظ بالسجلات المالية للمدة التي يتطلبها النظام.",
                 "طلبات التعاون: حتى 12 شهرًا من اكتمال المراجعة ما لم يبدأ تعاون فعلي.",
+                "طلبات الاهتمام بالعطور: حتى تسحب موافقتك أو حتى 12 شهرًا، أيهما أسبق.",
+                "بيانات التحليلات: لا تحتفظ أفنتورا بمعرّفات التحليلات على خوادمها؛ وتُدار مدة الاحتفاظ في Google Analytics وفق إعدادات الخدمة السارية وقت المعالجة.",
                 "الصور غير المعتمدة للنشر: حتى 90 يومًا من تسليمها أو انتهاء الغرض التشغيلي. أما الصور المعتمدة للنشر فتُدار وفق القسم 9 أدناه."
               ]},
               { type: "p", text: "نطبق تدابير فنية وتنظيمية معقولة للحد من الوصول غير المصرح به، ونقصر الوصول على من يحتاجه للعمل. عند انتهاء مدة الحفظ، نحذف البيانات أو نتلفها بطريقة آمنة، ونطلب من الجهات التي أفصحنا لها عن البيانات الإتلاف عند الاقتضاء، مع مراعاة أي التزام نظامي بالاحتفاظ." }
@@ -218,7 +224,7 @@
     },
     en: {
       privacy: {
-        lead: "Last updated: 9 August 2026",
+        lead: "Last updated: 15 August 2026",
         identity: [
           "Data controller: Aventura Event Management Establishment, a Saudi establishment registered under Commercial Registration No. 4030583057.",
           "For privacy questions or rights requests: contact@aventuraksa.com — please use “Privacy” in the subject line."
@@ -241,7 +247,8 @@
                 "Request data: service type, date and time, guest count, language, event or itinerary details, preferences, and transport or hospitality choices you provide.",
                 "Guest-service data when entered: recipient name, hotel or delivery location, visit or delivery time, card message, and thobe, abaya, or flower preferences.",
                 "Partnership data: contact information, service type, licences or professional links you choose to share, languages, service coverage, and introduction message.",
-                "Limited device data: language choice, boutique selections, and product-reminder preference. The website does not create customer accounts or collect payment information at this time."
+                "Fragrance-interest data: your name, contact method and selected fragrance, but only when you choose to register interest and give the required consent.",
+                "Limited technical and usage data: language choice, boutique selections, product-reminder preference and website-usage data in Google Analytics 4 when you agree to optional analytics. The website does not create customer accounts or collect payment information at this time."
               ]},
               { type: "callout", text: "Please do not send national ID numbers, passport numbers, health data, or other sensitive information through the website form or WhatsApp. If we receive data we do not need, we will take appropriate steps to delete it or limit its use in line with applicable law." }
             ]
@@ -249,7 +256,7 @@
           {
             heading: "3. Sources and collection methods",
             blocks: [
-              { type: "p", text: "We receive data directly from you through the request form, email, WhatsApp, or the partnership form. We may also receive it from a company, travel agency, or employer that requests a local service for its guests; that organisation must be authorised to share the data and notify the relevant people where required. When Aventura receives data this way, it will provide this policy to the relevant person or otherwise notify them when required by law, unless a legal exception applies." },
+              { type: "p", text: "We receive data directly from you through the request form, fragrance-interest form, email, WhatsApp, or the partnership form. We may also receive it from a company, travel agency, or employer that requests a local service for its guests; that organisation must be authorised to share the data and notify the relevant people where required. When Aventura receives data this way, it will provide this policy to the relevant person or otherwise notify them when required by law, unless a legal exception applies." },
               { type: "p", text: "Required form fields are limited to what is needed to start the request. Extra details, such as a hotel location or gift-card message, are optional unless they are necessary for the service you request." }
             ]
           },
@@ -261,6 +268,7 @@
                 "To coordinate and deliver a confirmed event, experience, or guest service, including sharing the minimum necessary detail with the right provider.",
                 "To manage relationships with corporate clients and partners, and maintain operational, financial, and legal records.",
                 "To protect Aventura's website and operations, handle complaints or disputes, and improve the request experience without using form data for direct marketing.",
+                "To tell you when a specific fragrance becomes available, but only if you register interest and give separate consent for that purpose.",
                 "To use guest photos or videos only when you give separate, specific permission for that purpose."
               ]},
               { type: "p", text: "We do not sell or rent personal data. We do not use request-form data for marketing communications unless you separately and clearly ask us to." }
@@ -269,7 +277,7 @@
           {
             heading: "5. Lawful grounds for processing",
             blocks: [
-              { type: "p", text: "Aventura processes data where necessary to take steps you request before a contract or to perform a confirmed agreement, to meet legal obligations such as record keeping, and for balanced legitimate interests such as operational security and misuse prevention. We rely on separate, voluntary consent for photos and videos, or any purpose that is not needed to provide the service. Declining or withdrawing photo consent does not affect the core service." }
+              { type: "p", text: "Aventura processes data where necessary to take steps you request before a contract or to perform a confirmed agreement, to meet legal obligations such as record keeping, and for balanced legitimate interests such as operational security and misuse prevention. We rely on separate, voluntary consent for photos and videos, fragrance-interest registration and optional analytics. Declining or withdrawing these consents does not affect the core service." }
             ]
           },
           {
@@ -278,17 +286,19 @@
               { type: "p", text: "We disclose the minimum necessary data only, and for specific purposes, to the following parties where needed:" },
               { type: "list", items: [
                 "FormSubmit when you choose to send a request by email through the website form. It processes the submission to deliver it to Aventura; its documentation says submission archives are retained for up to 30 days.",
+                "Google Analytics 4 when you agree to optional analytics. It measures website use and general events such as request type, sending channel, WhatsApp clicks or fragrance interest; we do not send it names, telephone numbers, email addresses or message content.",
                 "Email and WhatsApp providers when you choose those channels. Their processing is also governed by their own privacy practices.",
                 "Selected providers needed to quote accurately or deliver a confirmed service, such as suitably licensed guides where required, transport companies, venues, boats, photographers, florists, and tailoring providers. We share only what the service requires.",
                 "The company or agency that submitted a request for its guest, and governmental or judicial bodies where required by law."
               ]},
-              { type: "p", text: "FormSubmit, email, and WhatsApp services may involve processing or access to data from outside Saudi Arabia. Where an international transfer occurs, Aventura works to ensure it is made in accordance with the applicable Saudi Personal Data Protection Law requirements and safeguards." }
+              { type: "p", text: "FormSubmit, Google, email, and WhatsApp services may involve processing or access to data from outside Saudi Arabia. Where an international transfer occurs, Aventura works to ensure it is made in accordance with the applicable Saudi Personal Data Protection Law requirements and safeguards." }
             ]
           },
           {
             heading: "7. Local storage and cookies",
             blocks: [
-              { type: "p", text: "The website does not currently use advertising cookies, third-party analytics tools, or marketing pixels. It stores your language choice on your device until you clear it in your browser. Boutique selections and product-reminder preferences are stored for up to 30 days and then cease to be used. Interaction events prepared in the browser are anonymous and do not include names, phone numbers, emails, or message content." }
+              { type: "p", text: "The website does not use advertising cookies or marketing pixels. We use Google Analytics 4 only after you agree to optional analytics, to measure pages, features and general interaction events. GA4 is configured without Google Signals or ad personalisation, and we do not send it names, phone numbers, email addresses or message content. The website stores your language choice until you clear it in your browser; boutique selections and product reminders are stored for up to 30 days. You can accept or reject analytics on your first visit and change your choice below." },
+              { type: "analytics-control", label: "Manage analytics preferences" }
             ]
           },
           {
@@ -299,6 +309,8 @@
                 "Unconfirmed requests and related correspondence: up to 12 months after the last contact, then deleted or anonymised unless a legitimate reason requires longer retention.",
                 "Confirmed-service records and accepted proposals: up to 5 years after the service ends; financial records may be kept for any longer period required by law.",
                 "Partnership requests: up to 12 months after the review is completed unless an active relationship begins.",
+                "Fragrance-interest requests: until you withdraw consent or for up to 12 months, whichever is earlier.",
+                "Analytics data: Aventura does not keep analytics identifiers on its own servers; Google Analytics retention is managed under the service settings in force when the processing takes place.",
                 "Photos not approved for publication: up to 90 days after delivery to the guest or the end of the operational purpose. Published media is handled under section 9."
               ]},
               { type: "p", text: "We apply reasonable technical and organisational safeguards and limit access to people who need the data for their work. At the end of a retention period, we securely delete or destroy data and, where appropriate, ask recipients to do the same, subject to any legal retention obligation." }
@@ -427,7 +439,7 @@
     },
     es: {
       privacy: {
-        lead: "Última actualización: 9 de agosto de 2026",
+        lead: "Última actualización: 15 de agosto de 2026",
         identity: [
           "Responsable del tratamiento: Establecimiento Aventura de Gestión de Eventos, entidad saudí inscrita en el Registro Comercial n.º 4030583057.",
           "Para consultas de privacidad o ejercicio de derechos: contact@aventuraksa.com — indica «Privacidad» en el asunto."
@@ -450,7 +462,8 @@
                 "Datos de la solicitud: tipo de servicio, fecha y hora, número de huéspedes, idioma, detalles del programa o evento, preferencias y opciones de transporte u hospitalidad que indiques.",
                 "Datos de servicios para huéspedes, cuando se introducen: nombre del destinatario, hotel o lugar de entrega, hora de visita o entrega, mensaje de tarjeta y preferencias de thobe, abaya o flores.",
                 "Datos de colaboración: contacto, tipo de servicio, licencias o enlaces profesionales que decidas compartir, idiomas, cobertura y mensaje de presentación.",
-                "Datos limitados del dispositivo: idioma elegido, selecciones de la boutique y preferencia de recordatorio de productos. El sitio no crea cuentas de clientes ni recoge datos de pago por ahora."
+                "Datos de interés en fragancias: tu nombre, medio de contacto y la fragancia seleccionada, únicamente cuando eliges registrar tu interés y otorgas el consentimiento requerido.",
+                "Datos técnicos y de uso limitados: idioma elegido, selecciones de la boutique, preferencia de recordatorio de productos y datos de uso del sitio en Google Analytics 4 cuando aceptas la analítica opcional. El sitio no crea cuentas de clientes ni recoge datos de pago por ahora."
               ]},
               { type: "callout", text: "No envíes números de identidad, pasaporte, datos de salud u otra información sensible mediante el formulario o WhatsApp. Si recibimos datos que no necesitamos, tomaremos medidas adecuadas para eliminarlos o limitar su uso conforme a la ley aplicable." }
             ]
@@ -458,7 +471,7 @@
           {
             heading: "3. Fuentes y formas de recogida",
             blocks: [
-              { type: "p", text: "Recibimos datos directamente de ti mediante el formulario de solicitud, el correo, WhatsApp o el formulario de colaboración. También podemos recibirlos de una empresa, agencia de viajes o empleador que solicita un servicio local para sus huéspedes; esa entidad debe estar autorizada para compartir los datos e informar a las personas afectadas cuando corresponda. Cuando Aventura recibe datos de esta forma, facilitará esta política a la persona afectada o le informará de ella cuando la ley lo exija, salvo que exista una excepción legal." },
+              { type: "p", text: "Recibimos datos directamente de ti mediante el formulario de solicitud, el formulario de interés en fragancias, el correo, WhatsApp o el formulario de colaboración. También podemos recibirlos de una empresa, agencia de viajes o empleador que solicita un servicio local para sus huéspedes; esa entidad debe estar autorizada para compartir los datos e informar a las personas afectadas cuando corresponda. Cuando Aventura recibe datos de esta forma, facilitará esta política a la persona afectada o le informará de ella cuando la ley lo exija, salvo que exista una excepción legal." },
               { type: "p", text: "Los campos obligatorios se limitan a lo necesario para iniciar la solicitud. Los datos adicionales, como la ubicación del hotel o el mensaje de una tarjeta, son opcionales salvo que resulten necesarios para el servicio solicitado." }
             ]
           },
@@ -470,6 +483,7 @@
                 "Coordinar y prestar un evento, experiencia o servicio para huéspedes confirmado, compartiendo el mínimo necesario con el proveedor adecuado.",
                 "Gestionar relaciones con clientes corporativos y colaboradores, y conservar registros operativos, financieros y legales.",
                 "Proteger el sitio y las operaciones de Aventura, gestionar quejas o controversias y mejorar la experiencia de solicitud sin usar los datos del formulario para marketing directo.",
+                "Avisarte cuando una fragancia concreta esté disponible, únicamente si registras tu interés y das un consentimiento separado para ello.",
                 "Usar fotos o vídeos de huéspedes solo cuando otorgues una autorización separada y específica para ello."
               ]},
               { type: "p", text: "No vendemos ni alquilamos datos personales. No usamos los datos del formulario para comunicaciones de marketing salvo que lo solicites de forma separada y clara." }
@@ -478,7 +492,7 @@
           {
             heading: "5. Bases legales del tratamiento",
             blocks: [
-              { type: "p", text: "Aventura trata datos cuando es necesario para tomar medidas solicitadas antes de un contrato o para ejecutar un acuerdo confirmado, para cumplir obligaciones legales como la conservación de registros y para intereses legítimos equilibrados como la seguridad operativa y la prevención de usos indebidos. Para fotos, vídeos o finalidades no necesarias para prestar el servicio, contamos con un consentimiento separado y voluntario. Rechazarlo o retirarlo no afecta al servicio principal." }
+              { type: "p", text: "Aventura trata datos cuando es necesario para tomar medidas solicitadas antes de un contrato o para ejecutar un acuerdo confirmado, para cumplir obligaciones legales como la conservación de registros y para intereses legítimos equilibrados como la seguridad operativa y la prevención de usos indebidos. Para fotos, vídeos, el registro de interés en fragancias y la analítica opcional contamos con un consentimiento separado y voluntario. Rechazarlo o retirarlo no afecta al servicio principal." }
             ]
           },
           {
@@ -487,17 +501,19 @@
               { type: "p", text: "Solo comunicamos el mínimo de datos necesario y para fines concretos a las siguientes partes cuando es preciso:" },
               { type: "list", items: [
                 "FormSubmit, cuando eliges enviar la solicitud por correo desde el formulario. Procesa el envío para entregarlo a Aventura; su documentación indica que conserva los archivos de solicitudes hasta 30 días.",
+                "Google Analytics 4, cuando aceptas la analítica opcional. Mide el uso del sitio y eventos generales como el tipo de solicitud, el canal de envío, los clics en WhatsApp o el interés en una fragancia; no le enviamos nombres, teléfonos, correos ni contenido de mensajes.",
                 "Proveedores de correo y WhatsApp cuando eliges esos canales. Su tratamiento también se rige por sus propias prácticas de privacidad.",
                 "Proveedores seleccionados para cotizar con precisión o prestar un servicio confirmado, como guías debidamente autorizados cuando sea necesario, transportistas, espacios, embarcaciones, fotógrafos, floristas o sastres. Solo compartimos lo que exige el servicio.",
                 "La empresa o agencia que haya presentado una solicitud para su huésped, y autoridades gubernamentales o judiciales cuando la ley lo exija."
               ]},
-              { type: "p", text: "Los servicios de FormSubmit, correo y WhatsApp pueden implicar tratamiento o acceso a datos desde fuera de Arabia Saudita. Cuando exista una transferencia internacional, Aventura procura que se realice conforme a los requisitos y garantías aplicables de la Ley Saudí de Protección de Datos Personales." }
+              { type: "p", text: "Los servicios de FormSubmit, Google, correo y WhatsApp pueden implicar tratamiento o acceso a datos desde fuera de Arabia Saudita. Cuando exista una transferencia internacional, Aventura procura que se realice conforme a los requisitos y garantías aplicables de la Ley Saudí de Protección de Datos Personales." }
             ]
           },
           {
             heading: "7. Almacenamiento local y cookies",
             blocks: [
-              { type: "p", text: "El sitio no usa actualmente cookies publicitarias, analítica de terceros ni píxeles de marketing. Guarda en tu dispositivo el idioma elegido hasta que lo elimines en el navegador. Las selecciones de la boutique y los recordatorios de productos se conservan hasta 30 días y después dejan de utilizarse. Los eventos de interacción preparados en el navegador son anónimos y no incluyen nombres, teléfonos, correos ni contenido de mensajes." }
+              { type: "p", text: "El sitio no utiliza cookies publicitarias ni píxeles de marketing. Usamos Google Analytics 4 únicamente después de que aceptes la analítica opcional, para medir páginas, funciones y eventos generales de interacción. GA4 está configurado sin Google Signals ni personalización publicitaria, y no le enviamos nombres, teléfonos, correos ni contenido de mensajes. El sitio guarda el idioma elegido hasta que lo elimines del navegador; las selecciones de la boutique y los recordatorios de productos se conservan hasta 30 días. Puedes aceptar o rechazar la analítica en tu primera visita y cambiar tu elección a continuación." },
+              { type: "analytics-control", label: "Gestionar preferencias de analítica" }
             ]
           },
           {
@@ -508,6 +524,8 @@
                 "Solicitudes no confirmadas y correspondencia relacionada: hasta 12 meses desde el último contacto; después se eliminan o anonimizan, salvo que exista una razón legítima para conservarlas más tiempo.",
                 "Registros de servicios confirmados y propuestas aceptadas: hasta 5 años tras finalizar el servicio; los registros financieros pueden conservarse durante el plazo mayor exigido por la ley.",
                 "Solicitudes de colaboración: hasta 12 meses después de terminar la revisión, salvo que comience una relación activa.",
+                "Solicitudes de interés en fragancias: hasta que retires tu consentimiento o durante un máximo de 12 meses, lo que ocurra antes.",
+                "Datos de analítica: Aventura no conserva identificadores de analítica en sus propios servidores; la conservación en Google Analytics se rige por los ajustes del servicio vigentes en el momento del tratamiento.",
                 "Fotos no autorizadas para publicación: hasta 90 días después de la entrega al huésped o del final de la finalidad operativa. El contenido publicado se trata según la sección 9."
               ]},
               { type: "p", text: "Aplicamos medidas técnicas y organizativas razonables y limitamos el acceso a quienes necesitan los datos para su trabajo. Al terminar el plazo de conservación, eliminamos o destruimos los datos de forma segura y, cuando corresponde, pedimos a los destinatarios que hagan lo mismo, sin perjuicio de cualquier obligación legal de conservación." }
@@ -646,6 +664,25 @@
     return element;
   }
 
+  function appendAnalyticsControl(parent, label) {
+    var wrapper = document.createElement("p");
+    wrapper.className = "legal-analytics-control";
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "btn btn-outline-dark";
+    button.setAttribute("data-analytics-preferences", "true");
+    button.textContent = label;
+    button.addEventListener("click", function () {
+      if (window.AVENTURA_ANALYTICS && typeof window.AVENTURA_ANALYTICS.openPreferences === "function") {
+        window.AVENTURA_ANALYTICS.openPreferences();
+        return;
+      }
+      window.dispatchEvent(new CustomEvent("aventura:analytics-preferences"));
+    });
+    wrapper.appendChild(button);
+    parent.appendChild(wrapper);
+  }
+
   function renderDocument(target) {
     var language = document.documentElement.lang || "en";
     var documentType = target.getAttribute("data-legal-document");
@@ -686,6 +723,10 @@
     content.sections.forEach(function (section) {
       appendTextElement(target, "h2", "", section.heading);
       section.blocks.forEach(function (block) {
+        if (block.type === "analytics-control") {
+          appendAnalyticsControl(target, block.label);
+          return;
+        }
         if (block.type === "list") {
           var list = document.createElement("ul");
           block.items.forEach(function (item) {

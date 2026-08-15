@@ -15,6 +15,9 @@
 .aventura-fragrance-dialog-head h2{margin:.35rem 0 0}
 .aventura-fragrance-dialog .field{display:grid;gap:8px;margin-top:18px}
 .aventura-fragrance-dialog input{width:100%;min-height:48px;border:1px solid rgba(10,42,67,.18);border-radius:12px;padding:0 14px;background:#fff;color:#0a2a43;font:inherit}
+.aventura-fragrance-consent{display:flex;align-items:flex-start;gap:10px;margin-top:18px;font-size:.9rem;line-height:1.55;color:rgba(10,42,67,.82)}
+.aventura-fragrance-consent input{width:18px;min-width:18px;min-height:18px;margin:3px 0 0;padding:0;accent-color:var(--navy-900)}
+.aventura-fragrance-consent a{color:var(--navy-900);font-weight:700;text-decoration:underline}
 .aventura-fragrance-form-actions{margin-top:20px}
 .aventura-fragrance-form-actions .btn{width:100%;justify-content:center}
 .aventura-fragrance-form-status{min-height:1.5em;margin:14px 0 0;font-size:.92rem}

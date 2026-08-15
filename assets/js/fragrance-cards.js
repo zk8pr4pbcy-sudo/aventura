@@ -47,6 +47,8 @@
       dialogText: "اترك بيانات التواصل، وسنتواصل معك عند توفر العطر.",
       name: "الاسم",
       contact: "البريد الإلكتروني أو رقم الجوال",
+      consentPrefix: "أوافق على استخدام بياناتي لإبلاغي عند توفر هذا العطر، وفق",
+      privacyLink: "سياسة الخصوصية",
       send: "تسجيل الاهتمام",
       sending: "جارٍ الإرسال…",
       success: "تم تسجيل اهتمامك. سنتواصل معك عند توفر العطر.",
@@ -63,6 +65,8 @@
       dialogText: "Leave your contact details and we’ll reach out when this fragrance becomes available.",
       name: "Name",
       contact: "Email or mobile number",
+      consentPrefix: "I agree that Aventura may use my details to tell me when this fragrance is available, under the",
+      privacyLink: "Privacy policy",
       send: "Register interest",
       sending: "Sending…",
       success: "Your interest has been registered. We’ll contact you when the fragrance becomes available.",
@@ -79,6 +83,8 @@
       dialogText: "Déjanos tus datos de contacto y te avisaremos cuando esta fragancia esté disponible.",
       name: "Nombre",
       contact: "Correo electrónico o móvil",
+      consentPrefix: "Acepto que Aventura utilice mis datos para avisarme cuando esta fragancia esté disponible, conforme a la",
+      privacyLink: "Política de privacidad",
       send: "Registrar interés",
       sending: "Enviando…",
       success: "Hemos registrado tu interés. Te contactaremos cuando la fragancia esté disponible.",
@@ -137,6 +143,7 @@
       '    <p data-fragrance-copy="dialogText">' + t("dialogText") + '</p>',
       '    <label class="field"><span data-fragrance-copy="name">' + t("name") + '</span><input name="name" autocomplete="name" required></label>',
       '    <label class="field"><span data-fragrance-copy="contact">' + t("contact") + '</span><input name="contact" autocomplete="email" required></label>',
+      '    <label class="aventura-fragrance-consent"><input type="checkbox" name="interest_consent" value="yes" required><span><span data-fragrance-copy="consentPrefix">' + t("consentPrefix") + '</span> <a href="privacy.html" target="_blank" rel="noopener" data-fragrance-copy="privacyLink">' + t("privacyLink") + '</a>.</span></label>',
       '    <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="aventura-fragrance-honey" aria-hidden="true">',
       '    <input type="hidden" name="fragrance" data-fragrance-field>',
       '    <div class="aventura-fragrance-form-actions"><button class="btn" type="submit" data-fragrance-submit>' + t("send") + '</button></div>',
@@ -221,9 +228,16 @@
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       if (!activeCard) return;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
       var data = new FormData(form);
       data.set("fragrance", displayName(activeCard));
       data.set("fragrance_id", activeCard.id);
+      data.set("interest_consent", "yes");
+      data.set("interest_consent_at", new Date().toISOString());
+      data.set("interest_consent_version", "2026-08-15");
       data.set("page", location.href);
       data.set("language", document.documentElement.lang || "");
       data.set("_subject", "اهتمام بعطر — " + displayName(activeCard));
