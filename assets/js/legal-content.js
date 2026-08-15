@@ -33,7 +33,7 @@
                 "بيانات خدمات الضيوف عند إدخالها: اسم المستلم، موقع الفندق أو التسليم، وقت الزيارة أو التسليم، رسالة البطاقة، وتفضيلات الثوب أو العباية أو الورد.",
                 "بيانات التعاون: بيانات التواصل، نوع الخدمة، التراخيص أو الروابط المهنية التي تختار مشاركتها، اللغات، نطاق العمل والرسالة التعريفية.",
                 "بيانات الاهتمام بالعطور: الاسم ووسيلة التواصل والعطر الذي اخترته، وذلك فقط عندما تختار تسجيل اهتمامك وتمنح الموافقة المطلوبة.",
-                "بيانات تقنية واستخدامية محدودة: اختيار اللغة، اختيارات البوتيك، وتذكير عرض المنتجات، وبيانات استخدام الموقع في Google Analytics 4 عند موافقتك على التحليلات الاختيارية. لا ننشئ حسابات للعملاء ولا نجمع بيانات دفع عبر الموقع حاليًا."
+                "بيانات تقنية واستخدامية محدودة: اختيار اللغة، اختيارات البوتيك، وتذكير عرض المنتجات، وبيانات استخدام الموقع في Google Analytics 4 لقياس أداء الموقع وتحسينه. لا ننشئ حسابات للعملاء ولا نجمع بيانات دفع عبر الموقع حاليًا."
               ]},
               { type: "callout", text: "يرجى عدم إرسال أرقام الهوية أو الجوازات أو البيانات الصحية أو أي معلومات حساسة عبر نموذج الموقع أو واتساب. إذا وصلت إلينا بيانات لا نحتاجها، سنتخذ ما يلزم لحذفها أو تقليل استخدامها وفق النظام." }
             ]
@@ -62,7 +62,7 @@
           {
             heading: "5. المسوغات النظامية",
             blocks: [
-              { type: "p", text: "تعالج أفنتورا البيانات عند الحاجة لاتخاذ خطوات بطلب منك قبل التعاقد أو لتنفيذ اتفاقية مؤكدة، وللوفاء بالتزامات نظامية مثل حفظ السجلات، ولتحقيق مصلحة مشروعة متوازنة كأمن العمليات ومنع إساءة الاستخدام. نعتمد على موافقة صريحة واختيارية للصور والمقاطع، ولتسجيل الاهتمام بالعطور، وللتحليلات الاختيارية. ولا يؤثر رفض هذه الموافقات أو سحبها في الخدمة الأساسية." }
+              { type: "p", text: "تعالج أفنتورا البيانات عند الحاجة لاتخاذ خطوات بطلب منك قبل التعاقد أو لتنفيذ اتفاقية مؤكدة، وللوفاء بالتزامات نظامية مثل حفظ السجلات، ولتحقيق مصلحة مشروعة متوازنة كأمن العمليات ومنع إساءة الاستخدام وتحليل أداء الموقع وتحسينه، مع مراعاة حقوق ومصالح الزائر وإتاحة خيار إيقاف التحليلات. نعتمد على موافقة صريحة واختيارية للصور والمقاطع ولتسجيل الاهتمام بالعطور. ولا يؤثر رفض هذه الموافقات أو سحبها في الخدمة الأساسية." }
             ]
           },
           {
@@ -71,7 +71,7 @@
               { type: "p", text: "نفصح عن الحد الأدنى اللازم من البيانات فقط، ولأغراض محددة، إلى الجهات التالية عند الحاجة:" },
               { type: "list", items: [
                 "FormSubmit عند اختيار إرسال الطلب عبر البريد من نموذج الموقع. يعالج مزود الخدمة بيانات الإرسال لإيصالها إلى أفنتورا، وتذكر وثائقه أن أرشيف الإرسالات يحتفظ به لمدة تصل إلى 30 يومًا.",
-                "Google Analytics 4 عند موافقتك على التحليلات الاختيارية. نقيس به استخدام الموقع وأحداثًا عامة مثل نوع الطلب أو قناة الإرسال أو ضغطات واتساب أو الاهتمام بالعطر، ولا نرسل إليه الاسم أو رقم الهاتف أو البريد الإلكتروني أو محتوى الرسائل.",
+                "Google Analytics 4 لقياس استخدام الموقع وأحداث عامة مثل نوع الطلب أو قناة الإرسال أو ضغطات واتساب أو الاهتمام بالعطر، ولا نرسل إليه الاسم أو رقم الهاتف أو البريد الإلكتروني أو محتوى الرسائل.",
                 "مقدمو البريد الإلكتروني وواتساب عندما تختار التواصل عبر تلك القنوات، وتخضع معالجة تلك الخدمات كذلك لسياساتها الخاصة.",
                 "الموردون المختارون لتنفيذ خدمة مؤكدة أو إعداد عرض دقيق، مثل المرشدين المرخصين عند الحاجة، شركات النقل، المواقع، القوارب، المصورين، أو مزودي الورد والخياطة؛ ولا نشارك إلا البيانات اللازمة للخدمة.",
                 "العميل من الشركة أو الوكالة الذي قدم الطلب نيابة عن الضيف، والجهات الحكومية أو القضائية متى تطلب النظام ذلك."
@@ -82,8 +82,8 @@
           {
             heading: "7. التخزين المحلي وملفات الارتباط",
             blocks: [
-              { type: "p", text: "لا يستخدم الموقع ملفات تعريف ارتباط إعلانية أو بكسلات تسويقية. نستخدم Google Analytics 4 فقط بعد موافقتك على التحليلات الاختيارية، لقياس الصفحات والميزات المستخدمة وأحداث التفاعل العامة. أعددنا GA4 من دون Google Signals أو تخصيص إعلاني، ولا نرسل إليه الاسم أو رقم الهاتف أو البريد الإلكتروني أو محتوى الرسائل. يحفظ الموقع اختيار اللغة إلى أن تحذفه من المتصفح، كما يحتفظ باختيارات البوتيك وتذكيرات عرض المنتجات لمدة تصل إلى 30 يومًا. يمكنك قبول أو رفض التحليلات عند أول زيارة، وتغيير اختيارك من الزر أدناه." },
-              { type: "analytics-control", label: "إدارة تفضيلات التحليلات" }
+              { type: "p", text: "لا يستخدم الموقع ملفات تعريف ارتباط إعلانية أو بكسلات تسويقية. نستخدم Google Analytics 4 لقياس الصفحات والميزات المستخدمة وأحداث التفاعل العامة، استنادًا إلى مصلحة أفنتورا المشروعة في فهم أداء الموقع وتحسينه، وبما لا يخل بحقوق ومصالح الزائر. أعددنا GA4 من دون Google Signals أو تخصيص إعلاني، ولا نرسل إليه الاسم أو رقم الهاتف أو البريد الإلكتروني أو محتوى الرسائل. يحفظ الموقع اختيار اللغة إلى أن تحذفه من المتصفح، كما يحتفظ باختيارات البوتيك وتذكيرات عرض المنتجات لمدة تصل إلى 30 يومًا. يمكنك إيقاف تحليلات الموقع في أي وقت من الزر أدناه." },
+              { type: "analytics-control", label: "إدارة تحليلات الموقع" }
             ]
           },
           {
@@ -248,7 +248,7 @@
                 "Guest-service data when entered: recipient name, hotel or delivery location, visit or delivery time, card message, and thobe, abaya, or flower preferences.",
                 "Partnership data: contact information, service type, licences or professional links you choose to share, languages, service coverage, and introduction message.",
                 "Fragrance-interest data: your name, contact method and selected fragrance, but only when you choose to register interest and give the required consent.",
-                "Limited technical and usage data: language choice, boutique selections, product-reminder preference and website-usage data in Google Analytics 4 when you agree to optional analytics. The website does not create customer accounts or collect payment information at this time."
+                "Limited technical and usage data: language choice, boutique selections, product-reminder preference and website-usage data in Google Analytics 4 to measure and improve website performance. The website does not create customer accounts or collect payment information at this time."
               ]},
               { type: "callout", text: "Please do not send national ID numbers, passport numbers, health data, or other sensitive information through the website form or WhatsApp. If we receive data we do not need, we will take appropriate steps to delete it or limit its use in line with applicable law." }
             ]
@@ -277,7 +277,7 @@
           {
             heading: "5. Lawful grounds for processing",
             blocks: [
-              { type: "p", text: "Aventura processes data where necessary to take steps you request before a contract or to perform a confirmed agreement, to meet legal obligations such as record keeping, and for balanced legitimate interests such as operational security and misuse prevention. We rely on separate, voluntary consent for photos and videos, fragrance-interest registration and optional analytics. Declining or withdrawing these consents does not affect the core service." }
+              { type: "p", text: "Aventura processes data where necessary to take steps you request before a contract or to perform a confirmed agreement, to meet legal obligations such as record keeping, and for balanced legitimate interests such as operational security, misuse prevention, and analysing and improving website performance. We balance that interest against visitors' rights and interests and provide an option to disable analytics. We rely on separate, voluntary consent for photos and videos and fragrance-interest registration. Declining or withdrawing those consents does not affect the core service." }
             ]
           },
           {
@@ -286,7 +286,7 @@
               { type: "p", text: "We disclose the minimum necessary data only, and for specific purposes, to the following parties where needed:" },
               { type: "list", items: [
                 "FormSubmit when you choose to send a request by email through the website form. It processes the submission to deliver it to Aventura; its documentation says submission archives are retained for up to 30 days.",
-                "Google Analytics 4 when you agree to optional analytics. It measures website use and general events such as request type, sending channel, WhatsApp clicks or fragrance interest; we do not send it names, telephone numbers, email addresses or message content.",
+                "Google Analytics 4, used to measure website use and general events such as request type, sending channel, WhatsApp clicks or fragrance interest; we do not send it names, telephone numbers, email addresses or message content.",
                 "Email and WhatsApp providers when you choose those channels. Their processing is also governed by their own privacy practices.",
                 "Selected providers needed to quote accurately or deliver a confirmed service, such as suitably licensed guides where required, transport companies, venues, boats, photographers, florists, and tailoring providers. We share only what the service requires.",
                 "The company or agency that submitted a request for its guest, and governmental or judicial bodies where required by law."
@@ -297,8 +297,8 @@
           {
             heading: "7. Local storage and cookies",
             blocks: [
-              { type: "p", text: "The website does not use advertising cookies or marketing pixels. We use Google Analytics 4 only after you agree to optional analytics, to measure pages, features and general interaction events. GA4 is configured without Google Signals or ad personalisation, and we do not send it names, phone numbers, email addresses or message content. The website stores your language choice until you clear it in your browser; boutique selections and product reminders are stored for up to 30 days. You can accept or reject analytics on your first visit and change your choice below." },
-              { type: "analytics-control", label: "Manage analytics preferences" }
+              { type: "p", text: "The website does not use advertising cookies or marketing pixels. We use Google Analytics 4 to measure pages, features and general interaction events under Aventura's legitimate interest in understanding and improving website performance, while taking account of visitors' rights and interests. GA4 is configured without Google Signals or ad personalisation, and we do not send it names, phone numbers, email addresses or message content. The website stores your language choice until you clear it in your browser; boutique selections and product reminders are stored for up to 30 days. You can disable website analytics at any time using the button below." },
+              { type: "analytics-control", label: "Manage website analytics" }
             ]
           },
           {
@@ -463,7 +463,7 @@
                 "Datos de servicios para huéspedes, cuando se introducen: nombre del destinatario, hotel o lugar de entrega, hora de visita o entrega, mensaje de tarjeta y preferencias de thobe, abaya o flores.",
                 "Datos de colaboración: contacto, tipo de servicio, licencias o enlaces profesionales que decidas compartir, idiomas, cobertura y mensaje de presentación.",
                 "Datos de interés en fragancias: tu nombre, medio de contacto y la fragancia seleccionada, únicamente cuando eliges registrar tu interés y otorgas el consentimiento requerido.",
-                "Datos técnicos y de uso limitados: idioma elegido, selecciones de la boutique, preferencia de recordatorio de productos y datos de uso del sitio en Google Analytics 4 cuando aceptas la analítica opcional. El sitio no crea cuentas de clientes ni recoge datos de pago por ahora."
+                "Datos técnicos y de uso limitados: idioma elegido, selecciones de la boutique, preferencia de recordatorio de productos y datos de uso del sitio en Google Analytics 4 para medir y mejorar el rendimiento del sitio. El sitio no crea cuentas de clientes ni recoge datos de pago por ahora."
               ]},
               { type: "callout", text: "No envíes números de identidad, pasaporte, datos de salud u otra información sensible mediante el formulario o WhatsApp. Si recibimos datos que no necesitamos, tomaremos medidas adecuadas para eliminarlos o limitar su uso conforme a la ley aplicable." }
             ]
@@ -492,7 +492,7 @@
           {
             heading: "5. Bases legales del tratamiento",
             blocks: [
-              { type: "p", text: "Aventura trata datos cuando es necesario para tomar medidas solicitadas antes de un contrato o para ejecutar un acuerdo confirmado, para cumplir obligaciones legales como la conservación de registros y para intereses legítimos equilibrados como la seguridad operativa y la prevención de usos indebidos. Para fotos, vídeos, el registro de interés en fragancias y la analítica opcional contamos con un consentimiento separado y voluntario. Rechazarlo o retirarlo no afecta al servicio principal." }
+              { type: "p", text: "Aventura trata datos cuando es necesario para tomar medidas solicitadas antes de un contrato o para ejecutar un acuerdo confirmado, para cumplir obligaciones legales como la conservación de registros y para intereses legítimos equilibrados como la seguridad operativa, la prevención de usos indebidos y el análisis y la mejora del rendimiento del sitio. Equilibramos ese interés con los derechos e intereses de los visitantes y ofrecemos la opción de desactivar la analítica. Para fotos, vídeos y el registro de interés en fragancias contamos con un consentimiento separado y voluntario. Rechazarlo o retirarlo no afecta al servicio principal." }
             ]
           },
           {
@@ -501,7 +501,7 @@
               { type: "p", text: "Solo comunicamos el mínimo de datos necesario y para fines concretos a las siguientes partes cuando es preciso:" },
               { type: "list", items: [
                 "FormSubmit, cuando eliges enviar la solicitud por correo desde el formulario. Procesa el envío para entregarlo a Aventura; su documentación indica que conserva los archivos de solicitudes hasta 30 días.",
-                "Google Analytics 4, cuando aceptas la analítica opcional. Mide el uso del sitio y eventos generales como el tipo de solicitud, el canal de envío, los clics en WhatsApp o el interés en una fragancia; no le enviamos nombres, teléfonos, correos ni contenido de mensajes.",
+                "Google Analytics 4, utilizado para medir el uso del sitio y eventos generales como el tipo de solicitud, el canal de envío, los clics en WhatsApp o el interés en una fragancia; no le enviamos nombres, teléfonos, correos ni contenido de mensajes.",
                 "Proveedores de correo y WhatsApp cuando eliges esos canales. Su tratamiento también se rige por sus propias prácticas de privacidad.",
                 "Proveedores seleccionados para cotizar con precisión o prestar un servicio confirmado, como guías debidamente autorizados cuando sea necesario, transportistas, espacios, embarcaciones, fotógrafos, floristas o sastres. Solo compartimos lo que exige el servicio.",
                 "La empresa o agencia que haya presentado una solicitud para su huésped, y autoridades gubernamentales o judiciales cuando la ley lo exija."
@@ -512,8 +512,8 @@
           {
             heading: "7. Almacenamiento local y cookies",
             blocks: [
-              { type: "p", text: "El sitio no utiliza cookies publicitarias ni píxeles de marketing. Usamos Google Analytics 4 únicamente después de que aceptes la analítica opcional, para medir páginas, funciones y eventos generales de interacción. GA4 está configurado sin Google Signals ni personalización publicitaria, y no le enviamos nombres, teléfonos, correos ni contenido de mensajes. El sitio guarda el idioma elegido hasta que lo elimines del navegador; las selecciones de la boutique y los recordatorios de productos se conservan hasta 30 días. Puedes aceptar o rechazar la analítica en tu primera visita y cambiar tu elección a continuación." },
-              { type: "analytics-control", label: "Gestionar preferencias de analítica" }
+              { type: "p", text: "El sitio no utiliza cookies publicitarias ni píxeles de marketing. Usamos Google Analytics 4 para medir páginas, funciones y eventos generales de interacción con base en el interés legítimo de Aventura de comprender y mejorar el rendimiento del sitio, teniendo en cuenta los derechos e intereses de los visitantes. GA4 está configurado sin Google Signals ni personalización publicitaria, y no le enviamos nombres, teléfonos, correos ni contenido de mensajes. El sitio guarda el idioma elegido hasta que lo elimines del navegador; las selecciones de la boutique y los recordatorios de productos se conservan hasta 30 días. Puedes desactivar la analítica del sitio en cualquier momento con el botón de abajo." },
+              { type: "analytics-control", label: "Gestionar la analítica del sitio" }
             ]
           },
           {

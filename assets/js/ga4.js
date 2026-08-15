@@ -506,32 +506,43 @@
     }, 0);
   });
 
-  // Optional GA4 analytics. The tag is not loaded until the visitor agrees.
+  // GA4 measurement runs under Aventura's documented legitimate-interest assessment.
+  // Visitors can disable it at any time from the privacy policy.
   var MEASUREMENT_ID = "G-MC0GBSTCRT";
   var ANALYTICS_CONSENT_KEY = "aventura_analytics_consent_v1";
+  var COOKIE_NOTICE_KEY = "aventura_cookie_notice_v1";
   var analyticsEnabled = false;
   var analyticsInitialized = false;
   var analyticsBanner = null;
   var analyticsCopy = {
     ar: {
-      title: "تحليلات اختيارية",
-      text: "نستخدم Google Analytics 4 لفهم استخدام الموقع وتحسينه. لا نرسل الاسم أو البريد أو رقم الجوال أو محتوى الطلبات إلى التحليلات.",
-      accept: "السماح بالتحليلات",
-      reject: "الأساسية فقط",
+      title: "ملفات تعريف الارتباط",
+      noticeText: "نستخدم ملفات تعريف الارتباط لتشغيل الموقع وقياس أدائه وتحسينه. تعرف على التفاصيل وخيار إيقاف تحليلات الموقع من سياسة الخصوصية.",
+      noticeDismiss: "حسنًا",
+      preferencesTitle: "تحليلات الموقع",
+      preferencesText: "نستخدم تحليلات الموقع لفهم الصفحات والميزات المستخدمة وتحسين التجربة. يمكنك إيقافها في أي وقت؛ وعند الإيقاف لن تُرسل زياراتك وتفاعلاتك الجديدة إلى Google Analytics.",
+      accept: "تشغيل التحليلات",
+      reject: "إيقاف التحليلات",
       policy: "سياسة الخصوصية"
     },
     en: {
-      title: "Optional analytics",
-      text: "We use Google Analytics 4 to understand and improve use of the website. We do not send names, email addresses, phone numbers or request content to analytics.",
-      accept: "Allow analytics",
-      reject: "Essential only",
+      title: "Cookies & privacy",
+      noticeText: "We use cookies to operate the website, measure its performance and improve it. See the privacy policy for details and the option to disable website analytics.",
+      noticeDismiss: "Got it",
+      preferencesTitle: "Website analytics",
+      preferencesText: "We use website analytics to understand the pages and features people use and to improve the experience. You can disable it at any time; once disabled, new visits and interactions will not be sent to Google Analytics.",
+      accept: "Enable analytics",
+      reject: "Disable analytics",
       policy: "Privacy policy"
     },
     es: {
-      title: "Analítica opcional",
-      text: "Usamos Google Analytics 4 para comprender y mejorar el uso del sitio. No enviamos nombres, correos, teléfonos ni contenido de solicitudes a la analítica.",
-      accept: "Permitir analítica",
-      reject: "Solo esenciales",
+      title: "Cookies y privacidad",
+      noticeText: "Usamos cookies para que el sitio funcione, medir su rendimiento y mejorarlo. Consulta la Política de privacidad para conocer los detalles y la opción de desactivar la analítica del sitio.",
+      noticeDismiss: "Entendido",
+      preferencesTitle: "Analítica del sitio",
+      preferencesText: "Usamos la analítica del sitio para comprender las páginas y funciones utilizadas y mejorar la experiencia. Puedes desactivarla en cualquier momento; al hacerlo, las nuevas visitas e interacciones dejarán de enviarse a Google Analytics.",
+      accept: "Activar la analítica",
+      reject: "Desactivar la analítica",
       policy: "Política de privacidad"
     }
   };
@@ -555,6 +566,22 @@
       localStorage.setItem(ANALYTICS_CONSENT_KEY, value);
     } catch (error) {
       /* A visitor can still make a session choice when storage is unavailable. */
+    }
+  }
+
+  function hasSeenCookieNotice() {
+    try {
+      return localStorage.getItem(COOKIE_NOTICE_KEY) === "seen";
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function markCookieNoticeSeen() {
+    try {
+      localStorage.setItem(COOKIE_NOTICE_KEY, "seen");
+    } catch (error) {
+      /* The notice can safely reappear when local storage is unavailable. */
     }
   }
 
@@ -583,6 +610,7 @@
     };
     window.gtag("js", new Date());
     window.gtag("config", MEASUREMENT_ID, {
+      send_page_view: true,
       allow_google_signals: false,
       allow_ad_personalization_signals: false
     });
@@ -620,10 +648,11 @@
     var current = analyticsCopy[analyticsLanguage()];
     addAnalyticsConsentStyles();
     analyticsBanner = createAnalyticsElement("aside", "aventura-analytics-consent");
+    analyticsBanner.setAttribute("data-aventura-banner-mode", "preferences");
     analyticsBanner.setAttribute("role", "region");
-    analyticsBanner.setAttribute("aria-label", current.title);
-    analyticsBanner.appendChild(createAnalyticsElement("h2", "", current.title));
-    analyticsBanner.appendChild(createAnalyticsElement("p", "", current.text));
+    analyticsBanner.setAttribute("aria-label", current.preferencesTitle);
+    analyticsBanner.appendChild(createAnalyticsElement("h2", "", current.preferencesTitle));
+    analyticsBanner.appendChild(createAnalyticsElement("p", "", current.preferencesText));
     var policy = document.createElement("a");
     policy.href = "privacy.html";
     policy.textContent = current.policy;
@@ -643,6 +672,7 @@
     reject.addEventListener("click", function () {
       writeAnalyticsConsent("denied");
       window["ga-disable-" + MEASUREMENT_ID] = true;
+      analyticsEnabled = false;
       clearAnalyticsCookies();
       removeAnalyticsBanner();
     });
@@ -652,11 +682,35 @@
     document.body.appendChild(analyticsBanner);
   }
 
+  function showCookieNotice(force) {
+    if (!document.body || analyticsBanner || (!force && hasSeenCookieNotice())) return;
+    var current = analyticsCopy[analyticsLanguage()];
+    addAnalyticsConsentStyles();
+    analyticsBanner = createAnalyticsElement("aside", "aventura-analytics-consent");
+    analyticsBanner.setAttribute("data-aventura-banner-mode", "notice");
+    analyticsBanner.setAttribute("role", "region");
+    analyticsBanner.setAttribute("aria-label", current.title);
+    analyticsBanner.appendChild(createAnalyticsElement("h2", "", current.title));
+    analyticsBanner.appendChild(createAnalyticsElement("p", "", current.noticeText));
+    var policy = document.createElement("a");
+    policy.href = "privacy.html";
+    policy.textContent = current.policy;
+    var policyWrap = createAnalyticsElement("p", "");
+    policyWrap.appendChild(policy);
+    analyticsBanner.appendChild(policyWrap);
+    var actions = createAnalyticsElement("div", "aventura-analytics-actions");
+    var dismiss = createAnalyticsElement("button", "", current.noticeDismiss);
+    dismiss.type = "button";
+    dismiss.addEventListener("click", function () {
+      markCookieNoticeSeen();
+      removeAnalyticsBanner();
+    });
+    actions.appendChild(dismiss);
+    analyticsBanner.appendChild(actions);
+    document.body.appendChild(analyticsBanner);
+  }
+
   function openAnalyticsPreferences() {
-    window["ga-disable-" + MEASUREMENT_ID] = true;
-    analyticsEnabled = false;
-    clearAnalyticsCookies();
-    writeAnalyticsConsent("");
     removeAnalyticsBanner();
     showAnalyticsChoices();
   }
@@ -665,22 +719,22 @@
   window.addEventListener("aventura:analytics-preferences", openAnalyticsPreferences);
   document.addEventListener("aventura:language", function () {
     if (!analyticsBanner) return;
+    var bannerMode = analyticsBanner.getAttribute("data-aventura-banner-mode");
     removeAnalyticsBanner();
-    showAnalyticsChoices();
+    if (bannerMode === "preferences") showAnalyticsChoices();
+    else showCookieNotice(true);
   });
 
   var initialAnalyticsConsent = readAnalyticsConsent();
-  if (initialAnalyticsConsent === "granted") {
-    initializeAnalytics();
-  } else {
+  if (initialAnalyticsConsent === "denied") {
     window["ga-disable-" + MEASUREMENT_ID] = true;
+    analyticsEnabled = false;
     clearAnalyticsCookies();
-    /* A recorded refusal is respected until the visitor opens preferences again. */
-    if (!initialAnalyticsConsent) {
-      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", showAnalyticsChoices, { once: true });
-      else showAnalyticsChoices();
-    }
+  } else {
+    initializeAnalytics();
   }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", showCookieNotice, { once: true });
+  else showCookieNotice();
 
   function event(name, params) {
     if (!analyticsEnabled || typeof window.gtag !== "function") return;
