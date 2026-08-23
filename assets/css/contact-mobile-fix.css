@@ -26,6 +26,15 @@
     align-items: stretch;
   }
 
+  /* Booking comes first on small screens; direct contact follows it. */
+  body[data-page="contact"] .form-card {
+    order: 1;
+  }
+
+  body[data-page="contact"] .contact-panel {
+    order: 2;
+  }
+
   body[data-page="contact"] .contact-layout > *,
   body[data-page="contact"] .form-card,
   body[data-page="contact"] .contact-panel,
