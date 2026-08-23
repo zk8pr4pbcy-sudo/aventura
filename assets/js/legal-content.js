@@ -71,6 +71,7 @@
               { type: "p", text: "نفصح عن الحد الأدنى اللازم من البيانات فقط، ولأغراض محددة، إلى الجهات التالية عند الحاجة:" },
               { type: "list", items: [
                 "FormSubmit عند اختيار إرسال الطلب عبر البريد من نموذج الموقع. يعالج مزود الخدمة بيانات الإرسال لإيصالها إلى أفنتورا، وتذكر وثائقه أن أرشيف الإرسالات يحتفظ به لمدة تصل إلى 30 يومًا.",
+                "قد يستخدم FormSubmit أدوات تحقق آلية، مثل Google reCAPTCHA، للمساعدة في حماية نماذجنا من الرسائل غير المرغوب فيها وإساءة الاستخدام. وقد تعالج هذه الأدوات بيانات فنية محدودة عن الجهاز أو المتصفح وفقًا لسياسات مزود الخدمة.",
                 "Google Analytics 4 لقياس استخدام الموقع وأحداث عامة مثل نوع الطلب أو قناة الإرسال أو ضغطات واتساب أو الاهتمام بالعطر، ولا نرسل إليه الاسم أو رقم الهاتف أو البريد الإلكتروني أو محتوى الرسائل.",
                 "مقدمو البريد الإلكتروني وواتساب عندما تختار التواصل عبر تلك القنوات، وتخضع معالجة تلك الخدمات كذلك لسياساتها الخاصة.",
                 "الموردون المختارون لتنفيذ خدمة مؤكدة أو إعداد عرض دقيق، مثل المرشدين المرخصين عند الحاجة، شركات النقل، المواقع، القوارب، المصورين، أو مزودي الورد والخياطة؛ ولا نشارك إلا البيانات اللازمة للخدمة.",
@@ -286,6 +287,7 @@
               { type: "p", text: "We disclose the minimum necessary data only, and for specific purposes, to the following parties where needed:" },
               { type: "list", items: [
                 "FormSubmit when you choose to send a request by email through the website form. It processes the submission to deliver it to Aventura; its documentation says submission archives are retained for up to 30 days.",
+                "FormSubmit may use automated verification tools, including Google reCAPTCHA, to help protect our forms from spam and abuse. These tools may process limited technical data about the device or browser under the provider's policies.",
                 "Google Analytics 4, used to measure website use and general events such as request type, sending channel, WhatsApp clicks or fragrance interest; we do not send it names, telephone numbers, email addresses or message content.",
                 "Email and WhatsApp providers when you choose those channels. Their processing is also governed by their own privacy practices.",
                 "Selected providers needed to quote accurately or deliver a confirmed service, such as suitably licensed guides where required, transport companies, venues, boats, photographers, florists, and tailoring providers. We share only what the service requires.",
@@ -501,6 +503,7 @@
               { type: "p", text: "Solo comunicamos el mínimo de datos necesario y para fines concretos a las siguientes partes cuando es preciso:" },
               { type: "list", items: [
                 "FormSubmit, cuando eliges enviar la solicitud por correo desde el formulario. Procesa el envío para entregarlo a Aventura; su documentación indica que conserva los archivos de solicitudes hasta 30 días.",
+                "FormSubmit puede utilizar herramientas de verificación automatizada, incluido Google reCAPTCHA, para ayudar a proteger nuestros formularios frente al spam y el uso indebido. Estas herramientas pueden tratar datos técnicos limitados sobre el dispositivo o navegador conforme a las políticas del proveedor.",
                 "Google Analytics 4, utilizado para medir el uso del sitio y eventos generales como el tipo de solicitud, el canal de envío, los clics en WhatsApp o el interés en una fragancia; no le enviamos nombres, teléfonos, correos ni contenido de mensajes.",
                 "Proveedores de correo y WhatsApp cuando eliges esos canales. Su tratamiento también se rige por sus propias prácticas de privacidad.",
                 "Proveedores seleccionados para cotizar con precisión o prestar un servicio confirmado, como guías debidamente autorizados cuando sea necesario, transportistas, espacios, embarcaciones, fotógrafos, floristas o sastres. Solo compartimos lo que exige el servicio.",

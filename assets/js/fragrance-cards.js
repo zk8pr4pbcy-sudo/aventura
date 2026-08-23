@@ -241,7 +241,6 @@
       data.set("page", location.href);
       data.set("language", document.documentElement.lang || "");
       data.set("_subject", "اهتمام بعطر — " + displayName(activeCard));
-      data.set("_captcha", "false");
       submit.disabled = true;
       submit.textContent = t("sending");
       status.textContent = "";
