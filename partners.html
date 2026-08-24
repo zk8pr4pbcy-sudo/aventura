@@ -29,6 +29,16 @@
 
   <link rel="stylesheet" href="assets/css/styles.css?v=launch-20260809">
   <link rel="stylesheet" href="assets/css/light-theme.css?v=recover-v2-20260809" />
+  <style>
+    .partner-provider-note{margin-top:20px;padding:18px 20px;border:1px solid rgba(184,146,72,.36);border-radius:16px;background:rgba(255,249,239,.82)}
+    .partner-provider-note h3{margin:0 0 8px;font-size:1.05rem}
+    .partner-provider-note p{margin:0 0 8px;line-height:1.75}
+    .partner-provider-note ul{margin:10px 0 8px;padding-inline-start:20px}
+    .partner-provider-note li{margin:6px 0;line-height:1.7}
+    .partner-provider-note small{display:block;margin-top:8px;opacity:.72}
+    .partner-provider-lang{display:none}
+    html[lang="ar"] .partner-provider-lang[lang="ar"],html[lang="en"] .partner-provider-lang[lang="en"],html[lang="es"] .partner-provider-lang[lang="es"]{display:block}
+  </style>
   <script src="assets/js/translations.js?v=20260815-2" defer></script>
   <script src="assets/js/ga4.js?v=20260815-pdpl4" defer></script>
   <script src="assets/js/analytics.js?v=legal-20260809" defer></script>
@@ -269,6 +279,45 @@
             <span class="form-note" data-i18n="partners.submitNote">You can review the complete message before sending it.</span>
           </div>
           <p class="form-status" data-partner-status role="alert" aria-live="polite"></p>
+
+          <aside class="partner-provider-note" aria-label="Provider approval requirements">
+            <div class="partner-provider-lang" lang="ar" dir="rtl">
+              <h3>متطلبات اعتماد مقدم الخدمة</h3>
+              <p>يُعد إرسال طلب التعاون خطوة أولية. وقبل أي تكليف، قد تطلب أفنتورا التحقق من:</p>
+              <ul>
+                <li>سريان التراخيص أو التسجيلات المطلوبة للنشاط.</li>
+                <li>صلاحية وسلامة المركبة أو القارب أو المعدات المستخدمة بحسب نوع الخدمة.</li>
+                <li>وجود التأمين المناسب للنشاط وتغطية الركاب أو المسؤولية تجاه الغير متى كان ذلك مطلوبًا أو منطبقًا.</li>
+                <li>تحمل مقدم الخدمة المسؤولية التشغيلية عن أعماله وطاقمه ومعداته والالتزام بتعليمات ومتطلبات السلامة.</li>
+                <li>توقيع نطاق عمل أو اتفاقية مقدم خدمة قبل التنفيذ عند اعتماد التعاون.</li>
+              </ul>
+              <small>لا يشكل تقديم الطلب اعتمادًا أو تكليفًا تلقائيًا.</small>
+            </div>
+            <div class="partner-provider-lang" lang="en" dir="ltr">
+              <h3>Provider approval requirements</h3>
+              <p>Submitting a collaboration request is only the first step. Before any assignment, Aventura may verify:</p>
+              <ul>
+                <li>Valid licences or registrations required for the activity.</li>
+                <li>The safety and suitability of any vehicle, boat or equipment used for the service.</li>
+                <li>Appropriate insurance for the activity, including passenger or third-party liability cover where required or applicable.</li>
+                <li>The provider's operational responsibility for its work, personnel and equipment, and compliance with applicable safety requirements.</li>
+                <li>A signed scope of work or service-provider agreement before delivery when the collaboration is approved.</li>
+              </ul>
+              <small>Submitting a request does not constitute approval or an automatic work assignment.</small>
+            </div>
+            <div class="partner-provider-lang" lang="es" dir="ltr">
+              <h3>Requisitos para la aprobación de proveedores</h3>
+              <p>Enviar una solicitud de colaboración es solo el primer paso. Antes de cualquier encargo, Aventura podrá verificar:</p>
+              <ul>
+                <li>La vigencia de las licencias o registros exigidos para la actividad.</li>
+                <li>La seguridad y adecuación del vehículo, embarcación o equipo utilizado para el servicio.</li>
+                <li>La existencia de un seguro adecuado para la actividad, incluida la cobertura de pasajeros o responsabilidad frente a terceros cuando corresponda.</li>
+                <li>La responsabilidad operativa del proveedor sobre su trabajo, personal y equipos, así como el cumplimiento de los requisitos de seguridad aplicables.</li>
+                <li>La firma de un alcance de trabajo o acuerdo de proveedor antes de la prestación, cuando se apruebe la colaboración.</li>
+              </ul>
+              <small>El envío de la solicitud no supone aprobación ni asignación automática de trabajo.</small>
+            </div>
+          </aside>
         </form>
       </div>
     </section>
