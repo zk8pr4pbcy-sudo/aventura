@@ -384,10 +384,30 @@
     if (form) form.dispatchEvent(new CustomEvent("aventura:request-details-updated"));
   }
 
+  function saudiDateToday() {
+    var now = new Date();
+    try {
+      var dateParts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Riyadh",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).formatToParts(now);
+      var values = {};
+      dateParts.forEach(function (part) {
+        if (part.type !== "literal") values[part.type] = part.value;
+      });
+      return values.year + "-" + values.month + "-" + values.day;
+    } catch (error) {
+      return new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().split("T")[0];
+    }
+  }
+
   function setMinimumDate(panel) {
-    var today = new Date();
-    var localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
-    panel.querySelectorAll('input[type="date"]').forEach(function (field) { field.setAttribute("min", localDate); });
+    var minimumDate = saudiDateToday();
+    panel.querySelectorAll('input[type="date"], input[type="datetime-local"]').forEach(function (field) {
+      field.setAttribute("min", field.type === "datetime-local" ? minimumDate + "T00:00" : minimumDate);
+    });
   }
 
   function renderDynamicRequestFields() {

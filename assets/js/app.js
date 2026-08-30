@@ -1509,12 +1509,63 @@
       return;
     }
 
-    var dateField = form.querySelector('[name="date"]');
-    if (dateField) {
-      var today = new Date();
-      var localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
-      dateField.setAttribute("min", localDate);
+    function saudiDateToday() {
+      var now = new Date();
+      try {
+        var dateParts = new Intl.DateTimeFormat("en-US", {
+          timeZone: "Asia/Riyadh",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit"
+        }).formatToParts(now);
+        var values = {};
+        dateParts.forEach(function (part) {
+          if (part.type !== "literal") {
+            values[part.type] = part.value;
+          }
+        });
+        return values.year + "-" + values.month + "-" + values.day;
+      } catch (error) {
+        return new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().split("T")[0];
+      }
     }
+
+    function isTimingField(field) {
+      return field && (field.type === "date" || field.type === "datetime-local");
+    }
+
+    function setSaudiDateMinimum(field) {
+      if (!isTimingField(field)) {
+        return;
+      }
+      var minimumDate = saudiDateToday();
+      field.setAttribute("min", field.type === "datetime-local" ? minimumDate + "T00:00" : minimumDate);
+    }
+
+    function timingDateValue(field) {
+      return String(field && field.value || "").trim().slice(0, 10);
+    }
+
+    function isPastSaudiDate(field) {
+      var value = timingDateValue(field);
+      return Boolean(value && value < saudiDateToday());
+    }
+
+    function isActiveTimingField(field) {
+      var detailGroup = field && field.closest("[data-request-details]");
+      return Boolean(field && !field.disabled && (!detailGroup || !detailGroup.hidden));
+    }
+
+    function firstPastTimingField(scope) {
+      return Array.from(scope.querySelectorAll('input[type="date"], input[type="datetime-local"]')).find(function (field) {
+        return isActiveTimingField(field) && isPastSaudiDate(field);
+      }) || null;
+    }
+
+    form.querySelectorAll('input[type="date"], input[type="datetime-local"]').forEach(setSaudiDateMinimum);
+    form.addEventListener("focusin", function (event) {
+      setSaudiDateMinimum(event.target);
+    });
 
     var query = new URLSearchParams(window.location.search);
     var requestedType = query.get("type");
@@ -1772,6 +1823,16 @@
             typeField.focus();
             return;
           }
+          var pastTimingField = firstPastTimingField(steps[currentStep]);
+          if (pastTimingField) {
+            var dateStatus = form.querySelector("[data-form-status]");
+            if (dateStatus) {
+              dateStatus.textContent = translate("contact.datePastError");
+              dateStatus.classList.remove("is-success");
+            }
+            pastTimingField.focus();
+            return;
+          }
           var missingRequiredField = firstMissingRequiredField(steps[currentStep]);
           if (missingRequiredField) {
             var requiredStatus = form.querySelector("[data-form-status]");
@@ -1955,6 +2016,16 @@
       var email = String(data.get("email") || "").trim();
       var submissionChannel = String(data.get("submissionChannel") || "email");
       var status = form.querySelector("[data-form-status]");
+
+      var pastTimingField = firstPastTimingField(form);
+      if (pastTimingField) {
+        if (status) {
+          status.textContent = translate("contact.datePastError");
+          status.classList.remove("is-success");
+        }
+        pastTimingField.focus();
+        return;
+      }
 
       if (!name || (!phone && !email)) {
         if (status) {
