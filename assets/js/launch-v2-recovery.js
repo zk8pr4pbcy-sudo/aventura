@@ -33,15 +33,15 @@
     },
     es: {
       "experiences.historicItem3": "Café saudí, dátiles y paradas patrimoniales seleccionadas",
-      "experiences.readyHistoricText": "Todos los recorridos a pie incluyen café árabe, dátiles y un guía autorizado. Las entradas adicionales de pago se confirman por separado.",
-      "experiences.stbStep3Text": "Paseo con guía autorizado, café árabe, dátiles y paradas patrimoniales seleccionadas.",
+      "experiences.readyHistoricText": "Todos los recorridos a pie incluyen café saudí, dátiles y un guía autorizado. Las entradas adicionales de pago se confirman por separado.",
+      "experiences.stbStep3Text": "Paseo con guía autorizado, café saudí, dátiles y paradas patrimoniales seleccionadas.",
       "world.historic.text": "Antes de empezar, tu guía interpreta tus intereses y adapta el ritmo, haciendo de cada callejón una entrada personal a la Yeda Histórica.",
       "world.historic.note": "No apresuramos la historia. Dejamos espacio para observar el roshan, la piedra, los sonidos y los pequeños detalles.",
       "world.historic.step1Title": "Conoce a tu guía",
       "world.historic.step1Text": "Tu guía no es solo una voz que cuenta historias; es una memoria viva que conoce cada puerta por su nombre y cada callejón por su historia.",
       "world.historic.step2Title": "Lee el roshan",
       "world.historic.step2Text": "El roshan no se comprende solo desde la calle. Sus sombras cambian con las horas y sus tallas guardan una historia que queda sin contar.",
-      "world.historic.step3Text": "El recorrido termina donde lo decide el tiempo, no el horario: una taza de café árabe, un dátil y el silencio suficiente para escuchar la ciudad."
+      "world.historic.step3Text": "El recorrido termina donde lo decide el tiempo, no el horario: una taza de café saudí, un dátil y el silencio suficiente para escuchar la ciudad."
     }
   };
 
