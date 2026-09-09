@@ -272,6 +272,7 @@ if (quoteControlFiles.length) {
 
 const contactBlock = appSource.slice(appSource.indexOf("function setupContactForm()"));
 const contactWizardSource = fs.readFileSync(path.join(root, "assets/js/contact-wizard.js"), "utf8");
+const contactRequestDataSource = fs.readFileSync(path.join(root, "assets/js/contact-request-data.js"), "utf8");
 const requestKeyBlock = contactBlock.slice(contactBlock.indexOf("var requestKeys = {"), contactBlock.indexOf("var requestedItem"));
 const contactTargets = [...htmlFiles]
   .flatMap((file) => [...fs.readFileSync(path.join(root, file), "utf8").matchAll(/contact\.html\?[^"']*?(?:request|service)=([^&"']+)/g)])
@@ -284,7 +285,7 @@ for (const id of new Set(contactTargets)) {
 if (!contactBlock.includes('query.get("request") || query.get("service")')) {
   fail("contact", "service request links must prefill the request form");
 }
-if (!/\["name", "company", "phone", "email", "preferredResponse"\]\.forEach\(function \(name\) \{ moveField\(name, thirdGrid\); \}\);/.test(contactWizardSource) || !contactBlock.includes('["preferredResponse", "contact.preferredContactLabel"]')) {
+if (!/\["name", "company", "phone", "email", "preferredResponse"\]\.forEach\(function \(name\) \{ moveField\(name, thirdGrid\); \}\);/.test(contactWizardSource) || !contactRequestDataSource.includes('["preferredResponse", "contact.preferredContactLabel"]')) {
   fail("contact", "preferred response field is not included in the final request step and request details");
 }
 const contactSource = fs.readFileSync(path.join(root, "contact.html"), "utf8");
