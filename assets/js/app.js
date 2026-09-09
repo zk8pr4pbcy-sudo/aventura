@@ -9,7 +9,6 @@
   var QUOTE_SELECTION_LIFETIME = 30 * 24 * 60 * 60 * 1000;
   var WHATSAPP_NUMBER = "966555884854";
   var REQUEST_EMAIL = "contact@aventuraksa.com";
-  var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com";
   var currentLanguage = DEFAULT_LANGUAGE;
 
   function normalizeLanguage(language) {
@@ -1522,6 +1521,7 @@
     if (!form) {
       return;
     }
+    var submissionTransport = window.AVENTURA_CONTACT_SUBMISSION;
 
     function saudiDateToday() {
       var runtime = window.AVENTURA_RUNTIME;
@@ -1784,24 +1784,6 @@
       }
     }
 
-    function sendRequestWithFormSubmit(payload) {
-      if (!window.fetch) {
-        return Promise.reject(new Error("Fetch is unavailable"));
-      }
-      return window.fetch(FORM_SUBMIT_ENDPOINT, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: payload
-      }).then(function (response) {
-        return response.json().catch(function () { return {}; }).then(function (body) {
-          if (!response.ok || body.success === false || body.success === "false") {
-            throw new Error("FormSubmit rejected the request");
-          }
-          return body;
-        });
-      });
-    }
-
     function showRequestSuccess(submissionChannel, requestId, sendUrl) {
       var isEmail = submissionChannel === "email";
       var success = form.querySelector("[data-request-success]");
@@ -1933,7 +1915,13 @@
         submissionData.set("request_summary", lastRequestMessage);
         isSubmitting = true;
         setContactSubmitting(true);
-        sendRequestWithFormSubmit(submissionData).then(function () {
+        if (!submissionTransport || typeof submissionTransport.sendEmail !== "function") {
+          if (status) {
+            status.textContent = translate("contact.submitError");
+          }
+          return;
+        }
+        submissionTransport.sendEmail(submissionData).then(function () {
           isSubmitting = false;
           setContactSubmitting(false);
           showRequestSuccess("email", requestId);
@@ -1948,7 +1936,13 @@
         return;
       }
 
-      var whatsappUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lastRequestMessage);
+      if (!submissionTransport || typeof submissionTransport.buildWhatsAppUrl !== "function") {
+        if (status) {
+          status.textContent = translate("contact.submitError");
+        }
+        return;
+      }
+      var whatsappUrl = submissionTransport.buildWhatsAppUrl(lastRequestMessage);
       showRequestSuccess("whatsapp", requestId, whatsappUrl);
       window.open(whatsappUrl, "_blank", "noopener");
     });
