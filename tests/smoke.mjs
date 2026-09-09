@@ -43,7 +43,7 @@ console.log('\nAventura maintenance smoke checks\n');
 // Language runtime: protects the exact dependency that can break when app.js is split.
 check(app.includes('var currentLanguage = DEFAULT_LANGUAGE;'), 'language state is defined in the application runtime');
 check(app.includes('currentLanguage = language;'), 'language state is updated when the visitor changes language');
-check(app.includes('submissionData.set("request_language", currentLanguage);'), 'contact submission receives the active language explicitly');
+check(app.includes('submissionData.set("request_language", getActiveLanguage());'), 'contact submission receives the active language explicitly');
 
 // Translation coverage.
 check(translations.includes('window.AVENTURA_I18N'), 'translation dictionary is exposed');

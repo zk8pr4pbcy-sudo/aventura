@@ -11,6 +11,22 @@
   var REQUEST_EMAIL = "contact@aventuraksa.com";
   var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com";
   var currentLanguage = DEFAULT_LANGUAGE;
+
+  function normalizeLanguage(language) {
+    var runtime = window.AVENTURA_RUNTIME;
+    if (runtime && runtime.language && typeof runtime.language.normalize === "function") {
+      return runtime.language.normalize(language);
+    }
+    return SUPPORTED_LANGUAGES.indexOf(language) === -1 ? DEFAULT_LANGUAGE : language;
+  }
+
+  function getActiveLanguage() {
+    var runtime = window.AVENTURA_RUNTIME;
+    if (runtime && runtime.language && typeof runtime.language.get === "function") {
+      return runtime.language.get();
+    }
+    return currentLanguage;
+  }
   var BOUTIQUE_CATALOG = {
     "perfume-sea": { type: "fragrance", categories: ["sea"], titleKey: "collection.p1Title", textKey: "collection.p1Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", image: "assets/images/perfumes/perfume-sea.webp" },
     "perfume-roshan": { type: "fragrance", categories: ["historic"], titleKey: "collection.p2Title", textKey: "collection.p2Text", statusKey: "common.comingSoon", prepKey: "collection.prepDevelopment", personalizationKey: "collection.personalizationAfterLaunch", image: "assets/images/perfumes/perfume-roshan.webp" },
@@ -363,9 +379,7 @@
   }
 
   function applyLanguage(language, updateUrl) {
-    if (SUPPORTED_LANGUAGES.indexOf(language) === -1) {
-      language = DEFAULT_LANGUAGE;
-    }
+    language = normalizeLanguage(language);
 
     currentLanguage = language;
     document.documentElement.lang = language;
@@ -2164,7 +2178,7 @@
         submissionData.set("_replyto", email);
         submissionData.set("_url", window.location.href.split("#")[0]);
         submissionData.set("request_reference", requestId);
-        submissionData.set("request_language", currentLanguage);
+        submissionData.set("request_language", getActiveLanguage());
         submissionData.set("request_summary", lastRequestMessage);
         isSubmitting = true;
         setContactSubmitting(true);
