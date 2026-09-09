@@ -3176,7 +3176,7 @@
     "partners.process4Title": "Confirmar",
     "partners.process4Text": "Las oportunidades aprobadas se confirman mediante un alcance y acuerdo claros.",
     "partners.formEyebrow": "Solicitud de colaboración",
-    "partners.formSideTitle": "Cuéntanos qué haces excepcionalmente bien.",
+    "partners.formSideTitle": "Cuéntanos en qué destacas.",
     "partners.formSideText": "Un perfil breve y preciso nos ayuda a entender dónde podría encajar una futura colaboración.",
     "partners.formNote1": "Usa formato internacional de teléfono si solicitas desde fuera de Arabia Saudí.",
     "partners.formNote2": "Comparte una web o portafolio en vez de enviar documentos sensibles.",
