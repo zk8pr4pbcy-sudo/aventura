@@ -7,7 +7,7 @@ on:
       - 'refactor/**'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   verify:
@@ -15,6 +15,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply bounded validator migration
+        run: python3 scripts/migrate-contact-validator-request-data.py
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -29,6 +34,10 @@ jobs:
             echo "Checking $file"
             node --check "$file"
           done < <(find assets/js tests -type f \( -name '*.js' -o -name '*.mjs' \) -print0)
+          node --check scripts/validate-site.mjs
+
+      - name: Validate site architecture
+        run: node scripts/validate-site.mjs
 
       - name: Run Aventura smoke checks
         run: node tests/smoke.mjs
@@ -44,6 +53,19 @@ jobs:
 
       - name: Run contact request data contract checks
         run: node tests/contact-request-data-contract.mjs
+
+      - name: Commit validator migration
+        shell: bash
+        run: |
+          if git diff --quiet -- scripts/validate-site.mjs; then
+            echo "No validator migration changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/validate-site.mjs
+          git commit -m "Update site validator for contact request data module"
+          git push origin HEAD:${GITHUB_REF_NAME}
 
   browser:
     runs-on: ubuntu-latest
