@@ -81,7 +81,9 @@ check(!launchRecovery.includes('createElement("style")') && !launchRecovery.incl
 check(!launchRecovery.includes('injectDesertLastLight'), 'launch recovery no longer owns desert Last Light injection');
 check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the desert Last Light section');
 check(desertLastLight.includes('prelaunch-last-light-section'), 'desert Last Light module owns the desert section');
-check(desertLastLight.includes('window.setTimeout(inject, 80);'), 'desert Last Light keeps the established injection timing');
+check(desertLastLight.includes('new MutationObserver'), 'desert Last Light synchronizes with experience-detail rendering');
+check(desertLastLight.includes('window.queueMicrotask'), 'desert Last Light waits for the current initialization cycle instead of a magic timeout');
+check(!desertLastLight.includes('setTimeout(inject'), 'desert Last Light does not depend on a brittle injection timeout');
 check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'Last Light card styling lives in CSS');
 check(prelaunchStyles.includes('.prelaunch-last-light-section .detail-product-grid'), 'desert Last Light layout styling lives in CSS');
 check(collection.includes('assets/js/launch-v2-recovery.js'), 'boutique keeps the collection recovery module');
