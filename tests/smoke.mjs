@@ -81,14 +81,17 @@ check(!launchRecovery.includes('createElement("style")') && !launchRecovery.incl
 check(!launchRecovery.includes('injectDesertLastLight'), 'launch recovery no longer owns desert Last Light injection');
 check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the desert Last Light section');
 check(desertLastLight.includes('prelaunch-last-light-section'), 'desert Last Light module owns the desert section');
-check(desertLastLight.includes('new MutationObserver'), 'desert Last Light synchronizes with experience-detail rendering');
-check(desertLastLight.includes('window.queueMicrotask'), 'desert Last Light waits for the current initialization cycle instead of a magic timeout');
+check(desertLastLight.includes('new MutationObserver'), 'desert Last Light observes the experience-detail readiness signal');
+check(desertLastLight.includes('data-experience-request-key'), 'desert Last Light mounts only after app.js marks the experience detail ready');
+check(desertLastLight.includes('attributeFilter: ["data-experience-request-key"]'), 'desert Last Light observes only its stable readiness attribute');
 check(!desertLastLight.includes('setTimeout(inject'), 'desert Last Light does not depend on a brittle injection timeout');
+check(!desertLastLight.includes('queueMicrotask'), 'desert Last Light does not race deferred scripts with a microtask');
 check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'Last Light card styling lives in CSS');
 check(prelaunchStyles.includes('.prelaunch-last-light-section .detail-product-grid'), 'desert Last Light layout styling lives in CSS');
 check(collection.includes('assets/js/launch-v2-recovery.js'), 'boutique keeps the collection recovery module');
 check(desert.includes('assets/js/prelaunch-desert-last-light.js'), 'desert page loads its dedicated Last Light module');
 check(desert.includes('assets/css/prelaunch-visual-fixes.css'), 'desert page loads the owned Last Light stylesheet');
+check(app.includes('root.setAttribute("data-experience-request-key", config.request);'), 'app.js exposes the stable experience-detail readiness marker');
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
