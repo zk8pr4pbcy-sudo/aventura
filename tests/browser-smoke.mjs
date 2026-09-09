@@ -36,7 +36,7 @@ async function openChecked(browser, path, label) {
   page.on('pageerror', (error) => pageErrors.push(error.message));
   await page.goto(`${baseUrl}${path}`, { waitUntil: 'domcontentloaded' });
   await page.waitForLoadState('load').catch(() => {});
-  await page.waitForTimeout(250);
+  await page.waitForTimeout(300);
   check(pageErrors.length === 0, `${label}: no uncaught JavaScript errors${pageErrors.length ? ` (${pageErrors.join(' | ')})` : ''}`);
   return { page, pageErrors };
 }
@@ -97,6 +97,41 @@ try {
     const { page } = await openChecked(browser, `/index.html${query}`, `home ${lang}`);
     check(await page.locator('html').getAttribute('lang') === lang, `home ${lang}: language initializes correctly`);
     check((await page.title()).trim().length > 0, `home ${lang}: localized title is present`);
+    await page.close();
+  }
+
+  for (const { lang, query } of languageCases) {
+    const { page } = await openChecked(browser, `/collection.html${query}`, `collection ${lang}`);
+    const lastLightCard = page.locator('#fragrances [data-prelaunch-last-light]');
+    check(await lastLightCard.count() === 1, `collection ${lang}: exactly one Last Light card is injected`);
+    check((await lastLightCard.locator('[data-last-light-copy="title"]').textContent() || '').trim().length > 0, `collection ${lang}: Last Light title is localized`);
+    check(await page.locator('#aventura-prelaunch-visual-fixes').count() === 0, `collection ${lang}: no runtime recovery style element is injected`);
+
+    const historicFilter = page.locator('[data-boutique-filter="historic"]');
+    if (await historicFilter.count()) {
+      await historicFilter.click();
+      await page.waitForTimeout(60);
+      check(await lastLightCard.isHidden(), `collection ${lang}: Historic Jeddah filter hides Last Light`);
+    }
+
+    const desertFilter = page.locator('[data-boutique-filter="desert"]');
+    if (await desertFilter.count()) {
+      await desertFilter.click();
+      await page.waitForTimeout(60);
+      check(await lastLightCard.isVisible(), `collection ${lang}: Desert filter shows Last Light`);
+    }
+    await page.close();
+  }
+
+  for (const { lang, query } of languageCases) {
+    const { page } = await openChecked(browser, `/experience-desert.html${query}`, `desert ${lang}`);
+    const fragranceSection = page.locator('.aventura-fragrance-section');
+    const lastLightCard = page.locator('[data-fragrance-id="last-light"]');
+    check(await fragranceSection.count() === 1, `desert ${lang}: exactly one active fragrance section exists`);
+    check(await lastLightCard.count() === 1, `desert ${lang}: exactly one Last Light fragrance card exists`);
+    check((await lastLightCard.locator('img').getAttribute('alt') || '').trim().length > 0, `desert ${lang}: Last Light card has localized accessible text`);
+    check(await page.locator('.prelaunch-last-light-section').count() === 0, `desert ${lang}: obsolete prelaunch Last Light section is absent`);
+    check(await page.locator('#aventura-prelaunch-visual-fixes').count() === 0, `desert ${lang}: no runtime recovery style element is injected`);
     await page.close();
   }
 } finally {
