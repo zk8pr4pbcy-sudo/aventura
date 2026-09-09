@@ -17,8 +17,9 @@ This document defines the maintenance rules for the Aventura website so future c
 - `assets/js/app.js` — shared legacy runtime. Extract responsibilities incrementally; do not perform a big-bang rewrite.
 - `assets/css/contact.css` — contact-page layout and privacy-consent styling.
 - `assets/js/contact-consent.js` — privacy-consent validation and consent timestamp only.
-- `tests/smoke.mjs` — release guardrails for language state, translations, Saudi date validation, contact submission, and contact architecture.
-- `.github/workflows/maintenance-ci.yml` — JavaScript syntax checks and smoke-test execution.
+- `tests/smoke.mjs` — static release guardrails for language state, translations, Saudi date validation, contact submission, and contact architecture.
+- `tests/browser-smoke.mjs` — real Chromium regression checks at a mobile viewport for AR/EN/ES initialization, RTL/LTR switching, contact-form availability, localized consent state, Saudi date minimums, past-date rejection, and future-date acceptance.
+- `.github/workflows/maintenance-ci.yml` — JavaScript syntax checks, static smoke tests, and real-browser regression checks.
 
 ## Safe change workflow
 
@@ -26,17 +27,17 @@ This document defines the maintenance rules for the Aventura website so future c
 2. Make one bounded change.
 3. Let Maintenance CI run.
 4. Review the diff and confirm there are no unrelated edits.
-5. Browser-test the affected flow in Arabic, English, and Spanish.
+5. Browser-test the affected flow in Arabic, English, and Spanish. Automated Chromium coverage is the baseline, not a replacement for targeted visual review when layout changes.
 6. Check mobile layout, RTL/LTR behavior, and keyboard/focus behavior where relevant.
-7. For booking/contact changes, verify past-date rejection and submit a controlled FormSubmit test request.
+7. For booking/contact changes, verify past-date rejection and submit a controlled FormSubmit test request when submission behavior changes.
 8. Merge/deploy only after automated checks and practical checks pass.
 
 ## Refactor order
 
-1. Stabilize and clean the contact page. **In progress.**
+1. Stabilize and clean the contact page. **First cleanup complete; protected by CI.**
 2. Define stable shared APIs for language and Saudi date state.
 3. Extract contact wizard/form logic from `app.js` behind those stable APIs.
-4. Audit remaining page-specific `*-fix` files and migrate permanent behavior to owned CSS/JS modules.
+4. Audit remaining page-specific compatibility/recovery files and migrate permanent behavior to owned CSS/JS modules when safe.
 5. Split translations by domain only if the maintenance or loading benefit justifies the added module boundaries.
 6. Continue page by page; never rebuild the entire site at once without a separate business reason.
 
@@ -56,9 +57,10 @@ A refactor slice is complete only when:
 
 - behavior is intentionally unchanged unless the change request says otherwise;
 - JavaScript syntax checks pass;
-- smoke tests pass;
+- static smoke tests pass;
+- automated Chromium regression checks pass;
 - AR/EN/ES behavior is verified for the affected flow;
-- mobile and RTL/LTR layout are checked;
+- mobile and RTL/LTR behavior are checked;
 - booking/date/submission behavior is checked when applicable;
 - no temporary migration workflow or runtime patch remains;
 - the diff contains only the intended responsibility change;
@@ -68,4 +70,4 @@ A refactor slice is complete only when:
 
 The contact page now keeps permanent structure in `contact.html`, presentation in `assets/css/contact.css`, and privacy-consent behavior in `assets/js/contact-consent.js`. The former `assets/js/contact-flow-fix.js` runtime patch is intentionally prohibited by the smoke tests from returning.
 
-The next extraction from `app.js` must not start until language access is made explicit and testable, because the contact submission currently depends on the active language state.
+The next extraction from `app.js` must make language access explicit and testable, because the contact submission currently depends on the active language state. Browser regression coverage must remain green before and after that extraction.
