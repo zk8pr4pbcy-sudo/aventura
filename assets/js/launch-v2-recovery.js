@@ -63,20 +63,6 @@
     return dictionary && dictionary[key] ? dictionary[key] : fallback;
   }
 
-  function addVisualAuditStyles() {
-    if (document.getElementById("aventura-prelaunch-visual-fixes")) return;
-    var style = document.createElement("style");
-    style.id = "aventura-prelaunch-visual-fixes";
-    style.textContent = [
-      ".detail-product-grid--fragrance-only>.detail-perfume-product:only-child{grid-column:1/-1;width:min(100%,420px);justify-self:center}",
-      ".prelaunch-last-light-card{position:relative}",
-      ".prelaunch-last-light-card small{display:block;margin-top:12px;color:rgba(255,255,255,.62);font-size:.76rem;line-height:1.55}",
-      ".prelaunch-last-light-section .detail-product-grid{grid-template-columns:1fr;width:min(100%,420px);margin-inline:auto}",
-      ".prelaunch-last-light-section .detail-perfume-product{width:100%}"
-    ].join("");
-    document.head.appendChild(style);
-  }
-
   function createPendingLastLightCard(className) {
     var article = document.createElement("article");
     article.className = className;
@@ -151,34 +137,6 @@
     });
   }
 
-  function injectDesertLastLight() {
-    if (!document.body.classList.contains("world-desert")) return;
-    var root = document.querySelector("[data-experience-detail=\"desert\"]");
-    if (!root || root.querySelector(".prelaunch-last-light-section")) return;
-
-    var section = document.createElement("section");
-    section.className = "section section-muted prelaunch-last-light-section";
-    section.innerHTML = '<div class="container"><div class="section-heading"><div><span class="eyebrow">AVENTURA SCENT LAB</span><h2 data-last-light-heading></h2></div><p data-last-light-description></p></div><div class="detail-product-grid"></div></div>';
-    var card = createPendingLastLightCard("catalog-product-card detail-perfume-product perfume-card-pending");
-    section.querySelector(".detail-product-grid").appendChild(card);
-    root.appendChild(section);
-
-    section.querySelector("[data-last-light-heading]").textContent = translated("collection.p3Title", "Last Light");
-    section.querySelector("[data-last-light-description]").textContent = translated("collection.p3Text", "Dry woods, sun-warmed sand, vetiver and a mineral accord.");
-    refreshLastLightCopy(section);
-  }
-
-  function refreshInjectedCopy() {
-    refreshLastLightCopy(document);
-    var desertSection = document.querySelector(".prelaunch-last-light-section");
-    if (desertSection) {
-      var heading = desertSection.querySelector("[data-last-light-heading]");
-      var description = desertSection.querySelector("[data-last-light-description]");
-      if (heading) heading.textContent = translated("collection.p3Title", "Last Light");
-      if (description) description.textContent = translated("collection.p3Text", "Dry woods, sun-warmed sand, vetiver and a mineral accord.");
-    }
-  }
-
   function setupBoutiqueResultFocus() {
     var boutique = document.querySelector("[data-boutique]");
     if (!boutique) return;
@@ -189,25 +147,21 @@
           var target = Array.from(boutique.querySelectorAll("[data-boutique-section]")).find(function (section) {
             return !section.hidden;
           });
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 20);
       });
     });
   }
 
   function initializeRecovery() {
-    addVisualAuditStyles();
     setupBoutiqueResultFocus();
-    window.setTimeout(function () {
-      injectBoutiqueLastLight();
-      injectDesertLastLight();
-    }, 80);
+    window.setTimeout(injectBoutiqueLastLight, 80);
   }
 
   document.addEventListener("aventura:language", function () {
-    window.setTimeout(refreshInjectedCopy, 0);
+    window.setTimeout(function () {
+      refreshLastLightCopy(document);
+    }, 0);
   });
 
   if (document.readyState === "loading") {
