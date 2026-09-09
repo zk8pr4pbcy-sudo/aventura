@@ -39,28 +39,28 @@
     var root = document.querySelector('[data-experience-detail][data-experience-id="desert"]');
     if (!root) return;
 
-    var observer = new MutationObserver(function () {
-      if (root.querySelector(".prelaunch-last-light-section")) {
-        observer.disconnect();
-        return;
-      }
+    function mountWhenReady(observer) {
+      if (root.getAttribute("data-experience-request-key") !== "desert") return false;
       injectInto(root);
+      if (observer) observer.disconnect();
+      return true;
+    }
+
+    if (mountWhenReady(null)) return;
+
+    var observer = new MutationObserver(function () {
+      mountWhenReady(observer);
     });
 
-    observer.observe(root, { childList: true });
-
-    // app.js builds the experience detail during page initialization. Queueing this
-    // microtask lets that render complete first, while the observer protects us if
-    // the detail root is replaced during the same initialization cycle.
-    window.queueMicrotask(function () {
-      injectInto(root);
+    observer.observe(root, {
+      attributes: true,
+      attributeFilter: ["data-experience-request-key"],
+      childList: true
     });
   }
 
   document.addEventListener("aventura:language", function () {
-    window.queueMicrotask(function () {
-      updateCopy(document.querySelector(".prelaunch-last-light-section"));
-    });
+    updateCopy(document.querySelector(".prelaunch-last-light-section"));
   });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
