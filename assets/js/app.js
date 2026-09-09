@@ -1524,6 +1524,10 @@
     }
 
     function saudiDateToday() {
+      var runtime = window.AVENTURA_RUNTIME;
+      if (runtime && runtime.dates && typeof runtime.dates.today === "function") {
+        return runtime.dates.today();
+      }
       var now = new Date();
       try {
         var dateParts = new Intl.DateTimeFormat("en-US", {
@@ -1552,6 +1556,11 @@
       if (!isTimingField(field)) {
         return;
       }
+      var runtime = window.AVENTURA_RUNTIME;
+      if (runtime && runtime.dates && typeof runtime.dates.minimumForInput === "function") {
+        field.setAttribute("min", runtime.dates.minimumForInput(field.type));
+        return;
+      }
       var minimumDate = saudiDateToday();
       field.setAttribute("min", field.type === "datetime-local" ? minimumDate + "T00:00" : minimumDate);
     }
@@ -1562,6 +1571,10 @@
 
     function isPastSaudiDate(field) {
       var value = timingDateValue(field);
+      var runtime = window.AVENTURA_RUNTIME;
+      if (runtime && runtime.dates && typeof runtime.dates.isPast === "function") {
+        return runtime.dates.isPast(value, field && field.type);
+      }
       return Boolean(value && value < saudiDateToday());
     }
 
