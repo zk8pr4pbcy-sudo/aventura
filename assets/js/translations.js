@@ -3083,7 +3083,7 @@
     "experiences.stbStep2Title": "Club Náutico de Yeda al atardecer",
     "experiences.stbStep2Text": "Breve parada en el paseo público con una bebida estándar incluida.",
     "experiences.stbStep3Title": "Yeda Histórica",
-    "experiences.stbStep3Text": "Paseo con guía autorizado, café saudí, dátiles y paradas patrimoniales seleccionadas."
+    "experiences.stbStep3Text": "Paseo con guía autorizado, café saudí, dátiles y paradas patrimoniales seleccionadas.",
     "experiences.stbStep4Title": "Cena de mariscos opcional",
     "experiences.stbStep4Text": "Añade una cena de mariscos en un restaurante seleccionado de Yeda Histórica si deseas terminar allí la noche.",
     "experiences.stbDurationLabel": "Duración del programa",
