@@ -42,6 +42,9 @@ jobs:
       - name: Run contact wizard contract checks
         run: node tests/contact-wizard-contract.mjs
 
+      - name: Run contact request data contract checks
+        run: node tests/contact-request-data-contract.mjs
+
   browser:
     runs-on: ubuntu-latest
     needs: verify
@@ -84,6 +87,11 @@ jobs:
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/contact-wizard-browser.mjs
+
+      - name: Run contact request data browser checks
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/contact-request-data-browser.mjs
 
       - name: Stop local site
         if: always()
