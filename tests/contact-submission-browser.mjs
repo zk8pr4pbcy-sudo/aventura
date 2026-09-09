@@ -157,7 +157,7 @@ try {
   const submit = failureStep.locator('[data-submit-channel-button]');
   await submit.click();
   await failurePage.waitForTimeout(250);
-  const statusText = String(await failurePage.locator('[data-contact-status]').textContent().catch(() => '') || '').trim();
+  const statusText = String(await failurePage.locator('[data-form-status]').textContent().catch(() => '') || '').trim();
   check(statusText.length > 0, 'submission failure: localized error status is shown');
   check(!(await failurePage.locator('[data-request-success]').isVisible()), 'submission failure: success UI stays hidden');
   check(!(await submit.isDisabled()), 'submission failure: submit button is re-enabled');
