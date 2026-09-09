@@ -12,6 +12,60 @@ function check(condition, message) {
   }
 }
 
+async function satisfyVisibleRequiredFields(step) {
+  const required = step.locator('[required]');
+  const count = await required.count();
+
+  for (let index = 0; index < count; index += 1) {
+    const field = required.nth(index);
+    if (!(await field.isVisible()) || !(await field.isEnabled())) continue;
+    if (await field.evaluate((element) => element.checkValidity())) continue;
+
+    const tagName = await field.evaluate((element) => element.tagName);
+    const type = String(await field.getAttribute('type') || '').toLowerCase();
+
+    if (type === 'radio') {
+      const name = await field.getAttribute('name');
+      const candidate = step.locator(`input[type="radio"][name="${name}"]:not([disabled])`).first();
+      if (await candidate.count()) await candidate.check();
+      continue;
+    }
+
+    if (type === 'checkbox') {
+      await field.check();
+      continue;
+    }
+
+    if (tagName === 'SELECT') {
+      const value = await field.locator('option').evaluateAll((options) => {
+        const option = options.find((item) => String(item.value || '').trim() && !item.disabled);
+        return option ? option.value : '';
+      });
+      if (value) await field.selectOption(value);
+      continue;
+    }
+
+    if (type === 'date') {
+      const min = await field.getAttribute('min');
+      if (min) await field.fill(min);
+      continue;
+    }
+
+    if (type === 'datetime-local') {
+      const min = await field.getAttribute('min');
+      if (min) await field.fill(min);
+      continue;
+    }
+
+    if (type === 'number') {
+      await field.fill(String(await field.getAttribute('min') || '1'));
+      continue;
+    }
+
+    await field.fill('Test');
+  }
+}
+
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -44,22 +98,40 @@ try {
       continue;
     }
     await page.locator('#type').selectOption(requestType);
+    await satisfyVisibleRequiredFields(page.locator('[data-request-step="1"]'));
     await page.locator('[data-request-step="1"] [data-request-next]').click();
     await page.waitForTimeout(100);
 
     check(await page.locator('[data-request-step="2"]').isVisible(), `wizard ${lang}: Next moves to step 2`);
     check(await page.locator('[data-request-step="1"]').isHidden(), `wizard ${lang}: step 1 hides after Next`);
 
-    await page.locator('[data-request-step="2"] [data-request-next]').click();
+    const step2 = page.locator('[data-request-step="2"]');
+    await satisfyVisibleRequiredFields(step2);
+    await step2.locator('[data-request-next]').click();
     await page.waitForTimeout(100);
 
-    check(await page.locator('[data-request-step="3"]').isVisible(), `wizard ${lang}: Next moves to step 3`);
+    const step3Visible = await page.locator('[data-request-step="3"]').isVisible();
+    if (!step3Visible) {
+      const blockers = await step2.locator('[required]').evaluateAll((fields) => fields
+        .filter((field) => field.willValidate && !field.disabled && !field.checkValidity())
+        .map((field) => ({
+          name: field.name,
+          type: field.type,
+          hiddenByGroup: Boolean(field.closest('[data-request-details][hidden]')),
+          visible: Boolean(field.offsetWidth || field.offsetHeight || field.getClientRects().length)
+        })));
+      console.error(`wizard ${lang}: remaining blockers ${JSON.stringify(blockers)}`);
+    }
+
+    check(step3Visible, `wizard ${lang}: Next moves to step 3`);
     check(await page.locator('[data-request-step="3"] [data-submit-channel-button]').count() === 1, `wizard ${lang}: submit control remains in step 3`);
     check(await page.locator('[data-request-step="3"] [name="privacy_consent"]').count() === 1, `wizard ${lang}: privacy consent remains in step 3`);
 
-    await page.locator('[data-request-step="3"] [data-request-back]').click();
-    await page.waitForTimeout(100);
-    check(await page.locator('[data-request-step="2"]').isVisible(), `wizard ${lang}: Back returns to step 2`);
+    if (step3Visible) {
+      await page.locator('[data-request-step="3"] [data-request-back]').click();
+      await page.waitForTimeout(100);
+      check(await page.locator('[data-request-step="2"]').isVisible(), `wizard ${lang}: Back returns to step 2`);
+    }
 
     await page.close();
   }
