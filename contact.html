@@ -30,11 +30,12 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=security-20260823">
   <link rel="stylesheet" href="assets/css/light-theme.css?v=recover-v2-20260809" />
   <link rel="stylesheet" href="assets/css/contact-mobile-fix.css?v=20260810-2" />
+  <link rel="stylesheet" href="assets/css/contact.css?v=20260909" />
   <script src="assets/js/translations.js?v=date-validation-20260830" defer></script>
   <script src="assets/js/ga4.js?v=20260815-pdpl4" defer></script>
   <script src="assets/js/analytics.js?v=date-validation-20260830" defer></script>
   <script src="assets/js/app.js?v=date-validation-20260830" defer></script>
-  <script src="assets/js/contact-flow-fix.js?v=20260823-1" defer></script>
+  <script src="assets/js/contact-consent.js?v=20260909" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -71,29 +72,6 @@
 
     <section class="section">
       <div class="container contact-layout">
-        <aside class="contact-panel" data-reveal>
-          <span class="eyebrow" data-i18n="contact.heroEyebrow">Contact</span>
-          <h2 data-i18n="contact.panelTitle">Talk to Aventura</h2>
-          <p data-i18n="contact.panelText">Email is the main booking channel. WhatsApp remains available as a second option.</p>
-          <div class="contact-methods">
-            <a class="contact-method" href="mailto:contact@aventuraksa.com">
-              <span data-i18n="contact.email1Label">Bookings &amp; inquiries</span>
-              <strong>contact@aventuraksa.com</strong>
-            </a>
-            <a class="contact-method" href="https://wa.me/966555884854" target="_blank" rel="noopener">
-              <span data-i18n="contact.phoneLabel">WhatsApp</span>
-              <strong dir="ltr">+966 55 588 4854</strong>
-            </a>
-            <div class="contact-method">
-              <span data-i18n="contact.locationLabel">Based in</span>
-              <strong data-i18n="common.jeddahSaudi">Jeddah, Saudi Arabia</strong>
-            </div>
-            <a class="contact-method" href="partners.html">
-              <span data-i18n="partners.contactLabel">Companies, venues and professionals</span>
-              <strong data-i18n="nav.partners">Partner with us</strong>
-            </a>
-          </div>
-        </aside>
 
         <form class="form-card" data-contact-form action="https://formsubmit.co/contact@aventuraksa.com" method="POST" novalidate data-reveal>
           <input type="hidden" name="_subject" value="Aventura booking request">
@@ -103,6 +81,7 @@
           <input type="hidden" name="request_reference" value="">
           <input type="hidden" name="request_language" value="">
           <input type="hidden" name="request_summary" value="">
+          <input type="hidden" name="privacy_consent_at" value="">
           <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <h2 data-i18n="contact.formTitle">Request details</h2>
           <p class="lead" data-i18n="contact.formText">No payment is taken here. This form starts the planning conversation.</p>
@@ -139,6 +118,17 @@
                 <label><input type="radio" name="submissionChannel" value="email" checked><span data-i18n="contact.sendEmail">Email</span></label>
                 <label><input type="radio" name="submissionChannel" value="whatsapp"><span data-i18n="contact.sendWhatsapp">WhatsApp</span></label>
               </div>
+              <label class="aventura-request-consent full" data-request-consent
+                data-consent-error-ar="يجب الموافقة على معالجة البيانات وفق سياسة الخصوصية قبل إرسال الطلب."
+                data-consent-error-en="Please agree to the data processing terms in the Privacy Policy before sending your request."
+                data-consent-error-es="Debes aceptar el tratamiento de datos conforme a la Política de privacidad antes de enviar la solicitud.">
+                <input type="checkbox" name="privacy_consent" value="yes" required aria-required="true">
+                <span class="aventura-request-consent-copy">
+                  <span data-consent-lang="ar" lang="ar">أوافق على معالجة بياناتي لغرض مراجعة طلبي والتواصل معي وفق <a href="privacy.html">سياسة الخصوصية</a>.</span>
+                  <span data-consent-lang="en" lang="en">I agree that Aventura may process my data to review my request and contact me under the <a href="privacy.html">Privacy Policy</a>.</span>
+                  <span data-consent-lang="es" lang="es">Acepto que Aventura trate mis datos para revisar mi solicitud y ponerse en contacto conmigo conforme a la <a href="privacy.html">Política de privacidad</a>.</span>
+                </span>
+              </label>
             </fieldset>
             <div class="field">
               <label for="type" data-i18n="contact.typeLabel">Request type</label>
@@ -227,6 +217,30 @@
           <p class="form-privacy-notice"><span data-i18n="contact.privacyNoticePrefix">By sending this request, Aventura processes your data to prepare the request and contact you under the</span> <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a><span data-i18n="contact.privacyNoticeTerms">. Confirmed services are governed by the</span> <a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a>.</p>
           <p class="form-status" data-form-status role="alert" aria-live="polite"></p>
         </form>
+
+        <aside class="contact-panel" data-reveal>
+          <span class="eyebrow" data-i18n="contact.heroEyebrow">Contact</span>
+          <h2 data-i18n="contact.panelTitle">Talk to Aventura</h2>
+          <p data-i18n="contact.panelText">Email is the main booking channel. WhatsApp remains available as a second option.</p>
+          <div class="contact-methods">
+            <a class="contact-method" href="mailto:contact@aventuraksa.com">
+              <span data-i18n="contact.email1Label">Bookings &amp; inquiries</span>
+              <strong>contact@aventuraksa.com</strong>
+            </a>
+            <a class="contact-method" href="https://wa.me/966555884854" target="_blank" rel="noopener">
+              <span data-i18n="contact.phoneLabel">WhatsApp</span>
+              <strong dir="ltr">+966 55 588 4854</strong>
+            </a>
+            <div class="contact-method">
+              <span data-i18n="contact.locationLabel">Based in</span>
+              <strong data-i18n="common.jeddahSaudi">Jeddah, Saudi Arabia</strong>
+            </div>
+            <a class="contact-method" href="partners.html">
+              <span data-i18n="partners.contactLabel">Companies, venues and professionals</span>
+              <strong data-i18n="nav.partners">Partner with us</strong>
+            </a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>

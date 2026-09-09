@@ -3083,7 +3083,7 @@
     "experiences.stbStep2Title": "Club Náutico de Yeda al atardecer",
     "experiences.stbStep2Text": "Breve parada en el paseo público con una bebida estándar incluida.",
     "experiences.stbStep3Title": "Yeda Histórica",
-    "experiences.stbStep3Text": "Paseo con guía autorizado, café saudí, dátiles y paradas patrimoniales seleccionadas."
+    "experiences.stbStep3Text": "Paseo con guía autorizado, café saudí, dátiles y paradas patrimoniales seleccionadas.",
     "experiences.stbStep4Title": "Cena de mariscos opcional",
     "experiences.stbStep4Text": "Añade una cena de mariscos en un restaurante seleccionado de Yeda Histórica si deseas terminar allí la noche.",
     "experiences.stbDurationLabel": "Duración del programa",
@@ -3176,7 +3176,7 @@
     "partners.process4Title": "Confirmar",
     "partners.process4Text": "Las oportunidades aprobadas se confirman mediante un alcance y acuerdo claros.",
     "partners.formEyebrow": "Solicitud de colaboración",
-    "partners.formSideTitle": "Cuéntanos qué haces excepcionalmente bien.",
+    "partners.formSideTitle": "Cuéntanos en qué destacas.",
     "partners.formSideText": "Un perfil breve y preciso nos ayuda a entender dónde podría encajar una futura colaboración.",
     "partners.formNote1": "Usa formato internacional de teléfono si solicitas desde fuera de Arabia Saudí.",
     "partners.formNote2": "Comparte una web o portafolio en vez de enviar documentos sensibles.",
