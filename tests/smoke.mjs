@@ -27,7 +27,12 @@ const app = read('assets/js/app.js');
 const translations = read('assets/js/translations.js');
 const contact = read('contact.html');
 const partners = read('partners.html');
+const collection = read('collection.html');
+const desert = read('experience-desert.html');
 const contactConsent = read('assets/js/contact-consent.js');
+const launchRecovery = read('assets/js/launch-v2-recovery.js');
+const desertLastLight = read('assets/js/prelaunch-desert-last-light.js');
+const prelaunchStyles = read('assets/css/prelaunch-visual-fixes.css');
 const jsDirectory = path.join(root, 'assets/js');
 const legacyFixFiles = fs.readdirSync(jsDirectory).filter((name) => /-fix\.js$/i.test(name));
 const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
@@ -70,6 +75,18 @@ check(includesInOrder(contact, '<form class="form-card"', '<aside class="contact
 check(contactConsent.includes('privacy_consent'), 'consent module owns consent validation');
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
+
+// Recovery architecture: CSS belongs in CSS, and desert Last Light has one owner.
+check(!launchRecovery.includes('createElement("style")') && !launchRecovery.includes("createElement('style')"), 'launch recovery no longer injects runtime CSS');
+check(!launchRecovery.includes('injectDesertLastLight'), 'launch recovery no longer owns desert Last Light injection');
+check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the desert Last Light section');
+check(desertLastLight.includes('prelaunch-last-light-section'), 'desert Last Light module owns the desert section');
+check(desertLastLight.includes('window.setTimeout(inject, 80);'), 'desert Last Light keeps the established injection timing');
+check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'Last Light card styling lives in CSS');
+check(prelaunchStyles.includes('.prelaunch-last-light-section .detail-product-grid'), 'desert Last Light layout styling lives in CSS');
+check(collection.includes('assets/js/launch-v2-recovery.js'), 'boutique keeps the collection recovery module');
+check(desert.includes('assets/js/prelaunch-desert-last-light.js'), 'desert page loads its dedicated Last Light module');
+check(desert.includes('assets/css/prelaunch-visual-fixes.css'), 'desert page loads the owned Last Light stylesheet');
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
