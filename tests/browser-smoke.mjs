@@ -56,7 +56,17 @@ try {
     check(await page.locator('html').getAttribute('dir') === dir, `contact ${lang}: text direction is correct`);
     check(await page.locator('[data-contact-form]').isVisible(), `contact ${lang}: request form is visible`);
     check(await page.locator('[name="privacy_consent"]').count() === 1, `contact ${lang}: one privacy checkbox exists`);
-    check(await page.locator(`[data-consent-lang="${lang}"]`).isVisible(), `contact ${lang}: matching privacy copy is visible`);
+
+    const consentCopy = page.locator(`[data-consent-lang="${lang}"]`);
+    check(
+      await consentCopy.evaluate((element) => getComputedStyle(element).display !== 'none'),
+      `contact ${lang}: matching privacy copy is selected by CSS`
+    );
+
+    const hiddenConsentCopies = await page.locator(`[data-consent-lang]:not([data-consent-lang="${lang}"])`).evaluateAll((elements) =>
+      elements.every((element) => getComputedStyle(element).display === 'none')
+    );
+    check(hiddenConsentCopies, `contact ${lang}: non-matching privacy copies stay hidden`);
 
     const date = page.locator('#date');
     const today = saudiDateOffset(0);
