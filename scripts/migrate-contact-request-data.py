@@ -4,6 +4,11 @@ APP = Path("assets/js/app.js")
 CONTACT = Path("contact.html")
 
 app = APP.read_text()
+contact = CONTACT.read_text()
+
+already_wired = "window.AVENTURA_CONTACT_REQUEST_DATA" in app and "assets/js/contact-request-data.js?v=20260910" in contact
+if already_wired:
+    raise SystemExit(0)
 
 anchor = '    updateSubmissionChannel();\n    var lastRequestMessage = "";\n    var isSubmitting = false;'
 replacement = '''    updateSubmissionChannel();
@@ -39,7 +44,6 @@ delegated = '''      var requestId = contactRequestData.createRequestId();
 app = app[:start] + delegated + app[end:]
 APP.write_text(app)
 
-contact = CONTACT.read_text()
 script_anchor = '  <script src="assets/js/contact-wizard.js?v=20260910" defer></script>\n  <script src="assets/js/app.js?v=date-validation-20260830" defer></script>'
 script_replacement = '  <script src="assets/js/contact-wizard.js?v=20260910" defer></script>\n  <script src="assets/js/contact-request-data.js?v=20260910" defer></script>\n  <script src="assets/js/app.js?v=date-validation-20260830" defer></script>'
 if contact.count(script_anchor) != 1:
