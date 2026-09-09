@@ -31,6 +31,7 @@ const collection = read('collection.html');
 const desert = read('experience-desert.html');
 const contactConsent = read('assets/js/contact-consent.js');
 const launchRecovery = read('assets/js/launch-v2-recovery.js');
+const fragranceCards = read('assets/js/fragrance-cards.js');
 const prelaunchStyles = read('assets/css/prelaunch-visual-fixes.css');
 const jsDirectory = path.join(root, 'assets/js');
 const legacyFixFiles = fs.readdirSync(jsDirectory).filter((name) => /-fix\.js$/i.test(name));
@@ -76,19 +77,18 @@ check(contactConsent.includes('privacy_consent'), 'consent module owns consent v
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
 
-// Recovery architecture: CSS belongs in CSS, boutique recovery stays scoped, and desert Last Light is static content.
+// Recovery architecture: CSS belongs in CSS, boutique recovery stays scoped, and the active fragrance module owns desert Last Light.
 check(!launchRecovery.includes('createElement("style")') && !launchRecovery.includes("createElement('style')"), 'launch recovery no longer injects runtime CSS');
 check(!launchRecovery.includes('injectDesertLastLight'), 'launch recovery no longer owns desert Last Light injection');
-check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the desert Last Light section');
+check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the obsolete desert Last Light section');
 check(!fs.existsSync(desertLastLightScriptPath), 'obsolete desert Last Light injector has been removed');
-check(!desert.includes('prelaunch-desert-last-light.js'), 'desert page does not load a Last Light injector');
-check(desert.includes('class="section section-muted prelaunch-last-light-section"'), 'desert Last Light section lives in static HTML');
-check(desert.includes('data-i18n="collection.p3Title"'), 'desert Last Light title uses the shared translation dictionary');
-check(desert.includes('data-i18n="collection.p3Text"'), 'desert Last Light description uses the shared translation dictionary');
-check(desert.includes('data-i18n="common.comingSoon"'), 'desert Last Light status uses the shared translation dictionary');
-check(desert.includes('assets/css/prelaunch-visual-fixes.css'), 'desert page loads the owned Last Light stylesheet');
-check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'Last Light card styling lives in CSS');
-check(prelaunchStyles.includes('.prelaunch-last-light-section .detail-product-grid'), 'desert Last Light layout styling lives in CSS');
+check(!desert.includes('prelaunch-desert-last-light.js'), 'desert page does not load the obsolete Last Light injector');
+check(!desert.includes('prelaunch-last-light-section'), 'desert HTML does not contain the obsolete Last Light section');
+check(desert.includes('assets/js/fragrance-cards.js'), 'desert page loads the active fragrance cards module');
+check(fragranceCards.includes('desert: ['), 'fragrance cards module defines the desert fragrance inventory');
+check(fragranceCards.includes('{ id: "last-light", name: "Last Light"'), 'fragrance cards module owns the Last Light product card');
+check(fragranceCards.includes('document.querySelectorAll(".prelaunch-last-light-section")'), 'fragrance cards module explicitly removes obsolete Last Light UI');
+check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'legacy boutique Last Light card styling remains in CSS until boutique recovery is split');
 check(collection.includes('assets/js/launch-v2-recovery.js'), 'boutique keeps the collection recovery module');
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
