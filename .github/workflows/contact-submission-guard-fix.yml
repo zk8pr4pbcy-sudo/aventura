@@ -1,0 +1,47 @@
+name: Contact submission guard fix
+
+on:
+  push:
+    branches:
+      - refactor/contact-submission-contract-20260910
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.ref_name == 'refactor/contact-submission-contract-20260910'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Apply bounded guard fix
+        run: node scripts/fix-contact-submission-guard.mjs
+
+      - name: Validate guard fix
+        run: |
+          node --check assets/js/app.js
+          node tests/contact-submission-contract.mjs
+          git diff --check
+
+      - name: Commit guard fix if needed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- assets/js/app.js; then
+            echo "No guard fix changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/app.js
+          git commit -m "Keep contact form idle when submission transport is unavailable"
+          git push origin HEAD:${GITHUB_REF_NAME}
