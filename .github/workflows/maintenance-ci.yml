@@ -33,6 +33,9 @@ jobs:
       - name: Run Aventura smoke checks
         run: node tests/smoke.mjs
 
+      - name: Run runtime state contract tests
+        run: node tests/runtime-state.mjs
+
   browser:
     runs-on: ubuntu-latest
     needs: verify
