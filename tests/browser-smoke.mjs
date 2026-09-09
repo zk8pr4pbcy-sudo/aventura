@@ -126,8 +126,13 @@ try {
   for (const { lang, query } of languageCases) {
     const { page } = await openChecked(browser, `/experience-desert.html${query}`, `desert ${lang}`);
     const sections = page.locator('.prelaunch-last-light-section');
-    check(await sections.count() === 1, `desert ${lang}: exactly one Last Light section exists`);
-    check((await sections.locator('[data-last-light-heading]').first().textContent() || '').trim().length > 0, `desert ${lang}: Last Light heading is localized`);
+    const sectionCount = await sections.count();
+    check(sectionCount === 1, `desert ${lang}: exactly one Last Light section exists`);
+    if (sectionCount === 1) {
+      check((await sections.locator('[data-last-light-heading]').first().textContent() || '').trim().length > 0, `desert ${lang}: Last Light heading is localized`);
+    } else {
+      fail(`desert ${lang}: localized heading check skipped because the section count is ${sectionCount}`);
+    }
     check(await page.locator('#aventura-prelaunch-visual-fixes').count() === 0, `desert ${lang}: no runtime recovery style element is injected`);
     await page.close();
   }
