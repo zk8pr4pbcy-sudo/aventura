@@ -15,7 +15,7 @@ assert.doesNotMatch(wizard, /wa\.me|WHATSAPP_NUMBER/, "wizard module must not ow
 if (/assets\/js\/contact-wizard\.js/.test(contact)) {
   assert.match(app, /AVENTURA_CONTACT_WIZARD/, "app.js must call the wizard module");
   assert.doesNotMatch(app, /function\s+setupContactWizard\s*\(/, "app.js must not keep a duplicate wizard implementation");
-  assert.match(contact, /assets\/js\/contact-wizard\.js["']><\/script>/, "contact page must load the wizard module");
+  assert.match(contact, /assets\/js\/contact-wizard\.js(?:\?[^"']*)?["']\s+defer><\/script>/, "contact page must load the wizard module");
 }
 
 console.log("Contact wizard contract checks passed");
