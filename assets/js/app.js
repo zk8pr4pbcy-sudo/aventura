@@ -1913,14 +1913,14 @@
         submissionData.set("request_reference", requestId);
         submissionData.set("request_language", getActiveLanguage());
         submissionData.set("request_summary", lastRequestMessage);
-        isSubmitting = true;
-        setContactSubmitting(true);
         if (!submissionTransport || typeof submissionTransport.sendEmail !== "function") {
           if (status) {
             status.textContent = translate("contact.submitError");
           }
           return;
         }
+        isSubmitting = true;
+        setContactSubmitting(true);
         submissionTransport.sendEmail(submissionData).then(function () {
           isSubmitting = false;
           setContactSubmitting(false);
