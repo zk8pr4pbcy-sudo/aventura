@@ -25,110 +25,87 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import re
 
           app_path = Path('assets/js/app.js')
           app = app_path.read_text()
 
-          old_today = '''    function saudiDateToday() {
-              var now = new Date();
-              try {
-                var dateParts = new Intl.DateTimeFormat("en-US", {
-                  timeZone: "Asia/Riyadh",
-                  year: "numeric",
-                  month: "2-digit",
-                  day: "2-digit"
-                }).formatToParts(now);
-                var values = {};
-                dateParts.forEach(function (part) {
-                  if (part.type !== "literal") {
-                    values[part.type] = part.value;
-                  }
-                });
-                return values.year + "-" + values.month + "-" + values.day;
-              } catch (error) {
-                return new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().split("T")[0];
-              }
-            }
-          '''
-          new_today = '''    function saudiDateToday() {
-              var runtime = window.AVENTURA_RUNTIME;
-              if (runtime && runtime.dates && typeof runtime.dates.today === "function") {
-                return runtime.dates.today();
-              }
-              var now = new Date();
-              try {
-                var dateParts = new Intl.DateTimeFormat("en-US", {
-                  timeZone: "Asia/Riyadh",
-                  year: "numeric",
-                  month: "2-digit",
-                  day: "2-digit"
-                }).formatToParts(now);
-                var values = {};
-                dateParts.forEach(function (part) {
-                  if (part.type !== "literal") {
-                    values[part.type] = part.value;
-                  }
-                });
-                return values.year + "-" + values.month + "-" + values.day;
-              } catch (error) {
-                return new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().split("T")[0];
-              }
-            }
-          '''
-
-          old_min = '''    function setSaudiDateMinimum(field) {
-              if (!isTimingField(field)) {
-                return;
-              }
-              var minimumDate = saudiDateToday();
-              field.setAttribute("min", field.type === "datetime-local" ? minimumDate + "T00:00" : minimumDate);
-            }
-          '''
-          new_min = '''    function setSaudiDateMinimum(field) {
-              if (!isTimingField(field)) {
-                return;
-              }
-              var runtime = window.AVENTURA_RUNTIME;
-              if (runtime && runtime.dates && typeof runtime.dates.minimumForInput === "function") {
-                field.setAttribute("min", runtime.dates.minimumForInput(field.type));
-                return;
-              }
-              var minimumDate = saudiDateToday();
-              field.setAttribute("min", field.type === "datetime-local" ? minimumDate + "T00:00" : minimumDate);
-            }
-          '''
-
-          old_past = '''    function isPastSaudiDate(field) {
-              var value = timingDateValue(field);
-              return Boolean(value && value < saudiDateToday());
-            }
-          '''
-          new_past = '''    function isPastSaudiDate(field) {
-              var value = timingDateValue(field);
-              var runtime = window.AVENTURA_RUNTIME;
-              if (runtime && runtime.dates && typeof runtime.dates.isPast === "function") {
-                return runtime.dates.isPast(value, field && field.type);
-              }
-              return Boolean(value && value < saudiDateToday());
-            }
-          '''
-
-          for label, old, new in [
-              ('saudiDateToday', old_today, new_today),
-              ('setSaudiDateMinimum', old_min, new_min),
-              ('isPastSaudiDate', old_past, new_past),
-          ]:
-              count = app.count(old)
+          def replace_once(pattern, replacement, label):
+              global app
+              app, count = re.subn(pattern, replacement, app, count=1, flags=re.S)
               if count != 1:
-                  raise SystemExit(f'{label}: expected exactly one legacy block, found {count}')
-              app = app.replace(old, new)
+                  raise SystemExit(f'{label}: expected exactly one match, found {count}')
+
+          replace_once(
+              r'    function saudiDateToday\(\) \{.*?^    \}\n\n    function isTimingField',
+              '''    function saudiDateToday() {
+                var runtime = window.AVENTURA_RUNTIME;
+                if (runtime && runtime.dates && typeof runtime.dates.today === "function") {
+                  return runtime.dates.today();
+                }
+                var now = new Date();
+                try {
+                  var dateParts = new Intl.DateTimeFormat("en-US", {
+                    timeZone: "Asia/Riyadh",
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit"
+                  }).formatToParts(now);
+                  var values = {};
+                  dateParts.forEach(function (part) {
+                    if (part.type !== "literal") {
+                      values[part.type] = part.value;
+                    }
+                  });
+                  return values.year + "-" + values.month + "-" + values.day;
+                } catch (error) {
+                  return new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().split("T")[0];
+                }
+              }
+
+              function isTimingField''',
+              'saudiDateToday'
+          )
+
+          replace_once(
+              r'    function setSaudiDateMinimum\(field\) \{.*?^    \}\n\n    function timingDateValue',
+              '''    function setSaudiDateMinimum(field) {
+                if (!isTimingField(field)) {
+                  return;
+                }
+                var runtime = window.AVENTURA_RUNTIME;
+                if (runtime && runtime.dates && typeof runtime.dates.minimumForInput === "function") {
+                  field.setAttribute("min", runtime.dates.minimumForInput(field.type));
+                  return;
+                }
+                var minimumDate = saudiDateToday();
+                field.setAttribute("min", field.type === "datetime-local" ? minimumDate + "T00:00" : minimumDate);
+              }
+
+              function timingDateValue''',
+              'setSaudiDateMinimum'
+          )
+
+          replace_once(
+              r'    function isPastSaudiDate\(field\) \{.*?^    \}\n\n    function isActiveTimingField',
+              '''    function isPastSaudiDate(field) {
+                var value = timingDateValue(field);
+                var runtime = window.AVENTURA_RUNTIME;
+                if (runtime && runtime.dates && typeof runtime.dates.isPast === "function") {
+                  return runtime.dates.isPast(value, field && field.type);
+                }
+                return Boolean(value && value < saudiDateToday());
+              }
+
+              function isActiveTimingField''',
+              'isPastSaudiDate'
+          )
 
           app_path.write_text(app)
 
           test_path = Path('tests/runtime-integration.mjs')
           test = test_path.read_text()
-          marker = 'assert.match(app, /runtime\\.dates\\.today\\(\\)/'
-          if marker not in test:
+          if 'runtime\\.dates\\.today' not in test:
               insert = '''\nassert.match(app, /runtime\\.dates\\.today\\(\\)/, "contact must use runtime Saudi today when available");
           assert.match(app, /runtime\\.dates\\.minimumForInput\\(field\\.type\\)/, "contact date minimum must use runtime date contract");
           assert.match(app, /runtime\\.dates\\.isPast\\(value, field && field\\.type\\)/, "contact past-date validation must use runtime date contract");
