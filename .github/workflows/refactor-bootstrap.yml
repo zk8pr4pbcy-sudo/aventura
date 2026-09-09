@@ -1,0 +1,46 @@
+name: Aventura Refactor Bootstrap
+
+on:
+  push:
+    branches:
+      - refactor/maintenance-20260909
+    paths:
+      - '.github/workflows/refactor-bootstrap.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-known-syntax-error:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout refactor branch
+        uses: actions/checkout@v4
+        with:
+          ref: refactor/maintenance-20260909
+
+      - name: Patch the exact Spanish translation syntax error
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('assets/js/translations.js')
+          source = path.read_text(encoding='utf-8')
+          old = '    "experiences.stbStep3Text": "Paseo con guía autorizado, café saudí, dátiles y paradas patrimoniales seleccionadas."\n    "experiences.stbStep4Title": "Cena de mariscos opcional",'
+          new = '    "experiences.stbStep3Text": "Paseo con guía autorizado, café saudí, dátiles y paradas patrimoniales seleccionadas.",\n    "experiences.stbStep4Title": "Cena de mariscos opcional",'
+          count = source.count(old)
+          if count != 1:
+              raise SystemExit(f'Expected exactly one known syntax error, found {count}. Refusing to modify the file.')
+          path.write_text(source.replace(old, new, 1), encoding='utf-8')
+
+      - name: Commit only the verified one-line fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          git diff -- assets/js/translations.js
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/translations.js
+          git commit -m "fix: restore Spanish translations syntax"
+          git push origin HEAD:refactor/maintenance-20260909
