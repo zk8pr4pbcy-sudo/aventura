@@ -37,7 +37,7 @@
   }
 
   function init() {
-    window.setTimeout(inject, 120);
+    window.setTimeout(inject, 80);
   }
 
   document.addEventListener("aventura:language", function () {
