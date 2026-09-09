@@ -6,6 +6,19 @@ const contactPath = 'contact.html';
 let app = fs.readFileSync(appPath, 'utf8');
 let contact = fs.readFileSync(contactPath, 'utf8');
 
+const alreadyMigrated =
+  !app.includes('FORM_SUBMIT_ENDPOINT') &&
+  !app.includes('sendRequestWithFormSubmit') &&
+  !app.includes('window.fetch(') &&
+  app.includes('submissionTransport.sendEmail(submissionData)') &&
+  app.includes('submissionTransport.buildWhatsAppUrl(lastRequestMessage)') &&
+  contact.includes('assets/js/contact-submission.js?v=20260910');
+
+if (alreadyMigrated) {
+  console.log('Contact submission migration already applied; no changes needed.');
+  process.exit(0);
+}
+
 function replaceOnce(source, from, to, label) {
   const count = source.split(from).length - 1;
   if (count !== 1) {
@@ -23,12 +36,7 @@ app = replaceOnce(
 
 const transportFunction = `    function sendRequestWithFormSubmit(payload) {\n      if (!window.fetch) {\n        return Promise.reject(new Error("Fetch is unavailable"));\n      }\n      return window.fetch(FORM_SUBMIT_ENDPOINT, {\n        method: "POST",\n        headers: { Accept: "application/json" },\n        body: payload\n      }).then(function (response) {\n        return response.json().catch(function () { return {}; }).then(function (body) {\n          if (!response.ok || body.success === false || body.success === "false") {\n            throw new Error("FormSubmit rejected the request");\n          }\n          return body;\n        });\n      });\n    }\n\n`;
 
-app = replaceOnce(
-  app,
-  transportFunction,
-  '',
-  'remove FormSubmit transport function from app.js'
-);
+app = replaceOnce(app, transportFunction, '', 'remove FormSubmit transport function from app.js');
 
 app = replaceOnce(
   app,
