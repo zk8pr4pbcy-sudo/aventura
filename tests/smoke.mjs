@@ -31,11 +31,11 @@ const collection = read('collection.html');
 const desert = read('experience-desert.html');
 const contactConsent = read('assets/js/contact-consent.js');
 const launchRecovery = read('assets/js/launch-v2-recovery.js');
-const desertLastLight = read('assets/js/prelaunch-desert-last-light.js');
 const prelaunchStyles = read('assets/css/prelaunch-visual-fixes.css');
 const jsDirectory = path.join(root, 'assets/js');
 const legacyFixFiles = fs.readdirSync(jsDirectory).filter((name) => /-fix\.js$/i.test(name));
 const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
+const desertLastLightScriptPath = path.join(root, 'assets/js/prelaunch-desert-last-light.js');
 
 console.log('\nAventura maintenance smoke checks\n');
 
@@ -76,22 +76,20 @@ check(contactConsent.includes('privacy_consent'), 'consent module owns consent v
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
 
-// Recovery architecture: CSS belongs in CSS, and desert Last Light has one owner.
+// Recovery architecture: CSS belongs in CSS, boutique recovery stays scoped, and desert Last Light is static content.
 check(!launchRecovery.includes('createElement("style")') && !launchRecovery.includes("createElement('style')"), 'launch recovery no longer injects runtime CSS');
 check(!launchRecovery.includes('injectDesertLastLight'), 'launch recovery no longer owns desert Last Light injection');
 check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the desert Last Light section');
-check(desertLastLight.includes('prelaunch-last-light-section'), 'desert Last Light module owns the desert section');
-check(desertLastLight.includes('new MutationObserver'), 'desert Last Light observes the experience-detail readiness signal');
-check(desertLastLight.includes('data-experience-request-key'), 'desert Last Light mounts only after app.js marks the experience detail ready');
-check(desertLastLight.includes('attributeFilter: ["data-experience-request-key"]'), 'desert Last Light observes only its stable readiness attribute');
-check(!desertLastLight.includes('setTimeout(inject'), 'desert Last Light does not depend on a brittle injection timeout');
-check(!desertLastLight.includes('queueMicrotask'), 'desert Last Light does not race deferred scripts with a microtask');
+check(!fs.existsSync(desertLastLightScriptPath), 'obsolete desert Last Light injector has been removed');
+check(!desert.includes('prelaunch-desert-last-light.js'), 'desert page does not load a Last Light injector');
+check(desert.includes('class="section section-muted prelaunch-last-light-section"'), 'desert Last Light section lives in static HTML');
+check(desert.includes('data-i18n="collection.p3Title"'), 'desert Last Light title uses the shared translation dictionary');
+check(desert.includes('data-i18n="collection.p3Text"'), 'desert Last Light description uses the shared translation dictionary');
+check(desert.includes('data-i18n="common.comingSoon"'), 'desert Last Light status uses the shared translation dictionary');
+check(desert.includes('assets/css/prelaunch-visual-fixes.css'), 'desert page loads the owned Last Light stylesheet');
 check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'Last Light card styling lives in CSS');
 check(prelaunchStyles.includes('.prelaunch-last-light-section .detail-product-grid'), 'desert Last Light layout styling lives in CSS');
 check(collection.includes('assets/js/launch-v2-recovery.js'), 'boutique keeps the collection recovery module');
-check(desert.includes('assets/js/prelaunch-desert-last-light.js'), 'desert page loads its dedicated Last Light module');
-check(desert.includes('assets/css/prelaunch-visual-fixes.css'), 'desert page loads the owned Last Light stylesheet');
-check(app.includes('root.setAttribute("data-experience-request-key", config.request);'), 'app.js exposes the stable experience-detail readiness marker');
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
