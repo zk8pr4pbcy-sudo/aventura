@@ -26,9 +26,8 @@ function includesInOrder(source, first, second) {
 const app = read('assets/js/app.js');
 const translations = read('assets/js/translations.js');
 const contact = read('contact.html');
-const contactPatch = fs.existsSync(path.join(root, 'assets/js/contact-flow-fix.js'))
-  ? read('assets/js/contact-flow-fix.js')
-  : '';
+const contactConsent = read('assets/js/contact-consent.js');
+const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
 
 console.log('\nAventura maintenance smoke checks\n');
 
@@ -56,11 +55,17 @@ check(contact.includes('name="request_reference"'), 'contact form contains a req
 check(contact.includes('https://formsubmit.co/contact@aventuraksa.com'), 'contact form keeps the approved FormSubmit destination');
 check(includesInOrder(contact, 'assets/js/translations.js', 'assets/js/app.js'), 'translations load before app.js on the contact page');
 
-// Consent may temporarily live in the legacy patch while it is being migrated.
-check(
-  contact.includes('name="privacy_consent"') || contactPatch.includes('name = "privacy_consent"') || contactPatch.includes('name="privacy_consent"'),
-  'privacy consent is present in either markup or the temporary compatibility layer'
-);
+// Contact architecture: permanent behavior must live in owned HTML/CSS/JS modules, not runtime patches.
+check(contact.includes('assets/css/contact.css?v=20260909'), 'contact page uses its dedicated stylesheet');
+check(contact.includes('assets/js/contact-consent.js?v=20260909'), 'contact page uses its dedicated consent module');
+check(!fs.existsSync(legacyContactPatchPath), 'legacy contact runtime patch has been removed');
+check(!contact.includes('contact-flow-fix.js'), 'contact page has no legacy runtime patch reference');
+check(contact.includes('name="privacy_consent"'), 'privacy consent is part of static HTML');
+check(contact.includes('name="privacy_consent_at"'), 'privacy consent timestamp field is part of static HTML');
+check(includesInOrder(contact, '<form class="form-card"', '<aside class="contact-panel"'), 'contact form precedes the contact panel in source order');
+check(contactConsent.includes('privacy_consent'), 'consent module owns consent validation');
+check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
+check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
 
 // Every root HTML page that loads app.js must load translations first.
 for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
