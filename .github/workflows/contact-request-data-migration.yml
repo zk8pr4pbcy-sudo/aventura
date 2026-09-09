@@ -1,0 +1,91 @@
+name: Contact request data migration
+
+on:
+  push:
+    branches:
+      - refactor/contact-request-data-20260910
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refactor/contact-request-data-20260910
+          fetch-depth: 0
+
+      - name: Delegate request data construction
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          app_path = Path('assets/js/app.js')
+          app = app_path.read_text()
+
+          anchor = '    updateSubmissionChannel();\n    var lastRequestMessage = "";\n    var isSubmitting = false;'
+          replacement = '''    updateSubmissionChannel();
+    var lastRequestMessage = "";
+    var isSubmitting = false;
+    var contactRequestData = window.AVENTURA_CONTACT_REQUEST_DATA;
+    if (!contactRequestData || typeof contactRequestData.createRequestId !== "function" || typeof contactRequestData.buildMessage !== "function") {
+      throw new Error("Aventura contact request data module is unavailable");
+    }'''
+          if app.count(anchor) != 1:
+              raise SystemExit(f'expected one request-data dependency anchor, found {app.count(anchor)}')
+          app = app.replace(anchor, replacement)
+
+          start_marker = '      var selectedType = form.querySelector(\'[name="type"] option:checked\');\n'
+          end_marker = '      lastRequestMessage = lines.join("\\n");\n'
+          start = app.find(start_marker)
+          if start == -1:
+              raise SystemExit('request summary start marker not found')
+          end = app.find(end_marker, start)
+          if end == -1:
+              raise SystemExit('request summary end marker not found')
+          end += len(end_marker)
+          delegated = '''      var requestId = contactRequestData.createRequestId();
+      lastRequestMessage = contactRequestData.buildMessage({
+        form: form,
+        data: data,
+        translate: translate,
+        requestId: requestId,
+        name: name
+      });
+'''
+          app = app[:start] + delegated + app[end:]
+          app_path.write_text(app)
+
+          contact_path = Path('contact.html')
+          contact = contact_path.read_text()
+          script_anchor = '  <script src="assets/js/contact-wizard.js?v=20260910" defer></script>\n  <script src="assets/js/app.js?v=date-validation-20260830" defer></script>'
+          script_replacement = '  <script src="assets/js/contact-wizard.js?v=20260910" defer></script>\n  <script src="assets/js/contact-request-data.js?v=20260910" defer></script>\n  <script src="assets/js/app.js?v=date-validation-20260830" defer></script>'
+          if contact.count(script_anchor) != 1:
+              raise SystemExit(f'expected one contact script anchor, found {contact.count(script_anchor)}')
+          contact = contact.replace(script_anchor, script_replacement)
+          contact_path.write_text(contact)
+          PY
+
+      - name: Verify delegated architecture
+        run: |
+          node --check assets/js/app.js
+          node --check assets/js/contact-request-data.js
+          node tests/contact-request-data-contract.mjs
+          node tests/smoke.mjs
+
+      - name: Commit migration
+        shell: bash
+        run: |
+          if git diff --quiet -- assets/js/app.js contact.html; then
+            echo "No migration changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/app.js contact.html
+          git commit -m "Delegate contact request data construction"
+          git push origin HEAD:refactor/contact-request-data-20260910
