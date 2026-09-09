@@ -26,7 +26,10 @@ function includesInOrder(source, first, second) {
 const app = read('assets/js/app.js');
 const translations = read('assets/js/translations.js');
 const contact = read('contact.html');
+const partners = read('partners.html');
 const contactConsent = read('assets/js/contact-consent.js');
+const jsDirectory = path.join(root, 'assets/js');
+const legacyFixFiles = fs.readdirSync(jsDirectory).filter((name) => /-fix\.js$/i.test(name));
 const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
 
 console.log('\nAventura maintenance smoke checks\n');
@@ -41,6 +44,7 @@ check(translations.includes('window.AVENTURA_I18N'), 'translation dictionary is 
 check(translations.includes('"ar": {'), 'Arabic translations exist');
 check(translations.includes('"en": {'), 'English translations exist');
 check(translations.includes('"es": {'), 'Spanish translations exist');
+check(translations.includes('"partners.formSideTitle": "Cuéntanos en qué destacas.",'), 'Spanish partner copy lives in translations');
 
 // Saudi date protection.
 check(app.includes('timeZone: "Asia/Riyadh"'), 'date validation is anchored to Saudi time');
@@ -66,6 +70,10 @@ check(includesInOrder(contact, '<form class="form-card"', '<aside class="contact
 check(contactConsent.includes('privacy_consent'), 'consent module owns consent validation');
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
+
+// Maintenance architecture: do not reintroduce one-off runtime patch scripts.
+check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
+check(!partners.includes('partners-copy-fix.js'), 'partners page has no copy patch script');
 
 // Every root HTML page that loads app.js must load translations first.
 for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
