@@ -125,14 +125,12 @@ try {
 
   for (const { lang, query } of languageCases) {
     const { page } = await openChecked(browser, `/experience-desert.html${query}`, `desert ${lang}`);
-    const sections = page.locator('.prelaunch-last-light-section');
-    const sectionCount = await sections.count();
-    check(sectionCount === 1, `desert ${lang}: exactly one Last Light section exists`);
-    if (sectionCount === 1) {
-      check((await sections.locator('[data-last-light-heading]').first().textContent() || '').trim().length > 0, `desert ${lang}: Last Light heading is localized`);
-    } else {
-      fail(`desert ${lang}: localized heading check skipped because the section count is ${sectionCount}`);
-    }
+    const fragranceSection = page.locator('.aventura-fragrance-section');
+    const lastLightCard = page.locator('[data-fragrance-id="last-light"]');
+    check(await fragranceSection.count() === 1, `desert ${lang}: exactly one active fragrance section exists`);
+    check(await lastLightCard.count() === 1, `desert ${lang}: exactly one Last Light fragrance card exists`);
+    check((await lastLightCard.locator('img').getAttribute('alt') || '').trim().length > 0, `desert ${lang}: Last Light card has localized accessible text`);
+    check(await page.locator('.prelaunch-last-light-section').count() === 0, `desert ${lang}: obsolete prelaunch Last Light section is absent`);
     check(await page.locator('#aventura-prelaunch-visual-fixes').count() === 0, `desert ${lang}: no runtime recovery style element is injected`);
     await page.close();
   }
