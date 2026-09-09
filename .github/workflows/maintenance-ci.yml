@@ -36,6 +36,9 @@ jobs:
       - name: Run runtime state contract tests
         run: node tests/runtime-state.mjs
 
+      - name: Run runtime integration checks
+        run: node tests/runtime-integration.mjs
+
   browser:
     runs-on: ubuntu-latest
     needs: verify
