@@ -23,9 +23,7 @@
     if (pending) pending.textContent = t("collection.lastLightPending", "Original campaign artwork pending");
   }
 
-  function inject() {
-    if (!document.body.classList.contains("world-desert")) return;
-    var root = document.querySelector('[data-experience-detail][data-experience-id="desert"]');
+  function injectInto(root) {
     if (!root || root.querySelector(".prelaunch-last-light-section")) return;
 
     var section = document.createElement("section");
@@ -37,13 +35,32 @@
   }
 
   function init() {
-    window.setTimeout(inject, 80);
+    if (!document.body.classList.contains("world-desert")) return;
+    var root = document.querySelector('[data-experience-detail][data-experience-id="desert"]');
+    if (!root) return;
+
+    var observer = new MutationObserver(function () {
+      if (root.querySelector(".prelaunch-last-light-section")) {
+        observer.disconnect();
+        return;
+      }
+      injectInto(root);
+    });
+
+    observer.observe(root, { childList: true });
+
+    // app.js builds the experience detail during page initialization. Queueing this
+    // microtask lets that render complete first, while the observer protects us if
+    // the detail root is replaced during the same initialization cycle.
+    window.queueMicrotask(function () {
+      injectInto(root);
+    });
   }
 
   document.addEventListener("aventura:language", function () {
-    window.setTimeout(function () {
+    window.queueMicrotask(function () {
       updateCopy(document.querySelector(".prelaunch-last-light-section"));
-    }, 0);
+    });
   });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
