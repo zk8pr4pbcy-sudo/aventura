@@ -34,7 +34,16 @@ try {
     check(await page.locator('[data-request-step="2"]').isHidden(), `wizard ${lang}: step 2 starts hidden`);
     check(await page.locator('[data-request-step="3"]').isHidden(), `wizard ${lang}: step 3 starts hidden`);
 
-    await page.locator('#type').selectOption('other');
+    const requestType = await page.locator('#type option').evaluateAll((options) => {
+      const available = options.find((option) => String(option.value || '').trim() && !option.disabled);
+      return available ? available.value : '';
+    });
+    check(Boolean(requestType), `wizard ${lang}: at least one request type is available`);
+    if (!requestType) {
+      await page.close();
+      continue;
+    }
+    await page.locator('#type').selectOption(requestType);
     await page.locator('[data-request-step="1"] [data-request-next]').click();
     await page.waitForTimeout(100);
 
