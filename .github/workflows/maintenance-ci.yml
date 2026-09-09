@@ -39,6 +39,9 @@ jobs:
       - name: Run runtime integration checks
         run: node tests/runtime-integration.mjs
 
+      - name: Run contact wizard contract checks
+        run: node tests/contact-wizard-contract.mjs
+
   browser:
     runs-on: ubuntu-latest
     needs: verify
