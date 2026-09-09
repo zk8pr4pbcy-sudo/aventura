@@ -7,7 +7,7 @@ on:
       - 'refactor/**'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   verify:
@@ -15,11 +15,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Apply bounded request-data migration
-        run: python3 scripts/migrate-contact-request-data.py
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -49,19 +44,6 @@ jobs:
 
       - name: Run contact request data contract checks
         run: node tests/contact-request-data-contract.mjs
-
-      - name: Commit migrated files
-        shell: bash
-        run: |
-          if git diff --quiet -- assets/js/app.js contact.html; then
-            echo "No migration changes to commit"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/js/app.js contact.html
-          git commit -m "Delegate contact request data construction"
-          git push origin HEAD:${GITHUB_REF_NAME}
 
   browser:
     runs-on: ubuntu-latest
