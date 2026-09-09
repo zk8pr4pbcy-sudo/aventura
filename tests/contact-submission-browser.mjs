@@ -163,6 +163,22 @@ try {
   check(!(await submit.isDisabled()), 'submission failure: submit button is re-enabled');
   check((await failurePage.locator('[data-contact-form]').getAttribute('aria-busy')) === 'false', 'submission failure: busy state clears');
   await failurePage.close();
+
+  const missingTransportPage = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  await missingTransportPage.route('**/assets/js/contact-submission.js*', async (route) => route.abort());
+  await missingTransportPage.goto(`${baseUrl}/contact.html?lang=en`, { waitUntil: 'domcontentloaded' });
+  await missingTransportPage.waitForLoadState('load').catch(() => {});
+  const missingTransportStep = await reachFinalStep(missingTransportPage);
+  await missingTransportStep.locator('[name="submissionChannel"][value="email"]').check().catch(() => {});
+  const missingTransportSubmit = missingTransportStep.locator('[data-submit-channel-button]');
+  await missingTransportSubmit.click();
+  await missingTransportPage.waitForTimeout(150);
+  const missingTransportStatus = String(await missingTransportPage.locator('[data-form-status]').textContent().catch(() => '') || '').trim();
+  check(missingTransportStatus.length > 0, 'missing transport: localized error status is shown');
+  check(!(await missingTransportPage.locator('[data-request-success]').isVisible()), 'missing transport: success UI stays hidden');
+  check(!(await missingTransportSubmit.isDisabled()), 'missing transport: submit button remains enabled');
+  check((await missingTransportPage.locator('[data-contact-form]').getAttribute('aria-busy')) === 'false', 'missing transport: form never gets stuck busy');
+  await missingTransportPage.close();
 } finally {
   await browser.close();
 }
