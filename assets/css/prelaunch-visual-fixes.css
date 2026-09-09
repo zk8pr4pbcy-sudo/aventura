@@ -1,4 +1,22 @@
 /* Final prelaunch visual polish found during screenshot review. */
+.detail-product-grid--fragrance-only > .detail-perfume-product:only-child {
+  grid-column: 1 / -1;
+  width: min(100%, 420px);
+  justify-self: center;
+}
+
+.prelaunch-last-light-card {
+  position: relative;
+}
+
+.prelaunch-last-light-card small {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
 .prelaunch-last-light-section .detail-product-grid::before,
 .prelaunch-last-light-section .detail-product-grid::after,
 .prelaunch-last-light-section .detail-perfume-product::before,
@@ -8,6 +26,7 @@
 
 .prelaunch-last-light-section .detail-product-grid {
   position: relative;
+  grid-template-columns: 1fr;
   width: min(100%, 420px);
   margin-inline: auto;
   background: transparent;
