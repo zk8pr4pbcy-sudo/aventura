@@ -28,13 +28,11 @@ jobs:
 
           app_path = Path('assets/js/app.js')
           contact_path = Path('contact.html')
-          ci_path = Path('.github/workflows/maintenance-ci.yml')
           smoke_path = Path('tests/smoke.mjs')
           integration_path = Path('tests/runtime-integration.mjs')
 
           app = app_path.read_text()
           contact = contact_path.read_text()
-          ci = ci_path.read_text()
           smoke = smoke_path.read_text()
 
           declaration = '  var currentLanguage = DEFAULT_LANGUAGE;\n'
@@ -71,15 +69,8 @@ jobs:
           integration_test = '''import assert from "node:assert/strict";\nimport fs from "node:fs";\n\nconst app = fs.readFileSync("assets/js/app.js", "utf8");\nconst contact = fs.readFileSync("contact.html", "utf8");\n\nconst runtimeIndex = contact.indexOf("assets/js/runtime-state.js");\nconst appIndex = contact.indexOf("assets/js/app.js");\nassert.ok(runtimeIndex >= 0, "contact must load runtime-state.js");\nassert.ok(appIndex >= 0, "contact must load app.js");\nassert.ok(runtimeIndex < appIndex, "runtime-state.js must load before app.js");\n\nassert.match(app, /function normalizeLanguage\\(language\\)/, "app must expose a runtime-aware language normalizer");\nassert.match(app, /runtime\\.language\\.normalize\\(language\\)/, "app must use runtime language normalization when available");\nassert.match(app, /function getActiveLanguage\\(\\)/, "app must expose a runtime-aware language reader");\nassert.match(app, /submissionData\\.set\\("request_language", getActiveLanguage\\(\\)\\)/, "contact submission must use active runtime language");\n\nconsole.log("Runtime integration checks passed");\n'''
           integration_path.write_text(integration_test)
 
-          ci_anchor = '      - name: Run runtime state contract tests\n        run: node tests/runtime-state.mjs\n'
-          ci_replacement = '      - name: Run runtime state contract tests\n        run: node tests/runtime-state.mjs\n\n      - name: Run runtime integration checks\n        run: node tests/runtime-integration.mjs\n'
-          if ci.count(ci_anchor) != 1:
-              raise SystemExit('Unexpected maintenance CI runtime test anchor')
-          ci = ci.replace(ci_anchor, ci_replacement, 1)
-
           app_path.write_text(app)
           contact_path.write_text(contact)
-          ci_path.write_text(ci)
           smoke_path.write_text(smoke)
           PY
 
@@ -101,7 +92,6 @@ jobs:
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git rm .github/workflows/runtime-language-migration.yml
-          git add assets/js/app.js contact.html .github/workflows/maintenance-ci.yml tests/smoke.mjs tests/runtime-integration.mjs
+          git add assets/js/app.js contact.html tests/smoke.mjs tests/runtime-integration.mjs
           git commit -m "Integrate runtime language state into contact flow"
           git push origin HEAD:refactor/runtime-language-20260910
