@@ -1,0 +1,87 @@
+name: Contact wizard migration
+
+on:
+  push:
+    branches:
+      - refactor/contact-wizard-20260910
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refactor/contact-wizard-20260910
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Extract contact wizard from app.js
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          app_path = Path('assets/js/app.js')
+          app = app_path.read_text()
+          pattern = r'    function setupContactWizard\(\) \{.*?^    setupContactWizard\(\);\n'
+          replacement = '''    var contactWizard = window.AVENTURA_CONTACT_WIZARD;
+              if (!contactWizard || typeof contactWizard.setup !== "function") {
+                throw new Error("Aventura contact wizard module is unavailable");
+              }
+              contactWizard.setup({
+                form: form,
+                translate: translate,
+                typeField: typeField,
+                detailGroups: detailGroups,
+                firstPastTimingField: firstPastTimingField
+              });
+          '''
+          app, count = re.subn(pattern, replacement, app, count=1, flags=re.S | re.M)
+          if count != 1:
+              raise SystemExit(f'expected exactly one setupContactWizard block, found {count}')
+          app_path.write_text(app)
+
+          contact_path = Path('contact.html')
+          contact = contact_path.read_text()
+          needle = '  <script src="assets/js/runtime-state.js?v=20260910" defer></script>\n  <script src="assets/js/app.js?v=date-validation-20260830" defer></script>'
+          replacement_contact = '  <script src="assets/js/runtime-state.js?v=20260910" defer></script>\n  <script src="assets/js/contact-wizard.js?v=20260910" defer></script>\n  <script src="assets/js/app.js?v=date-validation-20260830" defer></script>'
+          if contact.count(needle) != 1:
+              raise SystemExit(f'expected one contact script insertion point, found {contact.count(needle)}')
+          contact_path.write_text(contact.replace(needle, replacement_contact))
+
+          ci_path = Path('.github/workflows/maintenance-ci.yml')
+          ci = ci_path.read_text()
+          marker = '      - name: Run runtime integration checks\n        run: node tests/runtime-integration.mjs\n'
+          addition = marker + '      - name: Run contact wizard contract checks\n        run: node tests/contact-wizard-contract.mjs\n'
+          if 'node tests/contact-wizard-contract.mjs' not in ci:
+              if ci.count(marker) != 1:
+                  raise SystemExit(f'expected one maintenance CI insertion point, found {ci.count(marker)}')
+              ci = ci.replace(marker, addition)
+              ci_path.write_text(ci)
+          PY
+      - name: Verify migration
+        run: |
+          node --check assets/js/contact-wizard.js
+          node --check assets/js/app.js
+          node tests/smoke.mjs
+          node tests/runtime-state.mjs
+          node tests/runtime-integration.mjs
+          node tests/contact-wizard-contract.mjs
+      - name: Commit migration
+        shell: bash
+        run: |
+          if git diff --quiet -- assets/js/app.js contact.html .github/workflows/maintenance-ci.yml; then
+            echo "No migration changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/app.js contact.html .github/workflows/maintenance-ci.yml
+          git commit -m "Extract contact wizard module from app runtime"
+          git push origin HEAD:refactor/contact-wizard-20260910
