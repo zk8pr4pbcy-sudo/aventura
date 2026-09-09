@@ -15,4 +15,9 @@ assert.match(app, /runtime\.language\.normalize\(language\)/, "app must use runt
 assert.match(app, /function getActiveLanguage\(\)/, "app must expose a runtime-aware language reader");
 assert.match(app, /submissionData\.set\("request_language", getActiveLanguage\(\)\)/, "contact submission must use active runtime language");
 
+
+assert.match(app, /runtime\.dates\.today\(\)/, "contact must use runtime Saudi today when available");
+assert.match(app, /runtime\.dates\.minimumForInput\(field\.type\)/, "contact date minimum must use runtime date contract");
+assert.match(app, /runtime\.dates\.isPast\(value, field && field\.type\)/, "contact past-date validation must use runtime date contract");
+
 console.log("Runtime integration checks passed");
