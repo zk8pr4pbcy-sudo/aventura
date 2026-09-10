@@ -77,7 +77,7 @@ try {
     });
   });
 
-  await page.goto(`${baseUrl}/event-request.html?source=curated-calendar&event=fixture-event&lang=en`, { waitUntil: 'domcontentloaded' });
+  await page.goto(`${baseUrl}/event-request/?source=curated-calendar&event=fixture-event&lang=en`, { waitUntil: 'domcontentloaded' });
   await page.locator('[data-event-shell]').waitFor({ state: 'visible' });
 
   check(pageErrors.length === 0, 'event request: no uncaught JavaScript errors');
@@ -110,7 +110,7 @@ try {
   check(submittedPayload.includes('curated_event'), 'event request: submission identifies curated event request type');
   check(submittedPayload.includes('fixture-event'), 'event request: submission carries event ID');
   check(submittedPayload.includes('private_transport'), 'event request: submission carries selected service code');
-  check(page.url().includes('event-request.html'), 'event request: successful AJAX submission stays on dedicated page');
+  check(page.url().includes('/event-request/'), 'event request: successful AJAX submission stays on dedicated route');
 
   await page.locator('[data-language="ar"]').first().click();
   await page.waitForFunction(() => document.documentElement.lang === 'ar');
@@ -121,7 +121,7 @@ try {
 
   const desktop = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   await desktop.route('**/data/curated-events.json', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(fixture) }));
-  await desktop.goto(`${baseUrl}/event-request.html?event=fixture-event&lang=es`, { waitUntil: 'domcontentloaded' });
+  await desktop.goto(`${baseUrl}/event-request/?event=fixture-event&lang=es`, { waitUntil: 'domcontentloaded' });
   await desktop.locator('[data-event-shell]').waitFor({ state: 'visible' });
   const contextBox = await desktop.locator('.event-request-context').boundingBox();
   const formBox = await desktop.locator('.event-request-form-card').boundingBox();
@@ -131,7 +131,7 @@ try {
 
   const unavailable = await browser.newPage({ viewport: { width: 390, height: 844 } });
   await unavailable.route('**/data/curated-events.json', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(fixture) }));
-  await unavailable.goto(`${baseUrl}/event-request.html?event=does-not-exist`, { waitUntil: 'domcontentloaded' });
+  await unavailable.goto(`${baseUrl}/event-request/?event=does-not-exist`, { waitUntil: 'domcontentloaded' });
   await unavailable.locator('[data-event-error]').waitFor({ state: 'visible' });
   check(await unavailable.locator('[data-event-shell]').isHidden(), 'event request: invalid event never exposes the form');
   await unavailable.close();

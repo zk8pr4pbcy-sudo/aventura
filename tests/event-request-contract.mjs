@@ -12,27 +12,29 @@ function check(condition, message) {
   }
 }
 
-const page = fs.readFileSync(path.join(root, 'event-request.html'), 'utf8');
+const page = fs.readFileSync(path.join(root, 'event-request', 'index.html'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'assets/css/event-request.css'), 'utf8');
 const runtime = fs.readFileSync(path.join(root, 'assets/js/event-request.js'), 'utf8');
 const calendarRuntime = fs.readFileSync(path.join(root, 'assets/js/curated-calendar.js'), 'utf8');
 const contactPage = fs.readFileSync(path.join(root, 'contact.html'), 'utf8');
 
-check(page.includes('data-event-request-form'), 'event request page contains its own form');
-check(page.includes('assets/css/event-request.css'), 'event request page loads its isolated stylesheet');
-check(page.includes('assets/js/event-request.js'), 'event request page loads its isolated runtime');
-check(page.includes('data-event-services'), 'event request page contains service selection');
-check(page.includes('privacy_consent'), 'event request page requires privacy consent');
+check(page.includes('data-event-request-form'), 'event request route contains its own form');
+check(page.includes('<base href="../">'), 'event request route resolves shared Aventura assets from its isolated directory');
+check(page.includes('assets/css/event-request.css'), 'event request route loads its isolated stylesheet');
+check(page.includes('assets/js/event-request.js'), 'event request route loads its isolated runtime');
+check(page.includes('name="robots" content="noindex, follow"'), 'utility request route stays out of search indexing');
+check(page.includes('data-event-services'), 'event request route contains service selection');
+check(page.includes('privacy_consent'), 'event request route requires privacy consent');
 check(page.includes('request_type') && page.includes('curated_event'), 'event request identifies itself as a curated event request');
 check(page.includes('event_id') && page.includes('event_title'), 'event context is submitted with the form');
 
 for (const forbidden of ['contact-wizard.js', 'contact-request-data.js', 'contact-submission.js', 'contact-consent.js']) {
-  check(!page.includes(forbidden), `event request page does not depend on ${forbidden}`);
+  check(!page.includes(forbidden), `event request route does not depend on ${forbidden}`);
 }
 
 check(!contactPage.includes('event-request.js'), 'main Aventura contact page remains independent from event request runtime');
 check(!contactPage.includes('data-event-request-form'), 'main Aventura contact form remains structurally independent');
-check(calendarRuntime.includes('event-request.html?source=curated-calendar&event='), 'Curated Calendar CTA routes to the isolated event request page');
+check(calendarRuntime.includes('event-request/?source=curated-calendar&event='), 'Curated Calendar CTA routes to the isolated event request route');
 check(!calendarRuntime.includes('contact.html?source=curated-calendar'), 'Curated Calendar no longer routes event requests into the main form');
 check(runtime.includes('data/curated-events.json'), 'event request reads the shared curated event data source');
 check(runtime.includes('https://formsubmit.co/ajax/contact@aventuraksa.com'), 'event request owns its FormSubmit transport endpoint');
