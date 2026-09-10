@@ -37,6 +37,7 @@
   <script src="assets/js/runtime-state.js?v=20260910" defer></script>
   <script src="assets/js/contact-wizard.js?v=20260910" defer></script>
   <script src="assets/js/contact-request-data.js?v=20260910" defer></script>
+  <script src="assets/js/contact-submission.js?v=20260910" defer></script>
   <script src="assets/js/app.js?v=date-validation-20260830" defer></script>
   <script src="assets/js/contact-consent.js?v=20260909" defer></script>
   <script type="application/ld+json">
@@ -76,7 +77,7 @@
     <section class="section">
       <div class="container contact-layout">
 
-        <form class="form-card" data-contact-form action="https://formsubmit.co/contact@aventuraksa.com" method="POST" novalidate data-reveal>
+        <form class="form-card" data-contact-form aria-busy="false" action="https://formsubmit.co/contact@aventuraksa.com" method="POST" novalidate data-reveal>
           <input type="hidden" name="_subject" value="Aventura booking request">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_replyto" value="">
