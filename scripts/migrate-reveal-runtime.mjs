@@ -31,18 +31,4 @@ for (const file of htmlFiles) {
   fs.writeFileSync(filePath, html);
 }
 
-const workflowPath = path.join(root, ".github/workflows/maintenance-ci.yml");
-let workflow = fs.readFileSync(workflowPath, "utf8");
-if (!workflow.includes("Run reveal runtime contract checks")) {
-  const anchor = `      - name: Run perfume story runtime contract checks\n        run: node tests/perfume-story-contract.mjs\n`;
-  if (!workflow.includes(anchor)) throw new Error("Maintenance CI verify anchor not found");
-  workflow = workflow.replace(anchor, anchor + `\n      - name: Run reveal runtime contract checks\n        run: node tests/reveal-runtime-contract.mjs\n`);
-}
-if (!workflow.includes("Run reveal runtime browser checks")) {
-  const anchor = `      - name: Run multilingual browser smoke checks\n        env:\n          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173\n        run: node tests/browser-smoke.mjs\n`;
-  if (!workflow.includes(anchor)) throw new Error("Maintenance CI browser anchor not found");
-  workflow = workflow.replace(anchor, anchor + `\n      - name: Run reveal runtime browser checks\n        env:\n          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173\n        run: node tests/reveal-runtime-browser.mjs\n`);
-}
-fs.writeFileSync(workflowPath, workflow);
-
 console.log("Reveal runtime migration applied.");
