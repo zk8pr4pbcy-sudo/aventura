@@ -24,6 +24,7 @@ function includesInOrder(source, first, second) {
 }
 
 const app = read('assets/js/app.js');
+const dialogRuntime = read('assets/js/dialog-runtime.js');
 const translations = read('assets/js/translations.js');
 const contact = read('contact.html');
 const partners = read('partners.html');
@@ -81,6 +82,12 @@ check(contactConsent.includes('privacy_consent_at'), 'consent module records the
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
 
 // Recovery architecture: the legacy launch recovery runtime and copy patch are gone.
+// Dialog runtime: modal mechanics and focus restoration live outside app.js.
+check(dialogRuntime.includes('window.AVENTURA_DIALOGS'), 'dialog runtime exposes its stable API');
+check(dialogRuntime.includes('dialog.showModal()') && dialogRuntime.includes('__aventuraReturnFocus'), 'dialog runtime owns modal opening and focus restoration');
+check(app.includes('window.AVENTURA_DIALOGS.prepare(dialog, translate)') && app.includes('window.AVENTURA_DIALOGS.open(dialog, trigger, translate)') && app.includes('window.AVENTURA_DIALOGS.close(dialog)'), 'app.js delegates dialog behavior through the stable runtime API');
+check(!app.includes('dialog.__aventuraPrepared') && !app.includes('dialog.__aventuraReturnFocus') && !app.includes('dialog.showModal()'), 'app.js no longer owns dialog implementation details');
+
 check(!fs.existsSync(legacyLaunchRecoveryPath), 'legacy launch recovery runtime has been removed');
 check(!fs.existsSync(legacyExperienceCopyOverridesPath), 'experience copy override module has been removed');
 check(!collection.includes('experience-copy-overrides.js'), 'collection has no experience copy override script');
@@ -113,6 +120,9 @@ for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))
   const html = read(file);
   check(!html.includes('assets/js/launch-v2-recovery.js'), `${file}: legacy launch recovery reference is absent`);
   check(!html.includes('assets/js/experience-copy-overrides.js'), `${file}: experience copy override reference is absent`);
+  if (html.includes('assets/js/app.js')) {
+    check(includesInOrder(html, 'assets/js/dialog-runtime.js', 'assets/js/app.js'), `${file}: dialog runtime loads before app.js`);
+  }
   if (!html.includes('assets/js/app.js')) continue;
   check(
     includesInOrder(html, 'assets/js/translations.js', 'assets/js/app.js'),

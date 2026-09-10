@@ -107,6 +107,18 @@ try {
     check((await lastLightCard.locator('[data-i18n="collection.p3Title"]').textContent() || '').trim().length > 0, `collection ${lang}: Last Light title is localized`);
     check(await page.locator('#aventura-prelaunch-visual-fixes').count() === 0, `collection ${lang}: no runtime recovery style element is injected`);
 
+    const storyButton = page.locator('[data-perfume-story]').first();
+    check(await storyButton.count() === 1, `collection ${lang}: perfume story trigger exists`);
+    if (await storyButton.count()) {
+      await storyButton.click();
+      const storyDialog = page.locator('[data-perfume-story-dialog]');
+      check(await storyDialog.evaluate((element) => element.open), `collection ${lang}: perfume story dialog opens through shared runtime`);
+      await storyDialog.locator('[data-close-perfume-story]').first().click();
+      await page.waitForTimeout(30);
+      check(!(await storyDialog.evaluate((element) => element.open)), `collection ${lang}: perfume story dialog closes through shared runtime`);
+      check(await storyButton.evaluate((element) => document.activeElement === element), `collection ${lang}: dialog restores focus to its trigger`);
+    }
+
     const historicFilter = page.locator('[data-boutique-filter="historic"]');
     if (await historicFilter.count()) {
       await historicFilter.click();
