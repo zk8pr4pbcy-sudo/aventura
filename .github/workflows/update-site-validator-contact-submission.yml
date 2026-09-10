@@ -74,3 +74,5 @@ const contactSubmissionSource = fs.readFileSync(path.join(root, "assets/js/conta
           git add scripts/validate-site.mjs
           git commit -m "Update site validator for contact submission transport"
           git push origin HEAD:${GITHUB_REF_NAME}
+
+# retrigger after workflow creation so the branch push executes this workflow
