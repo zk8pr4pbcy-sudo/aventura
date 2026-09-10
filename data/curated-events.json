@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "windowDays": 10,
   "lastReviewed": "2026-09-10",
   "reviewedBy": "Salem",
@@ -10,10 +10,10 @@
       "description": "فعاليات مختارة خلال الأيام القادمة، ويمكن لأفنتورا تنسيق تجربة خاصة متكاملة حول كل فعالية.",
       "planLabel": "اقتراح أفنتورا",
       "cta": "نسّق تجربتك حول الفعالية",
-      "details": "تفاصيل الفعالية",
+      "details": "مصدر الفعالية ↗",
       "previous": "الفعالية السابقة",
       "next": "الفعالية التالية",
-      "disclaimer": "أفنتورا لا تبيع تذاكر الفعاليات ما لم يُذكر خلاف ذلك؛ نحن ننسّق التجربة والخدمات المحيطة بها حسب الطلب والتوفر."
+      "disclaimer": "أفنتورا جهة مستقلة وليست منظمًا للفعالية أو شريكًا رسميًا أو بائعًا للتذاكر، ما لم يُذكر خلاف ذلك. مواعيد الفعالية والدخول والتذاكر تخضع للجهة المنظمة أو منصة التذاكر."
     },
     "en": {
       "eyebrow": "AVENTURA CURATED CALENDAR",
@@ -21,10 +21,10 @@
       "description": "A short selection of what is happening next in Jeddah, with a private Aventura experience designed around each event.",
       "planLabel": "Aventura suggests",
       "cta": "Plan your experience around this event",
-      "details": "Event details",
+      "details": "Event source ↗",
       "previous": "Previous event",
       "next": "Next event",
-      "disclaimer": "Aventura does not sell event tickets unless stated otherwise; we coordinate the surrounding experience and services subject to request and availability."
+      "disclaimer": "Aventura is an independent service provider and is not the event organiser, an official partner, or the ticket seller unless explicitly stated otherwise. Event schedules, admission and tickets remain subject to the organiser or ticketing platform."
     },
     "es": {
       "eyebrow": "AVENTURA CURATED CALENDAR",
@@ -32,10 +32,10 @@
       "description": "Una selección breve de lo que ocurrirá próximamente en Yeda, con una experiencia privada de Aventura diseñada alrededor de cada evento.",
       "planLabel": "Aventura propone",
       "cta": "Organiza tu experiencia alrededor del evento",
-      "details": "Detalles del evento",
+      "details": "Fuente del evento ↗",
       "previous": "Evento anterior",
       "next": "Evento siguiente",
-      "disclaimer": "Aventura no vende entradas para los eventos salvo que se indique lo contrario; coordinamos la experiencia y los servicios relacionados según solicitud y disponibilidad."
+      "disclaimer": "Aventura es un proveedor de servicios independiente y no es el organizador del evento, un socio oficial ni el vendedor de entradas, salvo que se indique expresamente lo contrario. Los horarios, el acceso y las entradas dependen del organizador o de la plataforma de venta."
     }
   },
   "events": [
