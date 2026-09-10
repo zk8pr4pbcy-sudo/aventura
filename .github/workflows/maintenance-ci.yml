@@ -51,6 +51,9 @@ jobs:
       - name: Run perfume story runtime contract checks
         run: node tests/perfume-story-contract.mjs
 
+      - name: Run reveal runtime contract checks
+        run: node tests/reveal-runtime-contract.mjs
+
   browser:
     runs-on: ubuntu-latest
     needs: verify
@@ -88,6 +91,11 @@ jobs:
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/browser-smoke.mjs
+
+      - name: Run reveal runtime browser checks
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/reveal-runtime-browser.mjs
 
       - name: Run contact wizard browser checks
         env:
