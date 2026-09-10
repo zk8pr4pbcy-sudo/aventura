@@ -80,13 +80,13 @@ check(contactConsent.includes('privacy_consent'), 'consent module owns consent v
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
 
-// Recovery architecture: the legacy launch recovery runtime is gone and its responsibilities are isolated.
+// Recovery architecture: the legacy launch recovery runtime and copy patch are gone.
 check(!fs.existsSync(legacyLaunchRecoveryPath), 'legacy launch recovery runtime has been removed');
 check(!fs.existsSync(legacyExperienceCopyOverridesPath), 'experience copy override module has been removed');
 check(!collection.includes('experience-copy-overrides.js'), 'collection has no experience copy override script');
 check(collection.includes('assets/js/boutique-last-light.js?v=20260910'), 'collection loads the focused Last Light module');
 check(collection.includes('assets/js/boutique-navigation.js?v=20260910'), 'collection loads the focused boutique navigation module');
-check(includesInOrder(collection, 'assets/js/experience-copy-overrides.js?v=20260910', 'assets/js/boutique-last-light.js?v=20260910'), 'collection loads copy overrides before Last Light behavior');
+check(includesInOrder(collection, 'assets/js/translations.js', 'assets/js/boutique-last-light.js?v=20260910'), 'base translations load before Last Light behavior');
 check(includesInOrder(collection, 'assets/js/boutique-last-light.js?v=20260910', 'assets/js/boutique-navigation.js?v=20260910'), 'collection loads Last Light behavior before boutique navigation');
 check(!boutiqueLastLight.includes('createElement("style")') && !boutiqueLastLight.includes("createElement('style')"), 'Last Light module does not inject runtime CSS');
 check(collection.includes('<article class="perfume-card perfume-card-pending prelaunch-last-light-card" data-prelaunch-last-light'), 'Last Light card is owned by static collection HTML');
@@ -102,13 +102,13 @@ check(desert.includes('assets/js/fragrance-cards.js'), 'desert page loads the ac
 check(fragranceCards.includes('desert: ['), 'fragrance cards module defines the desert fragrance inventory');
 check(fragranceCards.includes('{ id: "last-light", name: "Last Light"'), 'fragrance cards module owns the Last Light product card');
 check(fragranceCards.includes('document.querySelectorAll(".prelaunch-last-light-section")'), 'fragrance cards module explicitly removes obsolete Last Light UI');
-check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'boutique Last Light styling remains in CSS while the card is still runtime-created');
+check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'static boutique Last Light card styling remains in CSS');
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
 check(!partners.includes('partners-copy-fix.js'), 'partners page has no copy patch script');
 
-// Every root HTML page must be free of the legacy recovery runtime; pages that load app.js must load translations first.
+// Every root HTML page must be free of legacy recovery/copy patches; pages that load app.js must load translations first.
 for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
   const html = read(file);
   check(!html.includes('assets/js/launch-v2-recovery.js'), `${file}: legacy launch recovery reference is absent`);
