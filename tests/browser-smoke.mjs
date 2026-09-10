@@ -93,6 +93,38 @@ try {
   check(await switcher.locator('html').getAttribute('dir') === 'rtl', 'language switcher: Spanish → Arabic restores RTL');
   await switcher.close();
 
+  const { page: mobileHeader } = await openChecked(browser, '/contact.html', 'contact mobile header stability');
+  const mobileHeaderElement = mobileHeader.locator('#siteHeader');
+  const mobileHeaderStyles = await mobileHeaderElement.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return {
+      position: style.position,
+      backdrop: style.backdropFilter || '',
+      webkitBackdrop: style.webkitBackdropFilter || ''
+    };
+  });
+  check(mobileHeaderStyles.position === 'fixed', 'contact mobile header stability: header remains fixed');
+  check(
+    (mobileHeaderStyles.backdrop === '' || mobileHeaderStyles.backdrop === 'none') &&
+      (mobileHeaderStyles.webkitBackdrop === '' || mobileHeaderStyles.webkitBackdrop === 'none'),
+    'contact mobile header stability: fixed mobile header does not own a backdrop blur'
+  );
+
+  for (const y of [0, 450, 1200, 2200]) {
+    await mobileHeader.evaluate((scrollY) => window.scrollTo(0, scrollY), y);
+    await mobileHeader.waitForTimeout(80);
+    const top = await mobileHeaderElement.evaluate((element) => element.getBoundingClientRect().top);
+    check(Math.abs(top) <= 1, `contact mobile header stability: header remains pinned after scrolling to ${y}px`);
+  }
+
+  await mobileHeader.locator('[data-language="en"]').first().click();
+  await mobileHeader.waitForFunction(() => document.documentElement.lang === 'en');
+  await mobileHeader.evaluate(() => window.scrollTo(0, 1400));
+  await mobileHeader.waitForTimeout(80);
+  const switchedTop = await mobileHeaderElement.evaluate((element) => element.getBoundingClientRect().top);
+  check(Math.abs(switchedTop) <= 1, 'contact mobile header stability: language switch does not displace fixed header');
+  await mobileHeader.close();
+
   for (const { lang, query } of languageCases) {
     const { page } = await openChecked(browser, `/index.html${query}`, `home ${lang}`);
     check(await page.locator('html').getAttribute('lang') === lang, `home ${lang}: language initializes correctly`);
