@@ -103,8 +103,8 @@ try {
   for (const { lang, query } of languageCases) {
     const { page } = await openChecked(browser, `/collection.html${query}`, `collection ${lang}`);
     const lastLightCard = page.locator('#fragrances [data-prelaunch-last-light]');
-    check(await lastLightCard.count() === 1, `collection ${lang}: exactly one Last Light card is injected`);
-    check((await lastLightCard.locator('[data-last-light-copy="title"]').textContent() || '').trim().length > 0, `collection ${lang}: Last Light title is localized`);
+    check(await lastLightCard.count() === 1, `collection ${lang}: exactly one static Last Light card is present`);
+    check((await lastLightCard.locator('[data-i18n="collection.p3Title"]').textContent() || '').trim().length > 0, `collection ${lang}: Last Light title is localized`);
     check(await page.locator('#aventura-prelaunch-visual-fixes').count() === 0, `collection ${lang}: no runtime recovery style element is injected`);
 
     const historicFilter = page.locator('[data-boutique-filter="historic"]');
@@ -120,6 +120,14 @@ try {
       await page.waitForTimeout(60);
       check(await lastLightCard.isVisible(), `collection ${lang}: Desert filter shows Last Light`);
     }
+    await page.close();
+  }
+
+  const historicGuideTitles = { ar: 'تعرّف إلى مرشدك', en: 'Meet your guide', es: 'Conoce a tu guía' };
+  for (const { lang, query } of languageCases) {
+    const { page } = await openChecked(browser, `/experience-historic-jeddah.html${query}`, `historic detail ${lang}`);
+    const guideTitle = (await page.locator('[data-i18n="world.historic.step1Title"]').textContent() || '').trim();
+    check(guideTitle === historicGuideTitles[lang], `historic detail ${lang}: approved guide title is localized`);
     await page.close();
   }
 

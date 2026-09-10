@@ -30,12 +30,15 @@ const partners = read('partners.html');
 const collection = read('collection.html');
 const desert = read('experience-desert.html');
 const contactConsent = read('assets/js/contact-consent.js');
-const launchRecovery = read('assets/js/launch-v2-recovery.js');
+const boutiqueLastLight = read('assets/js/boutique-last-light.js');
+const boutiqueNavigation = read('assets/js/boutique-navigation.js');
 const fragranceCards = read('assets/js/fragrance-cards.js');
 const prelaunchStyles = read('assets/css/prelaunch-visual-fixes.css');
 const jsDirectory = path.join(root, 'assets/js');
 const legacyFixFiles = fs.readdirSync(jsDirectory).filter((name) => /-fix\.js$/i.test(name));
 const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
+const legacyLaunchRecoveryPath = path.join(root, 'assets/js/launch-v2-recovery.js');
+const legacyExperienceCopyOverridesPath = path.join(root, 'assets/js/experience-copy-overrides.js');
 const desertLastLightScriptPath = path.join(root, 'assets/js/prelaunch-desert-last-light.js');
 
 console.log('\nAventura maintenance smoke checks\n');
@@ -77,10 +80,21 @@ check(contactConsent.includes('privacy_consent'), 'consent module owns consent v
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
 
-// Recovery architecture: CSS belongs in CSS, boutique recovery stays scoped, and the active fragrance module owns desert Last Light.
-check(!launchRecovery.includes('createElement("style")') && !launchRecovery.includes("createElement('style')"), 'launch recovery no longer injects runtime CSS');
-check(!launchRecovery.includes('injectDesertLastLight'), 'launch recovery no longer owns desert Last Light injection');
-check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the obsolete desert Last Light section');
+// Recovery architecture: the legacy launch recovery runtime and copy patch are gone.
+check(!fs.existsSync(legacyLaunchRecoveryPath), 'legacy launch recovery runtime has been removed');
+check(!fs.existsSync(legacyExperienceCopyOverridesPath), 'experience copy override module has been removed');
+check(!collection.includes('experience-copy-overrides.js'), 'collection has no experience copy override script');
+check(collection.includes('assets/js/boutique-last-light.js?v=20260910'), 'collection loads the focused Last Light module');
+check(collection.includes('assets/js/boutique-navigation.js?v=20260910'), 'collection loads the focused boutique navigation module');
+check(includesInOrder(collection, 'assets/js/translations.js', 'assets/js/boutique-last-light.js?v=20260910'), 'base translations load before Last Light behavior');
+check(includesInOrder(collection, 'assets/js/boutique-last-light.js?v=20260910', 'assets/js/boutique-navigation.js?v=20260910'), 'collection loads Last Light behavior before boutique navigation');
+check(!boutiqueLastLight.includes('createElement("style")') && !boutiqueLastLight.includes("createElement('style')"), 'Last Light module does not inject runtime CSS');
+check(collection.includes('<article class="perfume-card perfume-card-pending prelaunch-last-light-card" data-prelaunch-last-light'), 'Last Light card is owned by static collection HTML');
+check(!boutiqueLastLight.includes('createElement('), 'Last Light module no longer creates DOM nodes');
+check(boutiqueLastLight.includes('card.hidden = !show;'), 'Last Light module only synchronizes filter visibility');
+check(boutiqueNavigation.includes('scrollIntoView'), 'boutique navigation module owns result focus behavior');
+check(translations.includes('\"experiences.readyHistoricText\": \"تشمل جميع جولات المشي القهوة السعودية والتمر ومرشدًا سياحيًا مرخصًا، وتُؤكد أي رسوم دخول إضافية بشكل منفصل.\"'), 'approved Arabic Historic Jeddah copy lives in translations');
+check(translations.includes('\"world.historic.step1Title\": \"Conoce a tu guía\"'), 'approved Spanish Historic Jeddah copy lives in translations');
 check(!fs.existsSync(desertLastLightScriptPath), 'obsolete desert Last Light injector has been removed');
 check(!desert.includes('prelaunch-desert-last-light.js'), 'desert page does not load the obsolete Last Light injector');
 check(!desert.includes('prelaunch-last-light-section'), 'desert HTML does not contain the obsolete Last Light section');
@@ -88,16 +102,17 @@ check(desert.includes('assets/js/fragrance-cards.js'), 'desert page loads the ac
 check(fragranceCards.includes('desert: ['), 'fragrance cards module defines the desert fragrance inventory');
 check(fragranceCards.includes('{ id: "last-light", name: "Last Light"'), 'fragrance cards module owns the Last Light product card');
 check(fragranceCards.includes('document.querySelectorAll(".prelaunch-last-light-section")'), 'fragrance cards module explicitly removes obsolete Last Light UI');
-check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'legacy boutique Last Light card styling remains in CSS until boutique recovery is split');
-check(collection.includes('assets/js/launch-v2-recovery.js'), 'boutique keeps the collection recovery module');
+check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'static boutique Last Light card styling remains in CSS');
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
 check(!partners.includes('partners-copy-fix.js'), 'partners page has no copy patch script');
 
-// Every root HTML page that loads app.js must load translations first.
+// Every root HTML page must be free of legacy recovery/copy patches; pages that load app.js must load translations first.
 for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
   const html = read(file);
+  check(!html.includes('assets/js/launch-v2-recovery.js'), `${file}: legacy launch recovery reference is absent`);
+  check(!html.includes('assets/js/experience-copy-overrides.js'), `${file}: experience copy override reference is absent`);
   if (!html.includes('assets/js/app.js')) continue;
   check(
     includesInOrder(html, 'assets/js/translations.js', 'assets/js/app.js'),
