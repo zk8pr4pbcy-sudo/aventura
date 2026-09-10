@@ -26,6 +26,8 @@ check(!runtime.includes('window.AVENTURA_DIALOG_RUNTIME'), 'perfume story runtim
 check(runtime.includes('dialogRuntime.open') && runtime.includes('dialogRuntime.close') && runtime.includes('dialogRuntime.prepare'), 'perfume story runtime delegates dialog behavior to shared dialog runtime');
 check(!runtime.includes('dialog.showModal(') && !runtime.includes('dialog.close('), 'perfume story runtime does not reimplement dialog primitives');
 check(app.includes('window.AVENTURA_PERFUME_STORY'), 'app delegates perfume story setup to the dedicated runtime');
+check(app.includes('dialogRuntime: window.AVENTURA_DIALOGS'), 'app passes the canonical shared dialog runtime API');
+check(!app.includes('window.AVENTURA_DIALOG_RUNTIME'), 'app does not reference the obsolete dialog runtime name');
 check(!app.includes('document.querySelectorAll("[data-perfume-story]")'), 'app no longer owns perfume story event wiring');
 
 for (const entry of fs.readdirSync(root)) {
