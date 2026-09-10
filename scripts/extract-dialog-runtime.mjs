@@ -42,7 +42,7 @@ let smoke = fs.readFileSync(smokePath, 'utf8');
 if (!smoke.includes("const dialogRuntime = read('assets/js/dialog-runtime.js');")) {
   smoke = smoke.replace("const app = read('assets/js/app.js');\n", "const app = read('assets/js/app.js');\nconst dialogRuntime = read('assets/js/dialog-runtime.js');\n");
 }
-const smokeAnchor = "// Recovery architecture: the legacy launch recovery runtime is gone and its responsibilities are isolated.\n";
+const smokeAnchor = "check(!fs.existsSync(legacyLaunchRecoveryPath), 'legacy launch recovery runtime has been removed');\n";
 if (!smoke.includes("dialog runtime owns modal opening and focus restoration")) {
   if (!smoke.includes(smokeAnchor)) throw new Error('Smoke insertion anchor not found');
   const dialogChecks = `// Dialog runtime: modal mechanics and focus restoration live outside app.js.\ncheck(dialogRuntime.includes('window.AVENTURA_DIALOGS'), 'dialog runtime exposes its stable API');\ncheck(dialogRuntime.includes('dialog.showModal()') && dialogRuntime.includes('__aventuraReturnFocus'), 'dialog runtime owns modal opening and focus restoration');\ncheck(app.includes('window.AVENTURA_DIALOGS.prepare(dialog, translate)') && app.includes('window.AVENTURA_DIALOGS.open(dialog, trigger, translate)') && app.includes('window.AVENTURA_DIALOGS.close(dialog)'), 'app.js delegates dialog behavior through the stable runtime API');\ncheck(!app.includes('dialog.__aventuraPrepared') && !app.includes('dialog.__aventuraReturnFocus') && !app.includes('dialog.showModal()'), 'app.js no longer owns dialog implementation details');\n\n`;
