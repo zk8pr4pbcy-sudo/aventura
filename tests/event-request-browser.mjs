@@ -25,6 +25,10 @@ function saudiDateOffset(days) {
   return date.toISOString().slice(0, 10);
 }
 
+function isRootPageHref(href, pageName) {
+  return new RegExp(`^/${pageName.replace('.', '\\.')}(?:[?#]|$)`).test(href || '');
+}
+
 const startDate = saudiDateOffset(2);
 const endDate = saudiDateOffset(4);
 const fixture = {
@@ -92,6 +96,13 @@ try {
   check(await page.locator('script[src*="contact-wizard"]').count() === 0, 'event request: main contact wizard runtime is not loaded');
   check(await page.locator('script[src*="contact-submission"]').count() === 0, 'event request: main contact submission runtime is not loaded');
 
+  const homeHref = await page.locator('site-header .brand').first().getAttribute('href');
+  const aboutHref = await page.locator('[data-nav="about"]').getAttribute('href');
+  const backHref = await page.locator('.event-request-back').getAttribute('href');
+  check(isRootPageHref(homeHref, 'index.html'), 'event request: header home link resolves to the site root');
+  check(isRootPageHref(aboutHref, 'about.html'), 'event request: header navigation does not remain inside /event-request/');
+  check(isRootPageHref(backHref, 'index.html'), 'event request: back-to-calendar link resolves to the root homepage');
+
   const mobileOverflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   check(!mobileOverflow, 'event request: mobile layout has no horizontal overflow');
 
@@ -115,8 +126,11 @@ try {
   await page.locator('[data-language="ar"]').first().click();
   await page.waitForFunction(() => document.documentElement.lang === 'ar');
   await page.waitForFunction(() => document.querySelector('[data-event-i18n="title"]')?.textContent?.includes('نسّق تجربتك'));
+  await page.waitForFunction(() => (document.querySelector('site-header .brand')?.getAttribute('href') || '').startsWith('/index.html'));
   check(await page.locator('html').getAttribute('dir') === 'rtl', 'event request: live Arabic switch updates direction to RTL');
   check((await page.locator('[data-event-title]').textContent() || '').trim() === 'فعالية اختبار', 'event request: live Arabic switch rerenders event content');
+  check(isRootPageHref(await page.locator('site-header .brand').first().getAttribute('href'), 'index.html'), 'event request: language switching keeps home navigation on the site root');
+  check(isRootPageHref(await page.locator('[data-nav="contact"]').getAttribute('href'), 'contact.html'), 'event request: language switching keeps navigation links on the site root');
   await page.close();
 
   const desktop = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
@@ -127,6 +141,7 @@ try {
   const formBox = await desktop.locator('.event-request-form-card').boundingBox();
   check(Boolean(contextBox && formBox && Math.abs(contextBox.y - formBox.y) < 8), 'event request: desktop event context and form align side-by-side');
   check((await desktop.locator('[data-event-i18n="formTitle"]').textContent() || '').includes('¿Qué quieres'), 'event request: Spanish form copy renders');
+  check(isRootPageHref(await desktop.locator('[data-nav="partners"]').getAttribute('href'), 'partners.html'), 'event request: Spanish navigation also resolves to the root site');
   await desktop.close();
 
   const unavailable = await browser.newPage({ viewport: { width: 390, height: 844 } });
@@ -134,6 +149,16 @@ try {
   await unavailable.goto(`${baseUrl}/event-request/?event=does-not-exist`, { waitUntil: 'domcontentloaded' });
   await unavailable.locator('[data-event-error]').waitFor({ state: 'visible' });
   check(await unavailable.locator('[data-event-shell]').isHidden(), 'event request: invalid event never exposes the form');
+  await unavailable.locator('[data-language="en"]').first().click();
+  await unavailable.waitForFunction(() => document.documentElement.lang === 'en');
+  await unavailable.waitForFunction(() => (document.querySelector('site-header .brand')?.getAttribute('href') || '').startsWith('/index.html'));
+  check(isRootPageHref(await unavailable.locator('site-header .brand').first().getAttribute('href'), 'index.html'), 'event request: unavailable state keeps home navigation valid after language switch');
+  await Promise.all([
+    unavailable.waitForLoadState('domcontentloaded'),
+    unavailable.locator('site-header .brand').first().click()
+  ]);
+  const navigationPath = new URL(unavailable.url()).pathname;
+  check(navigationPath === '/' || navigationPath === '/index.html', 'event request: tapping the Aventura logo actually returns to the homepage');
   await unavailable.close();
 } finally {
   await browser.close();
