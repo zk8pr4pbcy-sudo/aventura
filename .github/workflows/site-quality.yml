@@ -22,10 +22,14 @@ jobs:
         run: |
           node --check assets/js/translations.js
           node --check assets/js/analytics.js
+          node --check assets/js/ga4.js
+          node --check assets/js/seo-runtime.js
           node --check assets/js/app.js
           node --check assets/js/curated-calendar.js
           node --check assets/js/legal-content.js
           node --check scripts/localize-default-metadata.mjs
+      - name: Validate SEO contract
+        run: node tests/seo-contract.mjs
       - name: Validate Curated Calendar contract
         run: node tests/curated-calendar-contract.mjs
       - name: Validate pages, links and translations

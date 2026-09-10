@@ -33,6 +33,9 @@ jobs:
       - name: Run architecture contract
         run: node tests/architecture-contract.mjs
 
+      - name: Run SEO contract
+        run: node tests/seo-contract.mjs
+
       - name: Run Aventura smoke checks
         run: node tests/smoke.mjs
 
@@ -100,6 +103,11 @@ jobs:
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/browser-smoke.mjs
+
+      - name: Run SEO browser checks
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/seo-browser.mjs
 
       - name: Run reveal runtime browser checks
         env:
