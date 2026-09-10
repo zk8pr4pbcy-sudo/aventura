@@ -1,0 +1,36 @@
+name: Staticize Last Light
+
+on:
+  push:
+    branches:
+      - refactor/boutique-recovery-20260910
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: refactor/boutique-recovery-20260910
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Apply static Last Light migration
+        run: node scripts/staticize-last-light.mjs
+      - name: Commit migration
+        run: |
+          if git diff --quiet; then
+            echo "No migration changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add collection.html assets/js/boutique-last-light.js tests/browser-smoke.mjs tests/smoke.mjs
+          git commit -m "Render Last Light as static boutique HTML"
+          git push origin HEAD:refactor/boutique-recovery-20260910
