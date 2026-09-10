@@ -60,6 +60,9 @@ jobs:
       - name: Run Curated Calendar contract checks
         run: node tests/curated-calendar-contract.mjs
 
+      - name: Run Event Request contract checks
+        run: node tests/event-request-contract.mjs
+
   browser:
     runs-on: ubuntu-latest
     needs: verify
@@ -122,6 +125,11 @@ jobs:
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/curated-calendar-browser.mjs
+
+      - name: Run Event Request browser checks
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/event-request-browser.mjs
 
       - name: Stop local site
         if: always()

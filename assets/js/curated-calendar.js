@@ -150,7 +150,7 @@
     var cta = document.createElement("a");
     cta.className = "curated-card__cta";
     cta.textContent = ui.cta;
-    cta.href = "contact.html?source=curated-calendar&event=" + encodeURIComponent(event.id) + "&date=" + encodeURIComponent(event.startDate);
+    cta.href = "event-request.html?source=curated-calendar&event=" + encodeURIComponent(event.id) + "&lang=" + encodeURIComponent(lang);
     actions.appendChild(cta);
 
     var source = document.createElement("a");
@@ -226,7 +226,7 @@
   }
 
   var api = {
-    version: "1.0.0",
+    version: "1.1.0",
     saudiToday: saudiToday,
     addDays: addDays,
     filterEvents: filterEvents,
