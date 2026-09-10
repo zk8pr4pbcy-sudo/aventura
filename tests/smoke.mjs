@@ -88,7 +88,9 @@ check(collection.includes('assets/js/boutique-navigation.js?v=20260910'), 'colle
 check(includesInOrder(collection, 'assets/js/experience-copy-overrides.js?v=20260910', 'assets/js/boutique-last-light.js?v=20260910'), 'collection loads copy overrides before Last Light behavior');
 check(includesInOrder(collection, 'assets/js/boutique-last-light.js?v=20260910', 'assets/js/boutique-navigation.js?v=20260910'), 'collection loads Last Light behavior before boutique navigation');
 check(!boutiqueLastLight.includes('createElement("style")') && !boutiqueLastLight.includes("createElement('style')"), 'Last Light module does not inject runtime CSS');
-check(boutiqueLastLight.includes('data-prelaunch-last-light'), 'Last Light module owns the boutique Last Light card');
+check(collection.includes('<article class="perfume-card perfume-card-pending prelaunch-last-light-card" data-prelaunch-last-light'), 'Last Light card is owned by static collection HTML');
+check(!boutiqueLastLight.includes('createElement('), 'Last Light module no longer creates DOM nodes');
+check(boutiqueLastLight.includes('card.hidden = !show;'), 'Last Light module only synchronizes filter visibility');
 check(boutiqueNavigation.includes('scrollIntoView'), 'boutique navigation module owns result focus behavior');
 check(experienceCopyOverrides.includes('world.historic.step1Title'), 'experience copy overrides remain isolated from boutique behavior');
 check(!fs.existsSync(desertLastLightScriptPath), 'obsolete desert Last Light injector has been removed');
