@@ -33,6 +33,9 @@ jobs:
       - name: Run architecture contract
         run: node tests/architecture-contract.mjs
 
+      - name: Run SEO contract
+        run: node tests/seo-contract.mjs
+
       - name: Run Aventura smoke checks
         run: node tests/smoke.mjs
 
