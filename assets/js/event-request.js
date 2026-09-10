@@ -182,6 +182,27 @@
     return normalizeLanguage(document.documentElement.lang);
   }
 
+  function repairNestedNavigationLinks() {
+    if (typeof document === "undefined" || typeof window === "undefined") return;
+    var nestedPrefix = "/event-request/";
+
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      if (!href || href.charAt(0) === "#" || /^(?:https?:|mailto:|tel:|javascript:|data:)/i.test(href)) return;
+
+      var target;
+      try {
+        target = new URL(href, document.baseURI || window.location.href);
+      } catch (error) {
+        return;
+      }
+
+      if (target.origin !== window.location.origin || target.pathname.indexOf(nestedPrefix) !== 0 || !/\.html$/i.test(target.pathname)) return;
+      target.pathname = "/" + target.pathname.slice(nestedPrefix.length);
+      link.setAttribute("href", target.pathname + target.search + target.hash);
+    });
+  }
+
   function localized(value, lang) {
     if (value && typeof value === "object") return value[lang] || value.ar || value.en || value.es || "";
     return String(value || "");
@@ -407,7 +428,19 @@
     var rootElement = document.querySelector(".event-request-page");
     if (!rootElement) return;
 
+    var event = null;
     setText(rootElement, currentLanguage());
+    repairNestedNavigationLinks();
+
+    var observer = new MutationObserver(function (mutations) {
+      if (!mutations.some(function (mutation) { return mutation.attributeName === "lang"; })) return;
+      var lang = currentLanguage();
+      setText(rootElement, lang);
+      if (event) renderEvent(rootElement, event, lang);
+      repairNestedNavigationLinks();
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+
     var eventId = new URLSearchParams(window.location.search).get("event") || "";
     if (!eventId) {
       showUnavailable(rootElement);
@@ -418,7 +451,7 @@
       var response = await fetch(DATA_URL, { cache: "no-store" });
       if (!response.ok) throw new Error("Event data request failed: " + response.status);
       var data = await response.json();
-      var event = findEvent(data.events, eventId);
+      event = findEvent(data.events, eventId);
       if (!isRequestable(event)) {
         showUnavailable(rootElement);
         return;
@@ -432,14 +465,6 @@
       var shell = rootElement.querySelector("[data-event-shell]");
       if (loading) loading.hidden = true;
       if (shell) shell.hidden = false;
-
-      var observer = new MutationObserver(function (mutations) {
-        if (!mutations.some(function (mutation) { return mutation.attributeName === "lang"; })) return;
-        var lang = currentLanguage();
-        setText(rootElement, lang);
-        renderEvent(rootElement, event, lang);
-      });
-      observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
     } catch (error) {
       console.warn("Aventura event request is unavailable.", error);
       showUnavailable(rootElement);
@@ -447,7 +472,7 @@
   }
 
   root.AVENTURA_EVENT_REQUEST = Object.freeze({
-    version: "1.0.0",
+    version: "1.0.1",
     saudiToday: saudiToday,
     findEvent: findEvent,
     isRequestable: isRequestable,
