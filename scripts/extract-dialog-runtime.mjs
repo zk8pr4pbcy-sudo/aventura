@@ -29,7 +29,7 @@ for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))
   let html = fs.readFileSync(filePath, 'utf8');
   if (!html.includes('assets/js/app.js')) continue;
   if (html.includes('assets/js/dialog-runtime.js')) continue;
-  const appScriptPattern = /(^\s*<script\s+src="assets\/js\/app\.js(?:\?v=[^"]+)?"\s+defer><\/script>)/m;
+  const appScriptPattern = /(^\s*<script\b(?=[^>]*\bsrc="assets\/js\/app\.js(?:\?v=[^"]+)?")[^>]*><\/script>)/m;
   if (!appScriptPattern.test(html)) throw new Error(`${file}: app.js script tag shape was not recognized`);
   html = html.replace(appScriptPattern, `  <script src="${dialogScript}" defer></script>\n$1`);
   fs.writeFileSync(filePath, html);
