@@ -30,12 +30,15 @@ const partners = read('partners.html');
 const collection = read('collection.html');
 const desert = read('experience-desert.html');
 const contactConsent = read('assets/js/contact-consent.js');
-const launchRecovery = read('assets/js/launch-v2-recovery.js');
+const experienceCopyOverrides = read('assets/js/experience-copy-overrides.js');
+const boutiqueLastLight = read('assets/js/boutique-last-light.js');
+const boutiqueNavigation = read('assets/js/boutique-navigation.js');
 const fragranceCards = read('assets/js/fragrance-cards.js');
 const prelaunchStyles = read('assets/css/prelaunch-visual-fixes.css');
 const jsDirectory = path.join(root, 'assets/js');
 const legacyFixFiles = fs.readdirSync(jsDirectory).filter((name) => /-fix\.js$/i.test(name));
 const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
+const legacyLaunchRecoveryPath = path.join(root, 'assets/js/launch-v2-recovery.js');
 const desertLastLightScriptPath = path.join(root, 'assets/js/prelaunch-desert-last-light.js');
 
 console.log('\nAventura maintenance smoke checks\n');
@@ -77,10 +80,17 @@ check(contactConsent.includes('privacy_consent'), 'consent module owns consent v
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
 
-// Recovery architecture: CSS belongs in CSS, boutique recovery stays scoped, and the active fragrance module owns desert Last Light.
-check(!launchRecovery.includes('createElement("style")') && !launchRecovery.includes("createElement('style')"), 'launch recovery no longer injects runtime CSS');
-check(!launchRecovery.includes('injectDesertLastLight'), 'launch recovery no longer owns desert Last Light injection');
-check(!launchRecovery.includes('prelaunch-last-light-section'), 'launch recovery does not manipulate the obsolete desert Last Light section');
+// Recovery architecture: the legacy launch recovery runtime is gone and its responsibilities are isolated.
+check(!fs.existsSync(legacyLaunchRecoveryPath), 'legacy launch recovery runtime has been removed');
+check(collection.includes('assets/js/experience-copy-overrides.js?v=20260910'), 'collection loads the focused experience copy module');
+check(collection.includes('assets/js/boutique-last-light.js?v=20260910'), 'collection loads the focused Last Light module');
+check(collection.includes('assets/js/boutique-navigation.js?v=20260910'), 'collection loads the focused boutique navigation module');
+check(includesInOrder(collection, 'assets/js/experience-copy-overrides.js?v=20260910', 'assets/js/boutique-last-light.js?v=20260910'), 'collection loads copy overrides before Last Light behavior');
+check(includesInOrder(collection, 'assets/js/boutique-last-light.js?v=20260910', 'assets/js/boutique-navigation.js?v=20260910'), 'collection loads Last Light behavior before boutique navigation');
+check(!boutiqueLastLight.includes('createElement("style")') && !boutiqueLastLight.includes("createElement('style')"), 'Last Light module does not inject runtime CSS');
+check(boutiqueLastLight.includes('data-prelaunch-last-light'), 'Last Light module owns the boutique Last Light card');
+check(boutiqueNavigation.includes('scrollIntoView'), 'boutique navigation module owns result focus behavior');
+check(experienceCopyOverrides.includes('world.historic.step1Title'), 'experience copy overrides remain isolated from boutique behavior');
 check(!fs.existsSync(desertLastLightScriptPath), 'obsolete desert Last Light injector has been removed');
 check(!desert.includes('prelaunch-desert-last-light.js'), 'desert page does not load the obsolete Last Light injector');
 check(!desert.includes('prelaunch-last-light-section'), 'desert HTML does not contain the obsolete Last Light section');
@@ -88,16 +98,16 @@ check(desert.includes('assets/js/fragrance-cards.js'), 'desert page loads the ac
 check(fragranceCards.includes('desert: ['), 'fragrance cards module defines the desert fragrance inventory');
 check(fragranceCards.includes('{ id: "last-light", name: "Last Light"'), 'fragrance cards module owns the Last Light product card');
 check(fragranceCards.includes('document.querySelectorAll(".prelaunch-last-light-section")'), 'fragrance cards module explicitly removes obsolete Last Light UI');
-check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'legacy boutique Last Light card styling remains in CSS until boutique recovery is split');
-check(collection.includes('assets/js/launch-v2-recovery.js'), 'boutique keeps the collection recovery module');
+check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'boutique Last Light styling remains in CSS while the card is still runtime-created');
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
 check(!partners.includes('partners-copy-fix.js'), 'partners page has no copy patch script');
 
-// Every root HTML page that loads app.js must load translations first.
+// Every root HTML page must be free of the legacy recovery runtime; pages that load app.js must load translations first.
 for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
   const html = read(file);
+  check(!html.includes('assets/js/launch-v2-recovery.js'), `${file}: legacy launch recovery reference is absent`);
   if (!html.includes('assets/js/app.js')) continue;
   check(
     includesInOrder(html, 'assets/js/translations.js', 'assets/js/app.js'),
