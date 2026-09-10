@@ -1398,48 +1398,13 @@
   }
 
   function setupPerfumeStoryCards() {
-    var dialog = document.querySelector("[data-perfume-story-dialog]");
-    if (!dialog) {
-      return;
+    var storyRuntime = window.AVENTURA_PERFUME_STORY;
+    if (!storyRuntime || typeof storyRuntime.setup !== "function") {
+      throw new Error("Aventura perfume story runtime is unavailable");
     }
-
-    var image = dialog.querySelector("[data-perfume-story-image]");
-    var title = dialog.querySelector("[data-perfume-story-title]");
-    var activeTitleKey = "";
-    prepareDialog(dialog);
-
-    document.querySelectorAll("[data-perfume-story]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        activeTitleKey = button.getAttribute("data-story-title-key") || "collection.storyDialogTitle";
-        if (image) {
-          image.src = button.getAttribute("data-perfume-story") || "";
-          image.alt = translate(activeTitleKey) + " — " + translate("collection.storyDialogEyebrow");
-        }
-        if (title) {
-          title.textContent = translate(activeTitleKey);
-        }
-        openAventuraDialog(dialog, button);
-      });
-    });
-
-    var closeButton = dialog.querySelector("[data-close-perfume-story]");
-    if (closeButton) {
-      closeButton.addEventListener("click", function () { closeAventuraDialog(dialog); });
-    }
-
-    dialog.addEventListener("click", function (event) {
-      if (event.target === dialog) {
-        closeAventuraDialog(dialog);
-      }
-    });
-
-    document.addEventListener("aventura:language", function () {
-      if (dialog.open && title && activeTitleKey) {
-        title.textContent = translate(activeTitleKey);
-        if (image) {
-          image.alt = translate(activeTitleKey) + " — " + translate("collection.storyDialogEyebrow");
-        }
-      }
+    storyRuntime.setup({
+      translate: translate,
+      dialogRuntime: window.AVENTURA_DIALOGS
     });
   }
 
