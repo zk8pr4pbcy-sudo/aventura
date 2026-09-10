@@ -123,6 +123,14 @@ try {
     await page.close();
   }
 
+  const historicGuideTitles = { ar: 'تعرّف إلى مرشدك', en: 'Meet your guide', es: 'Conoce a tu guía' };
+  for (const { lang, query } of languageCases) {
+    const { page } = await openChecked(browser, `/experience-historic-jeddah.html${query}`, `historic detail ${lang}`);
+    const guideTitle = (await page.locator('[data-i18n="world.historic.step1Title"]').textContent() || '').trim();
+    check(guideTitle === historicGuideTitles[lang], `historic detail ${lang}: approved guide title is localized`);
+    await page.close();
+  }
+
   for (const { lang, query } of languageCases) {
     const { page } = await openChecked(browser, `/experience-desert.html${query}`, `desert ${lang}`);
     const fragranceSection = page.locator('.aventura-fragrance-section');

@@ -30,7 +30,6 @@ const partners = read('partners.html');
 const collection = read('collection.html');
 const desert = read('experience-desert.html');
 const contactConsent = read('assets/js/contact-consent.js');
-const experienceCopyOverrides = read('assets/js/experience-copy-overrides.js');
 const boutiqueLastLight = read('assets/js/boutique-last-light.js');
 const boutiqueNavigation = read('assets/js/boutique-navigation.js');
 const fragranceCards = read('assets/js/fragrance-cards.js');
@@ -39,6 +38,7 @@ const jsDirectory = path.join(root, 'assets/js');
 const legacyFixFiles = fs.readdirSync(jsDirectory).filter((name) => /-fix\.js$/i.test(name));
 const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
 const legacyLaunchRecoveryPath = path.join(root, 'assets/js/launch-v2-recovery.js');
+const legacyExperienceCopyOverridesPath = path.join(root, 'assets/js/experience-copy-overrides.js');
 const desertLastLightScriptPath = path.join(root, 'assets/js/prelaunch-desert-last-light.js');
 
 console.log('\nAventura maintenance smoke checks\n');
@@ -82,7 +82,8 @@ check(!contactConsent.includes('createElement("style")') && !contactConsent.incl
 
 // Recovery architecture: the legacy launch recovery runtime is gone and its responsibilities are isolated.
 check(!fs.existsSync(legacyLaunchRecoveryPath), 'legacy launch recovery runtime has been removed');
-check(collection.includes('assets/js/experience-copy-overrides.js?v=20260910'), 'collection loads the focused experience copy module');
+check(!fs.existsSync(legacyExperienceCopyOverridesPath), 'experience copy override module has been removed');
+check(!collection.includes('experience-copy-overrides.js'), 'collection has no experience copy override script');
 check(collection.includes('assets/js/boutique-last-light.js?v=20260910'), 'collection loads the focused Last Light module');
 check(collection.includes('assets/js/boutique-navigation.js?v=20260910'), 'collection loads the focused boutique navigation module');
 check(includesInOrder(collection, 'assets/js/experience-copy-overrides.js?v=20260910', 'assets/js/boutique-last-light.js?v=20260910'), 'collection loads copy overrides before Last Light behavior');
@@ -92,7 +93,8 @@ check(collection.includes('<article class="perfume-card perfume-card-pending pre
 check(!boutiqueLastLight.includes('createElement('), 'Last Light module no longer creates DOM nodes');
 check(boutiqueLastLight.includes('card.hidden = !show;'), 'Last Light module only synchronizes filter visibility');
 check(boutiqueNavigation.includes('scrollIntoView'), 'boutique navigation module owns result focus behavior');
-check(experienceCopyOverrides.includes('world.historic.step1Title'), 'experience copy overrides remain isolated from boutique behavior');
+check(translations.includes('\"experiences.readyHistoricText\": \"تشمل جميع جولات المشي القهوة السعودية والتمر ومرشدًا سياحيًا مرخصًا، وتُؤكد أي رسوم دخول إضافية بشكل منفصل.\"'), 'approved Arabic Historic Jeddah copy lives in translations');
+check(translations.includes('\"world.historic.step1Title\": \"Conoce a tu guía\"'), 'approved Spanish Historic Jeddah copy lives in translations');
 check(!fs.existsSync(desertLastLightScriptPath), 'obsolete desert Last Light injector has been removed');
 check(!desert.includes('prelaunch-desert-last-light.js'), 'desert page does not load the obsolete Last Light injector');
 check(!desert.includes('prelaunch-last-light-section'), 'desert HTML does not contain the obsolete Last Light section');
@@ -110,6 +112,7 @@ check(!partners.includes('partners-copy-fix.js'), 'partners page has no copy pat
 for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
   const html = read(file);
   check(!html.includes('assets/js/launch-v2-recovery.js'), `${file}: legacy launch recovery reference is absent`);
+  check(!html.includes('assets/js/experience-copy-overrides.js'), `${file}: experience copy override reference is absent`);
   if (!html.includes('assets/js/app.js')) continue;
   check(
     includesInOrder(html, 'assets/js/translations.js', 'assets/js/app.js'),
