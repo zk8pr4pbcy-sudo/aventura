@@ -1,0 +1,42 @@
+name: Extract Dialog Runtime
+
+on:
+  push:
+    branches:
+      - refactor/app-runtime-next-20260910
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: refactor/app-runtime-next-20260910
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Extract dialog runtime
+        run: node scripts/extract-dialog-runtime.mjs
+      - name: Check syntax after extraction
+        run: |
+          node --check assets/js/app.js
+          node --check assets/js/dialog-runtime.js
+          node --check tests/smoke.mjs
+          node --check tests/browser-smoke.mjs
+      - name: Commit extraction
+        run: |
+          if git diff --quiet; then
+            echo "No extraction changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/app.js tests/smoke.mjs tests/browser-smoke.mjs *.html
+          git commit -m "Extract shared dialog runtime from app"
+          git push origin HEAD:refactor/app-runtime-next-20260910
