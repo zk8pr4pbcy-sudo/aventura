@@ -4,8 +4,10 @@ import path from 'node:path';
 const root = process.cwd();
 const appPath = path.join(root, 'assets/js/app.js');
 const runtimePath = path.join(root, 'assets/js/perfume-story-runtime.js');
+const dialogRuntimePath = path.join(root, 'assets/js/dialog-runtime.js');
 const app = fs.readFileSync(appPath, 'utf8');
 const runtime = fs.readFileSync(runtimePath, 'utf8');
+const dialogRuntime = fs.readFileSync(dialogRuntimePath, 'utf8');
 let failures = 0;
 
 function check(condition, message) {
@@ -18,6 +20,9 @@ function check(condition, message) {
 }
 
 check(runtime.includes('window.AVENTURA_PERFUME_STORY'), 'perfume story runtime exposes one stable public API');
+check(dialogRuntime.includes('window.AVENTURA_DIALOGS'), 'shared dialog runtime exposes the canonical AVENTURA_DIALOGS API');
+check(runtime.includes('window.AVENTURA_DIALOGS'), 'perfume story runtime falls back to the canonical shared dialog API');
+check(!runtime.includes('window.AVENTURA_DIALOG_RUNTIME'), 'perfume story runtime does not reference the obsolete dialog runtime name');
 check(runtime.includes('dialogRuntime.open') && runtime.includes('dialogRuntime.close') && runtime.includes('dialogRuntime.prepare'), 'perfume story runtime delegates dialog behavior to shared dialog runtime');
 check(!runtime.includes('dialog.showModal(') && !runtime.includes('dialog.close('), 'perfume story runtime does not reimplement dialog primitives');
 check(app.includes('window.AVENTURA_PERFUME_STORY'), 'app delegates perfume story setup to the dedicated runtime');
