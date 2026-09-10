@@ -29,9 +29,10 @@ for (const file of fs.readdirSync(root).filter((name) => name.endsWith('.html'))
   let html = fs.readFileSync(filePath, 'utf8');
   if (!html.includes('assets/js/app.js')) continue;
   if (html.includes('assets/js/dialog-runtime.js')) continue;
-  const appScriptPattern = /(^\s*<script\b(?=[^>]*\bsrc="assets\/js\/app\.js(?:\?v=[^"]+)?")[^>]*><\/script>)/m;
-  if (!appScriptPattern.test(html)) throw new Error(`${file}: app.js script tag shape was not recognized`);
-  html = html.replace(appScriptPattern, `  <script src="${dialogScript}" defer></script>\n$1`);
+  const appScriptPattern = /<script\b(?=[^>]*\bsrc="assets\/js\/app\.js(?:\?v=[^"]+)?")[^>]*><\/script>/;
+  const match = html.match(appScriptPattern);
+  if (!match) throw new Error(`${file}: app.js script tag shape was not recognized`);
+  html = html.replace(appScriptPattern, `<script src="${dialogScript}" defer></script>${match[0]}`);
   fs.writeFileSync(filePath, html);
   htmlTouched += 1;
 }
