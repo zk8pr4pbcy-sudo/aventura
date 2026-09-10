@@ -1409,26 +1409,11 @@
   }
 
   function setupReveals() {
-    var elements = Array.from(document.querySelectorAll("[data-reveal]"));
-    if (!elements.length) {
-      return;
+    var revealRuntime = window.AVENTURA_REVEAL;
+    if (!revealRuntime || typeof revealRuntime.setup !== "function") {
+      throw new Error("Aventura reveal runtime is unavailable");
     }
-
-    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      elements.forEach(function (element) { element.classList.add("is-visible"); });
-      return;
-    }
-
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -7%", threshold: 0.12 });
-
-    elements.forEach(function (element) { observer.observe(element); });
+    revealRuntime.setup();
   }
 
   function setupCurrentYear() {
