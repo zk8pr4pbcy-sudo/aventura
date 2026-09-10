@@ -104,6 +104,11 @@ jobs:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/browser-smoke.mjs
 
+      - name: Run SEO browser checks
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/seo-browser.mjs
+
       - name: Run reveal runtime browser checks
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
