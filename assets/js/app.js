@@ -1404,7 +1404,7 @@
     }
     storyRuntime.setup({
       translate: translate,
-      dialogRuntime: window.AVENTURA_DIALOG_RUNTIME
+      dialogRuntime: window.AVENTURA_DIALOGS
     });
   }
 
