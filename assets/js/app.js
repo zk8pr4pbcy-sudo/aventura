@@ -519,60 +519,16 @@
     }
   }
 
-  function restoreDialogFocus(dialog) {
-    var trigger = dialog && dialog.__aventuraReturnFocus;
-    if (dialog) {
-      dialog.__aventuraReturnFocus = null;
-    }
-    if (trigger && document.contains(trigger) && typeof trigger.focus === "function") {
-      window.setTimeout(function () { trigger.focus(); }, 0);
-    }
-  }
-
   function prepareDialog(dialog) {
-    if (!dialog || dialog.__aventuraPrepared) {
-      return;
-    }
-    dialog.__aventuraPrepared = true;
-    dialog.addEventListener("close", function () { restoreDialogFocus(dialog); });
-    dialog.querySelectorAll(".dialog-close").forEach(function (button) {
-      if (!button.hasAttribute("data-i18n-aria")) {
-        button.setAttribute("data-i18n-aria", "collection.closeDetails");
-      }
-      button.setAttribute("aria-label", translate(button.getAttribute("data-i18n-aria")));
-    });
+    return window.AVENTURA_DIALOGS.prepare(dialog, translate);
   }
 
   function openAventuraDialog(dialog, trigger) {
-    if (!dialog || dialog.open) {
-      return;
-    }
-    prepareDialog(dialog);
-    dialog.__aventuraReturnFocus = trigger || document.activeElement;
-    dialog.setAttribute("dir", document.documentElement.dir || "ltr");
-    if (typeof dialog.showModal === "function") {
-      dialog.showModal();
-    } else {
-      dialog.setAttribute("open", "");
-    }
-    window.setTimeout(function () {
-      var target = dialog.querySelector("button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled])");
-      if (target && typeof target.focus === "function") {
-        target.focus();
-      }
-    }, 0);
+    return window.AVENTURA_DIALOGS.open(dialog, trigger, translate);
   }
 
   function closeAventuraDialog(dialog) {
-    if (!dialog) {
-      return;
-    }
-    if (typeof dialog.close === "function" && dialog.open) {
-      dialog.close();
-      return;
-    }
-    dialog.removeAttribute("open");
-    restoreDialogFocus(dialog);
+    return window.AVENTURA_DIALOGS.close(dialog);
   }
 
   function setupBoutiqueCatalog() {
