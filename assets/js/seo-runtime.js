@@ -61,9 +61,13 @@
     var canonical = document.head.querySelector('link[rel="canonical"]');
 
     if (noindex) {
+      var page = document.body ? document.body.getAttribute("data-page") || "" : "";
       document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (node) {
         node.remove();
       });
+      // Transactional utility routes keep one stable canonical that never
+      // inherits tracking or language query parameters. 404 intentionally has none.
+      if (canonical && page === "event-request") canonical.href = SITE_ORIGIN + path;
       return canonical ? canonical.href : "";
     }
 
