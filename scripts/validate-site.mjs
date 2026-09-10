@@ -273,6 +273,7 @@ if (quoteControlFiles.length) {
 const contactBlock = appSource.slice(appSource.indexOf("function setupContactForm()"));
 const contactWizardSource = fs.readFileSync(path.join(root, "assets/js/contact-wizard.js"), "utf8");
 const contactRequestDataSource = fs.readFileSync(path.join(root, "assets/js/contact-request-data.js"), "utf8");
+const contactSubmissionSource = fs.readFileSync(path.join(root, "assets/js/contact-submission.js"), "utf8");
 const requestKeyBlock = contactBlock.slice(contactBlock.indexOf("var requestKeys = {"), contactBlock.indexOf("var requestedItem"));
 const contactTargets = [...htmlFiles]
   .flatMap((file) => [...fs.readFileSync(path.join(root, file), "utf8").matchAll(/contact\.html\?[^"']*?(?:request|service)=([^&"']+)/g)])
@@ -289,8 +290,8 @@ if (!/\["name", "company", "phone", "email", "preferredResponse"\]\.forEach\(fun
   fail("contact", "preferred response field is not included in the final request step and request details");
 }
 const contactSource = fs.readFileSync(path.join(root, "contact.html"), "utf8");
-if (!appSource.includes('var REQUEST_EMAIL = "contact@aventuraksa.com"') || !appSource.includes('var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com"') || !contactSource.includes('action="https://formsubmit.co/contact@aventuraksa.com"') || !contactSource.includes('method="POST"') || !/name="submissionChannel" value="email" checked[\s\S]*name="submissionChannel" value="whatsapp"/.test(contactSource) || !contactBlock.includes('var submissionChannel = String(data.get("submissionChannel") || "email")') || !contactBlock.includes('sendRequestWithFormSubmit(submissionData)') || contactBlock.includes('"mailto:" + REQUEST_EMAIL')) {
-  fail("contact", "booking requests must submit automatically to contact@aventuraksa.com with WhatsApp as the second option");
+if (!contactSubmissionSource.includes('var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com"') || !contactSubmissionSource.includes('var WHATSAPP_NUMBER = "966555884854"') || !contactSubmissionSource.includes('window.AVENTURA_CONTACT_SUBMISSION = Object.freeze({') || !contactSubmissionSource.includes('sendEmail: sendEmail') || !contactSubmissionSource.includes('buildWhatsAppUrl: buildWhatsAppUrl') || !contactSource.includes('assets/js/contact-submission.js?v=20260910') || !(contactSource.indexOf('assets/js/contact-submission.js?v=20260910') < contactSource.indexOf('assets/js/app.js')) || !contactSource.includes('action="https://formsubmit.co/contact@aventuraksa.com"') || !contactSource.includes('method="POST"') || !/name="submissionChannel" value="email" checked[\s\S]*name="submissionChannel" value="whatsapp"/.test(contactSource) || !contactBlock.includes('var submissionChannel = String(data.get("submissionChannel") || "email")') || !contactBlock.includes('submissionTransport.sendEmail(submissionData)') || !contactBlock.includes('submissionTransport.buildWhatsAppUrl(lastRequestMessage)') || contactBlock.includes('sendRequestWithFormSubmit(') || appSource.includes('var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com"')) {
+  fail("contact", "booking requests must use the dedicated contact submission transport with FormSubmit email first and WhatsApp second");
 }
 if (!contactSource.includes('href="privacy.html"') || !contactSource.includes('href="terms.html"') || !contactSource.includes('data-i18n="contact.sensitiveDataNotice"')) {
   fail("contact", "request form must link its privacy notice, terms and sensitive-data warning");
