@@ -57,6 +57,9 @@ jobs:
       - name: Run reveal runtime contract checks
         run: node tests/reveal-runtime-contract.mjs
 
+      - name: Run Curated Calendar contract checks
+        run: node tests/curated-calendar-contract.mjs
+
   browser:
     runs-on: ubuntu-latest
     needs: verify
@@ -114,6 +117,11 @@ jobs:
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/contact-submission-browser.mjs
+
+      - name: Run Curated Calendar browser checks
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/curated-calendar-browser.mjs
 
       - name: Stop local site
         if: always()

@@ -1,0 +1,179 @@
+{
+  "version": "1.0.0",
+  "windowDays": 10,
+  "lastReviewed": "2026-09-10",
+  "reviewedBy": "Salem",
+  "ui": {
+    "ar": {
+      "eyebrow": "AVENTURA CURATED CALENDAR",
+      "title": "مختارات أفنتورا في جدة",
+      "description": "فعاليات مختارة خلال الأيام القادمة، ويمكن لأفنتورا تنسيق تجربة خاصة متكاملة حول كل فعالية.",
+      "planLabel": "اقتراح أفنتورا",
+      "cta": "نسّق تجربتك حول الفعالية",
+      "details": "تفاصيل الفعالية",
+      "previous": "الفعالية السابقة",
+      "next": "الفعالية التالية",
+      "disclaimer": "أفنتورا لا تبيع تذاكر الفعاليات ما لم يُذكر خلاف ذلك؛ نحن ننسّق التجربة والخدمات المحيطة بها حسب الطلب والتوفر."
+    },
+    "en": {
+      "eyebrow": "AVENTURA CURATED CALENDAR",
+      "title": "Aventura picks in Jeddah",
+      "description": "A short selection of what is happening next in Jeddah, with a private Aventura experience designed around each event.",
+      "planLabel": "Aventura suggests",
+      "cta": "Plan your experience around this event",
+      "details": "Event details",
+      "previous": "Previous event",
+      "next": "Next event",
+      "disclaimer": "Aventura does not sell event tickets unless stated otherwise; we coordinate the surrounding experience and services subject to request and availability."
+    },
+    "es": {
+      "eyebrow": "AVENTURA CURATED CALENDAR",
+      "title": "Selección de Aventura en Yeda",
+      "description": "Una selección breve de lo que ocurrirá próximamente en Yeda, con una experiencia privada de Aventura diseñada alrededor de cada evento.",
+      "planLabel": "Aventura propone",
+      "cta": "Organiza tu experiencia alrededor del evento",
+      "details": "Detalles del evento",
+      "previous": "Evento anterior",
+      "next": "Evento siguiente",
+      "disclaimer": "Aventura no vende entradas para los eventos salvo que se indique lo contrario; coordinamos la experiencia y los servicios relacionados según solicitud y disponibilidad."
+    }
+  },
+  "events": [
+    {
+      "id": "saudi-industry-forum-2026",
+      "active": true,
+      "priority": 1,
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-16",
+      "title": {
+        "ar": "منتدى الصناعة السعودي 2026",
+        "en": "Saudi Industry Forum 2026",
+        "es": "Foro de la Industria Saudí 2026"
+      },
+      "category": {
+        "ar": "أعمال وتنفيذيون",
+        "en": "Business & executives",
+        "es": "Negocios y ejecutivos"
+      },
+      "location": {
+        "ar": "جدة سوبر دوم",
+        "en": "Jeddah Superdome",
+        "es": "Jeddah Superdome"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال وتنقل خاص للوفد أو التنفيذي، مع إمكانية إضافة مرافق أو مترجم، ثم عشاء أعمال أو تجربة مسائية مختارة في جدة بعد المنتدى.",
+        "en": "Private arrival and transport for executives or delegations, with an optional companion or interpreter, followed by a business dinner or a curated Jeddah evening.",
+        "es": "Recepción y transporte privado para ejecutivos o delegaciones, con acompañante o intérprete opcional, seguido de una cena de negocios o una velada seleccionada en Yeda."
+      },
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {
+        "ar": "ضيافة فعاليات الشركات من أفنتورا في جدة",
+        "en": "Aventura corporate event hospitality in Jeddah",
+        "es": "Hospitalidad corporativa de Aventura en Yeda"
+      },
+      "sourceUrl": "https://www.ksa-sif.com/jeddah/"
+    },
+    {
+      "id": "jibex-2026",
+      "active": true,
+      "priority": 2,
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-17",
+      "title": {
+        "ar": "معرض جدة الدولي للبناء JIBEX 2026",
+        "en": "Jeddah International Building Exhibition (JIBEX) 2026",
+        "es": "Exposición Internacional de Construcción de Yeda (JIBEX) 2026"
+      },
+      "category": {
+        "ar": "معارض وأعمال",
+        "en": "Exhibition & business",
+        "es": "Feria y negocios"
+      },
+      "location": {
+        "ar": "مركز جدة للمعارض والفعاليات",
+        "en": "Jeddah Exhibition & Events Center",
+        "es": "Jeddah Exhibition & Events Center"
+      },
+      "aventuraPlan": {
+        "ar": "تنقل خاص إلى المعرض، ثم عشاء أعمال أو جولة قصيرة في جدة التاريخية أو الواجهة البحرية بحسب جدول الضيف ووقت خروجه.",
+        "en": "Private transport to the exhibition, followed by a business dinner or a short Historic Jeddah or waterfront experience depending on the guest’s schedule.",
+        "es": "Transporte privado a la feria, seguido de una cena de negocios o una breve experiencia en Yeda Histórica o el paseo marítimo según el horario del huésped."
+      },
+      "image": "assets/images/hero-jeddah.webp",
+      "imageAlt": {
+        "ar": "أفق جدة كصورة سياقية لتجربة ضيف أعمال",
+        "en": "Jeddah skyline as context for a business guest experience",
+        "es": "Horizonte de Yeda como contexto para una experiencia de negocios"
+      },
+      "sourceUrl": "https://jibex-sa.com/secure-your-visit/"
+    },
+    {
+      "id": "khaled-abdel-aziz-jeddah-2026",
+      "active": true,
+      "priority": 3,
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-17",
+      "title": {
+        "ar": "خالد عبدالعزيز — ليلة موسيقية في جدة",
+        "en": "Khaled Abdel Aziz — Live in Jeddah",
+        "es": "Khaled Abdel Aziz — En directo en Yeda"
+      },
+      "category": {
+        "ar": "موسيقى وثقافة",
+        "en": "Music & culture",
+        "es": "Música y cultura"
+      },
+      "location": {
+        "ar": "النادي الأدبي الثقافي، جدة",
+        "en": "Society of Culture and Arts, Jeddah",
+        "es": "Society of Culture and Arts, Yeda"
+      },
+      "aventuraPlan": {
+        "ar": "جولة خفيفة في جدة التاريخية أو عشاء مبكر، ثم سيارة خاصة إلى الحفل وعودة مرتبة بعد نهاية الأمسية.",
+        "en": "A light Historic Jeddah visit or early dinner, followed by private transport to the concert and a coordinated return after the evening.",
+        "es": "Una visita ligera a Yeda Histórica o una cena temprana, seguida de transporte privado al concierto y regreso coordinado al finalizar la noche."
+      },
+      "image": "assets/images/event-private.webp",
+      "imageAlt": {
+        "ar": "أجواء فعالية خاصة من أفنتورا في جدة",
+        "en": "Aventura private event atmosphere in Jeddah",
+        "es": "Ambiente de evento privado de Aventura en Yeda"
+      },
+      "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/107896/khaled-abdel-aziz-in-jeddah-at-society-of-culture-and-arts"
+    },
+    {
+      "id": "rasha-rizk-jeddah-2026",
+      "active": true,
+      "priority": 4,
+      "startDate": "2026-09-19",
+      "endDate": "2026-09-19",
+      "title": {
+        "ar": "رشا رزق — الصوت الذهبي لسبيستون",
+        "en": "Rasha Rizk — Spacetoon Golden Voice Live",
+        "es": "Rasha Rizk — La voz dorada de Spacetoon en directo"
+      },
+      "category": {
+        "ar": "موسيقى وعائلات",
+        "en": "Music & families",
+        "es": "Música y familias"
+      },
+      "location": {
+        "ar": "عبادي الجوهر أرينا، جدة",
+        "en": "Abadi Aljohar Arena, Jeddah",
+        "es": "Abadi Aljohar Arena, Yeda"
+      },
+      "aventuraPlan": {
+        "ar": "عشاء مناسب للعائلة أو المجموعة قبل الحفل، مع تنقل خاص من وإلى الموقع وترتيب التوقيت بحيث تكون الأمسية سهلة من البداية للنهاية.",
+        "en": "A family or group dinner before the concert, with private transport to and from the venue and timing coordinated for an easy evening from start to finish.",
+        "es": "Cena para la familia o el grupo antes del concierto, con transporte privado de ida y vuelta y horarios coordinados para una noche fluida de principio a fin."
+      },
+      "image": "assets/images/collection.webp",
+      "imageAlt": {
+        "ar": "تفاصيل ضيافة أفنتورا كصورة سياقية لتجربة مسائية",
+        "en": "Aventura hospitality details as context for an evening experience",
+        "es": "Detalles de hospitalidad de Aventura como contexto para una experiencia nocturna"
+      },
+      "sourceUrl": "https://jeddah.platinumlist.net/event-tickets/107901/rasha-rizk-spacetoon-golden-voice-live-in-jeddah"
+    }
+  ]
+}

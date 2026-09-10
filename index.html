@@ -33,12 +33,14 @@
   <link rel="stylesheet" href="assets/css/home-phase1.css?v=phase1-final-20260729">
   <link rel="stylesheet" href="assets/css/home-brand-reset.css?v=header-system-20260809">
   <link rel="stylesheet" href="assets/css/hero-contrast-fix.css?v=20260809-1" />
+  <link rel="stylesheet" href="assets/css/curated-calendar.css?v=20260910" />
   <script src="assets/js/translations.js?v=20260815-2" defer></script>
   <script src="assets/js/home-phase1-i18n.js?v=maher-20260801" defer></script>
   <script src="assets/js/home-brand-reset.js?v=hero-contrast-20260802" defer></script>
   <script src="assets/js/ga4.js?v=20260815-pdpl4" defer></script>
   <script src="assets/js/analytics.js?v=legal-20260809" defer></script>
   <script src="assets/js/dialog-runtime.js?v=20260910" defer></script><script src="assets/js/perfume-story-runtime.js?v=20260910" defer></script><script src="assets/js/reveal-runtime.js?v=20260910" defer></script>
+  <script src="assets/js/curated-calendar.js?v=20260910" defer></script>
 <script src="assets/js/app.js?v=legal-20260809" defer></script>
   <script type="application/ld+json">
   {
@@ -96,6 +98,24 @@
           <h2 data-i18n="home.introTitle">One brand. Different worlds. Every journey designed around the guest.</h2>
         </div>
           <p class="lead" data-i18n="home.introDescription">From Historic Jeddah to the Red Sea, the desert and Taif, we design private days shaped around your guests.</p>
+      </div>
+    </section>
+
+    <section class="curated-calendar" id="curated-calendar" data-curated-calendar hidden aria-labelledby="curated-calendar-title">
+      <div class="container">
+        <div class="curated-calendar__header" data-reveal>
+          <div class="curated-calendar__copy">
+            <span class="curated-calendar__eyebrow" data-curated-ui="eyebrow">AVENTURA CURATED CALENDAR</span>
+            <h2 id="curated-calendar-title" data-curated-ui="title">مختارات أفنتورا في جدة</h2>
+            <p class="curated-calendar__description" data-curated-ui="description">فعاليات مختارة خلال الأيام القادمة، ويمكن لأفنتورا تنسيق تجربة خاصة متكاملة حول كل فعالية.</p>
+          </div>
+          <div class="curated-calendar__controls" aria-label="Curated events navigation">
+            <button class="curated-calendar__control" type="button" data-curated-prev data-curated-label="previous" aria-label="الفعالية السابقة">←</button>
+            <button class="curated-calendar__control" type="button" data-curated-next data-curated-label="next" aria-label="الفعالية التالية">→</button>
+          </div>
+        </div>
+        <div class="curated-calendar__track" data-curated-track aria-live="polite"></div>
+        <p class="curated-calendar__disclaimer" data-curated-ui="disclaimer">أفنتورا لا تبيع تذاكر الفعاليات ما لم يُذكر خلاف ذلك؛ نحن ننسّق التجربة والخدمات المحيطة بها حسب الطلب والتوفر.</p>
       </div>
     </section>
 
