@@ -13,7 +13,7 @@ function check(condition, message) {
 }
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-const fullPage = fs.readFileSync(path.join(root, 'jeddah-picks.html'), 'utf8');
+const fullPage = fs.readFileSync(path.join(root, 'jeddah-picks', 'index.html'), 'utf8');
 const app = fs.readFileSync(path.join(root, 'assets/js/app.js'), 'utf8');
 const runtime = fs.readFileSync(path.join(root, 'assets/js/curated-calendar.js'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'assets/css/curated-calendar.css'), 'utf8');
@@ -34,12 +34,14 @@ check(runtime.includes('HOME_LIMIT = 4'), 'home page editorial selection is capp
 check(runtime.includes('allVisible.slice(0, HOME_LIMIT)'), 'featured mode renders only the four priority events');
 check(runtime.includes('windowDays') || runtime.includes('filterEvents'), 'Curated Calendar runtime owns its date-window behavior');
 check(runtime.includes('Asia/Riyadh'), 'Curated Calendar uses the Saudi timezone');
-check(runtime.includes('jeddah-picks.html'), 'home calendar links to the full Jeddah picks page');
-check(runtime.includes('jeddah-picks-request.html?source=curated-calendar&event='), 'event cards route into the isolated Jeddah picks request flow');
+check(runtime.includes('jeddah-picks/'), 'home calendar links to the isolated full Jeddah picks route');
+check(runtime.includes('jeddah-picks/request/?source=curated-calendar&event='), 'event cards route into the isolated Jeddah picks request flow');
 check(runtime.includes('mealSuggestion') && runtime.includes('formatEventTime'), 'event cards support time-aware meal guidance');
 check(css.includes('.curated-card'), 'Curated Calendar styling is isolated under feature classes');
 check(css.includes('.curated-card__time') && css.includes('.curated-card__meal'), 'shared Curated Calendar styles support time and meal guidance');
 
+check(fullPage.includes('<base href="../">'), 'full Jeddah picks page resolves shared assets from its isolated route');
+check(fullPage.includes('https://aventuraksa.com/jeddah-picks/'), 'full Jeddah picks page owns the clean canonical route');
 check(fullPage.includes('data-curated-mode="all"'), 'full Jeddah picks page renders all curated events in the window');
 check(fullPage.includes('assets/css/jeddah-picks.css'), 'full Jeddah picks page loads its dedicated page stylesheet');
 check(!fullPage.includes('data-event-filter') && !fullPage.includes('curated-filter'), 'full Jeddah picks page has no unnecessary filters');
