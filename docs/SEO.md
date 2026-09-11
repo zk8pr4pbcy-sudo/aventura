@@ -43,6 +43,31 @@ The focused SEO runtime owns metadata that must follow the visitor's active lang
 
 It must never turn a `noindex` route into an indexable page.
 
+### Priority commercial metadata
+
+The five commercially important pages below have a focused Arabic, English and Spanish search-intent map in `PRIORITY_PAGE_METADATA` inside `assets/js/seo-runtime.js`:
+
+- `/experiences.html`
+- `/experience-historic-jeddah.html`
+- `/experience-sea.html`
+- `/corporate.html`
+- `/services.html`
+
+The purpose is not keyword stuffing. It is to make each result describe the concrete service and location people are likely to search for, while the visible page copy can keep Aventura's editorial tone.
+
+Examples of the intent covered include private tours and experiences in Jeddah, a private Historic Jeddah walk with a licensed guide, private Red Sea boat/yacht experiences from Jeddah, corporate events and delegation hosting in Jeddah, and concierge/destination services in Jeddah.
+
+For these pages:
+
+- keep titles specific, natural and distinct from each other;
+- keep descriptions factual and aligned with services actually offered;
+- keep the Arabic static `<head>` useful as the default crawl baseline;
+- let the focused runtime supply the equivalent English and Spanish metadata after the active language is known;
+- do not add a `<meta name="keywords">` tag; it is not part of Aventura's SEO strategy;
+- do not force exact-match keywords into the H1 when the existing H1 is clearer for users. Search intent should be supported by the title, description, headings and actual page content together.
+
+Use Search Console query data after enough impressions accumulate to decide whether titles or on-page headings need another change. Do not rewrite copy solely around guessed search phrases.
+
 ### `assets/js/ga4.js` does not own SEO
 
 `ga4.js` keeps analytics, analytics consent and existing launch compatibility behavior. It only bootstraps `seo-runtime.js` so the phase-one change does not require touching every HTML entry point at once.
@@ -97,6 +122,8 @@ node scripts/validate-site.mjs
 Also allow the normal repository CI and browser/maintenance checks to complete.
 
 For changes to a title, description, canonical, language behavior or structured data, inspect at least the homepage, one experience page, `contact.html`, `404.html` and `event-request/`.
+
+For the priority commercial pages, also verify the Arabic, English and Spanish title/description after changing language and make sure each page still has one useful H1 without keyword repetition.
 
 ## After deployment
 
