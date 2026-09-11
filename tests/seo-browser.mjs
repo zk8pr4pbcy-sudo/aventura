@@ -101,7 +101,7 @@ try {
 
   for (const priority of priorityPages) {
     for (const lang of ["ar", "en", "es"]) {
-      const suffix = lang === "ar" ? "" : `?lang=${lang}`;
+      const suffix = `?lang=${lang}`;
       await page.goto(`${baseUrl}${priority.path}${suffix}`, { waitUntil: "domcontentloaded" });
       await waitForSeo();
       await page.waitForFunction((expected) => document.documentElement.lang === expected.lang && document.title === expected.title, {
@@ -113,6 +113,9 @@ try {
       check(meta.description.length >= 80, `${priority.path} ${lang}: priority meta description is substantive`);
       check(meta.robots.startsWith("index, follow"), `${priority.path} ${lang}: priority page remains indexable`);
       check(meta.hreflangs.length === 4, `${priority.path} ${lang}: priority page keeps all hreflang alternates`);
+      if (lang === "ar") {
+        check(!meta.canonical.includes("?lang="), `${priority.path} ar: default canonical stays query-free`);
+      }
     }
   }
 
