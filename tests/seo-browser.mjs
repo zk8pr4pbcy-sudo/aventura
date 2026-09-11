@@ -15,7 +15,9 @@ function check(condition, message) {
 }
 
 async function waitForSeo() {
-  await page.waitForFunction(() => Boolean(window.AVENTURA_SEO && window.AVENTURA_SEO.version === "1.1.0"));
+  await page.waitForFunction(() => Boolean(
+    window.AVENTURA_SEO && typeof window.AVENTURA_SEO.refresh === "function"
+  ));
   await page.waitForTimeout(50);
 }
 
