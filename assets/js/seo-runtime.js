@@ -149,8 +149,6 @@
       document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (node) {
         node.remove();
       });
-      // Transactional utility routes keep one stable canonical that never
-      // inherits tracking or language query parameters. 404 intentionally has none.
       if (canonical && page === "event-request") canonical.href = SITE_ORIGIN + path;
       return canonical ? canonical.href : "";
     }
@@ -219,8 +217,6 @@
     upsertMeta('meta[name="twitter:title"]', { name: "twitter:title" }, pageTitle);
     upsertMeta('meta[name="twitter:description"]', { name: "twitter:description" }, pageDescription);
 
-    // Static JSON-LD in each HTML document is the single schema source of truth.
-    // Remove the legacy dynamic copy if an older cached runtime inserted it first.
     removeLegacyDynamicSchema();
   }
 
@@ -229,7 +225,7 @@
   }
 
   var api = Object.freeze({
-    version: "1.1.0",
+    version: "1.1.1",
     refresh: refresh,
     urlFor: urlFor,
     isNoindexPage: isNoindexPage
@@ -237,7 +233,12 @@
 
   root.AVENTURA_SEO = api;
 
-  document.addEventListener("aventura:language", scheduleRefresh);
+  /*
+   * app.js finishes translating the UI before dispatching aventura:language.
+   * Refresh synchronously on that event so SEO runtime is the final metadata
+   * writer, while app.js remains a compatibility fallback during startup.
+   */
+  document.addEventListener("aventura:language", refresh);
 
   if (document.documentElement && typeof MutationObserver !== "undefined") {
     var languageObserver = new MutationObserver(function (mutations) {
