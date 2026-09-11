@@ -1,40 +1,64 @@
 {
-  "version": "1.0.1",
-  "windowDays": 10,
-  "lastReviewed": "2026-09-10",
+  "version": "1.1.0",
+  "windowDays": 14,
+  "lastReviewed": "2026-09-11",
   "reviewedBy": "Salem",
   "ui": {
     "ar": {
       "eyebrow": "AVENTURA CURATED CALENDAR",
       "title": "مختارات أفنتورا في جدة",
-      "description": "فعاليات مختارة خلال الأيام القادمة، ويمكن لأفنتورا تنسيق تجربة خاصة متكاملة حول كل فعالية.",
+      "description": "فعاليات مختارة خلال الأسبوعين القادمين، ويمكن لأفنتورا تنسيق تجربة خاصة متكاملة حول كل فعالية.",
       "planLabel": "اقتراح أفنتورا",
+      "timeLabel": "وقت الفعالية",
+      "mealLabel": "الوجبة الأنسب",
       "cta": "نسّق تجربتك حول الفعالية",
       "details": "مصدر الفعالية ↗",
+      "viewAll": "عرض جميع المختارات",
       "previous": "الفعالية السابقة",
       "next": "الفعالية التالية",
+      "pageTitle": "مختارات أفنتورا في جدة",
+      "pageDescription": "مختارات منتقاة خلال 14 يومًا في جدة. نعرض فقط الفعاليات التي يمكن بناء تجربة أفنتورا مفيدة حولها.",
+      "pageBack": "← العودة إلى الرئيسية",
+      "pageMetaTitle": "فعاليات مختارة في جدة خلال 14 يومًا | أفنتورا",
+      "pageMetaDescription": "مختارات أفنتورا لفعاليات جدة خلال الأسبوعين القادمين، مع اقتراحات للتنقل والضيافة والوجبات والتجارب المحيطة بكل فعالية.",
       "disclaimer": "أفنتورا جهة مستقلة وليست منظمًا للفعالية أو شريكًا رسميًا أو بائعًا للتذاكر، ما لم يُذكر خلاف ذلك. مواعيد الفعالية والدخول والتذاكر تخضع للجهة المنظمة أو منصة التذاكر."
     },
     "en": {
       "eyebrow": "AVENTURA CURATED CALENDAR",
       "title": "Aventura picks in Jeddah",
-      "description": "A short selection of what is happening next in Jeddah, with a private Aventura experience designed around each event.",
+      "description": "A curated selection for the next two weeks in Jeddah, with a private Aventura experience designed around each event.",
       "planLabel": "Aventura suggests",
+      "timeLabel": "Event time",
+      "mealLabel": "Best meal timing",
       "cta": "Plan your experience around this event",
       "details": "Event source ↗",
+      "viewAll": "View all picks",
       "previous": "Previous event",
       "next": "Next event",
+      "pageTitle": "Aventura picks in Jeddah",
+      "pageDescription": "A curated 14-day selection in Jeddah. We only include events around which Aventura can build a useful guest experience.",
+      "pageBack": "← Back to home",
+      "pageMetaTitle": "Curated Jeddah Events for the Next 14 Days | AVENTURA",
+      "pageMetaDescription": "Aventura's curated Jeddah event selection for the next two weeks, with transport, hospitality, meal timing and experience ideas around each event.",
       "disclaimer": "Aventura is an independent service provider and is not the event organiser, an official partner, or the ticket seller unless explicitly stated otherwise. Event schedules, admission and tickets remain subject to the organiser or ticketing platform."
     },
     "es": {
       "eyebrow": "AVENTURA CURATED CALENDAR",
       "title": "Selección de Aventura en Yeda",
-      "description": "Una selección breve de lo que ocurrirá próximamente en Yeda, con una experiencia privada de Aventura diseñada alrededor de cada evento.",
+      "description": "Una selección para las próximas dos semanas en Yeda, con una experiencia privada de Aventura diseñada alrededor de cada evento.",
       "planLabel": "Aventura propone",
+      "timeLabel": "Horario del evento",
+      "mealLabel": "Mejor momento para la comida",
       "cta": "Organiza tu experiencia alrededor del evento",
       "details": "Fuente del evento ↗",
+      "viewAll": "Ver toda la selección",
       "previous": "Evento anterior",
       "next": "Evento siguiente",
+      "pageTitle": "Selección de Aventura en Yeda",
+      "pageDescription": "Una selección cuidada de 14 días en Yeda. Solo incluimos eventos alrededor de los cuales Aventura puede crear una experiencia útil.",
+      "pageBack": "← Volver al inicio",
+      "pageMetaTitle": "Eventos seleccionados en Yeda para los próximos 14 días | AVENTURA",
+      "pageMetaDescription": "Selección de eventos de Aventura en Yeda para las próximas dos semanas, con ideas de transporte, hospitalidad, comidas y experiencias alrededor de cada evento.",
       "disclaimer": "Aventura es un proveedor de servicios independiente y no es el organizador del evento, un socio oficial ni el vendedor de entradas, salvo que se indique expresamente lo contrario. Los horarios, el acceso y las entradas dependen del organizador o de la plataforma de venta."
     }
   },
@@ -61,9 +85,14 @@
         "es": "Jeddah Superdome"
       },
       "aventuraPlan": {
-        "ar": "استقبال وتنقل خاص للوفد أو التنفيذي، مع إمكانية إضافة مرافق أو مترجم، ثم عشاء أعمال أو تجربة مسائية مختارة في جدة بعد المنتدى.",
-        "en": "Private arrival and transport for executives or delegations, with an optional companion or interpreter, followed by a business dinner or a curated Jeddah evening.",
-        "es": "Recepción y transporte privado para ejecutivos o delegaciones, con acompañante o intérprete opcional, seguido de una cena de negocios o una velada seleccionada en Yeda."
+        "ar": "استقبال وتنقل خاص للوفد أو التنفيذي، مع إمكانية إضافة مرافق أو مترجم، ثم وجبة أعمال أو تجربة مسائية تُرتب وفق جدول يوم الحضور الفعلي.",
+        "en": "Private arrival and transport for executives or delegations, with an optional companion or interpreter, followed by a business meal or curated evening arranged around the selected day's schedule.",
+        "es": "Recepción y transporte privado para ejecutivos o delegaciones, con acompañante o intérprete opcional, seguido de una comida de negocios o una velada seleccionada según el horario del día elegido."
+      },
+      "mealSuggestion": {
+        "ar": "يُحدد الغداء أو العشاء بعد تثبيت جدول يوم الحضور النهائي.",
+        "en": "Lunch or dinner is set after the selected day's final schedule is confirmed.",
+        "es": "El almuerzo o la cena se define tras confirmar el horario final del día elegido."
       },
       "image": "assets/images/event-corporate.webp",
       "imageAlt": {
@@ -79,6 +108,8 @@
       "priority": 2,
       "startDate": "2026-09-15",
       "endDate": "2026-09-17",
+      "startTime": "16:00",
+      "endTime": "22:00",
       "title": {
         "ar": "معرض جدة الدولي للبناء JIBEX 2026",
         "en": "Jeddah International Building Exhibition (JIBEX) 2026",
@@ -95,9 +126,14 @@
         "es": "Jeddah Exhibition & Events Center"
       },
       "aventuraPlan": {
-        "ar": "تنقل خاص إلى المعرض، ثم عشاء أعمال أو جولة قصيرة في جدة التاريخية أو الواجهة البحرية بحسب جدول الضيف ووقت خروجه.",
-        "en": "Private transport to the exhibition, followed by a business dinner or a short Historic Jeddah or waterfront experience depending on the guest’s schedule.",
-        "es": "Transporte privado a la feria, seguido de una cena de negocios o una breve experiencia en Yeda Histórica o el paseo marítimo según el horario del huésped."
+        "ar": "تنقل خاص إلى المعرض، مع غداء متأخر أو عشاء مبكر قبل الدخول، ثم عودة مرتبة بعد نهاية الزيارة الساعة 10 مساءً.",
+        "en": "Private transport to the exhibition, with a late lunch or early dinner before entry, followed by a coordinated return after the 10 PM closing time.",
+        "es": "Transporte privado a la feria, con almuerzo tardío o cena temprana antes de entrar y regreso coordinado tras el cierre de las 22:00."
+      },
+      "mealSuggestion": {
+        "ar": "غداء متأخر أو عشاء مبكر قبل 4 مساءً؛ لا نعتمد عشاءً رئيسيًا بعد الإغلاق الساعة 10.",
+        "en": "Late lunch or early dinner before 4 PM; we do not plan the main dinner after the 10 PM close.",
+        "es": "Almuerzo tardío o cena temprana antes de las 16:00; evitamos dejar la cena principal para después del cierre a las 22:00."
       },
       "image": "assets/images/hero-jeddah.webp",
       "imageAlt": {
@@ -113,6 +149,9 @@
       "priority": 3,
       "startDate": "2026-09-17",
       "endDate": "2026-09-17",
+      "doorsTime": "20:30",
+      "startTime": "21:30",
+      "endTime": "23:59",
       "title": {
         "ar": "خالد عبدالعزيز — ليلة موسيقية في جدة",
         "en": "Khaled Abdel Aziz — Live in Jeddah",
@@ -124,14 +163,19 @@
         "es": "Música y cultura"
       },
       "location": {
-        "ar": "النادي الأدبي الثقافي، جدة",
-        "en": "Society of Culture and Arts, Jeddah",
-        "es": "Society of Culture and Arts, Yeda"
+        "ar": "جمعية الثقافة والفنون، جدة",
+        "en": "Jeddah Society of Culture and Arts",
+        "es": "Jeddah Society of Culture and Arts"
       },
       "aventuraPlan": {
-        "ar": "جولة خفيفة في جدة التاريخية أو عشاء مبكر، ثم سيارة خاصة إلى الحفل وعودة مرتبة بعد نهاية الأمسية.",
-        "en": "A light Historic Jeddah visit or early dinner, followed by private transport to the concert and a coordinated return after the evening.",
-        "es": "Una visita ligera a Yeda Histórica o una cena temprana, seguida de transporte privado al concierto y regreso coordinado al finalizar la noche."
+        "ar": "جولة خفيفة في جدة التاريخية أو عشاء مبكر، ثم سيارة خاصة إلى الحفل قبل فتح الأبواب وعودة مرتبة بعد منتصف الليل تقريبًا.",
+        "en": "A light Historic Jeddah visit or early dinner, followed by private transport before doors open and a coordinated return around midnight.",
+        "es": "Una visita ligera a Yeda Histórica o una cena temprana, seguida de transporte privado antes de la apertura y regreso coordinado cerca de medianoche."
+      },
+      "mealSuggestion": {
+        "ar": "عشاء مبكر قبل الحفل؛ العرض يبدأ 9:30 مساءً ويستمر حتى قرابة منتصف الليل.",
+        "en": "Early dinner before the concert; the show starts at 9:30 PM and runs to around midnight.",
+        "es": "Cena temprana antes del concierto; el espectáculo empieza a las 21:30 y termina cerca de medianoche."
       },
       "image": "assets/images/event-private.webp",
       "imageAlt": {
@@ -147,6 +191,9 @@
       "priority": 4,
       "startDate": "2026-09-19",
       "endDate": "2026-09-19",
+      "doorsTime": "19:00",
+      "startTime": "20:00",
+      "endTime": "22:00",
       "title": {
         "ar": "رشا رزق — الصوت الذهبي لسبيستون",
         "en": "Rasha Rizk — Spacetoon Golden Voice Live",
@@ -163,9 +210,14 @@
         "es": "Abadi Aljohar Arena, Yeda"
       },
       "aventuraPlan": {
-        "ar": "عشاء مناسب للعائلة أو المجموعة قبل الحفل، مع تنقل خاص من وإلى الموقع وترتيب التوقيت بحيث تكون الأمسية سهلة من البداية للنهاية.",
-        "en": "A family or group dinner before the concert, with private transport to and from the venue and timing coordinated for an easy evening from start to finish.",
-        "es": "Cena para la familia o el grupo antes del concierto, con transporte privado de ida y vuelta y horarios coordinados para una noche fluida de principio a fin."
+        "ar": "عشاء مبكر مناسب للعائلة أو المجموعة قبل فتح الأبواب، مع تنقل خاص من وإلى الموقع وعودة مرتبة بعد نهاية العرض الساعة 10 مساءً.",
+        "en": "An early family or group dinner before doors open, with private transport to and from the venue and a coordinated return after the 10 PM finish.",
+        "es": "Cena temprana para la familia o el grupo antes de la apertura, con transporte privado de ida y vuelta y regreso coordinado tras el final a las 22:00."
+      },
+      "mealSuggestion": {
+        "ar": "عشاء مبكر قبل 7 مساءً؛ العرض من 8 إلى 10 مساءً.",
+        "en": "Early dinner before 7 PM; the show runs from 8 PM to 10 PM.",
+        "es": "Cena temprana antes de las 19:00; el espectáculo es de 20:00 a 22:00."
       },
       "image": "assets/images/collection.webp",
       "imageAlt": {

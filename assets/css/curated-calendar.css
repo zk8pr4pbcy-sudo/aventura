@@ -197,6 +197,13 @@
   font-size: 0.88rem;
 }
 
+.curated-card__time {
+  margin: -7px 0 16px;
+  color: var(--navy-800);
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
 .curated-card__plan-label {
   display: block;
   margin-bottom: 6px;
@@ -211,6 +218,21 @@
   color: #344553;
   font-size: 0.93rem;
   line-height: 1.7;
+}
+
+.curated-card__meal {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-inline-start: 3px solid var(--gold);
+  border-radius: 10px;
+  background: rgba(229, 206, 157, 0.2);
+  color: #344553;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.curated-card__meal strong {
+  color: var(--gold-dark);
 }
 
 .curated-card__actions {
@@ -255,6 +277,34 @@
 .curated-card__source:focus-visible {
   border-color: var(--gold);
   color: var(--gold-dark);
+}
+
+.curated-calendar__footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.curated-calendar__view-all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 20px;
+  border: 1px solid rgba(229, 206, 157, 0.55);
+  border-radius: 999px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.curated-calendar__view-all:hover,
+.curated-calendar__view-all:focus-visible {
+  border-color: var(--gold-light);
+  background: rgba(189, 152, 88, 0.16);
 }
 
 .curated-calendar__disclaimer {
