@@ -15,7 +15,7 @@ function check(condition, message) {
 }
 
 async function waitForSeo() {
-  await page.waitForFunction(() => Boolean(window.AVENTURA_SEO && window.AVENTURA_SEO.version === "1.0.0"));
+  await page.waitForFunction(() => Boolean(window.AVENTURA_SEO && window.AVENTURA_SEO.version === "1.1.0"));
   await page.waitForTimeout(50);
 }
 
@@ -27,9 +27,53 @@ async function metadataSnapshot() {
     hreflangs: Array.from(document.querySelectorAll('link[rel="alternate"][hreflang]')).map((link) => [link.hreflang, link.href]),
     dynamicSchemaCount: document.querySelectorAll('script[data-aventura-seo-schema]').length,
     staticSchemaCount: document.querySelectorAll('script[type="application/ld+json"]:not([data-aventura-seo-schema])').length,
-    title: document.title
+    title: document.title,
+    description: document.querySelector('meta[name="description"]')?.getAttribute("content") || ""
   }));
 }
+
+const priorityPages = [
+  {
+    path: "/experiences.html",
+    titles: {
+      ar: "تجارب وجولات خاصة في جدة والسعودية | أفنتورا",
+      en: "Private Tours & Experiences in Jeddah | AVENTURA",
+      es: "Tours y experiencias privadas en Yeda | AVENTURA"
+    }
+  },
+  {
+    path: "/experience-historic-jeddah.html",
+    titles: {
+      ar: "جولة خاصة في جدة التاريخية مع مرشد مرخص | أفنتورا",
+      en: "Private Historic Jeddah Tour with Licensed Guide | AVENTURA",
+      es: "Tour privado por la Yeda histórica con guía | AVENTURA"
+    }
+  },
+  {
+    path: "/experience-sea.html",
+    titles: {
+      ar: "رحلات بحرية خاصة في جدة والبحر الأحمر | أفنتورا",
+      en: "Private Red Sea Boat & Yacht Experiences in Jeddah | AVENTURA",
+      es: "Paseos privados en barco por el Mar Rojo en Yeda | AVENTURA"
+    }
+  },
+  {
+    path: "/corporate.html",
+    titles: {
+      ar: "تنظيم فعاليات الشركات واستضافة الوفود في جدة | أفنتورا",
+      en: "Corporate Events & Executive Guest Programs in Jeddah | AVENTURA",
+      es: "Eventos corporativos y programas ejecutivos en Yeda | AVENTURA"
+    }
+  },
+  {
+    path: "/services.html",
+    titles: {
+      ar: "خدمات الضيوف والكونسيرج وإدارة الوجهات في جدة | أفنتورا",
+      en: "Guest, Concierge & Destination Services in Jeddah | AVENTURA",
+      es: "Servicios de concierge y gestión de destino en Yeda | AVENTURA"
+    }
+  }
+];
 
 try {
   await page.goto(`${baseUrl}/`, { waitUntil: "domcontentloaded" });
@@ -52,6 +96,23 @@ try {
   check(meta.hreflangs.some(([lang, href]) => lang === "ar" && !href.includes("?lang=")), "English page points hreflang ar to the default URL");
   check(meta.hreflangs.some(([lang, href]) => lang === "es" && href.includes("?lang=es")), "English page retains Spanish alternate URL");
   check(meta.dynamicSchemaCount === 0, "English runtime does not add duplicate JSON-LD");
+
+  for (const priority of priorityPages) {
+    for (const lang of ["ar", "en", "es"]) {
+      const suffix = lang === "ar" ? "" : `?lang=${lang}`;
+      await page.goto(`${baseUrl}${priority.path}${suffix}`, { waitUntil: "domcontentloaded" });
+      await waitForSeo();
+      await page.waitForFunction((expected) => document.documentElement.lang === expected.lang && document.title === expected.title, {
+        lang,
+        title: priority.titles[lang]
+      });
+      meta = await metadataSnapshot();
+      check(meta.title === priority.titles[lang], `${priority.path} ${lang}: priority search title is active`);
+      check(meta.description.length >= 80, `${priority.path} ${lang}: priority meta description is substantive`);
+      check(meta.robots.startsWith("index, follow"), `${priority.path} ${lang}: priority page remains indexable`);
+      check(meta.hreflangs.length === 4, `${priority.path} ${lang}: priority page keeps all hreflang alternates`);
+    }
+  }
 
   await page.goto(`${baseUrl}/404.html`, { waitUntil: "domcontentloaded" });
   await waitForSeo();
