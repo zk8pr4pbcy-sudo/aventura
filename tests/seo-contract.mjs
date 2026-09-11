@@ -47,6 +47,23 @@ check(seo.includes("noindex ? NOINDEX_ROBOTS : INDEX_ROBOTS"), "SEO runtime pres
 check(seo.includes('script[data-aventura-seo-schema]') && seo.includes("node.remove()"), "SEO runtime removes any legacy dynamic schema copy");
 check(!seo.includes('schema.textContent = JSON.stringify'), "SEO runtime does not create a second JSON-LD graph");
 
+check(seo.includes("PRIORITY_PAGE_METADATA"), "SEO runtime owns focused metadata for priority commercial pages");
+for (const priorityPath of [
+  "/experiences.html",
+  "/experience-historic-jeddah.html",
+  "/experience-sea.html",
+  "/corporate.html",
+  "/services.html"
+]) {
+  check(seo.includes(`\"${priorityPath}\"`), `priority SEO metadata includes ${priorityPath}`);
+}
+check(seo.includes("تجارب وجولات خاصة في جدة والسعودية | أفنتورا"), "Arabic experience-index title targets useful search intent");
+check(seo.includes("Private Tours & Experiences in Jeddah | AVENTURA"), "English experience-index title targets useful search intent");
+check(seo.includes("Tours y experiencias privadas en Yeda | AVENTURA"), "Spanish experience-index title targets useful search intent");
+check(seo.includes("جولة خاصة في جدة التاريخية مع مرشد مرخص | أفنتورا"), "Historic Jeddah metadata targets private licensed-guided search intent");
+check(seo.includes("رحلات بحرية خاصة في جدة والبحر الأحمر | أفنتورا"), "Red Sea metadata targets private Jeddah sea-trip search intent");
+check(!seo.includes('name="keywords"'), "priority SEO does not add obsolete meta keywords");
+
 check(/<meta\s+name="robots"\s+content="noindex, follow"/i.test(notFound), "404 remains statically noindex");
 check(/<meta\s+name="robots"\s+content="noindex, follow"/i.test(eventRequest), "event request remains statically noindex");
 
