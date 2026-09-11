@@ -214,7 +214,7 @@
     var cta = document.createElement("a");
     cta.className = "curated-card__cta";
     cta.textContent = ui.cta;
-    cta.href = "jeddah-picks-request.html?source=curated-calendar&event=" + encodeURIComponent(event.id) + "&lang=" + encodeURIComponent(lang);
+    cta.href = "jeddah-picks/request/?source=curated-calendar&event=" + encodeURIComponent(event.id) + "&lang=" + encodeURIComponent(lang);
     actions.appendChild(cta);
 
     var source = document.createElement("a");
@@ -242,7 +242,7 @@
     var link = existing || document.createElement("a");
     link.className = "curated-calendar__view-all";
     link.setAttribute("data-curated-view-all", "");
-    link.href = "jeddah-picks.html" + (lang === "ar" ? "" : "?lang=" + encodeURIComponent(lang));
+    link.href = "jeddah-picks/" + (lang === "ar" ? "" : "?lang=" + encodeURIComponent(lang));
     link.textContent = ui.viewAll || "View all picks";
     if (!existing) {
       var disclaimer = section.querySelector(".curated-calendar__disclaimer");
