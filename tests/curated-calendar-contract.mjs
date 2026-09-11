@@ -13,9 +13,11 @@ function check(condition, message) {
 }
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const fullPage = fs.readFileSync(path.join(root, 'jeddah-picks.html'), 'utf8');
 const app = fs.readFileSync(path.join(root, 'assets/js/app.js'), 'utf8');
 const runtime = fs.readFileSync(path.join(root, 'assets/js/curated-calendar.js'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'assets/css/curated-calendar.css'), 'utf8');
+const pageCss = fs.readFileSync(path.join(root, 'assets/css/jeddah-picks.css'), 'utf8');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'data/curated-events.json'), 'utf8'));
 
 check(index.includes('data-curated-calendar'), 'home page contains the Curated Calendar section');
@@ -28,16 +30,29 @@ const experiencesPosition = index.indexOf('id="experiences"');
 check(introPosition !== -1 && calendarPosition > introPosition && calendarPosition < experiencesPosition, 'Curated Calendar sits after the Aventura approach and before core experiences');
 
 check(!app.includes('curated-calendar') && !app.includes('CURATED_CALENDAR'), 'app.js does not own Curated Calendar behavior');
+check(runtime.includes('HOME_LIMIT = 4'), 'home page editorial selection is capped at four events');
+check(runtime.includes('allVisible.slice(0, HOME_LIMIT)'), 'featured mode renders only the four priority events');
 check(runtime.includes('windowDays') || runtime.includes('filterEvents'), 'Curated Calendar runtime owns its date-window behavior');
 check(runtime.includes('Asia/Riyadh'), 'Curated Calendar uses the Saudi timezone');
+check(runtime.includes('jeddah-picks.html'), 'home calendar links to the full Jeddah picks page');
+check(runtime.includes('jeddah-picks-request.html?source=curated-calendar&event='), 'event cards route into the isolated Jeddah picks request flow');
+check(runtime.includes('mealSuggestion') && runtime.includes('formatEventTime'), 'event cards support time-aware meal guidance');
 check(css.includes('.curated-card'), 'Curated Calendar styling is isolated under feature classes');
+check(css.includes('.curated-card__time') && css.includes('.curated-card__meal'), 'shared Curated Calendar styles support time and meal guidance');
 
-check(data.windowDays === 10, 'editorial window is exactly 10 days');
+check(fullPage.includes('data-curated-mode="all"'), 'full Jeddah picks page renders all curated events in the window');
+check(fullPage.includes('assets/css/jeddah-picks.css'), 'full Jeddah picks page loads its dedicated page stylesheet');
+check(!fullPage.includes('data-event-filter') && !fullPage.includes('curated-filter'), 'full Jeddah picks page has no unnecessary filters');
+check(pageCss.includes('.curated-calendar--page'), 'full-page layout remains isolated under Jeddah picks page classes');
+
+check(data.windowDays === 14, 'editorial window is exactly 14 days');
 check(Array.isArray(data.events) && data.events.length >= 1, 'event data contains curated entries');
 
 for (const lang of ['ar', 'en', 'es']) {
   check(Boolean(data.ui?.[lang]?.title), `section UI includes ${lang} title`);
   check(Boolean(data.ui?.[lang]?.cta), `section UI includes ${lang} CTA`);
+  check(Boolean(data.ui?.[lang]?.viewAll), `section UI includes ${lang} full-page CTA`);
+  check(Boolean(data.ui?.[lang]?.pageTitle), `full page includes ${lang} title copy`);
 }
 
 for (const event of data.events || []) {
@@ -46,12 +61,16 @@ for (const event of data.events || []) {
   check(event.endDate >= event.startDate, `${event.id}: end date does not precede start date`);
   check(/^https:\/\//.test(event.sourceUrl || ''), `${event.id}: source uses HTTPS`);
   check(String(event.image || '').startsWith('assets/images/'), `${event.id}: image stays on the Aventura origin`);
+  if (event.startTime) check(/^\d{2}:\d{2}$/.test(event.startTime), `${event.id}: valid start time`);
+  if (event.endTime) check(/^\d{2}:\d{2}$/.test(event.endTime), `${event.id}: valid end time`);
+  if (event.doorsTime) check(/^\d{2}:\d{2}$/.test(event.doorsTime), `${event.id}: valid doors time`);
   for (const lang of ['ar', 'en', 'es']) {
     check(Boolean(event.title?.[lang]), `${event.id}: ${lang} title exists`);
     check(Boolean(event.location?.[lang]), `${event.id}: ${lang} location exists`);
     check(Boolean(event.category?.[lang]), `${event.id}: ${lang} category exists`);
     check(Boolean(event.aventuraPlan?.[lang]), `${event.id}: ${lang} Aventura plan exists`);
     check(Boolean(event.imageAlt?.[lang]), `${event.id}: ${lang} accessible image text exists`);
+    check(Boolean(event.mealSuggestion?.[lang]), `${event.id}: ${lang} meal timing guidance exists`);
   }
 }
 
@@ -62,12 +81,13 @@ if (api) {
   const sample = [
     { id: 'past', active: true, startDate: '2026-09-01', endDate: '2026-09-09', priority: 1 },
     { id: 'inside', active: true, startDate: '2026-09-15', endDate: '2026-09-15', priority: 2 },
-    { id: 'boundary', active: true, startDate: '2026-09-20', endDate: '2026-09-20', priority: 3 },
-    { id: 'outside', active: true, startDate: '2026-09-21', endDate: '2026-09-21', priority: 4 },
+    { id: 'boundary', active: true, startDate: '2026-09-23', endDate: '2026-09-23', priority: 3 },
+    { id: 'outside', active: true, startDate: '2026-09-24', endDate: '2026-09-24', priority: 4 },
     { id: 'disabled', active: false, startDate: '2026-09-12', endDate: '2026-09-12', priority: 5 }
   ];
-  const visible = api.filterEvents(sample, '2026-09-10', 10).map((event) => event.id);
-  check(JSON.stringify(visible) === JSON.stringify(['inside', 'boundary']), 'date filter includes only the current 10-day Saudi window');
+  const visible = api.filterEvents(sample, '2026-09-10', 14).map((event) => event.id);
+  check(JSON.stringify(visible) === JSON.stringify(['inside', 'boundary']), 'date filter includes only the current 14-day Saudi window');
+  check(Boolean(api.formatEventTime({ startTime: '20:00', endTime: '22:00' }, 'ar')), 'event time formatting works for time-aware planning');
 }
 
 if (failures) {
