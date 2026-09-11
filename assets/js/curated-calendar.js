@@ -5,6 +5,7 @@
   var LANGUAGE_CODES = ["ar", "en", "es"];
   var LOCALES = { ar: "ar-SA", en: "en-GB", es: "es-ES" };
   var SAUDI_TIME_ZONE = "Asia/Riyadh";
+  var HOME_LIMIT = 4;
 
   function normalizeLanguage(value) {
     var lang = String(value || "").toLowerCase();
@@ -38,7 +39,8 @@
 
   function filterEvents(events, today, windowDays) {
     var start = today || saudiToday();
-    var end = addDays(start, Number(windowDays || 10));
+    var days = Number(windowDays || 14);
+    var end = addDays(start, Math.max(0, days - 1));
     return (events || [])
       .filter(function (event) {
         if (!event || event.active === false || !event.startDate || !event.endDate) return false;
@@ -52,9 +54,7 @@
   }
 
   function localized(value, lang) {
-    if (value && typeof value === "object") {
-      return value[lang] || value.ar || value.en || value.es || "";
-    }
+    if (value && typeof value === "object") return value[lang] || value.ar || value.en || value.es || "";
     return String(value || "");
   }
 
@@ -86,6 +86,32 @@
       new Intl.DateTimeFormat(locale, { day: "numeric", month: "short", timeZone: "UTC" }).format(end);
   }
 
+  function formatClock(time, lang) {
+    if (!/^\d{2}:\d{2}$/.test(String(time || ""))) return "";
+    var parts = String(time).split(":");
+    var date = new Date(Date.UTC(2026, 0, 1, Number(parts[0]), Number(parts[1])));
+    return new Intl.DateTimeFormat(LOCALES[lang] || LOCALES.ar, {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+      timeZone: "UTC"
+    }).format(date);
+  }
+
+  function formatEventTime(event, lang) {
+    var start = formatClock(event.startTime, lang);
+    var end = formatClock(event.endTime, lang);
+    var doors = formatClock(event.doorsTime, lang);
+    var ui = event.timeLabels && event.timeLabels[lang] ? event.timeLabels[lang] : null;
+    if (ui) return ui;
+    var value = start && end ? start + " – " + end : (start || end);
+    if (doors) {
+      var doorsLabel = lang === "ar" ? "فتح الأبواب" : (lang === "es" ? "Apertura" : "Doors");
+      value = doorsLabel + " " + doors + (value ? " · " + value : "");
+    }
+    return value;
+  }
+
   function setUiText(section, ui, lang) {
     section.querySelectorAll("[data-curated-ui]").forEach(function (element) {
       var key = element.getAttribute("data-curated-ui");
@@ -95,6 +121,25 @@
       var key = element.getAttribute("data-curated-label");
       if (ui && ui[lang] && ui[lang][key]) element.setAttribute("aria-label", ui[lang][key]);
     });
+  }
+
+  function setPageText(data, lang) {
+    if (typeof document === "undefined" || !data.ui || !data.ui[lang]) return;
+    var copy = data.ui[lang];
+    var title = document.querySelector("[data-curated-page-title]");
+    var description = document.querySelector("[data-curated-page-description]");
+    var back = document.querySelector("[data-curated-page-back]");
+    if (title && copy.pageTitle) title.textContent = copy.pageTitle;
+    if (description && copy.pageDescription) description.textContent = copy.pageDescription;
+    if (back && copy.pageBack) {
+      back.textContent = copy.pageBack;
+      back.href = "index.html" + (lang === "ar" ? "" : "?lang=" + encodeURIComponent(lang)) + "#curated-calendar";
+    }
+    if (document.body && document.body.dataset.page === "jeddah-picks") {
+      if (copy.pageMetaTitle) document.title = copy.pageMetaTitle;
+      var meta = document.querySelector('meta[name="description"]');
+      if (meta && copy.pageMetaDescription) meta.setAttribute("content", copy.pageMetaDescription);
+    }
   }
 
   function buildCard(event, data, lang) {
@@ -134,6 +179,14 @@
     location.textContent = "⌖ " + localized(event.location, lang);
     body.appendChild(location);
 
+    var timeText = formatEventTime(event, lang);
+    if (timeText) {
+      var time = document.createElement("p");
+      time.className = "curated-card__time";
+      time.textContent = "◷ " + (ui.timeLabel || "Time") + ": " + timeText;
+      body.appendChild(time);
+    }
+
     var planLabel = document.createElement("span");
     planLabel.className = "curated-card__plan-label";
     planLabel.textContent = ui.planLabel;
@@ -143,6 +196,17 @@
     plan.className = "curated-card__plan";
     plan.textContent = localized(event.aventuraPlan, lang);
     body.appendChild(plan);
+
+    var mealText = localized(event.mealSuggestion, lang);
+    if (mealText) {
+      var meal = document.createElement("p");
+      meal.className = "curated-card__meal";
+      var mealStrong = document.createElement("strong");
+      mealStrong.textContent = (ui.mealLabel || "Meal") + ": ";
+      meal.appendChild(mealStrong);
+      meal.appendChild(document.createTextNode(mealText));
+      body.appendChild(meal);
+    }
 
     var actions = document.createElement("div");
     actions.className = "curated-card__actions";
@@ -167,11 +231,38 @@
     return article;
   }
 
+  function ensureViewAll(section, data, lang) {
+    var mode = section.getAttribute("data-curated-mode") || "featured";
+    var existing = section.querySelector("[data-curated-view-all]");
+    if (mode === "all") {
+      if (existing) existing.remove();
+      return;
+    }
+    var ui = data.ui[lang] || data.ui.ar;
+    var link = existing || document.createElement("a");
+    link.className = "curated-calendar__view-all";
+    link.setAttribute("data-curated-view-all", "");
+    link.href = "jeddah-picks.html" + (lang === "ar" ? "" : "?lang=" + encodeURIComponent(lang));
+    link.textContent = ui.viewAll || "View all picks";
+    if (!existing) {
+      var disclaimer = section.querySelector(".curated-calendar__disclaimer");
+      var footer = document.createElement("div");
+      footer.className = "curated-calendar__footer";
+      footer.appendChild(link);
+      if (disclaimer && disclaimer.parentNode) disclaimer.parentNode.insertBefore(footer, disclaimer);
+      else section.querySelector(".container").appendChild(footer);
+    }
+  }
+
   function render(section, data) {
     var lang = currentLanguage();
     var track = section.querySelector("[data-curated-track]");
-    var visible = filterEvents(data.events, saudiToday(), data.windowDays || 10);
+    var allVisible = filterEvents(data.events, saudiToday(), data.windowDays || 14);
+    var mode = section.getAttribute("data-curated-mode") || "featured";
+    var visible = mode === "all" ? allVisible : allVisible.slice(0, HOME_LIMIT);
     setUiText(section, data.ui, lang);
+    setPageText(data, lang);
+    ensureViewAll(section, data, lang);
     track.replaceChildren();
 
     if (!visible.length) {
@@ -214,9 +305,7 @@
       wireControls(section);
 
       var observer = new MutationObserver(function (mutations) {
-        if (mutations.some(function (mutation) { return mutation.attributeName === "lang"; })) {
-          render(section, data);
-        }
+        if (mutations.some(function (mutation) { return mutation.attributeName === "lang"; })) render(section, data);
       });
       observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
     } catch (error) {
@@ -226,11 +315,12 @@
   }
 
   var api = {
-    version: "1.1.1",
+    version: "1.2.0",
     saudiToday: saudiToday,
     addDays: addDays,
     filterEvents: filterEvents,
-    formatDate: formatDate
+    formatDate: formatDate,
+    formatEventTime: formatEventTime
   };
 
   root.AVENTURA_CURATED_CALENDAR = Object.freeze(api);
