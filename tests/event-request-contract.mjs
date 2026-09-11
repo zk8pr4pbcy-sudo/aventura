@@ -16,7 +16,7 @@ const legacyPage = fs.readFileSync(path.join(root, 'event-request', 'index.html'
 const legacyCss = fs.readFileSync(path.join(root, 'assets/css/event-request.css'), 'utf8');
 const legacyRuntime = fs.readFileSync(path.join(root, 'assets/js/event-request.js'), 'utf8');
 const calendarRuntime = fs.readFileSync(path.join(root, 'assets/js/curated-calendar.js'), 'utf8');
-const requestPage = fs.readFileSync(path.join(root, 'jeddah-picks-request.html'), 'utf8');
+const requestPage = fs.readFileSync(path.join(root, 'jeddah-picks', 'request', 'index.html'), 'utf8');
 const requestCss = fs.readFileSync(path.join(root, 'assets/css/jeddah-picks-request.css'), 'utf8');
 const requestRuntime = fs.readFileSync(path.join(root, 'assets/js/jeddah-picks-request.js'), 'utf8');
 const contactPage = fs.readFileSync(path.join(root, 'contact.html'), 'utf8');
@@ -27,9 +27,11 @@ check(legacyCss.includes('.event-request-shell'), 'legacy event request styling 
 check(legacyRuntime.includes('data/curated-events.json'), 'legacy event request still reads the shared event data source');
 
 check(requestPage.includes('data-jpr-form'), 'new Jeddah picks request page contains its own form');
+check(requestPage.includes('<base href="../../">'), 'new request route resolves shared assets from its isolated nested path');
 check(requestPage.includes('assets/css/jeddah-picks-request.css'), 'new request page loads its isolated stylesheet');
 check(requestPage.includes('assets/js/jeddah-picks-request.js'), 'new request page loads its isolated runtime');
 check(requestPage.includes('name="robots" content="noindex, follow"'), 'new request utility remains noindex');
+check(requestPage.includes('https://aventuraksa.com/jeddah-picks/request/'), 'new request route owns a stable nested canonical');
 check(requestPage.includes('name="attendance_date"'), 'new request keeps attendance date as controlled submitted data');
 check(requestPage.includes('data-jpr-date-control'), 'new request owns a dedicated event-date control');
 check(requestPage.includes('data-jpr-services'), 'new request contains service selection');
@@ -43,7 +45,7 @@ for (const forbidden of ['contact-wizard.js', 'contact-request-data.js', 'contac
 
 check(!contactPage.includes('jeddah-picks-request.js'), 'main Aventura contact page remains independent from Jeddah picks request runtime');
 check(!contactPage.includes('data-jpr-form'), 'main Aventura contact form remains structurally independent');
-check(calendarRuntime.includes('jeddah-picks-request.html?source=curated-calendar&event='), 'Curated Calendar CTA routes to the isolated Jeddah picks request page');
+check(calendarRuntime.includes('jeddah-picks/request/?source=curated-calendar&event='), 'Curated Calendar CTA routes to the isolated nested Jeddah picks request page');
 check(!calendarRuntime.includes('contact.html?source=curated-calendar'), 'Curated Calendar does not route event requests into the main contact form');
 check(requestRuntime.includes('data/curated-events.json'), 'new request reads the shared curated event data source');
 check(requestRuntime.includes('https://formsubmit.co/ajax/contact@aventuraksa.com'), 'new request owns its FormSubmit transport endpoint');
