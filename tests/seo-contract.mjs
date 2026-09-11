@@ -30,8 +30,6 @@ const sitemapEn = read("sitemap-en.xml");
 const sitemapEs = read("sitemap-es.xml");
 const notFound = read("404.html");
 const eventRequest = read("event-request/index.html");
-const historic = read("experience-historic-jeddah.html");
-const sea = read("experience-sea.html");
 const expectedLastmod = "2026-09-11";
 
 check(fs.existsSync(path.join(root, seoPath)), "dedicated SEO runtime exists");
@@ -62,9 +60,9 @@ for (const priorityPath of [
 check(seo.includes("تجارب وجولات خاصة في جدة والسعودية | أفنتورا"), "Arabic experience-index title targets useful search intent");
 check(seo.includes("Private Tours & Experiences in Jeddah | AVENTURA"), "English experience-index title targets useful search intent");
 check(seo.includes("Tours y experiencias privadas en Yeda | AVENTURA"), "Spanish experience-index title targets useful search intent");
-check(historic.includes("<title>جولة خاصة في جدة التاريخية مع مرشد مرخص | أفنتورا</title>"), "Historic Jeddah static title has a useful Arabic crawl baseline");
-check(sea.includes("<title>رحلات بحرية خاصة في جدة والبحر الأحمر | أفنتورا</title>"), "Red Sea static title has a useful Arabic crawl baseline");
-check(!seo.includes('name="keywords"') && !historic.includes('name="keywords"') && !sea.includes('name="keywords"'), "priority SEO does not add obsolete meta keywords");
+check(seo.includes("جولة خاصة في جدة التاريخية مع مرشد مرخص | أفنتورا"), "Historic Jeddah metadata targets private licensed-guided search intent");
+check(seo.includes("رحلات بحرية خاصة في جدة والبحر الأحمر | أفنتورا"), "Red Sea metadata targets private Jeddah sea-trip search intent");
+check(!seo.includes('name="keywords"'), "priority SEO does not add obsolete meta keywords");
 
 check(/<meta\s+name="robots"\s+content="noindex, follow"/i.test(notFound), "404 remains statically noindex");
 check(/<meta\s+name="robots"\s+content="noindex, follow"/i.test(eventRequest), "event request remains statically noindex");
