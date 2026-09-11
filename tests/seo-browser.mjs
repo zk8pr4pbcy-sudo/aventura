@@ -119,6 +119,23 @@ try {
     }
   }
 
+  // Exercise the real in-page language controls on a priority commercial page.
+  // app.js translates the interface first; seo-runtime must remain the final
+  // authority for search metadata after each language event.
+  const switchPage = priorityPages[0];
+  await page.goto(`${baseUrl}${switchPage.path}?lang=ar`, { waitUntil: "domcontentloaded" });
+  await waitForSeo();
+  for (const lang of ["en", "es", "ar"]) {
+    await page.click(`[data-language="${lang}"]`);
+    await page.waitForFunction((expected) => document.documentElement.lang === expected.lang && document.title === expected.title, {
+      lang,
+      title: switchPage.titles[lang]
+    });
+    meta = await metadataSnapshot();
+    check(meta.title === switchPage.titles[lang], `${switchPage.path} live switch ${lang}: priority title remains authoritative`);
+    check(lang === "ar" ? !meta.canonical.includes("?lang=") : meta.canonical.endsWith(`?lang=${lang}`), `${switchPage.path} live switch ${lang}: canonical follows active language`);
+  }
+
   await page.goto(`${baseUrl}/404.html`, { waitUntil: "domcontentloaded" });
   await waitForSeo();
   meta = await metadataSnapshot();
