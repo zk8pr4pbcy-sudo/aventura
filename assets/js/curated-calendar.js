@@ -3,7 +3,11 @@
 
   var DATA_URL = "data/curated-events.json";
   var LANGUAGE_CODES = ["ar", "en", "es"];
-  var LOCALES = { ar: "ar-SA", en: "en-GB", es: "es-ES" };
+  var LOCALES = {
+    ar: "ar-SA-u-ca-gregory",
+    en: "en-GB-u-ca-gregory",
+    es: "es-ES-u-ca-gregory"
+  };
   var SAUDI_TIME_ZONE = "Asia/Riyadh";
   var HOME_LIMIT = 4;
 
@@ -68,6 +72,7 @@
     var end = dateObject(event.endDate);
     var sameDay = event.startDate === event.endDate;
     var startFormatter = new Intl.DateTimeFormat(locale, {
+      calendar: "gregory",
       day: "numeric",
       month: sameDay ? "short" : undefined,
       timeZone: "UTC"
@@ -76,14 +81,26 @@
 
     var sameMonth = event.startDate.slice(0, 7) === event.endDate.slice(0, 7);
     if (sameMonth) {
-      var dayFormatter = new Intl.DateTimeFormat(locale, { day: "numeric", timeZone: "UTC" });
-      var monthFormatter = new Intl.DateTimeFormat(locale, { month: "short", timeZone: "UTC" });
+      var dayFormatter = new Intl.DateTimeFormat(locale, {
+        calendar: "gregory",
+        day: "numeric",
+        timeZone: "UTC"
+      });
+      var monthFormatter = new Intl.DateTimeFormat(locale, {
+        calendar: "gregory",
+        month: "short",
+        timeZone: "UTC"
+      });
       return dayFormatter.format(start) + "–" + dayFormatter.format(end) + " " + monthFormatter.format(end);
     }
 
-    return new Intl.DateTimeFormat(locale, { day: "numeric", month: "short", timeZone: "UTC" }).format(start) +
-      " – " +
-      new Intl.DateTimeFormat(locale, { day: "numeric", month: "short", timeZone: "UTC" }).format(end);
+    var rangeFormatter = new Intl.DateTimeFormat(locale, {
+      calendar: "gregory",
+      day: "numeric",
+      month: "short",
+      timeZone: "UTC"
+    });
+    return rangeFormatter.format(start) + " – " + rangeFormatter.format(end);
   }
 
   function formatClock(time, lang) {
@@ -197,17 +214,6 @@
     plan.textContent = localized(event.aventuraPlan, lang);
     body.appendChild(plan);
 
-    var mealText = localized(event.mealSuggestion, lang);
-    if (mealText) {
-      var meal = document.createElement("p");
-      meal.className = "curated-card__meal";
-      var mealStrong = document.createElement("strong");
-      mealStrong.textContent = (ui.mealLabel || "Meal") + ": ";
-      meal.appendChild(mealStrong);
-      meal.appendChild(document.createTextNode(mealText));
-      body.appendChild(meal);
-    }
-
     var actions = document.createElement("div");
     actions.className = "curated-card__actions";
 
@@ -315,7 +321,7 @@
   }
 
   var api = {
-    version: "1.2.0",
+    version: "1.3.0",
     saudiToday: saudiToday,
     addDays: addDays,
     filterEvents: filterEvents,
