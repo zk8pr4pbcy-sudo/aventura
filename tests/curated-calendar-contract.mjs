@@ -34,11 +34,13 @@ check(runtime.includes('HOME_LIMIT = 4'), 'home page editorial selection is capp
 check(runtime.includes('allVisible.slice(0, HOME_LIMIT)'), 'featured mode renders only the four priority events');
 check(runtime.includes('windowDays') || runtime.includes('filterEvents'), 'Curated Calendar runtime owns its date-window behavior');
 check(runtime.includes('Asia/Riyadh'), 'Curated Calendar uses the Saudi timezone');
+check(runtime.includes('ca-gregory') && runtime.includes('calendar: "gregory"'), 'Curated Calendar explicitly renders Gregorian dates in every language');
 check(runtime.includes('jeddah-picks/'), 'home calendar links to the isolated full Jeddah picks route');
 check(runtime.includes('jeddah-picks/request/?source=curated-calendar&event='), 'event cards route into the isolated Jeddah picks request flow');
-check(runtime.includes('mealSuggestion') && runtime.includes('formatEventTime'), 'event cards support time-aware meal guidance');
+check(runtime.includes('formatEventTime'), 'event cards preserve event-time guidance');
+check(!runtime.includes('mealSuggestion'), 'event cards do not render a separate meal recommendation block');
 check(css.includes('.curated-card'), 'Curated Calendar styling is isolated under feature classes');
-check(css.includes('.curated-card__time') && css.includes('.curated-card__meal'), 'shared Curated Calendar styles support time and meal guidance');
+check(css.includes('.curated-card__time'), 'shared Curated Calendar styles support event timing');
 
 check(fullPage.includes('<base href="../">'), 'full Jeddah picks page resolves shared assets from its isolated route');
 check(fullPage.includes('https://aventuraksa.com/jeddah-picks/'), 'full Jeddah picks page owns the clean canonical route');
@@ -55,6 +57,7 @@ for (const lang of ['ar', 'en', 'es']) {
   check(Boolean(data.ui?.[lang]?.cta), `section UI includes ${lang} CTA`);
   check(Boolean(data.ui?.[lang]?.viewAll), `section UI includes ${lang} full-page CTA`);
   check(Boolean(data.ui?.[lang]?.pageTitle), `full page includes ${lang} title copy`);
+  check(Boolean(data.ui?.[lang]?.planLabel), `flexible-options label exists in ${lang}`);
 }
 
 for (const event of data.events || []) {
@@ -66,13 +69,13 @@ for (const event of data.events || []) {
   if (event.startTime) check(/^\d{2}:\d{2}$/.test(event.startTime), `${event.id}: valid start time`);
   if (event.endTime) check(/^\d{2}:\d{2}$/.test(event.endTime), `${event.id}: valid end time`);
   if (event.doorsTime) check(/^\d{2}:\d{2}$/.test(event.doorsTime), `${event.id}: valid doors time`);
+  check(!Object.prototype.hasOwnProperty.call(event, 'mealSuggestion'), `${event.id}: separate meal recommendation is removed`);
   for (const lang of ['ar', 'en', 'es']) {
     check(Boolean(event.title?.[lang]), `${event.id}: ${lang} title exists`);
     check(Boolean(event.location?.[lang]), `${event.id}: ${lang} location exists`);
     check(Boolean(event.category?.[lang]), `${event.id}: ${lang} category exists`);
-    check(Boolean(event.aventuraPlan?.[lang]), `${event.id}: ${lang} Aventura plan exists`);
+    check(Boolean(event.aventuraPlan?.[lang]), `${event.id}: ${lang} flexible options exist`);
     check(Boolean(event.imageAlt?.[lang]), `${event.id}: ${lang} accessible image text exists`);
-    check(Boolean(event.mealSuggestion?.[lang]), `${event.id}: ${lang} meal timing guidance exists`);
   }
 }
 
