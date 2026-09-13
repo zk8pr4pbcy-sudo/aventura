@@ -92,7 +92,35 @@
         "en": "Aventura corporate event hospitality in Jeddah",
         "es": "Hospitalidad corporativa de Aventura en Yeda"
       },
-      "sourceUrl": "https://www.ksa-sif.com/jeddah/"
+      "sourceUrl": "https://www.ksa-sif.com/jeddah/",
+      "startTime": "09:00",
+      "endTime": "19:00",
+      "audience": {
+        "ar": "الشركات والمستثمرون وصناع القرار والتنفيذيون والوفود المهنية",
+        "en": "Companies, investors, decision-makers, executives and professional delegations",
+        "es": "Empresas, inversores, responsables de decisión, ejecutivos y delegaciones profesionales"
+      },
+      "ticketing": {
+        "status": "registration_open",
+        "ar": "التسجيل للزيارة متاح عبر الموقع الرسمي للمنتدى.",
+        "en": "Visitor registration is available through the forum’s official website.",
+        "es": "El registro de visitantes está disponible en el sitio web oficial del foro."
+      },
+      "marketingAngle": {
+        "ar": "استضافة وفد أعمال حول يوم المنتدى مع تنقل خاص، اجتماع أو غداء، وجولة قصيرة في جدة التاريخية.",
+        "en": "Host a business delegation around the forum day with private transport, a meeting or meal, and a short Historic Jeddah visit.",
+        "es": "Atender a una delegación empresarial alrededor del foro con transporte privado, reunión o comida y una breve visita a Yeda Histórica."
+      },
+      "whyAventura": {
+        "ar": "أقوى فعالية حالية لأفنتورا من ناحية الشركات والتنفيذيين؛ الموقع الرسمي يذكر أكثر من 150 عارضًا و80 متحدثًا ومتخصصًا.",
+        "en": "The strongest current Aventura fit for corporate and executive guests; the official site lists 150+ exhibitors and 80+ speakers and specialists.",
+        "es": "La opción actual más sólida para huéspedes corporativos y ejecutivos; el sitio oficial anuncia más de 150 expositores y 80 ponentes y especialistas."
+      },
+      "verification": {
+        "checkedOn": "2026-09-13",
+        "status": "confirmed",
+        "notes": "Official SIF site confirms 14–16 Sep 2026, 09:00–19:00, Jeddah Superdome, visitor registration available."
+      }
     },
     {
       "id": "jibex-2026",
@@ -128,7 +156,33 @@
         "en": "Jeddah skyline as context for a business guest experience",
         "es": "Horizonte de Yeda como contexto para una experiencia de negocios"
       },
-      "sourceUrl": "https://jibex-sa.com/secure-your-visit/"
+      "sourceUrl": "https://jibex-sa.com/secure-your-visit/",
+      "audience": {
+        "ar": "الشركات والمطورون والمقاولون والموردون والمستثمرون والوفود المهنية",
+        "en": "Companies, developers, contractors, suppliers, investors and professional delegations",
+        "es": "Empresas, promotores, contratistas, proveedores, inversores y delegaciones profesionales"
+      },
+      "ticketing": {
+        "status": "free_registration",
+        "ar": "التسجيل للزيارة مجاني عبر الموقع الرسمي للمعرض.",
+        "en": "Visitor registration is free through the official exhibition website.",
+        "es": "El registro de visitantes es gratuito en el sitio oficial de la exposición."
+      },
+      "marketingAngle": {
+        "ar": "برنامج أعمال مسائي يجمع زيارة المعرض مع استقبال وفد، عشاء، وتنقل خاص.",
+        "en": "An evening business program combining the exhibition with delegation hosting, dinner and private transport.",
+        "es": "Un programa empresarial de tarde que combina la feria con atención a la delegación, cena y transporte privado."
+      },
+      "whyAventura": {
+        "ar": "ساعات الزيارة المسائية 4–10 م تجعل دمج المعرض مع جولة نهارية أو غداء واستقبال خاص سهلًا.",
+        "en": "Its 4–10 PM visiting hours make it easy to combine with a daytime tour, lunch and private hosting.",
+        "es": "El horario de 16:00 a 22:00 permite combinarlo fácilmente con una visita diurna, almuerzo y atención privada."
+      },
+      "verification": {
+        "checkedOn": "2026-09-13",
+        "status": "confirmed",
+        "notes": "Official JIBEX site confirms 15–17 Sep 2026, daily 16:00–22:00, Jeddah Exhibition & Events Center, free visitor registration."
+      }
     },
     {
       "id": "khaled-abdel-aziz-jeddah-2026",
@@ -165,7 +219,34 @@
         "en": "Aventura private event atmosphere in Jeddah",
         "es": "Ambiente de evento privado de Aventura en Yeda"
       },
-      "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/107896/khaled-abdel-aziz-in-jeddah-at-society-of-culture-and-arts"
+      "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/107896/khaled-abdel-aziz-in-jeddah-at-society-of-culture-and-arts",
+      "audience": {
+        "ar": "الضيوف الثقافيون، الأزواج، التنفيذيون ومجموعات VIP الصغيرة",
+        "en": "Cultural guests, couples, executives and small VIP groups",
+        "es": "Huéspedes culturales, parejas, ejecutivos y pequeños grupos VIP"
+      },
+      "ticketing": {
+        "status": "on_sale",
+        "priceFromSAR": 149,
+        "ar": "التذاكر معروضة للبيع عبر Platinumlist.",
+        "en": "Tickets are on sale via Platinumlist.",
+        "es": "Entradas a la venta en Platinumlist."
+      },
+      "marketingAngle": {
+        "ar": "أمسية موسيقية صغيرة يمكن تنسيقها مع عشاء وتنقل خاص بدل تجربة جماهيرية كبيرة.",
+        "en": "A smaller live-music evening that pairs naturally with dinner and private transport rather than a mass-event experience.",
+        "es": "Una velada musical más íntima que se combina bien con cena y transporte privado."
+      },
+      "whyAventura": {
+        "ar": "مناسبة للضيف الذي يريد برنامجًا ثقافيًا هادئًا وسهل الدمج مع ضيافة خاصة.",
+        "en": "Suitable for guests who want a calmer cultural program that is easy to combine with private hosting.",
+        "es": "Adecuada para huéspedes que buscan un programa cultural tranquilo y fácil de combinar con atención privada."
+      },
+      "verification": {
+        "checkedOn": "2026-09-13",
+        "status": "confirmed",
+        "notes": "Platinumlist continues to list the event for 17 Sep 2026 at Jeddah Society of Culture and Arts, from SAR 149."
+      }
     },
     {
       "id": "rasha-rizk-jeddah-2026",
@@ -202,7 +283,34 @@
         "en": "Aventura hospitality details as context for an evening experience",
         "es": "Detalles de hospitalidad de Aventura como contexto para una experiencia nocturna"
       },
-      "sourceUrl": "https://jeddah.platinumlist.net/event-tickets/107901/rasha-rizk-spacetoon-golden-voice-live-in-jeddah"
+      "sourceUrl": "https://jeddah.platinumlist.net/event-tickets/107901/rasha-rizk-spacetoon-golden-voice-live-in-jeddah",
+      "audience": {
+        "ar": "العائلات والضيوف العرب ومحبو سبيستون ومجموعات الضيافة الخاصة",
+        "en": "Families, Arab guests, Spacetoon fans and private-hosting groups",
+        "es": "Familias, huéspedes árabes, seguidores de Spacetoon y grupos de hospitalidad privada"
+      },
+      "ticketing": {
+        "status": "on_sale",
+        "priceFromSAR": 175,
+        "ar": "التذاكر معروضة للبيع عبر Platinumlist؛ فتح الأبواب 7:00 م والعرض 8:00–10:00 م.",
+        "en": "Tickets are on sale via Platinumlist; doors 7:00 PM, show 8:00–10:00 PM.",
+        "es": "Entradas a la venta en Platinumlist; puertas 19:00, espectáculo 20:00–22:00."
+      },
+      "marketingAngle": {
+        "ar": "تجربة حنين ثقافي عربية يمكن إحاطتها بعشاء عائلي أو خاص وتنقل مريح.",
+        "en": "An Arabic nostalgia-led cultural evening that can be paired with a family/private dinner and comfortable transfers.",
+        "es": "Una velada cultural de nostalgia árabe que puede combinarse con cena familiar o privada y traslados cómodos."
+      },
+      "whyAventura": {
+        "ar": "فعالية واضحة ومؤكدة في عبادي الجوهر أرينا وتناسب الضيوف العرب والعائلات أكثر من جمهور الشركات الصرف.",
+        "en": "A clear, confirmed arena event suited more to Arab guests and families than pure corporate audiences.",
+        "es": "Un evento confirmado en arena, más adecuado para huéspedes árabes y familias que para un público estrictamente corporativo."
+      },
+      "verification": {
+        "checkedOn": "2026-09-13",
+        "status": "confirmed",
+        "notes": "Platinumlist confirms 19 Sep 2026, doors 19:00, show 20:00–22:00, Abadi Aljohar Arena, from SAR 175."
+      }
     },
     {
       "id": "gulf-cup-27-jeddah-2026",
