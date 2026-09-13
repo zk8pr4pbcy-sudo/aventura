@@ -10,6 +10,7 @@
   };
   var SAUDI_TIME_ZONE = "Asia/Riyadh";
   var HOME_LIMIT = 4;
+  var FEATURED_EVENT_ID = "gulf-cup-27-jeddah-2026";
 
   function normalizeLanguage(value) {
     var lang = String(value || "").toLowerCase();
@@ -51,6 +52,8 @@
         return event.endDate >= start && event.startDate <= end;
       })
       .sort(function (a, b) {
+        var featuredDifference = Number(b.id === FEATURED_EVENT_ID) - Number(a.id === FEATURED_EVENT_ID);
+        if (featuredDifference) return featuredDifference;
         var priorityDifference = Number(a.priority || 999) - Number(b.priority || 999);
         if (priorityDifference) return priorityDifference;
         return String(a.startDate).localeCompare(String(b.startDate));
@@ -321,7 +324,7 @@
   }
 
   var api = {
-    version: "1.3.0",
+    version: "1.3.1",
     saudiToday: saudiToday,
     addDays: addDays,
     filterEvents: filterEvents,
