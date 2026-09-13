@@ -1,7 +1,7 @@
 {
-  "version": "1.3.0",
+  "version": "1.3.1",
   "windowDays": 14,
-  "lastReviewed": "2026-09-13",
+  "lastReviewed": "2026-09-14",
   "reviewedBy": "Salem",
   "ui": {
     "ar": {
@@ -315,10 +315,10 @@
     {
       "id": "gulf-cup-27-jeddah-2026",
       "active": true,
-      "priority": 5,
+      "featured": true,
+      "priority": 0,
       "startDate": "2026-09-23",
       "endDate": "2026-10-06",
-      "startTime": "21:00",
       "title": {
         "ar": "كأس الخليج العربي 27 — جدة",
         "en": "27th Arabian Gulf Cup — Jeddah",
@@ -368,9 +368,9 @@
       },
       "sourceUrl": "https://www.saff.com.sa/en/nationalteams.php?id=1&type=2",
       "verification": {
-        "checkedOn": "2026-09-13",
+        "checkedOn": "2026-09-14",
         "status": "confirmed",
-        "notes": "SAFF lists Gulf Cup 27 from 23 Sep to 6 Oct 2026 and confirms Jeddah fixtures at Alinma Stadium."
+        "notes": "SAFF lists Gulf Cup 27 from 23 Sep to 6 Oct 2026 and confirms Jeddah fixtures at Alinma Stadium. Featured for Aventura corporate, delegation and VIP hosting."
       },
       "mediaPack": [
         {
@@ -474,6 +474,6 @@
     "skipped": [
       "mohannad-almufarrej-saudi-night-2026"
     ],
-    "note": "Only events with current verifiable sources and a clear Aventura-fit were added."
+    "note": "Gulf Cup 27 is featured first for its strong corporate, delegation and VIP fit; other events retain editorial priority order."
   }
 }
