@@ -1,7 +1,7 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "windowDays": 14,
-  "lastReviewed": "2026-09-12",
+  "lastReviewed": "2026-09-13",
   "reviewedBy": "Salem",
   "ui": {
     "ar": {
@@ -203,6 +203,169 @@
         "es": "Detalles de hospitalidad de Aventura como contexto para una experiencia nocturna"
       },
       "sourceUrl": "https://jeddah.platinumlist.net/event-tickets/107901/rasha-rizk-spacetoon-golden-voice-live-in-jeddah"
+    },
+    {
+      "id": "gulf-cup-27-jeddah-2026",
+      "active": true,
+      "priority": 5,
+      "startDate": "2026-09-23",
+      "endDate": "2026-10-06",
+      "startTime": "21:00",
+      "title": {
+        "ar": "كأس الخليج العربي 27 — جدة",
+        "en": "27th Arabian Gulf Cup — Jeddah",
+        "es": "27.ª Copa del Golfo Árabe — Yeda"
+      },
+      "category": {
+        "ar": "رياضة ووفود",
+        "en": "Sports & delegations",
+        "es": "Deporte y delegaciones"
+      },
+      "location": {
+        "ar": "ملعب الإنماء بمدينة الملك عبدالله الرياضية، جدة",
+        "en": "Alinma Stadium at King Abdullah Sports City, Jeddah",
+        "es": "Estadio Alinma, King Abdullah Sports City, Yeda"
+      },
+      "audience": {
+        "ar": "الشركات والوفود الخليجية والتنفيذيون وضيوف VIP",
+        "en": "Corporate groups, Gulf delegations, executives and VIP guests",
+        "es": "Empresas, delegaciones del Golfo, ejecutivos y huéspedes VIP"
+      },
+      "ticketing": {
+        "status": "available_subject_to_match_inventory",
+        "ar": "التذاكر والحضور بحسب المباراة ومنصة البيع الرسمية؛ يُعاد التحقق قبل تأكيد أي برنامج.",
+        "en": "Tickets and admission depend on the selected match and official ticket inventory; re-check before confirming any itinerary.",
+        "es": "Las entradas dependen del partido y del inventario oficial; volver a comprobar antes de confirmar el itinerario."
+      },
+      "marketingAngle": {
+        "ar": "حوّل حضور المباراة إلى يوم ضيافة سعودي متكامل للوفد بدل تجربة ملعب فقط.",
+        "en": "Turn match attendance into a full Saudi-hosting day for the delegation, not just a stadium visit.",
+        "es": "Convertir la asistencia al partido en una jornada completa de hospitalidad saudí para la delegación."
+      },
+      "whyAventura": {
+        "ar": "بطولة إقليمية كبيرة في جدة، وتخلق طلبًا طبيعيًا على التنقل الخاص، الضيافة، الجولات القصيرة والعشاء قبل أو بعد المباراة.",
+        "en": "A major regional tournament in Jeddah that naturally creates demand for private transport, hospitality, short tours and pre/post-match dining.",
+        "es": "Un gran torneo regional en Yeda que genera demanda natural de transporte privado, hospitalidad, recorridos cortos y comidas antes o después del partido."
+      },
+      "aventuraPlan": {
+        "ar": "استقبال وتنقل خاص • جولة مختصرة في جدة التاريخية • غداء أو عشاء • توصيل للملعب والعودة • تنسيق مرن للوفد",
+        "en": "Private meet-and-transfer • Short Historic Jeddah tour • Lunch or dinner • Stadium transfer and return • Flexible delegation coordination",
+        "es": "Recepción y traslado privado • Recorrido breve por Yeda Histórica • Almuerzo o cena • Traslado al estadio y regreso • Coordinación flexible para delegaciones"
+      },
+      "image": "assets/images/hero-jeddah.webp",
+      "imageAlt": {
+        "ar": "أفق جدة كصورة سياقية لبرنامج ضيافة حول كأس الخليج",
+        "en": "Jeddah skyline as context for a Gulf Cup hospitality program",
+        "es": "Horizonte de Yeda como contexto para un programa de hospitalidad de la Copa del Golfo"
+      },
+      "sourceUrl": "https://www.saff.com.sa/en/nationalteams.php?id=1&type=2",
+      "verification": {
+        "checkedOn": "2026-09-13",
+        "status": "confirmed",
+        "notes": "SAFF lists Gulf Cup 27 from 23 Sep to 6 Oct 2026 and confirms Jeddah fixtures at Alinma Stadium."
+      },
+      "mediaPack": [
+        {
+          "usage": "social-context",
+          "source": "Unsplash",
+          "creator": "shahad hassan",
+          "pageUrl": "https://unsplash.com/photos/a-city-skyline-with-palm-trees-qqkSNacI-3M",
+          "license": "Unsplash License — free commercial use; attribution not required but recommended",
+          "credit": "Photo by shahad hassan on Unsplash"
+        }
+      ],
+      "designNotes": {
+        "ar": "تجنّب استخدام شعارات البطولة أو صور اللاعبين ما لم تكن مرخّصة رسميًا. استخدمي صورة جدة + عناصر هوية أفنتورا، واجعلي «23 سبتمبر» و«جدة» واضحين.",
+        "en": "Do not use tournament logos or player imagery unless officially licensed. Use a Jeddah contextual photo with Aventura branding; keep “23 September” and “Jeddah” prominent.",
+        "es": "No usar logotipos del torneo ni imágenes de jugadores sin licencia oficial. Usar una foto contextual de Yeda con la identidad de Aventura."
+      }
+    },
+    {
+      "id": "faia-younan-jazz-jeddah-2026",
+      "active": true,
+      "priority": 6,
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-25",
+      "title": {
+        "ar": "ليلة جاز في جدة مع فايا يونان",
+        "en": "Faia Younan — An Evening in Jazz in Jeddah",
+        "es": "Faia Younan — Una noche de jazz en Yeda"
+      },
+      "category": {
+        "ar": "موسيقى وثقافة",
+        "en": "Music & culture",
+        "es": "Música y cultura"
+      },
+      "location": {
+        "ar": "النادي الأدبي الثقافي بجدة",
+        "en": "Jeddah Literary Cultural Club",
+        "es": "Jeddah Literary Cultural Club"
+      },
+      "audience": {
+        "ar": "الأزواج، الضيوف الثقافيون، التنفيذيون ومجموعات VIP الصغيرة",
+        "en": "Couples, cultural guests, executives and small VIP groups",
+        "es": "Parejas, huéspedes culturales, ejecutivos y pequeños grupos VIP"
+      },
+      "ticketing": {
+        "status": "on_sale",
+        "priceFromSAR": 200,
+        "age": "15+",
+        "ar": "التذاكر معروضة للبيع عبر Platinumlist، والدخول لمن هم فوق 15 عامًا.",
+        "en": "Tickets are on sale via Platinumlist; admission is for ages 15+.",
+        "es": "Entradas a la venta en Platinumlist; acceso para mayores de 15 años."
+      },
+      "marketingAngle": {
+        "ar": "أمسية موسيقية هادئة يمكن تحويلها إلى تجربة مسائية راقية تشمل عشاءً وتنقلًا خاصًا قبل الحفل.",
+        "en": "A refined evening event that pairs naturally with private transport and a curated dinner before the performance.",
+        "es": "Una velada refinada que combina de forma natural con transporte privado y una cena seleccionada antes del concierto."
+      },
+      "whyAventura": {
+        "ar": "تناسب الضيوف الباحثين عن برنامج ثقافي هادئ أكثر من الفعاليات الجماهيرية، ويمكن تنسيقها بسهولة كتجربة VIP صغيرة.",
+        "en": "Well suited to guests seeking a calmer cultural program than a mass event, and easy to package as a small VIP experience.",
+        "es": "Adecuada para huéspedes que buscan un programa cultural más tranquilo y fácil de presentar como experiencia VIP reducida."
+      },
+      "aventuraPlan": {
+        "ar": "تنقل خاص • عشاء مختار • استقبال قبل الحفل • حضور الأمسية • عودة خاصة بعد الفعالية",
+        "en": "Private transport • Curated dinner • Pre-show hosting • Event attendance • Private return transfer",
+        "es": "Transporte privado • Cena seleccionada • Recepción previa • Asistencia al evento • Regreso privado"
+      },
+      "image": "assets/images/event-private.webp",
+      "imageAlt": {
+        "ar": "أجواء جاز موسيقية كصورة سياقية لأمسية فايا يونان",
+        "en": "Jazz performance atmosphere as context for Faia Younan evening",
+        "es": "Ambiente de jazz como contexto para la velada de Faia Younan"
+      },
+      "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/108211/faia-younan-a-jazz-in-jeddah",
+      "verification": {
+        "checkedOn": "2026-09-13",
+        "status": "confirmed",
+        "notes": "Platinumlist shows 25 Sep 2026, Jeddah Literary Cultural Club, from SAR 200, admission 15+."
+      },
+      "mediaPack": [
+        {
+          "usage": "social-context",
+          "source": "Unsplash",
+          "creator": "Jens Thekkeveettil",
+          "pageUrl": "https://unsplash.com/photos/person-playing-saxophone-dBWvUqBoOU8",
+          "license": "Unsplash License — free commercial use; attribution not required but recommended",
+          "credit": "Photo by Jens Thekkeveettil on Unsplash"
+        }
+      ],
+      "designNotes": {
+        "ar": "الصورة سياقية وليست صورة للفنانة. لا تستخدمي صورة فايا يونان أو شعار الجهة المنظمة إلا من مادة صحفية مرخّصة أو بإذن. اجعلي البطاقة هادئة وواضحة مع إبراز «25 سبتمبر» و«النادي الأدبي الثقافي».",
+        "en": "The image is contextual, not the artist. Do not use Faia Younan imagery or organiser logos unless supplied under a clear licence or permission.",
+        "es": "La imagen es contextual, no de la artista. No usar imágenes de Faia Younan ni logotipos del organizador sin licencia o permiso claros."
+      }
     }
-  ]
+  ],
+  "reviewSummary": {
+    "added": [
+      "gulf-cup-27-jeddah-2026",
+      "faia-younan-jazz-jeddah-2026"
+    ],
+    "skipped": [
+      "mohannad-almufarrej-saudi-night-2026"
+    ],
+    "note": "Only events with current verifiable sources and a clear Aventura-fit were added."
+  }
 }
