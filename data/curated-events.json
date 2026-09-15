@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "windowDays": 14,
   "lastReviewed": "2026-09-14",
   "reviewedBy": "Salem",
@@ -360,11 +360,11 @@
         "en": "Private meet-and-transfer • Short Historic Jeddah tour • Lunch or dinner • Stadium transfer and return • Flexible delegation coordination",
         "es": "Recepción y traslado privado • Recorrido breve por Yeda Histórica • Almuerzo o cena • Traslado al estadio y regreso • Coordinación flexible para delegaciones"
       },
-      "image": "assets/images/hero-jeddah.webp",
+      "image": "assets/images/gulf-cup-27-jeddah-card.webp",
       "imageAlt": {
-        "ar": "أفق جدة كصورة سياقية لبرنامج ضيافة حول كأس الخليج",
-        "en": "Jeddah skyline as context for a Gulf Cup hospitality program",
-        "es": "Horizonte de Yeda como contexto para un programa de hospitalidad de la Copa del Golfo"
+        "ar": "بطاقة أفنتورا لكأس الخليج 27 في جدة",
+        "en": "Aventura Gulf Cup 27 in Jeddah featured card",
+        "es": "Tarjeta destacada de Aventura para la Copa del Golfo 27 en Yeda"
       },
       "sourceUrl": "https://www.saff.com.sa/en/nationalteams.php?id=1&type=2",
       "verification": {
