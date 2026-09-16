@@ -35,22 +35,27 @@ jobs:
               "/experience-historic-jeddah.html",
           ]
           STAGES = [
-              ("25-vu", 25, 25),
-              ("50-vu", 50, 50),
+              ("25-vu", 25, 50),
+              ("50-vu", 50, 75),
               ("100-vu", 100, 100),
           ]
-          MAX_ASSETS_PER_PAGE = 20
+          MAX_ASSETS_PER_PAGE = 16
           REQUEST_TIMEOUT = 15
           MAX_FAILURE_RATE_PCT = 1.0
-          MAX_P95_PAGE_MS = 3000.0
+          MAX_DOC_P95_MS = 1500.0
+          MAX_ASSET_P95_MS = 2000.0
 
           class AssetParser(HTMLParser):
               def __init__(self):
                   super().__init__()
                   self.assets = []
+                  self.base_href = None
 
               def handle_starttag(self, tag, attrs):
                   attrs = dict(attrs)
+                  if tag == "base" and attrs.get("href") and self.base_href is None:
+                      self.base_href = attrs["href"]
+                      return
                   candidate = None
                   if tag == "script" and attrs.get("src"):
                       candidate = attrs["src"]
@@ -58,7 +63,7 @@ jobs:
                       candidate = attrs["src"]
                   elif tag == "link" and attrs.get("href"):
                       rel = (attrs.get("rel") or "").lower()
-                      if any(x in rel for x in ("stylesheet", "manifest", "icon", "preload")):
+                      if "stylesheet" in rel or "preload" in rel:
                           candidate = attrs["href"]
                   if candidate:
                       self.assets.append(candidate)
@@ -74,7 +79,7 @@ jobs:
               req = urllib.request.Request(
                   url,
                   headers={
-                      "User-Agent": "Aventura-Realistic-Safe-Load-Test/1.0",
+                      "User-Agent": "Aventura-Realistic-Safe-Load-Test/1.1",
                       "Accept": "text/html,application/xhtml+xml,application/javascript,text/css,image/avif,image/webp,image/*,*/*;q=0.8",
                       "Accept-Language": "ar-SA,ar;q=0.9,en;q=0.8,es;q=0.7",
                   },
@@ -83,101 +88,95 @@ jobs:
               status = 0
               body = b""
               error = ""
-              content_type = ""
               try:
                   with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as response:
                       status = response.getcode()
                       body = response.read()
-                      content_type = response.headers.get("Content-Type", "")
               except urllib.error.HTTPError as exc:
                   status = exc.code
                   error = f"HTTPError:{exc.code}"
               except Exception as exc:
                   error = f"{type(exc).__name__}:{exc}"
               elapsed_ms = (time.perf_counter() - t0) * 1000
-              return status, body, content_type, elapsed_ms, error
+              return url, status, elapsed_ms, len(body), error, body
 
-          def same_origin_asset(page_url, candidate):
-              absolute = urllib.parse.urljoin(page_url, candidate)
+          def resolve_asset(page_url, base_href, candidate):
+              resolution_base = urllib.parse.urljoin(page_url, base_href) if base_href else page_url
+              absolute = urllib.parse.urljoin(resolution_base, candidate)
               parsed = urllib.parse.urlparse(absolute)
-              if parsed.scheme not in ("http", "https"):
-                  return None
-              if parsed.netloc != "aventuraksa.com":
+              if parsed.scheme not in ("http", "https") or parsed.netloc != "aventuraksa.com":
                   return None
               return urllib.parse.urlunparse((parsed.scheme, parsed.netloc, parsed.path, "", parsed.query, ""))
 
-          def load_page(i):
-              target = TARGETS[i % len(TARGETS)]
-              page_url = urllib.parse.urljoin(ORIGIN, target)
-              started = time.perf_counter()
-              request_rows = []
-
-              status, body, content_type, latency_ms, error = fetch(page_url)
-              request_rows.append((page_url, status, latency_ms, len(body), error))
-              if error or not (200 <= status < 400):
-                  total_ms = (time.perf_counter() - started) * 1000
-                  return target, total_ms, request_rows, False
-
-              parser = AssetParser()
-              try:
-                  parser.feed(body.decode("utf-8", errors="ignore"))
-              except Exception:
-                  pass
-
-              assets = []
-              seen = set()
-              for candidate in parser.assets:
-                  asset = same_origin_asset(page_url, candidate)
-                  if not asset or asset in seen:
-                      continue
-                  seen.add(asset)
-                  assets.append(asset)
-                  if len(assets) >= MAX_ASSETS_PER_PAGE:
-                      break
-
-              ok = True
-              for asset_url in assets:
-                  a_status, a_body, _, a_latency, a_error = fetch(asset_url)
-                  request_rows.append((asset_url, a_status, a_latency, len(a_body), a_error))
-                  if a_error or not (200 <= a_status < 400):
-                      ok = False
-                      break
-
-              total_ms = (time.perf_counter() - started) * 1000
-              return target, total_ms, request_rows, ok
-
-          for stage_index, (name, concurrency, users) in enumerate(STAGES):
+          for stage_index, (name, users, asset_concurrency) in enumerate(STAGES):
               stage_started = time.perf_counter()
-              results = []
-              with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as pool:
-                  futures = [pool.submit(load_page, i) for i in range(users)]
-                  for future in concurrent.futures.as_completed(futures):
-                      results.append(future.result())
 
-              wall_s = time.perf_counter() - stage_started
-              page_times = [row[1] for row in results]
-              page_failures = [row for row in results if not row[3]]
-              all_requests = [req for row in results for req in row[2]]
-              request_failures = [req for req in all_requests if req[4] or not (200 <= req[1] < 400)]
+              # Phase 1: navigation documents, one cold navigation per virtual user.
+              doc_results = []
+              with concurrent.futures.ThreadPoolExecutor(max_workers=users) as pool:
+                  futures = []
+                  for i in range(users):
+                      target = TARGETS[i % len(TARGETS)]
+                      url = urllib.parse.urljoin(ORIGIN, target)
+                      futures.append((target, url, pool.submit(fetch, url)))
+                  for target, url, future in futures:
+                      row = future.result()
+                      doc_results.append((target, url, row))
+
+              doc_failures = []
+              doc_latencies = []
+              asset_tasks = []
+              for target, page_url, row in doc_results:
+                  _, status, latency_ms, _, error, body = row
+                  doc_latencies.append(latency_ms)
+                  if error or not (200 <= status < 400):
+                      doc_failures.append(row)
+                      continue
+                  parser = AssetParser()
+                  try:
+                      parser.feed(body.decode("utf-8", errors="ignore"))
+                  except Exception:
+                      pass
+                  seen = set()
+                  for candidate in parser.assets:
+                      asset = resolve_asset(page_url, parser.base_href, candidate)
+                      if not asset or asset in seen:
+                          continue
+                      seen.add(asset)
+                      asset_tasks.append(asset)
+                      if len(seen) >= MAX_ASSETS_PER_PAGE:
+                          break
+
+              # Phase 2: browser-like burst for local CSS/JS/images, globally capped.
+              asset_results = []
+              if asset_tasks:
+                  with concurrent.futures.ThreadPoolExecutor(max_workers=asset_concurrency) as pool:
+                      futures = [pool.submit(fetch, url) for url in asset_tasks]
+                      for future in concurrent.futures.as_completed(futures):
+                          asset_results.append(future.result())
+
+              all_rows = [row for _, _, row in doc_results] + asset_results
+              request_failures = [row for row in all_rows if row[4] or not (200 <= row[1] < 400)]
+              asset_failures = [row for row in asset_results if row[4] or not (200 <= row[1] < 400)]
+              asset_latencies = [row[2] for row in asset_results]
               status_counts = {}
               total_bytes = 0
-              for _, status, _, size, _ in all_requests:
+              for _, status, _, size, _, _ in all_rows:
                   status_counts[status] = status_counts.get(status, 0) + 1
                   total_bytes += size
 
-              avg = statistics.mean(page_times)
-              p50 = statistics.median(page_times)
-              p95 = percentile(page_times, 0.95)
-              p99 = percentile(page_times, 0.99)
-              failure_rate = (len(page_failures) / len(results) * 100) if results else 0.0
-              page_loads_per_s = len(results) / wall_s if wall_s else 0.0
-              request_rps = len(all_requests) / wall_s if wall_s else 0.0
+              wall_s = time.perf_counter() - stage_started
+              failure_rate = (len(request_failures) / len(all_rows) * 100) if all_rows else 0.0
+              doc_p95 = percentile(doc_latencies, 0.95)
+              asset_p95 = percentile(asset_latencies, 0.95)
+              total_rps = len(all_rows) / wall_s if wall_s else 0.0
 
               print(f"STAGE {name}")
-              print(f"virtual_users={users} concurrency={concurrency} wall_s={wall_s:.3f}")
-              print(f"page_loads={len(results)} page_loads_per_s={page_loads_per_s:.2f} failure_rate_pct={failure_rate:.2f}")
-              print(f"page_load_ms avg={avg:.1f} p50={p50:.1f} p95={p95:.1f} p99={p99:.1f} max={max(page_times):.1f}")
-              print(f"http_requests={len(all_requests)} request_rps={request_rps:.2f} status_counts={status_counts} transferred_bytes={total_bytes}")
+              print(f"virtual_users={users} asset_concurrency_cap={asset_concurrency} wall_s={wall_s:.3f}")
+              print(f"documents={len(doc_results)} doc_failures={len(doc_failures)} doc_latency_ms_avg={statistics.mean(doc_latencies):.1f} doc_p50={statistics.median(doc_latencies):.1f} doc_p95={doc_p95:.1f} doc_p99={percentile(doc_latencies, 0.99):.1f}")
+              if asset_latencies:
+                  print(f"assets={len(asset_results)} asset_failures={len(asset_failures)} asset_latency_ms_avg={statistics.mean(asset_latencies):.1f} asset_p50={statistics.median(asset_latencies):.1f} asset_p95={asset_p95:.1f} asset_p99={percentile(asset_latencies, 0.99):.1f}")
+              print(f"http_requests={len(all_rows)} rps={total_rps:.2f} failure_rate_pct={failure_rate:.3f} status_counts={status_counts} transferred_bytes={total_bytes}")
               if request_failures:
                   print("sample_request_failures=")
                   for row in request_failures[:10]:
@@ -185,9 +184,11 @@ jobs:
               print("---")
 
               if failure_rate > MAX_FAILURE_RATE_PCT:
-                  raise SystemExit(f"Safety stop: page failure rate {failure_rate:.2f}% exceeded {MAX_FAILURE_RATE_PCT:.2f}%")
-              if p95 > MAX_P95_PAGE_MS:
-                  raise SystemExit(f"Safety stop: p95 page load {p95:.1f}ms exceeded {MAX_P95_PAGE_MS:.1f}ms")
+                  raise SystemExit(f"Safety stop: request failure rate {failure_rate:.3f}% exceeded {MAX_FAILURE_RATE_PCT:.3f}%")
+              if doc_p95 > MAX_DOC_P95_MS:
+                  raise SystemExit(f"Safety stop: document p95 {doc_p95:.1f}ms exceeded {MAX_DOC_P95_MS:.1f}ms")
+              if asset_p95 > MAX_ASSET_P95_MS:
+                  raise SystemExit(f"Safety stop: asset p95 {asset_p95:.1f}ms exceeded {MAX_ASSET_P95_MS:.1f}ms")
 
               if stage_index < len(STAGES) - 1:
                   time.sleep(3)
