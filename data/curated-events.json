@@ -1,7 +1,7 @@
 {
-  "version": "1.3.2",
+  "version": "1.4.0",
   "windowDays": 14,
-  "lastReviewed": "2026-09-14",
+  "lastReviewed": "2026-09-16",
   "reviewedBy": "Salem",
   "ui": {
     "ar": {
@@ -61,419 +61,193 @@
   },
   "events": [
     {
-      "id": "saudi-industry-forum-2026",
-      "active": true,
-      "priority": 1,
-      "startDate": "2026-09-14",
-      "endDate": "2026-09-16",
-      "title": {
-        "ar": "منتدى الصناعة السعودي 2026",
-        "en": "Saudi Industry Forum 2026",
-        "es": "Foro de la Industria Saudí 2026"
-      },
-      "category": {
-        "ar": "أعمال وتنفيذيون",
-        "en": "Business & executives",
-        "es": "Negocios y ejecutivos"
-      },
-      "location": {
-        "ar": "جدة سوبر دوم",
-        "en": "Jeddah Superdome",
-        "es": "Jeddah Superdome"
-      },
-      "aventuraPlan": {
-        "ar": "جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات",
-        "en": "Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services",
-        "es": "Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة فعاليات الشركات من أفنتورا في جدة",
-        "en": "Aventura corporate event hospitality in Jeddah",
-        "es": "Hospitalidad corporativa de Aventura en Yeda"
-      },
-      "sourceUrl": "https://www.ksa-sif.com/jeddah/",
-      "startTime": "09:00",
-      "endTime": "19:00",
-      "audience": {
-        "ar": "الشركات والمستثمرون وصناع القرار والتنفيذيون والوفود المهنية",
-        "en": "Companies, investors, decision-makers, executives and professional delegations",
-        "es": "Empresas, inversores, responsables de decisión, ejecutivos y delegaciones profesionales"
-      },
-      "ticketing": {
-        "status": "registration_open",
-        "ar": "التسجيل للزيارة متاح عبر الموقع الرسمي للمنتدى.",
-        "en": "Visitor registration is available through the forum’s official website.",
-        "es": "El registro de visitantes está disponible en el sitio web oficial del foro."
-      },
-      "marketingAngle": {
-        "ar": "استضافة وفد أعمال حول يوم المنتدى مع تنقل خاص، اجتماع أو غداء، وجولة قصيرة في جدة التاريخية.",
-        "en": "Host a business delegation around the forum day with private transport, a meeting or meal, and a short Historic Jeddah visit.",
-        "es": "Atender a una delegación empresarial alrededor del foro con transporte privado, reunión o comida y una breve visita a Yeda Histórica."
-      },
-      "whyAventura": {
-        "ar": "أقوى فعالية حالية لأفنتورا من ناحية الشركات والتنفيذيين؛ الموقع الرسمي يذكر أكثر من 150 عارضًا و80 متحدثًا ومتخصصًا.",
-        "en": "The strongest current Aventura fit for corporate and executive guests; the official site lists 150+ exhibitors and 80+ speakers and specialists.",
-        "es": "La opción actual más sólida para huéspedes corporativos y ejecutivos; el sitio oficial anuncia más de 150 expositores y 80 ponentes y especialistas."
-      },
-      "verification": {
-        "checkedOn": "2026-09-13",
-        "status": "confirmed",
-        "notes": "Official SIF site confirms 14–16 Sep 2026, 09:00–19:00, Jeddah Superdome, visitor registration available."
-      }
-    },
-    {
-      "id": "jibex-2026",
-      "active": true,
-      "priority": 2,
-      "startDate": "2026-09-15",
-      "endDate": "2026-09-17",
-      "startTime": "16:00",
-      "endTime": "22:00",
-      "title": {
-        "ar": "معرض جدة الدولي للبناء JIBEX 2026",
-        "en": "Jeddah International Building Exhibition (JIBEX) 2026",
-        "es": "Exposición Internacional de Construcción de Yeda (JIBEX) 2026"
-      },
-      "category": {
-        "ar": "معارض وأعمال",
-        "en": "Exhibition & business",
-        "es": "Feria y negocios"
-      },
-      "location": {
-        "ar": "مركز جدة للمعارض والفعاليات",
-        "en": "Jeddah Exhibition & Events Center",
-        "es": "Jeddah Exhibition & Events Center"
-      },
-      "aventuraPlan": {
-        "ar": "جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات",
-        "en": "Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services",
-        "es": "Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"
-      },
-      "image": "assets/images/hero-jeddah.webp",
-      "imageAlt": {
-        "ar": "أفق جدة كصورة سياقية لتجربة ضيف أعمال",
-        "en": "Jeddah skyline as context for a business guest experience",
-        "es": "Horizonte de Yeda como contexto para una experiencia de negocios"
-      },
-      "sourceUrl": "https://jibex-sa.com/secure-your-visit/",
-      "audience": {
-        "ar": "الشركات والمطورون والمقاولون والموردون والمستثمرون والوفود المهنية",
-        "en": "Companies, developers, contractors, suppliers, investors and professional delegations",
-        "es": "Empresas, promotores, contratistas, proveedores, inversores y delegaciones profesionales"
-      },
-      "ticketing": {
-        "status": "free_registration",
-        "ar": "التسجيل للزيارة مجاني عبر الموقع الرسمي للمعرض.",
-        "en": "Visitor registration is free through the official exhibition website.",
-        "es": "El registro de visitantes es gratuito en el sitio oficial de la exposición."
-      },
-      "marketingAngle": {
-        "ar": "برنامج أعمال مسائي يجمع زيارة المعرض مع استقبال وفد، عشاء، وتنقل خاص.",
-        "en": "An evening business program combining the exhibition with delegation hosting, dinner and private transport.",
-        "es": "Un programa empresarial de tarde que combina la feria con atención a la delegación, cena y transporte privado."
-      },
-      "whyAventura": {
-        "ar": "ساعات الزيارة المسائية 4–10 م تجعل دمج المعرض مع جولة نهارية أو غداء واستقبال خاص سهلًا.",
-        "en": "Its 4–10 PM visiting hours make it easy to combine with a daytime tour, lunch and private hosting.",
-        "es": "El horario de 16:00 a 22:00 permite combinarlo fácilmente con una visita diurna, almuerzo y atención privada."
-      },
-      "verification": {
-        "checkedOn": "2026-09-13",
-        "status": "confirmed",
-        "notes": "Official JIBEX site confirms 15–17 Sep 2026, daily 16:00–22:00, Jeddah Exhibition & Events Center, free visitor registration."
-      }
-    },
-    {
-      "id": "khaled-abdel-aziz-jeddah-2026",
-      "active": true,
-      "priority": 3,
-      "startDate": "2026-09-17",
-      "endDate": "2026-09-17",
-      "doorsTime": "20:30",
-      "startTime": "21:30",
-      "endTime": "23:59",
-      "title": {
-        "ar": "خالد عبدالعزيز — ليلة موسيقية في جدة",
-        "en": "Khaled Abdel Aziz — Live in Jeddah",
-        "es": "Khaled Abdel Aziz — En directo en Yeda"
-      },
-      "category": {
-        "ar": "موسيقى وثقافة",
-        "en": "Music & culture",
-        "es": "Música y cultura"
-      },
-      "location": {
-        "ar": "جمعية الثقافة والفنون، جدة",
-        "en": "Jeddah Society of Culture and Arts",
-        "es": "Jeddah Society of Culture and Arts"
-      },
-      "aventuraPlan": {
-        "ar": "جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات",
-        "en": "Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services",
-        "es": "Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"
-      },
-      "image": "assets/images/event-private.webp",
-      "imageAlt": {
-        "ar": "أجواء فعالية خاصة من أفنتورا في جدة",
-        "en": "Aventura private event atmosphere in Jeddah",
-        "es": "Ambiente de evento privado de Aventura en Yeda"
-      },
-      "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/107896/khaled-abdel-aziz-in-jeddah-at-society-of-culture-and-arts",
-      "audience": {
-        "ar": "الضيوف الثقافيون، الأزواج، التنفيذيون ومجموعات VIP الصغيرة",
-        "en": "Cultural guests, couples, executives and small VIP groups",
-        "es": "Huéspedes culturales, parejas, ejecutivos y pequeños grupos VIP"
-      },
-      "ticketing": {
-        "status": "on_sale",
-        "priceFromSAR": 149,
-        "ar": "التذاكر معروضة للبيع عبر Platinumlist.",
-        "en": "Tickets are on sale via Platinumlist.",
-        "es": "Entradas a la venta en Platinumlist."
-      },
-      "marketingAngle": {
-        "ar": "أمسية موسيقية صغيرة يمكن تنسيقها مع عشاء وتنقل خاص بدل تجربة جماهيرية كبيرة.",
-        "en": "A smaller live-music evening that pairs naturally with dinner and private transport rather than a mass-event experience.",
-        "es": "Una velada musical más íntima que se combina bien con cena y transporte privado."
-      },
-      "whyAventura": {
-        "ar": "مناسبة للضيف الذي يريد برنامجًا ثقافيًا هادئًا وسهل الدمج مع ضيافة خاصة.",
-        "en": "Suitable for guests who want a calmer cultural program that is easy to combine with private hosting.",
-        "es": "Adecuada para huéspedes que buscan un programa cultural tranquilo y fácil de combinar con atención privada."
-      },
-      "verification": {
-        "checkedOn": "2026-09-13",
-        "status": "confirmed",
-        "notes": "Platinumlist continues to list the event for 17 Sep 2026 at Jeddah Society of Culture and Arts, from SAR 149."
-      }
-    },
-    {
-      "id": "rasha-rizk-jeddah-2026",
-      "active": true,
-      "priority": 4,
-      "startDate": "2026-09-19",
-      "endDate": "2026-09-19",
-      "doorsTime": "19:00",
-      "startTime": "20:00",
-      "endTime": "22:00",
-      "title": {
-        "ar": "رشا رزق — الصوت الذهبي لسبيستون",
-        "en": "Rasha Rizk — Spacetoon Golden Voice Live",
-        "es": "Rasha Rizk — La voz dorada de Spacetoon en directo"
-      },
-      "category": {
-        "ar": "موسيقى وعائلات",
-        "en": "Music & families",
-        "es": "Música y familias"
-      },
-      "location": {
-        "ar": "عبادي الجوهر أرينا، جدة",
-        "en": "Abadi Aljohar Arena, Jeddah",
-        "es": "Abadi Aljohar Arena, Yeda"
-      },
-      "aventuraPlan": {
-        "ar": "جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات",
-        "en": "Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services",
-        "es": "Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"
-      },
-      "image": "assets/images/collection.webp",
-      "imageAlt": {
-        "ar": "تفاصيل ضيافة أفنتورا كصورة سياقية لتجربة مسائية",
-        "en": "Aventura hospitality details as context for an evening experience",
-        "es": "Detalles de hospitalidad de Aventura como contexto para una experiencia nocturna"
-      },
-      "sourceUrl": "https://jeddah.platinumlist.net/event-tickets/107901/rasha-rizk-spacetoon-golden-voice-live-in-jeddah",
-      "audience": {
-        "ar": "العائلات والضيوف العرب ومحبو سبيستون ومجموعات الضيافة الخاصة",
-        "en": "Families, Arab guests, Spacetoon fans and private-hosting groups",
-        "es": "Familias, huéspedes árabes, seguidores de Spacetoon y grupos de hospitalidad privada"
-      },
-      "ticketing": {
-        "status": "on_sale",
-        "priceFromSAR": 175,
-        "ar": "التذاكر معروضة للبيع عبر Platinumlist؛ فتح الأبواب 7:00 م والعرض 8:00–10:00 م.",
-        "en": "Tickets are on sale via Platinumlist; doors 7:00 PM, show 8:00–10:00 PM.",
-        "es": "Entradas a la venta en Platinumlist; puertas 19:00, espectáculo 20:00–22:00."
-      },
-      "marketingAngle": {
-        "ar": "تجربة حنين ثقافي عربية يمكن إحاطتها بعشاء عائلي أو خاص وتنقل مريح.",
-        "en": "An Arabic nostalgia-led cultural evening that can be paired with a family/private dinner and comfortable transfers.",
-        "es": "Una velada cultural de nostalgia árabe que puede combinarse con cena familiar o privada y traslados cómodos."
-      },
-      "whyAventura": {
-        "ar": "فعالية واضحة ومؤكدة في عبادي الجوهر أرينا وتناسب الضيوف العرب والعائلات أكثر من جمهور الشركات الصرف.",
-        "en": "A clear, confirmed arena event suited more to Arab guests and families than pure corporate audiences.",
-        "es": "Un evento confirmado en arena, más adecuado para huéspedes árabes y familias que para un público estrictamente corporativo."
-      },
-      "verification": {
-        "checkedOn": "2026-09-13",
-        "status": "confirmed",
-        "notes": "Platinumlist confirms 19 Sep 2026, doors 19:00, show 20:00–22:00, Abadi Aljohar Arena, from SAR 175."
-      }
-    },
-    {
       "id": "gulf-cup-27-jeddah-2026",
       "active": true,
       "featured": true,
       "priority": 0,
       "startDate": "2026-09-23",
       "endDate": "2026-10-06",
-      "title": {
-        "ar": "كأس الخليج العربي 27 — جدة",
-        "en": "27th Arabian Gulf Cup — Jeddah",
-        "es": "27.ª Copa del Golfo Árabe — Yeda"
-      },
-      "category": {
-        "ar": "رياضة ووفود",
-        "en": "Sports & delegations",
-        "es": "Deporte y delegaciones"
-      },
-      "location": {
-        "ar": "ملعب الإنماء بمدينة الملك عبدالله الرياضية، جدة",
-        "en": "Alinma Stadium at King Abdullah Sports City, Jeddah",
-        "es": "Estadio Alinma, King Abdullah Sports City, Yeda"
-      },
-      "audience": {
-        "ar": "الشركات والوفود الخليجية والتنفيذيون وضيوف VIP",
-        "en": "Corporate groups, Gulf delegations, executives and VIP guests",
-        "es": "Empresas, delegaciones del Golfo, ejecutivos y huéspedes VIP"
-      },
-      "ticketing": {
-        "status": "available_subject_to_match_inventory",
-        "ar": "التذاكر والحضور بحسب المباراة ومنصة البيع الرسمية؛ يُعاد التحقق قبل تأكيد أي برنامج.",
-        "en": "Tickets and admission depend on the selected match and official ticket inventory; re-check before confirming any itinerary.",
-        "es": "Las entradas dependen del partido y del inventario oficial; volver a comprobar antes de confirmar el itinerario."
-      },
-      "marketingAngle": {
-        "ar": "حوّل حضور المباراة إلى يوم ضيافة سعودي متكامل للوفد بدل تجربة ملعب فقط.",
-        "en": "Turn match attendance into a full Saudi-hosting day for the delegation, not just a stadium visit.",
-        "es": "Convertir la asistencia al partido en una jornada completa de hospitalidad saudí para la delegación."
-      },
-      "whyAventura": {
-        "ar": "بطولة إقليمية كبيرة في جدة، وتخلق طلبًا طبيعيًا على التنقل الخاص، الضيافة، الجولات القصيرة والعشاء قبل أو بعد المباراة.",
-        "en": "A major regional tournament in Jeddah that naturally creates demand for private transport, hospitality, short tours and pre/post-match dining.",
-        "es": "Un gran torneo regional en Yeda que genera demanda natural de transporte privado, hospitalidad, recorridos cortos y comidas antes o después del partido."
-      },
-      "aventuraPlan": {
-        "ar": "استقبال وتنقل خاص • جولة مختصرة في جدة التاريخية • غداء أو عشاء • توصيل للملعب والعودة • تنسيق مرن للوفد",
-        "en": "Private meet-and-transfer • Short Historic Jeddah tour • Lunch or dinner • Stadium transfer and return • Flexible delegation coordination",
-        "es": "Recepción y traslado privado • Recorrido breve por Yeda Histórica • Almuerzo o cena • Traslado al estadio y regreso • Coordinación flexible para delegaciones"
-      },
+      "title": {"ar":"كأس الخليج العربي 27 — جدة","en":"27th Arabian Gulf Cup — Jeddah","es":"27.ª Copa del Golfo Árabe — Yeda"},
+      "category": {"ar":"رياضة ووفود","en":"Sports & delegations","es":"Deporte y delegaciones"},
+      "location": {"ar":"ملعب الإنماء بمدينة الملك عبدالله الرياضية، جدة","en":"Alinma Stadium at King Abdullah Sports City, Jeddah","es":"Estadio Alinma, King Abdullah Sports City, Yeda"},
+      "aventuraPlan": {"ar":"استقبال وتنقل خاص • جولة مختصرة في جدة التاريخية • غداء أو عشاء • توصيل للملعب والعودة • تنسيق مرن للوفد","en":"Private meet-and-transfer • Short Historic Jeddah tour • Lunch or dinner • Stadium transfer and return • Flexible delegation coordination","es":"Recepción y traslado privado • Recorrido breve por Yeda Histórica • Almuerzo o cena • Traslado al estadio y regreso • Coordinación flexible para delegaciones"},
       "image": "assets/images/gulf-cup-27-jeddah-card.webp",
-      "imageAlt": {
-        "ar": "بطاقة أفنتورا لكأس الخليج 27 في جدة",
-        "en": "Aventura Gulf Cup 27 in Jeddah featured card",
-        "es": "Tarjeta destacada de Aventura para la Copa del Golfo 27 en Yeda"
-      },
+      "imageAlt": {"ar":"بطاقة أفنتورا لكأس الخليج 27 في جدة","en":"Aventura Gulf Cup 27 in Jeddah featured card","es":"Tarjeta destacada de Aventura para la Copa del Golfo 27 en Yeda"},
       "sourceUrl": "https://www.saff.com.sa/en/nationalteams.php?id=1&type=2",
-      "verification": {
-        "checkedOn": "2026-09-14",
-        "status": "confirmed",
-        "notes": "SAFF lists Gulf Cup 27 from 23 Sep to 6 Oct 2026 and confirms Jeddah fixtures at Alinma Stadium. Featured for Aventura corporate, delegation and VIP hosting."
-      },
-      "mediaPack": [
-        {
-          "usage": "social-context",
-          "source": "Unsplash",
-          "creator": "shahad hassan",
-          "pageUrl": "https://unsplash.com/photos/a-city-skyline-with-palm-trees-qqkSNacI-3M",
-          "license": "Unsplash License — free commercial use; attribution not required but recommended",
-          "credit": "Photo by shahad hassan on Unsplash"
-        }
-      ],
-      "designNotes": {
-        "ar": "تجنّب استخدام شعارات البطولة أو صور اللاعبين ما لم تكن مرخّصة رسميًا. استخدمي صورة جدة + عناصر هوية أفنتورا، واجعلي «23 سبتمبر» و«جدة» واضحين.",
-        "en": "Do not use tournament logos or player imagery unless officially licensed. Use a Jeddah contextual photo with Aventura branding; keep “23 September” and “Jeddah” prominent.",
-        "es": "No usar logotipos del torneo ni imágenes de jugadores sin licencia oficial. Usar una foto contextual de Yeda con la identidad de Aventura."
-      }
+      "audience": {"ar":"الشركات والوفود الخليجية والتنفيذيون وضيوف VIP","en":"Corporate groups, Gulf delegations, executives and VIP guests","es":"Empresas, delegaciones del Golfo, ejecutivos y huéspedes VIP"},
+      "ticketing": {"status":"available_subject_to_match_inventory","ar":"التذاكر والحضور بحسب المباراة ومنصة البيع الرسمية؛ يُعاد التحقق قبل تأكيد أي برنامج.","en":"Tickets and admission depend on the selected match and official ticket inventory; re-check before confirming any itinerary.","es":"Las entradas dependen del partido y del inventario oficial; volver a comprobar antes de confirmar el itinerario."},
+      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Tournament retained as a featured delegation opportunity for 23 Sep–6 Oct 2026 in Jeddah."}
+    },
+    {
+      "id": "jibex-2026",
+      "active": true,
+      "priority": 1,
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-17",
+      "startTime": "16:00",
+      "endTime": "22:00",
+      "title": {"ar":"معرض جدة الدولي للبناء JIBEX 2026","en":"Jeddah International Building Exhibition (JIBEX) 2026","es":"Exposición Internacional de Construcción de Yeda (JIBEX) 2026"},
+      "category": {"ar":"معارض وأعمال","en":"Exhibition & business","es":"Feria y negocios"},
+      "location": {"ar":"مركز جدة للمعارض والفعاليات","en":"Jeddah Exhibition & Events Center","es":"Jeddah Exhibition & Events Center"},
+      "aventuraPlan": {"ar":"جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات","en":"Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services","es":"Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"},
+      "image": "assets/images/hero-jeddah.webp",
+      "imageAlt": {"ar":"أفق جدة كصورة سياقية لتجربة ضيف أعمال","en":"Jeddah skyline as context for a business guest experience","es":"Horizonte de Yeda como contexto para una experiencia de negocios"},
+      "sourceUrl": "https://jibex-sa.com/secure-your-visit/",
+      "audience": {"ar":"الشركات والمطورون والمقاولون والموردون والمستثمرون والوفود المهنية","en":"Companies, developers, contractors, suppliers, investors and professional delegations","es":"Empresas, promotores, contratistas, proveedores, inversores y delegaciones profesionales"},
+      "ticketing": {"status":"free_registration","ar":"التسجيل للزيارة مجاني عبر الموقع الرسمي للمعرض.","en":"Visitor registration is free through the official exhibition website.","es":"El registro de visitantes es gratuito en el sitio oficial de la exposición."},
+      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Current event retained through 17 Sep 2026, 16:00–22:00."}
+    },
+    {
+      "id": "saudi-food-show-2026",
+      "active": true,
+      "priority": 2,
+      "startDate": "2026-09-27",
+      "endDate": "2026-09-29",
+      "title": {"ar":"The Saudi Food Show + Saudifood Manufacturing 2026","en":"The Saudi Food Show + Saudifood Manufacturing 2026","es":"The Saudi Food Show + Saudifood Manufacturing 2026"},
+      "category": {"ar":"أغذية وتصنيع وأعمال","en":"Food, manufacturing & business","es":"Alimentación, fabricación y negocios"},
+      "location": {"ar":"جدة سوبر دوم","en":"Jeddah Superdome","es":"Jeddah Superdome"},
+      "aventuraPlan": {"ar":"استقبال وفد • تنقل خاص للمعرض • غداء أو عشاء أعمال • جدة التاريخية أو البحر قبل أو بعد أيام المعرض","en":"Delegation reception • Private show transfers • Business lunch or dinner • Historic Jeddah or Red Sea before or after show days","es":"Recepción de delegación • Traslados privados a la feria • Almuerzo o cena de negocios • Yeda Histórica o Mar Rojo antes o después"},
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {"ar":"ضيافة وفود الأعمال من أفنتورا في جدة","en":"Aventura business delegation hospitality in Jeddah","es":"Hospitalidad de Aventura para delegaciones de negocios en Yeda"},
+      "sourceUrl": "https://www.thesaudifoodshow.com/",
+      "timeLabels": {"ar":"27–28 سبتمبر: 1:00 م–8:00 م · 29 سبتمبر: 1:00 م–7:00 م","en":"27–28 Sep: 1:00–8:00 PM · 29 Sep: 1:00–7:00 PM","es":"27–28 sep: 13:00–20:00 · 29 sep: 13:00–19:00"},
+      "audience": {"ar":"المشترون والموزعون والمصنعون وقطاع الضيافة والتجزئة وصناع القرار والوفود الدولية","en":"Buyers, distributors, manufacturers, hospitality and retail professionals, decision-makers and international delegations","es":"Compradores, distribuidores, fabricantes, profesionales de hostelería y retail, responsables de decisión y delegaciones internacionales"},
+      "ticketing": {"status":"registration_open","ar":"التسجيل للزيارة متاح عبر الموقع الرسمي.","en":"Visitor registration is available through the official website.","es":"El registro de visitantes está disponible en el sitio oficial."},
+      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official FAQ and current exhibitor portal confirm Jeddah Superdome, 27–29 Sep 2026, with 1 PM opening; older event subpages showing 12 PM were not used."}
+    },
+    {
+      "id": "meta-geds-2026",
+      "active": true,
+      "priority": 3,
+      "startDate": "2026-09-24",
+      "endDate": "2026-09-26",
+      "title": {"ar":"META-GEDS EXPO 2026","en":"META-GEDS EXPO 2026","es":"META-GEDS EXPO 2026"},
+      "category": {"ar":"تعليم وتقنية وذكاء اصطناعي","en":"Education, technology & AI","es":"Educación, tecnología e IA"},
+      "location": {"ar":"قاعة القصر، فندق هيلتون جدة","en":"Al Qasr Hall, Jeddah Hilton","es":"Al Qasr Hall, Jeddah Hilton"},
+      "aventuraPlan": {"ar":"استقبال وتنقل خاص • زيارة المعرض • اجتماع أو غداء • عشاء على الكورنيش أو تجربة جدة التاريخية","en":"Private reception and transport • Exhibition visit • Meeting or lunch • Corniche dinner or Historic Jeddah experience","es":"Recepción y transporte privado • Visita a la feria • Reunión o almuerzo • Cena en la Corniche o experiencia en Yeda Histórica"},
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {"ar":"ضيافة تنفيذية من أفنتورا في جدة","en":"Aventura executive hospitality in Jeddah","es":"Hospitalidad ejecutiva de Aventura en Yeda"},
+      "sourceUrl": "https://www.ges-platform.com/",
+      "timeLabels": {"ar":"24–25 سبتمبر: 3:00 م–11:00 م · 26 سبتمبر: 3:00 م–9:00 م","en":"24–25 Sep: 3:00–11:00 PM · 26 Sep: 3:00–9:00 PM","es":"24–25 sep: 15:00–23:00 · 26 sep: 15:00–21:00"},
+      "audience": {"ar":"قيادات التعليم والجامعات وشركات التقنية والمستثمرون والجهات الحكومية والوفود المهنية","en":"Education leaders, universities, technology companies, investors, government entities and professional delegations","es":"Líderes educativos, universidades, empresas tecnológicas, inversores, entidades públicas y delegaciones profesionales"},
+      "ticketing": {"status":"registration_open","ar":"حجز تذكرة الزائر متاح عبر الموقع الرسمي.","en":"Visitor booking is available through the official website.","es":"La reserva de visitante está disponible en el sitio oficial."},
+      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official META-GEDS site confirms 24–26 Sep 2026 at Jeddah Hilton – Al Qasr Hall and the published operating hours."}
+    },
+    {
+      "id": "saudi-fashiontex-2026",
+      "active": true,
+      "priority": 4,
+      "startDate": "2026-09-24",
+      "endDate": "2026-09-27",
+      "title": {"ar":"Saudi Fashiontex Expo 2026","en":"Saudi Fashiontex Expo 2026","es":"Saudi Fashiontex Expo 2026"},
+      "category": {"ar":"أزياء ومنسوجات وأعمال","en":"Fashion, textiles & business","es":"Moda, textil y negocios"},
+      "location": {"ar":"مركز جدة الدولي للمعارض والفعاليات","en":"Jeddah International Exhibition & Events Center","es":"Jeddah International Exhibition & Events Center"},
+      "aventuraPlan": {"ar":"استقبال مشترين أو عارضين • تنقل خاص • زيارة المعرض • عشاء أعمال • جولة قصيرة في جدة التاريخية","en":"Buyer or exhibitor reception • Private transport • Exhibition visit • Business dinner • Short Historic Jeddah tour","es":"Recepción de compradores o expositores • Transporte privado • Visita a la feria • Cena de negocios • Recorrido breve por Yeda Histórica"},
+      "image": "assets/images/collection.webp",
+      "imageAlt": {"ar":"تفاصيل ضيافة أفنتورا كصورة سياقية لوفد تجاري","en":"Aventura hospitality details as context for a trade delegation","es":"Detalles de hospitalidad de Aventura como contexto para una delegación comercial"},
+      "sourceUrl": "https://saudifashiontexexpo.com/",
+      "audience": {"ar":"المشترون والعلامات التجارية والمصنعون والموردون والمستثمرون والوفود التجارية","en":"Buyers, brands, manufacturers, suppliers, investors and trade delegations","es":"Compradores, marcas, fabricantes, proveedores, inversores y delegaciones comerciales"},
+      "ticketing": {"status":"registration_open","ar":"تسجيل الزوار متاح عبر الموقع الرسمي.","en":"Visitor registration is available through the official website.","es":"El registro de visitantes está disponible en el sitio oficial."},
+      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official event site confirms 24–27 Sep 2026 in Jeddah and visitor registration; exhibition location is Jeddah International Exhibition & Events Center."}
+    },
+    {
+      "id": "saudi-shoes-expo-2026",
+      "active": true,
+      "priority": 5,
+      "startDate": "2026-09-24",
+      "endDate": "2026-09-27",
+      "title": {"ar":"Saudi Shoes Expo 2026","en":"Saudi Shoes Expo 2026","es":"Saudi Shoes Expo 2026"},
+      "category": {"ar":"أحذية وجلود وإكسسوارات وأعمال","en":"Footwear, leather, accessories & business","es":"Calzado, cuero, accesorios y negocios"},
+      "location": {"ar":"مركز جدة الدولي للمعارض والفعاليات","en":"Jeddah International Exhibition & Events Center","es":"Jeddah International Exhibition & Events Center"},
+      "aventuraPlan": {"ar":"استقبال وفد تجاري • تنقل خاص • زيارة المعرض • ترتيب اجتماعات أو عشاء • تجربة جدة حسب وقت الوفد","en":"Trade delegation reception • Private transport • Exhibition visit • Meetings or dinner • Jeddah experience around the delegation schedule","es":"Recepción de delegación comercial • Transporte privado • Visita a la feria • Reuniones o cena • Experiencia en Yeda según el horario"},
+      "image": "assets/images/hero-jeddah.webp",
+      "imageAlt": {"ar":"جدة كصورة سياقية لزيارة وفد تجاري","en":"Jeddah as context for a trade delegation visit","es":"Yeda como contexto para la visita de una delegación comercial"},
+      "sourceUrl": "https://saudishoesexpo.com/",
+      "audience": {"ar":"العلامات التجارية والمشترون والموزعون والموردون والمستثمرون والوفود التجارية","en":"Brands, buyers, distributors, suppliers, investors and trade delegations","es":"Marcas, compradores, distribuidores, proveedores, inversores y delegaciones comerciales"},
+      "ticketing": {"status":"registration_open","ar":"تسجيل الزوار متاح عبر الموقع الرسمي.","en":"Visitor registration is available through the official website.","es":"El registro de visitantes está disponible en el sitio oficial."},
+      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official Saudi Shoes Expo site confirms 24–27 Sep 2026 at Jeddah International Exhibition & Events Center and visitor registration."}
+    },
+    {
+      "id": "saudi-industry-forum-2026",
+      "active": true,
+      "priority": 6,
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-16",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "title": {"ar":"منتدى الصناعة السعودي 2026","en":"Saudi Industry Forum 2026","es":"Foro de la Industria Saudí 2026"},
+      "category": {"ar":"أعمال وتنفيذيون","en":"Business & executives","es":"Negocios y ejecutivos"},
+      "location": {"ar":"جدة سوبر دوم","en":"Jeddah Superdome","es":"Jeddah Superdome"},
+      "aventuraPlan": {"ar":"جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات","en":"Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services","es":"Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"},
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {"ar":"ضيافة فعاليات الشركات من أفنتورا في جدة","en":"Aventura corporate event hospitality in Jeddah","es":"Hospitalidad corporativa de Aventura en Yeda"},
+      "sourceUrl": "https://www.ksa-sif.com/jeddah/",
+      "audience": {"ar":"الشركات والمستثمرون وصناع القرار والتنفيذيون والوفود المهنية","en":"Companies, investors, decision-makers, executives and professional delegations","es":"Empresas, inversores, responsables de decisión, ejecutivos y delegaciones profesionales"},
+      "ticketing": {"status":"registration_open","ar":"التسجيل للزيارة متاح عبر الموقع الرسمي للمنتدى.","en":"Visitor registration is available through the forum’s official website.","es":"El registro de visitantes está disponible en el sitio web oficial del foro."},
+      "verification": {"checkedOn":"2026-09-16","status":"confirmed_with_source_conflict","notes":"Jeddah Superdome current calendar lists 11:00–20:00; organiser page still shows 09:00–19:00. Website card uses the venue's current listing."}
+    },
+    {
+      "id": "khaled-abdel-aziz-jeddah-2026",
+      "active": true,
+      "priority": 7,
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-17",
+      "doorsTime": "20:30",
+      "startTime": "21:30",
+      "endTime": "23:59",
+      "title": {"ar":"خالد عبدالعزيز — ليلة موسيقية في جدة","en":"Khaled Abdel Aziz — Live in Jeddah","es":"Khaled Abdel Aziz — En directo en Yeda"},
+      "category": {"ar":"موسيقى وثقافة","en":"Music & culture","es":"Música y cultura"},
+      "location": {"ar":"جمعية الثقافة والفنون، جدة","en":"Jeddah Society of Culture and Arts","es":"Jeddah Society of Culture and Arts"},
+      "aventuraPlan": {"ar":"جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات","en":"Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services","es":"Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"},
+      "image": "assets/images/event-private.webp",
+      "imageAlt": {"ar":"أجواء فعالية خاصة من أفنتورا في جدة","en":"Aventura private event atmosphere in Jeddah","es":"Ambiente de evento privado de Aventura en Yeda"},
+      "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/107896/khaled-abdel-aziz-in-jeddah-at-society-of-culture-and-arts",
+      "audience": {"ar":"الضيوف الثقافيون، الأزواج، التنفيذيون ومجموعات VIP الصغيرة","en":"Cultural guests, couples, executives and small VIP groups","es":"Huéspedes culturales, parejas, ejecutivos y pequeños grupos VIP"},
+      "ticketing": {"status":"on_sale","priceFromSAR":149,"ar":"التذاكر معروضة للبيع عبر Platinumlist.","en":"Tickets are on sale via Platinumlist.","es":"Entradas a la venta en Platinumlist."},
+      "verification": {"checkedOn":"2026-09-16","status":"retained","notes":"Previously verified listing retained; re-check before any booking confirmation."}
+    },
+    {
+      "id": "rasha-rizk-jeddah-2026",
+      "active": true,
+      "priority": 8,
+      "startDate": "2026-09-19",
+      "endDate": "2026-09-19",
+      "doorsTime": "19:00",
+      "startTime": "20:00",
+      "endTime": "22:00",
+      "title": {"ar":"رشا رزق — الصوت الذهبي لسبيستون","en":"Rasha Rizk — Spacetoon Golden Voice Live","es":"Rasha Rizk — La voz dorada de Spacetoon en directo"},
+      "category": {"ar":"موسيقى وعائلات","en":"Music & families","es":"Música y familias"},
+      "location": {"ar":"عبادي الجوهر أرينا، جدة","en":"Abadi Aljohar Arena, Jeddah","es":"Abadi Aljohar Arena, Yeda"},
+      "aventuraPlan": {"ar":"جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات","en":"Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services","es":"Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"},
+      "image": "assets/images/collection.webp",
+      "imageAlt": {"ar":"تفاصيل ضيافة أفنتورا كصورة سياقية لتجربة مسائية","en":"Aventura hospitality details as context for an evening experience","es":"Detalles de hospitalidad de Aventura como contexto para una experiencia nocturna"},
+      "sourceUrl": "https://jeddah.platinumlist.net/event-tickets/107901/rasha-rizk-spacetoon-golden-voice-live-in-jeddah",
+      "audience": {"ar":"العائلات والضيوف العرب ومحبو سبيستون ومجموعات الضيافة الخاصة","en":"Families, Arab guests, Spacetoon fans and private-hosting groups","es":"Familias, huéspedes árabes, seguidores de Spacetoon y grupos de hospitalidad privada"},
+      "ticketing": {"status":"on_sale","priceFromSAR":175,"ar":"التذاكر معروضة للبيع عبر Platinumlist.","en":"Tickets are on sale via Platinumlist.","es":"Entradas a la venta en Platinumlist."},
+      "verification": {"checkedOn":"2026-09-16","status":"retained","notes":"Previously verified listing retained; re-check before any booking confirmation."}
     },
     {
       "id": "faia-younan-jazz-jeddah-2026",
       "active": true,
-      "priority": 6,
+      "priority": 9,
       "startDate": "2026-09-25",
       "endDate": "2026-09-25",
-      "title": {
-        "ar": "ليلة جاز في جدة مع فايا يونان",
-        "en": "Faia Younan — An Evening in Jazz in Jeddah",
-        "es": "Faia Younan — Una noche de jazz en Yeda"
-      },
-      "category": {
-        "ar": "موسيقى وثقافة",
-        "en": "Music & culture",
-        "es": "Música y cultura"
-      },
-      "location": {
-        "ar": "النادي الأدبي الثقافي بجدة",
-        "en": "Jeddah Literary Cultural Club",
-        "es": "Jeddah Literary Cultural Club"
-      },
-      "audience": {
-        "ar": "الأزواج، الضيوف الثقافيون، التنفيذيون ومجموعات VIP الصغيرة",
-        "en": "Couples, cultural guests, executives and small VIP groups",
-        "es": "Parejas, huéspedes culturales, ejecutivos y pequeños grupos VIP"
-      },
-      "ticketing": {
-        "status": "on_sale",
-        "priceFromSAR": 200,
-        "age": "15+",
-        "ar": "التذاكر معروضة للبيع عبر Platinumlist، والدخول لمن هم فوق 15 عامًا.",
-        "en": "Tickets are on sale via Platinumlist; admission is for ages 15+.",
-        "es": "Entradas a la venta en Platinumlist; acceso para mayores de 15 años."
-      },
-      "marketingAngle": {
-        "ar": "أمسية موسيقية هادئة يمكن تحويلها إلى تجربة مسائية راقية تشمل عشاءً وتنقلًا خاصًا قبل الحفل.",
-        "en": "A refined evening event that pairs naturally with private transport and a curated dinner before the performance.",
-        "es": "Una velada refinada que combina de forma natural con transporte privado y una cena seleccionada antes del concierto."
-      },
-      "whyAventura": {
-        "ar": "تناسب الضيوف الباحثين عن برنامج ثقافي هادئ أكثر من الفعاليات الجماهيرية، ويمكن تنسيقها بسهولة كتجربة VIP صغيرة.",
-        "en": "Well suited to guests seeking a calmer cultural program than a mass event, and easy to package as a small VIP experience.",
-        "es": "Adecuada para huéspedes que buscan un programa cultural más tranquilo y fácil de presentar como experiencia VIP reducida."
-      },
-      "aventuraPlan": {
-        "ar": "تنقل خاص • عشاء مختار • استقبال قبل الحفل • حضور الأمسية • عودة خاصة بعد الفعالية",
-        "en": "Private transport • Curated dinner • Pre-show hosting • Event attendance • Private return transfer",
-        "es": "Transporte privado • Cena seleccionada • Recepción previa • Asistencia al evento • Regreso privado"
-      },
+      "title": {"ar":"ليلة جاز في جدة مع فايا يونان","en":"Faia Younan — An Evening in Jazz in Jeddah","es":"Faia Younan — Una noche de jazz en Yeda"},
+      "category": {"ar":"موسيقى وثقافة","en":"Music & culture","es":"Música y cultura"},
+      "location": {"ar":"النادي الأدبي الثقافي بجدة","en":"Jeddah Literary Cultural Club","es":"Jeddah Literary Cultural Club"},
+      "aventuraPlan": {"ar":"تنقل خاص • عشاء مختار • استقبال قبل الحفل • حضور الأمسية • عودة خاصة بعد الفعالية","en":"Private transport • Curated dinner • Pre-show hosting • Event attendance • Private return transfer","es":"Transporte privado • Cena seleccionada • Recepción previa • Asistencia al evento • Regreso privado"},
       "image": "assets/images/event-private.webp",
-      "imageAlt": {
-        "ar": "أجواء جاز موسيقية كصورة سياقية لأمسية فايا يونان",
-        "en": "Jazz performance atmosphere as context for Faia Younan evening",
-        "es": "Ambiente de jazz como contexto para la velada de Faia Younan"
-      },
+      "imageAlt": {"ar":"أجواء جاز موسيقية كصورة سياقية لأمسية فايا يونان","en":"Jazz performance atmosphere as context for Faia Younan evening","es":"Ambiente de jazz como contexto para la velada de Faia Younan"},
       "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/108211/faia-younan-a-jazz-in-jeddah",
-      "verification": {
-        "checkedOn": "2026-09-13",
-        "status": "confirmed",
-        "notes": "Platinumlist shows 25 Sep 2026, Jeddah Literary Cultural Club, from SAR 200, admission 15+."
-      },
-      "mediaPack": [
-        {
-          "usage": "social-context",
-          "source": "Unsplash",
-          "creator": "Jens Thekkeveettil",
-          "pageUrl": "https://unsplash.com/photos/person-playing-saxophone-dBWvUqBoOU8",
-          "license": "Unsplash License — free commercial use; attribution not required but recommended",
-          "credit": "Photo by Jens Thekkeveettil on Unsplash"
-        }
-      ],
-      "designNotes": {
-        "ar": "الصورة سياقية وليست صورة للفنانة. لا تستخدمي صورة فايا يونان أو شعار الجهة المنظمة إلا من مادة صحفية مرخّصة أو بإذن. اجعلي البطاقة هادئة وواضحة مع إبراز «25 سبتمبر» و«النادي الأدبي الثقافي».",
-        "en": "The image is contextual, not the artist. Do not use Faia Younan imagery or organiser logos unless supplied under a clear licence or permission.",
-        "es": "La imagen es contextual, no de la artista. No usar imágenes de Faia Younan ni logotipos del organizador sin licencia o permiso claros."
-      }
+      "audience": {"ar":"الأزواج، الضيوف الثقافيون، التنفيذيون ومجموعات VIP الصغيرة","en":"Couples, cultural guests, executives and small VIP groups","es":"Parejas, huéspedes culturales, ejecutivos y pequeños grupos VIP"},
+      "ticketing": {"status":"on_sale","priceFromSAR":200,"age":"15+","ar":"التذاكر معروضة للبيع عبر Platinumlist، والدخول لمن هم فوق 15 عامًا.","en":"Tickets are on sale via Platinumlist; admission is for ages 15+.","es":"Entradas a la venta en Platinumlist; acceso para mayores de 15 años."},
+      "verification": {"checkedOn":"2026-09-16","status":"retained","notes":"Previously verified listing retained; re-check before any booking confirmation."}
     }
   ],
   "reviewSummary": {
-    "added": [
-      "gulf-cup-27-jeddah-2026",
-      "faia-younan-jazz-jeddah-2026"
-    ],
-    "skipped": [
-      "mohannad-almufarrej-saudi-night-2026"
-    ],
-    "note": "Gulf Cup 27 is featured first for its strong corporate, delegation and VIP fit; other events retain editorial priority order."
+    "added": ["meta-geds-2026", "saudi-fashiontex-2026", "saudi-shoes-expo-2026", "saudi-food-show-2026"],
+    "updated": ["saudi-industry-forum-2026"],
+    "publishingScope": "website_only",
+    "note": "Current publishing scope is website event cards only. Social-media production is paused unless explicitly reactivated."
   }
 }
