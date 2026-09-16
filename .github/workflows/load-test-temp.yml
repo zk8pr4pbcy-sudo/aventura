@@ -1,0 +1,105 @@
+name: Temporary Production Load Test
+
+on:
+  push:
+    branches:
+      - ops/load-test-20260916
+
+permissions:
+  contents: read
+
+jobs:
+  load-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Run staged safe GET-only load test
+        shell: bash
+        run: |
+          python - <<'PY'
+          import concurrent.futures
+          import statistics
+          import time
+          import urllib.error
+          import urllib.request
+
+          urls = [
+              "https://aventuraksa.com/",
+              "https://aventuraksa.com/events.html",
+              "https://aventuraksa.com/jeddah-picks/",
+              "https://aventuraksa.com/experience-historic-jeddah.html",
+          ]
+
+          stages = [
+              ("baseline", 1, 20),
+              ("light", 5, 100),
+              ("moderate", 20, 300),
+          ]
+
+          def fetch(i):
+              url = urls[i % len(urls)]
+              req = urllib.request.Request(
+                  url,
+                  headers={
+                      "User-Agent": "Aventura-Safe-Load-Test/1.0",
+                      "Accept": "text/html,application/xhtml+xml",
+                  },
+              )
+              started = time.perf_counter()
+              status = 0
+              size = 0
+              error = ""
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as response:
+                      status = response.getcode()
+                      body = response.read()
+                      size = len(body)
+              except urllib.error.HTTPError as exc:
+                  status = exc.code
+                  error = f"HTTPError:{exc.code}"
+              except Exception as exc:
+                  error = f"{type(exc).__name__}:{exc}"
+              elapsed_ms = (time.perf_counter() - started) * 1000
+              return url, status, elapsed_ms, size, error
+
+          overall_failures = 0
+          for name, concurrency, requests in stages:
+              t0 = time.perf_counter()
+              results = []
+              with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as pool:
+                  futures = [pool.submit(fetch, i) for i in range(requests)]
+                  for future in concurrent.futures.as_completed(futures):
+                      results.append(future.result())
+              wall = time.perf_counter() - t0
+
+              latencies = sorted(r[2] for r in results)
+              statuses = {}
+              errors = []
+              bytes_total = 0
+              for url, status, elapsed_ms, size, error in results:
+                  statuses[status] = statuses.get(status, 0) + 1
+                  bytes_total += size
+                  if error or not (200 <= status < 400):
+                      errors.append((url, status, error))
+
+              p50 = statistics.median(latencies)
+              p95 = latencies[max(0, min(len(latencies)-1, int(len(latencies)*0.95)-1))]
+              p99 = latencies[max(0, min(len(latencies)-1, int(len(latencies)*0.99)-1))]
+              avg = statistics.mean(latencies)
+              rps = len(results) / wall if wall else 0
+              failure_rate = (len(errors) / len(results) * 100) if results else 0
+              overall_failures += len(errors)
+
+              print(f"STAGE {name}")
+              print(f"requests={len(results)} concurrency={concurrency} wall_s={wall:.3f} rps={rps:.2f}")
+              print(f"latency_ms avg={avg:.1f} p50={p50:.1f} p95={p95:.1f} p99={p99:.1f} max={max(latencies):.1f}")
+              print(f"status_counts={statuses} failure_rate_pct={failure_rate:.2f} transferred_bytes={bytes_total}")
+              if errors:
+                  print("sample_errors=")
+                  for row in errors[:10]:
+                      print(row)
+              print("---")
+
+          if overall_failures:
+              raise SystemExit(f"Load test completed with {overall_failures} failed requests")
+          PY
