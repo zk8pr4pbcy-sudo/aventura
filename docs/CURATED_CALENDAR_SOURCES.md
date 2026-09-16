@@ -1,10 +1,19 @@
 # Aventura Curated Calendar — source and linking rules
 
-Last reviewed: 2026-09-10
+Last reviewed: 2026-09-16
 
 ## Purpose
 
 The Curated Calendar may link visitors to an event organiser's official website or to an independent ticketing platform. Aventura must not present those outbound destinations as Aventura-owned pages, imply an official partnership that does not exist, or resell third-party tickets unless a separate authorised commercial arrangement is in place.
+
+## Current publishing scope
+
+For the current operating period, curated-event updates are published **only on the Aventura website as event cards**.
+
+- Do not create, schedule, or publish social-media posts, stories, reels, or event cards for Instagram, TikTok, Snapchat, X, or LinkedIn as part of this workflow.
+- Maya/social-media production is paused for curated-event updates unless the user explicitly reactivates it.
+- Salem continues to research and verify events, but the publishable output is the website event card and its verified source data only.
+- Website cards should remain concise and tied to the event itself, while keeping Aventura's service CTA clearly separate from the organiser/ticket source.
 
 ## Publishing rules
 
@@ -17,6 +26,7 @@ The Curated Calendar may link visitors to an event organiser's official website 
 5. Keep the Aventura service CTA separate from the external event/ticket link.
 6. Aventura's disclaimer must state that Aventura is independent and is not the event organiser, official partner, or ticket seller unless explicitly stated otherwise.
 7. Salem must verify the source, event date, venue, and source terms again whenever an event is added or materially updated.
+8. During the current website-only period, no social-media deliverable is created from a curated-event update.
 
 ## Sources reviewed for the initial pilot
 
