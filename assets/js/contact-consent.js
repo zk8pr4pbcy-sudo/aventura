@@ -44,3 +44,15 @@
     consent.scrollIntoView({ behavior: "smooth", block: "center" });
   }, true);
 })();
+
+(function loadSponsoredAgentPrefill() {
+  "use strict";
+  var params = new URLSearchParams(window.location.search);
+  var source = String(params.get("avsrc") || "").toLowerCase();
+  if (["chatgpt", "chatgpt-ad", "chatgpt-sponsored-agent"].indexOf(source) === -1) return;
+
+  var script = document.createElement("script");
+  script.src = "assets/js/sponsored-agent-prefill.js?v=20260917";
+  script.defer = true;
+  document.head.appendChild(script);
+})();
