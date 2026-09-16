@@ -1,0 +1,128 @@
+name: Temporary Realistic Production Load Test
+
+on:
+  push:
+    branches:
+      - ops/load-test-realistic-20260916
+
+permissions:
+  contents: read
+
+jobs:
+  realistic-load-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Run staged browser-like GET-only load test
+        shell: bash
+        run: |
+          python - <<'PY'
+          import concurrent.futures
+          import statistics
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+          from html.parser import HTMLParser
+
+          ORIGIN = "https://aventuraksa.com"
+          TARGETS = ["/", "/?lang=en", "/?lang=es", "/events.html", "/jeddah-picks/", "/experience-historic-jeddah.html"]
+          STAGES = [("500-vu", 500, 250), ("750-vu", 750, 300)]
+          MAX_ASSETS_PER_PAGE = 16
+          REQUEST_TIMEOUT = 15
+          MAX_FAILURE_RATE_PCT = 0.5
+          MAX_DOC_P95_MS = 2000.0
+          MAX_ASSET_P95_MS = 3000.0
+
+          class AssetParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.assets=[]; self.base_href=None
+              def handle_starttag(self, tag, attrs):
+                  attrs=dict(attrs)
+                  if tag=="base" and attrs.get("href") and self.base_href is None:
+                      self.base_href=attrs["href"]; return
+                  candidate=None
+                  if tag=="script" and attrs.get("src"): candidate=attrs["src"]
+                  elif tag=="img" and attrs.get("src"): candidate=attrs["src"]
+                  elif tag=="link" and attrs.get("href"):
+                      rel=(attrs.get("rel") or "").lower()
+                      if "stylesheet" in rel or "preload" in rel: candidate=attrs["href"]
+                  if candidate: self.assets.append(candidate)
+
+          def pct(values, p):
+              if not values: return 0.0
+              values=sorted(values); i=max(0,min(len(values)-1,int(len(values)*p)-1)); return values[i]
+
+          def fetch(url):
+              req=urllib.request.Request(url,headers={
+                  "User-Agent":"Aventura-Realistic-Safe-Load-Test/1.3",
+                  "Accept":"text/html,application/xhtml+xml,application/javascript,text/css,image/avif,image/webp,image/*,*/*;q=0.8",
+                  "Accept-Language":"ar-SA,ar;q=0.9,en;q=0.8,es;q=0.7",
+              })
+              t=time.perf_counter(); status=0; body=b""; error=""
+              try:
+                  with urllib.request.urlopen(req,timeout=REQUEST_TIMEOUT) as r:
+                      status=r.getcode(); body=r.read()
+              except urllib.error.HTTPError as exc:
+                  status=exc.code; error=f"HTTPError:{exc.code}"
+              except Exception as exc:
+                  error=f"{type(exc).__name__}:{exc}"
+              return url,status,(time.perf_counter()-t)*1000,len(body),error,body
+
+          def resolve(page_url, base_href, candidate):
+              base=urllib.parse.urljoin(page_url,base_href) if base_href else page_url
+              absolute=urllib.parse.urljoin(base,candidate); parsed=urllib.parse.urlparse(absolute)
+              if parsed.scheme not in ("http","https") or parsed.netloc!="aventuraksa.com": return None
+              return urllib.parse.urlunparse((parsed.scheme,parsed.netloc,parsed.path,"",parsed.query,""))
+
+          for stage_i,(name,users,asset_concurrency) in enumerate(STAGES):
+              started=time.perf_counter(); docs=[]
+              with concurrent.futures.ThreadPoolExecutor(max_workers=users) as pool:
+                  work=[]
+                  for i in range(users):
+                      target=TARGETS[i%len(TARGETS)]; url=urllib.parse.urljoin(ORIGIN,target)
+                      work.append((target,url,pool.submit(fetch,url)))
+                  for target,url,f in work: docs.append((target,url,f.result()))
+
+              doc_lat=[]; doc_fail=[]; asset_tasks=[]
+              for target,page_url,row in docs:
+                  _,status,lat,_,err,body=row; doc_lat.append(lat)
+                  if err or not (200<=status<400): doc_fail.append(row); continue
+                  parser=AssetParser()
+                  try: parser.feed(body.decode("utf-8",errors="ignore"))
+                  except Exception: pass
+                  seen=set()
+                  for candidate in parser.assets:
+                      asset=resolve(page_url,parser.base_href,candidate)
+                      if not asset or asset in seen: continue
+                      seen.add(asset); asset_tasks.append(asset)
+                      if len(seen)>=MAX_ASSETS_PER_PAGE: break
+
+              assets=[]
+              with concurrent.futures.ThreadPoolExecutor(max_workers=asset_concurrency) as pool:
+                  futures=[pool.submit(fetch,u) for u in asset_tasks]
+                  for f in concurrent.futures.as_completed(futures): assets.append(f.result())
+
+              rows=[r for _,_,r in docs]+assets
+              failures=[r for r in rows if r[4] or not (200<=r[1]<400)]
+              asset_fail=[r for r in assets if r[4] or not (200<=r[1]<400)]
+              asset_lat=[r[2] for r in assets]
+              statuses={}; total_bytes=0
+              for _,status,_,size,_,_ in rows:
+                  statuses[status]=statuses.get(status,0)+1; total_bytes+=size
+              wall=time.perf_counter()-started; failure_rate=(len(failures)/len(rows)*100) if rows else 0
+              doc_p95=pct(doc_lat,.95); asset_p95=pct(asset_lat,.95); rps=len(rows)/wall if wall else 0
+              print(f"STAGE {name}")
+              print(f"virtual_users={users} asset_concurrency_cap={asset_concurrency} wall_s={wall:.3f}")
+              print(f"documents={len(docs)} doc_failures={len(doc_fail)} doc_latency_ms_avg={statistics.mean(doc_lat):.1f} doc_p50={statistics.median(doc_lat):.1f} doc_p95={doc_p95:.1f} doc_p99={pct(doc_lat,.99):.1f}")
+              print(f"assets={len(assets)} asset_failures={len(asset_fail)} asset_latency_ms_avg={statistics.mean(asset_lat):.1f} asset_p50={statistics.median(asset_lat):.1f} asset_p95={asset_p95:.1f} asset_p99={pct(asset_lat,.99):.1f}")
+              print(f"http_requests={len(rows)} rps={rps:.2f} failure_rate_pct={failure_rate:.3f} status_counts={statuses} transferred_bytes={total_bytes}")
+              if failures:
+                  print("sample_request_failures=")
+                  for r in failures[:10]: print(r[0],r[1],r[4])
+              print("---")
+              if failure_rate>MAX_FAILURE_RATE_PCT: raise SystemExit(f"Safety stop: request failure rate {failure_rate:.3f}%")
+              if doc_p95>MAX_DOC_P95_MS: raise SystemExit(f"Safety stop: document p95 {doc_p95:.1f}ms")
+              if asset_p95>MAX_ASSET_P95_MS: raise SystemExit(f"Safety stop: asset p95 {asset_p95:.1f}ms")
+              if stage_i<len(STAGES)-1: time.sleep(8)
+          PY
