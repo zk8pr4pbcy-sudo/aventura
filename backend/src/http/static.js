@@ -4,6 +4,7 @@ const ADMIN_ASSETS = new Map([
   ["/admin", ["index.html", "text/html; charset=utf-8"]],
   ["/admin/", ["index.html", "text/html; charset=utf-8"]],
   ["/admin/app.js", ["app.js", "text/javascript; charset=utf-8"]],
+  ["/admin/content.js", ["content.js", "text/javascript; charset=utf-8"]],
   ["/admin/styles.css", ["styles.css", "text/css; charset=utf-8"]]
 ]);
 
