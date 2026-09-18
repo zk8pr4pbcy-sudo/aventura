@@ -111,7 +111,36 @@ jobs:
             [saved.referenceNumber]
           );
           if (check.rowCount !== 1 || check.rows[0].status !== "new") {
-            throw new Error("Persisted request could not be verified");
+            throw new Error("Persisted experience request could not be verified");
+          }
+          await pool.end();
+          NODE
+
+      - name: Exercise collaboration request persistence
+        run: |
+          node --input-type=module <<'NODE'
+          import { createDatabasePool } from "./src/database/pool.js";
+          import { createPostgresCollaborationRequestRepository } from "./src/collaboration-requests/postgres-repository.js";
+          const pool = createDatabasePool(process.env.DATABASE_URL);
+          const repo = createPostgresCollaborationRequestRepository(pool);
+          const saved = await repo.create({
+            fullName: "Aventura CI Partner",
+            email: "partner@example.com",
+            phone: null,
+            language: "ar",
+            organizationName: "Example Company",
+            collaborationType: "corporate-partnership",
+            proposal: "A test collaboration proposal used only by continuous integration."
+          });
+          if (!/^AV-COL-\d{4}-\d{6}$/.test(saved.referenceNumber)) {
+            throw new Error(`Unexpected reference: ${saved.referenceNumber}`);
+          }
+          const check = await pool.query(
+            "SELECT status FROM collaboration_requests WHERE reference_number = $1",
+            [saved.referenceNumber]
+          );
+          if (check.rowCount !== 1 || check.rows[0].status !== "new") {
+            throw new Error("Persisted collaboration request could not be verified");
           }
           await pool.end();
           NODE
