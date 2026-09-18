@@ -5,11 +5,16 @@ import { readJson, sendJson } from "./http/json.js";
 import { validateExperienceRequest } from "./experience-requests/validation.js";
 import { createExperienceRequestService } from "./experience-requests/service.js";
 import { createUnconfiguredExperienceRequestRepository } from "./experience-requests/repository.js";
+import { validateCollaborationRequest } from "./collaboration-requests/validation.js";
+import { createCollaborationRequestService } from "./collaboration-requests/service.js";
+import { createUnconfiguredCollaborationRequestRepository } from "./collaboration-requests/repository.js";
 import { createDatabaseDependencies } from "./database/dependencies.js";
 
 export function createServer(config = loadConfig(), dependencies = {}) {
   const experienceRequests = dependencies.experienceRequests ||
     createExperienceRequestService(createUnconfiguredExperienceRequestRepository());
+  const collaborationRequests = dependencies.collaborationRequests ||
+    createCollaborationRequestService(createUnconfiguredCollaborationRequestRepository());
 
   return http.createServer(async (req, res) => {
     const url = new URL(req.url || "/", "http://localhost");
@@ -29,6 +34,29 @@ export function createServer(config = loadConfig(), dependencies = {}) {
         }
 
         const request = await experienceRequests.create(validated.value);
+        sendJson(res, 201, {
+          referenceNumber: request.referenceNumber,
+          status: request.status
+        });
+      } catch (error) {
+        const statusCode = Number.isInteger(error.statusCode) ? error.statusCode : 500;
+        sendJson(res, statusCode, {
+          error: statusCode >= 500 ? "service_unavailable" : error.message
+        });
+      }
+      return;
+    }
+
+    if (req.method === "POST" && url.pathname === "/api/v1/collaboration-requests") {
+      try {
+        const payload = await readJson(req);
+        const validated = validateCollaborationRequest(payload);
+        if (!validated.ok) {
+          sendJson(res, 422, { error: "validation_failed", fields: validated.errors });
+          return;
+        }
+
+        const request = await collaborationRequests.create(validated.value);
         sendJson(res, 201, {
           referenceNumber: request.referenceNumber,
           status: request.status
