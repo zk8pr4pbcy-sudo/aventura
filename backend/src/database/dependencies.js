@@ -11,6 +11,8 @@ import { createAdminRequestsService } from "../admin/requests-service.js";
 import { createPostgresAdminRequestsRepository } from "../admin/postgres-requests-repository.js";
 import { createAdminDashboardService } from "../admin/dashboard-service.js";
 import { createPostgresAdminDashboardRepository } from "../admin/postgres-dashboard-repository.js";
+import { createWebsiteContentService } from "../website-content/service.js";
+import { createPostgresWebsiteContentRepository } from "../website-content/postgres-repository.js";
 
 export function createDatabaseDependencies(config) {
   if (!config.databaseUrl) return { dependencies: {}, close: async () => {} };
@@ -36,6 +38,9 @@ export function createDatabaseDependencies(config) {
       adminDashboard: createAdminDashboardService(
         createPostgresAdminDashboardRepository(pool),
         adminRequests
+      ),
+      websiteContent: createWebsiteContentService(
+        createPostgresWebsiteContentRepository(pool)
       )
     },
     close: () => pool.end()
