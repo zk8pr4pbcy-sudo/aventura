@@ -114,6 +114,126 @@
           </div>
         </section>
 
+        <section id="contentPanel" class="panel" hidden>
+          <div class="panel-heading">
+            <div>
+              <h2>محتوى الموقع</h2>
+              <p class="muted">إدارة الفعاليات والعروض والإعلانات والمحتوى الديناميكي المحدد فقط.</p>
+            </div>
+            <div class="filters">
+              <label>
+                <span>النوع</span>
+                <select id="contentTypeFilter">
+                  <option value="">الكل</option>
+                  <option value="event">الفعاليات</option>
+                  <option value="offer">العروض</option>
+                  <option value="announcement">الإعلانات</option>
+                  <option value="experience">التجارب</option>
+                </select>
+              </label>
+              <label>
+                <span>الحالة</span>
+                <select id="contentStatusFilter">
+                  <option value="">الكل</option>
+                  <option value="draft">مسودة</option>
+                  <option value="published">منشور</option>
+                  <option value="archived">مؤرشف</option>
+                </select>
+              </label>
+              <button id="newContentButton" class="button button-ghost" type="button">محتوى جديد</button>
+            </div>
+          </div>
+
+          <div class="detail-grid">
+            <form id="contentForm" class="detail-card form-stack">
+              <h3 id="contentFormTitle">محتوى جديد</h3>
+              <input id="contentIdInput" type="hidden">
+              <label>
+                <span>نوع المحتوى</span>
+                <select id="contentTypeInput" required>
+                  <option value="event">فعالية</option>
+                  <option value="offer">عرض</option>
+                  <option value="announcement">إعلان</option>
+                  <option value="experience">تجربة</option>
+                </select>
+              </label>
+              <label>
+                <span>المعرّف النصي</span>
+                <input id="contentSlugInput" type="text" maxlength="120" pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="jeddah-event-name" required>
+              </label>
+              <label>
+                <span>العنوان العربي</span>
+                <input id="contentTitleArInput" type="text" maxlength="160" required>
+              </label>
+              <label>
+                <span>English title</span>
+                <input id="contentTitleEnInput" type="text" maxlength="160" dir="ltr">
+              </label>
+              <label>
+                <span>Título en español</span>
+                <input id="contentTitleEsInput" type="text" maxlength="160" dir="ltr">
+              </label>
+              <label>
+                <span>النص العربي</span>
+                <textarea id="contentBodyArInput" rows="5" maxlength="20000"></textarea>
+              </label>
+              <label>
+                <span>English body</span>
+                <textarea id="contentBodyEnInput" rows="4" maxlength="20000" dir="ltr"></textarea>
+              </label>
+              <label>
+                <span>Texto en español</span>
+                <textarea id="contentBodyEsInput" rows="4" maxlength="20000" dir="ltr"></textarea>
+              </label>
+              <label>
+                <span>مسار/رابط الصورة</span>
+                <input id="contentMediaUrlInput" type="text" maxlength="2000" dir="ltr" placeholder="/assets/... أو https://...">
+              </label>
+              <label>
+                <span>بداية العرض — توقيت الرياض</span>
+                <input id="contentStartsAtInput" type="datetime-local">
+              </label>
+              <label>
+                <span>نهاية العرض — توقيت الرياض</span>
+                <input id="contentEndsAtInput" type="datetime-local">
+              </label>
+              <label>
+                <span>ترتيب الظهور</span>
+                <input id="contentSortOrderInput" type="number" min="-10000" max="10000" value="0">
+              </label>
+              <label>
+                <span>بيانات إضافية JSON</span>
+                <textarea id="contentPayloadInput" rows="6" dir="ltr">{}</textarea>
+              </label>
+              <div class="filters">
+                <button id="contentSaveButton" class="button button-primary" type="submit">حفظ</button>
+                <button id="contentPublishButton" class="button button-primary" type="button" hidden>نشر</button>
+                <button id="contentArchiveButton" class="button button-ghost" type="button" hidden>أرشفة</button>
+              </div>
+              <p id="contentMessage" class="message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="detail-card">
+              <h3>المحتوى المسجل</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>العنوان</th>
+                      <th>النوع</th>
+                      <th>الحالة</th>
+                      <th>فترة العرض</th>
+                      <th>آخر تحديث</th>
+                    </tr>
+                  </thead>
+                  <tbody id="contentBody"></tbody>
+                </table>
+                <p id="contentEmptyState" class="empty-state" hidden>لا يوجد محتوى مطابق.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="detailPanel" class="panel detail-panel" hidden>
           <div class="panel-heading">
             <div>
@@ -175,5 +295,6 @@
   </div>
 
   <script type="module" src="/admin/app.js"></script>
+  <script type="module" src="/admin/content.js"></script>
 </body>
 </html>
