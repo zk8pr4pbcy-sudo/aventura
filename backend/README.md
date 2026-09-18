@@ -15,6 +15,8 @@ The backend is being built and tested in isolation from the live public website.
 - PostgreSQL transactions for customer + request creation
 - public references such as `AV-EXP-YYYY-000001` and `AV-COL-YYYY-000002`
 
+Production public request ingestion is fail-closed: it is disabled by default and must be explicitly enabled only after the live forms and server-side abuse controls are configured.
+
 ### Request management
 
 - controlled request status transitions
@@ -30,12 +32,28 @@ The backend is being built and tested in isolation from the live public website.
 - roles: `owner`, `admin`, `operations`, `content`, `viewer`
 - least-privilege permissions
 - one-time Owner bootstrap command using environment variables only
+- in-process login failure limiting by normalized account and direct socket address
+- `429` responses include `Retry-After`
+- forwarded client-IP headers are not trusted until a production trusted-proxy boundary is explicitly defined
 
 Admin auth endpoints:
 
 - `POST /api/v1/admin/auth/login`
 - `GET /api/v1/admin/auth/session`
 - `POST /api/v1/admin/auth/logout`
+
+### Public request abuse protection
+
+When public request ingestion is enabled in production, server-side Turnstile verification is required by default.
+
+Runtime gates:
+
+- `PUBLIC_REQUESTS_ENABLED`
+- `TURNSTILE_REQUIRED`
+- `TURNSTILE_SECRET_KEY`
+- `TURNSTILE_HOSTNAMES`
+
+The server validates the Turnstile token before request validation/persistence and checks the expected action plus approved hostname. The token is never written into the business request records.
 
 ### Protected admin request API and UI
 
@@ -103,9 +121,20 @@ The private `/admin` UI includes the content workflow, but the live static websi
 
 No SMTP credentials are stored in the repository. If SMTP variables are absent, email delivery remains disabled.
 
-## Database
+## Database and recovery
 
 PostgreSQL is the database contract. Migrations live in `database/migrations/` and remain provider-neutral. The migration runner owns the transaction boundary and normalizes legacy outer `BEGIN/COMMIT` wrappers so each migration and its `schema_migrations` record are committed atomically.
+
+`Aventura Backend Recovery CI` performs a real recovery drill using PostgreSQL 17:
+
+1. apply all migrations to a fresh source database;
+2. insert representative experience and collaboration requests;
+3. create a custom-format `pg_dump` backup;
+4. restore the dump into a second clean database with `pg_restore`;
+5. verify required tables, migration history, persisted requests, and Aventura reference-number integrity;
+6. remove the temporary dump and recovery database.
+
+This proves the repository's logical backup is restorable. Production backup frequency, retention, encryption, geographic placement, and managed-provider point-in-time recovery remain deployment decisions and must be approved before customer data is stored.
 
 Run migrations:
 
@@ -150,8 +179,8 @@ npm test
 npm start
 ```
 
-`Aventura Backend CI` additionally starts a temporary PostgreSQL service, applies all migrations, runs the backend test suite, verifies the schema, and exercises real persistence, admin, content and notification paths without sending external email.
+`Aventura Backend CI` starts a temporary PostgreSQL service, applies all migrations, runs the backend test suite, verifies the schema, and exercises persistence, admin, content, notification and security paths without sending external email.
 
 ## Not production-ready yet
 
-Before production deployment, the project still requires an approved hosting/database location, approved production SMTP service and credentials, backup/restore validation, production secret management, rate limiting and abuse controls, final security review, final end-to-end testing, and the controlled public-form migration. Do not remove FormSubmit or route live customer traffic to this backend until those gates are completed and approved.
+Before production deployment, the project still requires an approved hosting/database location, approved production SMTP service and credentials, production secret management, the final trusted-proxy/CORS/API-origin design, provider-managed backup retention and recovery settings, final security review, final end-to-end testing, and the controlled public-form migration. Do not remove FormSubmit or route live customer traffic to this backend until those gates are completed and approved.
