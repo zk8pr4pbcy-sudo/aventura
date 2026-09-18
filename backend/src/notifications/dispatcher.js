@@ -3,6 +3,11 @@ function retryDelayMs(attempts) {
   return minutes * 60 * 1000;
 }
 
+function safeFailureCode(error) {
+  const value = error?.code || error?.name || "delivery_failed";
+  return String(value).replace(/[^A-Za-z0-9_.-]/g, "_").slice(0, 120) || "delivery_failed";
+}
+
 export function createNotificationDispatcher(outbox, transport, options = {}) {
   if (!outbox || typeof outbox.claimNext !== "function" || typeof outbox.markSent !== "function" || typeof outbox.markFailed !== "function") {
     throw new Error("notification outbox repository is required");
@@ -24,7 +29,7 @@ export function createNotificationDispatcher(outbox, transport, options = {}) {
         return { processed: true, sent: true, eventId: event.id };
       } catch (error) {
         const retryAt = new Date(now().getTime() + retryDelayMs(event.attempts));
-        await outbox.markFailed(event.id, error?.message || "delivery_failed", retryAt);
+        await outbox.markFailed(event.id, safeFailureCode(error), retryAt);
         return {
           processed: true,
           sent: false,
