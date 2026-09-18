@@ -7,6 +7,8 @@ import { createRequestWorkflowService } from "../request-workflow/service.js";
 import { createPostgresRequestWorkflowRepository } from "../request-workflow/postgres-repository.js";
 import { createAuthService } from "../auth/service.js";
 import { createPostgresAuthRepository } from "../auth/postgres-repository.js";
+import { createAdminRequestsService } from "../admin/requests-service.js";
+import { createPostgresAdminRequestsRepository } from "../admin/postgres-requests-repository.js";
 
 export function createDatabaseDependencies(config) {
   if (!config.databaseUrl) return { dependencies: {}, close: async () => {} };
@@ -23,7 +25,10 @@ export function createDatabaseDependencies(config) {
       requestWorkflow: createRequestWorkflowService(
         createPostgresRequestWorkflowRepository(pool)
       ),
-      auth: createAuthService(createPostgresAuthRepository(pool))
+      auth: createAuthService(createPostgresAuthRepository(pool)),
+      adminRequests: createAdminRequestsService(
+        createPostgresAdminRequestsRepository(pool)
+      )
     },
     close: () => pool.end()
   };
