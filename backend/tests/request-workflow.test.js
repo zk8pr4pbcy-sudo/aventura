@@ -2,6 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { createRequestWorkflowService } from "../src/request-workflow/service.js";
 
+const REQUEST_ID = "11111111-1111-4111-8111-111111111111";
+const USER_ID = "22222222-2222-4222-8222-222222222222";
+
 function fakeRepository(initialStatus = "new") {
   let status = initialStatus;
   const changes = [];
@@ -29,9 +32,9 @@ test("experience workflow accepts a valid status transition", async () => {
   const service = createRequestWorkflowService(fake.repository);
   const result = await service.changeStatus({
     kind: "experience",
-    requestId: "request-1",
+    requestId: REQUEST_ID,
     toStatus: "under_review",
-    actorUserId: "user-1",
+    actorUserId: USER_ID,
     note: "Initial review"
   });
   assert.equal(result.status, "under_review");
@@ -45,9 +48,9 @@ test("workflow rejects skipping directly from new to confirmed", async () => {
   await assert.rejects(
     service.changeStatus({
       kind: "experience",
-      requestId: "request-1",
+      requestId: REQUEST_ID,
       toStatus: "confirmed",
-      actorUserId: "user-1"
+      actorUserId: USER_ID
     }),
     (error) => error.message === "invalid_status_transition" && error.statusCode === 409
   );
@@ -60,9 +63,9 @@ test("collaboration workflow does not use quoted status", async () => {
   await assert.rejects(
     service.changeStatus({
       kind: "collaboration",
-      requestId: "request-2",
+      requestId: REQUEST_ID,
       toStatus: "quoted",
-      actorUserId: "user-1"
+      actorUserId: USER_ID
     }),
     /invalid_status_transition/
   );
@@ -74,11 +77,26 @@ test("internal note requires non-empty body", async () => {
   await assert.rejects(
     service.addNote({
       kind: "experience",
-      requestId: "request-1",
-      authorUserId: "user-1",
+      requestId: REQUEST_ID,
+      authorUserId: USER_ID,
       body: "   "
     }),
     /missing_required_fields/
   );
   assert.equal(fake.notes.length, 0);
+});
+
+test("workflow rejects malformed request identifiers before repository access", async () => {
+  const fake = fakeRepository();
+  const service = createRequestWorkflowService(fake.repository);
+  await assert.rejects(
+    service.changeStatus({
+      kind: "experience",
+      requestId: "not-a-uuid",
+      toStatus: "under_review",
+      actorUserId: USER_ID
+    }),
+    (error) => error.message === "invalid_request_id" && error.statusCode === 400
+  );
+  assert.equal(fake.changes.length, 0);
 });
