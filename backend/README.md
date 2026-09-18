@@ -50,6 +50,45 @@ Admin auth endpoints:
 
 All admin data endpoints require an authenticated session and the appropriate role permission.
 
+### Controlled website content management
+
+The backend controls only approved dynamic surfaces. It does **not** turn the whole Aventura website into a CMS and does not expose brand structure, navigation, hero layout, or core design controls.
+
+Supported content types:
+
+- `event`
+- `offer`
+- `announcement`
+- `experience`
+
+Lifecycle:
+
+- `draft`
+- `published`
+- `archived`
+
+Content capabilities:
+
+- Arabic, English and Spanish title/body fields
+- optional image/media URL
+- Jeddah/Riyadh display window stored as absolute timestamps
+- sort order and bounded structured JSON metadata
+- Audit Log entries for create, update, publish and archive actions
+- public delivery returns only published content inside its active time window and strips internal IDs/user metadata
+- content management is restricted to `owner`, `admin`, and `content` roles
+
+Content endpoints:
+
+- `GET /api/v1/content/:type` — public read-only feed for published content
+- `GET /api/v1/admin/content`
+- `POST /api/v1/admin/content`
+- `GET /api/v1/admin/content/:id`
+- `PATCH /api/v1/admin/content/:id`
+- `POST /api/v1/admin/content/:id/publish`
+- `POST /api/v1/admin/content/:id/archive`
+
+The private `/admin` UI includes the content workflow, but the live static website is **not connected to these feeds yet**.
+
 ### Durable notifications and email foundation
 
 - request creation writes a notification outbox event inside the same PostgreSQL transaction
@@ -66,7 +105,7 @@ No SMTP credentials are stored in the repository. If SMTP variables are absent, 
 
 ## Database
 
-PostgreSQL is the database contract. Migrations live in `database/migrations/` and remain provider-neutral.
+PostgreSQL is the database contract. Migrations live in `database/migrations/` and remain provider-neutral. The migration runner owns the transaction boundary and normalizes legacy outer `BEGIN/COMMIT` wrappers so each migration and its `schema_migrations` record are committed atomically.
 
 Run migrations:
 
@@ -111,7 +150,7 @@ npm test
 npm start
 ```
 
-`Aventura Backend CI` additionally starts a temporary PostgreSQL service, applies all migrations, runs the backend test suite, verifies the schema, and exercises real persistence and notification paths without sending external email.
+`Aventura Backend CI` additionally starts a temporary PostgreSQL service, applies all migrations, runs the backend test suite, verifies the schema, and exercises real persistence, admin, content and notification paths without sending external email.
 
 ## Not production-ready yet
 
