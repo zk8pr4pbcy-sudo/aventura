@@ -9,6 +9,7 @@ import { validateCollaborationRequest } from "./collaboration-requests/validatio
 import { createCollaborationRequestService } from "./collaboration-requests/service.js";
 import { createUnconfiguredCollaborationRequestRepository } from "./collaboration-requests/repository.js";
 import { readAdminSessionCookie, createAdminSessionCookie, clearAdminSessionCookie } from "./auth/cookies.js";
+import { requirePermission } from "./auth/permissions.js";
 import { createDatabaseDependencies } from "./database/dependencies.js";
 
 function sendError(res, error) {
@@ -18,12 +19,24 @@ function sendError(res, error) {
   });
 }
 
+async function authenticateAdmin(req, auth, permission) {
+  if (!auth) {
+    const error = new Error("service_unavailable");
+    error.statusCode = 503;
+    throw error;
+  }
+  const user = await auth.authenticate(readAdminSessionCookie(req) || "");
+  return requirePermission(user, permission);
+}
+
 export function createServer(config = loadConfig(), dependencies = {}) {
   const experienceRequests = dependencies.experienceRequests ||
     createExperienceRequestService(createUnconfiguredExperienceRequestRepository());
   const collaborationRequests = dependencies.collaborationRequests ||
     createCollaborationRequestService(createUnconfiguredCollaborationRequestRepository());
   const auth = dependencies.auth || null;
+  const adminRequests = dependencies.adminRequests || null;
+  const requestWorkflow = dependencies.requestWorkflow || null;
   const secureAdminCookie = config.env === "production";
 
   return http.createServer(async (req, res) => {
@@ -117,6 +130,87 @@ export function createServer(config = loadConfig(), dependencies = {}) {
         if (token) await auth.logout(token);
         res.setHeader("set-cookie", clearAdminSessionCookie({ secure: secureAdminCookie }));
         sendJson(res, 200, { ok: true });
+      } catch (error) {
+        sendError(res, error);
+      }
+      return;
+    }
+
+    if (req.method === "GET" && url.pathname === "/api/v1/admin/requests") {
+      if (!adminRequests) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        await authenticateAdmin(req, auth, "requests:read");
+        const requests = await adminRequests.list({
+          kind: url.searchParams.get("kind") || null,
+          status: url.searchParams.get("status") || null,
+          limit: url.searchParams.get("limit") || undefined,
+          before: url.searchParams.get("before") || null
+        });
+        sendJson(res, 200, { requests });
+      } catch (error) {
+        sendError(res, error);
+      }
+      return;
+    }
+
+    const requestMatch = url.pathname.match(/^\/api\/v1\/admin\/requests\/(experience|collaboration)\/([0-9a-f-]+)$/i);
+    if (req.method === "GET" && requestMatch) {
+      if (!adminRequests) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        await authenticateAdmin(req, auth, "requests:read");
+        const request = await adminRequests.get({ kind: requestMatch[1], requestId: requestMatch[2] });
+        sendJson(res, 200, { request });
+      } catch (error) {
+        sendError(res, error);
+      }
+      return;
+    }
+
+    const statusMatch = url.pathname.match(/^\/api\/v1\/admin\/requests\/(experience|collaboration)\/([0-9a-f-]+)\/status$/i);
+    if (req.method === "PATCH" && statusMatch) {
+      if (!requestWorkflow) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        const user = await authenticateAdmin(req, auth, "requests:update");
+        const payload = await readJson(req, 8 * 1024);
+        const result = await requestWorkflow.changeStatus({
+          kind: statusMatch[1],
+          requestId: statusMatch[2],
+          toStatus: payload.status,
+          actorUserId: user.id,
+          note: payload.note
+        });
+        sendJson(res, 200, result);
+      } catch (error) {
+        sendError(res, error);
+      }
+      return;
+    }
+
+    const noteMatch = url.pathname.match(/^\/api\/v1\/admin\/requests\/(experience|collaboration)\/([0-9a-f-]+)\/notes$/i);
+    if (req.method === "POST" && noteMatch) {
+      if (!requestWorkflow) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        const user = await authenticateAdmin(req, auth, "notes:write");
+        const payload = await readJson(req, 8 * 1024);
+        const note = await requestWorkflow.addNote({
+          kind: noteMatch[1],
+          requestId: noteMatch[2],
+          authorUserId: user.id,
+          body: payload.body
+        });
+        sendJson(res, 201, { note });
       } catch (error) {
         sendError(res, error);
       }
