@@ -3,6 +3,10 @@ import { createExperienceRequestService } from "../experience-requests/service.j
 import { createPostgresExperienceRequestRepository } from "../experience-requests/postgres-repository.js";
 import { createCollaborationRequestService } from "../collaboration-requests/service.js";
 import { createPostgresCollaborationRequestRepository } from "../collaboration-requests/postgres-repository.js";
+import { createRequestWorkflowService } from "../request-workflow/service.js";
+import { createPostgresRequestWorkflowRepository } from "../request-workflow/postgres-repository.js";
+import { createAuthService } from "../auth/service.js";
+import { createPostgresAuthRepository } from "../auth/postgres-repository.js";
 
 export function createDatabaseDependencies(config) {
   if (!config.databaseUrl) return { dependencies: {}, close: async () => {} };
@@ -15,7 +19,11 @@ export function createDatabaseDependencies(config) {
       ),
       collaborationRequests: createCollaborationRequestService(
         createPostgresCollaborationRequestRepository(pool)
-      )
+      ),
+      requestWorkflow: createRequestWorkflowService(
+        createPostgresRequestWorkflowRepository(pool)
+      ),
+      auth: createAuthService(createPostgresAuthRepository(pool))
     },
     close: () => pool.end()
   };
