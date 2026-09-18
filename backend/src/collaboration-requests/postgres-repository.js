@@ -20,13 +20,27 @@ export function createPostgresCollaborationRequestRepository(pool) {
           `INSERT INTO collaboration_requests
              (customer_id, organization_name, collaboration_type, proposal, request_payload)
            VALUES ($1, $2, $3, $4, $5::jsonb)
-           RETURNING reference_number, status`,
+           RETURNING id, reference_number, status`,
           [
             customer.rows[0].id,
             input.organizationName,
             input.collaborationType,
             input.proposal,
             JSON.stringify({})
+          ]
+        );
+
+        await client.query(
+          `INSERT INTO notification_outbox
+             (event_type, request_kind, request_id, payload)
+           VALUES ($1, 'collaboration', $2, $3::jsonb)`,
+          [
+            "collaboration_request.created",
+            request.rows[0].id,
+            JSON.stringify({
+              referenceNumber: request.rows[0].reference_number,
+              preferredLanguage: input.language
+            })
           ]
         );
 
