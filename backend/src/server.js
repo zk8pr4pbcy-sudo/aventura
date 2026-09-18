@@ -11,6 +11,7 @@ import { createCollaborationRequestService } from "./collaboration-requests/serv
 import { createUnconfiguredCollaborationRequestRepository } from "./collaboration-requests/repository.js";
 import { readAdminSessionCookie, createAdminSessionCookie, clearAdminSessionCookie } from "./auth/cookies.js";
 import { requirePermission } from "./auth/permissions.js";
+import { enforceTurnstile, verifyTurnstileToken } from "./security/turnstile.js";
 import { handleWebsiteContentRequest } from "./website-content/http.js";
 import { createDatabaseDependencies } from "./database/dependencies.js";
 
@@ -41,6 +42,9 @@ export function createServer(config = loadConfig(), dependencies = {}) {
   const adminDashboard = dependencies.adminDashboard || null;
   const requestWorkflow = dependencies.requestWorkflow || null;
   const websiteContent = dependencies.websiteContent || null;
+  const turnstileVerifier = dependencies.turnstileVerifier || verifyTurnstileToken;
+  const publicRequestsEnabled = config.publicRequestsEnabled !== false;
+  const turnstileConfig = config.turnstile || { required: false, secretKey: null, hostnames: [] };
   const secureAdminCookie = config.env === "production";
 
   return http.createServer(async (req, res) => {
@@ -61,8 +65,18 @@ export function createServer(config = loadConfig(), dependencies = {}) {
     }
 
     if (req.method === "POST" && url.pathname === "/api/v1/experience-requests") {
+      if (!publicRequestsEnabled) {
+        sendJson(res, 404, { error: "not_found" });
+        return;
+      }
       try {
         const payload = await readJson(req);
+        await enforceTurnstile({
+          payload,
+          config: turnstileConfig,
+          expectedAction: "experience_request",
+          verifier: turnstileVerifier
+        });
         const validated = validateExperienceRequest(payload);
         if (!validated.ok) {
           sendJson(res, 422, { error: "validation_failed", fields: validated.errors });
@@ -81,8 +95,18 @@ export function createServer(config = loadConfig(), dependencies = {}) {
     }
 
     if (req.method === "POST" && url.pathname === "/api/v1/collaboration-requests") {
+      if (!publicRequestsEnabled) {
+        sendJson(res, 404, { error: "not_found" });
+        return;
+      }
       try {
         const payload = await readJson(req);
+        await enforceTurnstile({
+          payload,
+          config: turnstileConfig,
+          expectedAction: "collaboration_request",
+          verifier: turnstileVerifier
+        });
         const validated = validateCollaborationRequest(payload);
         if (!validated.ok) {
           sendJson(res, 422, { error: "validation_failed", fields: validated.errors });
