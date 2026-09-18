@@ -1,8 +1,23 @@
 import { canTransition, isRequestKind } from "./transitions.js";
 
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
 function cleanText(value, maxLength) {
   if (typeof value !== "string") return "";
   return value.trim().slice(0, maxLength);
+}
+
+function validateRequestIdentity(kind, requestId) {
+  if (!isRequestKind(kind)) {
+    const error = new Error("invalid_request_kind");
+    error.statusCode = 400;
+    throw error;
+  }
+  if (!UUID_PATTERN.test(requestId || "")) {
+    const error = new Error("invalid_request_id");
+    error.statusCode = 400;
+    throw error;
+  }
 }
 
 export function createRequestWorkflowService(repository) {
@@ -12,12 +27,8 @@ export function createRequestWorkflowService(repository) {
 
   return {
     async changeStatus({ kind, requestId, toStatus, actorUserId, note }) {
-      if (!isRequestKind(kind)) {
-        const error = new Error("invalid_request_kind");
-        error.statusCode = 400;
-        throw error;
-      }
-      if (!requestId || !actorUserId || !toStatus) {
+      validateRequestIdentity(kind, requestId);
+      if (!actorUserId || !toStatus) {
         const error = new Error("missing_required_fields");
         error.statusCode = 400;
         throw error;
@@ -46,13 +57,9 @@ export function createRequestWorkflowService(repository) {
     },
 
     async addNote({ kind, requestId, authorUserId, body }) {
-      if (!isRequestKind(kind)) {
-        const error = new Error("invalid_request_kind");
-        error.statusCode = 400;
-        throw error;
-      }
+      validateRequestIdentity(kind, requestId);
       const cleanBody = cleanText(body, 4000);
-      if (!requestId || !authorUserId || !cleanBody) {
+      if (!authorUserId || !cleanBody) {
         const error = new Error("missing_required_fields");
         error.statusCode = 400;
         throw error;
