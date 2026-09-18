@@ -36,6 +36,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
     createCollaborationRequestService(createUnconfiguredCollaborationRequestRepository());
   const auth = dependencies.auth || null;
   const adminRequests = dependencies.adminRequests || null;
+  const adminDashboard = dependencies.adminDashboard || null;
   const requestWorkflow = dependencies.requestWorkflow || null;
   const secureAdminCookie = config.env === "production";
 
@@ -136,6 +137,20 @@ export function createServer(config = loadConfig(), dependencies = {}) {
       return;
     }
 
+    if (req.method === "GET" && url.pathname === "/api/v1/admin/dashboard/summary") {
+      if (!adminDashboard) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        await authenticateAdmin(req, auth, "requests:read");
+        sendJson(res, 200, { summary: await adminDashboard.getSummary() });
+      } catch (error) {
+        sendError(res, error);
+      }
+      return;
+    }
+
     if (req.method === "GET" && url.pathname === "/api/v1/admin/requests") {
       if (!adminRequests) {
         sendJson(res, 503, { error: "service_unavailable" });
@@ -164,7 +179,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
       }
       try {
         await authenticateAdmin(req, auth, "requests:read");
-        const request = await adminRequests.get({ kind: requestMatch[1], requestId: requestMatch[2] });
+        const request = await adminRequests.get({ kind: requestMatch[1].toLowerCase(), requestId: requestMatch[2] });
         sendJson(res, 200, { request });
       } catch (error) {
         sendError(res, error);
@@ -182,7 +197,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
         const user = await authenticateAdmin(req, auth, "requests:update");
         const payload = await readJson(req, 8 * 1024);
         const result = await requestWorkflow.changeStatus({
-          kind: statusMatch[1],
+          kind: statusMatch[1].toLowerCase(),
           requestId: statusMatch[2],
           toStatus: payload.status,
           actorUserId: user.id,
@@ -205,7 +220,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
         const user = await authenticateAdmin(req, auth, "notes:write");
         const payload = await readJson(req, 8 * 1024);
         const note = await requestWorkflow.addNote({
-          kind: noteMatch[1],
+          kind: noteMatch[1].toLowerCase(),
           requestId: noteMatch[2],
           authorUserId: user.id,
           body: payload.body
