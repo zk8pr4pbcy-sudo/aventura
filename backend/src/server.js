@@ -11,12 +11,16 @@ import { createCollaborationRequestService } from "./collaboration-requests/serv
 import { createUnconfiguredCollaborationRequestRepository } from "./collaboration-requests/repository.js";
 import { readAdminSessionCookie, createAdminSessionCookie, clearAdminSessionCookie } from "./auth/cookies.js";
 import { requirePermission } from "./auth/permissions.js";
+import { createLoginFailureLimiter } from "./security/login-rate-limit.js";
 import { enforceTurnstile, verifyTurnstileToken } from "./security/turnstile.js";
 import { handleWebsiteContentRequest } from "./website-content/http.js";
 import { createDatabaseDependencies } from "./database/dependencies.js";
 
 function sendError(res, error) {
   const statusCode = Number.isInteger(error.statusCode) ? error.statusCode : 500;
+  if (statusCode === 429 && Number.isFinite(error.retryAfterSeconds)) {
+    res.setHeader("retry-after", String(Math.max(1, Math.ceil(error.retryAfterSeconds))));
+  }
   sendJson(res, statusCode, {
     error: statusCode >= 500 ? "service_unavailable" : error.message
   });
@@ -43,6 +47,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
   const requestWorkflow = dependencies.requestWorkflow || null;
   const websiteContent = dependencies.websiteContent || null;
   const turnstileVerifier = dependencies.turnstileVerifier || verifyTurnstileToken;
+  const loginLimiter = dependencies.loginLimiter || createLoginFailureLimiter();
   const publicRequestsEnabled = config.publicRequestsEnabled !== false;
   const turnstileConfig = config.turnstile || { required: false, secretKey: null, hostnames: [] };
   const secureAdminCookie = config.env === "production";
@@ -137,15 +142,25 @@ export function createServer(config = loadConfig(), dependencies = {}) {
         sendJson(res, 503, { error: "service_unavailable" });
         return;
       }
+      let attempt = null;
       try {
         const payload = await readJson(req, 8 * 1024);
+        attempt = {
+          email: payload.email,
+          ip: req.socket?.remoteAddress || "unknown"
+        };
+        loginLimiter.assertAllowed(attempt);
         const session = await auth.login({ email: payload.email, password: payload.password });
+        loginLimiter.recordSuccess(attempt);
         res.setHeader("set-cookie", createAdminSessionCookie(session.token, {
           secure: secureAdminCookie,
           maxAgeSeconds: 8 * 60 * 60
         }));
         sendJson(res, 200, { user: session.user, expiresAt: session.expiresAt });
       } catch (error) {
+        if (attempt && error?.statusCode === 401 && error?.message === "invalid_credentials") {
+          loginLimiter.recordFailure(attempt);
+        }
         sendError(res, error);
       }
       return;
