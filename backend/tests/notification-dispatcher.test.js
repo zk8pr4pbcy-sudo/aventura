@@ -29,7 +29,7 @@ test("dispatcher marks a delivered notification as sent", async () => {
   assert.deepEqual(calls, [["send", EVENT.id], ["sent", EVENT.id]]);
 });
 
-test("dispatcher schedules retry when transport fails", async () => {
+test("dispatcher schedules retry using a non-sensitive failure code", async () => {
   const failures = [];
   const now = new Date("2026-09-19T01:00:00Z");
   const dispatcher = createNotificationDispatcher(
@@ -39,7 +39,11 @@ test("dispatcher schedules retry when transport fails", async () => {
       async markFailed(id, message, retryAt) { failures.push({ id, message, retryAt }); }
     },
     {
-      async send() { throw new Error("email_provider_unavailable"); }
+      async send() {
+        const error = new Error("SMTP failure for private-recipient@example.test");
+        error.code = "SMTP_TEMPORARY";
+        throw error;
+      }
     },
     { now: () => now }
   );
@@ -49,7 +53,8 @@ test("dispatcher schedules retry when transport fails", async () => {
   assert.equal(result.sent, false);
   assert.equal(failures.length, 1);
   assert.equal(failures[0].id, EVENT.id);
-  assert.equal(failures[0].message, "email_provider_unavailable");
+  assert.equal(failures[0].message, "SMTP_TEMPORARY");
+  assert.doesNotMatch(failures[0].message, /private-recipient/);
   assert.equal(failures[0].retryAt.toISOString(), "2026-09-19T01:01:00.000Z");
 });
 
