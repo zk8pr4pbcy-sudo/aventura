@@ -9,11 +9,17 @@ import { createAuthService } from "../auth/service.js";
 import { createPostgresAuthRepository } from "../auth/postgres-repository.js";
 import { createAdminRequestsService } from "../admin/requests-service.js";
 import { createPostgresAdminRequestsRepository } from "../admin/postgres-requests-repository.js";
+import { createAdminDashboardService } from "../admin/dashboard-service.js";
+import { createPostgresAdminDashboardRepository } from "../admin/postgres-dashboard-repository.js";
 
 export function createDatabaseDependencies(config) {
   if (!config.databaseUrl) return { dependencies: {}, close: async () => {} };
 
   const pool = createDatabasePool(config.databaseUrl);
+  const adminRequests = createAdminRequestsService(
+    createPostgresAdminRequestsRepository(pool)
+  );
+
   return {
     dependencies: {
       experienceRequests: createExperienceRequestService(
@@ -26,8 +32,10 @@ export function createDatabaseDependencies(config) {
         createPostgresRequestWorkflowRepository(pool)
       ),
       auth: createAuthService(createPostgresAuthRepository(pool)),
-      adminRequests: createAdminRequestsService(
-        createPostgresAdminRequestsRepository(pool)
+      adminRequests,
+      adminDashboard: createAdminDashboardService(
+        createPostgresAdminDashboardRepository(pool),
+        adminRequests
       )
     },
     close: () => pool.end()
