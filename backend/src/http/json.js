@@ -28,7 +28,11 @@ export async function readJson(req, maxBytes = DEFAULT_MAX_BODY_BYTES) {
 export function sendJson(res, statusCode, body) {
   res.writeHead(statusCode, {
     "content-type": "application/json; charset=utf-8",
-    "cache-control": "no-store"
+    "cache-control": "no-store",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+    "x-content-type-options": "nosniff",
+    "referrer-policy": "no-referrer",
+    "x-frame-options": "DENY"
   });
   res.end(JSON.stringify(body));
 }
