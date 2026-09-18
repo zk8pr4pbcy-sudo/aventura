@@ -2,6 +2,7 @@ import http from "node:http";
 import { fileURLToPath } from "node:url";
 import { loadConfig } from "./config.js";
 import { readJson, sendJson } from "./http/json.js";
+import { trySendAdminAsset } from "./http/static.js";
 import { validateExperienceRequest } from "./experience-requests/validation.js";
 import { createExperienceRequestService } from "./experience-requests/service.js";
 import { createUnconfiguredExperienceRequestRepository } from "./experience-requests/repository.js";
@@ -42,6 +43,15 @@ export function createServer(config = loadConfig(), dependencies = {}) {
 
   return http.createServer(async (req, res) => {
     const url = new URL(req.url || "/", "http://localhost");
+
+    if (req.method === "GET" && url.pathname.startsWith("/admin")) {
+      try {
+        if (await trySendAdminAsset(url.pathname, res)) return;
+      } catch (error) {
+        sendError(res, error);
+        return;
+      }
+    }
 
     if (req.method === "GET" && url.pathname === "/health") {
       sendJson(res, 200, { ok: true, service: config.serviceName, environment: config.env });
