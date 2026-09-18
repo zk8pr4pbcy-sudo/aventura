@@ -37,15 +37,32 @@ Admin auth endpoints:
 - `GET /api/v1/admin/auth/session`
 - `POST /api/v1/admin/auth/logout`
 
-### Protected admin request API
+### Protected admin request API and UI
 
+- private RTL admin UI served by the backend at `/admin`
+- no public-site navigation link
+- `noindex` and restrictive security headers
 - `GET /api/v1/admin/requests`
 - `GET /api/v1/admin/requests/:kind/:id`
 - `PATCH /api/v1/admin/requests/:kind/:id/status`
 - `POST /api/v1/admin/requests/:kind/:id/notes`
 - `GET /api/v1/admin/dashboard/summary`
 
-All admin request endpoints require an authenticated session and the appropriate role permission.
+All admin data endpoints require an authenticated session and the appropriate role permission.
+
+### Durable notifications and email foundation
+
+- request creation writes a notification outbox event inside the same PostgreSQL transaction
+- notification events contain only minimal routing metadata; customer contact data is loaded from PostgreSQL at send time
+- retryable outbox processing with `FOR UPDATE SKIP LOCKED`
+- stale processing locks can be reclaimed safely
+- exponential retry delay with a bounded maximum
+- failure records keep non-sensitive error codes rather than provider messages that could contain recipient data
+- provider-neutral SMTP delivery through Nodemailer
+- deterministic Message-ID and Aventura event headers for request-created emails
+- one-shot worker command: `npm run notifications:dispatch`
+
+No SMTP credentials are stored in the repository. If SMTP variables are absent, email delivery remains disabled.
 
 ## Database
 
@@ -68,6 +85,20 @@ ADMIN_PASSWORD='a-long-unique-password' \
 npm run admin:create-owner
 ```
 
+Dispatch pending notifications only from a secure runtime after approved SMTP credentials have been configured:
+
+```sh
+DATABASE_URL='postgresql://...' \
+SMTP_HOST='smtp.example.com' \
+SMTP_PORT='587' \
+SMTP_SECURE='false' \
+SMTP_USER='runtime-secret' \
+SMTP_PASS='runtime-secret' \
+SMTP_FROM='Aventura <requests@example.com>' \
+OPERATIONS_NOTIFICATION_EMAIL='operations@example.com' \
+npm run notifications:dispatch
+```
+
 Never commit real values for these variables.
 
 ## Local checks
@@ -80,8 +111,8 @@ npm test
 npm start
 ```
 
-`Aventura Backend CI` additionally starts a temporary PostgreSQL service, applies all migrations, runs the backend test suite, verifies the schema, and exercises real persistence paths.
+`Aventura Backend CI` additionally starts a temporary PostgreSQL service, applies all migrations, runs the backend test suite, verifies the schema, and exercises real persistence and notification paths without sending external email.
 
 ## Not production-ready yet
 
-Before production deployment, the project still requires the remaining security gates, notification/email integration, approved hosting/database location, backup/restore validation, production secret management, rate limiting/abuse controls, final end-to-end testing, and the controlled public-form migration. Do not remove FormSubmit or route live customer traffic to this backend until those gates are completed and approved.
+Before production deployment, the project still requires an approved hosting/database location, approved production SMTP service and credentials, backup/restore validation, production secret management, rate limiting and abuse controls, final security review, final end-to-end testing, and the controlled public-form migration. Do not remove FormSubmit or route live customer traffic to this backend until those gates are completed and approved.
