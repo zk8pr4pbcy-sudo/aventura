@@ -144,3 +144,67 @@ jobs:
           }
           await pool.end();
           NODE
+
+      - name: Exercise request workflow and internal notes
+        run: |
+          node --input-type=module <<'NODE'
+          import { createDatabasePool } from "./src/database/pool.js";
+          import { createPostgresRequestWorkflowRepository } from "./src/request-workflow/postgres-repository.js";
+          import { createRequestWorkflowService } from "./src/request-workflow/service.js";
+
+          const pool = createDatabasePool(process.env.DATABASE_URL);
+          const user = await pool.query(
+            `INSERT INTO users (email, display_name, role)
+             VALUES ('ops-ci@aventura.test', 'CI Operations', 'operations')
+             RETURNING id`
+          );
+          const customer = await pool.query(
+            `INSERT INTO customers (full_name, phone, preferred_language)
+             VALUES ('Workflow Guest', '+966511111111', 'ar')
+             RETURNING id`
+          );
+          const request = await pool.query(
+            `INSERT INTO experience_requests (customer_id, experience_key)
+             VALUES ($1, 'historic-jeddah')
+             RETURNING id`,
+            [customer.rows[0].id]
+          );
+
+          const service = createRequestWorkflowService(
+            createPostgresRequestWorkflowRepository(pool)
+          );
+          const changed = await service.changeStatus({
+            kind: 'experience',
+            requestId: request.rows[0].id,
+            toStatus: 'under_review',
+            actorUserId: user.rows[0].id,
+            note: 'CI review started'
+          });
+          if (changed.status !== 'under_review') {
+            throw new Error('Status transition was not persisted');
+          }
+
+          await service.addNote({
+            kind: 'experience',
+            requestId: request.rows[0].id,
+            authorUserId: user.rows[0].id,
+            body: 'Internal CI note'
+          });
+
+          const history = await pool.query(
+            `SELECT from_status, to_status FROM request_status_history
+             WHERE request_id = $1`,
+            [request.rows[0].id]
+          );
+          const notes = await pool.query(
+            `SELECT body FROM internal_notes WHERE request_id = $1`,
+            [request.rows[0].id]
+          );
+          if (history.rowCount !== 1 || history.rows[0].from_status !== 'new' || history.rows[0].to_status !== 'under_review') {
+            throw new Error('Status history was not verified');
+          }
+          if (notes.rowCount !== 1 || notes.rows[0].body !== 'Internal CI note') {
+            throw new Error('Internal note was not verified');
+          }
+          await pool.end();
+          NODE
