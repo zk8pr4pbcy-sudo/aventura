@@ -29,10 +29,17 @@ test("admin UI is served only from explicit backend admin routes with security h
     assert.equal(page.headers.get("x-frame-options"), "DENY");
     assert.match(html, /Aventura Management System/);
     assert.match(html, /noindex,nofollow,noarchive/);
+    assert.match(html, /id="contentPanel"/);
+    assert.match(html, /\/admin\/content\.js/);
 
     const script = await fetch(`${base}/admin/app.js`);
     assert.equal(script.status, 200);
     assert.match(script.headers.get("content-type"), /javascript/);
+
+    const contentScript = await fetch(`${base}/admin/content.js`);
+    assert.equal(contentScript.status, 200);
+    assert.match(contentScript.headers.get("content-type"), /javascript/);
+    assert.match(await contentScript.text(), /content:manage|admin\/content/);
 
     const style = await fetch(`${base}/admin/styles.css`);
     assert.equal(style.status, 200);
