@@ -1,22 +1,46 @@
 import http from "node:http";
 import { loadConfig } from "./config.js";
+import { readJson, sendJson } from "./http/json.js";
+import { validateExperienceRequest } from "./experience-requests/validation.js";
+import { createExperienceRequestService } from "./experience-requests/service.js";
+import { createUnconfiguredExperienceRequestRepository } from "./experience-requests/repository.js";
 
-export function createServer(config = loadConfig()) {
-  return http.createServer((req, res) => {
+export function createServer(config = loadConfig(), dependencies = {}) {
+  const experienceRequests = dependencies.experienceRequests ||
+    createExperienceRequestService(createUnconfiguredExperienceRequestRepository());
+
+  return http.createServer(async (req, res) => {
     const url = new URL(req.url || "/", "http://localhost");
 
     if (req.method === "GET" && url.pathname === "/health") {
-      res.writeHead(200, { "content-type": "application/json; charset=utf-8" });
-      res.end(JSON.stringify({
-        ok: true,
-        service: config.serviceName,
-        environment: config.env
-      }));
+      sendJson(res, 200, { ok: true, service: config.serviceName, environment: config.env });
       return;
     }
 
-    res.writeHead(404, { "content-type": "application/json; charset=utf-8" });
-    res.end(JSON.stringify({ error: "not_found" }));
+    if (req.method === "POST" && url.pathname === "/api/v1/experience-requests") {
+      try {
+        const payload = await readJson(req);
+        const validated = validateExperienceRequest(payload);
+        if (!validated.ok) {
+          sendJson(res, 422, { error: "validation_failed", fields: validated.errors });
+          return;
+        }
+
+        const request = await experienceRequests.create(validated.value);
+        sendJson(res, 201, {
+          referenceNumber: request.referenceNumber,
+          status: request.status
+        });
+      } catch (error) {
+        const statusCode = Number.isInteger(error.statusCode) ? error.statusCode : 500;
+        sendJson(res, statusCode, {
+          error: statusCode >= 500 ? "service_unavailable" : error.message
+        });
+      }
+      return;
+    }
+
+    sendJson(res, 404, { error: "not_found" });
   });
 }
 
