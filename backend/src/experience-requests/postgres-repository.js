@@ -20,13 +20,27 @@ export function createPostgresExperienceRequestRepository(pool) {
           `INSERT INTO experience_requests
              (customer_id, experience_key, requested_date, party_size, request_payload)
            VALUES ($1, $2, $3, $4, $5::jsonb)
-           RETURNING reference_number, status`,
+           RETURNING id, reference_number, status`,
           [
             customer.rows[0].id,
             input.experienceKey,
             input.requestedDate,
             input.partySize,
             JSON.stringify({})
+          ]
+        );
+
+        await client.query(
+          `INSERT INTO notification_outbox
+             (event_type, request_kind, request_id, payload)
+           VALUES ($1, 'experience', $2, $3::jsonb)`,
+          [
+            "experience_request.created",
+            request.rows[0].id,
+            JSON.stringify({
+              referenceNumber: request.rows[0].reference_number,
+              preferredLanguage: input.language
+            })
           ]
         );
 
