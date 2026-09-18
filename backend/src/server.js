@@ -1,9 +1,11 @@
 import http from "node:http";
+import { fileURLToPath } from "node:url";
 import { loadConfig } from "./config.js";
 import { readJson, sendJson } from "./http/json.js";
 import { validateExperienceRequest } from "./experience-requests/validation.js";
 import { createExperienceRequestService } from "./experience-requests/service.js";
 import { createUnconfiguredExperienceRequestRepository } from "./experience-requests/repository.js";
+import { createDatabaseDependencies } from "./database/dependencies.js";
 
 export function createServer(config = loadConfig(), dependencies = {}) {
   const experienceRequests = dependencies.experienceRequests ||
@@ -44,9 +46,19 @@ export function createServer(config = loadConfig(), dependencies = {}) {
   });
 }
 
-if (process.argv[1] === new URL(import.meta.url).pathname) {
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const config = loadConfig();
-  createServer(config).listen(config.port, () => {
+  const database = createDatabaseDependencies(config);
+  const server = createServer(config, database.dependencies);
+
+  server.listen(config.port, () => {
     console.log(`${config.serviceName} listening on port ${config.port}`);
   });
+
+  const shutdown = () => server.close(async () => {
+    await database.close();
+    process.exit(0);
+  });
+  process.on("SIGTERM", shutdown);
+  process.on("SIGINT", shutdown);
 }
