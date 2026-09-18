@@ -156,8 +156,11 @@ export function createPostgresWebsiteContentRepository(pool) {
         await client.query("BEGIN");
         const result = await client.query(
           `UPDATE website_content
-           SET status = $1,
-               published_at = CASE WHEN $1 = 'published' THEN now() ELSE published_at END,
+           SET status = $1::content_status,
+               published_at = CASE
+                 WHEN $1::content_status = 'published'::content_status THEN now()
+                 ELSE published_at
+               END,
                updated_by = $2,
                updated_at = now()
            WHERE id = $3
