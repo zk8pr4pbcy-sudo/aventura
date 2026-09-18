@@ -8,13 +8,23 @@ import { createUnconfiguredExperienceRequestRepository } from "./experience-requ
 import { validateCollaborationRequest } from "./collaboration-requests/validation.js";
 import { createCollaborationRequestService } from "./collaboration-requests/service.js";
 import { createUnconfiguredCollaborationRequestRepository } from "./collaboration-requests/repository.js";
+import { readAdminSessionCookie, createAdminSessionCookie, clearAdminSessionCookie } from "./auth/cookies.js";
 import { createDatabaseDependencies } from "./database/dependencies.js";
+
+function sendError(res, error) {
+  const statusCode = Number.isInteger(error.statusCode) ? error.statusCode : 500;
+  sendJson(res, statusCode, {
+    error: statusCode >= 500 ? "service_unavailable" : error.message
+  });
+}
 
 export function createServer(config = loadConfig(), dependencies = {}) {
   const experienceRequests = dependencies.experienceRequests ||
     createExperienceRequestService(createUnconfiguredExperienceRequestRepository());
   const collaborationRequests = dependencies.collaborationRequests ||
     createCollaborationRequestService(createUnconfiguredCollaborationRequestRepository());
+  const auth = dependencies.auth || null;
+  const secureAdminCookie = config.env === "production";
 
   return http.createServer(async (req, res) => {
     const url = new URL(req.url || "/", "http://localhost");
@@ -39,10 +49,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
           status: request.status
         });
       } catch (error) {
-        const statusCode = Number.isInteger(error.statusCode) ? error.statusCode : 500;
-        sendJson(res, statusCode, {
-          error: statusCode >= 500 ? "service_unavailable" : error.message
-        });
+        sendError(res, error);
       }
       return;
     }
@@ -62,10 +69,56 @@ export function createServer(config = loadConfig(), dependencies = {}) {
           status: request.status
         });
       } catch (error) {
-        const statusCode = Number.isInteger(error.statusCode) ? error.statusCode : 500;
-        sendJson(res, statusCode, {
-          error: statusCode >= 500 ? "service_unavailable" : error.message
-        });
+        sendError(res, error);
+      }
+      return;
+    }
+
+    if (req.method === "POST" && url.pathname === "/api/v1/admin/auth/login") {
+      if (!auth) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        const payload = await readJson(req, 8 * 1024);
+        const session = await auth.login({ email: payload.email, password: payload.password });
+        res.setHeader("set-cookie", createAdminSessionCookie(session.token, {
+          secure: secureAdminCookie,
+          maxAgeSeconds: 8 * 60 * 60
+        }));
+        sendJson(res, 200, { user: session.user, expiresAt: session.expiresAt });
+      } catch (error) {
+        sendError(res, error);
+      }
+      return;
+    }
+
+    if (req.method === "GET" && url.pathname === "/api/v1/admin/auth/session") {
+      if (!auth) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        const user = await auth.authenticate(readAdminSessionCookie(req) || "");
+        sendJson(res, 200, { user });
+      } catch (error) {
+        sendError(res, error);
+      }
+      return;
+    }
+
+    if (req.method === "POST" && url.pathname === "/api/v1/admin/auth/logout") {
+      if (!auth) {
+        sendJson(res, 503, { error: "service_unavailable" });
+        return;
+      }
+      try {
+        const token = readAdminSessionCookie(req);
+        if (token) await auth.logout(token);
+        res.setHeader("set-cookie", clearAdminSessionCookie({ secure: secureAdminCookie }));
+        sendJson(res, 200, { ok: true });
+      } catch (error) {
+        sendError(res, error);
       }
       return;
     }
