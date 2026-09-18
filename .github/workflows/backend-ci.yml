@@ -1,0 +1,119 @@
+name: Aventura Backend CI
+
+on:
+  pull_request:
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
+  push:
+    branches:
+      - 'feature/backend-**'
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: aventura
+          POSTGRES_PASSWORD: aventura_test
+          POSTGRES_DB: aventura_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U aventura -d aventura_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      NODE_ENV: test
+      DATABASE_URL: postgresql://aventura:aventura_test@127.0.0.1:5432/aventura_test
+
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Install backend dependencies
+        run: npm ci
+
+      - name: Check backend syntax
+        run: npm run check
+
+      - name: Run PostgreSQL migrations
+        run: npm run db:migrate
+
+      - name: Run backend tests
+        run: npm test
+
+      - name: Verify migrated schema
+        run: |
+          node --input-type=module <<'NODE'
+          import pg from "pg";
+          const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+          const required = [
+            "users",
+            "customers",
+            "experience_requests",
+            "collaboration_requests",
+            "request_status_history",
+            "internal_notes",
+            "website_content",
+            "audit_log"
+          ];
+          const result = await pool.query(
+            "SELECT tablename FROM pg_tables WHERE schemaname = 'public'"
+          );
+          const names = new Set(result.rows.map((row) => row.tablename));
+          for (const table of required) {
+            if (!names.has(table)) throw new Error(`Missing table: ${table}`);
+          }
+          await pool.end();
+          NODE
+
+      - name: Exercise experience request persistence
+        run: |
+          node --input-type=module <<'NODE'
+          import { createDatabasePool } from "./src/database/pool.js";
+          import { createPostgresExperienceRequestRepository } from "./src/experience-requests/postgres-repository.js";
+          const pool = createDatabasePool(process.env.DATABASE_URL);
+          const repo = createPostgresExperienceRequestRepository(pool);
+          const saved = await repo.create({
+            fullName: "Aventura CI Guest",
+            email: null,
+            phone: "+966500000000",
+            language: "ar",
+            experienceKey: "historic-jeddah",
+            requestedDate: null,
+            partySize: 2
+          });
+          if (!/^AV-EXP-\d{4}-\d{6}$/.test(saved.referenceNumber)) {
+            throw new Error(`Unexpected reference: ${saved.referenceNumber}`);
+          }
+          const check = await pool.query(
+            "SELECT status FROM experience_requests WHERE reference_number = $1",
+            [saved.referenceNumber]
+          );
+          if (check.rowCount !== 1 || check.rows[0].status !== "new") {
+            throw new Error("Persisted request could not be verified");
+          }
+          await pool.end();
+          NODE
