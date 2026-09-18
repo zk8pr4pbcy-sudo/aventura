@@ -11,6 +11,7 @@ import { createCollaborationRequestService } from "./collaboration-requests/serv
 import { createUnconfiguredCollaborationRequestRepository } from "./collaboration-requests/repository.js";
 import { readAdminSessionCookie, createAdminSessionCookie, clearAdminSessionCookie } from "./auth/cookies.js";
 import { requirePermission } from "./auth/permissions.js";
+import { handleWebsiteContentRequest } from "./website-content/http.js";
 import { createDatabaseDependencies } from "./database/dependencies.js";
 
 function sendError(res, error) {
@@ -39,6 +40,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
   const adminRequests = dependencies.adminRequests || null;
   const adminDashboard = dependencies.adminDashboard || null;
   const requestWorkflow = dependencies.requestWorkflow || null;
+  const websiteContent = dependencies.websiteContent || null;
   const secureAdminCookie = config.env === "production";
 
   return http.createServer(async (req, res) => {
@@ -97,6 +99,14 @@ export function createServer(config = loadConfig(), dependencies = {}) {
       }
       return;
     }
+
+    if (await handleWebsiteContentRequest({
+      req,
+      res,
+      url,
+      service: websiteContent,
+      auth
+    })) return;
 
     if (req.method === "POST" && url.pathname === "/api/v1/admin/auth/login") {
       if (!auth) {
