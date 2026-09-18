@@ -5,6 +5,17 @@ import { loadConfig } from "../config.js";
 
 const migrationsDir = new URL("../../database/migrations/", import.meta.url);
 
+export function normalizeMigrationSql(sql) {
+  const trimmed = String(sql || "").trim();
+  if (/^BEGIN;\s*/i.test(trimmed) && /\s*COMMIT;$/i.test(trimmed)) {
+    return trimmed
+      .replace(/^BEGIN;\s*/i, "")
+      .replace(/\s*COMMIT;$/i, "")
+      .trim();
+  }
+  return trimmed;
+}
+
 export async function runMigrations(pool) {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS schema_migrations (
@@ -24,7 +35,8 @@ export async function runMigrations(pool) {
     );
     if (exists.rowCount) continue;
 
-    const sql = await readFile(new URL(filename, migrationsDir), "utf8");
+    const rawSql = await readFile(new URL(filename, migrationsDir), "utf8");
+    const sql = normalizeMigrationSql(rawSql);
     const client = await pool.connect();
     try {
       await client.query("BEGIN");
