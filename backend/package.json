@@ -9,9 +9,11 @@
     "check": "node scripts/check-syntax.js",
     "test": "node --test",
     "db:migrate": "node src/database/migrate.js",
-    "admin:create-owner": "node src/users/bootstrap-owner.js"
+    "admin:create-owner": "node src/users/bootstrap-owner.js",
+    "notifications:dispatch": "node src/notifications/dispatch.js"
   },
   "dependencies": {
+    "nodemailer": "^10.0.10",
     "pg": "^8.16.3"
   }
 }
