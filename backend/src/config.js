@@ -9,6 +9,7 @@ export function loadConfig(env = process.env) {
   return {
     env: env.NODE_ENV || "development",
     port,
-    serviceName: "aventura-backend"
+    serviceName: "aventura-backend",
+    databaseUrl: env.DATABASE_URL || null
   };
 }
