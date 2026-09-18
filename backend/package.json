@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "check": "node scripts/check-syntax.js",
-    "test": "node --test",
+    "test": "node --test --test-concurrency=1",
     "db:migrate": "node src/database/migrate.js",
     "admin:create-owner": "node src/users/bootstrap-owner.js",
     "notifications:dispatch": "node src/notifications/dispatch.js"
