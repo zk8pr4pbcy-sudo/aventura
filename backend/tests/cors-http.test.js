@@ -17,7 +17,7 @@ async function withServer(fn) {
     experienceRequests: {
       async create() {
         persisted += 1;
-        return { referenceNumber: "AV-EXP-2026-000001", status: "new" };
+        return { referenceNumber: `AV-EXP-2026-${String(persisted).padStart(6, "0")}`, status: "new" };
       }
     }
   });
@@ -62,7 +62,7 @@ test("approved browser origin receives CORS preflight and can submit", async () 
   });
 });
 
-test("unapproved or missing browser origin is rejected before persistence when allowlist is configured", async () => {
+test("unapproved browser origin is rejected before persistence", async () => {
   await withServer(async (base, persisted) => {
     const denied = await fetch(`${base}/api/v1/experience-requests`, {
       method: "POST",
@@ -73,13 +73,19 @@ test("unapproved or missing browser origin is rejected before persistence when a
       body: JSON.stringify(validBody)
     });
     assert.equal(denied.status, 403);
+    assert.equal(persisted(), 0);
+  });
+});
 
-    const missing = await fetch(`${base}/api/v1/experience-requests`, {
+test("requests without Origin remain server-to-server compatible", async () => {
+  await withServer(async (base, persisted) => {
+    const response = await fetch(`${base}/api/v1/experience-requests`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(validBody)
     });
-    assert.equal(missing.status, 403);
-    assert.equal(persisted(), 0);
+    assert.equal(response.status, 201);
+    assert.equal(response.headers.get("access-control-allow-origin"), null);
+    assert.equal(persisted(), 1);
   });
 });
