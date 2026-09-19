@@ -1,4 +1,4 @@
-import { findIdempotencyReplay } from "../shared/postgres-idempotency.js";
+import { findIdempotencyReplay, lockIdempotencyKey } from "../shared/postgres-idempotency.js";
 
 export function createPostgresCollaborationRequestRepository(pool) {
   if (!pool || typeof pool.connect !== "function") {
@@ -10,6 +10,7 @@ export function createPostgresCollaborationRequestRepository(pool) {
       const client = await pool.connect();
       try {
         await client.query("BEGIN");
+        await lockIdempotencyKey(client, input);
 
         const existing = await findIdempotencyReplay(client, "collaboration", input);
         if (existing) {
