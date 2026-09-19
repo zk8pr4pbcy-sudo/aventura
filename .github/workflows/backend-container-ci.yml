@@ -94,6 +94,11 @@ jobs:
           docker logs aventura-backend-ci
           exit 1
 
+      - name: Verify graceful SIGTERM shutdown
+        run: |
+          docker stop --time 12 aventura-backend-ci
+          test "$(docker inspect --format='{{.State.ExitCode}}' aventura-backend-ci)" = "0"
+
       - name: Clean container
         if: always()
         run: docker rm --force aventura-backend-ci 2>/dev/null || true
