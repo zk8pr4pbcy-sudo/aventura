@@ -21,6 +21,18 @@ test("production disables public request ingestion by default", () => {
   assert.equal(config.turnstile.required, false);
 });
 
+test("production cannot enable public requests while disabling Turnstile", () => {
+  assert.throws(
+    () => loadConfig({
+      NODE_ENV: "production",
+      DATABASE_URL: productionDatabaseUrl,
+      PUBLIC_REQUESTS_ENABLED: "true",
+      TURNSTILE_REQUIRED: "false"
+    }),
+    /TURNSTILE_REQUIRED must be true/
+  );
+});
+
 test("production public requests require Turnstile secret and approved hostnames", () => {
   assert.throws(
     () => loadConfig({
