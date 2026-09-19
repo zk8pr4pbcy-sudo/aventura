@@ -12,6 +12,8 @@ import { createCollaborationRequestService } from "./collaboration-requests/serv
 import { createUnconfiguredCollaborationRequestRepository } from "./collaboration-requests/repository.js";
 import { readAdminSessionCookie, createAdminSessionCookie, clearAdminSessionCookie } from "./auth/cookies.js";
 import { requirePermission } from "./auth/permissions.js";
+import { applyPublicCors } from "./security/cors.js";
+import { resolveClientIp } from "./security/client-ip.js";
 import { createLoginFailureLimiter } from "./security/login-rate-limit.js";
 import { enforceTurnstile, verifyTurnstileToken } from "./security/turnstile.js";
 import { handleWebsiteContentRequest } from "./website-content/http.js";
@@ -25,6 +27,12 @@ function sendError(res, error) {
   sendJson(res, statusCode, {
     error: statusCode >= 500 ? "service_unavailable" : error.message
   });
+}
+
+function isPublicBrowserApiPath(pathname) {
+  return pathname === "/api/v1/experience-requests" ||
+    pathname === "/api/v1/collaboration-requests" ||
+    /^\/api\/v1\/content\/(event|offer|announcement|experience)$/.test(pathname);
 }
 
 async function authenticateAdmin(req, auth, permission) {
@@ -51,13 +59,25 @@ export function createServer(config = loadConfig(), dependencies = {}) {
   const turnstileVerifier = dependencies.turnstileVerifier || verifyTurnstileToken;
   const loginLimiter = dependencies.loginLimiter || createLoginFailureLimiter();
   const accessLogWrite = dependencies.accessLogWrite || (config.env === "test" ? () => {} : console.log);
+  const clientIpResolver = dependencies.clientIpResolver ||
+    ((req) => resolveClientIp(req, config.trustedClientIpHeader || null));
   const publicRequestsEnabled = config.publicRequestsEnabled !== false;
+  const publicApiOrigins = config.publicApiOrigins || [];
   const turnstileConfig = config.turnstile || { required: false, secretKey: null, hostnames: [] };
   const secureAdminCookie = config.env === "production";
 
   return http.createServer(async (req, res) => {
     const url = new URL(req.url || "/", "http://localhost");
     attachHttpAccessLog(req, res, url, { write: accessLogWrite });
+
+    if (isPublicBrowserApiPath(url.pathname)) {
+      const cors = applyPublicCors(req, res, publicApiOrigins);
+      if (cors.handled) return;
+      if (!cors.allowed) {
+        sendJson(res, 403, { error: "origin_not_allowed" });
+        return;
+      }
+    }
 
     if (req.method === "GET" && url.pathname.startsWith("/admin")) {
       try {
@@ -165,7 +185,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
         const payload = await readJson(req, 8 * 1024);
         attempt = {
           email: payload.email,
-          ip: req.socket?.remoteAddress || "unknown"
+          ip: clientIpResolver(req)
         };
         loginLimiter.assertAllowed(attempt);
         const session = await auth.login({ email: payload.email, password: payload.password });
