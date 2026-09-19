@@ -88,9 +88,18 @@ jobs:
           const requests = await pool.query("SELECT count(*)::int AS count FROM experience_requests");
           const customers = await pool.query("SELECT count(*)::int AS count FROM customers");
           const outbox = await pool.query("SELECT count(*)::int AS count FROM notification_outbox WHERE event_type = 'experience_request.created'");
+          const idempotency = await pool.query(
+            `SELECT count(*)::int AS total,
+                    count(idempotency_key_hash)::int AS keyed,
+                    count(DISTINCT idempotency_key_hash)::int AS unique_keys
+             FROM experience_requests`
+          );
           if (requests.rows[0].count !== 120) throw new Error(`expected 120 requests, got ${requests.rows[0].count}`);
           if (customers.rows[0].count !== 120) throw new Error(`expected 120 customers, got ${customers.rows[0].count}`);
           if (outbox.rows[0].count !== 120) throw new Error(`expected 120 outbox events, got ${outbox.rows[0].count}`);
+          if (idempotency.rows[0].total !== 120 || idempotency.rows[0].keyed !== 120 || idempotency.rows[0].unique_keys !== 120) {
+            throw new Error(`idempotency coverage mismatch: ${JSON.stringify(idempotency.rows[0])}`);
+          }
           await pool.end();
           NODE
 
