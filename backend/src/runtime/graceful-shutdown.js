@@ -20,11 +20,12 @@ export function createGracefulShutdown({
 
     inFlight = new Promise((resolve) => {
       let finished = false;
+      let timer = null;
 
       const finish = async (code) => {
         if (finished) return;
         finished = true;
-        clearTimer(timer);
+        if (timer) clearTimer(timer);
         try {
           await closeDatabase();
         } finally {
@@ -33,7 +34,7 @@ export function createGracefulShutdown({
         }
       };
 
-      const timer = setTimer(() => {
+      timer = setTimer(() => {
         if (typeof server.closeAllConnections === "function") {
           server.closeAllConnections();
         }
