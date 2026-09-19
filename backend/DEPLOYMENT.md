@@ -29,7 +29,7 @@ This document defines the deployment contract for the Aventura Management System
 8. Keep `PUBLIC_REQUESTS_ENABLED=false` for the first production deployment. This allows admin and operational verification without moving live website forms.
 9. Bootstrap the first Owner only through the secure runtime command after the database is ready.
 10. Configure SMTP and the notification worker only after the provider and production credentials are approved.
-11. Enable live public request ingestion only during the controlled dual-path migration from FormSubmit, with server-side Turnstile, approved hostnames, and explicit browser origins configured.
+11. Enable live public request ingestion only during the controlled dual-path migration from FormSubmit, with server-side Turnstile, approved hostnames, explicit browser origins, and request idempotency enabled.
 
 ## Container contract
 
@@ -43,7 +43,7 @@ Security properties:
 - no secrets are baked into the image.
 - `/health` is used only for process liveness.
 - `/ready` requires a successful PostgreSQL readiness check.
-- the container starts the Node process directly so it receives termination signals.
+- the production runtime handles SIGTERM/SIGINT with a bounded graceful shutdown before forcing stale connections closed.
 
 Example build:
 
@@ -68,11 +68,26 @@ Public request ingestion remains disabled by default in production. When explici
 
 The production configuration refuses to start public request ingestion if Turnstile is explicitly disabled or if the browser-origin allowlist is missing.
 
+### Request idempotency
+
+Every production request submission to either public write endpoint must include an `Idempotency-Key` HTTP header containing a UUID v4.
+
+Frontend contract:
+
+- create one UUID v4 when the user starts the final submission attempt,
+- reuse that exact UUID only when retrying the **same validated submission** after a timeout/network uncertainty,
+- generate a new UUID when the user changes the request and submits again,
+- never derive the key from customer PII.
+
+The backend stores only a SHA-256 hash of the key plus a SHA-256 fingerprint of the validated request data. PostgreSQL serializes matching keys with a transaction-level advisory lock and enforces a unique index as a final safety boundary. A retry with the same key and same data returns the original public reference; the same key with different data returns HTTP `409 idempotency_key_reused`.
+
+This prevents network retries, double-clicks, and concurrent application instances from creating duplicate customers, requests, or notification outbox events.
+
 ### CORS boundary
 
-`PUBLIC_API_ORIGINS` is an exact HTTPS allowlist for the browser-facing request and published-content APIs. The backend never uses `Access-Control-Allow-Origin: *` for these routes.
+`PUBLIC_API_ORIGINS` is an exact HTTPS allowlist for the browser-facing request and published-content APIs. The backend never uses `Access-Control-Allow-Origin: *` for these routes. Approved preflights permit `Content-Type` and `Idempotency-Key`.
 
-CORS is only a browser boundary. It is **not** authentication and it is **not** the abuse-prevention mechanism. Server-side Turnstile validation remains mandatory whenever production public request ingestion is enabled.
+CORS is only a browser boundary. It is **not** authentication and it is **not** the abuse-prevention mechanism. Requests without an `Origin` remain server-to-server compatible; server-side Turnstile validation remains mandatory whenever production public request ingestion is enabled.
 
 ### Trusted proxy and client IP
 
