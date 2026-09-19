@@ -6,6 +6,7 @@ const schemaUrl = new URL("../database/migrations/001_initial_schema.sql", impor
 const refsUrl = new URL("../database/migrations/002_reference_numbers.sql", import.meta.url);
 const authUrl = new URL("../database/migrations/004_admin_auth.sql", import.meta.url);
 const notificationsUrl = new URL("../database/migrations/005_notification_outbox.sql", import.meta.url);
+const idempotencyUrl = new URL("../database/migrations/007_request_idempotency.sql", import.meta.url);
 
 test("initial schema contains required Aventura management tables", async () => {
   const sql = await readFile(schemaUrl, "utf8");
@@ -47,4 +48,13 @@ test("notification outbox is durable and request-bound", async () => {
   assert.match(sql, /attempts integer NOT NULL DEFAULT 0/);
   assert.match(sql, /EXECUTE FUNCTION assert_request_target_exists\(\)/);
   assert.match(sql, /UNIQUE \(event_type, request_kind, request_id\)/);
+});
+
+test("public request idempotency is durable and uniquely enforced per request type", async () => {
+  const sql = await readFile(idempotencyUrl, "utf8");
+  assert.match(sql, /ADD COLUMN idempotency_key_hash char\(64\)/);
+  assert.match(sql, /ADD COLUMN idempotency_fingerprint char\(64\)/);
+  assert.match(sql, /experience_requests_idempotency_key_uq/);
+  assert.match(sql, /collaboration_requests_idempotency_key_uq/);
+  assert.match(sql, /WHERE idempotency_key_hash IS NOT NULL/);
 });
