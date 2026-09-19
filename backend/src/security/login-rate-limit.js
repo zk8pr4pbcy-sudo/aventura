@@ -3,7 +3,7 @@ function normalizeEmail(value) {
 }
 
 function normalizeIp(value) {
-  return typeof value === "string" && value.trim() ? value.trim() : "unknown";
+  return typeof value === "string" && value.trim() ? value.trim() : null;
 }
 
 function rateLimitError(retryAfterSeconds) {
@@ -49,7 +49,7 @@ export function createLoginFailureLimiter(options = {}) {
       const accountKey = normalizeEmail(email);
       const ipKey = normalizeIp(ip);
       if (accountKey) assertBucket(accountFailures, accountKey, accountLimit, timestamp);
-      assertBucket(ipFailures, ipKey, ipLimit, timestamp);
+      if (ipKey) assertBucket(ipFailures, ipKey, ipLimit, timestamp);
     },
 
     recordFailure({ email, ip }) {
@@ -57,7 +57,7 @@ export function createLoginFailureLimiter(options = {}) {
       const accountKey = normalizeEmail(email);
       const ipKey = normalizeIp(ip);
       if (accountKey) addFailure(accountFailures, accountKey, timestamp);
-      addFailure(ipFailures, ipKey, timestamp);
+      if (ipKey) addFailure(ipFailures, ipKey, timestamp);
     },
 
     recordSuccess({ email }) {
