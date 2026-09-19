@@ -19,6 +19,7 @@ export function loadConfig(env = process.env) {
   }
 
   const nodeEnv = env.NODE_ENV || "development";
+  const databaseUrl = env.DATABASE_URL || null;
   const publicRequestsEnabled = parseBoolean(
     env.PUBLIC_REQUESTS_ENABLED,
     nodeEnv !== "production",
@@ -32,6 +33,9 @@ export function loadConfig(env = process.env) {
   const turnstileSecretKey = env.TURNSTILE_SECRET_KEY || null;
   const turnstileHostnames = parseHostnames(env.TURNSTILE_HOSTNAMES);
 
+  if (nodeEnv === "production" && !databaseUrl) {
+    throw new Error("DATABASE_URL is required in production");
+  }
   if (turnstileRequired && !turnstileSecretKey) {
     throw new Error("TURNSTILE_SECRET_KEY is required when Turnstile validation is enabled");
   }
@@ -43,7 +47,7 @@ export function loadConfig(env = process.env) {
     env: nodeEnv,
     port,
     serviceName: "aventura-backend",
-    databaseUrl: env.DATABASE_URL || null,
+    databaseUrl,
     publicRequestsEnabled,
     turnstile: {
       required: turnstileRequired,
