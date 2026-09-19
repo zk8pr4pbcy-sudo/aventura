@@ -1,3 +1,6 @@
+import { normalizeOrigins } from "./security/cors.js";
+import { normalizeTrustedClientIpHeader } from "./security/client-ip.js";
+
 const DEFAULT_PORT = 3000;
 
 function parseBoolean(value, fallback, name) {
@@ -32,6 +35,10 @@ export function loadConfig(env = process.env) {
   );
   const turnstileSecretKey = env.TURNSTILE_SECRET_KEY || null;
   const turnstileHostnames = parseHostnames(env.TURNSTILE_HOSTNAMES);
+  const publicApiOrigins = normalizeOrigins(env.PUBLIC_API_ORIGINS);
+  const trustedClientIpHeader = normalizeTrustedClientIpHeader(
+    env.TRUSTED_CLIENT_IP_HEADER || (nodeEnv === "production" ? null : "remote-address")
+  );
 
   if (nodeEnv === "production" && !databaseUrl) {
     throw new Error("DATABASE_URL is required in production");
@@ -45,6 +52,9 @@ export function loadConfig(env = process.env) {
   if (nodeEnv === "production" && turnstileRequired && turnstileHostnames.length === 0) {
     throw new Error("TURNSTILE_HOSTNAMES is required for production public requests");
   }
+  if (nodeEnv === "production" && publicRequestsEnabled && publicApiOrigins.length === 0) {
+    throw new Error("PUBLIC_API_ORIGINS is required for production public requests");
+  }
 
   return {
     env: nodeEnv,
@@ -52,6 +62,8 @@ export function loadConfig(env = process.env) {
     serviceName: "aventura-backend",
     databaseUrl,
     publicRequestsEnabled,
+    publicApiOrigins,
+    trustedClientIpHeader,
     turnstile: {
       required: turnstileRequired,
       secretKey: turnstileSecretKey,
