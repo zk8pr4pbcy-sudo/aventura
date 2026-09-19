@@ -43,10 +43,15 @@ test("approved browser origin receives CORS preflight and can submit", async () 
   await withServer(async (base, persisted) => {
     const preflight = await fetch(`${base}/api/v1/experience-requests`, {
       method: "OPTIONS",
-      headers: { origin: "https://aventuraksa.com" }
+      headers: {
+        origin: "https://aventuraksa.com",
+        "access-control-request-method": "POST",
+        "access-control-request-headers": "content-type,idempotency-key"
+      }
     });
     assert.equal(preflight.status, 204);
     assert.equal(preflight.headers.get("access-control-allow-origin"), "https://aventuraksa.com");
+    assert.match(preflight.headers.get("access-control-allow-headers"), /Idempotency-Key/i);
 
     const response = await fetch(`${base}/api/v1/experience-requests`, {
       method: "POST",
