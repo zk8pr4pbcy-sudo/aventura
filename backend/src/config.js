@@ -36,6 +36,9 @@ export function loadConfig(env = process.env) {
   if (nodeEnv === "production" && !databaseUrl) {
     throw new Error("DATABASE_URL is required in production");
   }
+  if (nodeEnv === "production" && publicRequestsEnabled && !turnstileRequired) {
+    throw new Error("TURNSTILE_REQUIRED must be true for production public requests");
+  }
   if (turnstileRequired && !turnstileSecretKey) {
     throw new Error("TURNSTILE_SECRET_KEY is required when Turnstile validation is enabled");
   }
