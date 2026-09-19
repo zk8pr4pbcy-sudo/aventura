@@ -2,8 +2,21 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { loadConfig } from "../src/config.js";
 
+const productionDatabaseUrl = "postgresql://aventura:secret@db.example:5432/aventura";
+
+test("production requires an explicit PostgreSQL connection", () => {
+  assert.throws(
+    () => loadConfig({ NODE_ENV: "production", PORT: "3000" }),
+    /DATABASE_URL is required in production/
+  );
+});
+
 test("production disables public request ingestion by default", () => {
-  const config = loadConfig({ NODE_ENV: "production", PORT: "3000" });
+  const config = loadConfig({
+    NODE_ENV: "production",
+    PORT: "3000",
+    DATABASE_URL: productionDatabaseUrl
+  });
   assert.equal(config.publicRequestsEnabled, false);
   assert.equal(config.turnstile.required, false);
 });
@@ -13,6 +26,7 @@ test("production public requests require Turnstile secret and approved hostnames
     () => loadConfig({
       NODE_ENV: "production",
       PORT: "3000",
+      DATABASE_URL: productionDatabaseUrl,
       PUBLIC_REQUESTS_ENABLED: "true"
     }),
     /TURNSTILE_SECRET_KEY/
@@ -22,6 +36,7 @@ test("production public requests require Turnstile secret and approved hostnames
     () => loadConfig({
       NODE_ENV: "production",
       PORT: "3000",
+      DATABASE_URL: productionDatabaseUrl,
       PUBLIC_REQUESTS_ENABLED: "true",
       TURNSTILE_SECRET_KEY: "secret"
     }),
@@ -31,6 +46,7 @@ test("production public requests require Turnstile secret and approved hostnames
   const config = loadConfig({
     NODE_ENV: "production",
     PORT: "3000",
+    DATABASE_URL: productionDatabaseUrl,
     PUBLIC_REQUESTS_ENABLED: "true",
     TURNSTILE_SECRET_KEY: "secret",
     TURNSTILE_HOSTNAMES: "aventuraksa.com, www.aventuraksa.com"
