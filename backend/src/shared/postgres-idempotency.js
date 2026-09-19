@@ -9,6 +9,14 @@ function reuseConflict() {
   return error;
 }
 
+export async function lockIdempotencyKey(queryable, input) {
+  if (!input.idempotencyKeyHash) return;
+  await queryable.query(
+    "SELECT pg_advisory_xact_lock(hashtextextended($1, 0))",
+    [input.idempotencyKeyHash]
+  );
+}
+
 export async function findIdempotencyReplay(queryable, kind, input) {
   if (!input.idempotencyKeyHash) return null;
   const table = TABLES[kind];
