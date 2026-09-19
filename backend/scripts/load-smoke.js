@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+
 const baseUrl = process.env.BASE_URL || "http://127.0.0.1:3200";
 const total = Number(process.env.LOAD_TOTAL || 120);
 const concurrency = Number(process.env.LOAD_CONCURRENCY || 12);
@@ -17,7 +19,10 @@ async function submit(index) {
   const started = performance.now();
   const response = await fetch(`${baseUrl}/api/v1/experience-requests`, {
     method: "POST",
-    headers: { "content-type": "application/json" },
+    headers: {
+      "content-type": "application/json",
+      "idempotency-key": randomUUID()
+    },
     body: JSON.stringify({
       fullName: `Load Test Guest ${index}`,
       phone: `+966500${String(index).padStart(6, "0")}`,
