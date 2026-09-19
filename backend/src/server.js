@@ -41,6 +41,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
     createExperienceRequestService(createUnconfiguredExperienceRequestRepository());
   const collaborationRequests = dependencies.collaborationRequests ||
     createCollaborationRequestService(createUnconfiguredCollaborationRequestRepository());
+  const readiness = dependencies.readiness || null;
   const auth = dependencies.auth || null;
   const adminRequests = dependencies.adminRequests || null;
   const adminDashboard = dependencies.adminDashboard || null;
@@ -66,6 +67,20 @@ export function createServer(config = loadConfig(), dependencies = {}) {
 
     if (req.method === "GET" && url.pathname === "/health") {
       sendJson(res, 200, { ok: true, service: config.serviceName, environment: config.env });
+      return;
+    }
+
+    if (req.method === "GET" && url.pathname === "/ready") {
+      if (!readiness) {
+        sendJson(res, 503, { ok: false, error: "service_unavailable" });
+        return;
+      }
+      try {
+        const checks = await readiness.check();
+        sendJson(res, 200, { ok: true, checks });
+      } catch {
+        sendJson(res, 503, { ok: false, error: "service_unavailable" });
+      }
       return;
     }
 
