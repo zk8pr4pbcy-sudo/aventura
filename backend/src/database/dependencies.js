@@ -1,4 +1,5 @@
 import { createDatabasePool } from "./pool.js";
+import { createDatabaseReadiness } from "../health/readiness.js";
 import { createExperienceRequestService } from "../experience-requests/service.js";
 import { createPostgresExperienceRequestRepository } from "../experience-requests/postgres-repository.js";
 import { createCollaborationRequestService } from "../collaboration-requests/service.js";
@@ -24,6 +25,7 @@ export function createDatabaseDependencies(config) {
 
   return {
     dependencies: {
+      readiness: createDatabaseReadiness(pool),
       experienceRequests: createExperienceRequestService(
         createPostgresExperienceRequestRepository(pool)
       ),
