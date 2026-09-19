@@ -29,7 +29,7 @@ This document defines the deployment contract for the Aventura Management System
 8. Keep `PUBLIC_REQUESTS_ENABLED=false` for the first production deployment. This allows admin and operational verification without moving live website forms.
 9. Bootstrap the first Owner only through the secure runtime command after the database is ready.
 10. Configure SMTP and the notification worker only after the provider and production credentials are approved.
-11. Enable live public request ingestion only during the controlled dual-path migration from FormSubmit, with server-side Turnstile enabled and approved hostnames configured.
+11. Enable live public request ingestion only during the controlled dual-path migration from FormSubmit, with server-side Turnstile, approved hostnames, and explicit browser origins configured.
 
 ## Container contract
 
@@ -64,6 +64,35 @@ Public request ingestion remains disabled by default in production. When explici
 - `TURNSTILE_REQUIRED=true`
 - `TURNSTILE_SECRET_KEY`
 - `TURNSTILE_HOSTNAMES`
+- `PUBLIC_API_ORIGINS=https://aventuraksa.com,https://www.aventuraksa.com`
+
+The production configuration refuses to start public request ingestion if Turnstile is explicitly disabled or if the browser-origin allowlist is missing.
+
+### CORS boundary
+
+`PUBLIC_API_ORIGINS` is an exact HTTPS allowlist for the browser-facing request and published-content APIs. The backend never uses `Access-Control-Allow-Origin: *` for these routes.
+
+CORS is only a browser boundary. It is **not** authentication and it is **not** the abuse-prevention mechanism. Server-side Turnstile validation remains mandatory whenever production public request ingestion is enabled.
+
+### Trusted proxy and client IP
+
+Login rate limiting always applies per account. IP-based login limiting is added only when a trusted client-IP source is explicitly configured with `TRUSTED_CLIENT_IP_HEADER`.
+
+Supported modes:
+
+- `cf-connecting-ip`
+- `x-forwarded-for`
+- `remote-address`
+
+A forwarded header such as `CF-Connecting-IP` or `X-Forwarded-For` must **never** be trusted merely because the header exists. Enable one of these modes only after network rules ensure clients cannot bypass the approved proxy/load balancer and connect directly to the backend. If that guarantee does not exist, leave `TRUSTED_CLIENT_IP_HEADER` unset and rely on account rate limiting until the ingress boundary is corrected.
+
+For a Cloudflare-only ingress design, the intended runtime setting is:
+
+```sh
+TRUSTED_CLIENT_IP_HEADER=cf-connecting-ip
+```
+
+but only after origin access is restricted to the trusted Cloudflare/ingress path.
 
 SMTP remains optional until notifications are approved for production. Credentials must remain in secret storage.
 
@@ -88,6 +117,12 @@ Production must provide managed backups and point-in-time recovery where support
 - backup access is limited to authorized administrators.
 
 The repository already has `Aventura Backend Recovery CI`, which verifies `pg_dump → clean database → pg_restore → business-data verification` on PostgreSQL 17. Managed-provider backup/PITR remains an additional production requirement, not a replacement for restore testing.
+
+## Observability gate
+
+Each HTTP response receives an `X-Request-Id`. Runtime access logs are structured JSON and include only the request ID, method, URL pathname, status code, duration and timestamp. Query strings and request bodies are intentionally excluded so routine operational logging does not collect customer PII.
+
+The production provider should route stdout/stderr into its managed logging service and configure alerts for repeated 5xx responses, failed readiness probes, container restarts and database connection failures before live forms are enabled.
 
 ## First deployment remains dark
 
