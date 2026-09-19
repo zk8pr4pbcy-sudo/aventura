@@ -18,6 +18,7 @@ test("production disables public request ingestion by default", () => {
     DATABASE_URL: productionDatabaseUrl
   });
   assert.equal(config.publicRequestsEnabled, false);
+  assert.equal(config.idempotencyRequired, false);
   assert.equal(config.turnstile.required, false);
   assert.deepEqual(config.publicApiOrigins, []);
   assert.equal(config.trustedClientIpHeader, null);
@@ -80,6 +81,7 @@ test("production public requests require Turnstile secret, approved hostnames an
     TRUSTED_CLIENT_IP_HEADER: "cf-connecting-ip"
   });
   assert.equal(config.publicRequestsEnabled, true);
+  assert.equal(config.idempotencyRequired, true);
   assert.equal(config.turnstile.required, true);
   assert.deepEqual(config.turnstile.hostnames, ["aventuraksa.com", "www.aventuraksa.com"]);
   assert.deepEqual(config.publicApiOrigins, ["https://aventuraksa.com", "https://www.aventuraksa.com"]);
