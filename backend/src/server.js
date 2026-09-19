@@ -14,6 +14,7 @@ import { readAdminSessionCookie, createAdminSessionCookie, clearAdminSessionCook
 import { requirePermission } from "./auth/permissions.js";
 import { applyPublicCors } from "./security/cors.js";
 import { resolveClientIp } from "./security/client-ip.js";
+import { readIdempotencyKey, createIdempotencyMetadata } from "./security/idempotency.js";
 import { createLoginFailureLimiter } from "./security/login-rate-limit.js";
 import { enforceTurnstile, verifyTurnstileToken } from "./security/turnstile.js";
 import { handleWebsiteContentRequest } from "./website-content/http.js";
@@ -63,6 +64,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
     ((req) => resolveClientIp(req, config.trustedClientIpHeader || null));
   const publicRequestsEnabled = config.publicRequestsEnabled !== false;
   const publicApiOrigins = config.publicApiOrigins || [];
+  const idempotencyRequired = config.idempotencyRequired === true;
   const turnstileConfig = config.turnstile || { required: false, secretKey: null, hostnames: [] };
   const secureAdminCookie = config.env === "production";
 
@@ -114,6 +116,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
       }
       try {
         const payload = await readJson(req);
+        const idempotencyKey = readIdempotencyKey(req, { required: idempotencyRequired });
         await enforceTurnstile({
           payload,
           config: turnstileConfig,
@@ -126,7 +129,11 @@ export function createServer(config = loadConfig(), dependencies = {}) {
           return;
         }
 
-        const request = await experienceRequests.create(validated.value);
+        const request = await experienceRequests.create({
+          ...validated.value,
+          ...createIdempotencyMetadata("experience", validated.value, idempotencyKey)
+        });
+        if (request.replayed) res.setHeader("idempotency-replayed", "true");
         sendJson(res, 201, {
           referenceNumber: request.referenceNumber,
           status: request.status
@@ -144,6 +151,7 @@ export function createServer(config = loadConfig(), dependencies = {}) {
       }
       try {
         const payload = await readJson(req);
+        const idempotencyKey = readIdempotencyKey(req, { required: idempotencyRequired });
         await enforceTurnstile({
           payload,
           config: turnstileConfig,
@@ -156,7 +164,11 @@ export function createServer(config = loadConfig(), dependencies = {}) {
           return;
         }
 
-        const request = await collaborationRequests.create(validated.value);
+        const request = await collaborationRequests.create({
+          ...validated.value,
+          ...createIdempotencyMetadata("collaboration", validated.value, idempotencyKey)
+        });
+        if (request.replayed) res.setHeader("idempotency-replayed", "true");
         sendJson(res, 201, {
           referenceNumber: request.referenceNumber,
           status: request.status
