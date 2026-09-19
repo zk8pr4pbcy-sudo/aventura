@@ -39,6 +39,7 @@ export function loadConfig(env = process.env) {
   const trustedClientIpHeader = normalizeTrustedClientIpHeader(
     env.TRUSTED_CLIENT_IP_HEADER || (nodeEnv === "production" ? null : "remote-address")
   );
+  const idempotencyRequired = nodeEnv === "production" && publicRequestsEnabled;
 
   if (nodeEnv === "production" && !databaseUrl) {
     throw new Error("DATABASE_URL is required in production");
@@ -64,6 +65,7 @@ export function loadConfig(env = process.env) {
     publicRequestsEnabled,
     publicApiOrigins,
     trustedClientIpHeader,
+    idempotencyRequired,
     turnstile: {
       required: turnstileRequired,
       secretKey: turnstileSecretKey,
