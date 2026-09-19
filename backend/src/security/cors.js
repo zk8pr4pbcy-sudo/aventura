@@ -22,7 +22,7 @@ function setCorsHeaders(res, origin) {
   res.setHeader("access-control-allow-origin", origin);
   res.setHeader("vary", "Origin");
   res.setHeader("access-control-allow-methods", "GET, POST, OPTIONS");
-  res.setHeader("access-control-allow-headers", "Content-Type");
+  res.setHeader("access-control-allow-headers", "Content-Type, Idempotency-Key");
   res.setHeader("access-control-max-age", "600");
 }
 
