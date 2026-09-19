@@ -29,7 +29,7 @@ function setCorsHeaders(res, origin) {
 export function applyPublicCors(req, res, allowedOrigins) {
   const origin = typeof req.headers?.origin === "string" ? req.headers.origin : null;
   if (!origin) {
-    return { allowed: allowedOrigins.length === 0, handled: false };
+    return { allowed: true, handled: false };
   }
 
   if (!allowedOrigins.includes(origin)) {
