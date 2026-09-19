@@ -1,3 +1,5 @@
+import { findIdempotencyReplay } from "../shared/postgres-idempotency.js";
+
 export function createPostgresCollaborationRequestRepository(pool) {
   if (!pool || typeof pool.connect !== "function") {
     throw new Error("PostgreSQL pool is required");
@@ -9,6 +11,12 @@ export function createPostgresCollaborationRequestRepository(pool) {
       try {
         await client.query("BEGIN");
 
+        const existing = await findIdempotencyReplay(client, "collaboration", input);
+        if (existing) {
+          await client.query("COMMIT");
+          return existing;
+        }
+
         const customer = await client.query(
           `INSERT INTO customers (full_name, email, phone, preferred_language)
            VALUES ($1, $2, $3, $4)
@@ -18,15 +26,18 @@ export function createPostgresCollaborationRequestRepository(pool) {
 
         const request = await client.query(
           `INSERT INTO collaboration_requests
-             (customer_id, organization_name, collaboration_type, proposal, request_payload)
-           VALUES ($1, $2, $3, $4, $5::jsonb)
+             (customer_id, organization_name, collaboration_type, proposal, request_payload,
+              idempotency_key_hash, idempotency_fingerprint)
+           VALUES ($1, $2, $3, $4, $5::jsonb, $6, $7)
            RETURNING id, reference_number, status`,
           [
             customer.rows[0].id,
             input.organizationName,
             input.collaborationType,
             input.proposal,
-            JSON.stringify({})
+            JSON.stringify({}),
+            input.idempotencyKeyHash || null,
+            input.idempotencyFingerprint || null
           ]
         );
 
@@ -47,10 +58,15 @@ export function createPostgresCollaborationRequestRepository(pool) {
         await client.query("COMMIT");
         return {
           referenceNumber: request.rows[0].reference_number,
-          status: request.rows[0].status
+          status: request.rows[0].status,
+          replayed: false
         };
       } catch (error) {
         await client.query("ROLLBACK");
+        if (input.idempotencyKeyHash && error?.code === "23505") {
+          const replay = await findIdempotencyReplay(client, "collaboration", input);
+          if (replay) return replay;
+        }
         throw error;
       } finally {
         client.release();
