@@ -1,0 +1,103 @@
+name: Aventura Backend Load Smoke CI
+
+on:
+  pull_request:
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-load-ci.yml'
+  push:
+    branches:
+      - 'feature/backend-**'
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-load-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  load-smoke:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: aventura
+          POSTGRES_PASSWORD: aventura_test
+          POSTGRES_DB: aventura_load_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U aventura -d aventura_load_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://aventura:aventura_test@127.0.0.1:5432/aventura_load_test
+      NODE_ENV: test
+      PORT: 3200
+      PUBLIC_REQUESTS_ENABLED: 'true'
+      TURNSTILE_REQUIRED: 'false'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: npm install
+
+      - name: Apply migrations
+        working-directory: backend
+        run: npm run db:migrate
+
+      - name: Start backend test runtime
+        working-directory: backend
+        run: |
+          node src/server.js >/tmp/aventura-load-server.log 2>&1 &
+          echo $! >/tmp/aventura-load-server.pid
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:3200/ready >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/aventura-load-server.log
+          exit 1
+
+      - name: Run concurrent write smoke test
+        working-directory: backend
+        env:
+          BASE_URL: http://127.0.0.1:3200
+          LOAD_TOTAL: 120
+          LOAD_CONCURRENCY: 12
+        run: node scripts/load-smoke.js
+
+      - name: Verify durable write side effects
+        working-directory: backend
+        run: |
+          node --input-type=module <<'NODE'
+          import pg from "pg";
+          const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+          const requests = await pool.query("SELECT count(*)::int AS count FROM experience_requests");
+          const customers = await pool.query("SELECT count(*)::int AS count FROM customers");
+          const outbox = await pool.query("SELECT count(*)::int AS count FROM notification_outbox WHERE event_type = 'experience_request.created'");
+          if (requests.rows[0].count !== 120) throw new Error(`expected 120 requests, got ${requests.rows[0].count}`);
+          if (customers.rows[0].count !== 120) throw new Error(`expected 120 customers, got ${customers.rows[0].count}`);
+          if (outbox.rows[0].count !== 120) throw new Error(`expected 120 outbox events, got ${outbox.rows[0].count}`);
+          await pool.end();
+          NODE
+
+      - name: Stop backend runtime
+        if: always()
+        run: |
+          if test -f /tmp/aventura-load-server.pid; then
+            kill "$(cat /tmp/aventura-load-server.pid)" 2>/dev/null || true
+          fi
+          cat /tmp/aventura-load-server.log 2>/dev/null || true
