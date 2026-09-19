@@ -40,3 +40,16 @@ test("successful login clears account failures without pretending to clear IP hi
     /too_many_login_attempts/
   );
 });
+
+test("missing trusted IP does not create one shared limiter bucket", () => {
+  const limiter = createLoginFailureLimiter({ accountLimit: 1, ipLimit: 1 });
+  limiter.recordFailure({ email: "first@example.com", ip: null });
+
+  assert.throws(
+    () => limiter.assertAllowed({ email: "first@example.com", ip: null }),
+    /too_many_login_attempts/
+  );
+  assert.doesNotThrow(
+    () => limiter.assertAllowed({ email: "second@example.com", ip: null })
+  );
+});
