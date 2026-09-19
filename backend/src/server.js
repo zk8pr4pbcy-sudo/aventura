@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import { loadConfig } from "./config.js";
 import { readJson, sendJson } from "./http/json.js";
 import { trySendAdminAsset } from "./http/static.js";
+import { attachHttpAccessLog } from "./observability/http-access-log.js";
 import { validateExperienceRequest } from "./experience-requests/validation.js";
 import { createExperienceRequestService } from "./experience-requests/service.js";
 import { createUnconfiguredExperienceRequestRepository } from "./experience-requests/repository.js";
@@ -49,12 +50,14 @@ export function createServer(config = loadConfig(), dependencies = {}) {
   const websiteContent = dependencies.websiteContent || null;
   const turnstileVerifier = dependencies.turnstileVerifier || verifyTurnstileToken;
   const loginLimiter = dependencies.loginLimiter || createLoginFailureLimiter();
+  const accessLogWrite = dependencies.accessLogWrite || (config.env === "test" ? () => {} : console.log);
   const publicRequestsEnabled = config.publicRequestsEnabled !== false;
   const turnstileConfig = config.turnstile || { required: false, secretKey: null, hostnames: [] };
   const secureAdminCookie = config.env === "production";
 
   return http.createServer(async (req, res) => {
     const url = new URL(req.url || "/", "http://localhost");
+    attachHttpAccessLog(req, res, url, { write: accessLogWrite });
 
     if (req.method === "GET" && url.pathname.startsWith("/admin")) {
       try {
