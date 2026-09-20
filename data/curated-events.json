@@ -1,7 +1,7 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "windowDays": 14,
-  "lastReviewed": "2026-09-16",
+  "lastReviewed": "2026-09-20",
   "reviewedBy": "Salem",
   "ui": {
     "ar": {
@@ -76,31 +76,12 @@
       "sourceUrl": "https://www.saff.com.sa/en/nationalteams.php?id=1&type=2",
       "audience": {"ar":"الشركات والوفود الخليجية والتنفيذيون وضيوف VIP","en":"Corporate groups, Gulf delegations, executives and VIP guests","es":"Empresas, delegaciones del Golfo, ejecutivos y huéspedes VIP"},
       "ticketing": {"status":"available_subject_to_match_inventory","ar":"التذاكر والحضور بحسب المباراة ومنصة البيع الرسمية؛ يُعاد التحقق قبل تأكيد أي برنامج.","en":"Tickets and admission depend on the selected match and official ticket inventory; re-check before confirming any itinerary.","es":"Las entradas dependen del partido y del inventario oficial; volver a comprobar antes de confirmar el itinerario."},
-      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Tournament retained as a featured delegation opportunity for 23 Sep–6 Oct 2026 in Jeddah."}
-    },
-    {
-      "id": "jibex-2026",
-      "active": true,
-      "priority": 1,
-      "startDate": "2026-09-15",
-      "endDate": "2026-09-17",
-      "startTime": "16:00",
-      "endTime": "22:00",
-      "title": {"ar":"معرض جدة الدولي للبناء JIBEX 2026","en":"Jeddah International Building Exhibition (JIBEX) 2026","es":"Exposición Internacional de Construcción de Yeda (JIBEX) 2026"},
-      "category": {"ar":"معارض وأعمال","en":"Exhibition & business","es":"Feria y negocios"},
-      "location": {"ar":"مركز جدة للمعارض والفعاليات","en":"Jeddah Exhibition & Events Center","es":"Jeddah Exhibition & Events Center"},
-      "aventuraPlan": {"ar":"جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات","en":"Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services","es":"Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"},
-      "image": "assets/images/hero-jeddah.webp",
-      "imageAlt": {"ar":"أفق جدة كصورة سياقية لتجربة ضيف أعمال","en":"Jeddah skyline as context for a business guest experience","es":"Horizonte de Yeda como contexto para una experiencia de negocios"},
-      "sourceUrl": "https://jibex-sa.com/secure-your-visit/",
-      "audience": {"ar":"الشركات والمطورون والمقاولون والموردون والمستثمرون والوفود المهنية","en":"Companies, developers, contractors, suppliers, investors and professional delegations","es":"Empresas, promotores, contratistas, proveedores, inversores y delegaciones profesionales"},
-      "ticketing": {"status":"free_registration","ar":"التسجيل للزيارة مجاني عبر الموقع الرسمي للمعرض.","en":"Visitor registration is free through the official exhibition website.","es":"El registro de visitantes es gratuito en el sitio oficial de la exposición."},
-      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Current event retained through 17 Sep 2026, 16:00–22:00."}
+      "verification": {"checkedOn":"2026-09-20","status":"retained","notes":"Featured delegation opportunity retained for 23 Sep–6 Oct 2026 in Jeddah."}
     },
     {
       "id": "saudi-food-show-2026",
       "active": true,
-      "priority": 2,
+      "priority": 1,
       "startDate": "2026-09-27",
       "endDate": "2026-09-29",
       "title": {"ar":"The Saudi Food Show + Saudifood Manufacturing 2026","en":"The Saudi Food Show + Saudifood Manufacturing 2026","es":"The Saudi Food Show + Saudifood Manufacturing 2026"},
@@ -113,12 +94,12 @@
       "timeLabels": {"ar":"27–28 سبتمبر: 1:00 م–8:00 م · 29 سبتمبر: 1:00 م–7:00 م","en":"27–28 Sep: 1:00–8:00 PM · 29 Sep: 1:00–7:00 PM","es":"27–28 sep: 13:00–20:00 · 29 sep: 13:00–19:00"},
       "audience": {"ar":"المشترون والموزعون والمصنعون وقطاع الضيافة والتجزئة وصناع القرار والوفود الدولية","en":"Buyers, distributors, manufacturers, hospitality and retail professionals, decision-makers and international delegations","es":"Compradores, distribuidores, fabricantes, profesionales de hostelería y retail, responsables de decisión y delegaciones internacionales"},
       "ticketing": {"status":"registration_open","ar":"التسجيل للزيارة متاح عبر الموقع الرسمي.","en":"Visitor registration is available through the official website.","es":"El registro de visitantes está disponible en el sitio oficial."},
-      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official FAQ and current exhibitor portal confirm Jeddah Superdome, 27–29 Sep 2026, with 1 PM opening; older event subpages showing 12 PM were not used."}
+      "verification": {"checkedOn":"2026-09-20","status":"confirmed","notes":"Official FAQ and exhibitor portal confirm Jeddah Superdome, 27–29 Sep 2026; 27–28 Sep 13:00–20:00 and 29 Sep 13:00–19:00."}
     },
     {
       "id": "meta-geds-2026",
       "active": true,
-      "priority": 3,
+      "priority": 2,
       "startDate": "2026-09-24",
       "endDate": "2026-09-26",
       "title": {"ar":"META-GEDS EXPO 2026","en":"META-GEDS EXPO 2026","es":"META-GEDS EXPO 2026"},
@@ -131,24 +112,45 @@
       "timeLabels": {"ar":"24–25 سبتمبر: 3:00 م–11:00 م · 26 سبتمبر: 3:00 م–9:00 م","en":"24–25 Sep: 3:00–11:00 PM · 26 Sep: 3:00–9:00 PM","es":"24–25 sep: 15:00–23:00 · 26 sep: 15:00–21:00"},
       "audience": {"ar":"قيادات التعليم والجامعات وشركات التقنية والمستثمرون والجهات الحكومية والوفود المهنية","en":"Education leaders, universities, technology companies, investors, government entities and professional delegations","es":"Líderes educativos, universidades, empresas tecnológicas, inversores, entidades públicas y delegaciones profesionales"},
       "ticketing": {"status":"registration_open","ar":"حجز تذكرة الزائر متاح عبر الموقع الرسمي.","en":"Visitor booking is available through the official website.","es":"La reserva de visitante está disponible en el sitio oficial."},
-      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official META-GEDS site confirms 24–26 Sep 2026 at Jeddah Hilton – Al Qasr Hall and the published operating hours."}
+      "verification": {"checkedOn":"2026-09-20","status":"confirmed","notes":"Official META-GEDS site confirms 24–26 Sep 2026 at Jeddah Hilton – Al Qasr Hall and published operating hours."}
     },
     {
       "id": "saudi-fashiontex-2026",
       "active": true,
-      "priority": 4,
+      "priority": 3,
       "startDate": "2026-09-24",
       "endDate": "2026-09-27",
+      "startTime": "15:00",
+      "endTime": "22:00",
       "title": {"ar":"Saudi Fashiontex Expo 2026","en":"Saudi Fashiontex Expo 2026","es":"Saudi Fashiontex Expo 2026"},
       "category": {"ar":"أزياء ومنسوجات وأعمال","en":"Fashion, textiles & business","es":"Moda, textil y negocios"},
-      "location": {"ar":"مركز جدة الدولي للمعارض والفعاليات","en":"Jeddah International Exhibition & Events Center","es":"Jeddah International Exhibition & Events Center"},
+      "location": {"ar":"مركز جدة للمعارض والفعاليات","en":"Jeddah Center for Exhibitions & Events","es":"Jeddah Center for Exhibitions & Events"},
       "aventuraPlan": {"ar":"استقبال مشترين أو عارضين • تنقل خاص • زيارة المعرض • عشاء أعمال • جولة قصيرة في جدة التاريخية","en":"Buyer or exhibitor reception • Private transport • Exhibition visit • Business dinner • Short Historic Jeddah tour","es":"Recepción de compradores o expositores • Transporte privado • Visita a la feria • Cena de negocios • Recorrido breve por Yeda Histórica"},
       "image": "assets/images/collection.webp",
       "imageAlt": {"ar":"تفاصيل ضيافة أفنتورا كصورة سياقية لوفد تجاري","en":"Aventura hospitality details as context for a trade delegation","es":"Detalles de hospitalidad de Aventura como contexto para una delegación comercial"},
       "sourceUrl": "https://saudifashiontexexpo.com/",
       "audience": {"ar":"المشترون والعلامات التجارية والمصنعون والموردون والمستثمرون والوفود التجارية","en":"Buyers, brands, manufacturers, suppliers, investors and trade delegations","es":"Compradores, marcas, fabricantes, proveedores, inversores y delegaciones comerciales"},
       "ticketing": {"status":"registration_open","ar":"تسجيل الزوار متاح عبر الموقع الرسمي.","en":"Visitor registration is available through the official website.","es":"El registro de visitantes está disponible en el sitio oficial."},
-      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official event site confirms 24–27 Sep 2026 in Jeddah and visitor registration; exhibition location is Jeddah International Exhibition & Events Center."}
+      "verification": {"checkedOn":"2026-09-20","status":"confirmed","notes":"Official event site confirms 24–27 Sep 2026 in Jeddah; official fair-tag page lists 15:00–22:00 visiting hours."}
+    },
+    {
+      "id": "saudi-hometex-2026",
+      "active": true,
+      "priority": 4,
+      "startDate": "2026-09-24",
+      "endDate": "2026-09-27",
+      "startTime": "15:00",
+      "endTime": "22:00",
+      "title": {"ar":"Saudi Hometex Expo 2026","en":"Saudi Hometex Expo 2026","es":"Saudi Hometex Expo 2026"},
+      "category": {"ar":"منسوجات منزلية وتصميم وأعمال","en":"Home textiles, design & business","es":"Textil hogar, diseño y negocios"},
+      "location": {"ar":"مركز جدة للمعارض والفعاليات","en":"Jeddah Center for Exhibitions & Events","es":"Jeddah Center for Exhibitions & Events"},
+      "aventuraPlan": {"ar":"استقبال وفد مشتريات أو تصميم • تنقل خاص • زيارة المعرض • اجتماع أو عشاء أعمال • جولة جدة التاريخية أو واجهة جدة البحرية","en":"Procurement or design delegation reception • Private transport • Exhibition visit • Meeting or business dinner • Historic Jeddah or waterfront experience","es":"Recepción de delegación de compras o diseño • Transporte privado • Visita a la feria • Reunión o cena de negocios • Yeda Histórica o paseo marítimo"},
+      "image": "assets/images/collection.webp",
+      "imageAlt": {"ar":"تفاصيل ضيافة أفنتورا كصورة سياقية لوفد تصميم ومشتريات","en":"Aventura hospitality details as context for a design and procurement delegation","es":"Detalles de hospitalidad de Aventura para una delegación de diseño y compras"},
+      "sourceUrl": "https://saudihomeexpo.com/",
+      "audience": {"ar":"المشترون ومصممو الديكور والفنادق والمطورون والموردون وفرق المشتريات والوفود التجارية","en":"Buyers, interior designers, hotels, developers, suppliers, procurement teams and trade delegations","es":"Compradores, diseñadores de interiores, hoteles, promotores, proveedores, equipos de compras y delegaciones comerciales"},
+      "ticketing": {"status":"registration_open","ar":"تسجيل الزوار متاح عبر الموقع الرسمي.","en":"Visitor registration is available through the official website.","es":"El registro de visitantes está disponible en el sitio oficial."},
+      "verification": {"checkedOn":"2026-09-20","status":"confirmed","notes":"Official Saudi Hometex site confirms 24–27 Sep 2026 in Jeddah; organiser fair page confirms Jeddah Center for Exhibitions & Events and 15:00–22:00 visiting hours."}
     },
     {
       "id": "saudi-shoes-expo-2026",
@@ -156,6 +158,8 @@
       "priority": 5,
       "startDate": "2026-09-24",
       "endDate": "2026-09-27",
+      "startTime": "15:00",
+      "endTime": "22:00",
       "title": {"ar":"Saudi Shoes Expo 2026","en":"Saudi Shoes Expo 2026","es":"Saudi Shoes Expo 2026"},
       "category": {"ar":"أحذية وجلود وإكسسوارات وأعمال","en":"Footwear, leather, accessories & business","es":"Calzado, cuero, accesorios y negocios"},
       "location": {"ar":"مركز جدة الدولي للمعارض والفعاليات","en":"Jeddah International Exhibition & Events Center","es":"Jeddah International Exhibition & Events Center"},
@@ -165,12 +169,31 @@
       "sourceUrl": "https://saudishoesexpo.com/",
       "audience": {"ar":"العلامات التجارية والمشترون والموزعون والموردون والمستثمرون والوفود التجارية","en":"Brands, buyers, distributors, suppliers, investors and trade delegations","es":"Marcas, compradores, distribuidores, proveedores, inversores y delegaciones comerciales"},
       "ticketing": {"status":"registration_open","ar":"تسجيل الزوار متاح عبر الموقع الرسمي.","en":"Visitor registration is available through the official website.","es":"El registro de visitantes está disponible en el sitio oficial."},
-      "verification": {"checkedOn":"2026-09-16","status":"confirmed","notes":"Official Saudi Shoes Expo site confirms 24–27 Sep 2026 at Jeddah International Exhibition & Events Center and visitor registration."}
+      "verification": {"checkedOn":"2026-09-20","status":"confirmed","notes":"Official Saudi Shoes Expo site confirms 24–27 Sep 2026 at Jeddah International Exhibition & Events Center; current listings show 15:00–22:00."}
+    },
+    {
+      "id": "jibex-2026",
+      "active": true,
+      "priority": 6,
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-17",
+      "startTime": "16:00",
+      "endTime": "22:00",
+      "title": {"ar":"معرض جدة الدولي للبناء JIBEX 2026","en":"Jeddah International Building Exhibition (JIBEX) 2026","es":"Exposición Internacional de Construcción de Yeda (JIBEX) 2026"},
+      "category": {"ar":"معارض وأعمال","en":"Exhibition & business","es":"Feria y negocios"},
+      "location": {"ar":"مركز جدة للمعارض والفعاليات","en":"Jeddah Exhibition & Events Center","es":"Jeddah Exhibition & Events Center"},
+      "aventuraPlan": {"ar":"جولة في جدة التاريخية • زيارة متحف • غداء أو عشاء • تنقل خاص • وغيرها من الخدمات","en":"Historic Jeddah tour • Museum visit • Lunch or dinner • Private transport • and other services","es":"Recorrido por Yeda Histórica • Visita a un museo • Almuerzo o cena • Transporte privado • y otros servicios"},
+      "image": "assets/images/hero-jeddah.webp",
+      "imageAlt": {"ar":"أفق جدة كصورة سياقية لتجربة ضيف أعمال","en":"Jeddah skyline as context for a business guest experience","es":"Horizonte de Yeda como contexto para una experiencia de negocios"},
+      "sourceUrl": "https://jibex-sa.com/secure-your-visit/",
+      "audience": {"ar":"الشركات والمطورون والمقاولون والموردون والمستثمرون والوفود المهنية","en":"Companies, developers, contractors, suppliers, investors and professional delegations","es":"Empresas, promotores, contratistas, proveedores, inversores y delegaciones profesionales"},
+      "ticketing": {"status":"closed_event_ended","ar":"انتهت الفعالية.","en":"The event has ended.","es":"El evento ha finalizado."},
+      "verification": {"checkedOn":"2026-09-20","status":"ended","notes":"Event ended 17 Sep 2026; retained in data history and automatically excluded by date filtering."}
     },
     {
       "id": "saudi-industry-forum-2026",
       "active": true,
-      "priority": 6,
+      "priority": 7,
       "startDate": "2026-09-14",
       "endDate": "2026-09-16",
       "startTime": "11:00",
@@ -183,13 +206,13 @@
       "imageAlt": {"ar":"ضيافة فعاليات الشركات من أفنتورا في جدة","en":"Aventura corporate event hospitality in Jeddah","es":"Hospitalidad corporativa de Aventura en Yeda"},
       "sourceUrl": "https://www.ksa-sif.com/jeddah/",
       "audience": {"ar":"الشركات والمستثمرون وصناع القرار والتنفيذيون والوفود المهنية","en":"Companies, investors, decision-makers, executives and professional delegations","es":"Empresas, inversores, responsables de decisión, ejecutivos y delegaciones profesionales"},
-      "ticketing": {"status":"registration_open","ar":"التسجيل للزيارة متاح عبر الموقع الرسمي للمنتدى.","en":"Visitor registration is available through the forum’s official website.","es":"El registro de visitantes está disponible en el sitio web oficial del foro."},
-      "verification": {"checkedOn":"2026-09-16","status":"confirmed_with_source_conflict","notes":"Jeddah Superdome current calendar lists 11:00–20:00; organiser page still shows 09:00–19:00. Website card uses the venue's current listing."}
+      "ticketing": {"status":"closed_event_ended","ar":"انتهت الفعالية.","en":"The event has ended.","es":"El evento ha finalizado."},
+      "verification": {"checkedOn":"2026-09-20","status":"ended","notes":"Event ended 16 Sep 2026; retained in data history and automatically excluded by date filtering."}
     },
     {
       "id": "khaled-abdel-aziz-jeddah-2026",
       "active": true,
-      "priority": 7,
+      "priority": 8,
       "startDate": "2026-09-17",
       "endDate": "2026-09-17",
       "doorsTime": "20:30",
@@ -203,13 +226,13 @@
       "imageAlt": {"ar":"أجواء فعالية خاصة من أفنتورا في جدة","en":"Aventura private event atmosphere in Jeddah","es":"Ambiente de evento privado de Aventura en Yeda"},
       "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/107896/khaled-abdel-aziz-in-jeddah-at-society-of-culture-and-arts",
       "audience": {"ar":"الضيوف الثقافيون، الأزواج، التنفيذيون ومجموعات VIP الصغيرة","en":"Cultural guests, couples, executives and small VIP groups","es":"Huéspedes culturales, parejas, ejecutivos y pequeños grupos VIP"},
-      "ticketing": {"status":"on_sale","priceFromSAR":149,"ar":"التذاكر معروضة للبيع عبر Platinumlist.","en":"Tickets are on sale via Platinumlist.","es":"Entradas a la venta en Platinumlist."},
-      "verification": {"checkedOn":"2026-09-16","status":"retained","notes":"Previously verified listing retained; re-check before any booking confirmation."}
+      "ticketing": {"status":"closed_event_ended","ar":"انتهت الفعالية.","en":"The event has ended.","es":"El evento ha finalizado."},
+      "verification": {"checkedOn":"2026-09-20","status":"ended","notes":"Event ended 17 Sep 2026; retained in data history."}
     },
     {
       "id": "rasha-rizk-jeddah-2026",
       "active": true,
-      "priority": 8,
+      "priority": 9,
       "startDate": "2026-09-19",
       "endDate": "2026-09-19",
       "doorsTime": "19:00",
@@ -223,13 +246,13 @@
       "imageAlt": {"ar":"تفاصيل ضيافة أفنتورا كصورة سياقية لتجربة مسائية","en":"Aventura hospitality details as context for an evening experience","es":"Detalles de hospitalidad de Aventura como contexto para una experiencia nocturna"},
       "sourceUrl": "https://jeddah.platinumlist.net/event-tickets/107901/rasha-rizk-spacetoon-golden-voice-live-in-jeddah",
       "audience": {"ar":"العائلات والضيوف العرب ومحبو سبيستون ومجموعات الضيافة الخاصة","en":"Families, Arab guests, Spacetoon fans and private-hosting groups","es":"Familias, huéspedes árabes, seguidores de Spacetoon y grupos de hospitalidad privada"},
-      "ticketing": {"status":"on_sale","priceFromSAR":175,"ar":"التذاكر معروضة للبيع عبر Platinumlist.","en":"Tickets are on sale via Platinumlist.","es":"Entradas a la venta en Platinumlist."},
-      "verification": {"checkedOn":"2026-09-16","status":"retained","notes":"Previously verified listing retained; re-check before any booking confirmation."}
+      "ticketing": {"status":"closed_event_ended","ar":"انتهت الفعالية.","en":"The event has ended.","es":"El evento ha finalizado."},
+      "verification": {"checkedOn":"2026-09-20","status":"ended","notes":"Event ended 19 Sep 2026; retained in data history."}
     },
     {
       "id": "faia-younan-jazz-jeddah-2026",
       "active": true,
-      "priority": 9,
+      "priority": 10,
       "startDate": "2026-09-25",
       "endDate": "2026-09-25",
       "title": {"ar":"ليلة جاز في جدة مع فايا يونان","en":"Faia Younan — An Evening in Jazz in Jeddah","es":"Faia Younan — Una noche de jazz en Yeda"},
@@ -241,13 +264,49 @@
       "sourceUrl": "https://jeddah.platinumlist.net/ar/event-tickets/108211/faia-younan-a-jazz-in-jeddah",
       "audience": {"ar":"الأزواج، الضيوف الثقافيون، التنفيذيون ومجموعات VIP الصغيرة","en":"Couples, cultural guests, executives and small VIP groups","es":"Parejas, huéspedes culturales, ejecutivos y pequeños grupos VIP"},
       "ticketing": {"status":"on_sale","priceFromSAR":200,"age":"15+","ar":"التذاكر معروضة للبيع عبر Platinumlist، والدخول لمن هم فوق 15 عامًا.","en":"Tickets are on sale via Platinumlist; admission is for ages 15+.","es":"Entradas a la venta en Platinumlist; acceso para mayores de 15 años."},
-      "verification": {"checkedOn":"2026-09-16","status":"retained","notes":"Previously verified listing retained; re-check before any booking confirmation."}
+      "verification": {"checkedOn":"2026-09-20","status":"retained","notes":"Previously verified listing retained; re-check before any booking confirmation."}
+    },
+    {
+      "id": "saudi-maritime-logistics-congress-2026",
+      "active": true,
+      "priority": 1,
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-22",
+      "timeLabels": {"ar":"21 أكتوبر: 10:00 ص–8:00 م · 22 أكتوبر: 10:00 ص–7:00 م","en":"21 Oct: 10:00 AM–8:00 PM · 22 Oct: 10:00 AM–7:00 PM","es":"21 oct: 10:00–20:00 · 22 oct: 10:00–19:00"},
+      "title": {"ar":"المؤتمر السعودي البحري واللوجستي 2026","en":"Saudi Maritime & Logistics Congress 2026","es":"Congreso Saudí Marítimo y Logístico 2026"},
+      "category": {"ar":"بحري ولوجستيات وأعمال","en":"Maritime, logistics & business","es":"Marítimo, logística y negocios"},
+      "location": {"ar":"جدة سوبر دوم","en":"Jeddah Superdome","es":"Jeddah Superdome"},
+      "aventuraPlan": {"ar":"استقبال كبار الضيوف والوفود • تنقل خاص يومي • زيارة المؤتمر والاجتماعات • عشاء أعمال • تجربة بحرية أو جدة التاريخية قبل أو بعد المؤتمر","en":"VIP and delegation reception • Daily private transport • Congress and meetings • Business dinner • Red Sea or Historic Jeddah experience before or after the congress","es":"Recepción VIP y delegaciones • Transporte privado diario • Congreso y reuniones • Cena de negocios • Experiencia en el Mar Rojo o Yeda Histórica antes o después"},
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {"ar":"ضيافة وفود تنفيذية من أفنتورا في جدة","en":"Aventura executive delegation hospitality in Jeddah","es":"Hospitalidad ejecutiva de Aventura para delegaciones en Yeda"},
+      "sourceUrl": "https://www.saudimaritimecongress.com/",
+      "audience": {"ar":"صناع القرار، شركات الشحن والموانئ والخدمات اللوجستية، الموردون، المستثمرون، التنفيذيون وVIP والوفود الدولية","en":"Decision-makers, shipping, ports and logistics companies, suppliers, investors, executives, VIPs and international delegations","es":"Responsables de decisión, navieras, puertos y logística, proveedores, inversores, ejecutivos, VIP y delegaciones internacionales"},
+      "ticketing": {"status":"free_pass_available","ar":"تصريح دخول مجاني متاح عبر الموقع الرسمي.","en":"A free visitor pass is available through the official website.","es":"Hay un pase gratuito disponible en el sitio oficial."},
+      "verification": {"checkedOn":"2026-09-20","status":"confirmed","notes":"Official event site confirms 21–22 Oct 2026 at Jeddah Superdome, with 15,000+ attendees, 800+ VIPs, 200+ exhibitors, 120+ speakers and published daily hours."}
+    },
+    {
+      "id": "international-trade-exchange-expo-2026",
+      "active": true,
+      "priority": 2,
+      "startDate": "2026-10-27",
+      "endDate": "2026-10-29",
+      "title": {"ar":"معرض التبادل التجاري الدولي 2026","en":"International Trade Exchange Expo 2026","es":"Expo Internacional de Intercambio Comercial 2026"},
+      "category": {"ar":"تجارة واستثمار ووفود","en":"Trade, investment & delegations","es":"Comercio, inversión y delegaciones"},
+      "location": {"ar":"مركز جدة للمعارض والفعاليات","en":"Jeddah Exhibition & Events Center","es":"Jeddah Exhibition & Events Center"},
+      "aventuraPlan": {"ar":"استقبال وفود ومستثمرين • تنقل خاص للمعرض والاجتماعات • غداء أو عشاء أعمال • جولة جدة التاريخية أو البحر حسب جدول الوفد","en":"Investor and delegation reception • Private transfers to the expo and meetings • Business lunch or dinner • Historic Jeddah or Red Sea around the delegation schedule","es":"Recepción de inversores y delegaciones • Traslados privados a la feria y reuniones • Almuerzo o cena de negocios • Yeda Histórica o Mar Rojo según la agenda"},
+      "image": "assets/images/hero-jeddah.webp",
+      "imageAlt": {"ar":"جدة كصورة سياقية لاستضافة وفود التجارة والاستثمار","en":"Jeddah as context for trade and investment delegation hosting","es":"Yeda como contexto para delegaciones de comercio e inversión"},
+      "sourceUrl": "https://jitexpo.com/",
+      "audience": {"ar":"الشركات والمستثمرون ورواد الأعمال والمشترون والموردون والغرف التجارية والوفود الدولية","en":"Companies, investors, entrepreneurs, buyers, suppliers, chambers and international delegations","es":"Empresas, inversores, emprendedores, compradores, proveedores, cámaras y delegaciones internacionales"},
+      "ticketing": {"status":"registration_available","ar":"التسجيل متاح عبر موقع المعرض؛ يُعاد التحقق من شروط الدخول قبل الموعد.","en":"Registration is available through the event website; admission conditions will be re-checked before the event.","es":"El registro está disponible en el sitio del evento; se volverán a comprobar las condiciones de acceso antes de la fecha."},
+      "verification": {"checkedOn":"2026-09-20","status":"confirmed","notes":"Official event site confirms the inaugural edition on 27–29 Oct 2026 at Jeddah Exhibition & Convention Center, in strategic partnership with Jeddah Chamber; SCEGA 2026 calendar independently lists the same dates and venue."}
     }
   ],
   "reviewSummary": {
-    "added": ["meta-geds-2026", "saudi-fashiontex-2026", "saudi-shoes-expo-2026", "saudi-food-show-2026"],
-    "updated": ["saudi-industry-forum-2026"],
+    "added": ["saudi-hometex-2026", "saudi-maritime-logistics-congress-2026", "international-trade-exchange-expo-2026"],
+    "reverified": ["meta-geds-2026", "saudi-fashiontex-2026", "saudi-shoes-expo-2026", "saudi-food-show-2026"],
+    "endedAndAutoHidden": ["jibex-2026", "saudi-industry-forum-2026", "khaled-abdel-aziz-jeddah-2026", "rasha-rizk-jeddah-2026"],
     "publishingScope": "website_only",
-    "note": "Current publishing scope is website event cards only. Social-media production is paused unless explicitly reactivated."
+    "note": "Website event cards only. Events outside the rolling 14-day window remain stored and appear automatically when they enter the window. Social-media production remains paused."
   }
 }
