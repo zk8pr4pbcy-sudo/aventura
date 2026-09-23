@@ -106,20 +106,37 @@
 }
 
 .curated-card {
+  position: relative;
   flex: 0 0 min(310px, 82vw);
   min-width: 0;
   overflow: hidden;
   scroll-snap-align: start;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(229, 206, 157, 0.22);
   border-radius: 20px;
   background: var(--sand-50);
   color: var(--ink);
   box-shadow: 0 18px 46px rgba(0, 0, 0, 0.2);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.curated-card::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+  opacity: 0.9;
+}
+
+.curated-card--featured {
+  border-color: rgba(229, 206, 157, 0.65);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(229, 206, 157, 0.12);
 }
 
 .curated-card:hover {
   transform: translateY(-4px);
+  border-color: rgba(229, 206, 157, 0.58);
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.26);
 }
 
@@ -134,7 +151,9 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(4, 17, 29, 0.64), transparent 55%);
+  background:
+    linear-gradient(to top, rgba(4, 17, 29, 0.72), transparent 58%),
+    linear-gradient(135deg, rgba(7, 28, 45, 0.06), rgba(189, 152, 88, 0.08));
   pointer-events: none;
 }
 
@@ -166,12 +185,14 @@
   inset-inline-start: 14px;
   padding: 7px 10px;
   color: var(--navy-950);
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .curated-card__category {
   inset-inline-start: 14px;
   inset-block-end: 14px;
+  max-width: calc(100% - 28px);
   padding: 6px 11px;
   color: var(--navy-950);
   background: var(--gold-light);
@@ -180,8 +201,22 @@
 .curated-card__body {
   display: flex;
   flex-direction: column;
-  min-height: 330px;
+  min-height: 390px;
   padding: 20px;
+}
+
+.curated-card__focus {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border: 1px solid rgba(189, 152, 88, 0.35);
+  border-radius: 999px;
+  color: var(--gold-dark);
+  background: rgba(229, 206, 157, 0.16);
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1.35;
 }
 
 .curated-card h3 {
@@ -198,10 +233,17 @@
 }
 
 .curated-card__time {
-  margin: -7px 0 16px;
+  margin: -7px 0 14px;
   color: var(--navy-800);
   font-size: 0.86rem;
   font-weight: 650;
+}
+
+.curated-card__summary {
+  margin: 0 0 16px;
+  color: #465866;
+  font-size: 0.88rem;
+  line-height: 1.65;
 }
 
 .curated-card__plan-label {
@@ -216,23 +258,8 @@
 .curated-card__plan {
   margin: 0;
   color: #344553;
-  font-size: 0.93rem;
-  line-height: 1.7;
-}
-
-.curated-card__meal {
-  margin: 14px 0 0;
-  padding: 12px 14px;
-  border-inline-start: 3px solid var(--gold);
-  border-radius: 10px;
-  background: rgba(229, 206, 157, 0.2);
-  color: #344553;
-  font-size: 0.88rem;
-  line-height: 1.65;
-}
-
-.curated-card__meal strong {
-  color: var(--gold-dark);
+  font-size: 0.91rem;
+  line-height: 1.68;
 }
 
 .curated-card__actions {
@@ -251,7 +278,7 @@
   border-radius: 999px;
   text-align: center;
   text-decoration: none;
-  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
 .curated-card__cta {
@@ -264,6 +291,7 @@
 .curated-card__cta:hover,
 .curated-card__cta:focus-visible {
   background: var(--gold-dark);
+  transform: translateY(-1px);
 }
 
 .curated-card__source {
@@ -356,11 +384,11 @@ html:not([lang="ar"]) .curated-card {
   }
 
   .curated-card {
-    flex-basis: min(82vw, 320px);
+    flex-basis: min(86vw, 332px);
   }
 
   .curated-card__body {
-    min-height: 320px;
+    min-height: 372px;
     padding: 18px;
   }
 }
@@ -372,6 +400,7 @@ html:not([lang="ar"]) .curated-card {
 
   .curated-card,
   .curated-card__media img,
+  .curated-card__cta,
   .curated-calendar__control {
     transition: none;
   }
