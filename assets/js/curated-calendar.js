@@ -167,9 +167,11 @@
     var article = document.createElement("article");
     article.className = "curated-card";
     article.dataset.curatedEvent = event.id;
+    if (event.featured) article.classList.add("curated-card--featured");
 
     var media = document.createElement("div");
     media.className = "curated-card__media";
+
     var image = document.createElement("img");
     image.src = event.image;
     image.alt = localized(event.imageAlt, lang);
@@ -190,6 +192,14 @@
     var body = document.createElement("div");
     body.className = "curated-card__body";
 
+    var focusText = localized(event.focusLabel, lang);
+    if (focusText) {
+      var focus = document.createElement("span");
+      focus.className = "curated-card__focus";
+      focus.textContent = focusText;
+      body.appendChild(focus);
+    }
+
     var title = document.createElement("h3");
     title.textContent = localized(event.title, lang);
     body.appendChild(title);
@@ -205,6 +215,14 @@
       time.className = "curated-card__time";
       time.textContent = "◷ " + (ui.timeLabel || "Time") + ": " + timeText;
       body.appendChild(time);
+    }
+
+    var summaryText = localized(event.summary, lang);
+    if (summaryText) {
+      var summary = document.createElement("p");
+      summary.className = "curated-card__summary";
+      summary.textContent = summaryText;
+      body.appendChild(summary);
     }
 
     var planLabel = document.createElement("span");
@@ -324,7 +342,7 @@
   }
 
   var api = {
-    version: "1.3.1",
+    version: "1.4.0",
     saudiToday: saudiToday,
     addDays: addDays,
     filterEvents: filterEvents,
