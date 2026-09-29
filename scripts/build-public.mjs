@@ -69,12 +69,12 @@ function hardenSharedApp() {
     ].join('\n');
     source = replaceRequired(source, declarations, hardenedDeclarations, 'app contact declarations');
 
-    const footerEmailLine = `      '        <li><a href=\\"mailto:' + REQUEST_EMAIL + '\\">' + REQUEST_EMAIL + '</a></li>',`;
-    const footerContactLine = `      '        <li><a href=\\"contact.html\\" data-i18n=\\"nav.contact\\">Contact</a></li>',`;
+    const footerEmailLine = `      '        <li><a href="mailto:' + REQUEST_EMAIL + '">' + REQUEST_EMAIL + '</a></li>',`;
+    const footerContactLine = `      '        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>',`;
     source = replaceRequired(source, footerEmailLine, footerContactLine, 'footer email link');
 
-    const footerWhatsappLine = `      '        <li><a href=\\"https://wa.me/' + WHATSAPP_NUMBER + '\\" target=\\"_blank\\" rel=\\"noopener\\">${displayedWhatsappNumber}</a></li>',`;
-    const footerWhatsappGeneric = `      '        <li><a href=\\"https://wa.me/' + WHATSAPP_NUMBER + '\\" target=\\"_blank\\" rel=\\"noopener\\" data-i18n=\\"common.whatsapp\\">Chat on WhatsApp</a></li>',`;
+    const footerWhatsappLine = `      '        <li><a href="https://wa.me/' + WHATSAPP_NUMBER + '" target="_blank" rel="noopener">${displayedWhatsappNumber}</a></li>',`;
+    const footerWhatsappGeneric = `      '        <li><a href="https://wa.me/' + WHATSAPP_NUMBER + '" target="_blank" rel="noopener" data-i18n="common.whatsapp">Chat on WhatsApp</a></li>',`;
     source = replaceRequired(source, footerWhatsappLine, footerWhatsappGeneric, 'footer WhatsApp display');
 
     return source;
