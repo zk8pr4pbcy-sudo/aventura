@@ -28,6 +28,17 @@ jobs:
           node --check assets/js/curated-calendar.js
           node --check assets/js/legal-content.js
           node --check scripts/localize-default-metadata.mjs
+          node --check scripts/build-public.mjs
+      - name: Build hardened public artifact
+        run: node scripts/build-public.mjs
+      - name: Check hardened artifact JavaScript syntax
+        run: |
+          node --check _site/assets/js/translations.js
+          node --check _site/assets/js/app.js
+          node --check _site/assets/js/contact-submission.js
+          node --check _site/assets/js/event-request.js
+          node --check _site/assets/js/jeddah-picks-request.js
+          node --check _site/assets/js/legal-content.js
       - name: Validate SEO contract
         run: node tests/seo-contract.mjs
       - name: Validate Curated Calendar contract
