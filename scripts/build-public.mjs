@@ -77,6 +77,26 @@ function hardenSharedApp() {
     const footerWhatsappGeneric = `      '        <li><a href="https://wa.me/' + WHATSAPP_NUMBER + '" target="_blank" rel="noopener" data-i18n="common.whatsapp">Chat on WhatsApp</a></li>',`;
     source = replaceRequired(source, footerWhatsappLine, footerWhatsappGeneric, 'footer WhatsApp display');
 
+    const externalLinksMarker = '  function setupExternalLinks() {';
+    const protectedContactSetup = [
+      '  function setupProtectedContactLinks() {',
+      '    document.querySelectorAll("[data-aventura-whatsapp-link]").forEach(function (link) {',
+      '      link.href = "https://wa.me/" + WHATSAPP_NUMBER;',
+      '      link.setAttribute("target", "_blank");',
+      '      link.setAttribute("rel", "noopener");',
+      '    });',
+      '  }',
+      '',
+      externalLinksMarker
+    ].join('\n');
+    source = replaceRequired(source, externalLinksMarker, protectedContactSetup, 'protected contact link setup');
+    source = replaceRequired(
+      source,
+      '    setupPartnerForm();\n    setupExternalLinks();',
+      '    setupPartnerForm();\n    setupProtectedContactLinks();\n    setupExternalLinks();',
+      'protected contact link initialization'
+    );
+
     return source;
   });
 }
@@ -120,16 +140,73 @@ function hardenEventRequestTransport() {
     ].join('\n');
     return replaceRequired(source, declaration, hardened, 'Jeddah picks request endpoint');
   });
+
+  transformFile('assets/js/fragrance-cards.js', (source) => {
+    const declaration = `  var ENDPOINT = "${ajaxEndpoint}";`;
+    const hardened = [
+      '  function decodeContactValue(values) {',
+      `    return values.map(function (value) { return String.fromCharCode(value - ${shift}); }).join("");`,
+      '  }',
+      '',
+      `  var ENDPOINT = "https://formsubmit.co/ajax/" + decodeContactValue([${shiftedCodes(contactEmail)}]);`
+    ].join('\n');
+    return replaceRequired(source, declaration, hardened, 'fragrance interest endpoint');
+  });
 }
 
 function hardenContactPage() {
   transformFile('contact.html', (source) => {
-    return replaceRequired(
+    source = replaceRequired(
       source,
       `action="${directEndpoint}"`,
       'action="contact.html"',
       'contact form direct destination'
     );
+    source = replaceRequired(
+      source,
+      '<form class="form-card" data-contact-form',
+      '<form id="request" class="form-card" data-contact-form',
+      'contact form anchor'
+    );
+
+    const contactPanel = [
+      `            <a class="contact-method" href="mailto:${contactEmail}">`,
+      '              <span data-i18n="contact.email1Label">Bookings &amp; inquiries</span>',
+      `              <strong>${contactEmail}</strong>`,
+      '            </a>',
+      `            <a class="contact-method" href="https://wa.me/${whatsappNumber}" target="_blank" rel="noopener">`,
+      '              <span data-i18n="contact.phoneLabel">WhatsApp</span>',
+      `              <strong dir="ltr">${displayedWhatsappNumber}</strong>`,
+      '            </a>'
+    ].join('\n');
+    const hardenedPanel = [
+      '            <a class="contact-method" href="#request">',
+      '              <span data-i18n="contact.email1Label">Bookings &amp; inquiries</span>',
+      '              <strong data-i18n="contact.formTitle">Request details</strong>',
+      '            </a>',
+      '            <a class="contact-method" href="#" data-aventura-whatsapp-link>',
+      '              <span data-i18n="contact.phoneLabel">WhatsApp</span>',
+      '              <strong data-i18n="common.whatsapp">Chat on WhatsApp</strong>',
+      '            </a>'
+    ].join('\n');
+    source = replaceRequired(source, contactPanel, hardenedPanel, 'contact panel contact details');
+    return source;
+  });
+
+  transformFile('event-request/index.html', (source) => {
+    return replaceRequired(
+      source,
+      `action="${directEndpoint}"`,
+      'action="event-request/"',
+      'event request direct destination'
+    );
+  });
+}
+
+function hardenStructuredData() {
+  transformFile('index.html', (source) => {
+    const contactProperties = `    "telephone": "+${whatsappNumber}",\n    "email": "${contactEmail}",\n`;
+    return replaceRequired(source, contactProperties, '', 'home structured contact data');
   });
 }
 
@@ -140,6 +217,15 @@ function hardenPrivacyCopy() {
       `Please enable JavaScript to view this policy, or email ${contactEmail} to request a copy.`,
       'Please enable JavaScript to view this policy, or use the contact page to request a copy.',
       'privacy noscript email'
+    );
+  });
+
+  transformFile('terms.html', (source) => {
+    return replaceRequired(
+      source,
+      `Please enable JavaScript to view these terms, or email ${contactEmail} to request a copy.`,
+      'Please enable JavaScript to view these terms, or use the contact page to request a copy.',
+      'terms noscript email'
     );
   });
 
@@ -226,6 +312,7 @@ hardenSharedApp();
 hardenContactTransport();
 hardenEventRequestTransport();
 hardenContactPage();
+hardenStructuredData();
 hardenPrivacyCopy();
 verifyPublicArtifact();
 
