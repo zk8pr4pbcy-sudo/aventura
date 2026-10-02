@@ -20,6 +20,9 @@ check(ga4.includes('seconds_to_submit'), 'time to submit is tracked');
 check(ga4.includes('request_completed'), 'request completion is tracked');
 check(ga4.includes('journey_pattern'), 'journey pattern is tracked');
 check(ga4.includes('pages_before_contact'), 'pre-request page count is tracked');
+check(ga4.includes('journey_page_viewed'), 'every measured page emits a journey route step');
+check(ga4.includes('journey_trace'), 'ordered anonymous journey trace is tracked');
+check(ga4.includes('createJourneyVisitToken'), 'journey trace uses a session-only anonymous token');
 
 if (failures) process.exit(1);
 console.log('\nAventura GA4 journey contract passed.');
