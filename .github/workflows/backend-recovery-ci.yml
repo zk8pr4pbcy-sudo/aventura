@@ -1,0 +1,125 @@
+name: Aventura Backend Recovery CI
+
+on:
+  pull_request:
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-recovery-ci.yml'
+  push:
+    branches:
+      - 'feature/backend-**'
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-recovery-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  recovery:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: aventura
+          POSTGRES_PASSWORD: aventura_test
+          POSTGRES_DB: aventura_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U aventura -d aventura_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      NODE_ENV: test
+      DATABASE_URL: postgresql://aventura:aventura_test@127.0.0.1:5432/aventura_test
+      RESTORE_DATABASE_URL: postgresql://aventura:aventura_test@127.0.0.1:5432/aventura_restore
+
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install backend dependencies
+        run: npm install
+
+      - name: Apply migrations
+        run: npm run db:migrate
+
+      - name: Seed recovery verification data
+        run: node scripts/seed-recovery-ci.js
+
+      - name: Create PostgreSQL 17 custom-format backup
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f aventura-ci.dump
+          docker run --rm --network host \
+            -e PGPASSWORD=aventura_test \
+            -v "$PWD:/work" \
+            postgres:17 \
+            pg_dump \
+              --host=127.0.0.1 \
+              --username=aventura \
+              --dbname=aventura_test \
+              --format=custom \
+              --no-owner \
+              --no-privileges \
+              --file=/work/aventura-ci.dump
+          test -s aventura-ci.dump
+
+      - name: Restore backup into a clean database
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network host \
+            -e PGPASSWORD=aventura_test \
+            postgres:17 \
+            psql \
+              --host=127.0.0.1 \
+              --username=aventura \
+              --dbname=postgres \
+              --set=ON_ERROR_STOP=1 \
+              --command='DROP DATABASE IF EXISTS aventura_restore;' \
+              --command='CREATE DATABASE aventura_restore OWNER aventura;'
+
+          docker run --rm --network host \
+            -e PGPASSWORD=aventura_test \
+            -v "$PWD:/work" \
+            postgres:17 \
+            pg_restore \
+              --host=127.0.0.1 \
+              --username=aventura \
+              --dbname=aventura_restore \
+              --exit-on-error \
+              --no-owner \
+              --no-privileges \
+              /work/aventura-ci.dump
+
+      - name: Verify restored schema and business data
+        run: node scripts/verify-restored-database.js
+
+      - name: Clean recovery artifacts
+        if: always()
+        shell: bash
+        run: |
+          rm -f aventura-ci.dump
+          docker run --rm --network host \
+            -e PGPASSWORD=aventura_test \
+            postgres:17 \
+            psql \
+              --host=127.0.0.1 \
+              --username=aventura \
+              --dbname=postgres \
+              --command='DROP DATABASE IF EXISTS aventura_restore WITH (FORCE);' || true
