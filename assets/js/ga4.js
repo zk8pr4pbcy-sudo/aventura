@@ -346,6 +346,10 @@
   var analyticsEnabled = false;
   var analyticsInitialized = false;
   var analyticsBanner = null;
+  var JOURNEY_STORAGE_KEY = "aventura_journey_session_v1";
+  var JOURNEY_TIMEOUT_MS = 30 * 60 * 1000;
+  var journeyPageRecorded = false;
+  var requestCompletedRecorded = false;
   var analyticsCopy = {
     ar: {
       title: "ملفات تعريف الارتباط",
@@ -427,10 +431,170 @@
     });
   }
 
+  /*
+   * Anonymous request-journey measurement.
+   * Only navigation/timing context is measured: never name, email, phone,
+   * free-text form values or the booking reference.
+   */
+  function journeyPath() {
+    return String(window.location.pathname || "/").slice(0, 120);
+  }
+
+  function readJourneyState() {
+    try {
+      return JSON.parse(sessionStorage.getItem(JOURNEY_STORAGE_KEY) || "null") || null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeJourneyState(state) {
+    try {
+      sessionStorage.setItem(JOURNEY_STORAGE_KEY, JSON.stringify(state));
+    } catch (error) {
+      /* Analytics still works when session storage is unavailable. */
+    }
+  }
+
+  function clearJourneyState() {
+    try {
+      sessionStorage.removeItem(JOURNEY_STORAGE_KEY);
+    } catch (error) {
+      /* Ignore storage failures while analytics is disabled. */
+    }
+  }
+
+  function createJourneyState(now, path) {
+    var state = {
+      startedAt: now,
+      lastSeenAt: now,
+      entryPath: path,
+      pageCount: 1,
+      paths: [path],
+      contactAt: 0,
+      formStartedAt: 0,
+      pagesBeforeContact: 0,
+      uniquePagesBeforeContact: 0,
+      requestPageReachedSent: false
+    };
+    if (path === "/contact.html") state.contactAt = now;
+    return state;
+  }
+
+  function validJourneyState(now) {
+    var state = readJourneyState();
+    if (!state || !Number(state.startedAt) || !Number(state.lastSeenAt)) return null;
+    if (now - Number(state.lastSeenAt) > JOURNEY_TIMEOUT_MS) return null;
+    return state;
+  }
+
+  function uniqueCount(values) {
+    var seen = {};
+    (values || []).forEach(function (value) {
+      if (value) seen[value] = true;
+    });
+    return Object.keys(seen).length;
+  }
+
+  function elapsedSeconds(start, end) {
+    start = Number(start || 0);
+    end = Number(end || Date.now());
+    if (!start || end < start) return 0;
+    return Math.max(0, Math.round((end - start) / 1000));
+  }
+
+  function journeyPattern(state) {
+    var pages = Number(state && state.pagesBeforeContact || 0);
+    var uniquePages = Number(state && state.uniquePagesBeforeContact || 0);
+    if (pages === 0) return "direct_to_request";
+    if (uniquePages >= 3) return "explored_before_request";
+    return "short_path_to_request";
+  }
+
+  function journeyParams(state, now) {
+    state = state || {};
+    now = now || Date.now();
+    return {
+      entry_path: String(state.entryPath || journeyPath()).slice(0, 120),
+      journey_pattern: journeyPattern(state),
+      pages_before_contact: Number(state.pagesBeforeContact || 0),
+      unique_pages_before_contact: Number(state.uniquePagesBeforeContact || 0),
+      session_page_count: Number(state.pageCount || 1),
+      seconds_to_contact: elapsedSeconds(state.startedAt, state.contactAt || now),
+      seconds_since_session_start: elapsedSeconds(state.startedAt, now),
+      seconds_on_contact_page: state.contactAt ? elapsedSeconds(state.contactAt, now) : 0,
+      page_language: document.documentElement.lang || ""
+    };
+  }
+
+  function recordJourneyPage() {
+    if (!analyticsEnabled || journeyPageRecorded) return;
+    var now = Date.now();
+    var path = journeyPath();
+    var state = validJourneyState(now);
+
+    if (!state) {
+      state = createJourneyState(now, path);
+    } else {
+      state.pageCount = Number(state.pageCount || 0) + 1;
+      state.paths = Array.isArray(state.paths) ? state.paths : [];
+      state.paths.push(path);
+      if (state.paths.length > 30) state.paths = state.paths.slice(-30);
+      state.lastSeenAt = now;
+
+      if (path === "/contact.html" && !state.contactAt) {
+        state.contactAt = now;
+        var priorPaths = state.paths.slice(0, -1);
+        state.pagesBeforeContact = Math.max(0, Number(state.pageCount || 1) - 1);
+        state.uniquePagesBeforeContact = uniqueCount(priorPaths);
+      }
+    }
+
+    if (path === "/contact.html" && !state.requestPageReachedSent) {
+      state.requestPageReachedSent = true;
+      event("request_page_reached", journeyParams(state, now));
+    }
+
+    writeJourneyState(state);
+    journeyPageRecorded = true;
+  }
+
+  function touchJourneyState() {
+    var now = Date.now();
+    var path = journeyPath();
+    var state = validJourneyState(now);
+    if (!state) state = createJourneyState(now, path);
+    state.lastSeenAt = now;
+    writeJourneyState(state);
+    return state;
+  }
+
+  function markRequestFormStarted() {
+    var now = Date.now();
+    var state = touchJourneyState();
+    if (state.formStartedAt) return state;
+    state.formStartedAt = now;
+    state.lastSeenAt = now;
+    writeJourneyState(state);
+    event("request_form_started", Object.assign({}, journeyParams(state, now), {
+      seconds_to_form_start: elapsedSeconds(state.startedAt, now)
+    }));
+    return state;
+  }
+
+  function requestJourneyParams(now) {
+    var state = touchJourneyState();
+    return Object.assign({}, journeyParams(state, now), {
+      seconds_to_form_start: state.formStartedAt ? elapsedSeconds(state.startedAt, state.formStartedAt) : 0,
+      seconds_in_form: state.formStartedAt ? elapsedSeconds(state.formStartedAt, now) : 0
+    });
+  }
+
   function initializeAnalytics() {
     if (analyticsInitialized) {
       analyticsEnabled = true;
       window["ga-disable-" + MEASUREMENT_ID] = false;
+      recordJourneyPage();
       return;
     }
     analyticsInitialized = true;
@@ -453,6 +617,7 @@
       script.setAttribute("data-aventura-ga4", "true");
       document.head.appendChild(script);
     }
+    recordJourneyPage();
   }
 
   function removeAnalyticsBanner() {
@@ -506,6 +671,7 @@
       window["ga-disable-" + MEASUREMENT_ID] = true;
       analyticsEnabled = false;
       clearAnalyticsCookies();
+      clearJourneyState();
       removeAnalyticsBanner();
     });
     actions.appendChild(accept);
@@ -562,6 +728,7 @@
     window["ga-disable-" + MEASUREMENT_ID] = true;
     analyticsEnabled = false;
     clearAnalyticsCookies();
+    clearJourneyState();
   } else {
     initializeAnalytics();
   }
@@ -578,17 +745,21 @@
     if (!target) return;
 
     if (target.id === "type" && target.value) {
-      event("request_type_selected", {
+      var typeNow = Date.now();
+      var typeState = touchJourneyState();
+      event("request_type_selected", Object.assign({}, requestJourneyParams(typeNow), {
         request_type: target.value,
-        page_language: document.documentElement.lang || ""
-      });
+        seconds_to_type_select: elapsedSeconds(typeState.startedAt, typeNow)
+      }));
     }
 
     if (target.name === "submissionChannel" && target.value) {
-      event("request_channel_selected", {
+      var channelNow = Date.now();
+      var channelState = touchJourneyState();
+      event("request_channel_selected", Object.assign({}, requestJourneyParams(channelNow), {
         request_channel: target.value,
-        page_language: document.documentElement.lang || ""
-      });
+        seconds_to_channel_select: elapsedSeconds(channelState.startedAt, channelNow)
+      }));
     }
   });
 
@@ -608,14 +779,38 @@
 
   var contactForm = document.querySelector("[data-contact-form]");
   if (contactForm) {
+    function observeFormStart(e) {
+      if (e && e.isTrusted === false) return;
+      markRequestFormStarted();
+    }
+
+    contactForm.addEventListener("input", observeFormStart, { passive: true });
+    contactForm.addEventListener("change", observeFormStart);
+
     contactForm.addEventListener("submit", function () {
+      var now = Date.now();
       var type = contactForm.querySelector("#type");
       var channel = contactForm.querySelector('input[name="submissionChannel"]:checked');
-      event("request_submit_attempt", {
+      var state = markRequestFormStarted();
+      event("request_submit_attempt", Object.assign({}, requestJourneyParams(now), {
         request_type: type ? type.value : "",
         request_channel: channel ? channel.value : "email",
-        page_language: document.documentElement.lang || ""
-      });
+        seconds_to_submit: elapsedSeconds(state.startedAt, now)
+      }));
+    });
+
+    contactForm.addEventListener("aventura:request-success", function () {
+      if (requestCompletedRecorded) return;
+      requestCompletedRecorded = true;
+      var now = Date.now();
+      var type = contactForm.querySelector("#type");
+      var channel = contactForm.querySelector('input[name="submissionChannel"]:checked');
+      var state = touchJourneyState();
+      event("request_completed", Object.assign({}, requestJourneyParams(now), {
+        request_type: type ? type.value : "",
+        request_channel: channel ? channel.value : "email",
+        seconds_to_completion: elapsedSeconds(state.startedAt, now)
+      }));
     });
   }
 })();
