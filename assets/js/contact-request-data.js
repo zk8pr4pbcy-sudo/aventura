@@ -70,6 +70,28 @@
       lines.push(label + ": " + dynamicSummary[label].join(", "));
     });
 
+    var eventOccasion = form.querySelector('[name="eventOccasion"]');
+    if (eventOccasion && !eventOccasion.disabled && eventOccasion.value) {
+      var eventOccasionOption = eventOccasion.options[eventOccasion.selectedIndex];
+      lines.push(translate("contact.eventOccasionLabel") + ": " + (eventOccasionOption ? eventOccasionOption.textContent.trim() : eventOccasion.value));
+    }
+
+    var eventVenueStatus = form.querySelector('[name="eventVenueStatus"]');
+    if (eventVenueStatus && !eventVenueStatus.disabled && eventVenueStatus.value) {
+      var eventVenueOption = eventVenueStatus.options[eventVenueStatus.selectedIndex];
+      lines.push(translate("contact.eventVenueLabel") + ": " + (eventVenueOption ? eventVenueOption.textContent.trim() : eventVenueStatus.value));
+    }
+
+    var selectedEventServices = Array.from(form.querySelectorAll('[name="eventServices[]"]:checked')).filter(function (field) {
+      return !field.disabled;
+    }).map(function (field) {
+      var optionLabel = field.closest("label");
+      return optionLabel ? optionLabel.textContent.trim() : field.value;
+    });
+    if (selectedEventServices.length) {
+      lines.push(translate("contact.eventServicesLegend") + ": " + selectedEventServices.join(", "));
+    }
+
     var selectedDuration = form.querySelector('[name="duration"] option:checked');
     if (selectedDuration && selectedDuration.value) {
       lines.push(translate("contact.whatsappDuration") + ": " + selectedDuration.textContent.trim());
