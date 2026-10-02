@@ -140,7 +140,7 @@
               <select id="type" name="type">
                 <option value="" selected data-i18n="contact.typePlaceholder">Choose one</option>
                 <option value="experience" data-i18n="contact.typeExperience">Private experience</option>
-                <option value="event" data-i18n="contact.typeEvent">Event</option>
+                <option value="event" data-i18n="contact.typeEvent">Event or private occasion</option>
                 <option value="corporate" data-i18n="contact.typeCorporate">Corporate or delegation program</option>
                 <option value="service" data-i18n="contact.typeService">Guest service</option>
                 <option value="other" data-i18n="contact.typeOther">Other</option>
@@ -155,12 +155,12 @@
               <input id="time" name="time" type="time">
             </div>
             <div class="field">
-              <label for="duration" data-i18n="contact.durationLabel">Time available</label>
+              <label for="duration" data-i18n="contact.durationLabel">Expected duration</label>
               <select id="duration" name="duration">
                 <option value="" selected data-i18n="contact.durationPlaceholder">Choose the closest option</option>
                 <option value="short" data-i18n="contact.durationShort">1–2 hours</option>
-                <option value="half-day" data-i18n="contact.durationHalf">Half day</option>
-                <option value="full-day" data-i18n="contact.durationFull">Full day</option>
+                <option value="half-day" data-i18n="contact.durationHalf">Half day — up to 4 hours</option>
+                <option value="full-day" data-i18n="contact.durationFull">Full day — up to 8 hours</option>
                 <option value="flexible" data-i18n="contact.durationFlexible">Flexible</option>
               </select>
             </div>
@@ -168,6 +168,53 @@
               <label for="guests" data-i18n="contact.guestsLabel">Number of guests</label>
               <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
             </div>
+
+            <fieldset class="request-detail-group full" data-request-details="event" hidden>
+              <legend data-i18n="contact.eventDetailsTitle">Event or private occasion details</legend>
+              <div class="form-grid request-detail-grid">
+                <div class="field">
+                  <label for="eventOccasion" data-i18n="contact.eventOccasionLabel">Occasion type</label>
+                  <select id="eventOccasion" name="eventOccasion" required data-request-summary data-request-summary-key="contact.eventOccasionLabel">
+                    <option value="" selected data-i18n="contact.eventOccasionPlaceholder">Choose the closest option</option>
+                    <option value="birthday" data-i18n="contact.eventOccasionBirthday">Birthday</option>
+                    <option value="family" data-i18n="contact.eventOccasionFamily">Family occasion</option>
+                    <option value="graduation" data-i18n="contact.eventOccasionGraduation">Graduation</option>
+                    <option value="engagement" data-i18n="contact.eventOccasionEngagement">Engagement</option>
+                    <option value="anniversary" data-i18n="contact.eventOccasionAnniversary">Anniversary</option>
+                    <option value="private-dinner" data-i18n="contact.eventOccasionDinner">Private dinner</option>
+                    <option value="other" data-i18n="contact.eventOccasionOther">Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="eventVenueStatus" data-i18n="contact.eventVenueLabel">Venue status</label>
+                  <select id="eventVenueStatus" name="eventVenueStatus" required data-request-summary data-request-summary-key="contact.eventVenueLabel">
+                    <option value="" selected data-i18n="contact.eventVenuePlaceholder">Choose one</option>
+                    <option value="confirmed" data-i18n="contact.eventVenueConfirmed">I already have a venue</option>
+                    <option value="need-suggestion" data-i18n="contact.eventVenueNeedSuggestion">I would like Aventura to suggest a venue</option>
+                    <option value="undecided" data-i18n="contact.eventVenueUndecided">Not decided yet</option>
+                  </select>
+                </div>
+                <fieldset class="request-options full">
+                  <legend data-i18n="contact.eventServicesLegend">What would you like Aventura to handle?</legend>
+                  <p data-i18n="contact.eventServicesText">Select any services you may need. Final scope is confirmed after review.</p>
+                  <div class="request-option-grid">
+                    <label><input type="checkbox" name="eventServices[]" value="full-planning" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceFullPlanning">Full event planning and management</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="venue" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceVenue">Venue selection</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="setup" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceSetup">Venue setup and space arrangement</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="seating" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceSeating">Tables and seating arrangement</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="flowers" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceFlowers">Flowers</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="hospitality" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceHospitality">Food and hospitality</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="cake" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceCake">Cake and desserts</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="av" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceAV">Sound and lighting</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="photography" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServicePhotography">Photography</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="entertainment" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceEntertainment">Entertainment and performances</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="transport" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceTransport">Guest transportation</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="gifts" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceGifts">Gifts and personalized details</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="other" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceOther">Other</span></label>
+                  </div>
+                </fieldset>
+              </div>
+            </fieldset>
 
             <fieldset class="request-detail-group full" data-request-details="thobe" hidden>
               <legend data-i18n="contact.thobeDetailsTitle">Tailoring service details</legend>
