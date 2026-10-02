@@ -27,6 +27,12 @@ try {
     await page.goto(`${baseUrl}/contact.html${query}`, { waitUntil: "domcontentloaded" });
     await page.addScriptTag({ url: `${baseUrl}/assets/js/contact-request-data.js` });
     await page.waitForTimeout(100);
+    await page.locator('#type').selectOption('event');
+    await page.waitForFunction(() => {
+      const occasion = document.querySelector('[name="eventOccasion"]');
+      const venue = document.querySelector('[name="eventVenueStatus"]');
+      return Boolean(occasion && venue && !occasion.disabled && !venue.disabled);
+    });
 
     check(errors.length === 0, `request data ${lang}: no uncaught JavaScript errors`);
 
@@ -41,9 +47,6 @@ try {
       form.querySelector('[name="time"]').value = "17:30";
       form.querySelector('[name="guests"]').value = "4";
       form.querySelector('[name="message"]').value = "Test request";
-      const type = form.querySelector('[name="type"]');
-      type.value = "event";
-      type.dispatchEvent(new Event("change", { bubbles: true }));
       form.querySelector('[name="eventOccasion"]').value = "birthday";
       form.querySelector('[name="eventVenueStatus"]').value = "need-suggestion";
       form.querySelector('[name="eventServices[]"][value="full-planning"]').checked = true;
