@@ -88,7 +88,13 @@ try {
     check(await page.locator('[data-request-step="2"]').isHidden(), `wizard ${lang}: step 2 starts hidden`);
     check(await page.locator('[data-request-step="3"]').isHidden(), `wizard ${lang}: step 3 starts hidden`);
 
-    const requestType = await page.locator('#type option').evaluateAll((options) => {
+    const eventGroup = page.locator('[data-request-details="event"]');
+    check(await eventGroup.count() === 1, `wizard ${lang}: event detail group exists`);
+    check(await eventGroup.evaluate((element) => element.hidden), `wizard ${lang}: event details start hidden`);
+    check(await eventGroup.locator('input, select, textarea').evaluateAll((fields) => fields.every((field) => field.disabled)), `wizard ${lang}: hidden event fields start disabled`);
+
+    const hasEventType = await page.locator('#type option[value="event"]').count();
+    const requestType = hasEventType ? 'event' : await page.locator('#type option').evaluateAll((options) => {
       const available = options.find((option) => String(option.value || '').trim() && !option.disabled);
       return available ? available.value : '';
     });
@@ -98,6 +104,10 @@ try {
       continue;
     }
     await page.locator('#type').selectOption(requestType);
+    if (requestType === 'event') {
+      check(!(await eventGroup.evaluate((element) => element.hidden)), `wizard ${lang}: event details activate for event requests`);
+      check(await eventGroup.locator('select[required]').evaluateAll((fields) => fields.every((field) => !field.disabled)), `wizard ${lang}: required event fields are enabled only when active`);
+    }
     await satisfyVisibleRequiredFields(page.locator('[data-request-step="1"]'));
     await page.locator('[data-request-step="1"] [data-request-next]').click();
     await page.waitForTimeout(100);
