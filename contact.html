@@ -174,7 +174,7 @@
               <div class="form-grid request-detail-grid">
                 <div class="field">
                   <label for="eventOccasion" data-i18n="contact.eventOccasionLabel">Occasion type</label>
-                  <select id="eventOccasion" name="eventOccasion" required data-request-summary data-request-summary-key="contact.eventOccasionLabel">
+                  <select id="eventOccasion" name="eventOccasion" required>
                     <option value="" selected data-i18n="contact.eventOccasionPlaceholder">Choose the closest option</option>
                     <option value="birthday" data-i18n="contact.eventOccasionBirthday">Birthday</option>
                     <option value="family" data-i18n="contact.eventOccasionFamily">Family occasion</option>
@@ -187,7 +187,7 @@
                 </div>
                 <div class="field">
                   <label for="eventVenueStatus" data-i18n="contact.eventVenueLabel">Venue status</label>
-                  <select id="eventVenueStatus" name="eventVenueStatus" required data-request-summary data-request-summary-key="contact.eventVenueLabel">
+                  <select id="eventVenueStatus" name="eventVenueStatus" required>
                     <option value="" selected data-i18n="contact.eventVenuePlaceholder">Choose one</option>
                     <option value="confirmed" data-i18n="contact.eventVenueConfirmed">I already have a venue</option>
                     <option value="need-suggestion" data-i18n="contact.eventVenueNeedSuggestion">I would like Aventura to suggest a venue</option>
@@ -198,19 +198,19 @@
                   <legend data-i18n="contact.eventServicesLegend">What would you like Aventura to handle?</legend>
                   <p data-i18n="contact.eventServicesText">Select any services you may need. Final scope is confirmed after review.</p>
                   <div class="request-option-grid">
-                    <label><input type="checkbox" name="eventServices[]" value="full-planning" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceFullPlanning">Full event planning and management</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="venue" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceVenue">Venue selection</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="setup" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceSetup">Venue setup and space arrangement</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="seating" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceSeating">Tables and seating arrangement</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="flowers" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceFlowers">Flowers</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="hospitality" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceHospitality">Food and hospitality</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="cake" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceCake">Cake and desserts</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="av" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceAV">Sound and lighting</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="photography" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServicePhotography">Photography</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="entertainment" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceEntertainment">Entertainment and performances</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="transport" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceTransport">Guest transportation</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="gifts" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceGifts">Gifts and personalized details</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="other" data-request-summary data-request-summary-key="contact.eventServicesLegend"><span data-i18n="contact.eventServiceOther">Other</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="full-planning"><span data-i18n="contact.eventServiceFullPlanning">Full event planning and management</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="venue"><span data-i18n="contact.eventServiceVenue">Venue selection</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="setup"><span data-i18n="contact.eventServiceSetup">Venue setup and space arrangement</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="seating"><span data-i18n="contact.eventServiceSeating">Tables and seating arrangement</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="flowers"><span data-i18n="contact.eventServiceFlowers">Flowers</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="hospitality"><span data-i18n="contact.eventServiceHospitality">Food and hospitality</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="cake"><span data-i18n="contact.eventServiceCake">Cake and desserts</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="av"><span data-i18n="contact.eventServiceAV">Sound and lighting</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="photography"><span data-i18n="contact.eventServicePhotography">Photography</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="entertainment"><span data-i18n="contact.eventServiceEntertainment">Entertainment and performances</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="transport"><span data-i18n="contact.eventServiceTransport">Guest transportation</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="gifts"><span data-i18n="contact.eventServiceGifts">Gifts and personalized details</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="other"><span data-i18n="contact.eventServiceOther">Other</span></label>
                   </div>
                 </fieldset>
               </div>
