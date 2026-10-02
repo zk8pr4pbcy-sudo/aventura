@@ -41,6 +41,12 @@ try {
       form.querySelector('[name="time"]').value = "17:30";
       form.querySelector('[name="guests"]').value = "4";
       form.querySelector('[name="message"]').value = "Test request";
+      const type = form.querySelector('[name="type"]');
+      type.value = "event";
+      type.dispatchEvent(new Event("change", { bubbles: true }));
+      form.querySelector('[name="eventOccasion"]').value = "birthday";
+      form.querySelector('[name="eventVenueStatus"]').value = "need-suggestion";
+      form.querySelector('[name="eventServices[]"][value="full-planning"]').checked = true;
       const data = new FormData(form);
       const requestId = api.createRequestId({ date: new Date("2026-09-10T00:00:00Z"), random: () => 0.123456789 });
       const message = api.buildMessage({
@@ -60,6 +66,9 @@ try {
     check(result.message.includes("contact.whatsappDate: 2026-12-20"), `request data ${lang}: summary includes date`);
     check(result.message.includes("contact.whatsappGuests: 4"), `request data ${lang}: summary includes guest count`);
     check(result.message.includes("contact.whatsappMessage: Test request"), `request data ${lang}: summary includes request message`);
+    check(result.message.includes("contact.eventOccasionLabel:"), `request data ${lang}: summary includes occasion type`);
+    check(result.message.includes("contact.eventVenueLabel:"), `request data ${lang}: summary includes venue status`);
+    check(result.message.includes("contact.eventServicesLegend:"), `request data ${lang}: summary includes selected event services`);
 
     await page.close();
   }
