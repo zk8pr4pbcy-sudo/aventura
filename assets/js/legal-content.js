@@ -11,7 +11,7 @@
       privacy: {
         lead: "آخر تحديث: 15 أغسطس 2026",
         identity: [
-          "جهة التحكم بالبيانات: مؤسسة أفنتورا لتنظيم وإدارة الفعاليات، منشأة سعودية مسجلة بالسجل التجاري رقم 4030583057.",
+          "جهة التحكم بالبيانات: مؤسسة أفنتورا لتنظيم وإدارة الفعاليات، منشأة سعودية مسجلة.",
           "لأسئلة الخصوصية أو ممارسة الحقوق: contact@aventuraksa.com — يرجى كتابة «الخصوصية» في عنوان الرسالة."
         ],
         navigation: { privacy: "سياسة الخصوصية", terms: "الشروط والأحكام" },
@@ -133,7 +133,7 @@
       terms: {
         lead: "آخر تحديث: 9 أغسطس 2026",
         identity: [
-          "أفنتورا، منشأة سعودية لتنظيم وإدارة الفعاليات والتجارب الخاصة في جدة، سجل تجاري رقم 4030583057.",
+          "أفنتورا، منشأة سعودية لتنظيم وإدارة الفعاليات والتجارب الخاصة في جدة.",
           "للاستفسارات المتعلقة بالطلب أو الحجز: contact@aventuraksa.com"
         ],
         navigation: { privacy: "سياسة الخصوصية", terms: "الشروط والأحكام" },
@@ -227,7 +227,7 @@
       privacy: {
         lead: "Last updated: 15 August 2026",
         identity: [
-          "Data controller: Aventura Event Management Establishment, a Saudi establishment registered under Commercial Registration No. 4030583057.",
+          "Data controller: Aventura Event Management Establishment, a Saudi establishment.",
           "For privacy questions or rights requests: contact@aventuraksa.com — please use “Privacy” in the subject line."
         ],
         navigation: { privacy: "Privacy policy", terms: "Terms & conditions" },
@@ -349,7 +349,7 @@
       terms: {
         lead: "Last updated: 9 August 2026",
         identity: [
-          "Aventura, a Saudi organisation for event management and private experiences in Jeddah, Commercial Registration No. 4030583057.",
+          "Aventura, a Saudi organisation for event management and private experiences in Jeddah.",
           "For questions about a request or booking: contact@aventuraksa.com"
         ],
         navigation: { privacy: "Privacy policy", terms: "Terms & conditions" },
@@ -443,7 +443,7 @@
       privacy: {
         lead: "Última actualización: 15 de agosto de 2026",
         identity: [
-          "Responsable del tratamiento: Establecimiento Aventura de Gestión de Eventos, entidad saudí inscrita en el Registro Comercial n.º 4030583057.",
+          "Responsable del tratamiento: Establecimiento Aventura de Gestión de Eventos, entidad saudí.",
           "Para consultas de privacidad o ejercicio de derechos: contact@aventuraksa.com — indica «Privacidad» en el asunto."
         ],
         navigation: { privacy: "Política de privacidad", terms: "Términos y condiciones" },
@@ -565,7 +565,7 @@
       terms: {
         lead: "Última actualización: 9 de agosto de 2026",
         identity: [
-          "Aventura, entidad saudí de gestión de eventos y experiencias privadas en Yeda, Registro Comercial n.º 4030583057.",
+          "Aventura, entidad saudí de gestión de eventos y experiencias privadas en Yeda.",
           "Para consultas sobre una solicitud o reserva: contact@aventuraksa.com"
         ],
         navigation: { privacy: "Política de privacidad", terms: "Términos y condiciones" },
