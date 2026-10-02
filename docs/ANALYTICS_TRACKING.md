@@ -3,9 +3,10 @@
 This layer helps Aventura distinguish request journeys without sending guest PII to Google Analytics.
 
 ## Privacy boundary
-Never send name, phone, email, free-text form values, or the booking reference. Session-only navigation/timing state is stored in `sessionStorage` as `aventura_journey_session_v1`, expires after 30 minutes of inactivity, and is cleared when analytics is disabled.
+Never send name, phone, email, free-text form values, or the booking reference. Session-only navigation/timing state is stored in `sessionStorage` as `aventura_journey_session_v1`, expires after 30 minutes of inactivity, and is cleared when analytics is disabled. The `journey_trace` token is random, session-only, and is not a stable visitor identifier.
 
 ## Events
+- `journey_page_viewed`: one privacy-safe route step on every measured page load. It carries `journey_trace`, `entry_path`, `session_page_count`, and elapsed session time.
 - `request_page_reached`: first arrival at `/contact.html`.
 - `request_form_started`: first trusted form interaction.
 - `request_type_selected`: request type selected.
@@ -26,6 +27,7 @@ Register these in **Admin → Custom definitions**. Registration is not retroact
 
 Event-scoped dimensions:
 - `entry_path`
+- `journey_trace` — anonymous 30-minute visit token + zero-padded page step + path, used to reconstruct an ordered route without storing identity.
 - `journey_pattern`
 - `request_type`
 - `request_channel`

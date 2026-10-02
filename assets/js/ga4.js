@@ -464,11 +464,34 @@
     }
   }
 
+  function createJourneyVisitToken() {
+    if (window.crypto && typeof window.crypto.getRandomValues === "function") {
+      var values = new Uint32Array(2);
+      window.crypto.getRandomValues(values);
+      return (values[0].toString(36) + values[1].toString(36)).slice(0, 12);
+    }
+    return (Date.now().toString(36) + Math.random().toString(36).slice(2, 10)).slice(-12);
+  }
+
+  function ensureJourneyVisitToken(state) {
+    if (!state.visitToken) state.visitToken = createJourneyVisitToken();
+    return state.visitToken;
+  }
+
+  function journeyTrace(state, path) {
+    var token = ensureJourneyVisitToken(state);
+    var step = Math.max(1, Math.min(999, Number(state.pageCount || 1)));
+    var stepText = String(step).padStart(3, "0");
+    var safePath = String(path || journeyPath()).slice(0, 80);
+    return (token + "|" + stepText + "|" + safePath).slice(0, 100);
+  }
+
   function createJourneyState(now, path) {
     var state = {
       startedAt: now,
       lastSeenAt: now,
       entryPath: path,
+      visitToken: createJourneyVisitToken(),
       pageCount: 1,
       paths: [path],
       contactAt: 0,
@@ -516,6 +539,7 @@
     now = now || Date.now();
     return {
       entry_path: String(state.entryPath || journeyPath()).slice(0, 120),
+      journey_trace: journeyTrace(state, journeyPath()),
       journey_pattern: journeyPattern(state),
       pages_before_contact: Number(state.pagesBeforeContact || 0),
       unique_pages_before_contact: Number(state.uniquePagesBeforeContact || 0),
@@ -549,6 +573,16 @@
         state.uniquePagesBeforeContact = uniqueCount(priorPaths);
       }
     }
+
+    ensureJourneyVisitToken(state);
+
+    event("journey_page_viewed", {
+      journey_trace: journeyTrace(state, path),
+      entry_path: String(state.entryPath || path).slice(0, 120),
+      session_page_count: Number(state.pageCount || 1),
+      seconds_since_session_start: elapsedSeconds(state.startedAt, now),
+      page_language: document.documentElement.lang || ""
+    });
 
     if (path === "/contact.html" && !state.requestPageReachedSent) {
       state.requestPageReachedSent = true;
