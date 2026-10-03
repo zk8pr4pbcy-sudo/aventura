@@ -42,6 +42,8 @@ const legacyLaunchRecoveryPath = path.join(root, 'assets/js/launch-v2-recovery.j
 const legacyExperienceCopyOverridesPath = path.join(root, 'assets/js/experience-copy-overrides.js');
 const desertLastLightScriptPath = path.join(root, 'assets/js/prelaunch-desert-last-light.js');
 const contactEmail = ['contact', '@', 'aventuraksa', '.com'].join('');
+const whatsappNumber = ['966', '555', '884', '854'].join('');
+const displayedWhatsappNumber = ['+966', ' 55', ' 588', ' 4854'].join('');
 
 console.log('\nAventura maintenance smoke checks\n');
 
@@ -112,6 +114,31 @@ check(fragranceCards.includes('desert: ['), 'fragrance cards module defines the 
 check(fragranceCards.includes('{ id: "last-light", name: "Last Light"'), 'fragrance cards module owns the Last Light product card');
 check(fragranceCards.includes('document.querySelectorAll(".prelaunch-last-light-section")'), 'fragrance cards module explicitly removes obsolete Last Light UI');
 check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'static boutique Last Light card styling remains in CSS');
+
+// Repository source hygiene: keep direct contact identifiers out of the public repository working tree.
+function collectTextFiles(directory, results = []) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (['.git', '_site', 'node_modules'].includes(entry.name)) continue;
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      collectTextFiles(fullPath, results);
+      continue;
+    }
+    if (/\.(?:html|js|mjs|json|xml|txt|md|ya?ml|css|webmanifest|svg)$/i.test(entry.name) || ['CNAME', '.nojekyll'].includes(entry.name)) {
+      results.push(fullPath);
+    }
+  }
+  return results;
+}
+
+const nakedContactLeaks = [];
+for (const filePath of collectTextFiles(root)) {
+  const source = fs.readFileSync(filePath, 'utf8');
+  const relativePath = path.relative(root, filePath);
+  if (source.includes(contactEmail)) nakedContactLeaks.push(relativePath + ': email');
+  if (source.includes(whatsappNumber) || source.includes(displayedWhatsappNumber)) nakedContactLeaks.push(relativePath + ': WhatsApp');
+}
+check(nakedContactLeaks.length === 0, `repository source keeps naked contact identifiers out of text files${nakedContactLeaks.length ? ` (${nakedContactLeaks.join(', ')})` : ''}`);
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);
