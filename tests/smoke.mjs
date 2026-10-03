@@ -41,6 +41,9 @@ const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
 const legacyLaunchRecoveryPath = path.join(root, 'assets/js/launch-v2-recovery.js');
 const legacyExperienceCopyOverridesPath = path.join(root, 'assets/js/experience-copy-overrides.js');
 const desertLastLightScriptPath = path.join(root, 'assets/js/prelaunch-desert-last-light.js');
+const contactEmail = ['contact', '@', 'aventuraksa', '.com'].join('');
+const whatsappNumber = ['966', '555', '884', '854'].join('');
+const displayedWhatsappNumber = ['+966', ' 55', ' 588', ' 4854'].join('');
 
 console.log('\nAventura maintenance smoke checks\n');
 
@@ -66,7 +69,8 @@ check(app.includes('firstPastTimingField'), 'wizard and final submission share t
 check(contact.includes('data-contact-form'), 'contact page exposes the booking form hook');
 check(contact.includes('name="request_language"'), 'contact form contains request_language metadata');
 check(contact.includes('name="request_reference"'), 'contact form contains a request reference field');
-check(contact.includes('https://formsubmit.co/contact@aventuraksa.com'), 'contact form keeps the approved FormSubmit destination');
+check(contact.includes('action="contact.html"'), 'contact form keeps a local non-sensitive action fallback');
+check(!contact.includes(contactEmail), 'contact page source does not expose the naked contact email');
 check(includesInOrder(contact, 'assets/js/translations.js', 'assets/js/app.js'), 'translations load before app.js on the contact page');
 
 // Contact architecture: permanent behavior must live in owned HTML/CSS/JS modules, not runtime patches.
@@ -76,7 +80,7 @@ check(!fs.existsSync(legacyContactPatchPath), 'legacy contact runtime patch has 
 check(!contact.includes('contact-flow-fix.js'), 'contact page has no legacy runtime patch reference');
 check(contact.includes('name="privacy_consent"'), 'privacy consent is part of static HTML');
 check(contact.includes('name="privacy_consent_at"'), 'privacy consent timestamp field is part of static HTML');
-check(includesInOrder(contact, '<form class="form-card"', '<aside class="contact-panel"'), 'contact form precedes the contact panel in source order');
+check(includesInOrder(contact, '<form id="request" class="form-card"', '<aside class="contact-panel"'), 'contact form precedes the contact panel in source order');
 check(contactConsent.includes('privacy_consent'), 'consent module owns consent validation');
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
@@ -110,6 +114,31 @@ check(fragranceCards.includes('desert: ['), 'fragrance cards module defines the 
 check(fragranceCards.includes('{ id: "last-light", name: "Last Light"'), 'fragrance cards module owns the Last Light product card');
 check(fragranceCards.includes('document.querySelectorAll(".prelaunch-last-light-section")'), 'fragrance cards module explicitly removes obsolete Last Light UI');
 check(prelaunchStyles.includes('.prelaunch-last-light-card'), 'static boutique Last Light card styling remains in CSS');
+
+// Repository source hygiene: keep direct contact identifiers out of the public repository working tree.
+function collectTextFiles(directory, results = []) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (['.git', '_site', 'node_modules'].includes(entry.name)) continue;
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      collectTextFiles(fullPath, results);
+      continue;
+    }
+    if (/\.(?:html|js|mjs|json|xml|txt|md|ya?ml|css|webmanifest|svg)$/i.test(entry.name) || ['CNAME', '.nojekyll'].includes(entry.name)) {
+      results.push(fullPath);
+    }
+  }
+  return results;
+}
+
+const nakedContactLeaks = [];
+for (const filePath of collectTextFiles(root)) {
+  const source = fs.readFileSync(filePath, 'utf8');
+  const relativePath = path.relative(root, filePath);
+  if (source.includes(contactEmail)) nakedContactLeaks.push(relativePath + ': email');
+  if (source.includes(whatsappNumber) || source.includes(displayedWhatsappNumber)) nakedContactLeaks.push(relativePath + ': WhatsApp');
+}
+check(nakedContactLeaks.length === 0, `repository source keeps naked contact identifiers out of text files${nakedContactLeaks.length ? ` (${nakedContactLeaks.join(', ')})` : ''}`);
 
 // Maintenance architecture: do not reintroduce one-off runtime patch scripts.
 check(legacyFixFiles.length === 0, `no permanent *-fix.js runtime patches remain${legacyFixFiles.length ? ` (${legacyFixFiles.join(', ')})` : ''}`);

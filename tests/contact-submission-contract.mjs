@@ -5,6 +5,8 @@ const app = fs.readFileSync('assets/js/app.js', 'utf8');
 const transport = fs.readFileSync('assets/js/contact-submission.js', 'utf8');
 const wizard = fs.readFileSync('assets/js/contact-wizard.js', 'utf8');
 const requestData = fs.readFileSync('assets/js/contact-request-data.js', 'utf8');
+const contactEmail = ['contact', '@', 'aventuraksa', '.com'].join('');
+const whatsappNumber = ['966', '555', '884', '854'].join('');
 
 let failures = 0;
 function check(condition, message) {
@@ -20,8 +22,11 @@ const transportRef = 'assets/js/contact-submission.js?v=20260910';
 check((contact.split(transportRef).length - 1) === 1, 'contact page loads the submission transport exactly once');
 check(contact.indexOf(transportRef) < contact.indexOf('assets/js/app.js'), 'submission transport loads before app.js');
 
-check(transport.includes('var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com"'), 'transport owns the fixed FormSubmit endpoint');
-check(transport.includes('var WHATSAPP_NUMBER = "966555884854"'), 'transport owns the WhatsApp delivery number');
+check(transport.includes('function decodeContactValue(values)'), 'transport decodes protected contact identifiers at runtime');
+check(transport.includes('var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/" + decodeContactValue(['), 'transport owns the protected FormSubmit endpoint');
+check(transport.includes('var WHATSAPP_NUMBER = decodeContactValue(['), 'transport owns the protected WhatsApp delivery number');
+check(!transport.includes(contactEmail), 'transport source does not expose the naked contact email');
+check(!transport.includes(whatsappNumber), 'transport source does not expose the naked WhatsApp number');
 check(transport.includes('function sendEmail(payload)'), 'transport exposes email delivery');
 check(transport.includes('window.fetch(FORM_SUBMIT_ENDPOINT'), 'transport owns the network fetch');
 check(transport.includes('method: "POST"'), 'transport keeps email submission as POST');

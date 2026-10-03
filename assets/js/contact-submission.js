@@ -1,8 +1,12 @@
 (function () {
   "use strict";
 
-  var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/contact@aventuraksa.com";
-  var WHATSAPP_NUMBER = "966555884854";
+  function decodeContactValue(values) {
+    return values.map(function (value) { return String.fromCharCode(value - 7); }).join("");
+  }
+
+  var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/" + decodeContactValue([106, 118, 117, 123, 104, 106, 123, 71, 104, 125, 108, 117, 123, 124, 121, 104, 114, 122, 104, 53, 106, 118, 116]);
+  var WHATSAPP_NUMBER = decodeContactValue([64, 61, 61, 60, 60, 60, 63, 63, 59, 63, 60, 59]);
 
   function sendEmail(payload) {
     if (!window.fetch) {

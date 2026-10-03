@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 
 const baseUrl = process.env.AVENTURA_TEST_BASE_URL || 'http://127.0.0.1:4173';
 let failures = 0;
+const formSubmitUrl = 'https://formsubmit.co/ajax/' + ['contact', '@', 'aventuraksa', '.com'].join('');
 
 function check(condition, message) {
   if (condition) console.log(`✓ ${message}`);
@@ -71,7 +72,7 @@ try {
     contentType: 'application/json',
     body: JSON.stringify(fixture)
   }));
-  await page.route('https://formsubmit.co/ajax/contact@aventuraksa.com', async (route) => {
+  await page.route(formSubmitUrl, async (route) => {
     submitCount += 1;
     submittedPayload = route.request().postData() || '';
     await route.fulfill({

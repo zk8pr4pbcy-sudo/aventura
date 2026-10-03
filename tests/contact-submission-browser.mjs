@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 
 const baseUrl = process.env.AVENTURA_TEST_BASE_URL || 'http://127.0.0.1:4173';
-const formSubmitUrl = 'https://formsubmit.co/ajax/contact@aventuraksa.com';
+const formSubmitUrl = 'https://formsubmit.co/ajax/' + ['contact', '@', 'aventuraksa', '.com'].join('');
 let failures = 0;
 
 function check(condition, message) {

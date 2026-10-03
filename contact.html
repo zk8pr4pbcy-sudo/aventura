@@ -78,7 +78,7 @@
     <section class="section">
       <div class="container contact-layout">
 
-        <form class="form-card" data-contact-form aria-busy="false" action="https://formsubmit.co/contact@aventuraksa.com" method="POST" novalidate data-reveal>
+        <form id="request" class="form-card" data-contact-form aria-busy="false" action="contact.html" method="POST" novalidate data-reveal>
           <input type="hidden" name="_subject" value="Aventura booking request">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_replyto" value="">
@@ -228,13 +228,13 @@
           <h2 data-i18n="contact.panelTitle">Talk to Aventura</h2>
           <p data-i18n="contact.panelText">Email is the main booking channel. WhatsApp remains available as a second option.</p>
           <div class="contact-methods">
-            <a class="contact-method" href="mailto:contact@aventuraksa.com">
+            <a class="contact-method" href="#request">
               <span data-i18n="contact.email1Label">Bookings &amp; inquiries</span>
-              <strong>contact@aventuraksa.com</strong>
+              <strong data-i18n="contact.formTitle">Request details</strong>
             </a>
-            <a class="contact-method" href="https://wa.me/966555884854" target="_blank" rel="noopener">
+            <a class="contact-method" href="#" data-aventura-whatsapp-link>
               <span data-i18n="contact.phoneLabel">WhatsApp</span>
-              <strong dir="ltr">+966 55 588 4854</strong>
+              <strong data-i18n="common.whatsapp">Chat on WhatsApp</strong>
             </a>
             <div class="contact-method">
               <span data-i18n="contact.locationLabel">Based in</span>
