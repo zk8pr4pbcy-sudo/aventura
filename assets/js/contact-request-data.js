@@ -49,7 +49,7 @@
 
     var dynamicSummary = {};
     Array.from(form.querySelectorAll("#dynamicRequestPanel [data-request-summary]")).forEach(function (field) {
-      if (field.disabled || field.closest("[hidden]")) return;
+      if (field.disabled) return;
       if ((field.type === "radio" || field.type === "checkbox") && !field.checked) return;
       if (!String(field.value || "").trim()) return;
       var summaryGroup = field.closest("[data-request-summary-label]");

@@ -15,18 +15,33 @@ function check(condition, message) {
 const browser = await chromium.launch({ headless: true });
 
 try {
-  for (const { lang, query } of [
-    { lang: "ar", query: "" },
-    { lang: "en", query: "?lang=en" },
-    { lang: "es", query: "?lang=es" }
+  for (const { lang, query, expected } of [
+    { lang: "ar", query: "", expected: { occasion: "نوع المناسبة: عيد ميلاد", venue: "حالة الموقع: أرغب أن تقترح أفنتورا موقعًا", services: "ما الذي ترغب أن تتولاه أفنتورا؟: إدارة وتخطيط المناسبة بالكامل" } },
+    { lang: "en", query: "?lang=en", expected: { occasion: "Occasion type: Birthday", venue: "Venue status: I would like Aventura to suggest a venue", services: "What would you like Aventura to handle?: Full event planning and management" } },
+    { lang: "es", query: "?lang=es", expected: { occasion: "Tipo de ocasión: Cumpleaños", venue: "Estado del lugar: Quiero que Aventura proponga un lugar", services: "¿Qué quieres que gestione Aventura?: Planificación y gestión integral del evento" } }
   ]) {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
     const errors = [];
     page.on("pageerror", (error) => errors.push(error.message));
 
     await page.goto(`${baseUrl}/contact.html${query}`, { waitUntil: "domcontentloaded" });
+    await page.waitForLoadState("load").catch(() => {});
+    await page.waitForTimeout(250);
     await page.addScriptTag({ url: `${baseUrl}/assets/js/contact-request-data.js` });
-    await page.waitForTimeout(100);
+
+    const requestTypeOptions = await page.locator('#type option').evaluateAll((options) => options.map((option) => option.value));
+    check(requestTypeOptions.includes('private-event'), `request data ${lang}: private-event request type is available in the live DOM`);
+    if (!requestTypeOptions.includes('private-event')) {
+      console.error(`request data ${lang}: request type values ${JSON.stringify(requestTypeOptions)}`);
+      await page.close();
+      continue;
+    }
+
+    await page.locator('#type').selectOption({ value: 'private-event' });
+    await page.waitForFunction(() => Boolean(
+      document.querySelector('#dynamicRequestPanel [name="eventType"]') &&
+      document.querySelector('#dynamicRequestPanel [name="eventLocationStatus"]')
+    ));
 
     check(errors.length === 0, `request data ${lang}: no uncaught JavaScript errors`);
 
@@ -41,6 +56,9 @@ try {
       form.querySelector('[name="time"]').value = "17:30";
       form.querySelector('[name="guests"]').value = "4";
       form.querySelector('[name="message"]').value = "Test request";
+      form.querySelector('[name="eventType"][value="eventBirthday"]').checked = true;
+      form.querySelector('[name="eventLocationStatus"][value="eventLocationSuggest"]').checked = true;
+      form.querySelector('[name="addons[]"][value="eventFullPlanning"]').checked = true;
       const data = new FormData(form);
       const requestId = api.createRequestId({ date: new Date("2026-09-10T00:00:00Z"), random: () => 0.123456789 });
       const message = api.buildMessage({
@@ -60,6 +78,9 @@ try {
     check(result.message.includes("contact.whatsappDate: 2026-12-20"), `request data ${lang}: summary includes date`);
     check(result.message.includes("contact.whatsappGuests: 4"), `request data ${lang}: summary includes guest count`);
     check(result.message.includes("contact.whatsappMessage: Test request"), `request data ${lang}: summary includes request message`);
+    check(result.message.includes(expected.occasion), `request data ${lang}: summary includes occasion type`);
+    check(result.message.includes(expected.venue), `request data ${lang}: summary includes venue status`);
+    check(result.message.includes(expected.services), `request data ${lang}: summary includes selected event services`);
 
     await page.close();
   }

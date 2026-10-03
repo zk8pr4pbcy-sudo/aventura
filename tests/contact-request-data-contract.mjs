@@ -12,6 +12,8 @@ assert.doesNotMatch(moduleSource, /fetch\s*\(/, "request data module must not ow
 assert.doesNotMatch(moduleSource, /FORM_SUBMIT_ENDPOINT/, "request data module must not own FormSubmit");
 assert.doesNotMatch(moduleSource, /wa\.me|WHATSAPP_NUMBER/, "request data module must not own WhatsApp delivery");
 assert.doesNotMatch(moduleSource, /window\.open\s*\(/, "request data module must not open external delivery channels");
+assert.match(moduleSource, /#dynamicRequestPanel \[data-request-summary\]/, "request summaries must include dynamic request fields");
+assert.doesNotMatch(moduleSource, /field\.closest\("\[hidden\]"\)/, "wizard-step visibility must not remove active request details from summaries");
 
 if (/assets\/js\/contact-request-data\.js/.test(contactSource)) {
   assert.match(appSource, /AVENTURA_CONTACT_REQUEST_DATA/, "app.js must delegate request-data construction to the module");
