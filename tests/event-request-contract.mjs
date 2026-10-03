@@ -20,6 +20,7 @@ const requestPage = fs.readFileSync(path.join(root, 'jeddah-picks', 'request', '
 const requestCss = fs.readFileSync(path.join(root, 'assets/css/jeddah-picks-request.css'), 'utf8');
 const requestRuntime = fs.readFileSync(path.join(root, 'assets/js/jeddah-picks-request.js'), 'utf8');
 const contactPage = fs.readFileSync(path.join(root, 'contact.html'), 'utf8');
+const contactEmail = ['contact', '@', 'aventuraksa', '.com'].join('');
 
 check(legacyPage.includes('data-event-request-form'), 'legacy event request route remains intact for compatibility');
 check(legacyPage.includes('name="robots" content="noindex, follow"'), 'legacy utility request route stays out of search indexing');
@@ -48,7 +49,8 @@ check(!contactPage.includes('data-jpr-form'), 'main Aventura contact form remain
 check(calendarRuntime.includes('jeddah-picks/request/?source=curated-calendar&event='), 'Curated Calendar CTA routes to the isolated nested Jeddah picks request page');
 check(!calendarRuntime.includes('contact.html?source=curated-calendar'), 'Curated Calendar does not route event requests into the main contact form');
 check(requestRuntime.includes('data/curated-events.json'), 'new request reads the shared curated event data source');
-check(requestRuntime.includes('https://formsubmit.co/ajax/contact@aventuraksa.com'), 'new request owns its FormSubmit transport endpoint');
+check(requestRuntime.includes('var ENDPOINT = "https://formsubmit.co/ajax/" + decodeContactValue(['), 'new request owns its protected FormSubmit transport endpoint');
+check(!requestRuntime.includes(contactEmail), 'new request source does not expose the naked contact email');
 check(requestRuntime.includes('function availableDates'), 'new request owns event-day availability logic');
 check(requestRuntime.includes('dates.length === 1'), 'single-day events render a fixed non-editable date state');
 check(requestRuntime.includes('document.createElement("select")'), 'multi-day events render only controlled selectable event dates');
