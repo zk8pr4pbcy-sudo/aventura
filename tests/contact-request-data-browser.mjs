@@ -27,7 +27,14 @@ try {
     await page.goto(`${baseUrl}/contact.html${query}`, { waitUntil: "domcontentloaded" });
     await page.addScriptTag({ url: `${baseUrl}/assets/js/contact-request-data.js` });
     await page.waitForTimeout(100);
-    await page.locator('#type').selectOption('event');
+    const requestTypeOptions = await page.locator('#type option').evaluateAll((options) => options.map((option) => option.value));
+    check(requestTypeOptions.includes('event'), `request data ${lang}: event request type is available in the live DOM`);
+    if (!requestTypeOptions.includes('event')) {
+      console.error(`request data ${lang}: request type values ${JSON.stringify(requestTypeOptions)}`);
+      await page.close();
+      continue;
+    }
+    await page.locator('#type').selectOption({ value: 'event' });
     await page.waitForFunction(() => {
       const occasion = document.querySelector('[name="eventOccasion"]');
       const venue = document.querySelector('[name="eventVenueStatus"]');
