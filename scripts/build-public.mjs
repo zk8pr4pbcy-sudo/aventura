@@ -27,14 +27,16 @@ function shiftedCodes(value) {
 
 function replaceRequired(source, from, to, label) {
   if (!source.includes(from)) {
-    throw new Error(`Public build transform could not find expected source: ${label}`);
+    if (source.includes(to)) return source;
+    throw new Error(`Public build transform could not find expected source or hardened target: ${label}`);
   }
   return source.replace(from, to);
 }
 
 function replaceAllRequired(source, from, to, label) {
   if (!source.includes(from)) {
-    throw new Error(`Public build transform could not find expected source: ${label}`);
+    if (source.includes(to)) return source;
+    throw new Error(`Public build transform could not find expected source or hardened target: ${label}`);
   }
   return source.split(from).join(to);
 }
