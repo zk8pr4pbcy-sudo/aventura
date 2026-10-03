@@ -7,8 +7,10 @@
   var QUOTE_SELECTION_STORAGE_KEY = "aventura_quote_selection_v3";
   var QUOTE_SELECTION_LEGACY_KEY = "aventura_quote_selection_v2";
   var QUOTE_SELECTION_LIFETIME = 30 * 24 * 60 * 60 * 1000;
-  var WHATSAPP_NUMBER = "966555884854";
-  var REQUEST_EMAIL = "contact@aventuraksa.com";
+  function decodeContactValue(values) {
+    return values.map(function (value) { return String.fromCharCode(value - 7); }).join("");
+  }
+  var WHATSAPP_NUMBER = decodeContactValue([64, 61, 61, 60, 60, 60, 63, 63, 59, 63, 60, 59]);
   var currentLanguage = DEFAULT_LANGUAGE;
 
   function normalizeLanguage(language) {
@@ -209,8 +211,8 @@
       '    <div class="footer-column footer-contact">',
       '      <h3 data-i18n="footer.contact">Contact</h3>',
       '      <ul class="footer-links">',
-      '        <li><a href="mailto:' + REQUEST_EMAIL + '">' + REQUEST_EMAIL + '</a></li>',
-      '        <li><a href="https://wa.me/' + WHATSAPP_NUMBER + '" target="_blank" rel="noopener">+966 55 588 4854</a></li>',
+      '        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>',
+      '        <li><a href="https://wa.me/' + WHATSAPP_NUMBER + '" target="_blank" rel="noopener" data-i18n="common.whatsapp">Chat on WhatsApp</a></li>',
       '        <li><span data-i18n="footer.location">Jeddah, Saudi Arabia</span></li>',
       '      </ul>',
       '    </div>',
@@ -1942,6 +1944,14 @@
     });
   }
 
+  function setupProtectedContactLinks() {
+    document.querySelectorAll("[data-aventura-whatsapp-link]").forEach(function (link) {
+      link.href = "https://wa.me/" + WHATSAPP_NUMBER;
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    });
+  }
+
   function setupExternalLinks() {
     document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
       var rel = (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
@@ -1969,6 +1979,7 @@
     setupCurrentYear();
     setupContactForm();
     setupPartnerForm();
+    setupProtectedContactLinks();
     setupExternalLinks();
     document.documentElement.classList.add("app-ready");
   }
