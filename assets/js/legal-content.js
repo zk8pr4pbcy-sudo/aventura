@@ -12,7 +12,7 @@
         lead: "آخر تحديث: 15 أغسطس 2026",
         identity: [
           "جهة التحكم بالبيانات: مؤسسة أفنتورا لتنظيم وإدارة الفعاليات، منشأة سعودية مسجلة.",
-          "لأسئلة الخصوصية أو ممارسة الحقوق: contact@aventuraksa.com — يرجى كتابة «الخصوصية» في عنوان الرسالة."
+          "لأسئلة الخصوصية أو ممارسة الحقوق: استخدم صفحة التواصل في الموقع واختر البريد الإلكتروني، واكتب «الخصوصية» في الرسالة."
         ],
         navigation: { privacy: "سياسة الخصوصية", terms: "الشروط والأحكام" },
         sections: [
@@ -110,7 +110,7 @@
                 "لا تتأثر الخدمة أو تسليم صور الضيف برفض الموافقة.",
                 "لا تنشر صورة جماعية إلا بعد الحصول على موافقة من كل بالغ ظاهر ويمكن التعرف عليه؛ ولا تكفي موافقة منسق المجموعة عن البالغين الآخرين.",
                 "صور القُصّر وضيوف الشركات وكبار الشخصيات لا تنشر كأصل إلا بموافقة موثقة من ولي الأمر أو الشخص المعني بحسب الحالة.",
-                "يمكن سحب موافقة النشر في أي وقت عبر contact@aventuraksa.com. نوقف الاستخدام المستقبلي خلال مدة معقولة، ولا يؤثر السحب في المعالجة السابقة المشروعة.",
+                "يمكن سحب موافقة النشر في أي وقت عبر صفحة التواصل في الموقع. نوقف الاستخدام المستقبلي خلال مدة معقولة، ولا يؤثر السحب في المعالجة السابقة المشروعة.",
                 "تظل الصور المنشورة حتى 24 شهرًا كحد أقصى أو حتى سحب الموافقة، أيهما أسبق؛ ونحتفظ بسجل الموافقة مدة 24 شهرًا بعد انتهائها أو سحبها لإثباتها عند الحاجة."
               ]}
             ]
@@ -119,7 +119,7 @@
             heading: "10. حقوقك والشكاوى",
             blocks: [
               { type: "p", text: "لك، وفق نظام حماية البيانات الشخصية، الحق في العلم بكيفية معالجة بياناتك، والوصول إليها، وطلب نسخة منها بصيغة مقروءة متى كان ذلك ممكنًا، وطلب تصحيحها، وطلب إتلافها في الحالات النظامية، والرجوع عن موافقتك. نتحقق من هوية مقدم الطلب بطريقة متناسبة قبل التنفيذ لحماية البيانات." },
-              { type: "p", text: "أرسل طلبك إلى contact@aventuraksa.com بعنوان «طلب خصوصية». نستجيب خلال مدة لا تتجاوز 30 يومًا، ويجوز تمديدها بما لا يزيد على 30 يومًا إضافية في الحالات المسموح بها نظامًا مع إشعارك مسبقًا بالمبررات. إذا لم ترض عن معالجتنا للطلب، فيمكنك تقديم شكوى إلى الهيئة السعودية للبيانات والذكاء الاصطناعي عبر منصة حوكمة البيانات الوطنية." }
+              { type: "p", text: "أرسل طلبك عبر صفحة التواصل واختر البريد الإلكتروني، واكتب «طلب خصوصية» في الرسالة. نستجيب خلال مدة لا تتجاوز 30 يومًا، ويجوز تمديدها بما لا يزيد على 30 يومًا إضافية في الحالات المسموح بها نظامًا مع إشعارك مسبقًا بالمبررات. إذا لم ترض عن معالجتنا للطلب، فيمكنك تقديم شكوى إلى الهيئة السعودية للبيانات والذكاء الاصطناعي عبر منصة حوكمة البيانات الوطنية." }
             ]
           },
           {
@@ -134,7 +134,7 @@
         lead: "آخر تحديث: 9 أغسطس 2026",
         identity: [
           "أفنتورا، منشأة سعودية لتنظيم وإدارة الفعاليات والتجارب الخاصة في جدة.",
-          "للاستفسارات المتعلقة بالطلب أو الحجز: contact@aventuraksa.com"
+          "للاستفسارات المتعلقة بالطلب أو الحجز: استخدم صفحة التواصل في الموقع."
         ],
         navigation: { privacy: "سياسة الخصوصية", terms: "الشروط والأحكام" },
         sections: [
@@ -228,7 +228,7 @@
         lead: "Last updated: 15 August 2026",
         identity: [
           "Data controller: Aventura Event Management Establishment, a Saudi establishment.",
-          "For privacy questions or rights requests: contact@aventuraksa.com — please use “Privacy” in the subject line."
+          "For privacy questions or rights requests, use the contact page, choose email, and write “Privacy” in your message."
         ],
         navigation: { privacy: "Privacy policy", terms: "Terms & conditions" },
         sections: [
@@ -326,7 +326,7 @@
                 "The service and delivery of the guest's photos are not affected if consent is declined.",
                 "A group image is not published unless every identifiable adult in it has agreed; a group coordinator cannot consent for other adults.",
                 "Images of minors, corporate guests, and VIP guests are not published by default without documented consent from a parent, guardian, or the relevant person, as applicable.",
-                "You may withdraw publication consent at any time through contact@aventuraksa.com. We will stop future use within a reasonable time; withdrawal does not affect earlier lawful processing.",
+                "You may withdraw publication consent at any time through the contact page. We will stop future use within a reasonable time; withdrawal does not affect earlier lawful processing.",
                 "Published media remains live for no more than 24 months or until consent is withdrawn, whichever comes first. We retain the consent record for 24 months after it expires or is withdrawn where needed to evidence it."
               ]}
             ]
@@ -335,7 +335,7 @@
             heading: "10. Your rights and complaints",
             blocks: [
               { type: "p", text: "Subject to the Saudi Personal Data Protection Law, you have the right to be informed about processing, access your data, request a readable copy where technically possible, request correction, request destruction in the legally applicable cases, and withdraw consent. To protect data, we verify the identity of the requester in a proportionate way before acting." },
-              { type: "p", text: "Email contact@aventuraksa.com with the subject “Privacy request”. We respond within no more than 30 days and may extend this by no more than a further 30 days in legally permitted cases, after notifying you in advance with the reasons. If you are not satisfied with our handling, you may submit a complaint to the Saudi Data and AI Authority through the National Data Governance Platform." }
+              { type: "p", text: "Use the contact page, choose email, and write “Privacy request” in your message. We respond within no more than 30 days and may extend this by no more than a further 30 days in legally permitted cases, after notifying you in advance with the reasons. If you are not satisfied with our handling, you may submit a complaint to the Saudi Data and AI Authority through the National Data Governance Platform." }
             ]
           },
           {
@@ -350,7 +350,7 @@
         lead: "Last updated: 9 August 2026",
         identity: [
           "Aventura, a Saudi organisation for event management and private experiences in Jeddah.",
-          "For questions about a request or booking: contact@aventuraksa.com"
+          "For questions about a request or booking, use the contact page."
         ],
         navigation: { privacy: "Privacy policy", terms: "Terms & conditions" },
         sections: [
@@ -444,7 +444,7 @@
         lead: "Última actualización: 15 de agosto de 2026",
         identity: [
           "Responsable del tratamiento: Establecimiento Aventura de Gestión de Eventos, entidad saudí.",
-          "Para consultas de privacidad o ejercicio de derechos: contact@aventuraksa.com — indica «Privacidad» en el asunto."
+          "Para consultas de privacidad o ejercicio de derechos, utiliza la página de contacto, elige correo electrónico y escribe «Privacidad» en el mensaje."
         ],
         navigation: { privacy: "Política de privacidad", terms: "Términos y condiciones" },
         sections: [
@@ -542,7 +542,7 @@
                 "El servicio y la entrega de las fotos del huésped no se ven afectados si se rechaza la autorización.",
                 "No se publica una imagen grupal sin el acuerdo de cada adulto identificable; un coordinador de grupo no puede consentir en nombre de otros adultos.",
                 "Las imágenes de menores, huéspedes corporativos y VIP no se publican por defecto sin consentimiento documentado de un padre, tutor o la persona correspondiente, según el caso.",
-                "Puedes retirar el consentimiento de publicación en cualquier momento escribiendo a contact@aventuraksa.com. Detendremos el uso futuro en un plazo razonable; la retirada no afecta a tratamientos anteriores lícitos.",
+                "Puedes retirar el consentimiento de publicación en cualquier momento a través de la página de contacto. Detendremos el uso futuro en un plazo razonable; la retirada no afecta a tratamientos anteriores lícitos.",
                 "El contenido publicado permanece activo un máximo de 24 meses o hasta retirar el consentimiento, lo que suceda antes. Conservamos el registro del consentimiento 24 meses después de su vencimiento o retirada cuando sea necesario para acreditarlo."
               ]}
             ]
@@ -551,7 +551,7 @@
             heading: "10. Tus derechos y reclamaciones",
             blocks: [
               { type: "p", text: "Conforme a la Ley Saudí de Protección de Datos Personales, tienes derecho a conocer el tratamiento, acceder a tus datos, solicitar una copia legible cuando sea técnicamente posible, pedir corrección, solicitar destrucción en los casos previstos por la ley y retirar el consentimiento. Para proteger los datos, verificamos la identidad de quien presenta la solicitud de forma proporcionada." },
-              { type: "p", text: "Escribe a contact@aventuraksa.com con el asunto «Solicitud de privacidad». Respondemos en un máximo de 30 días y, en los casos legalmente permitidos, podemos ampliar el plazo hasta 30 días más tras avisarte previamente de los motivos. Si no quedas conforme con nuestra gestión, puedes presentar una reclamación ante la Autoridad Saudí de Datos e Inteligencia Artificial a través de la Plataforma Nacional de Gobernanza de Datos." }
+              { type: "p", text: "Utiliza la página de contacto, elige correo electrónico y escribe «Solicitud de privacidad» en el mensaje. Respondemos en un máximo de 30 días y, en los casos legalmente permitidos, podemos ampliar el plazo hasta 30 días más tras avisarte previamente de los motivos. Si no quedas conforme con nuestra gestión, puedes presentar una reclamación ante la Autoridad Saudí de Datos e Inteligencia Artificial a través de la Plataforma Nacional de Gobernanza de Datos." }
             ]
           },
           {
@@ -566,7 +566,7 @@
         lead: "Última actualización: 9 de agosto de 2026",
         identity: [
           "Aventura, entidad saudí de gestión de eventos y experiencias privadas en Yeda.",
-          "Para consultas sobre una solicitud o reserva: contact@aventuraksa.com"
+          "Para consultas sobre una solicitud o reserva, utiliza la página de contacto."
         ],
         navigation: { privacy: "Política de privacidad", terms: "Términos y condiciones" },
         sections: [
