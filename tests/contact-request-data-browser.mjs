@@ -61,6 +61,28 @@ try {
     check(result.message.includes("contact.whatsappGuests: 4"), `request data ${lang}: summary includes guest count`);
     check(result.message.includes("contact.whatsappMessage: Test request"), `request data ${lang}: summary includes request message`);
 
+    const eventResult = await page.evaluate(() => {
+      const api = window.AVENTURA_CONTACT_REQUEST_DATA;
+      const form = document.querySelector("[data-contact-form]");
+      form.querySelector('[name="type"]').value = "event";
+      form.querySelector('[name="type"]').dispatchEvent(new Event("change", { bubbles: true }));
+      form.querySelector('[name="eventOccasion"]').value = "birthday";
+      form.querySelector('[name="eventVenue"]').value = "suggest";
+      form.querySelector('[name="eventServices[]"][value="full-management"]').checked = true;
+      form.querySelector('[name="eventServices[]"][value="setup"]').checked = true;
+      const data = new FormData(form);
+      return api.buildMessage({
+        form,
+        data,
+        requestId: "AVE-TEST-EVENT",
+        name: "Test Guest",
+        translate: (key) => key
+      });
+    });
+    check(eventResult.includes("contact.eventOccasionLabel:"), `request data ${lang}: event summary includes occasion`);
+    check(eventResult.includes("contact.eventVenueLabel:"), `request data ${lang}: event summary includes venue status`);
+    check(eventResult.includes("contact.eventServicesLabel:"), `request data ${lang}: event summary includes selected services`);
+
     await page.close();
   }
 } finally {

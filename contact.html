@@ -155,19 +155,63 @@
               <input id="time" name="time" type="time">
             </div>
             <div class="field">
-              <label for="duration" data-i18n="contact.durationLabel">Time available</label>
+              <label for="duration" data-i18n="contact.durationLabel">Expected duration</label>
               <select id="duration" name="duration">
                 <option value="" selected data-i18n="contact.durationPlaceholder">Choose the closest option</option>
                 <option value="short" data-i18n="contact.durationShort">1–2 hours</option>
-                <option value="half-day" data-i18n="contact.durationHalf">Half day</option>
-                <option value="full-day" data-i18n="contact.durationFull">Full day</option>
-                <option value="flexible" data-i18n="contact.durationFlexible">Flexible</option>
+                <option value="half-day" data-i18n="contact.durationHalf">Half day — up to 4 hours</option>
+                <option value="full-day" data-i18n="contact.durationFull">Full day — up to 8 hours</option>
+                <option value="flexible" data-i18n="contact.durationFlexible">Flexible / longer</option>
               </select>
+              <p class="form-note" data-i18n="contact.durationNote">Half day means up to 4 hours; full day means up to 8 hours. Longer or multi-day requests are planned separately.</p>
             </div>
             <div class="field">
               <label for="guests" data-i18n="contact.guestsLabel">Number of guests</label>
               <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
             </div>
+
+            <fieldset class="request-detail-group full" data-request-details="event" hidden>
+              <legend data-i18n="contact.eventDetailsTitle">Event or private occasion details</legend>
+              <p class="form-note" data-i18n="contact.eventDetailsText">A few details help Aventura shape the right starting direction. No budget is requested here.</p>
+              <div class="form-grid request-detail-grid">
+                <div class="field">
+                  <label for="eventOccasion" data-i18n="contact.eventOccasionLabel">Occasion</label>
+                  <select id="eventOccasion" name="eventOccasion" required data-request-summary data-request-summary-label-key="contact.eventOccasionLabel">
+                    <option value="" selected data-i18n="contact.typePlaceholder">Choose one</option>
+                    <option value="birthday" data-i18n="contact.eventOccasionBirthday">Birthday</option>
+                    <option value="anniversary" data-i18n="contact.eventOccasionAnniversary">Anniversary</option>
+                    <option value="graduation" data-i18n="contact.eventOccasionGraduation">Graduation</option>
+                    <option value="family" data-i18n="contact.eventOccasionFamily">Family occasion</option>
+                    <option value="private-dinner" data-i18n="contact.eventOccasionDinner">Private dinner</option>
+                    <option value="other" data-i18n="contact.eventOccasionOther">Other occasion</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="eventVenue" data-i18n="contact.eventVenueLabel">Venue</label>
+                  <select id="eventVenue" name="eventVenue" required data-request-summary data-request-summary-label-key="contact.eventVenueLabel">
+                    <option value="" selected data-i18n="contact.typePlaceholder">Choose one</option>
+                    <option value="confirmed" data-i18n="contact.eventVenueConfirmed">I already have a venue</option>
+                    <option value="suggest" data-i18n="contact.eventVenueSuggest">I would like Aventura to suggest options</option>
+                    <option value="undecided" data-i18n="contact.eventVenueUndecided">Not decided yet</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <span class="field-label" data-i18n="contact.eventServicesLabel">What would you like Aventura to coordinate?</span>
+                  <p class="form-note" data-i18n="contact.eventServicesText">Choose any that apply. You can also leave this open and let Aventura shape the direction.</p>
+                  <div class="request-option-grid request-option-grid--services" data-request-summary-label-key="contact.eventServicesLabel">
+                    <label><input type="checkbox" name="eventServices[]" value="full-management" data-request-summary><span data-i18n="contact.eventServiceFull">Full planning and event management</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="venue" data-request-summary><span data-i18n="contact.eventServiceVenue">Venue suggestions and coordination</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="setup" data-request-summary><span data-i18n="contact.eventServiceSetup">Venue setup and occasion styling</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="hospitality" data-request-summary><span data-i18n="contact.eventServiceHospitality">Food and hospitality</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="cake" data-request-summary><span data-i18n="contact.eventServiceCake">Cake and sweets</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="photography" data-request-summary><span data-i18n="contact.eventServicePhotography">Photography</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="entertainment" data-request-summary><span data-i18n="contact.eventServiceEntertainment">Entertainment and activities</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="transport" data-request-summary><span data-i18n="contact.eventServiceTransport">Guest transportation</span></label>
+                    <label><input type="checkbox" name="eventServices[]" value="gifts" data-request-summary><span data-i18n="contact.eventServiceGifts">Gifts and special details</span></label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
 
             <fieldset class="request-detail-group full" data-request-details="thobe" hidden>
               <legend data-i18n="contact.thobeDetailsTitle">Tailoring service details</legend>

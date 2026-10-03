@@ -105,6 +105,9 @@ try {
     check(await page.locator('[data-request-step="2"]').isVisible(), `wizard ${lang}: Next moves to step 2`);
     check(await page.locator('[data-request-step="1"]').isHidden(), `wizard ${lang}: step 1 hides after Next`);
 
+    const eventDetails = page.locator('[data-request-details="event"]');
+    check(await eventDetails.isHidden(), `wizard ${lang}: event brief stays hidden for non-event requests`);
+
     const step2 = page.locator('[data-request-step="2"]');
     await satisfyVisibleRequiredFields(step2);
     await step2.locator('[data-request-next]').click();
@@ -134,6 +137,25 @@ try {
     }
 
     await page.close();
+
+    const eventPage = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    await eventPage.goto(`${baseUrl}/contact.html${query}`, { waitUntil: "domcontentloaded" });
+    await eventPage.waitForLoadState("load").catch(() => {});
+    await eventPage.waitForTimeout(150);
+    await eventPage.locator("#type").selectOption("event");
+    await satisfyVisibleRequiredFields(eventPage.locator('[data-request-step="1"]'));
+    await eventPage.locator('[data-request-step="1"] [data-request-next]').click();
+    await eventPage.waitForTimeout(100);
+
+    const eventGroup = eventPage.locator('[data-request-details="event"]');
+    check(await eventGroup.isVisible(), `wizard ${lang}: event brief appears only for event requests`);
+    check(await eventPage.locator("#eventOccasion").isEnabled(), `wizard ${lang}: event occasion is enabled when event is selected`);
+    check(await eventPage.locator("#eventVenue").isEnabled(), `wizard ${lang}: event venue is enabled when event is selected`);
+    await satisfyVisibleRequiredFields(eventPage.locator('[data-request-step="2"]'));
+    await eventPage.locator('[data-request-step="2"] [data-request-next]').click();
+    await eventPage.waitForTimeout(100);
+    check(await eventPage.locator('[data-request-step="3"]').isVisible(), `wizard ${lang}: completed event brief advances to contact step`);
+    await eventPage.close();
   }
 } finally {
   await browser.close();

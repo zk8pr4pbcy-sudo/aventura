@@ -1602,8 +1602,12 @@
       detailGroups.forEach(function (group) {
         var groupName = group.getAttribute("data-request-details");
         var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
-        var showService = groupName !== "collection" && typeField && typeField.value === "guest-services" && activeRequestIds.indexOf(groupName) !== -1;
-        group.hidden = !showCollection && !showService;
+        var showService = groupName !== "collection" && groupName !== "event" && typeField && typeField.value === "guest-services" && activeRequestIds.indexOf(groupName) !== -1;
+        var showEvent = groupName === "event" && typeField && typeField.value === "event";
+        group.hidden = !showCollection && !showService && !showEvent;
+        group.querySelectorAll("input, select, textarea").forEach(function (control) {
+          control.disabled = group.hidden;
+        });
       });
     }
 

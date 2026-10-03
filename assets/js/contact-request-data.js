@@ -48,12 +48,17 @@
     }
 
     var dynamicSummary = {};
-    Array.from(form.querySelectorAll("#dynamicRequestPanel [data-request-summary]")).forEach(function (field) {
+    Array.from(form.querySelectorAll("[data-request-summary]")).forEach(function (field) {
       if (field.disabled || field.closest("[hidden]")) return;
       if ((field.type === "radio" || field.type === "checkbox") && !field.checked) return;
       if (!String(field.value || "").trim()) return;
-      var summaryGroup = field.closest("[data-request-summary-label]");
-      var label = summaryGroup ? summaryGroup.getAttribute("data-request-summary-label") : field.name;
+      var summaryGroup = field.closest("[data-request-summary-label], [data-request-summary-label-key]");
+      var labelKey = summaryGroup ? summaryGroup.getAttribute("data-request-summary-label-key") : "";
+      var label = labelKey ? translate(labelKey) : (summaryGroup ? summaryGroup.getAttribute("data-request-summary-label") : "");
+      if (!label) {
+        var ownLabelKey = field.getAttribute("data-request-summary-label-key");
+        label = ownLabelKey ? translate(ownLabelKey) : field.name;
+      }
       var value = String(field.value).trim();
       if (field.tagName === "SELECT") {
         var selectedOption = field.options[field.selectedIndex];
