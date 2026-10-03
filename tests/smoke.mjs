@@ -41,6 +41,7 @@ const legacyContactPatchPath = path.join(root, 'assets/js/contact-flow-fix.js');
 const legacyLaunchRecoveryPath = path.join(root, 'assets/js/launch-v2-recovery.js');
 const legacyExperienceCopyOverridesPath = path.join(root, 'assets/js/experience-copy-overrides.js');
 const desertLastLightScriptPath = path.join(root, 'assets/js/prelaunch-desert-last-light.js');
+const contactEmail = ['contact', '@', 'aventuraksa', '.com'].join('');
 
 console.log('\nAventura maintenance smoke checks\n');
 
@@ -66,7 +67,8 @@ check(app.includes('firstPastTimingField'), 'wizard and final submission share t
 check(contact.includes('data-contact-form'), 'contact page exposes the booking form hook');
 check(contact.includes('name="request_language"'), 'contact form contains request_language metadata');
 check(contact.includes('name="request_reference"'), 'contact form contains a request reference field');
-check(contact.includes('https://formsubmit.co/contact@aventuraksa.com'), 'contact form keeps the approved FormSubmit destination');
+check(contact.includes('action="contact.html"'), 'contact form keeps a local non-sensitive action fallback');
+check(!contact.includes(contactEmail), 'contact page source does not expose the naked contact email');
 check(includesInOrder(contact, 'assets/js/translations.js', 'assets/js/app.js'), 'translations load before app.js on the contact page');
 
 // Contact architecture: permanent behavior must live in owned HTML/CSS/JS modules, not runtime patches.
@@ -76,7 +78,7 @@ check(!fs.existsSync(legacyContactPatchPath), 'legacy contact runtime patch has 
 check(!contact.includes('contact-flow-fix.js'), 'contact page has no legacy runtime patch reference');
 check(contact.includes('name="privacy_consent"'), 'privacy consent is part of static HTML');
 check(contact.includes('name="privacy_consent_at"'), 'privacy consent timestamp field is part of static HTML');
-check(includesInOrder(contact, '<form class="form-card"', '<aside class="contact-panel"'), 'contact form precedes the contact panel in source order');
+check(includesInOrder(contact, '<form id="request" class="form-card"', '<aside class="contact-panel"'), 'contact form precedes the contact panel in source order');
 check(contactConsent.includes('privacy_consent'), 'consent module owns consent validation');
 check(contactConsent.includes('privacy_consent_at'), 'consent module records the consent timestamp');
 check(!contactConsent.includes('createElement("style")') && !contactConsent.includes("createElement('style')"), 'consent module does not inject runtime styles');
