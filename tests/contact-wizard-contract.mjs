@@ -5,6 +5,7 @@ const wizard = fs.readFileSync("assets/js/contact-wizard.js", "utf8");
 const app = fs.readFileSync("assets/js/app.js", "utf8");
 const contact = fs.readFileSync("contact.html", "utf8");
 const translations = fs.readFileSync("assets/js/translations.js", "utf8");
+const analytics = fs.readFileSync("assets/js/analytics.js", "utf8");
 
 assert.match(wizard, /AVENTURA_CONTACT_WIZARD/, "wizard module must expose a stable global API");
 assert.match(wizard, /setup:\s*setup/, "wizard module must expose setup");
@@ -20,14 +21,16 @@ if (/assets\/js\/contact-wizard\.js/.test(contact)) {
 }
 
 
-assert.match(contact, /data-request-details="event"/, "contact form must include conditional event details");
-assert.match(contact, /name="eventOccasion"[^>]*required/, "event occasion type must be required when the event block is active");
-assert.match(contact, /name="eventVenueStatus"[^>]*required/, "event venue status must be required when the event block is active");
-assert.doesNotMatch(contact, /name="[^"]*budget[^"]*"/i, "event request flow must not ask for a budget");
+assert.doesNotMatch(contact, /data-request-details="event"/, "event intake must not duplicate the existing dynamic request engine");
+assert.doesNotMatch(contact + analytics, /name=["'][^"']*budget[^"']*["']/i, "event request flow must not ask for a budget");
 assert.match(translations, /"contact\.typeEvent": "فعالية أو مناسبة خاصة"/, "Arabic event label must include private occasions");
 assert.match(translations, /"contact\.durationHalf": "نصف يوم — حتى 4 ساعات"/, "Arabic half-day definition must be explicit");
 assert.match(translations, /"contact\.durationFull": "يوم كامل — حتى 8 ساعات"/, "Arabic full-day definition must be explicit");
-assert.doesNotMatch(translations, /"contact\.event[^"]*":\s*"[^"]*ديكور[^"]*"/, "event-specific Arabic copy must not use the broad decor label");
-assert.match(app, /var\s+showEvent\s*=\s*groupName\s*===\s*"event"/, "app.js must reveal event details only for event requests");
+assert.match(analytics, /\["private-event", "فعالية أو مناسبة خاصة"\]/, "dynamic request types must expose the Arabic private occasion path");
+assert.match(analytics, /name:"eventType"[\s\S]*required:true/, "occasion type must be required in the dynamic private-event flow");
+assert.match(analytics, /name:"eventLocationStatus"[\s\S]*required:true/, "venue status must be required in the dynamic private-event flow");
+assert.match(analytics, /eventServices:"ما الذي ترغب أن تتولاه أفنتورا\؟"/, "event services must use a concrete Aventura scope prompt");
+assert.match(analytics, /eventSetup:"تجهيز الموقع وترتيب المساحات"/, "event setup must be described specifically");
+assert.doesNotMatch(analytics, /ديكور/, "private-event copy must not use the broad decor label");
 
 console.log("Contact wizard contract checks passed");
