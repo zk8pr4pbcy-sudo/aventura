@@ -223,7 +223,10 @@
     en: {
       privacy: {
         lead: "Last updated: 15 August 2026",
-        identity: [],
+        identity: [
+          "Data controller: Aventura Event Management Establishment, a Saudi establishment.",
+          "For privacy questions or rights requests, use the contact page, choose email, and write “Privacy” in your message."
+        ],
         navigation: { privacy: "Privacy policy", terms: "Terms & conditions" },
         sections: [
           {
@@ -436,7 +439,10 @@
     es: {
       privacy: {
         lead: "Última actualización: 15 de agosto de 2026",
-        identity: [],
+        identity: [
+          "Responsable del tratamiento: Establecimiento Aventura de Gestión de Eventos, entidad saudí.",
+          "Para consultas de privacidad o ejercicio de derechos, utiliza la página de contacto, elige correo electrónico y escribe «Privacidad» en el mensaje."
+        ],
         navigation: { privacy: "Política de privacidad", terms: "Términos y condiciones" },
         sections: [
           {
@@ -689,15 +695,13 @@
     target.replaceChildren();
     appendTextElement(target, "p", "lead", content.lead);
 
-    if (content.identity && content.identity.length) {
-      var identity = document.createElement("aside");
-      identity.className = "legal-identity";
-      identity.setAttribute("aria-label", documentType === "privacy" ? content.navigation.privacy : content.navigation.terms);
-      content.identity.forEach(function (line) {
-        appendTextElement(identity, "p", "", line);
-      });
-      target.appendChild(identity);
-    }
+    var identity = document.createElement("aside");
+    identity.className = "legal-identity";
+    identity.setAttribute("aria-label", documentType === "privacy" ? content.navigation.privacy : content.navigation.terms);
+    content.identity.forEach(function (line) {
+      appendTextElement(identity, "p", "", line);
+    });
+    target.appendChild(identity);
 
     var navigation = document.createElement("nav");
     navigation.className = "legal-page-links";
