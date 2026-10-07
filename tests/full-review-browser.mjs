@@ -20,6 +20,16 @@ try {
     assert.equal(await page.locator('option[value="half-day"]').textContent(), item.half);
     assert.equal(await page.locator('option[value="full-day"]').textContent(), item.full);
 
+    const debugState = await page.evaluate(() => ({
+      href: window.location.href,
+      typeValue: document.querySelector('[name="type"]')?.value || "",
+      groups: Array.from(document.querySelectorAll("[data-request-details]")).map((group) => ({
+        name: group.getAttribute("data-request-details"),
+        hidden: group.hidden,
+        disabled: Array.from(group.querySelectorAll("input,select,textarea")).every((control) => control.disabled)
+      }))
+    }));
+    console.log("FULL-REVIEW-DEBUG", item.lang, JSON.stringify(debugState));
     const eventState = await page.locator('[data-request-details="event"]').evaluate((node) => ({
       hidden: node.hidden,
       disabled: Array.from(node.querySelectorAll("input,select,textarea")).every((control) => control.disabled)
