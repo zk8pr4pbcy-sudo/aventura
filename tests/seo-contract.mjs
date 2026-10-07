@@ -30,7 +30,7 @@ const sitemapEn = read("sitemap-en.xml");
 const sitemapEs = read("sitemap-es.xml");
 const notFound = read("404.html");
 const eventRequest = read("event-request/index.html");
-const expectedLastmod = "2026-09-11";
+const expectedLastmod = "2026-10-07";
 
 check(fs.existsSync(path.join(root, seoPath)), "dedicated SEO runtime exists");
 check(seo.includes("root.AVENTURA_SEO = api"), "SEO runtime exposes a stable AVENTURA_SEO API");

@@ -48,3 +48,5 @@ jobs:
         run: node tests/ga4-journey-contract.mjs
       - name: Validate pages, links and translations
         run: node scripts/validate-site.mjs
+      - name: Validate full site review fixes
+        run: node tests/full-review-contract.mjs

@@ -66,6 +66,9 @@ jobs:
       - name: Run Event Request contract checks
         run: node tests/event-request-contract.mjs
 
+      - name: Run full site review contract checks
+        run: node tests/full-review-contract.mjs
+
       - name: Build hardened public artifact
         run: node scripts/build-public.mjs
 
@@ -116,6 +119,11 @@ jobs:
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/corporate-services-browser.mjs
+
+      - name: Verify full site review fixes in browser
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/full-review-browser.mjs
 
       - name: Run SEO browser checks
         env:

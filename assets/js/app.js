@@ -980,7 +980,7 @@
     function perfumeMarkup(perfume) {
       var visual = perfume.image
         ? '<div class="detail-perfume-visual"><img src="' + perfume.image + '" width="900" height="1125" loading="eager" decoding="async" alt=""></div>'
-        : '<div class="detail-perfume-visual perfume-card-pending"><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="collection.lastLightPending">Marketing card in preparation</strong></div></div>';
+        : '<div class="detail-perfume-visual perfume-card-pending"><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="collection.p3Title">Last Light</strong></div></div>';
       var storyButton = perfume.story
         ? '<button class="text-link" type="button" data-perfume-story="' + perfume.story + '" data-story-title-key="' + perfume.titleKey + '" data-i18n="collection.viewStoryCard">View story card</button>'
         : '';
@@ -1605,7 +1605,11 @@
         var groupName = group.getAttribute("data-request-details");
         var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
         var showService = groupName !== "collection" && typeField && typeField.value === "guest-services" && activeRequestIds.indexOf(groupName) !== -1;
-        group.hidden = !showCollection && !showService;
+        var shouldShow = showCollection || showService;
+        group.hidden = !shouldShow;
+        group.querySelectorAll("input, select, textarea, button").forEach(function (control) {
+          control.disabled = !shouldShow;
+        });
       });
     }
 
