@@ -214,21 +214,17 @@ function hardenStructuredData() {
 
 function hardenPrivacyCopy() {
   transformFile('privacy.html', (source) => {
-    return replaceRequired(
-      source,
-      `Please enable JavaScript to view this policy, or email ${contactEmail} to request a copy.`,
-      'Please enable JavaScript to view this policy, or use the contact page to request a copy.',
-      'privacy noscript email'
-    );
+    const legacy = `Please enable JavaScript to view this policy, or email ${contactEmail} to request a copy.`;
+    return source.includes(legacy)
+      ? source.replace(legacy, 'Please enable JavaScript to view this policy, or use the contact page to request a copy.')
+      : source;
   });
 
   transformFile('terms.html', (source) => {
-    return replaceRequired(
-      source,
-      `Please enable JavaScript to view these terms, or email ${contactEmail} to request a copy.`,
-      'Please enable JavaScript to view these terms, or use the contact page to request a copy.',
-      'terms noscript email'
-    );
+    const legacy = `Please enable JavaScript to view these terms, or email ${contactEmail} to request a copy.`;
+    return source.includes(legacy)
+      ? source.replace(legacy, 'Please enable JavaScript to view these terms, or use the contact page to request a copy.')
+      : source;
   });
 
   transformFile('assets/js/translations.js', (source) => {
