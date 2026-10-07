@@ -223,10 +223,7 @@
     en: {
       privacy: {
         lead: "Last updated: 15 August 2026",
-        identity: [
-          "Data controller: Aventura Event Management Establishment, a Saudi establishment.",
-          "For privacy questions or rights requests, use the contact page, choose email, and write “Privacy” in your message."
-        ],
+        identity: [],
         navigation: { privacy: "Privacy policy", terms: "Terms & conditions" },
         sections: [
           {
@@ -439,10 +436,7 @@
     es: {
       privacy: {
         lead: "Última actualización: 15 de agosto de 2026",
-        identity: [
-          "Responsable del tratamiento: Establecimiento Aventura de Gestión de Eventos, entidad saudí.",
-          "Para consultas de privacidad o ejercicio de derechos, utiliza la página de contacto, elige correo electrónico y escribe «Privacidad» en el mensaje."
-        ],
+        identity: [],
         navigation: { privacy: "Política de privacidad", terms: "Términos y condiciones" },
         sections: [
           {
