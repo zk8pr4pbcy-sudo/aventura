@@ -169,54 +169,6 @@
               <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
             </div>
 
-            <fieldset class="request-detail-group full" data-request-details="service" hidden>
-              <legend data-i18n="contact.guestServiceDetailsTitle">Guest service details</legend>
-              <div class="form-grid request-detail-grid">
-                <div class="field full">
-                  <label for="guestService" data-i18n="contact.guestServiceLabel">Requested guest service</label>
-                  <select id="guestService" name="guestService">
-                    <option value="" selected data-i18n="contact.guestServicePlaceholder">Choose a guest service</option>
-                    <option value="thobe" data-i18n="contact.guestServiceThobe">Saudi thobe tailoring</option>
-                    <option value="abaya" data-i18n="contact.guestServiceAbaya">Abaya selection</option>
-                    <option value="flower" data-i18n="contact.guestServiceFlower">Flower delivery</option>
-                  </select>
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset id="dynamicRequestPanel" class="request-detail-group full" data-request-details="event" hidden>
-              <legend data-i18n="contact.eventDetailsTitle">Event or private occasion details</legend>
-              <div class="form-grid request-detail-grid">
-                <div class="field">
-                  <label for="eventKind" data-i18n="contact.eventKindLabel">Event or occasion type</label>
-                  <input id="eventKind" name="eventKind" type="text" data-i18n-placeholder="contact.eventKindPlaceholder" placeholder="Example: corporate dinner, birthday, reception">
-                </div>
-                <div class="field">
-                  <label for="eventLocation" data-i18n="contact.eventLocationLabel">Event location or preferred venue</label>
-                  <input id="eventLocation" name="eventLocation" type="text">
-                </div>
-                <div class="field">
-                  <label for="eventLevel" data-i18n="contact.eventLevelLabel">Service level</label>
-                  <select id="eventLevel" name="eventLevel">
-                    <option value="" selected data-i18n="contact.eventLevelPlaceholder">Choose the closest level</option>
-                    <option value="essential" data-i18n="contact.eventLevelStandard">Essential</option>
-                    <option value="premium" data-i18n="contact.eventLevelPremium">Premium</option>
-                    <option value="vip" data-i18n="contact.eventLevelVip">VIP</option>
-                  </select>
-                </div>
-                <div class="field full">
-                  <span class="field-label" data-i18n="contact.eventServicesLabel">Services required</span>
-                  <div class="request-option-grid">
-                    <label><input type="checkbox" name="eventServices[]" value="venue"><span data-i18n="contact.eventServiceVenue">Venue selection</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="transport"><span data-i18n="contact.eventServiceTransport">Transport</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="hospitality"><span data-i18n="contact.eventServiceHospitality">Hospitality</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="reception"><span data-i18n="contact.eventServiceReception">Guest reception</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="onsite"><span data-i18n="contact.eventServiceOnsite">On-site execution</span></label>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-
             <fieldset class="request-detail-group full" data-request-details="thobe" hidden>
               <legend data-i18n="contact.thobeDetailsTitle">Tailoring service details</legend>
               <div class="form-grid request-detail-grid">
