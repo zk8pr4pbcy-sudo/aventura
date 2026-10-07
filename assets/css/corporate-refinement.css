@@ -1,0 +1,140 @@
+/* Corporate page refinements: deliberately isolated from shared site styles. */
+body[data-page="corporate"] .corporate-inclusions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 20px);
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+body[data-page="corporate"] .corporate-inclusion {
+  display: flex;
+  min-width: 0;
+  min-height: 148px;
+  padding: clamp(20px, 2.7vw, 30px);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--navy-900);
+  background: var(--white);
+  border: 1px solid rgba(133, 97, 47, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 10px 32px rgba(7, 26, 42, 0.045);
+  text-align: start;
+}
+
+body[data-page="corporate"] .corporate-inclusion-number {
+  color: var(--gold-dark);
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.25;
+}
+
+body[data-page="corporate"] .corporate-inclusion strong {
+  display: block;
+  max-width: 100%;
+  color: var(--navy-900);
+  font-size: clamp(0.98rem, 1.15vw, 1.13rem);
+  font-weight: 650;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+body[data-page="corporate"] .corporate-guest-services {
+  display: grid;
+  gap: 0;
+  margin: clamp(26px, 3.2vw, 40px) 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-page="corporate"] .corporate-guest-services li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(133, 97, 47, 0.16);
+}
+
+body[data-page="corporate"] .corporate-guest-services li:first-child {
+  border-top: 1px solid rgba(133, 97, 47, 0.16);
+}
+
+body[data-page="corporate"] .corporate-guest-index {
+  padding-top: 0.27em;
+  color: var(--gold-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+}
+
+body[data-page="corporate"] .corporate-guest-detail {
+  min-width: 0;
+  color: var(--navy-900);
+  font-size: clamp(0.91rem, 1.1vw, 1rem);
+  font-weight: 500;
+  line-height: 1.85;
+  text-align: start;
+  overflow-wrap: break-word;
+}
+
+body[data-page="corporate"] .corporate-guest-note {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  body[data-page="corporate"] .corporate-inclusions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 660px) {
+  body[data-page="corporate"] .corporate-inclusions {
+    gap: 12px;
+  }
+
+  body[data-page="corporate"] .corporate-inclusion {
+    min-height: 126px;
+    padding: 18px 16px;
+    gap: 20px;
+    border-radius: 14px;
+  }
+
+  body[data-page="corporate"] .corporate-inclusion strong {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  body[data-page="corporate"] .corporate-guest-services li {
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 10px;
+    padding: 16px 0;
+  }
+
+  body[data-page="corporate"] .corporate-guest-detail {
+    font-size: 0.91rem;
+  }
+
+  body[data-page="corporate"] .corporate-guest-note {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 355px) {
+  body[data-page="corporate"] .corporate-inclusions {
+    grid-template-columns: 1fr;
+  }
+  body[data-page="corporate"] .corporate-inclusion {
+    min-height: 108px;
+  }
+}

@@ -270,6 +270,9 @@ function hardenPrivacyCopy() {
     ];
 
     for (const [from, to] of replacements) {
+      // Privacy paragraphs intentionally deleted from the site must not be restored
+      // or required by the build. Remaining email occurrences are still hardened.
+      if (!source.includes(from)) continue;
       source = replaceAllRequired(source, from, to, `legal copy: ${from.slice(0, 42)}`);
     }
     return source;
