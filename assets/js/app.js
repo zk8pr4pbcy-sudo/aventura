@@ -1604,9 +1604,8 @@
       detailGroups.forEach(function (group) {
         var groupName = group.getAttribute("data-request-details");
         var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
-        var showService = groupName !== "collection" && groupName !== "event" && typeField && typeField.value === "service" && activeRequestIds.indexOf(groupName) !== -1;
-        var showEvent = groupName === "event" && typeField && typeField.value === "event";
-        var shouldShow = showCollection || showService || showEvent;
+        var showService = groupName !== "collection" && typeField && typeField.value === "guest-services" && activeRequestIds.indexOf(groupName) !== -1;
+        var shouldShow = showCollection || showService;
         group.hidden = !shouldShow;
         group.querySelectorAll("input, select, textarea, button").forEach(function (control) {
           control.disabled = !shouldShow;
