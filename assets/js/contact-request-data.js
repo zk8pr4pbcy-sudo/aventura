@@ -82,6 +82,10 @@
     });
 
     var detailRows = [
+      ["eventKind", "contact.eventKindLabel"],
+      ["eventLocationStatus", "contact.eventLocationStatusLabel"],
+      ["eventLocation", "contact.eventLocationLabel"],
+      ["eventLevel", "contact.eventLevelLabel"],
       ["deliveryLocation", "contact.deliveryLocationLabel"],
       ["deliveryTime", "contact.deliveryTimeLabel"],
       ["personalization", "contact.personalizationLabel"],
@@ -103,6 +107,17 @@
       ["flowerDelivery", "contact.deliveryTimeLabel"],
       ["flowerMessage", "contact.cardMessageLabel"]
     ];
+
+    var eventDetailsGroup = form.querySelector('[data-request-details="event"]');
+    if (eventDetailsGroup && !eventDetailsGroup.hidden) {
+      var eventServices = Array.from(form.querySelectorAll('[name="eventServices[]"]:checked')).map(function (field) {
+        var label = field.closest("label");
+        return label ? label.textContent.trim() : field.value;
+      });
+      if (eventServices.length) {
+        lines.push(translate("contact.eventServicesLabel") + ": " + eventServices.join(", "));
+      }
+    }
 
     detailRows.forEach(function (row) {
       var field = form.querySelector('[name="' + row[0] + '"]');
