@@ -18,7 +18,7 @@
   }
 
   var REQUEST_TYPES = {
-    en: [["", "Choose one"], ["historic-jeddah", "Historic Jeddah experience"], ["sea", "Red Sea experience"], ["desert", "Desert experience"], ["taif", "Taif journey"], ["jeddah-day", "A complete Jeddah day"], ["corporate", "Corporate program"], ["private-event", "Private event or occasion"], ["vip-hosting", "VIP or delegation hosting"], ["guest-services", "Guest services"], ["custom-experience", "Design a custom experience"]],
+    en: [["", "Choose one"], ["historic-jeddah", "Historic Jeddah experience"], ["sea", "Red Sea experience"], ["desert", "Desert experience"], ["taif", "Taif journey"], ["jeddah-day", "A complete Jeddah day"], ["corporate", "Corporate program"], ["private-event", "Event or private occasion"], ["vip-hosting", "VIP or delegation hosting"], ["guest-services", "Guest services"], ["custom-experience", "Design a custom experience"]],
     ar: [["", "اختر النوع"], ["historic-jeddah", "جولة جدة التاريخية"], ["sea", "تجربة بحرية"], ["desert", "تجربة صحراوية"], ["taif", "رحلة إلى الطائف"], ["jeddah-day", "يوم متكامل في جدة"], ["corporate", "برنامج شركات"], ["private-event", "فعالية أو مناسبة خاصة"], ["vip-hosting", "استضافة كبار الشخصيات أو الوفود"], ["guest-services", "خدمات الضيوف"], ["custom-experience", "تصميم تجربة خاصة"]],
     es: [["", "Elige una opción"], ["historic-jeddah", "Experiencia en Yeda Histórica"], ["sea", "Experiencia en el Mar Rojo"], ["desert", "Experiencia en el desierto"], ["taif", "Viaje a Taif"], ["jeddah-day", "Un día completo en Yeda"], ["corporate", "Programa corporativo"], ["private-event", "Evento u ocasión privada"], ["vip-hosting", "Atención VIP o delegaciones"], ["guest-services", "Servicios para huéspedes"], ["custom-experience", "Diseñar una experiencia a medida"]]
   };
@@ -41,9 +41,9 @@
         jeddahTransport:"Transport type", jeddahStandardTransport:"Standard transport", jeddahVipTransport:"VIP transport",
         corporateGoal:"What outcome should the corporate program deliver?", corporateTeam:"Team building", corporateGuests:"Hosting guests or clients", corporateExecutive:"An executive program", corporateWorkplace:"Improving the work environment",
         corporateGuestType:"Who are the guests?", corporateEmployees:"Employees", corporateClients:"Clients", corporateDelegation:"An international delegation",
-        eventType:"Occasion type", eventPrivate:"Private celebration", eventCorporate:"Corporate event", eventDinner:"Dinner or gathering",
-        eventLocationStatus:"Venue status", eventLocationReady:"The venue is selected", eventLocationSuggest:"We need a venue recommendation",
-        eventTone:"Desired atmosphere", eventFormal:"Formal", eventCelebratory:"Celebratory", eventPrivateTone:"Private",
+        eventType:"Occasion type", eventBirthday:"Birthday", eventFamily:"Family occasion", eventGraduation:"Graduation", eventEngagement:"Engagement", eventAnniversary:"Anniversary", eventDinner:"Private dinner", eventOther:"Other",
+        eventLocationStatus:"Venue status", eventLocationReady:"I already have a venue", eventLocationSuggest:"I would like Aventura to suggest a venue", eventLocationUndecided:"Not decided yet",
+        eventServices:"What would you like Aventura to handle?",
         vipGuestType:"Guest type", vipIndividual:"Individual", vipFamily:"Family", vipDelegation:"Delegation",
         vipPriority:"What matters most?", vipArrival:"Smooth arrival and reception", vipProgram:"A private program", vipReservations:"Reservations and hospitality", vipFull:"Full visit coordination",
         guestService:"Which guest service do you need?", guestServicePlaceholder:"Choose a service",
@@ -55,7 +55,7 @@
         customArea:"Which setting is closest?", customHistoric:"Historic Jeddah", customSea:"The sea", customDesert:"The desert", customTaif:"Taif", customMix:"A mix of settings",
         privacyLevel:"Privacy level", privacyRegular:"Private", privacyVery:"Very private", customDetails:"Tell us what you have in mind"
       },
-      addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Existing-stay coordination",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"Full event coordination",flowers:"Flowers and gifts",vipCar:"VIP vehicle",tailor:"Tailor at the hotel",abaya:"Abaya service",guide:"Licensed guide",concierge:"Concierge support"}
+      addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Existing-stay coordination",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"Full event coordination",flowers:"Flowers and gifts",vipCar:"VIP vehicle",tailor:"Tailor at the hotel",abaya:"Abaya service",guide:"Licensed guide",concierge:"Concierge support",eventFullPlanning:"Full event planning and management",eventVenue:"Venue selection",eventSetup:"Venue setup and space arrangement",eventSeating:"Tables and seating arrangement",eventFlowers:"Flowers",eventHospitality:"Food and hospitality",eventCake:"Cake and desserts",eventAV:"Sound and lighting",eventPhotography:"Photography",eventEntertainment:"Entertainment and performances",eventTransport:"Guest transportation",eventGifts:"Gifts and personalized details",eventOtherService:"Other"}
     },
     ar: {
       optional:"إضافات اختيارية",
@@ -74,9 +74,9 @@
         jeddahTransport:"نوع النقل", jeddahStandardTransport:"نقل عادي", jeddahVipTransport:"نقل VIP",
         corporateGoal:"ما النتيجة المطلوبة من البرنامج؟", corporateTeam:"بناء فريق", corporateGuests:"استقبال ضيوف أو عملاء", corporateExecutive:"برنامج تنفيذي", corporateWorkplace:"تحسين بيئة العمل",
         corporateGuestType:"نوع الضيوف", corporateEmployees:"موظفون", corporateClients:"عملاء", corporateDelegation:"وفد دولي",
-        eventType:"نوع المناسبة", eventPrivate:"احتفال خاص", eventCorporate:"فعالية شركة", eventDinner:"عشاء أو لقاء",
-        eventLocationStatus:"حالة الموقع", eventLocationReady:"تم اختيار الموقع", eventLocationSuggest:"نحتاج اقتراح موقع",
-        eventTone:"الطابع المطلوب", eventFormal:"رسمي", eventCelebratory:"احتفالي", eventPrivateTone:"خاص",
+        eventType:"نوع المناسبة", eventBirthday:"عيد ميلاد", eventFamily:"مناسبة عائلية", eventGraduation:"تخرج", eventEngagement:"خطوبة", eventAnniversary:"ذكرى خاصة", eventDinner:"عشاء خاص", eventOther:"أخرى",
+        eventLocationStatus:"حالة الموقع", eventLocationReady:"لدي موقع محدد", eventLocationSuggest:"أرغب أن تقترح أفنتورا موقعًا", eventLocationUndecided:"لم أحدد بعد",
+        eventServices:"ما الذي ترغب أن تتولاه أفنتورا؟",
         vipGuestType:"نوع الضيف", vipIndividual:"فرد", vipFamily:"عائلة", vipDelegation:"وفد",
         vipPriority:"ما الذي يهم أكثر؟", vipArrival:"وصول واستقبال سلس", vipProgram:"برنامج خاص", vipReservations:"حجوزات وضيافة", vipFull:"تنسيق كامل للزيارة",
         guestService:"الخدمة المطلوبة", guestServicePlaceholder:"اختر الخدمة",
@@ -88,7 +88,7 @@
         customArea:"المجال الأقرب", customHistoric:"جدة التاريخية", customSea:"البحر", customDesert:"الصحراء", customTaif:"الطائف", customMix:"مزيج بين أكثر من تجربة",
         privacyLevel:"مستوى الخصوصية", privacyRegular:"خاص", privacyVery:"خاص جدًا", customDetails:"صف لنا ما تتخيله لهذه التجربة"
       },
-      addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"تنسيق الإقامة القائمة",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"تنسيق كامل للفعالية",flowers:"ورد وهدايا",vipCar:"سيارة VIP",tailor:"خياط في الفندق",abaya:"خدمة العباية",guide:"مرشد سياحي مرخص",concierge:"دعم الكونسيرج"}
+      addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"تنسيق الإقامة القائمة",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"تنسيق كامل للفعالية",flowers:"ورد وهدايا",vipCar:"سيارة VIP",tailor:"خياط في الفندق",abaya:"خدمة العباية",guide:"مرشد سياحي مرخص",concierge:"دعم الكونسيرج",eventFullPlanning:"إدارة وتخطيط المناسبة بالكامل",eventVenue:"اقتراح واختيار الموقع",eventSetup:"تجهيز الموقع وترتيب المساحات",eventSeating:"تنسيق الطاولات والجلسات",eventFlowers:"الزهور",eventHospitality:"الطعام والضيافة",eventCake:"الكيك والحلويات",eventAV:"الصوت والإضاءة",eventPhotography:"التصوير",eventEntertainment:"الترفيه والعروض",eventTransport:"نقل الضيوف",eventGifts:"الهدايا والتفاصيل المخصصة",eventOtherService:"أخرى"}
     },
     es: {
       optional:"Complementos útiles",
@@ -107,9 +107,9 @@
         jeddahTransport:"Tipo de transporte", jeddahStandardTransport:"Transporte estándar", jeddahVipTransport:"Transporte VIP",
         corporateGoal:"¿Qué resultado debe ofrecer el programa corporativo?", corporateTeam:"Creación de equipo", corporateGuests:"Recibir invitados o clientes", corporateExecutive:"Un programa ejecutivo", corporateWorkplace:"Mejorar el entorno de trabajo",
         corporateGuestType:"¿Quiénes son los invitados?", corporateEmployees:"Empleados", corporateClients:"Clientes", corporateDelegation:"Una delegación internacional",
-        eventType:"Tipo de ocasión", eventPrivate:"Celebración privada", eventCorporate:"Evento corporativo", eventDinner:"Cena o encuentro",
-        eventLocationStatus:"Estado del lugar", eventLocationReady:"El lugar ya está elegido", eventLocationSuggest:"Necesitamos una recomendación de lugar",
-        eventTone:"Ambiente deseado", eventFormal:"Formal", eventCelebratory:"Festivo", eventPrivateTone:"Privado",
+        eventType:"Tipo de ocasión", eventBirthday:"Cumpleaños", eventFamily:"Ocasión familiar", eventGraduation:"Graduación", eventEngagement:"Compromiso", eventAnniversary:"Aniversario", eventDinner:"Cena privada", eventOther:"Otro",
+        eventLocationStatus:"Estado del lugar", eventLocationReady:"Ya tengo un lugar", eventLocationSuggest:"Quiero que Aventura proponga un lugar", eventLocationUndecided:"Aún no lo he decidido",
+        eventServices:"¿Qué quieres que gestione Aventura?",
         vipGuestType:"Tipo de huésped", vipIndividual:"Individual", vipFamily:"Familia", vipDelegation:"Delegación",
         vipPriority:"¿Qué importa más?", vipArrival:"Llegada y recepción fluida", vipProgram:"Un programa privado", vipReservations:"Reservas y hospitalidad", vipFull:"Coordinación completa de la visita",
         guestService:"Servicio para huéspedes", guestServicePlaceholder:"Elige un servicio",
@@ -121,7 +121,7 @@
         customArea:"¿Qué entorno es el más cercano?", customHistoric:"Yeda Histórica", customSea:"El mar", customDesert:"El desierto", customTaif:"Taif", customMix:"Una mezcla de experiencias",
         privacyLevel:"Nivel de privacidad", privacyRegular:"Privado", privacyVery:"Muy privado", customDetails:"Cuéntanos qué tienes en mente"
       },
-      addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Arreglos gastronómicos",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Sesión privada de hospitalidad",hotel:"Coordinación de una estancia existente",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Coordinación completa del evento",flowers:"Flores y regalos",vipCar:"Vehículo VIP",tailor:"Sastre en el hotel",abaya:"Servicio de abaya",guide:"Guía turístico acreditado",concierge:"Asistencia de concierge"}
+      addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Arreglos gastronómicos",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Sesión privada de hospitalidad",hotel:"Coordinación de una estancia existente",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Coordinación completa del evento",flowers:"Flores y regalos",vipCar:"Vehículo VIP",tailor:"Sastre en el hotel",abaya:"Servicio de abaya",guide:"Guía turístico acreditado",concierge:"Asistencia de concierge",eventFullPlanning:"Planificación y gestión integral del evento",eventVenue:"Selección del lugar",eventSetup:"Preparación del lugar y distribución del espacio",eventSeating:"Organización de mesas y asientos",eventFlowers:"Flores",eventHospitality:"Comida y hospitalidad",eventCake:"Tarta y postres",eventAV:"Sonido e iluminación",eventPhotography:"Fotografía",eventEntertainment:"Entretenimiento y actuaciones",eventTransport:"Transporte de invitados",eventGifts:"Regalos y detalles personalizados",eventOtherService:"Otro"}
     }
   };
 
@@ -156,10 +156,9 @@
       {kind:"addons", options:["airport","hotel","interpreter","gifts"]}
     ]},
     "private-event": {items:[
-      {kind:"choice", name:"eventType", label:"eventType", options:["eventPrivate","eventCorporate","eventDinner"]},
-      {kind:"choice", name:"eventLocationStatus", label:"eventLocationStatus", options:["eventLocationReady","eventLocationSuggest"]},
-      {kind:"choice", name:"eventTone", label:"eventTone", options:["eventFormal","eventCelebratory","eventPrivateTone"]},
-      {kind:"addons", options:["coordination","flowers","photography"]}
+      {kind:"choice", name:"eventType", label:"eventType", options:["eventBirthday","eventFamily","eventGraduation","eventEngagement","eventAnniversary","eventDinner","eventOther"], required:true},
+      {kind:"choice", name:"eventLocationStatus", label:"eventLocationStatus", options:["eventLocationReady","eventLocationSuggest","eventLocationUndecided"], required:true},
+      {kind:"addons", label:"eventServices", options:["eventFullPlanning","eventVenue","eventSetup","eventSeating","eventFlowers","eventHospitality","eventCake","eventAV","eventPhotography","eventEntertainment","eventTransport","eventGifts","eventOtherService"]}
     ]},
     "vip-hosting": {items:[
       {kind:"choice", name:"vipGuestType", label:"vipGuestType", options:["vipIndividual","vipFamily","vipDelegation"]},
@@ -253,7 +252,8 @@
   }
 
   function addonsMarkup(item, text) {
-    var html = '<fieldset class="dynamic-addons full" data-request-summary-label="' + escapeHtml(text.optional) + '"><legend>' + escapeHtml(text.optional) + '</legend><div class="dynamic-choice-grid">';
+    var legend = item.label ? textFor(item.label, text) : text.optional;
+    var html = '<fieldset class="dynamic-addons full" data-request-summary-label="' + escapeHtml(legend) + '"><legend>' + escapeHtml(legend) + '</legend><div class="dynamic-choice-grid">';
     item.options.forEach(function (addon, index) {
       var id = "request-addon-" + addon + "-" + index;
       html += '<label for="' + id + '"><input id="' + id + '" type="checkbox" name="addons[]" value="' + addon + '" data-request-summary><span>' + escapeHtml(textFor(addon, text)) + "</span></label>";
