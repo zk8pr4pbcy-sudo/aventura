@@ -95,10 +95,6 @@
       ["abayaDelivery", "contact.requiredDeliveryLabel"],
       ["abayaContact", "contact.preferredContactLabel"],
       ["preferredResponse", "contact.preferredContactLabel"],
-      ["guestService", "contact.guestServiceLabel"],
-      ["eventKind", "contact.eventKindLabel"],
-      ["eventLocation", "contact.eventLocationLabel"],
-      ["eventLevel", "contact.eventLevelLabel"],
       ["flowerRecipient", "contact.recipientLabel"],
       ["flowerOccasion", "contact.occasionLabel"],
       ["flowerSize", "contact.flowerSizeLabel"],
@@ -127,16 +123,6 @@
         lines.push(label + ": " + value);
       }
     });
-
-    var eventServices = Array.from(form.querySelectorAll('[name="eventServices[]"]:checked')).filter(function (field) {
-      return !field.disabled && !(field.closest("[data-request-details]") && field.closest("[data-request-details]").hidden);
-    }).map(function (field) {
-      var label = field.closest("label");
-      return label ? label.textContent.trim() : field.value;
-    });
-    if (eventServices.length) {
-      lines.push(translate("contact.eventServicesLabel") + ": " + eventServices.join(", "));
-    }
 
     return lines.join("\n");
   }
