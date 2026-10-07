@@ -1,8 +1,8 @@
 {
-  "version": "1.7.0",
+  "version": "1.8.0",
   "windowDays": 14,
-  "lastReviewed": "2026-09-30",
-  "reviewedBy": "Salem",
+  "lastReviewed": "2026-10-07",
+  "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
     "strategy": "Aventura-owned commercial-use assets for live cards",
@@ -85,7 +85,7 @@
       "imageAlt": {"ar":"بطاقة أفنتورا لكأس الخليج 27 في جدة","en":"Aventura Gulf Cup 27 in Jeddah card","es":"Tarjeta de Aventura para la Copa del Golfo 27 en Yeda"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://www.visitsaudi.com/en/campaigns/gulf-cup-27",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Visit Saudi and SAFF confirm Gulf Cup 27 in Jeddah through 6 Oct 2026; Saudi Arabia is listed for the 3 Oct semifinal."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Visit Saudi and SAFF confirm Gulf Cup 27 in Jeddah through 6 Oct 2026; Saudi Arabia is listed for the 3 Oct semifinal."}
     },
     {
       "id": "ibcc-2026",
@@ -105,7 +105,7 @@
       "imageAlt": {"ar":"ضيافة مؤتمر ووفود علمية من أفنتورا في جدة","en":"Aventura conference and scientific delegation hospitality in Jeddah","es":"Hospitalidad de Aventura para congresos y delegaciones científicas en Yeda"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://www.ibcc-jed.org/",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official conference site and registration portal confirm 1–4 Oct 2026 at Hilton Jeddah Hotel."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official conference site and registration portal confirm 1–4 Oct 2026 at Hilton Jeddah Hotel."}
     },
     {
       "id": "meetes-2026",
@@ -126,7 +126,7 @@
       "imageAlt": {"ar":"ضيافة وفد تعليمي وتنفيذي من أفنتورا في جدة","en":"Aventura hospitality for an education and executive delegation in Jeddah","es":"Hospitalidad de Aventura para una delegación educativa y ejecutiva en Yeda"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://meetes-sa.com/secure-your-visit/",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official MEETES visitor page confirms 5–7 Oct 2026 at Jeddah Center for Exhibitions & Events, with free registration and published visiting hours."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official MEETES visitor page confirms 5–7 Oct 2026 at Jeddah Center for Exhibitions & Events, with free registration and published visiting hours."}
     },
     {
       "id": "sajex-2026",
@@ -146,7 +146,7 @@
       "imageAlt": {"ar":"ضيافة خاصة لكبار الضيوف والمشترين من أفنتورا","en":"Aventura private hospitality for VIP guests and buyers","es":"Hospitalidad privada de Aventura para invitados VIP y compradores"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://gjepc.org/sajex/",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official GJEPC SAJEX page confirms 6–8 Oct 2026, B2B format, at Jeddah Superdome."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official GJEPC SAJEX page confirms 6–8 Oct 2026, B2B format, at Jeddah Superdome."}
     },
     {
       "id": "mass-gatherings-emergency-medicine-2026",
@@ -167,7 +167,7 @@
       "imageAlt": {"ar":"ضيافة أفنتورا لوفد طبي وعلمي في جدة","en":"Aventura hospitality for a medical and scientific delegation in Jeddah","es":"Hospitalidad de Aventura para una delegación médica y científica en Yeda"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://icmgem.com/ar",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official conference site and Saudi Society for Pediatric Emergency Medicine confirm 7–9 Oct 2026 at UBT University in Jeddah; registration remains open."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official conference site and Saudi Society for Pediatric Emergency Medicine confirm 7–9 Oct 2026 at UBT University in Jeddah; registration remains open."}
     },
     {
       "id": "saudi-autocare-2026",
@@ -187,7 +187,7 @@
       "imageAlt": {"ar":"ضيافة أفنتورا لوفد أعمال في قطاع السيارات","en":"Aventura hospitality for an automotive business delegation","es":"Hospitalidad de Aventura para una delegación empresarial del sector automotriz"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://iconexpo.com.sa/",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official ICON Expo calendar confirms AutoCare 2026 on 13–15 Oct 2026 at Jeddah JCEE."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official ICON Expo calendar confirms AutoCare 2026 on 13–15 Oct 2026 at Jeddah JCEE."}
     },
     {
       "id": "jewels-of-the-world-jeddah-2026",
@@ -209,7 +209,7 @@
       "imageAlt": {"ar":"ضيافة خاصة من أفنتورا لضيوف VIP في جدة","en":"Aventura private hospitality for VIP guests in Jeddah","es":"Hospitalidad privada de Aventura para huéspedes VIP en Yeda"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://jowsaudi.com/events/jeddah/",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official Jewels of the World site confirms Jeddah 19–22 Oct 2026 at Hilton Jeddah, 16:00–23:00 daily, free entry."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official Jewels of the World site confirms Jeddah 19–22 Oct 2026 at Hilton Jeddah, 16:00–23:00 daily, free entry."}
     },
     {
       "id": "saudi-maritime-logistics-congress-2026",
@@ -230,14 +230,14 @@
       "imageAlt": {"ar":"ضيافة تنفيذية لوفود القطاع البحري واللوجستي","en":"Executive hospitality for maritime and logistics delegations","es":"Hospitalidad ejecutiva para delegaciones marítimas y logísticas"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://landingpages.saudimaritimecongress.com/",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official event page confirms 21–22 Oct 2026 at Jeddah Superdome, published hours and free visitor pass."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official event page confirms 21–22 Oct 2026 at Jeddah Superdome, published hours and free visitor pass."}
     },
     {
-      "id": "international-trade-exchange-expo-2026",
+      "id": "international-trade-exchange-expo-2027",
       "active": true,
       "priority": 8,
-      "startDate": "2026-10-27",
-      "endDate": "2026-10-29",
+      "startDate": "2027-10-27",
+      "endDate": "2027-10-29",
       "title": {"ar":"معرض التبادل التجاري الدولي 2026","en":"International Trade Exchange Expo 2026","es":"Exposición Internacional de Intercambio Comercial 2026"},
       "category": {"ar":"تجارة واستثمار ووفود","en":"Trade, investment & delegations","es":"Comercio, inversión y delegaciones"},
       "focusLabel": {"ar":"مستثمرون • شركات • وفود دولية","en":"Investors • Companies • International delegations","es":"Inversores • Empresas • Delegaciones internacionales"},
@@ -250,7 +250,7 @@
       "imageAlt": {"ar":"ضيافة أفنتورا لوفود التجارة والاستثمار في جدة","en":"Aventura hospitality for trade and investment delegations in Jeddah","es":"Hospitalidad de Aventura para delegaciones de comercio e inversión en Yeda"},
       "imageRights": {"source":"Aventura-owned asset","commercialUse":true,"attributionRequired":false},
       "sourceUrl": "https://jitexpo.com/",
-      "verification": {"checkedOn":"2026-09-30","status":"confirmed","notes":"Official event site and SCEGA 2026 exhibition calendar confirm 27–29 Oct 2026 at Jeddah Exhibition and Events Center."}
+      "verification": {"checkedOn":"2026-10-07","status":"confirmed","notes":"Official event site and SCEGA 2026 exhibition calendar confirm 27–29 Oct 2026 at Jeddah Exhibition and Events Center."}
     }
   ],
   "reviewSummary": {
