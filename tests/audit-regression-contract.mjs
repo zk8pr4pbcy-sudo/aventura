@@ -14,11 +14,13 @@ const privacy=read("privacy.html");
 const terms=read("terms.html");
 const events=JSON.parse(read("data/curated-events.json"));
 
-assert.match(contact,/name="guestService"/);
-assert.match(contact,/name="eventKind"/);
-assert.match(contact,/name="eventLocation"/);
-assert.match(contact,/name="eventLevel"/);
-assert.match(contact,/name="eventServices\[\]"/);
+const analytics=read("assets/js/analytics.js");
+assert.match(analytics,/"private-event": \{items:\[/);
+assert.match(analytics,/name:"eventLocation"/);
+assert.match(analytics,/name:"eventLevel"/);
+assert.match(analytics,/options:\["venue","transport","hospitality","reception","coordination","flowers","photography"\]/);
+assert.match(analytics,/"guest-services": \{items:\[/);
+assert.match(analytics,/name:"guestService"/);
 assert.doesNotMatch(contact,/budget|ميزاني|presupuesto/i);
 assert.match(translations,/"contact\.durationHalf": "نصف يوم \(حتى 4 ساعات\)"/);
 assert.match(translations,/"contact\.durationFull": "يوم كامل \(حتى 8 ساعات\)"/);
