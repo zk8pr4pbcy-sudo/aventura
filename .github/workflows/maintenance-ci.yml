@@ -112,6 +112,11 @@ jobs:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/browser-smoke.mjs
 
+      - name: Verify corporate services across Arabic, English, Spanish and mobile
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/corporate-services-browser.mjs
+
       - name: Run SEO browser checks
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
