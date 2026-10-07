@@ -39,6 +39,9 @@ jobs:
       - name: Run Aventura smoke checks
         run: node tests/smoke.mjs
 
+      - name: Run audit regression contract checks
+        run: node tests/audit-regression-contract.mjs
+
       - name: Run runtime state contract tests
         run: node tests/runtime-state.mjs
 
@@ -116,6 +119,11 @@ jobs:
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/corporate-services-browser.mjs
+
+      - name: Run full-site audit regression browser checks
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/audit-regression-browser.mjs
 
       - name: Run SEO browser checks
         env:
