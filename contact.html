@@ -169,57 +169,6 @@
               <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
             </div>
 
-            <fieldset class="request-detail-group full" data-request-details="event" hidden>
-              <legend data-i18n="contact.eventDetailsTitle">Event or private occasion details</legend>
-              <div class="form-grid request-detail-grid">
-                <div class="field">
-                  <label for="eventKind" data-i18n="contact.eventKindLabel">Type of event or occasion</label>
-                  <select id="eventKind" name="eventKind" required>
-                    <option value="" selected data-i18n="contact.eventKindPlaceholder">Choose one</option>
-                    <option value="birthday" data-i18n="contact.eventKindBirthday">Birthday</option>
-                    <option value="anniversary" data-i18n="contact.eventKindAnniversary">Anniversary</option>
-                    <option value="family" data-i18n="contact.eventKindFamily">Family gathering</option>
-                    <option value="private" data-i18n="contact.eventKindPrivate">Private occasion</option>
-                    <option value="other" data-i18n="contact.eventKindOther">Other</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="eventLocationStatus" data-i18n="contact.eventLocationStatusLabel">Location</label>
-                  <select id="eventLocationStatus" name="eventLocationStatus" required>
-                    <option value="" selected data-i18n="contact.typePlaceholder">Choose one</option>
-                    <option value="confirmed" data-i18n="contact.eventLocationConfirmed">Location confirmed</option>
-                    <option value="need-venue" data-i18n="contact.eventLocationNeed">Need venue selection</option>
-                    <option value="accommodation" data-i18n="contact.eventLocationAccommodation">Hotel or accommodation</option>
-                    <option value="other" data-i18n="contact.eventLocationOther">Other</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="eventLocation" data-i18n="contact.eventLocationLabel">Preferred location or area</label>
-                  <input id="eventLocation" name="eventLocation" type="text" data-i18n-placeholder="contact.optionalPlaceholder" placeholder="Optional">
-                </div>
-                <div class="field">
-                  <label for="eventLevel" data-i18n="contact.eventLevelLabel">Service level</label>
-                  <select id="eventLevel" name="eventLevel" required>
-                    <option value="" selected data-i18n="contact.typePlaceholder">Choose one</option>
-                    <option value="essential" data-i18n="contact.eventLevelEssential">Essential coordination</option>
-                    <option value="complete" data-i18n="contact.eventLevelComplete">Full coordination</option>
-                    <option value="vip" data-i18n="contact.eventLevelVip">VIP hosting</option>
-                  </select>
-                </div>
-                <fieldset class="request-options full">
-                  <legend data-i18n="contact.eventServicesLabel">Services needed</legend>
-                  <div class="request-option-grid event-service-options">
-                    <label><input type="checkbox" name="eventServices[]" value="venue"><span data-i18n="contact.eventServiceVenue">Venue selection</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="hospitality"><span data-i18n="contact.eventServiceHospitality">Hospitality</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="transport"><span data-i18n="contact.eventServiceTransport">Transport</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="reception"><span data-i18n="contact.eventServiceReception">Guest reception</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="onsite"><span data-i18n="contact.eventServiceOnsite">On-site execution</span></label>
-                    <label><input type="checkbox" name="eventServices[]" value="flowers"><span data-i18n="contact.eventServiceFlowers">Flowers</span></label>
-                  </div>
-                </fieldset>
-              </div>
-            </fieldset>
-
             <fieldset class="request-detail-group full" data-request-details="thobe" hidden>
               <legend data-i18n="contact.thobeDetailsTitle">Tailoring service details</legend>
               <div class="form-grid request-detail-grid">
