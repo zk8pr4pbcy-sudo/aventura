@@ -43,9 +43,9 @@
         corporateGuestType:"Who are the guests?", corporateEmployees:"Employees", corporateClients:"Clients", corporateDelegation:"An international delegation",
         eventType:"Occasion type", eventPrivate:"Private celebration", eventCorporate:"Corporate event", eventDinner:"Dinner or gathering",
         eventLocationStatus:"Venue status", eventLocationReady:"The venue is selected", eventLocationSuggest:"We need a venue recommendation",
-        eventTone:"Desired atmosphere", eventFormal:"Formal", eventCelebratory:"Celebratory", eventPrivateTone:"Private",
+        eventTone:"Desired atmosphere", eventFormal:"Formal", eventCelebratory:"Celebratory", eventPrivateTone:"Private", eventLocation:"Event location or preferred venue", eventLevel:"Service level", eventEssential:"Essential", eventPremium:"Premium", eventVip:"VIP",
         vipGuestType:"Guest type", vipIndividual:"Individual", vipFamily:"Family", vipDelegation:"Delegation",
-        vipPriority:"What matters most?", vipArrival:"Smooth arrival and reception", vipProgram:"A private program", vipReservations:"Reservations and hospitality", vipFull:"Full visit coordination",
+        vipPriority:"What matters most?", vipArrival:"Smooth arrival and reception", vipProgram:"A private program", vipReservations:"Hospitality arrangements", vipFull:"Full visit coordination",
         guestService:"Which guest service do you need?", guestServicePlaceholder:"Choose a service",
         airportService:"Which airport service do you need?", airportArrival:"Meet and assist on arrival", airportDeparture:"Airport transfer on departure", arrivalDate:"Arrival date",
         transportNeed:"What type of transport do you need?", transportAirport:"Airport transfer", transportCity:"Transport between locations", transportDay:"Vehicle for the full program",
@@ -55,7 +55,7 @@
         customArea:"Which setting is closest?", customHistoric:"Historic Jeddah", customSea:"The sea", customDesert:"The desert", customTaif:"Taif", customMix:"A mix of settings",
         privacyLevel:"Privacy level", privacyRegular:"Private", privacyVery:"Very private", customDetails:"Tell us what you have in mind"
       },
-      addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Existing-stay coordination",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"Full event coordination",flowers:"Flowers and gifts",vipCar:"VIP vehicle",tailor:"Tailor at the hotel",abaya:"Abaya service",guide:"Licensed guide",concierge:"Concierge support"}
+      addons:{airport:"Airport meet and assist",transport:"Private transportation",dining:"Dining arrangements",photography:"Professional photography",resort:"Resort or private beach",hospitality:"Private hospitality setup",hotel:"Existing-stay coordination",interpreter:"Interpreter",gifts:"Guest gifts",coordination:"On-site execution",venue:"Venue selection",reception:"Guest reception",flowers:"Flower delivery to the accommodation or hotel room",vipCar:"VIP vehicle",tailor:"Saudi thobe tailoring at the guest accommodation",abaya:"Abaya service",guide:"Licensed guide",concierge:"Concierge support"}
     },
     ar: {
       optional:"إضافات اختيارية",
@@ -76,9 +76,9 @@
         corporateGuestType:"نوع الضيوف", corporateEmployees:"موظفون", corporateClients:"عملاء", corporateDelegation:"وفد دولي",
         eventType:"نوع المناسبة", eventPrivate:"احتفال خاص", eventCorporate:"فعالية شركة", eventDinner:"عشاء أو لقاء",
         eventLocationStatus:"حالة الموقع", eventLocationReady:"تم اختيار الموقع", eventLocationSuggest:"نحتاج اقتراح موقع",
-        eventTone:"الطابع المطلوب", eventFormal:"رسمي", eventCelebratory:"احتفالي", eventPrivateTone:"خاص",
+        eventTone:"الطابع المطلوب", eventFormal:"رسمي", eventCelebratory:"احتفالي", eventPrivateTone:"خاص", eventLocation:"موقع الفعالية أو المكان المفضل", eventLevel:"مستوى الخدمة", eventEssential:"أساسي", eventPremium:"مميز", eventVip:"كبار الشخصيات",
         vipGuestType:"نوع الضيف", vipIndividual:"فرد", vipFamily:"عائلة", vipDelegation:"وفد",
-        vipPriority:"ما الذي يهم أكثر؟", vipArrival:"وصول واستقبال سلس", vipProgram:"برنامج خاص", vipReservations:"حجوزات وضيافة", vipFull:"تنسيق كامل للزيارة",
+        vipPriority:"ما الذي يهم أكثر؟", vipArrival:"وصول واستقبال سلس", vipProgram:"برنامج خاص", vipReservations:"ترتيبات الضيافة", vipFull:"تنسيق كامل للزيارة",
         guestService:"الخدمة المطلوبة", guestServicePlaceholder:"اختر الخدمة",
         airportService:"نوع خدمة المطار", airportArrival:"استقبال ومساعدة عند الوصول", airportDeparture:"توصيل إلى المطار عند المغادرة", arrivalDate:"تاريخ الوصول",
         transportNeed:"نوع النقل المطلوب", transportAirport:"نقل من أو إلى المطار", transportCity:"تنقل بين المواقع", transportDay:"سيارة للبرنامج كامل",
@@ -88,7 +88,7 @@
         customArea:"المجال الأقرب", customHistoric:"جدة التاريخية", customSea:"البحر", customDesert:"الصحراء", customTaif:"الطائف", customMix:"مزيج بين أكثر من تجربة",
         privacyLevel:"مستوى الخصوصية", privacyRegular:"خاص", privacyVery:"خاص جدًا", customDetails:"صف لنا ما تتخيله لهذه التجربة"
       },
-      addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"تنسيق الإقامة القائمة",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"تنسيق كامل للفعالية",flowers:"ورد وهدايا",vipCar:"سيارة VIP",tailor:"خياط في الفندق",abaya:"خدمة العباية",guide:"مرشد سياحي مرخص",concierge:"دعم الكونسيرج"}
+      addons:{airport:"استقبال ومساعدة في المطار",transport:"نقل خاص",dining:"ترتيبات المطاعم",photography:"تصوير احترافي",resort:"منتجع أو شاطئ خاص",hospitality:"جلسة ضيافة خاصة",hotel:"تنسيق الإقامة القائمة",interpreter:"مترجم",gifts:"هدايا للضيوف",coordination:"التنفيذ الميداني",venue:"اختيار الموقع",reception:"استقبال الضيوف",flowers:"إرسال الورد إلى مقر الإقامة أو غرفة الفندق",vipCar:"سيارة VIP",tailor:"تفصيل ثوب سعودي في مقر إقامة الضيف",abaya:"خدمة العباية",guide:"مرشد سياحي مرخص",concierge:"دعم الكونسيرج"}
     },
     es: {
       optional:"Complementos útiles",
@@ -109,9 +109,9 @@
         corporateGuestType:"¿Quiénes son los invitados?", corporateEmployees:"Empleados", corporateClients:"Clientes", corporateDelegation:"Una delegación internacional",
         eventType:"Tipo de ocasión", eventPrivate:"Celebración privada", eventCorporate:"Evento corporativo", eventDinner:"Cena o encuentro",
         eventLocationStatus:"Estado del lugar", eventLocationReady:"El lugar ya está elegido", eventLocationSuggest:"Necesitamos una recomendación de lugar",
-        eventTone:"Ambiente deseado", eventFormal:"Formal", eventCelebratory:"Festivo", eventPrivateTone:"Privado",
+        eventTone:"Ambiente deseado", eventFormal:"Formal", eventCelebratory:"Festivo", eventPrivateTone:"Privado", eventLocation:"Ubicación del evento o lugar preferido", eventLevel:"Nivel de servicio", eventEssential:"Esencial", eventPremium:"Premium", eventVip:"VIP",
         vipGuestType:"Tipo de huésped", vipIndividual:"Individual", vipFamily:"Familia", vipDelegation:"Delegación",
-        vipPriority:"¿Qué importa más?", vipArrival:"Llegada y recepción fluida", vipProgram:"Un programa privado", vipReservations:"Reservas y hospitalidad", vipFull:"Coordinación completa de la visita",
+        vipPriority:"¿Qué importa más?", vipArrival:"Llegada y recepción fluida", vipProgram:"Un programa privado", vipReservations:"Arreglos de hospitalidad", vipFull:"Coordinación completa de la visita",
         guestService:"Servicio para huéspedes", guestServicePlaceholder:"Elige un servicio",
         airportService:"Servicio de aeropuerto", airportArrival:"Recepción y asistencia a la llegada", airportDeparture:"Traslado al aeropuerto a la salida", arrivalDate:"Fecha de llegada",
         transportNeed:"¿Qué transporte necesitas?", transportAirport:"Traslado desde o hacia el aeropuerto", transportCity:"Traslado entre ubicaciones", transportDay:"Vehículo durante todo el programa",
@@ -121,7 +121,7 @@
         customArea:"¿Qué entorno es el más cercano?", customHistoric:"Yeda Histórica", customSea:"El mar", customDesert:"El desierto", customTaif:"Taif", customMix:"Una mezcla de experiencias",
         privacyLevel:"Nivel de privacidad", privacyRegular:"Privado", privacyVery:"Muy privado", customDetails:"Cuéntanos qué tienes en mente"
       },
-      addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Arreglos gastronómicos",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Sesión privada de hospitalidad",hotel:"Coordinación de una estancia existente",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Coordinación completa del evento",flowers:"Flores y regalos",vipCar:"Vehículo VIP",tailor:"Sastre en el hotel",abaya:"Servicio de abaya",guide:"Guía turístico acreditado",concierge:"Asistencia de concierge"}
+      addons:{airport:"Recepción y asistencia en el aeropuerto",transport:"Transporte privado",dining:"Arreglos gastronómicos",photography:"Fotografía profesional",resort:"Resort o playa privada",hospitality:"Sesión privada de hospitalidad",hotel:"Coordinación de una estancia existente",interpreter:"Intérprete",gifts:"Regalos para huéspedes",coordination:"Ejecución in situ",venue:"Selección del lugar",reception:"Recepción de invitados",flowers:"Envío de flores al alojamiento o a la habitación del hotel",vipCar:"Vehículo VIP",tailor:"Confección de thobe saudí en el alojamiento del huésped",abaya:"Servicio de abaya",guide:"Guía turístico acreditado",concierge:"Asistencia de concierge"}
     }
   };
 
@@ -158,8 +158,10 @@
     "private-event": {items:[
       {kind:"choice", name:"eventType", label:"eventType", options:["eventPrivate","eventCorporate","eventDinner"]},
       {kind:"choice", name:"eventLocationStatus", label:"eventLocationStatus", options:["eventLocationReady","eventLocationSuggest"]},
+      {kind:"input", name:"eventLocation", label:"eventLocation"},
+      {kind:"choice", name:"eventLevel", label:"eventLevel", options:["eventEssential","eventPremium","eventVip"]},
       {kind:"choice", name:"eventTone", label:"eventTone", options:["eventFormal","eventCelebratory","eventPrivateTone"]},
-      {kind:"addons", options:["coordination","flowers","photography"]}
+      {kind:"addons", options:["venue","transport","hospitality","reception","coordination","flowers","photography"]}
     ]},
     "vip-hosting": {items:[
       {kind:"choice", name:"vipGuestType", label:"vipGuestType", options:["vipIndividual","vipFamily","vipDelegation"]},
