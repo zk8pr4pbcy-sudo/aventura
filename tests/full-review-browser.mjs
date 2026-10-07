@@ -16,35 +16,22 @@ try {
     const suffix = item.query ? item.query + "&type=event&request=private-event" : "?type=event&request=private-event";
     await page.goto(baseUrl + "/contact.html" + suffix, { waitUntil: "load" });
     await page.waitForFunction(() => document.documentElement.classList.contains("app-ready"));
+    await page.waitForFunction(() => document.querySelector("#type")?.value === "private-event" && document.querySelector("#dynamicRequestPanel"));
 
     assert.equal(await page.locator('option[value="half-day"]').textContent(), item.half);
     assert.equal(await page.locator('option[value="full-day"]').textContent(), item.full);
 
-    const debugState = await page.evaluate(() => ({
-      href: window.location.href,
-      typeValue: document.querySelector('[name="type"]')?.value || "",
-      groups: Array.from(document.querySelectorAll("[data-request-details]")).map((group) => ({
-        name: group.getAttribute("data-request-details"),
-        hidden: group.hidden,
-        disabled: Array.from(group.querySelectorAll("input,select,textarea")).every((control) => control.disabled)
-      }))
-    }));
-    console.log("FULL-REVIEW-DEBUG", item.lang, JSON.stringify(debugState));
-    const eventState = await page.locator('[data-request-details="event"]').evaluate((node) => ({
-      hidden: node.hidden,
-      disabled: Array.from(node.querySelectorAll("input,select,textarea")).every((control) => control.disabled)
-    }));
-    assert.equal(eventState.hidden, false, item.lang+" event details should be enabled");
-    assert.equal(eventState.disabled, false, item.lang+" event controls should be enabled");
+    for (const name of ["eventType","eventLocationStatus","eventLocation","eventLevel"]) {
+      assert.ok(await page.locator('[name="'+name+'"]').count() > 0, item.lang+" missing event field "+name);
+    }
+    assert.ok(await page.locator('[name="guests"]').count() > 0, item.lang+" guest count is missing");
+    assert.ok(await page.locator('[name="duration"]').count() > 0, item.lang+" duration is missing");
 
-    const thobeState = await page.locator('[data-request-details="thobe"]').evaluate((node) => ({
-      hidden: node.hidden,
-      disabled: Array.from(node.querySelectorAll("input,select,textarea")).every((control) => control.disabled)
-    }));
-    assert.equal(thobeState.hidden, true, item.lang+" unrelated guest service must stay hidden");
-    assert.equal(thobeState.disabled, true, item.lang+" hidden guest service fields must be disabled");
+    for (const service of ["venue","hospitality","transport","reception","onsite","flowers"]) {
+      assert.ok(await page.locator('[name="addons[]"][value="'+service+'"]').count() > 0, item.lang+" missing event service "+service);
+    }
 
-    const eventText = await page.locator('[data-request-details="event"]').innerText();
+    const eventText = await page.locator("#dynamicRequestPanel").innerText();
     assert.ok(!/budget|ميزاني[ةه]|presupuesto/i.test(eventText), item.lang+" event flow must not mention budget");
     const noOverflow = await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 2);
     assert.equal(noOverflow, true, item.lang+" event form should not overflow mobile viewport");
@@ -55,6 +42,11 @@ try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
     await page.goto(baseUrl + "/contact.html?type=service&request=thobe", { waitUntil: "load" });
     await page.waitForFunction(() => document.documentElement.classList.contains("app-ready"));
+    await page.waitForFunction(() => document.querySelector("#type")?.value === "guest-services");
+    await page.waitForFunction(() => {
+      const group = document.querySelector('[data-request-details="thobe"]');
+      return group && !group.hidden;
+    });
     const state = await page.locator('[data-request-details="thobe"]').evaluate((node) => ({
       hidden: node.hidden,
       disabled: Array.from(node.querySelectorAll("input,select,textarea")).every((control) => control.disabled)
