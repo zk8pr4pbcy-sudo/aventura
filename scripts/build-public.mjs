@@ -214,18 +214,22 @@ function hardenStructuredData() {
 
 function hardenPrivacyCopy() {
   transformFile('privacy.html', (source) => {
+    const legacy = `Please enable JavaScript to view this policy, or email ${contactEmail} to request a copy.`;
+    if (!source.includes(legacy)) return source;
     return replaceRequired(
       source,
-      `Please enable JavaScript to view this policy, or email ${contactEmail} to request a copy.`,
+      legacy,
       'Please enable JavaScript to view this policy, or use the contact page to request a copy.',
       'privacy noscript email'
     );
   });
 
   transformFile('terms.html', (source) => {
+    const legacy = `Please enable JavaScript to view these terms, or email ${contactEmail} to request a copy.`;
+    if (!source.includes(legacy)) return source;
     return replaceRequired(
       source,
-      `Please enable JavaScript to view these terms, or email ${contactEmail} to request a copy.`,
+      legacy,
       'Please enable JavaScript to view these terms, or use the contact page to request a copy.',
       'terms noscript email'
     );
