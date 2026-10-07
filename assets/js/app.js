@@ -1599,22 +1599,13 @@
       return selections.map(function (value) { return detailAliases[value] || value; });
     }
 
-    var guestServiceField = form.querySelector('[name="guestService"]');
-    if (guestServiceField && ["thobe", "abaya", "flower"].indexOf(requestedItem) !== -1) {
-      guestServiceField.value = requestedItem;
-    }
-
     function updateRequestDetails() {
       var activeRequestIds = selectedRequestIds.concat(selectedDynamicAddons());
-      var typeValue = typeField ? typeField.value : "";
       detailGroups.forEach(function (group) {
         var groupName = group.getAttribute("data-request-details");
-        var showCollection = groupName === "collection" && (typeValue === "collection" || requestedItems.length > 0);
-        var showEvent = groupName === "event" && typeValue === "event";
-        var showServiceSelector = groupName === "service" && typeValue === "service";
-        var showSpecificService = ["thobe", "abaya", "flower"].indexOf(groupName) !== -1 &&
-          typeValue === "service" && activeRequestIds.indexOf(groupName) !== -1;
-        var visible = showCollection || showEvent || showServiceSelector || showSpecificService;
+        var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
+        var showService = groupName !== "collection" && typeField && typeField.value === "guest-services" && activeRequestIds.indexOf(groupName) !== -1;
+        var visible = showCollection || showService;
         group.hidden = !visible;
         group.querySelectorAll("input, select, textarea").forEach(function (control) {
           control.disabled = !visible;
