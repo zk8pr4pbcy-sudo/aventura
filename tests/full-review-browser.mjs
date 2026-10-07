@@ -15,7 +15,7 @@ try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
     const suffix = item.query ? item.query + "&type=event&request=private-event" : "?type=event&request=private-event";
     await page.goto(baseUrl + "/contact.html" + suffix, { waitUntil: "load" });
-    await page.waitForTimeout(150);
+    await page.waitForFunction(() => document.documentElement.classList.contains("app-ready"));
 
     assert.equal(await page.locator('option[value="half-day"]').textContent(), item.half);
     assert.equal(await page.locator('option[value="full-day"]').textContent(), item.full);
@@ -44,6 +44,7 @@ try {
   {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
     await page.goto(baseUrl + "/contact.html?type=service&request=thobe", { waitUntil: "load" });
+    await page.waitForFunction(() => document.documentElement.classList.contains("app-ready"));
     const state = await page.locator('[data-request-details="thobe"]').evaluate((node) => ({
       hidden: node.hidden,
       disabled: Array.from(node.querySelectorAll("input,select,textarea")).every((control) => control.disabled)
