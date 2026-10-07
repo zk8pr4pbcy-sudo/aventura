@@ -7,11 +7,11 @@ function read(path) {
 
 const collection = read("collection.html");
 const app = read("assets/js/app.js");
+const analytics = read("assets/js/analytics.js");
 const corporate = read("corporate.html");
 const services = read("services.html");
 const guestServices = read("guest-services.html");
 const contact = read("contact.html");
-const requestData = read("assets/js/contact-request-data.js");
 const legal = read("assets/js/legal-content.js");
 const privacy = read("privacy.html");
 const terms = read("terms.html");
@@ -25,21 +25,28 @@ assert.ok(!services.includes("Itineraries, reservations"));
 assert.ok(guestServices.includes('data-i18n="guest.thobeNote"'));
 assert.ok(services.includes('data-i18n="guest.thobeNote"'));
 
-assert.ok(contact.includes('data-request-details="event"'));
-for (const name of ["eventKind","eventLocationStatus","eventLocation","eventLevel","eventServices[]"]) {
-  assert.ok(contact.includes('name="'+name+'"'), "missing event field "+name);
-}
-const eventSlice = contact.slice(contact.indexOf('data-request-details="event"'), contact.indexOf('data-request-details="thobe"'));
-assert.ok(!/budget|ميزاني[ةه]|presupuesto/i.test(eventSlice), "event flow must not ask for budget");
+assert.ok(!contact.includes('data-request-details="event"'), "event qualification should remain in the dynamic request flow");
 assert.ok(contact.includes("Half day (up to 4 hours)"));
 assert.ok(contact.includes("Full day (up to 8 hours)"));
 
-assert.ok(app.includes('typeField.value === "service"'));
-assert.ok(app.includes('groupName === "event"'));
-assert.ok(app.includes("control.disabled = !shouldShow"));
-assert.ok(!app.includes('typeField.value === "guest-services"'));
-assert.ok(requestData.includes('name="eventServices[]"]') || requestData.includes('[name="eventServices[]"]'));
-assert.ok(requestData.includes('"contact.eventServicesLabel"'));
+assert.ok(app.includes('typeField.value === "guest-services"'), "guest-service details must follow the dynamic request type");
+assert.ok(app.includes("control.disabled = !shouldShow"), "hidden detail controls must be disabled");
+
+const privateEventStart = analytics.indexOf('"private-event": {items:[');
+const vipStart = analytics.indexOf('"vip-hosting": {items:[', privateEventStart);
+assert.ok(privateEventStart >= 0 && vipStart > privateEventStart, "private-event dynamic config is missing");
+const privateEventConfig = analytics.slice(privateEventStart, vipStart);
+for (const field of ["eventType","eventLocationStatus","eventLocation","eventLevel"]) {
+  assert.ok(privateEventConfig.includes('name:"'+field+'"'), "missing private-event field "+field);
+}
+for (const service of ["venue","hospitality","transport","reception","onsite","flowers"]) {
+  assert.ok(privateEventConfig.includes('"'+service+'"'), "missing event service option "+service);
+}
+assert.ok(privateEventConfig.includes('label:"eventServices"'), "event services need a dedicated label");
+assert.ok(!/budget|ميزاني[ةه]|presupuesto/i.test(privateEventConfig), "event flow must not ask for budget");
+for (const phrase of ["عيد ميلاد","الموقع أو المنطقة المفضلة","مستوى الخدمة","الخدمات المطلوبة"]) {
+  assert.ok(analytics.includes(phrase), "Arabic event qualification copy is missing: "+phrase);
+}
 
 assert.ok(!legal.includes("Data controller: Aventura Event Management Establishment"));
 assert.ok(!legal.includes("Responsable del tratamiento: Establecimiento Aventura"));
@@ -50,7 +57,6 @@ assert.ok((terms.match(/<h2>/g) || []).length >= 7, "terms fallback must contain
 
 assert.ok(translations.includes('"contact.durationHalf": "نصف يوم (حتى 4 ساعات)"'));
 assert.ok(translations.includes('"contact.durationFull": "يوم كامل (حتى 8 ساعات)"'));
-assert.ok(translations.includes('"contact.eventDetailsTitle": "تفاصيل الفعالية أو المناسبة الخاصة"'));
 assert.ok(!/corporate\.introText[^\n]*(?:budget|ميزاني[ةه]|presupuesto)/i.test(translations));
 
 assert.equal(curated.lastReviewed, "2026-10-07");
