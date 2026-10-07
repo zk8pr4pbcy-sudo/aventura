@@ -980,7 +980,7 @@
     function perfumeMarkup(perfume) {
       var visual = perfume.image
         ? '<div class="detail-perfume-visual"><img src="' + perfume.image + '" width="900" height="1125" loading="eager" decoding="async" alt=""></div>'
-        : '<div class="detail-perfume-visual perfume-card-pending"><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="collection.lastLightPending">Marketing card in preparation</strong></div></div>';
+        : '<div class="detail-perfume-visual perfume-card-pending"><div><span class="eyebrow">LAST LIGHT</span><strong data-i18n="common.comingSoon">Coming soon</strong></div></div>';
       var storyButton = perfume.story
         ? '<button class="text-link" type="button" data-perfume-story="' + perfume.story + '" data-story-title-key="' + perfume.titleKey + '" data-i18n="collection.viewStoryCard">View story card</button>'
         : '';
@@ -1599,13 +1599,26 @@
       return selections.map(function (value) { return detailAliases[value] || value; });
     }
 
+    var guestServiceField = form.querySelector('[name="guestService"]');
+    if (guestServiceField && ["thobe", "abaya", "flower"].indexOf(requestedItem) !== -1) {
+      guestServiceField.value = requestedItem;
+    }
+
     function updateRequestDetails() {
       var activeRequestIds = selectedRequestIds.concat(selectedDynamicAddons());
+      var typeValue = typeField ? typeField.value : "";
       detailGroups.forEach(function (group) {
         var groupName = group.getAttribute("data-request-details");
-        var showCollection = groupName === "collection" && (typeField && typeField.value === "collection" || requestedItems.length > 0);
-        var showService = groupName !== "collection" && typeField && typeField.value === "guest-services" && activeRequestIds.indexOf(groupName) !== -1;
-        group.hidden = !showCollection && !showService;
+        var showCollection = groupName === "collection" && (typeValue === "collection" || requestedItems.length > 0);
+        var showEvent = groupName === "event" && typeValue === "event";
+        var showServiceSelector = groupName === "service" && typeValue === "service";
+        var showSpecificService = ["thobe", "abaya", "flower"].indexOf(groupName) !== -1 &&
+          typeValue === "service" && activeRequestIds.indexOf(groupName) !== -1;
+        var visible = showCollection || showEvent || showServiceSelector || showSpecificService;
+        group.hidden = !visible;
+        group.querySelectorAll("input, select, textarea").forEach(function (control) {
+          control.disabled = !visible;
+        });
       });
     }
 
