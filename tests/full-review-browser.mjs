@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+fs.mkdirSync("/tmp/aventura-review-shots", { recursive: true });
 import { chromium } from "playwright";
 
 const baseUrl = process.env.AVENTURA_TEST_BASE_URL || "http://127.0.0.1:4173";
@@ -29,6 +31,25 @@ try {
 
     for (const service of ["venue","hospitality","transport","reception","onsite","flowers"]) {
       assert.ok(await page.locator('[name="addons[]"][value="'+service+'"]').count() > 0, item.lang+" missing event service "+service);
+    }
+
+    await page.locator('[data-request-step="1"] [data-request-next]').click();
+    await page.waitForFunction(() => !document.querySelector('[data-request-step="2"]').hidden);
+    await page.locator('#dynamicRequestPanel').scrollIntoViewIfNeeded();
+    await page.screenshot({ path: "/tmp/aventura-review-shots/event-"+item.lang+".png", fullPage: true });
+    await page.locator('[name="eventType"][value="eventBirthday"]').check();
+    await page.locator('[name="eventLocationStatus"][value="eventLocationReady"]').check();
+    await page.locator('[name="eventLocation"]').fill("Jeddah waterfront");
+    await page.locator('[name="eventLevel"][value="eventComplete"]').check();
+    await page.locator('[name="addons[]"][value="onsite"]').check();
+    const message = await page.evaluate(() => {
+      const form = document.querySelector("[data-contact-form]");
+      return window.AVENTURA_CONTACT_REQUEST_DATA.buildMessage({ form, data:new FormData(form), requestId:"AVE-TEST", translate:key=>key });
+    });
+    assert.ok(message.includes("Jeddah waterfront"), item.lang+" event location must reach request summary");
+    for (const name of ["eventType", "eventLevel", "addons[]"]) {
+      const label = await page.locator('[name="'+name+'"]:checked').first().locator('..').innerText();
+      assert.ok(message.includes(label), item.lang+" selected "+name+" must reach request summary");
     }
 
     const eventText = await page.locator("#dynamicRequestPanel").innerText();

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import assert from "node:assert/strict";
+import vm from "node:vm";
 
 function read(path) {
   return fs.readFileSync(path, "utf8");
@@ -17,6 +18,17 @@ const privacy = read("privacy.html");
 const terms = read("terms.html");
 const translations = read("assets/js/translations.js");
 const curated = JSON.parse(read("data/curated-events.json"));
+
+const scope = { window: {} };
+vm.runInNewContext(translations, scope);
+for (const lang of ["ar", "en", "es"]) {
+  const text = scope.window.AVENTURA_I18N[lang];
+  assert.equal(text["services.s7Text"], text["guest.thobeText"], lang + " thobe descriptions must match");
+  assert.equal(text["collection.thobeText"], text["guest.thobeText"], lang + " collection thobe description must match");
+}
+assert.ok(!analytics.includes('vipReservations:"Reservations and hospitality"'));
+assert.ok(!analytics.includes('vipReservations:"حجوزات وضيافة"'));
+assert.ok(!analytics.includes('vipReservations:"Reservas y hospitalidad"'));
 
 assert.ok(!collection.includes("Original campaign artwork pending"));
 assert.ok(!app.includes("Marketing card in preparation"));
