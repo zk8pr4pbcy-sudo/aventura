@@ -1,7 +1,7 @@
 {
-  "version": "1.8.0",
+  "version": "1.8.1",
   "windowDays": 14,
-  "lastReviewed": "2026-10-07",
+  "lastReviewed": "2026-10-19",
   "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
@@ -66,407 +66,6 @@
     }
   },
   "events": [
-    {
-      "id": "gulf-cup-27-jeddah-2026",
-      "active": true,
-      "featured": true,
-      "priority": 0,
-      "startDate": "2026-09-23",
-      "endDate": "2026-10-06",
-      "title": {
-        "ar": "كأس الخليج العربي 27 — جدة",
-        "en": "27th Arabian Gulf Cup — Jeddah",
-        "es": "27.ª Copa del Golfo Árabe — Yeda"
-      },
-      "category": {
-        "ar": "رياضة ووفود",
-        "en": "Sports & delegations",
-        "es": "Deporte y delegaciones"
-      },
-      "focusLabel": {
-        "ar": "وفود خليجية • تنفيذيون • VIP",
-        "en": "Gulf delegations • Executives • VIP",
-        "es": "Delegaciones del Golfo • Ejecutivos • VIP"
-      },
-      "summary": {
-        "ar": "بطولة إقليمية مستمرة حتى 6 أكتوبر وتخلق فرصة لاستضافة الوفود والضيوف طوال مدة الإقامة، وليس في يوم المباراة فقط.",
-        "en": "A regional tournament running through 6 October, creating hosting opportunities across the full stay rather than only on match day.",
-        "es": "Un torneo regional hasta el 6 de octubre que permite atender a delegaciones durante toda su estancia, no solo el día del partido."
-      },
-      "location": {
-        "ar": "جدة — ملعب الإنماء ومدينة الأمير عبدالله الفيصل الرياضية",
-        "en": "Jeddah — Alinma Stadium and Prince Abdullah Al Faisal Sports City Stadium",
-        "es": "Yeda — Estadio Alinma y Ciudad Deportiva Príncipe Abdullah Al Faisal"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال وتنقل خاص • تنسيق برنامج الوفد بين المباريات • جدة التاريخية أو البحر • غداء أو عشاء • نقل للملعب والعودة",
-        "en": "Private meet-and-transfer • Delegation program between matches • Historic Jeddah or Red Sea • Lunch or dinner • Stadium transfers",
-        "es": "Recepción y traslado privado • Programa entre partidos • Yeda Histórica o Mar Rojo • Almuerzo o cena • Traslados al estadio"
-      },
-      "audience": {
-        "ar": "الشركات والوفود الخليجية والمنتخبات والإعلام والتنفيذيون وضيوف VIP",
-        "en": "Corporate groups, Gulf delegations, teams, media, executives and VIP guests",
-        "es": "Empresas, delegaciones del Golfo, equipos, medios, ejecutivos y huéspedes VIP"
-      },
-      "ticketing": {
-        "status": "available",
-        "ar": "التذاكر متاحة عبر منصة التذاكر الرسمية المرتبطة بدليل Visit Saudi؛ يعاد التحقق قبل تأكيد البرنامج.",
-        "en": "Tickets are available through the official ticketing link provided by Visit Saudi; re-check before confirming the itinerary.",
-        "es": "Entradas disponibles mediante el enlace oficial de Visit Saudi; volver a comprobar antes de confirmar el itinerario."
-      },
-      "image": "assets/images/gulf-cup-27-jeddah-card.webp",
-      "imageAlt": {
-        "ar": "بطاقة أفنتورا لكأس الخليج 27 في جدة",
-        "en": "Aventura Gulf Cup 27 in Jeddah card",
-        "es": "Tarjeta de Aventura para la Copa del Golfo 27 en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://www.visitsaudi.com/en/campaigns/gulf-cup-27",
-      "verification": {
-        "checkedOn": "2026-10-07",
-        "status": "confirmed",
-        "notes": "Visit Saudi and SAFF confirm Gulf Cup 27 in Jeddah through 6 Oct 2026; Saudi Arabia is listed for the 3 Oct semifinal."
-      }
-    },
-    {
-      "id": "ibcc-2026",
-      "active": true,
-      "priority": 1,
-      "startDate": "2026-10-01",
-      "endDate": "2026-10-04",
-      "title": {
-        "ar": "المؤتمر الدولي الثامن عشر لسرطان الثدي — IBCC 2026",
-        "en": "18th International Breast Cancer Conference — IBCC 2026",
-        "es": "18.º Congreso Internacional de Cáncer de Mama — IBCC 2026"
-      },
-      "category": {
-        "ar": "طب ومؤتمرات دولية",
-        "en": "Medical & international conference",
-        "es": "Medicina y congreso internacional"
-      },
-      "focusLabel": {
-        "ar": "وفود علمية • متحدثون • تنفيذيون",
-        "en": "Scientific delegations • Speakers • Executives",
-        "es": "Delegaciones científicas • Ponentes • Ejecutivos"
-      },
-      "summary": {
-        "ar": "مؤتمر دولي متعدد الأيام يضم أكثر من 100 متحدث ونحو 1,000 مشارك من المختصين والباحثين والقطاع الصحي.",
-        "en": "A multi-day international conference with 100+ speakers and around 1,000 attendees from healthcare, research and specialist communities.",
-        "es": "Un congreso internacional de varios días con más de 100 ponentes y cerca de 1.000 asistentes del sector sanitario y científico."
-      },
-      "location": {
-        "ar": "فندق هيلتون جدة",
-        "en": "Hilton Jeddah Hotel",
-        "es": "Hilton Jeddah Hotel"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال المتحدثين والوفود • تنقل خاص • عشاء منسق • جدة التاريخية أو تجربة بحرية قصيرة بعد البرنامج العلمي",
-        "en": "Speaker and delegation reception • Private transport • Curated dinner • Historic Jeddah or a short Red Sea experience after the scientific program",
-        "es": "Recepción de ponentes y delegaciones • Transporte privado • Cena coordinada • Yeda Histórica o breve experiencia en el Mar Rojo tras el programa científico"
-      },
-      "audience": {
-        "ar": "الأطباء والباحثون والمتحدثون والشركات الداعمة والوفود الصحية",
-        "en": "Physicians, researchers, speakers, supporting companies and healthcare delegations",
-        "es": "Médicos, investigadores, ponentes, empresas colaboradoras y delegaciones sanitarias"
-      },
-      "ticketing": {
-        "status": "registration_open",
-        "ar": "التسجيل الرسمي متاح، والحضور الحضوري ظاهر حاليًا مجانًا في صفحة التسجيل الرسمية.",
-        "en": "Official registration is open; physical attendance is currently listed as free on the official registration page.",
-        "es": "El registro oficial está abierto; la asistencia presencial figura actualmente como gratuita."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة مؤتمر ووفود علمية من أفنتورا في جدة",
-        "en": "Aventura conference and scientific delegation hospitality in Jeddah",
-        "es": "Hospitalidad de Aventura para congresos y delegaciones científicas en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://www.ibcc-jed.org/",
-      "verification": {
-        "checkedOn": "2026-10-07",
-        "status": "confirmed",
-        "notes": "Official conference site and registration portal confirm 1–4 Oct 2026 at Hilton Jeddah Hotel."
-      }
-    },
-    {
-      "id": "meetes-2026",
-      "active": true,
-      "priority": 2,
-      "startDate": "2026-10-05",
-      "endDate": "2026-10-07",
-      "title": {
-        "ar": "MEETES 2026 — معرض الشرق الأوسط للتعليم والتدريب",
-        "en": "MEETES 2026 — Middle East Education & Training Exhibition",
-        "es": "MEETES 2026 — Exposición de Educación y Formación de Oriente Medio"
-      },
-      "category": {
-        "ar": "تعليم وتدريب وتقنية تعليم",
-        "en": "Education, training & EdTech",
-        "es": "Educación, formación y EdTech"
-      },
-      "focusLabel": {
-        "ar": "قيادات تعليم • جامعات • جهات حكومية",
-        "en": "Education leaders • Universities • Government",
-        "es": "Líderes educativos • Universidades • Gobierno"
-      },
-      "summary": {
-        "ar": "النسخة السابعة من معرض التعليم والتدريب، وتجمع الجامعات والمدارس ومقدمي التدريب وتقنيات التعليم والجهات التعليمية.",
-        "en": "The seventh edition bringing together universities, schools, training providers, EdTech companies and education organisations.",
-        "es": "La séptima edición reúne universidades, escuelas, proveedores de formación, EdTech y organizaciones educativas."
-      },
-      "location": {
-        "ar": "مركز جدة للمعارض والفعاليات",
-        "en": "Jeddah Center for Exhibitions & Events",
-        "es": "Jeddah Center for Exhibitions & Events"
-      },
-      "timeLabels": {
-        "ar": "يوميًا: 9:00 ص–1:00 م · 5:00 م–10:00 م",
-        "en": "Daily: 9:00 AM–1:00 PM · 5:00 PM–10:00 PM",
-        "es": "Diario: 09:00–13:00 · 17:00–22:00"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال وفد تعليمي • تنقل خاص • زيارة المعرض • اجتماع أو غداء أعمال • جدة التاريخية أو عشاء على الواجهة البحرية",
-        "en": "Education delegation reception • Private transport • Exhibition visit • Meeting or business lunch • Historic Jeddah or waterfront dinner",
-        "es": "Recepción de delegación educativa • Transporte privado • Visita a la feria • Reunión o almuerzo de negocios • Yeda Histórica o cena frente al mar"
-      },
-      "audience": {
-        "ar": "الجامعات والمدارس وقيادات التعليم والجهات الحكومية ومقدمو التدريب وشركات EdTech والوفود الدولية",
-        "en": "Universities, schools, education leaders, government entities, training providers, EdTech companies and international delegations",
-        "es": "Universidades, escuelas, líderes educativos, entidades públicas, proveedores de formación, EdTech y delegaciones internacionales"
-      },
-      "ticketing": {
-        "status": "registration_open",
-        "ar": "تسجيل زيارة مجاني متاح عبر الموقع الرسمي.",
-        "en": "Free visitor registration is available through the official website.",
-        "es": "Registro gratuito para visitantes disponible en el sitio oficial."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة وفد تعليمي وتنفيذي من أفنتورا في جدة",
-        "en": "Aventura hospitality for an education and executive delegation in Jeddah",
-        "es": "Hospitalidad de Aventura para una delegación educativa y ejecutiva en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://meetes-sa.com/secure-your-visit/",
-      "verification": {
-        "checkedOn": "2026-10-07",
-        "status": "confirmed",
-        "notes": "Official MEETES visitor page confirms 5–7 Oct 2026 at Jeddah Center for Exhibitions & Events, with free registration and published visiting hours."
-      }
-    },
-    {
-      "id": "sajex-2026",
-      "active": true,
-      "priority": 3,
-      "startDate": "2026-10-06",
-      "endDate": "2026-10-08",
-      "title": {
-        "ar": "SAJEX 2026 — Saudi Arabia Jewellery Exposition",
-        "en": "SAJEX 2026 — Saudi Arabia Jewellery Exposition",
-        "es": "SAJEX 2026 — Saudi Arabia Jewellery Exposition"
-      },
-      "category": {
-        "ar": "مجوهرات وتجارة B2B",
-        "en": "Jewellery & B2B trade",
-        "es": "Joyería y comercio B2B"
-      },
-      "focusLabel": {
-        "ar": "مشترون • عارضون • VIP",
-        "en": "Buyers • Exhibitors • VIP",
-        "es": "Compradores • Expositores • VIP"
-      },
-      "summary": {
-        "ar": "معرض مجوهرات B2B دولي مخصص لبناء العلاقات التجارية بين المصنعين والعلامات والمشترين والموزعين في الخليج والأسواق الدولية.",
-        "en": "An international B2B jewellery show connecting manufacturers, brands, buyers and distributors across the GCC and international markets.",
-        "es": "Una feria internacional B2B de joyería que conecta fabricantes, marcas, compradores y distribuidores del Golfo y mercados internacionales."
-      },
-      "location": {
-        "ar": "جدة سوبر دوم",
-        "en": "Jeddah Superdome",
-        "es": "Jeddah Superdome"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال مشترين أو عارضين • سيارة خاصة • زيارة المعرض • تنسيق مترجم عند الحاجة • عشاء أعمال • تجربة جدة الخاصة",
-        "en": "Buyer or exhibitor reception • Private car • Exhibition visit • Interpreter coordination if needed • Business dinner • Private Jeddah experience",
-        "es": "Recepción de compradores o expositores • Coche privado • Visita a la feria • Intérprete si se requiere • Cena de negocios • Experiencia privada en Yeda"
-      },
-      "audience": {
-        "ar": "مصنعو المجوهرات والعلامات والمشترون والموزعون والمستوردون والمصدرون ووكلاء التوريد والوفود التجارية",
-        "en": "Jewellery manufacturers, brands, buyers, distributors, importers, exporters, sourcing agents and trade delegations",
-        "es": "Fabricantes de joyería, marcas, compradores, distribuidores, importadores, exportadores, agentes de compras y delegaciones comerciales"
-      },
-      "ticketing": {
-        "status": "registration_open",
-        "ar": "تسجيل الزوار والعارضين متاح عبر موقع الجهة المنظمة الرسمي.",
-        "en": "Visitor and exhibitor registration is available through the organiser's official site.",
-        "es": "Registro de visitantes y expositores disponible en el sitio oficial del organizador."
-      },
-      "image": "assets/images/event-private.webp",
-      "imageAlt": {
-        "ar": "ضيافة خاصة لكبار الضيوف والمشترين من أفنتورا",
-        "en": "Aventura private hospitality for VIP guests and buyers",
-        "es": "Hospitalidad privada de Aventura para invitados VIP y compradores"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://gjepc.org/sajex/",
-      "verification": {
-        "checkedOn": "2026-10-07",
-        "status": "confirmed",
-        "notes": "Official GJEPC SAJEX page confirms 6–8 Oct 2026, B2B format, at Jeddah Superdome."
-      }
-    },
-    {
-      "id": "mass-gatherings-emergency-medicine-2026",
-      "active": true,
-      "priority": 4,
-      "startDate": "2026-10-07",
-      "endDate": "2026-10-09",
-      "title": {
-        "ar": "المؤتمر العالمي الرابع لطب الحشود والطوارئ 2026",
-        "en": "4th International Conference on Mass-Gatherings & Emergency Medicine",
-        "es": "4.º Congreso Internacional de Medicina de Multitudes y Emergencias"
-      },
-      "category": {
-        "ar": "طب طوارئ وإدارة حشود",
-        "en": "Emergency medicine & mass gatherings",
-        "es": "Medicina de urgencias y grandes concentraciones"
-      },
-      "focusLabel": {
-        "ar": "قيادات صحية • متحدثون • وفود علمية",
-        "en": "Healthcare leaders • Speakers • Scientific delegations",
-        "es": "Líderes sanitarios • Ponentes • Delegaciones científicas"
-      },
-      "summary": {
-        "ar": "مؤتمر حضوري وهجين يركز على الاستعداد للمخاطر الصحية وإدارة التجمعات الكبرى والطوارئ، مع 24 ساعة اعتماد مهني.",
-        "en": "An onsite and hybrid conference focused on health-risk preparedness, major-event medicine and emergency response, with 24 accredited hours.",
-        "es": "Congreso presencial e híbrido centrado en preparación sanitaria, medicina de grandes eventos y respuesta de emergencia, con 24 horas acreditadas."
-      },
-      "location": {
-        "ar": "جامعة الأعمال والتكنولوجيا UBT، جدة",
-        "en": "University of Business and Technology (UBT), Jeddah",
-        "es": "University of Business and Technology (UBT), Yeda"
-      },
-      "timeLabels": {
-        "ar": "التسجيل يبدأ 7:30 ص؛ البرنامج العلمي يختلف حسب اليوم.",
-        "en": "Registration starts at 7:30 AM; scientific-program hours vary by day.",
-        "es": "El registro comienza a las 07:30; el horario científico varía según el día."
-      },
-      "aventuraPlan": {
-        "ar": "استقبال المتحدثين والوفود • تنقل خاص • تنسيق عشاء بعد الجلسات • جولة جدة التاريخية • دعم لوجستي مرن حول البرنامج",
-        "en": "Speaker and delegation reception • Private transport • Post-session dinner coordination • Historic Jeddah tour • Flexible logistical support around the program",
-        "es": "Recepción de ponentes y delegaciones • Transporte privado • Cena tras las sesiones • Yeda Histórica • Apoyo logístico flexible"
-      },
-      "audience": {
-        "ar": "الممارسون الصحيون وطلاب التخصصات الصحية والقيادات الصحية والمتحدثون والباحثون",
-        "en": "Healthcare practitioners, health students, healthcare leaders, speakers and researchers",
-        "es": "Profesionales sanitarios, estudiantes de salud, líderes sanitarios, ponentes e investigadores"
-      },
-      "ticketing": {
-        "status": "registration_open",
-        "ar": "التسجيل متاح بسعر 375 ريال للمؤتمر؛ بعض الورش المجانية متاحة بعد تسجيل المؤتمر.",
-        "en": "Conference registration is available at SAR 375; selected free workshops are available after conference registration.",
-        "es": "Registro del congreso disponible por 375 SAR; algunos talleres gratuitos están disponibles tras registrarse."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة أفنتورا لوفد طبي وعلمي في جدة",
-        "en": "Aventura hospitality for a medical and scientific delegation in Jeddah",
-        "es": "Hospitalidad de Aventura para una delegación médica y científica en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://icmgem.com/ar",
-      "verification": {
-        "checkedOn": "2026-10-07",
-        "status": "confirmed",
-        "notes": "Official conference site and Saudi Society for Pediatric Emergency Medicine confirm 7–9 Oct 2026 at UBT University in Jeddah; registration remains open."
-      }
-    },
-    {
-      "id": "saudi-autocare-2026",
-      "active": true,
-      "priority": 5,
-      "startDate": "2026-10-13",
-      "endDate": "2026-10-15",
-      "title": {
-        "ar": "Saudi AutoCare 2026 — معرض جدة الدولي لخدمات ما بعد بيع السيارات",
-        "en": "Saudi AutoCare 2026 — Jeddah International Automotive Aftermarket Exhibition",
-        "es": "Saudi AutoCare 2026 — Exposición Internacional de Posventa Automotriz de Yeda"
-      },
-      "category": {
-        "ar": "سيارات وقطع غيار وأعمال",
-        "en": "Automotive aftermarket & business",
-        "es": "Posventa automotriz y negocios"
-      },
-      "focusLabel": {
-        "ar": "مصنعون • موزعون • مشترون",
-        "en": "Manufacturers • Distributors • Buyers",
-        "es": "Fabricantes • Distribuidores • Compradores"
-      },
-      "summary": {
-        "ar": "معرض مهني لقطاع خدمات ما بعد بيع السيارات وقطع الغيار والمعدات، مناسب للمصنعين والموردين والموزعين والمشترين.",
-        "en": "A professional automotive-aftermarket exhibition for parts, equipment and services, suited to manufacturers, suppliers, distributors and buyers.",
-        "es": "Una feria profesional de posventa automotriz para piezas, equipos y servicios, dirigida a fabricantes, proveedores, distribuidores y compradores."
-      },
-      "location": {
-        "ar": "مركز جدة للمعارض والفعاليات",
-        "en": "Jeddah Center for Exhibitions & Events",
-        "es": "Jeddah Center for Exhibitions & Events"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال وفد تجاري • تنقل خاص • زيارة المعرض • اجتماع أو عشاء أعمال • برنامج جدة قصير للضيوف الدوليين",
-        "en": "Trade delegation reception • Private transport • Exhibition visit • Meeting or business dinner • Short Jeddah program for international guests",
-        "es": "Recepción de delegación comercial • Transporte privado • Visita a la feria • Reunión o cena de negocios • Programa breve en Yeda"
-      },
-      "audience": {
-        "ar": "مصنعو قطع الغيار والموردون والموزعون ومقدمو الخدمات والمشترون وخبراء قطاع السيارات",
-        "en": "Parts manufacturers, suppliers, distributors, service providers, buyers and automotive professionals",
-        "es": "Fabricantes de piezas, proveedores, distribuidores, prestadores de servicios, compradores y profesionales del automóvil"
-      },
-      "ticketing": {
-        "status": "organiser_info",
-        "ar": "معلومات الزيارة والعارضين عبر موقع الجهة المنظمة؛ يعاد التحقق من التسجيل قبل تأكيد البرنامج.",
-        "en": "Visitor and exhibitor information is available via the organiser; re-check registration before confirming the itinerary.",
-        "es": "Información para visitantes y expositores disponible con el organizador; volver a comprobar el registro antes de confirmar."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة أفنتورا لوفد أعمال في قطاع السيارات",
-        "en": "Aventura hospitality for an automotive business delegation",
-        "es": "Hospitalidad de Aventura para una delegación empresarial del sector automotriz"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://iconexpo.com.sa/",
-      "verification": {
-        "checkedOn": "2026-10-07",
-        "status": "confirmed",
-        "notes": "Official ICON Expo calendar confirms AutoCare 2026 on 13–15 Oct 2026 at Jeddah JCEE."
-      }
-    },
     {
       "id": "jewels-of-the-world-jeddah-2026",
       "active": true,
@@ -667,6 +266,71 @@
         "checkedOn": "2026-10-07",
         "status": "confirmed",
         "notes": "Official event site confirms the inaugural edition for 27–29 Oct 2027 at Jeddah Center for Exhibitions & Events, in strategic partnership with Jeddah Chamber; corrected from the previous 2026 listing."
+      }
+    },
+    {
+      "id": "hajj-conference-exhibition-2026",
+      "active": true,
+      "priority": 8,
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-11",
+      "title": {
+        "ar": "مؤتمر ومعرض الحج 2026 — النسخة السادسة",
+        "en": "Hajj Conference & Exhibition 2026 — 6th Edition",
+        "es": "Congreso y Exposición del Hach 2026 — 6.ª edición"
+      },
+      "category": {
+        "ar": "مؤتمرات دولية وأعمال",
+        "en": "International conference & business",
+        "es": "Congreso internacional y negocios"
+      },
+      "focusLabel": {
+        "ar": "وفود دولية • قيادات • تنفيذيون",
+        "en": "International delegations • Leaders • Executives",
+        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
+      },
+      "summary": {
+        "ar": "مؤتمر ومعرض دولي يجمع جهات حكومية وشركات ومقدمي خدمات الحج لمناقشة الشراكات والخدمات والتطوير.",
+        "en": "International conference and exhibition connecting government bodies, businesses and Hajj service providers.",
+        "es": "Congreso y exposición internacional que reúne entidades públicas, empresas y proveedores de servicios del Hach."
+      },
+      "location": {
+        "ar": "جدة سوبر دوم",
+        "en": "Jeddah Superdome",
+        "es": "Jeddah Superdome"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال الوفود • تنقلات خاصة • تنسيق ضيافة تنفيذية • جولة جدة التاريخية بعد الاجتماعات",
+        "en": "Delegation reception • Private transfers • Executive hospitality • Historic Jeddah tour after meetings",
+        "es": "Recepción de delegaciones • Traslados privados • Hospitalidad ejecutiva • Recorrido por Yeda Histórica después de reuniones"
+      },
+      "audience": {
+        "ar": "القيادات الحكومية وصناع القرار ومكاتب شؤون الحجاج والشركات والوفود الدولية",
+        "en": "Government leaders, decision-makers, pilgrim affairs offices, companies and international delegations",
+        "es": "Líderes públicos, responsables, oficinas de peregrinos, empresas y delegaciones internacionales"
+      },
+      "ticketing": {
+        "status": "registration_open",
+        "ar": "التسجيل متاح عبر الموقع الرسمي؛ تحقق من متطلبات الدخول قبل الزيارة.",
+        "en": "Registration is available through the official website; verify entry requirements before visiting.",
+        "es": "Registro disponible en el sitio oficial; verifica los requisitos de acceso antes de visitar."
+      },
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {
+        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
+        "en": "Aventura hospitality for conferences and delegations in Jeddah",
+        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
+      },
+      "imageRights": {
+        "source": "Aventura-owned asset (repository designation; independent license not audited)",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "sourceUrl": "https://hajjconfex.com",
+      "verification": {
+        "checkedOn": "2026-10-19",
+        "status": "confirmed",
+        "notes": "Ministry-linked Pilgrim Experience Program confirms 8–11 Nov 2026 in Jeddah; official conference website confirms Jeddah Superdome and registration."
       }
     }
   ],
