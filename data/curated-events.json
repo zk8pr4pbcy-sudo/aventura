@@ -1,13 +1,13 @@
 {
-  "version": "1.8.2",
+  "version": "1.8.3",
   "windowDays": 14,
-  "lastReviewed": "2026-10-19",
-  "reviewedBy": "Salem + Aventura team",
+  "lastReviewed": "2026-10-23",
+  "reviewedBy": "Salem — official organiser review",
   "publishingScope": "website_only",
   "imagePolicy": {
     "strategy": "Aventura-owned commercial-use assets for live cards",
     "attributionRequired": false,
-    "note": "Do not use organiser logos, Google Images, or third-party event imagery unless commercial-use rights are explicitly verified."
+    "note": "Only existing repository assets used. Their repository metadata asserts Aventura ownership and no attribution, but underlying photographer/rights documentation has not been independently audited. Do not add external organiser imagery or logos without verified commercial permission and attribution requirements."
   },
   "ui": {
     "ar": {
@@ -67,146 +67,363 @@
   },
   "events": [
     {
-      "id": "jewels-of-the-world-jeddah-2026",
+      "id": "jeddah-motor-show-2026",
       "active": true,
-      "priority": 6,
-      "startDate": "2026-10-19",
-      "endDate": "2026-10-22",
-      "startTime": "16:00",
-      "endTime": "23:00",
+      "priority": 1,
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-07",
       "title": {
-        "ar": "Jewels of the World — Jeddah 2026",
-        "en": "Jewels of the World — Jeddah 2026",
-        "es": "Jewels of the World — Yeda 2026"
+        "ar": "معرض جدة الدولي للسيارات 2026",
+        "en": "Jeddah International Motor Show 2026",
+        "es": "Salón Internacional del Automóvil de Yeda 2026"
       },
       "category": {
-        "ar": "مجوهرات وساعات وVIP",
-        "en": "Fine jewellery, watches & VIP",
-        "es": "Alta joyería, relojes y VIP"
+        "ar": "مؤتمرات دولية وأعمال",
+        "en": "International conference & business",
+        "es": "Congreso internacional y negocios"
       },
       "focusLabel": {
-        "ar": "VIP • جامعون • علامات دولية",
-        "en": "VIP • Collectors • International brands",
-        "es": "VIP • Coleccionistas • Marcas internacionales"
+        "ar": "وفود دولية • قيادات • تنفيذيون",
+        "en": "International delegations • Leaders • Executives",
+        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
       },
       "summary": {
-        "ar": "معرض راقٍ للمجوهرات والساعات يجمع علامات محلية وإقليمية ودولية ويستهدف الجامعين والعملاء ذوي القيمة العالية.",
-        "en": "A premium fine-jewellery and watch exhibition bringing together local, regional and international brands for collectors and high-value buyers.",
-        "es": "Una exposición premium de alta joyería y relojería con marcas locales, regionales e internacionales para coleccionistas y compradores de alto valor."
+        "ar": "معرض السيارات والوفود الإعلامية والتنفيذية",
+        "en": "Automotive exhibition, media and executive delegations",
+        "es": "Feria automotriz, prensa y delegaciones ejecutivas"
       },
       "location": {
-        "ar": "فندق هيلتون جدة",
-        "en": "Hilton Jeddah Hotel",
-        "es": "Hilton Jeddah Hotel"
+        "ar": "مركز جدة للمعارض والفعاليات",
+        "en": "Jeddah Center for Exhibitions and Events",
+        "es": "Centro de Exposiciones y Eventos de Yeda"
       },
       "aventuraPlan": {
-        "ar": "استقبال VIP • سيارة خاصة • زيارة المعرض • عشاء خاص • تجربة بحرية أو جدة التاريخية حسب رغبة الضيف",
-        "en": "VIP reception • Private car • Exhibition visit • Private dinner • Red Sea or Historic Jeddah experience tailored to the guest",
-        "es": "Recepción VIP • Coche privado • Visita a la exposición • Cena privada • Mar Rojo o Yeda Histórica según el huésped"
+        "ar": "استقبال الوفود الإعلامية وشركات السيارات • تنقل خاص • تنسيق الزيارة بحسب تصريح الدخول • عشاء أعمال أو تجربة جدة بعد المعرض",
+        "en": "Welcome automotive and media delegations • Private transfers • Visit coordination subject to admission • Business dinner or Jeddah experience",
+        "es": "Recepción de delegaciones del motor y prensa • Traslados privados • Visita según acceso • Cena de negocios o experiencia en Yeda"
       },
       "audience": {
-        "ar": "الجامعون والعملاء VIP والمشترون ومصممو المجوهرات والعلامات الدولية والضيوف التنفيذيون",
-        "en": "Collectors, VIP clients, buyers, jewellery designers, international brands and executive guests",
-        "es": "Coleccionistas, clientes VIP, compradores, diseñadores de joyería, marcas internacionales y ejecutivos"
+        "ar": "شركات السيارات والوكلاء والمستثمرون والإعلام والمشترون والوفود التجارية",
+        "en": "Automakers, dealers, investors, media, buyers and trade delegations",
+        "es": "Fabricantes, concesionarios, inversores, prensa, compradores y delegaciones"
       },
       "ticketing": {
-        "status": "registration_open",
-        "ar": "الدخول مجاني بحسب الموقع الرسمي مع التسجيل المسبق.",
-        "en": "Entry is free according to the official website, with registration required.",
-        "es": "Entrada gratuita según el sitio oficial, con registro previo."
+        "status": "organiser_info",
+        "ar": "أيام الزوار 5–7 نوفمبر. 4 نوفمبر للبرنامج الإعلامي والضيوف؛ يُراجع تصريح الدخول لدى المنظم.",
+        "en": "Visitor days are 5–7 November; 4 November is for media/invited guests. Confirm admission with the organiser.",
+        "es": "Visitas del 5 al 7 de noviembre; el 4 es para prensa e invitados. Confirma el acceso con el organizador."
       },
-      "image": "assets/images/event-private.webp",
+      "image": "assets/images/event-corporate.webp",
       "imageAlt": {
-        "ar": "ضيافة خاصة من أفنتورا لضيوف VIP في جدة",
-        "en": "Aventura private hospitality for VIP guests in Jeddah",
-        "es": "Hospitalidad privada de Aventura para huéspedes VIP en Yeda"
+        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
+        "en": "Aventura hospitality for conferences and delegations in Jeddah",
+        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
       },
       "imageRights": {
-        "source": "Aventura-owned asset",
+        "source": "Aventura-owned asset (repository designation; independent license not audited)",
         "commercialUse": true,
         "attributionRequired": false
       },
-      "sourceUrl": "https://jowsaudi.com/events/jeddah/",
+      "sourceUrl": "https://www.int-motorshowjeddah.com/en",
       "verification": {
-        "checkedOn": "2026-10-07",
+        "checkedOn": "2026-10-23",
         "status": "confirmed",
-        "notes": "Official Jewels of the World site confirms Jeddah 19–22 Oct 2026 at Hilton Jeddah, 16:00–23:00 daily, free entry."
+        "notes": "Official organiser confirms 4–7 Nov 2026 at JCEE, with visitor days 5–7 Nov; media/invited guests on 4 Nov. Admission specifics need organiser confirmation. https://www.int-motorshowjeddah.com/en"
+      },
+      "timeLabels": {
+        "ar": "4 نوفمبر: الإعلام والضيوف المدعوون؛ 5–7 نوفمبر: أيام الزوار",
+        "en": "4 Nov: media/invited guests; 5–7 Nov: visitor days",
+        "es": "4 nov: prensa e invitados; 5–7 nov: días de visita"
       }
     },
     {
-      "id": "saudi-maritime-logistics-congress-2026",
+      "id": "hajj-conference-exhibition-2026",
       "active": true,
-      "priority": 7,
-      "startDate": "2026-10-21",
-      "endDate": "2026-10-22",
+      "priority": 2,
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-11",
       "title": {
-        "ar": "Saudi Maritime & Logistics Congress 2026",
-        "en": "Saudi Maritime & Logistics Congress 2026",
-        "es": "Saudi Maritime & Logistics Congress 2026"
+        "ar": "مؤتمر ومعرض الحج 2026 — النسخة السادسة",
+        "en": "Hajj Conference & Exhibition 2026 — 6th Edition",
+        "es": "Congreso y Exposición del Hach 2026 — 6.ª edición"
       },
       "category": {
-        "ar": "بحري ولوجستي وأعمال",
-        "en": "Maritime, logistics & business",
-        "es": "Marítimo, logística y negocios"
+        "ar": "مؤتمرات دولية وأعمال",
+        "en": "International conference & business",
+        "es": "Congreso internacional y negocios"
       },
       "focusLabel": {
-        "ar": "تنفيذيون • بحري • لوجستي",
-        "en": "Executives • Maritime • Logistics",
-        "es": "Ejecutivos • Marítimo • Logística"
+        "ar": "وفود دولية • قيادات • تنفيذيون",
+        "en": "International delegations • Leaders • Executives",
+        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
       },
       "summary": {
-        "ar": "حدث B2B رئيسي للقطاعين البحري واللوجستي في جدة، مناسب لاستضافة التنفيذيين والمتحدثين ووفود الشركات الدولية.",
-        "en": "A major B2B maritime and logistics event in Jeddah, well suited to executives, speakers and international corporate delegations.",
-        "es": "Un importante evento B2B marítimo y logístico en Yeda, ideal para ejecutivos, ponentes y delegaciones corporativas internacionales."
+        "ar": "مؤتمر ومعرض دولي يجمع جهات حكومية وشركات ومقدمي خدمات الحج لمناقشة الشراكات والخدمات والتطوير.",
+        "en": "International conference and exhibition connecting government bodies, businesses and Hajj service providers.",
+        "es": "Congreso y exposición internacional que reúne entidades públicas, empresas y proveedores de servicios del Hach."
       },
       "location": {
         "ar": "جدة سوبر دوم",
         "en": "Jeddah Superdome",
         "es": "Jeddah Superdome"
       },
-      "timeLabels": {
-        "ar": "21 أكتوبر: 10:00 ص–8:00 م · 22 أكتوبر: 10:00 ص–7:00 م",
-        "en": "21 Oct: 10:00 AM–8:00 PM · 22 Oct: 10:00 AM–7:00 PM",
-        "es": "21 oct: 10:00–20:00 · 22 oct: 10:00–19:00"
-      },
       "aventuraPlan": {
-        "ar": "استقبال تنفيذيين ووفود • تنقل خاص • تنسيق اجتماعات أو عشاء أعمال • جدة التاريخية أو البحر بعد المؤتمر",
-        "en": "Executive and delegation reception • Private transport • Meeting or business-dinner coordination • Historic Jeddah or Red Sea after the congress",
-        "es": "Recepción de ejecutivos y delegaciones • Transporte privado • Reuniones o cena de negocios • Yeda Histórica o Mar Rojo tras el congreso"
+        "ar": "استقبال الوفود • تنقلات خاصة • تنسيق ضيافة تنفيذية • جولة جدة التاريخية بعد الاجتماعات",
+        "en": "Delegation reception • Private transfers • Executive hospitality • Historic Jeddah tour after meetings",
+        "es": "Recepción de delegaciones • Traslados privados • Hospitalidad ejecutiva • Recorrido por Yeda Histórica después de reuniones"
       },
       "audience": {
-        "ar": "قيادات الشركات البحرية واللوجستية وسلاسل الإمداد والموانئ وصناع القرار والمتحدثون والوفود الدولية",
-        "en": "Maritime, logistics, supply-chain and ports leaders, decision-makers, speakers and international delegations",
-        "es": "Líderes marítimos, logísticos, de cadena de suministro y puertos, responsables de decisión, ponentes y delegaciones internacionales"
+        "ar": "القيادات الحكومية وصناع القرار ومكاتب شؤون الحجاج والشركات والوفود الدولية",
+        "en": "Government leaders, decision-makers, pilgrim affairs offices, companies and international delegations",
+        "es": "Líderes públicos, responsables, oficinas de peregrinos, empresas y delegaciones internacionales"
       },
       "ticketing": {
         "status": "registration_open",
-        "ar": "تصريح زيارة مجاني متاح عبر الموقع الرسمي.",
-        "en": "A free visitor pass is available through the official website.",
-        "es": "Pase gratuito para visitantes disponible en el sitio oficial."
+        "ar": "التسجيل مجاني ومطلوب للحصول على رمز الدخول الإلكتروني QR عبر موقع المؤتمر الرسمي.",
+        "en": "Free registration is required for an e-badge with QR code on the official conference site.",
+        "es": "Registro gratuito obligatorio para obtener un pase electrónico con código QR en el sitio oficial."
       },
       "image": "assets/images/event-corporate.webp",
       "imageAlt": {
-        "ar": "ضيافة تنفيذية لوفود القطاع البحري واللوجستي",
-        "en": "Executive hospitality for maritime and logistics delegations",
-        "es": "Hospitalidad ejecutiva para delegaciones marítimas y logísticas"
+        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
+        "en": "Aventura hospitality for conferences and delegations in Jeddah",
+        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
       },
       "imageRights": {
-        "source": "Aventura-owned asset",
+        "source": "Aventura-owned asset (repository designation; independent license not audited)",
         "commercialUse": true,
         "attributionRequired": false
       },
-      "sourceUrl": "https://landingpages.saudimaritimecongress.com/",
+      "sourceUrl": "https://hajjconfex.com",
       "verification": {
-        "checkedOn": "2026-10-07",
+        "checkedOn": "2026-10-23",
         "status": "confirmed",
-        "notes": "Official event page confirms 21–22 Oct 2026 at Jeddah Superdome, published hours and free visitor pass."
+        "notes": "Pilgrim Experience Program announcement 14 Sep confirms 8–11 Nov; official plan-your-visit confirms Jeddah Superdome, doors from 09:00, free mandatory e-badge registration. https://pep.gov.sa/en/news/1031 ; https://hajjconfex.transcend.com.sa/plan-your-visit"
+      },
+      "timeLabels": {
+        "ar": "تفتح الأبواب من 9:00 ص؛ تختلف مواعيد الجلسات.",
+        "en": "Doors open from 9:00 AM; session times vary.",
+        "es": "Apertura desde las 09:00; los horarios de sesiones varían."
+      }
+    },
+    {
+      "id": "jewellery-salon-jeddah-2026",
+      "active": true,
+      "featured": false,
+      "priority": 3,
+      "startDate": "2026-11-12",
+      "endDate": "2026-11-15",
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "title": {
+        "ar": "صالون المجوهرات — جدة 2026",
+        "en": "Jewellery Salon — Jeddah 2026",
+        "es": "Salón de Joyería — Yeda 2026"
+      },
+      "category": {
+        "ar": "مجوهرات فاخرة وضيافة VIP",
+        "en": "Luxury jewellery & VIP hospitality",
+        "es": "Joyería de lujo y hospitalidad VIP"
+      },
+      "focusLabel": {
+        "ar": "علامات فاخرة • مشترون • كبار الشخصيات",
+        "en": "Luxury brands • Buyers • VIPs",
+        "es": "Marcas de lujo • Compradores • VIP"
+      },
+      "summary": {
+        "ar": "معرض مجوهرات فاخر يجمع علامات محلية ودولية ومشترين وضيوفًا رفيعي المستوى في جدة.",
+        "en": "Luxury jewellery exhibition connecting local and international brands with buyers and high-profile guests in Jeddah.",
+        "es": "Exposición de joyería de lujo que reúne marcas locales e internacionales con compradores e invitados destacados en Yeda."
+      },
+      "location": {
+        "ar": "Benchmark، جدة",
+        "en": "Benchmark, Jeddah",
+        "es": "Benchmark, Yeda"
+      },
+      "timeLabels": {
+        "ar": "يوميًا: 4:00 م–11:00 م",
+        "en": "Daily: 4:00 PM–11:00 PM",
+        "es": "Diario: 16:00–23:00"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال خاص • تنقل بسيارة خاصة • تنسيق زيارة المعرض بعد تأكيد الدخول • عشاء خاص أو تجربة جدة التاريخية",
+        "en": "Private welcome • Chauffeured transport • Exhibition visit subject to confirmed entry • Private dinner or Historic Jeddah experience",
+        "es": "Recepción privada • Transporte con chófer • Visita sujeta a confirmación de acceso • Cena privada o experiencia en Yeda Histórica"
+      },
+      "audience": {
+        "ar": "العلامات الراقية والمشترون وجامعو المجوهرات وكبار الشخصيات والوفود التجارية",
+        "en": "Luxury brands, buyers, collectors, VIPs and trade delegations",
+        "es": "Marcas de lujo, compradores, coleccionistas, VIP y delegaciones comerciales"
+      },
+      "ticketing": {
+        "status": "organiser_info",
+        "ar": "مواعيد 2026 مؤكدة، لكن صفحة تسجيل الزوار تعرض بيانات 2025؛ تحقق من إجراءات الدخول لنسخة 2026 لدى المنظم قبل الحجز.",
+        "en": "2026 dates are confirmed, but the visitor-registration page still displays 2025 information. Confirm 2026 entry requirements with the organiser before booking.",
+        "es": "Las fechas de 2026 están confirmadas, pero el registro aún muestra datos de 2025. Confirma los requisitos de acceso de 2026 con el organizador."
+      },
+      "image": "assets/images/event-private.webp",
+      "imageAlt": {
+        "ar": "ضيافة أفنتورا الخاصة حول معرض المجوهرات في جدة",
+        "en": "Aventura private hospitality around the Jeddah jewellery exhibition",
+        "es": "Hospitalidad privada de Aventura alrededor de la exposición de joyería en Yeda"
+      },
+      "imageRights": {
+        "source": "Existing repository asset designated Aventura-owned; underlying commercial rights documentation not independently audited",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
+      },
+      "sourceUrl": "https://www.jewellerysalon.com/en/",
+      "verification": {
+        "checkedOn": "2026-10-23",
+        "status": "confirmed",
+        "notes": "Official organiser confirms 12–15 Nov 2026, 16:00–23:00 at Benchmark Jeddah. Visitor registration page is outdated (2025), so 2026 entry availability is NOT confirmed. https://www.jewellerysalon.com/en/registertovisit.php"
+      }
+    },
+    {
+      "id": "foodex-saudi-jeddah-2026",
+      "active": true,
+      "priority": 4,
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-25",
+      "title": {
+        "ar": "فوديكس السعودية 2026",
+        "en": "Foodex Saudi 2026",
+        "es": "Foodex Arabia Saudita 2026"
+      },
+      "category": {
+        "ar": "مؤتمرات دولية وأعمال",
+        "en": "International conference & business",
+        "es": "Congreso internacional y negocios"
+      },
+      "focusLabel": {
+        "ar": "وفود دولية • قيادات • تنفيذيون",
+        "en": "International delegations • Leaders • Executives",
+        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
+      },
+      "summary": {
+        "ar": "معرض الأغذية والمشروبات للمشترين والعارضين",
+        "en": "Food and beverage trade show for buyers and exhibitors",
+        "es": "Feria de alimentos y bebidas para compradores y expositores"
+      },
+      "location": {
+        "ar": "مركز جدة الدولي للمعارض والمؤتمرات",
+        "en": "Jeddah International Exhibition and Convention Center",
+        "es": "Centro Internacional de Exposiciones y Convenciones de Yeda"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال المشترين والعارضين • تنقلات خاصة • تنسيق اجتماعات تجارية • عشاء ضيافة أو جولة جدة التاريخية",
+        "en": "Buyer and exhibitor welcome • Private transfers • Trade meeting coordination • Hosted dinner or Historic Jeddah tour",
+        "es": "Recepción de compradores y expositores • Traslados privados • Reuniones comerciales • Cena o visita a Yeda Histórica"
+      },
+      "audience": {
+        "ar": "المشترون والمستوردون والموزعون وشركات الأغذية والمشروبات والضيافة",
+        "en": "Buyers, importers, distributors, F&B businesses and hospitality companies",
+        "es": "Compradores, importadores, distribuidores y empresas de alimentos, bebidas y hospitalidad"
+      },
+      "ticketing": {
+        "status": "registration_open",
+        "ar": "التسجيل مجاني للزوار التجاريين عبر تطبيق Sunaidi Expo، ويصدر تصريح دخول إلكتروني؛ لا يسمح بدخول الأطفال.",
+        "en": "Free trade-visitor registration via the Sunaidi Expo app; e-badge issued. Children are not admitted.",
+        "es": "Registro gratuito para visitantes profesionales mediante la app Sunaidi Expo; pase electrónico. No se admiten niños."
+      },
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {
+        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
+        "en": "Aventura hospitality for conferences and delegations in Jeddah",
+        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
+      },
+      "imageRights": {
+        "source": "Aventura-owned asset (repository designation; independent license not audited)",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
+      "verification": {
+        "checkedOn": "2026-10-23",
+        "status": "confirmed",
+        "notes": "Official organiser confirms 23–25 Nov, 16:00–23:00 and free trade-visitor app registration. Official site inconsistently uses JIECC and Jeddah Center for Exhibitions and Events; confirm exact venue address/entrance before any guest itinerary. https://www.foodexsaudiexpo.com/en/registertovisit"
+      },
+      "timeLabels": {
+        "ar": "يوميًا: 4:00 م–11:00 م",
+        "en": "Daily: 4:00 PM–11:00 PM",
+        "es": "Diario: 16:00–23:00"
+      }
+    },
+    {
+      "id": "saudi-franchise-expo-jeddah-2026",
+      "active": true,
+      "priority": 5,
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-25",
+      "title": {
+        "ar": "المعرض السعودي الدولي للامتياز التجاري — جدة 2026",
+        "en": "Saudi Franchise Expo — Jeddah 2026",
+        "es": "Expo Saudí de Franquicias — Yeda 2026"
+      },
+      "category": {
+        "ar": "مؤتمرات دولية وأعمال",
+        "en": "International conference & business",
+        "es": "Congreso internacional y negocios"
+      },
+      "focusLabel": {
+        "ar": "وفود دولية • قيادات • تنفيذيون",
+        "en": "International delegations • Leaders • Executives",
+        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
+      },
+      "summary": {
+        "ar": "معرض أعمال للمستثمرين والعلامات التجارية",
+        "en": "Business exhibition for investors and brands",
+        "es": "Feria empresarial para inversores y marcas"
+      },
+      "location": {
+        "ar": "مركز جدة للمعارض والفعاليات",
+        "en": "Jeddah Center for Exhibitions and Events",
+        "es": "Centro de Exposiciones y Eventos de Yeda"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال المستثمرين ومديري العلامات • تنقل خاص • تنسيق الاجتماعات عبر المنظم • عشاء أعمال وتجربة جدة",
+        "en": "Investor and brand-executive reception • Private transport • Organiser-led meeting coordination • Business dinner and Jeddah experience",
+        "es": "Recepción de inversores y directivos • Transporte privado • Reuniones coordinadas por el organizador • Cena de negocios y experiencia en Yeda"
+      },
+      "audience": {
+        "ar": "المستثمرون وأصحاب الامتياز ومديرو التوسع والعلامات التجارية ومجموعات الأعمال",
+        "en": "Investors, franchisees, expansion executives, brands and business groups",
+        "es": "Inversores, franquiciados, directivos de expansión, marcas y grupos empresariales"
+      },
+      "ticketing": {
+        "status": "registration_open",
+        "ar": "دخول مجاني للزوار التجاريين بعد التسجيل؛ توجد خيارات لحجز اجتماعات الأعمال.",
+        "en": "Free entry for registered trade visitors; business matchmaking is available.",
+        "es": "Entrada gratuita para visitantes profesionales registrados; hay opción de reuniones empresariales."
+      },
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {
+        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
+        "en": "Aventura hospitality for conferences and delegations in Jeddah",
+        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
+      },
+      "imageRights": {
+        "source": "Aventura-owned asset (repository designation; independent license not audited)",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "sourceUrl": "https://www.saudifranchiseexpo.com/",
+      "verification": {
+        "checkedOn": "2026-10-23",
+        "status": "confirmed",
+        "notes": "Official organiser confirms 23–25 Nov 2026, Jeddah Center for Exhibitions and Events, 16:00–23:00, free trade visitor registration and matchmaking. https://www.saudifranchiseexpo.com/visit"
+      },
+      "timeLabels": {
+        "ar": "يوميًا: 4:00 م–11:00 م",
+        "en": "Daily: 4:00 PM–11:00 PM",
+        "es": "Diario: 16:00–23:00"
       }
     },
     {
       "id": "international-trade-exchange-expo-2027",
       "active": true,
-      "priority": 8,
+      "priority": 6,
       "startDate": "2027-10-27",
       "endDate": "2027-10-29",
       "title": {
@@ -263,294 +480,29 @@
       },
       "sourceUrl": "https://jitexpo.com/",
       "verification": {
-        "checkedOn": "2026-10-07",
+        "checkedOn": "2026-10-23",
         "status": "confirmed",
-        "notes": "Official event site confirms the inaugural edition for 27–29 Oct 2027 at Jeddah Center for Exhibitions & Events, in strategic partnership with Jeddah Chamber; corrected from the previous 2026 listing."
-      }
-    },
-    {
-      "id": "hajj-conference-exhibition-2026",
-      "active": true,
-      "priority": 8,
-      "startDate": "2026-11-08",
-      "endDate": "2026-11-11",
-      "title": {
-        "ar": "مؤتمر ومعرض الحج 2026 — النسخة السادسة",
-        "en": "Hajj Conference & Exhibition 2026 — 6th Edition",
-        "es": "Congreso y Exposición del Hach 2026 — 6.ª edición"
-      },
-      "category": {
-        "ar": "مؤتمرات دولية وأعمال",
-        "en": "International conference & business",
-        "es": "Congreso internacional y negocios"
-      },
-      "focusLabel": {
-        "ar": "وفود دولية • قيادات • تنفيذيون",
-        "en": "International delegations • Leaders • Executives",
-        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
-      },
-      "summary": {
-        "ar": "مؤتمر ومعرض دولي يجمع جهات حكومية وشركات ومقدمي خدمات الحج لمناقشة الشراكات والخدمات والتطوير.",
-        "en": "International conference and exhibition connecting government bodies, businesses and Hajj service providers.",
-        "es": "Congreso y exposición internacional que reúne entidades públicas, empresas y proveedores de servicios del Hach."
-      },
-      "location": {
-        "ar": "جدة سوبر دوم",
-        "en": "Jeddah Superdome",
-        "es": "Jeddah Superdome"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال الوفود • تنقلات خاصة • تنسيق ضيافة تنفيذية • جولة جدة التاريخية بعد الاجتماعات",
-        "en": "Delegation reception • Private transfers • Executive hospitality • Historic Jeddah tour after meetings",
-        "es": "Recepción de delegaciones • Traslados privados • Hospitalidad ejecutiva • Recorrido por Yeda Histórica después de reuniones"
-      },
-      "audience": {
-        "ar": "القيادات الحكومية وصناع القرار ومكاتب شؤون الحجاج والشركات والوفود الدولية",
-        "en": "Government leaders, decision-makers, pilgrim affairs offices, companies and international delegations",
-        "es": "Líderes públicos, responsables, oficinas de peregrinos, empresas y delegaciones internacionales"
-      },
-      "ticketing": {
-        "status": "registration_open",
-        "ar": "التسجيل متاح عبر الموقع الرسمي؛ تحقق من متطلبات الدخول قبل الزيارة.",
-        "en": "Registration is available through the official website; verify entry requirements before visiting.",
-        "es": "Registro disponible en el sitio oficial; verifica los requisitos de acceso antes de visitar."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
-        "en": "Aventura hospitality for conferences and delegations in Jeddah",
-        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset (repository designation; independent license not audited)",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://hajjconfex.com",
-      "verification": {
-        "checkedOn": "2026-10-19",
-        "status": "confirmed",
-        "notes": "Ministry-linked Pilgrim Experience Program confirms 8–11 Nov 2026 in Jeddah; official conference website confirms Jeddah Superdome and registration."
-      }
-    },
-    {
-      "id": "jeddah-motor-show-2026",
-      "active": true,
-      "priority": 5,
-      "startDate": "2026-11-04",
-      "endDate": "2026-11-07",
-      "title": {
-        "ar": "معرض جدة الدولي للسيارات 2026",
-        "en": "Jeddah International Motor Show 2026",
-        "es": "Salón Internacional del Automóvil de Yeda 2026"
-      },
-      "category": {
-        "ar": "مؤتمرات دولية وأعمال",
-        "en": "International conference & business",
-        "es": "Congreso internacional y negocios"
-      },
-      "focusLabel": {
-        "ar": "وفود دولية • قيادات • تنفيذيون",
-        "en": "International delegations • Leaders • Executives",
-        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
-      },
-      "summary": {
-        "ar": "معرض السيارات والوفود الإعلامية والتنفيذية",
-        "en": "Automotive exhibition, media and executive delegations",
-        "es": "Feria automotriz, prensa y delegaciones ejecutivas"
-      },
-      "location": {
-        "ar": "مركز جدة للمعارض والفعاليات",
-        "en": "Jeddah Center for Exhibitions and Events",
-        "es": "Centro de Exposiciones y Eventos de Yeda"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال الوفود • تنقلات خاصة • تنسيق ضيافة تنفيذية • جولة جدة التاريخية بعد الاجتماعات",
-        "en": "Delegation reception • Private transfers • Executive hospitality • Historic Jeddah tour after meetings",
-        "es": "Recepción de delegaciones • Traslados privados • Hospitalidad ejecutiva • Recorrido por Yeda Histórica después de reuniones"
-      },
-      "audience": {
-        "ar": "القيادات الحكومية وصناع القرار ومكاتب شؤون الحجاج والشركات والوفود الدولية",
-        "en": "Government leaders, decision-makers, pilgrim affairs offices, companies and international delegations",
-        "es": "Líderes públicos, responsables, oficinas de peregrinos, empresas y delegaciones internacionales"
-      },
-      "ticketing": {
-        "status": "organiser_info",
-        "ar": "راجع موقع الجهة المنظمة لمعرفة التسجيل أو التذاكر وشروط الدخول.",
-        "en": "Check the organiser's site for registration, tickets and entry requirements.",
-        "es": "Consulta el sitio del organizador para el registro, entradas y requisitos de acceso."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
-        "en": "Aventura hospitality for conferences and delegations in Jeddah",
-        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset (repository designation; independent license not audited)",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://www.int-motorshowjeddah.com/en",
-      "verification": {
-        "checkedOn": "2026-10-19",
-        "status": "confirmed",
-        "notes": "Dates and venue checked against official organiser website on 19 Oct 2026; reconfirm admission and changes before booking."
-      }
-    },
-    {
-      "id": "foodex-saudi-jeddah-2026",
-      "active": true,
-      "priority": 6,
-      "startDate": "2026-11-23",
-      "endDate": "2026-11-25",
-      "title": {
-        "ar": "فوديكس السعودية 2026",
-        "en": "Foodex Saudi 2026",
-        "es": "Foodex Arabia Saudita 2026"
-      },
-      "category": {
-        "ar": "مؤتمرات دولية وأعمال",
-        "en": "International conference & business",
-        "es": "Congreso internacional y negocios"
-      },
-      "focusLabel": {
-        "ar": "وفود دولية • قيادات • تنفيذيون",
-        "en": "International delegations • Leaders • Executives",
-        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
-      },
-      "summary": {
-        "ar": "معرض الأغذية والمشروبات للمشترين والعارضين",
-        "en": "Food and beverage trade show for buyers and exhibitors",
-        "es": "Feria de alimentos y bebidas para compradores y expositores"
-      },
-      "location": {
-        "ar": "مركز جدة الدولي للمعارض والمؤتمرات",
-        "en": "Jeddah International Exhibition and Convention Center",
-        "es": "Centro Internacional de Exposiciones y Convenciones de Yeda"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال الوفود • تنقلات خاصة • تنسيق ضيافة تنفيذية • جولة جدة التاريخية بعد الاجتماعات",
-        "en": "Delegation reception • Private transfers • Executive hospitality • Historic Jeddah tour after meetings",
-        "es": "Recepción de delegaciones • Traslados privados • Hospitalidad ejecutiva • Recorrido por Yeda Histórica después de reuniones"
-      },
-      "audience": {
-        "ar": "القيادات الحكومية وصناع القرار ومكاتب شؤون الحجاج والشركات والوفود الدولية",
-        "en": "Government leaders, decision-makers, pilgrim affairs offices, companies and international delegations",
-        "es": "Líderes públicos, responsables, oficinas de peregrinos, empresas y delegaciones internacionales"
-      },
-      "ticketing": {
-        "status": "organiser_info",
-        "ar": "راجع موقع الجهة المنظمة لمعرفة التسجيل أو التذاكر وشروط الدخول.",
-        "en": "Check the organiser's site for registration, tickets and entry requirements.",
-        "es": "Consulta el sitio del organizador para el registro, entradas y requisitos de acceso."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
-        "en": "Aventura hospitality for conferences and delegations in Jeddah",
-        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset (repository designation; independent license not audited)",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
-      "verification": {
-        "checkedOn": "2026-10-19",
-        "status": "confirmed",
-        "notes": "Dates and venue checked against official organiser website on 19 Oct 2026; reconfirm admission and changes before booking."
-      }
-    },
-    {
-      "id": "saudi-franchise-expo-jeddah-2026",
-      "active": true,
-      "priority": 7,
-      "startDate": "2026-11-23",
-      "endDate": "2026-11-25",
-      "title": {
-        "ar": "المعرض السعودي الدولي للامتياز التجاري — جدة 2026",
-        "en": "Saudi Franchise Expo — Jeddah 2026",
-        "es": "Expo Saudí de Franquicias — Yeda 2026"
-      },
-      "category": {
-        "ar": "مؤتمرات دولية وأعمال",
-        "en": "International conference & business",
-        "es": "Congreso internacional y negocios"
-      },
-      "focusLabel": {
-        "ar": "وفود دولية • قيادات • تنفيذيون",
-        "en": "International delegations • Leaders • Executives",
-        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
-      },
-      "summary": {
-        "ar": "معرض أعمال للمستثمرين والعلامات التجارية",
-        "en": "Business exhibition for investors and brands",
-        "es": "Feria empresarial para inversores y marcas"
-      },
-      "location": {
-        "ar": "مركز جدة للمعارض والفعاليات",
-        "en": "Jeddah Center for Exhibitions and Events",
-        "es": "Centro de Exposiciones y Eventos de Yeda"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال الوفود • تنقلات خاصة • تنسيق ضيافة تنفيذية • جولة جدة التاريخية بعد الاجتماعات",
-        "en": "Delegation reception • Private transfers • Executive hospitality • Historic Jeddah tour after meetings",
-        "es": "Recepción de delegaciones • Traslados privados • Hospitalidad ejecutiva • Recorrido por Yeda Histórica después de reuniones"
-      },
-      "audience": {
-        "ar": "القيادات الحكومية وصناع القرار ومكاتب شؤون الحجاج والشركات والوفود الدولية",
-        "en": "Government leaders, decision-makers, pilgrim affairs offices, companies and international delegations",
-        "es": "Líderes públicos, responsables, oficinas de peregrinos, empresas y delegaciones internacionales"
-      },
-      "ticketing": {
-        "status": "organiser_info",
-        "ar": "راجع موقع الجهة المنظمة لمعرفة التسجيل أو التذاكر وشروط الدخول.",
-        "en": "Check the organiser's site for registration, tickets and entry requirements.",
-        "es": "Consulta el sitio del organizador para el registro, entradas y requisitos de acceso."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
-        "en": "Aventura hospitality for conferences and delegations in Jeddah",
-        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset (repository designation; independent license not audited)",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "sourceUrl": "https://www.saudifranchiseexpo.com/",
-      "verification": {
-        "checkedOn": "2026-10-19",
-        "status": "confirmed",
-        "notes": "Dates and venue checked against official organiser website on 19 Oct 2026; reconfirm admission and changes before booking."
+        "notes": "Official organiser site confirms 27–29 Oct 2027 at Jeddah Center for Exhibitions & Events. This is beyond the 14-day display window. https://jitexpo.com/"
       }
     }
   ],
   "reviewSummary": {
+    "date": "2026-10-23",
     "added": [
-      "meetes-2026",
-      "sajex-2026",
-      "mass-gatherings-emergency-medicine-2026",
-      "saudi-autocare-2026",
-      "jewels-of-the-world-jeddah-2026"
+      "jewellery-salon-jeddah-2026"
     ],
     "updated": [
-      "gulf-cup-27-jeddah-2026",
-      "ibcc-2026",
-      "saudi-maritime-logistics-congress-2026",
-      "international-trade-exchange-expo-2026"
+      "hajj-conference-exhibition-2026",
+      "jeddah-motor-show-2026",
+      "foodex-saudi-jeddah-2026",
+      "saudi-franchise-expo-jeddah-2026",
+      "international-trade-exchange-expo-2027"
     ],
     "removedEnded": [
-      "meta-geds-2026",
-      "saudi-food-show-2026",
-      "saudi-fashiontex-2026",
-      "saudi-hometex-2026",
-      "saudi-shoes-expo-2026"
+      "jewels-of-the-world-jeddah-2026",
+      "saudi-maritime-logistics-congress-2026"
     ],
     "publishingScope": "website_only",
-    "note": "30 Sep cleanup: live data now contains current and future curated events only; expired September entries removed."
+    "note": "Removed expired maritime congress and postponed Jewels of the World Jeddah (no replacement date). Verified official sources; 2026 Jewellery Salon registration page remains outdated. Existing repository images only; independent underlying commercial rights proof not audited. Foodex organiser uses conflicting venue naming; confirm before itinerary."
   }
 }
