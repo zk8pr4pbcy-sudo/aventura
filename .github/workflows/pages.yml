@@ -71,8 +71,62 @@ jobs:
         with:
           node-version: "22"
 
+      # Do not publish the hardened artifact unless the same contracts used by
+      # Site Quality and the critical mobile/browser paths are green.
+      - name: Pre-deployment syntax and contract checks
+        run: |
+          set -euo pipefail
+          node --check assets/js/app.js
+          node --check assets/js/curated-calendar.js
+          node --check assets/js/contact-submission.js
+          node --check assets/js/translations.js
+          node tests/seo-contract.mjs
+          node tests/curated-calendar-contract.mjs
+          node tests/ga4-journey-contract.mjs
+          node tests/contact-submission-contract.mjs
+          node scripts/validate-site.mjs
+          node tests/full-review-contract.mjs
+
       - name: Build hardened public artifact
         run: node scripts/build-public.mjs
+
+      - name: Install browser smoke test tools
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start hardened local site for browser checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory _site > /tmp/aventura-qa-http.log 2>&1 &
+          echo $! > /tmp/aventura-qa-http.pid
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4173/contact.html > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/aventura-qa-http.log
+          exit 1
+
+      - name: Validate multilingual navigation, bookings, SEO and event cards
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: |
+          set -euo pipefail
+          node tests/browser-smoke.mjs
+          node tests/contact-submission-browser.mjs
+          node tests/seo-browser.mjs
+          node tests/curated-calendar-browser.mjs
+          node tests/full-review-browser.mjs
+
+      - name: Stop browser test site
+        if: always()
+        run: |
+          if [ -f /tmp/aventura-qa-http.pid ]; then
+            kill "$(cat /tmp/aventura-qa-http.pid)" 2>/dev/null || true
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
