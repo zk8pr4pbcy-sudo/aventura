@@ -1,8 +1,8 @@
 {
-  "version": "1.8.3",
+  "version": "1.8.4",
   "windowDays": 14,
-  "lastReviewed": "2026-10-23",
-  "reviewedBy": "Salem — official organiser review",
+  "lastReviewed": "2026-10-25",
+  "reviewedBy": "Salem — official organiser source review",
   "publishingScope": "website_only",
   "imagePolicy": {
     "strategy": "Aventura-owned commercial-use assets for live cards",
@@ -78,14 +78,14 @@
         "es": "Salón Internacional del Automóvil de Yeda 2026"
       },
       "category": {
-        "ar": "مؤتمرات دولية وأعمال",
-        "en": "International conference & business",
-        "es": "Congreso internacional y negocios"
+        "ar": "سيارات ومعارض أعمال",
+        "en": "Automotive & business exhibition",
+        "es": "Automoción y feria empresarial"
       },
       "focusLabel": {
-        "ar": "وفود دولية • قيادات • تنفيذيون",
-        "en": "International delegations • Leaders • Executives",
-        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
+        "ar": "شركات سيارات • إعلام • وفود VIP",
+        "en": "Automakers • Media • VIP delegations",
+        "es": "Marcas de automóviles • Prensa • Delegaciones VIP"
       },
       "summary": {
         "ar": "معرض السيارات والوفود الإعلامية والتنفيذية",
@@ -108,10 +108,10 @@
         "es": "Fabricantes, concesionarios, inversores, prensa, compradores y delegaciones"
       },
       "ticketing": {
-        "status": "organiser_info",
-        "ar": "أيام الزوار 5–7 نوفمبر. 4 نوفمبر للبرنامج الإعلامي والضيوف؛ يُراجع تصريح الدخول لدى المنظم.",
-        "en": "Visitor days are 5–7 November; 4 November is for media/invited guests. Confirm admission with the organiser.",
-        "es": "Visitas del 5 al 7 de noviembre; el 4 es para prensa e invitados. Confirma el acceso con el organizador."
+        "status": "registration_open",
+        "ar": "فتح المنظم تسجيل الزوار للحصول على دعوة؛ 4 نوفمبر للإعلام وضيوف VIP، و5–7 نوفمبر لأيام الزوار. الدخول يخضع لتأكيد المنظم.",
+        "en": "Visitor registration for an invitation is open; 4 Nov is for media/VIP guests, 5–7 Nov for visitors. Admission subject to organiser confirmation.",
+        "es": "Registro para invitación abierto; 4 nov para prensa/VIP y 5–7 nov para visitantes. Acceso sujeto a confirmación."
       },
       "image": "assets/images/event-corporate.webp",
       "imageAlt": {
@@ -122,13 +122,14 @@
       "imageRights": {
         "source": "Aventura-owned asset (repository designation; independent license not audited)",
         "commercialUse": true,
-        "attributionRequired": false
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
       },
-      "sourceUrl": "https://www.int-motorshowjeddah.com/en",
+      "sourceUrl": "https://www.int-motorshowjeddah.com/en/visit",
       "verification": {
-        "checkedOn": "2026-10-23",
+        "checkedOn": "2026-10-25",
         "status": "confirmed",
-        "notes": "Official organiser confirms 4–7 Nov 2026 at JCEE, with visitor days 5–7 Nov; media/invited guests on 4 Nov. Admission specifics need organiser confirmation. https://www.int-motorshowjeddah.com/en"
+        "notes": "Official organiser confirms dates and live visitor invitation form. https://www.int-motorshowjeddah.com/en/visit"
       },
       "timeLabels": {
         "ar": "4 نوفمبر: الإعلام والضيوف المدعوون؛ 5–7 نوفمبر: أيام الزوار",
@@ -137,9 +138,75 @@
       }
     },
     {
+      "id": "sgss-surgery-congress-jeddah-2026",
+      "active": true,
+      "startDate": "2026-11-06",
+      "endDate": "2026-11-08",
+      "title": {
+        "ar": "المؤتمر السابع عشر للجمعية السعودية للجراحة العامة — جدة 2026",
+        "en": "17th Saudi General Surgery Society Congress — Jeddah 2026",
+        "es": "17.º Congreso de la Sociedad Saudí de Cirugía General — Yeda 2026"
+      },
+      "category": {
+        "ar": "مؤتمر طبي ووفود خليجية",
+        "en": "Medical conference & Gulf delegations",
+        "es": "Congreso médico y delegaciones del Golfo"
+      },
+      "focusLabel": {
+        "ar": "جراحون • متحدثون • قيادات صحية",
+        "en": "Surgeons • Speakers • Healthcare leaders",
+        "es": "Cirujanos • Ponentes • Líderes sanitarios"
+      },
+      "summary": {
+        "ar": "مؤتمر علمي مشترك مع مؤتمر جمعيات الجراحة العامة الخليجية، يجمع الجراحين والمتحدثين والشركاء من المملكة والخليج وخارجه.",
+        "en": "A joint scientific congress with Gulf general-surgery societies, bringing together surgeons, speakers and partners from Saudi Arabia and beyond.",
+        "es": "Congreso científico conjunto con sociedades de cirugía del Golfo, que reúne cirujanos, ponentes y socios regionales."
+      },
+      "location": {
+        "ar": "فندق هيلتون جدة",
+        "en": "Hilton Jeddah Hotel",
+        "es": "Hotel Hilton Yeda"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال المتحدثين والوفود • تنقلات خاصة • تنسيق عشاء بعد المؤتمر • جولة جدة التاريخية للضيوف",
+        "en": "Speaker and delegation reception • Private transfers • Post-conference dinner coordination • Historic Jeddah guest tour",
+        "es": "Recepción de ponentes y delegaciones • Traslados privados • Cena tras el congreso • Visita a Yeda Histórica"
+      },
+      "audience": {
+        "ar": "الاستشاريون والجراحون والباحثون والمتحدثون والجهات الصحية والشركات الداعمة",
+        "en": "Consultants, surgeons, researchers, speakers, healthcare organisations and sponsoring companies",
+        "es": "Consultores, cirujanos, investigadores, ponentes, instituciones sanitarias y patrocinadores"
+      },
+      "ticketing": {
+        "status": "registration_open",
+        "ar": "التسجيل مدفوع عبر الموقع الرسمي، وتختلف الرسوم حسب الفئة والعضوية؛ تحقق من السعر عند الحجز.",
+        "en": "Paid registration is available on the official site; fees vary by category and membership. Recheck before booking.",
+        "es": "Inscripción de pago en el sitio oficial; las tarifas dependen de la categoría y membresía. Confirma antes de reservar."
+      },
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {
+        "ar": "ضيافة أفنتورا للمؤتمرات والوفود الطبية",
+        "en": "Aventura hospitality for medical conferences and delegations",
+        "es": "Hospitalidad de Aventura para congresos y delegaciones médicas"
+      },
+      "imageRights": {
+        "source": "Existing repository asset designated Aventura-owned; independent commercial-rights audit pending",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
+      },
+      "sourceUrl": "https://sgss.org.sa/en/sgss2026/",
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "status": "confirmed",
+        "notes": "Saudi General Surgery Society official congress page confirms 6–8 Nov 2026, Hilton Jeddah, regional audience and paid registration. https://sgss.org.sa/en/sgss2026/"
+      },
+      "priority": 2
+    },
+    {
       "id": "hajj-conference-exhibition-2026",
       "active": true,
-      "priority": 2,
+      "priority": 3,
       "startDate": "2026-11-08",
       "endDate": "2026-11-11",
       "title": {
@@ -192,13 +259,14 @@
       "imageRights": {
         "source": "Aventura-owned asset (repository designation; independent license not audited)",
         "commercialUse": true,
-        "attributionRequired": false
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
       },
       "sourceUrl": "https://hajjconfex.com",
       "verification": {
-        "checkedOn": "2026-10-23",
+        "checkedOn": "2026-10-25",
         "status": "confirmed",
-        "notes": "Pilgrim Experience Program announcement 14 Sep confirms 8–11 Nov; official plan-your-visit confirms Jeddah Superdome, doors from 09:00, free mandatory e-badge registration. https://pep.gov.sa/en/news/1031 ; https://hajjconfex.transcend.com.sa/plan-your-visit"
+        "notes": "Official Ministry/PEP and conference website confirm 8–11 Nov 2026, Jeddah Superdome, free e-badge registration. https://pep.gov.sa/en/news/1031 ; https://hajjconfex.transcend.com.sa/"
       },
       "timeLabels": {
         "ar": "تفتح الأبواب من 9:00 ص؛ تختلف مواعيد الجلسات.",
@@ -210,7 +278,7 @@
       "id": "jewellery-salon-jeddah-2026",
       "active": true,
       "featured": false,
-      "priority": 3,
+      "priority": 4,
       "startDate": "2026-11-12",
       "endDate": "2026-11-15",
       "startTime": "16:00",
@@ -275,15 +343,15 @@
       },
       "sourceUrl": "https://www.jewellerysalon.com/en/",
       "verification": {
-        "checkedOn": "2026-10-23",
+        "checkedOn": "2026-10-25",
         "status": "confirmed",
-        "notes": "Official organiser confirms 12–15 Nov 2026, 16:00–23:00 at Benchmark Jeddah. Visitor registration page is outdated (2025), so 2026 entry availability is NOT confirmed. https://www.jewellerysalon.com/en/registertovisit.php"
+        "notes": "Official Jewellery Salon site confirms Jeddah 12–15 Nov 2026, Benchmark, 16:00–23:00. Riyadh edition postponed, not Jeddah. Visitor registration page is outdated (2025); 2026 admission unconfirmed. https://www.jewellerysalon.com/en/"
       }
     },
     {
       "id": "foodex-saudi-jeddah-2026",
       "active": true,
-      "priority": 4,
+      "priority": 5,
       "startDate": "2026-11-23",
       "endDate": "2026-11-25",
       "title": {
@@ -336,13 +404,14 @@
       "imageRights": {
         "source": "Aventura-owned asset (repository designation; independent license not audited)",
         "commercialUse": true,
-        "attributionRequired": false
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
       },
       "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
       "verification": {
-        "checkedOn": "2026-10-23",
+        "checkedOn": "2026-10-25",
         "status": "confirmed",
-        "notes": "Official organiser confirms 23–25 Nov, 16:00–23:00 and free trade-visitor app registration. Official site inconsistently uses JIECC and Jeddah Center for Exhibitions and Events; confirm exact venue address/entrance before any guest itinerary. https://www.foodexsaudiexpo.com/en/registertovisit"
+        "notes": "Official organiser confirms 23–25 Nov 2026, 16:00–23:00, Jeddah. Site alternates JIECC and Jeddah Center for Exhibitions and Events; verify exact entrance before transfers. https://www.foodexsaudiexpo.com/en"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -353,7 +422,7 @@
     {
       "id": "saudi-franchise-expo-jeddah-2026",
       "active": true,
-      "priority": 5,
+      "priority": 6,
       "startDate": "2026-11-23",
       "endDate": "2026-11-25",
       "title": {
@@ -406,13 +475,14 @@
       "imageRights": {
         "source": "Aventura-owned asset (repository designation; independent license not audited)",
         "commercialUse": true,
-        "attributionRequired": false
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
       },
       "sourceUrl": "https://www.saudifranchiseexpo.com/",
       "verification": {
-        "checkedOn": "2026-10-23",
+        "checkedOn": "2026-10-25",
         "status": "confirmed",
-        "notes": "Official organiser confirms 23–25 Nov 2026, Jeddah Center for Exhibitions and Events, 16:00–23:00, free trade visitor registration and matchmaking. https://www.saudifranchiseexpo.com/visit"
+        "notes": "Official organiser confirms 23–25 Nov 2026, 16:00–23:00, Jeddah Center for Exhibitions and Events; free trade-visitor registration. https://www.saudifranchiseexpo.com/"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -423,7 +493,7 @@
     {
       "id": "international-trade-exchange-expo-2027",
       "active": true,
-      "priority": 6,
+      "priority": 7,
       "startDate": "2027-10-27",
       "endDate": "2027-10-29",
       "title": {
@@ -476,13 +546,14 @@
       "imageRights": {
         "source": "Aventura-owned asset",
         "commercialUse": true,
-        "attributionRequired": false
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
       },
       "sourceUrl": "https://jitexpo.com/",
       "verification": {
-        "checkedOn": "2026-10-23",
+        "checkedOn": "2026-10-25",
         "status": "confirmed",
-        "notes": "Official organiser site confirms 27–29 Oct 2027 at Jeddah Center for Exhibitions & Events. This is beyond the 14-day display window. https://jitexpo.com/"
+        "notes": "Official organiser confirms 27–29 October 2027; some third-party directories incorrectly display 2026. https://jitexpo.com/"
       }
     }
   ],
