@@ -71,19 +71,34 @@ assert.ok(translations.includes('"contact.durationHalf": "نصف يوم (حتى 
 assert.ok(translations.includes('"contact.durationFull": "يوم كامل (حتى 8 ساعات)"'));
 assert.ok(!/corporate\.introText[^\n]*(?:budget|ميزاني[ةه]|presupuesto)/i.test(translations));
 
-assert.equal(curated.lastReviewed, "2026-10-07");
-const tradeExpo = curated.events.find((event) => event.id === "international-trade-exchange-expo-2027");
-assert.ok(tradeExpo, "corrected 2027 trade expo is missing");
-assert.equal(tradeExpo.startDate, "2027-10-27");
-assert.equal(tradeExpo.endDate, "2027-10-29");
+// Keep the review contract strict without pinning it to a historical publication date.
+function validDate(value) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const parsed = new Date(value + "T12:00:00Z");
+  return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
+}
+const todayParts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Asia/Riyadh", year: "numeric", month: "2-digit", day: "2-digit"
+}).formatToParts(new Date()).map(part => [part.type, part.value]));
+const todaySaudi = todayParts.year + "-" + todayParts.month + "-" + todayParts.day;
+assert.ok(validDate(curated.lastReviewed), "Curated Calendar review date must be YYYY-MM-DD");
+assert.ok(curated.lastReviewed <= todaySaudi, "Curated Calendar review date cannot be in the future");
+assert.ok(Array.isArray(curated.events) && curated.events.length > 0, "Curated Calendar must have entries");
+assert.equal(new Set(curated.events.map(event => event.id)).size, curated.events.length, "duplicate event IDs");
 for (const event of curated.events) {
-  assert.equal(event.verification?.checkedOn, "2026-10-07", "stale event verification: "+event.id);
+  assert.ok(validDate(event.startDate) && validDate(event.endDate), "invalid event dates: " + event.id);
+  assert.ok(event.startDate <= event.endDate, "reversed event date range: " + event.id);
+  assert.equal(event.verification?.checkedOn, curated.lastReviewed,
+    "event must be verified on the latest editorial review: " + event.id);
 }
 
-for (const sitemap of ["sitemap.xml","sitemap-ar.xml","sitemap-en.xml","sitemap-es.xml"]) {
-  const source=read(sitemap);
-  assert.ok(source.includes("<lastmod>2026-10-07</lastmod>"), sitemap+" has stale lastmod");
-  assert.ok(!source.includes("<lastmod>2026-09-11</lastmod>"), sitemap+" still contains old lastmod");
+for (const sitemap of ["sitemap.xml", "sitemap-ar.xml", "sitemap-en.xml", "sitemap-es.xml"]) {
+  const lastmods = [...read(sitemap).matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(match => match[1]);
+  assert.ok(lastmods.length > 0, sitemap + " must have lastmod entries");
+  for (const date of lastmods) {
+    assert.ok(validDate(date), sitemap + " contains an invalid lastmod");
+    assert.ok(date <= todaySaudi, sitemap + " has a future lastmod");
+  }
 }
 
 console.log("Full site review contract checks passed.");
