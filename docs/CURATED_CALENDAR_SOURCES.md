@@ -1,6 +1,6 @@
 # Aventura Curated Calendar — source, rights, and publishing rules
 
-Last reviewed: 2026-09-30
+Last reviewed: 2026-10-25
 
 ## Purpose
 
@@ -17,12 +17,12 @@ Curated-event updates are published **only on the Aventura website as event card
 
 ## Image and rights policy
 
-Live website cards currently use Aventura-owned image assets only. This is safer than reusing organiser photography and avoids unclear third-party rights.
+Live website cards use existing repository assets designated Aventura-owned. Their underlying commercial-rights documentation has not been independently audited. Do not introduce new third-party imagery without verified permission.
 
-Current approved event-card assets:
-- `assets/images/gulf-cup-27-jeddah-card.webp` — Aventura-owned; commercial use permitted; no attribution required.
-- `assets/images/event-corporate.webp` — Aventura-owned; commercial use permitted; no attribution required.
-- `assets/images/event-private.webp` — Aventura-owned; commercial use permitted; no attribution required.
+Existing event-card assets (repository rights designation; independent audit pending):
+- `assets/images/gulf-cup-27-jeddah-card.webp` — repository-designated Aventura-owned; independent ownership and license audit pending.
+- `assets/images/event-corporate.webp` — repository-designated Aventura-owned; independent ownership and license audit pending.
+- `assets/images/event-private.webp` — repository-designated Aventura-owned; independent ownership and license audit pending.
 
 Rules:
 1. Do not use random Google Images.
@@ -39,93 +39,35 @@ Rules:
 5. Re-check any event before confirming a paid guest itinerary, even if the website card was previously verified.
 6. The live data file should contain only current and future events; Git history is sufficient for past-event traceability.
 
-## Active and future event verification — 30 Sep 2026
+## Current and future event verification — 25 Oct 2026
 
-### Gulf Cup 27 — Jeddah
-- Dates: 23 Sep–6 Oct 2026
-- Official tourism guide: https://www.visitsaudi.com/en/campaigns/gulf-cup-27
-- Saudi Arabian Football Federation schedule: https://saff.com.sa/en/nationalteams.php?id=1&type=2
-- Status: confirmed and in progress.
-- Aventura fit: Gulf delegations, teams, media, executives, VIP guests; full-stay hosting between match days.
+The canonical live list is `data/curated-events.json`. The site has a rolling 14-day display window; future records may be retained for planning and will not necessarily appear on the live cards today.
 
-### 18th International Breast Cancer Conference — IBCC 2026
-- Dates: 1–4 Oct 2026
-- Venue: Hilton Jeddah Hotel
-- Official site: https://www.ibcc-jed.org/
-- Official registration: https://reg2026.ibcc-jed.org/
-- Status: confirmed; registration open.
-- Aventura fit: scientific delegations, speakers, supporting companies, executives.
+| Event | Dates | Official source | Admission / operational note |
+| --- | --- | --- | --- |
+| Jeddah International Motor Show | 4–7 Nov 2026 | https://www.int-motorshowjeddah.com/en/visit | Visitor invitation registration open. 4 Nov press/VIP; 5–7 Nov visitor days. Registration does not guarantee access. |
+| 17th Saudi General Surgery Society Congress | 6–8 Nov 2026 | https://sgss.org.sa/en/sgss2026/ | Hilton Jeddah; paid registration varies by category and membership. Delegations, speakers and medical executives. |
+| Hajj Conference & Exhibition | 8–11 Nov 2026 | https://hajjconfex.transcend.com.sa/ | Jeddah Superdome; free visitor e-badge registration. Ministry source: https://pep.gov.sa/en/news/1031 |
+| Jewellery Salon Jeddah | 12–15 Nov 2026 | https://www.jewellerysalon.com/en/ | Benchmark, 16:00–23:00. 2026 visitor registration is not verified; visitor page still references 2025. Riyadh edition postponed, Jeddah dates remain listed. |
+| Foodex Saudi | 23–25 Nov 2026 | https://www.foodexsaudiexpo.com/en | 16:00–23:00. Official site uses JIECC and Jeddah Center for Exhibitions and Events naming; confirm exact drop-off/entrance before guest transfers. |
+| Saudi Franchise Expo Jeddah | 23–25 Nov 2026 | https://www.saudifranchiseexpo.com/ | Jeddah Center for Exhibitions and Events, 16:00–23:00; free trade visitor registration. |
+| International Trade Exchange Expo | 27–29 Oct **2027** | https://jitexpo.com/ | Organiser's 2027 date takes precedence over third-party 2026 listings. Long-range planning only. |
 
-### MEETES 2026 — Middle East Education & Training Exhibition
-- Dates: 5–7 Oct 2026
-- Venue: Jeddah Center for Exhibitions & Events
-- Official visitor page: https://meetes-sa.com/secure-your-visit/
-- Organiser: https://iconexpo.com.sa/
-- Visiting hours: 09:00–13:00 and 17:00–22:00 daily.
-- Status: confirmed; free visitor registration available.
-- Aventura fit: universities, education leaders, government entities, training providers, EdTech, international delegations.
+## Excluded or deferred candidates
 
-### SAJEX 2026 — Saudi Arabia Jewellery Exposition
-- Dates: 6–8 Oct 2026
-- Venue: Jeddah Superdome
-- Official organiser page: https://gjepc.org/sajex/
-- Format: B2B
-- Status: confirmed; visitor/exhibitor registration provided by organiser.
-- Aventura fit: buyers, exhibitors, importers/exporters, sourcing agents, VIP trade guests.
+- Jewels of the World — Jeddah, originally 19–22 Oct 2026: postponed without confirmed replacement; do not restore on old dates.
+- Saudi Maritime & Logistics Congress, 21–22 Oct 2026: completed and removed from live data.
+- World Trade Expo — Saudi Arabia: official website now says **30 Nov–2 Dec 2027**, despite directories still showing 1–3 Dec 2026. Do not list as a 2026 event. https://wtexpo-sa.com/
+- International Port & Marine Development Conference: official organiser currently lists **6–7 Apr 2027**, not 9–10 Nov 2026 as some directories claim. Do not add under the old date. https://portdevelopmentconference.com/
+- Jewel of Saudi, 18–20 Dec 2026: official search listings suggest Jeddah Superdome, but live organiser website was inaccessible during this review. Hold until independently rechecked. https://jewelofsaudi.com/
 
-### 4th International Conference on Mass-Gatherings & Emergency Medicine
-- Dates: 7–9 Oct 2026
-- Venue: University of Business and Technology (UBT), Jeddah
-- Official conference site: https://icmgem.com/ar
-- Saudi Society for Pediatric Emergency Medicine listing: https://spem.org.sa/en/events/icmgem-2026
-- Registration: SAR 375 for the conference; selected workshops are free after conference registration.
-- Status: confirmed; registration open.
-- Aventura fit: speakers, healthcare leaders, scientific delegations; directly relevant to major-event and delegation logistics.
+## Content and design handoff
 
-### Saudi AutoCare 2026
-- Dates: 13–15 Oct 2026
-- Venue: Jeddah Center for Exhibitions & Events
-- Official organiser calendar: https://iconexpo.com.sa/
-- Status: confirmed by organiser calendar; registration details should be re-checked before guest confirmation.
-- Aventura fit: automotive manufacturers, parts suppliers, distributors, buyers, international business delegations.
+Maya's reference-only package for the new SGSS congress: target medical delegations, visiting speakers, healthcare executives and sponsors; recommended Aventura services are private transfers, reception, after-conference dinner and a Historic Jeddah experience. Use existing `assets/images/event-corporate.webp` provisionally, subject to independent rights audit. No social-media publishing.
 
-### Jewels of the World — Jeddah 2026
-- Dates: 19–22 Oct 2026
-- Venue: Hilton Jeddah Hotel
-- Official Jeddah edition: https://jowsaudi.com/events/jeddah/
-- Visitor information: https://jowsaudi.com/visit/plan-your-visit/
-- Hours: 16:00–23:00 daily
-- Entry: free with registration.
-- Status: confirmed.
-- Aventura fit: VIP clients, collectors, high-value buyers, designers, international brands and executive guests.
+## Archive and corrections
 
-### Saudi Maritime & Logistics Congress 2026
-- Dates: 21–22 Oct 2026
-- Venue: Jeddah Superdome
-- Official information/pass page: https://landingpages.saudimaritimecongress.com/
-- Hours: 21 Oct 10:00–20:00; 22 Oct 10:00–19:00
-- Entry: free visitor pass.
-- Status: confirmed.
-- Aventura fit: maritime/logistics executives, supply-chain leaders, ports, speakers and international delegations.
-
-### International Trade Exchange Expo 2026
-- Dates: 27–29 Oct 2026
-- Venue: Jeddah Center for Exhibitions & Events
-- Official event site: https://jitexpo.com/
-- SCEGA calendar reference: https://www.scega.gov.sa/Documents/V5Calendar2026.pdf
-- Status: confirmed; re-check the visitor-registration path before the event enters the 14-day display window.
-- Aventura fit: companies, investors, entrepreneurs, buyers and international trade delegations.
-
-## Removed from live data on 30 Sep 2026
-
-The following events ended before the current review and were removed from the live JSON:
-- META-GEDS EXPO 2026
-- The Saudi Food Show + Saudifood Manufacturing 2026
-- Saudi Fashiontex Expo 2026
-- Saudi Hometex Expo 2026
-- Saudi Shoes Expo 2026
-
-Past-event details remain recoverable from Git history; no separate dated review files are needed.
+Expired or postponed events are removed from the live JSON; Git history preserves earlier versions. Earlier dated source notes were stale, including an incorrect claim that International Trade Exchange Expo was confirmed for October 2026. Always follow the latest organiser page.
 
 ## Editorial disclaimer
 
