@@ -73,7 +73,7 @@ assert.ok(!/corporate\.introText[^\n]*(?:budget|ميزاني[ةه]|presupuesto)/
 
 // Keep the review contract strict without pinning it to a historical publication date.
 function validDate(value) {
-  if (typeof value !== "string" || !/^\\d{4}-\\d{2}-\\d{2}$/.test(value)) return false;
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const parsed = new Date(value + "T12:00:00Z");
   return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
 }
@@ -93,7 +93,7 @@ for (const event of curated.events) {
 }
 
 for (const sitemap of ["sitemap.xml", "sitemap-ar.xml", "sitemap-en.xml", "sitemap-es.xml"]) {
-  const lastmods = [...read(sitemap).matchAll(/<lastmod>([^<]+)<\\/lastmod>/g)].map(match => match[1]);
+  const lastmods = [...read(sitemap).matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(match => match[1]);
   assert.ok(lastmods.length > 0, sitemap + " must have lastmod entries");
   for (const date of lastmods) {
     assert.ok(validDate(date), sitemap + " contains an invalid lastmod");
