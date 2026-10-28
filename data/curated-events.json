@@ -1,5 +1,5 @@
 {
-  "version": "1.8.6",
+  "version": "1.8.7",
   "windowDays": 14,
   "lastReviewed": "2026-10-28",
   "reviewedBy": "Salem + Aventura team",
@@ -527,10 +527,10 @@
         "es": "Líderes del agua, entidades públicas, operadores, inversores, empresas tecnológicas, ponentes y delegaciones internacionales"
       },
       "ticketing": {
-        "status": "registration_open",
-        "ar": "التسجيل متاح؛ بطاقة زيارة المعرض مجانية، وبطاقات المؤتمر وVIP مدفوعة حسب الفئة. تحقق من الأسعار والشروط قبل الحجز.",
-        "en": "Registration open: exhibition visitor pass is free; conference and VIP passes are paid by tier. Verify current fees and terms before booking.",
-        "es": "Registro abierto: pase de visitante a la exposición gratuito; pases del congreso y VIP de pago. Confirma tarifas y condiciones."
+        "status": "organiser_info",
+        "ar": "صفحة التذاكر الرسمية تعرض حاليًا بطاقات مدفوعة للمعرض والمؤتمر وVIP؛ انتهى تاريخ العرض المبكر المذكور (30 سبتمبر 2026). تحقق من السعر النهائي والتوافر قبل الحجز.",
+        "en": "The official ticket page currently lists paid exhibition, delegate and VIP passes; its early-bird deadline (30 Sep 2026) has passed. Reconfirm current pricing and availability before booking.",
+        "es": "La página oficial ofrece pases de pago para exposición, congreso y VIP; el plazo de preventa (30 sep 2026) ya pasó. Confirma el precio y la disponibilidad antes de reservar."
       },
       "image": "assets/images/event-corporate.webp",
       "imageAlt": {
@@ -546,9 +546,9 @@
       },
       "sourceUrl": "https://idwsc.com/",
       "verification": {
-        "checkedOn": "2026-10-27",
+        "checkedOn": "2026-10-28",
         "status": "confirmed",
-        "notes": "Official conference and Saudi Press Agency (20 Oct 2026) confirm 14–16 Dec 2026, Ritz-Carlton Jeddah; supersedes older June announcement of 7–9 Dec. Official tickets page shows free exhibition pass and paid delegate/premium passes. https://idwsc.com/ ; https://idwsc.com/tickets-2026 ; https://www.spa.gov.sa/en/N2706141"
+        "notes": "Official event page confirms 14–16 Dec 2026 at Ritz-Carlton Jeddah. Official tickets page lists paid Visitor, Delegate and Premium passes (Visitor original USD 100, expired early bird USD 50 until 30 Sep 2026), contradicting prior file claim that exhibition visitor pass was free. Do not promise free admission. https://idwsc.com/ ; https://idwsc.com/tickets-2026"
       }
     },
     {
