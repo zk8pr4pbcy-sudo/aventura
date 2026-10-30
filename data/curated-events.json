@@ -1,7 +1,7 @@
 {
-  "version": "1.8.7",
+  "version": "1.8.8",
   "windowDays": 14,
-  "lastReviewed": "2026-10-28",
+  "lastReviewed": "2026-10-30",
   "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
@@ -360,9 +360,9 @@
         "es": "Foodex Arabia Saudita 2026"
       },
       "category": {
-        "ar": "مؤتمرات دولية وأعمال",
-        "en": "International conference & business",
-        "es": "Congreso internacional y negocios"
+        "ar": "معرض تجاري للأغذية والمشروبات",
+        "en": "Food & beverage trade exhibition",
+        "es": "Feria comercial de alimentos y bebidas"
       },
       "focusLabel": {
         "ar": "وفود دولية • قيادات • تنفيذيون",
@@ -375,9 +375,9 @@
         "es": "Feria de alimentos y bebidas para compradores y expositores"
       },
       "location": {
-        "ar": "مركز جدة الدولي للمعارض والمؤتمرات",
-        "en": "Jeddah International Exhibition and Convention Center",
-        "es": "Centro Internacional de Exposiciones y Convenciones de Yeda"
+        "ar": "جدة — مقر المعرض يحتاج تأكيدًا من المنظم",
+        "en": "Jeddah — exact exhibition venue to be confirmed with organiser",
+        "es": "Yeda — sede exacta pendiente de confirmación con el organizador"
       },
       "aventuraPlan": {
         "ar": "استقبال المشترين والعارضين • تنقلات خاصة • تنسيق اجتماعات تجارية • عشاء ضيافة أو جولة جدة التاريخية",
@@ -409,9 +409,9 @@
       },
       "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
       "verification": {
-        "checkedOn": "2026-10-28",
+        "checkedOn": "2026-10-30",
         "status": "confirmed",
-        "notes": "Official visitor registration confirms free entry for trade and non-trade visitors but explicitly states children are not allowed; 23–25 Nov 2026, JIECC. Free business-match programme is for qualified managers/buyers. Confirm venue gate before transfers. https://www.foodexsaudiexpo.com/en/registertovisit ; https://www.foodexsaudiexpo.com/en/business-match-program"
+        "notes": "Official Foodex site confirms 23–25 Nov 2026, 16:00–23:00, free online/WhatsApp/app registration for trade and non-trade visitors, and no children. Venue conflict on official pages: homepage header says Jeddah Center for Exhibitions and Events (JCEE), venue/footer says Jeddah International Exhibition & Convention Center (JIECC). Public venue label kept generic until organiser resolves exact gate. https://www.foodexsaudiexpo.com/en ; https://www.foodexsaudiexpo.com/en/registertovisit"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -483,6 +483,77 @@
         "checkedOn": "2026-10-27",
         "status": "confirmed",
         "notes": "Official homepage says 16:00–23:00 while official About page lists trade visitors 16:00–22:00. Removed precise public-facing hours pending organiser confirmation; official registration says free but screened for trade visitors. https://www.saudifranchiseexpo.com/ ; https://www.saudifranchiseexpo.com/about ; https://www.saudifranchiseexpo.com/register-to-visit"
+      }
+    },
+    {
+      "id": "agrofood-propack-jeddah-2026",
+      "active": true,
+      "priority": 8,
+      "startDate": "2026-12-08",
+      "endDate": "2026-12-10",
+      "title": {
+        "ar": "Agrofood وProPack جدة 2026",
+        "en": "Agrofood & ProPack Jeddah 2026",
+        "es": "Agrofood y ProPack Yeda 2026"
+      },
+      "category": {
+        "ar": "أغذية وزراعة وتغليف • أعمال",
+        "en": "Agriculture, food & packaging trade",
+        "es": "Agricultura, alimentación y embalaje"
+      },
+      "focusLabel": {
+        "ar": "مستثمرون • مشترون • موردون • وفود",
+        "en": "Investors • Buyers • Suppliers • Delegations",
+        "es": "Inversores • Compradores • Proveedores • Delegaciones"
+      },
+      "summary": {
+        "ar": "معرضان تجاريان متزامنان للزراعة والمنتجات الغذائية وحلول التغليف والطباعة والبلاستيك، يجمعان المنتجين والمستوردين والموردين والشركات في جدة.",
+        "en": "Co-located trade exhibitions for agriculture, food products, packaging, printing and plastics, connecting producers, importers and suppliers in Jeddah.",
+        "es": "Ferias comerciales simultáneas de agricultura, alimentación, embalaje, impresión y plásticos que reúnen productores, importadores y proveedores en Yeda."
+      },
+      "location": {
+        "ar": "مركز جدة للمعارض والفعاليات (JCEE)",
+        "en": "Jeddah Center for Exhibitions and Events (JCEE)",
+        "es": "Centro de Exposiciones y Eventos de Yeda (JCEE)"
+      },
+      "timeLabels": {
+        "ar": "يوميًا: 4:00 م–10:00 م",
+        "en": "Daily: 4:00 PM–10:00 PM",
+        "es": "Diario: 16:00–22:00"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال الوفود التجارية • نقل خاص من المطار والفندق • تنسيق زيارة المعرض • عشاء أعمال • تجربة جدة التاريخية خلال فترة الإقامة",
+        "en": "Trade delegation reception • Private airport and hotel transfers • Exhibition visit coordination • Business dinner • Historic Jeddah experience during the stay",
+        "es": "Recepción de delegaciones comerciales • Traslados privados desde aeropuerto y hotel • Coordinación de la visita • Cena de negocios • Yeda Histórica durante la estancia"
+      },
+      "audience": {
+        "ar": "شركات الزراعة والأغذية والمصانع والمستوردون والمصدرون وموردو التغليف والطباعة والمشترون والمستثمرون",
+        "en": "Agriculture and food businesses, manufacturers, importers, exporters, packaging and printing suppliers, trade buyers and investors",
+        "es": "Empresas agrícolas y alimentarias, fabricantes, importadores, exportadores, proveedores de embalaje e impresión, compradores e inversores"
+      },
+      "ticketing": {
+        "status": "organiser_info",
+        "ar": "يعلن المنظم التسجيل المجاني للزيارة ويوفر رابطًا للتسجيل، لكن لم يُتحقق من إتمام إصدار بطاقة الدخول؛ أكّدها مع المنظم قبل الحجز.",
+        "en": "The organiser advertises free visitor registration and provides a form; successful badge issuance has not been verified. Confirm with the organiser before booking.",
+        "es": "El organizador anuncia registro gratuito y ofrece un formulario, pero no se ha verificado la emisión del pase. Confírmalo antes de reservar."
+      },
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {
+        "ar": "تنسيق أفنتورا لضيافة وفد تجاري في جدة",
+        "en": "Aventura hospitality for a trade delegation in Jeddah",
+        "es": "Hospitalidad de Aventura para una delegación comercial en Yeda"
+      },
+      "imageRights": {
+        "source": "Existing repository asset designated Aventura-owned; original commercial license and photographer attribution not independently audited",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
+      },
+      "sourceUrl": "https://agrofoodjeddah.com/secure-your-visit/",
+      "verification": {
+        "checkedOn": "2026-10-30",
+        "status": "confirmed",
+        "notes": "ICON official event portfolio confirms Agrofood and ProPack co-located 8–10 Dec 2026 at JCEE. Official visitor page confirms audience and registration link; main site lists 16:00–22:00 daily. Registration link redirects to external form and successful badge issuance could not be tested. https://iconexpo.com.sa/ ; https://agrofoodjeddah.com/secure-your-visit/ ; https://agrofoodjeddah.com/"
       }
     },
     {
