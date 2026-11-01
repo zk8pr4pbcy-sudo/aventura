@@ -1,7 +1,7 @@
 {
-  "version": "1.8.8",
+  "version": "1.8.9",
   "windowDays": 14,
-  "lastReviewed": "2026-10-30",
+  "lastReviewed": "2026-11-01",
   "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
@@ -127,9 +127,9 @@
       },
       "sourceUrl": "https://www.int-motorshowjeddah.com/en/visit",
       "verification": {
-        "checkedOn": "2026-10-28",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "Official organiser confirms Nov 4 press/VIP and Nov 5–7 visitor days, JCEE; registration link live. 16 Oct official blog says free QR tickets, but organiser invitation/credential requirements should be confirmed for media/VIP. https://www.int-motorshowjeddah.com/en ; https://www.int-motorshowjeddah.com/en/blog/five-reasons-jims-2026"
+        "notes": "Official JIMS site confirms 4 Nov press/VIP and 5–7 Nov visitor days, JCEE; online registration advertised. https://www.int-motorshowjeddah.com/en"
       },
       "timeLabels": {
         "ar": "4 نوفمبر: الإعلام والضيوف المدعوون؛ 5–7 نوفمبر: أيام الزوار",
@@ -198,9 +198,9 @@
       },
       "sourceUrl": "https://hajjconfex.com",
       "verification": {
-        "checkedOn": "2026-10-28",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "SPA (21 Oct 2026) confirms 8–11 Nov 2026 in Jeddah. Official Hajj Conference site details an innovation/startups zone, business meetings and agreement-signing platform; e-badge registration from prior review. https://www.spa.gov.sa/N2706565 ; https://hajjconfex.com/innovation-startups ; https://hajjconfex.com/Contract-Signing-Platform"
+        "notes": "Ministry/PEP confirms 8–11 Nov 2026 in Jeddah; official Hajj site confirms 09:00–21:00 and registration. https://pep.gov.sa/en/news/1031 ; https://hajjconfex.com/"
       },
       "timeLabels": {
         "ar": "تفتح الأبواب من 9:00 ص؛ تختلف مواعيد الجلسات.",
@@ -277,9 +277,9 @@
       },
       "sourceUrl": "https://www.jewellerysalon.com/en/",
       "verification": {
-        "checkedOn": "2026-10-25",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "Official Jewellery Salon site confirms Jeddah 12–15 Nov 2026, Benchmark, 16:00–23:00. Riyadh edition postponed, not Jeddah. Visitor registration page is outdated (2025); 2026 admission unconfirmed. https://www.jewellerysalon.com/en/"
+        "notes": "Official Jewellery Salon site confirms 12–15 Nov 2026 at Benchmark, 16:00–23:00. 2026 admission not independently verified. https://www.jewellerysalon.com/en/"
       }
     },
     {
@@ -343,9 +343,9 @@
       },
       "sourceUrl": "https://paperme-saudi.com/",
       "verification": {
-        "checkedOn": "2026-10-27",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "Organiser PAPER-ME and PRINT2PACK official sites confirm 16–18 Nov 2026 at JCEE, Jeddah; both share venue/dates and are curated as one card. Registration form currently says 'Registration was ended' (checked 2026-10-27). https://paperme-saudi.com/ ; https://www.print2pack-saudi.com/ ; https://paperme-p2p.saudireg.net/?src=15"
+        "notes": "Both official sites confirm 16–18 Nov 2026 at JCEE. Prior visitor registration had ended; admission not confirmed. https://paperme-saudi.com/ ; https://www.print2pack-saudi.com/"
       }
     },
     {
@@ -409,9 +409,9 @@
       },
       "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
       "verification": {
-        "checkedOn": "2026-10-30",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "Official Foodex site confirms 23–25 Nov 2026, 16:00–23:00, free online/WhatsApp/app registration for trade and non-trade visitors, and no children. Venue conflict on official pages: homepage header says Jeddah Center for Exhibitions and Events (JCEE), venue/footer says Jeddah International Exhibition & Convention Center (JIECC). Public venue label kept generic until organiser resolves exact gate. https://www.foodexsaudiexpo.com/en ; https://www.foodexsaudiexpo.com/en/registertovisit"
+        "notes": "Official Foodex homepage confirms 23–25 Nov 2026; venue name inconsistent between homepage heading JCEE and detailed venue section JIECC. Public venue kept generic pending confirmation. https://www.foodexsaudiexpo.com/en"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -480,9 +480,9 @@
       },
       "sourceUrl": "https://www.saudifranchiseexpo.com/",
       "verification": {
-        "checkedOn": "2026-10-27",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "Official homepage says 16:00–23:00 while official About page lists trade visitors 16:00–22:00. Removed precise public-facing hours pending organiser confirmation; official registration says free but screened for trade visitors. https://www.saudifranchiseexpo.com/ ; https://www.saudifranchiseexpo.com/about ; https://www.saudifranchiseexpo.com/register-to-visit"
+        "notes": "Official organiser confirms 23–25 Nov 2026 at JCEE, free trade visitor registration subject to screening; 22:00 vs 23:00 closing-hour discrepancy remains. https://www.saudifranchiseexpo.com/ ; https://www.saudifranchiseexpo.com/about"
       }
     },
     {
@@ -551,9 +551,9 @@
       },
       "sourceUrl": "https://agrofoodjeddah.com/secure-your-visit/",
       "verification": {
-        "checkedOn": "2026-10-30",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "ICON official event portfolio confirms Agrofood and ProPack co-located 8–10 Dec 2026 at JCEE. Official visitor page confirms audience and registration link; main site lists 16:00–22:00 daily. Registration link redirects to external form and successful badge issuance could not be tested. https://iconexpo.com.sa/ ; https://agrofoodjeddah.com/secure-your-visit/ ; https://agrofoodjeddah.com/"
+        "notes": "Official Agrofood visit page confirms 8–10 Dec 2026 at JCEE, app-based visitor registration. https://agrofoodjeddah.com/secure-your-visit/"
       }
     },
     {
@@ -617,9 +617,9 @@
       },
       "sourceUrl": "https://idwsc.com/",
       "verification": {
-        "checkedOn": "2026-10-28",
+        "checkedOn": "2026-11-01",
         "status": "confirmed",
-        "notes": "Official event page confirms 14–16 Dec 2026 at Ritz-Carlton Jeddah. Official tickets page lists paid Visitor, Delegate and Premium passes (Visitor original USD 100, expired early bird USD 50 until 30 Sep 2026), contradicting prior file claim that exhibition visitor pass was free. Do not promise free admission. https://idwsc.com/ ; https://idwsc.com/tickets-2026"
+        "notes": "Official conference confirms 14–16 Dec 2026 at Ritz-Carlton Jeddah. Do not promise free admission; verify pass price at purchase. https://idwsc.com/"
       }
     },
     {
@@ -686,6 +686,73 @@
         "checkedOn": "2026-10-25",
         "status": "confirmed",
         "notes": "Official organiser confirms 27–29 October 2027; some third-party directories incorrectly display 2026. https://jitexpo.com/"
+      }
+    },
+    {
+      "id": "jewel-of-saudi-jeddah-2026",
+      "active": true,
+      "featured": false,
+      "priority": 10,
+      "startDate": "2026-12-18",
+      "endDate": "2026-12-20",
+      "title": {
+        "ar": "جوهرة السعودية 2026 — جدة",
+        "en": "Jewel of Saudi 2026 — Jeddah",
+        "es": "Jewel of Saudi 2026 — Yeda"
+      },
+      "category": {
+        "ar": "مجوهرات وصناعة ومعرض أعمال B2B",
+        "en": "Jewellery manufacturing & B2B trade",
+        "es": "Joyería, fabricación y comercio B2B"
+      },
+      "focusLabel": {
+        "ar": "مشترون دوليون • مصنعون • وفود VIP",
+        "en": "International buyers • Manufacturers • VIP delegations",
+        "es": "Compradores internacionales • Fabricantes • Delegaciones VIP"
+      },
+      "summary": {
+        "ar": "معرض دولي متخصص في المجوهرات ومعدات تصنيعها، ويجمع المشترين المستضافين والمصنعين والوفود التجارية.",
+        "en": "International B2B exhibition for fine jewellery and manufacturing machinery, bringing together hosted buyers, manufacturers and trade missions.",
+        "es": "Feria internacional B2B de joyería y maquinaria que reúne compradores invitados, fabricantes y delegaciones comerciales."
+      },
+      "location": {
+        "ar": "جدة سوبر دوم، جدة",
+        "en": "Jeddah Superdome, Jeddah",
+        "es": "Jeddah Superdome, Yeda"
+      },
+      "aventuraPlan": {
+        "ar": "استقبال الوفود التجارية • تنقل خاص • تنسيق زيارة المعرض بعد تأكيد الدخول • عشاء أعمال أو جولة جدة التاريخية خلال الإقامة",
+        "en": "Trade delegation welcome • Private transfers • Exhibition visit subject to confirmed admission • Business dinner or Historic Jeddah experience during the stay",
+        "es": "Recepción de delegaciones comerciales • Traslados privados • Visita sujeta a confirmación de acceso • Cena de negocios o Yeda Histórica durante la estancia"
+      },
+      "audience": {
+        "ar": "المصنعون والموزعون وتجار المجوهرات والمشترون الدوليون والوفود التجارية وكبار الضيوف",
+        "en": "Jewellery manufacturers, distributors, retailers, international buyers, trade delegations and VIP guests",
+        "es": "Fabricantes, distribuidores, joyeros, compradores internacionales, delegaciones comerciales e invitados VIP"
+      },
+      "ticketing": {
+        "status": "organiser_info",
+        "ar": "يوفر الموقع الرسمي رابط تسجيل الزوار؛ لم يُختبر إصدار تصريح الدخول، ويجب تأكيد شروط التسجيل قبل الحجز.",
+        "en": "The organiser provides a visitor registration link; badge issuance has not been tested. Confirm entry requirements before booking.",
+        "es": "El organizador ofrece registro de visitantes, pero no se ha probado la emisión de pases. Confirma los requisitos antes de reservar."
+      },
+      "image": "assets/images/event-corporate.webp",
+      "imageAlt": {
+        "ar": "ضيافة أفنتورا للوفود التجارية في جدة",
+        "en": "Aventura hospitality for trade delegations in Jeddah",
+        "es": "Hospitalidad de Aventura para delegaciones comerciales en Yeda"
+      },
+      "imageRights": {
+        "source": "Existing repository asset designated Aventura-owned; underlying commercial rights documentation not independently audited",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "independentRightsAudit": "pending"
+      },
+      "sourceUrl": "https://jewelofsaudi.com/",
+      "verification": {
+        "checkedOn": "2026-11-01",
+        "status": "confirmed",
+        "notes": "Official event website states 18–20 Dec 2026 at Jeddah Superdome, B2B jewellery and machinery focus, regional hosted buyers programme and visitor registration link. Badge issuance not tested. https://jewelofsaudi.com/ ; https://www.jewelofsaudi.com/index"
       }
     }
   ],
