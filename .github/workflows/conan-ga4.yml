@@ -1,0 +1,84 @@
+# Manual, read-only GA4 connectivity test for Aventura.
+# No schedule or website deployment. Enable reporting only after a successful check.
+name: Conan GA4 read-only check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  ga4-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Authenticate to Google Cloud without a private key
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/722951777147/locations/global/workloadIdentityPools/aventura-conan-github/providers/github-actions
+          service_account: aventura-conan-reader@aventura-analytics.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+
+      - name: Check GA4 Data API (aggregate metrics only)
+        env:
+          GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          GA4_PROPERTY_ID: "549237338"
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync } from 'node:fs';
+
+          const token = process.env.GA4_ACCESS_TOKEN;
+          const propertyId = process.env.GA4_PROPERTY_ID;
+          if (!token || !propertyId) {
+            throw new Error('Missing Google access token or GA4 property ID');
+          }
+
+          const response = await fetch(
+            `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`,
+            {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                dateRanges: [{ startDate: '7daysAgo', endDate: 'yesterday' }],
+                metrics: [
+                  { name: 'sessions' },
+                  { name: 'activeUsers' },
+                  { name: 'screenPageViews' },
+                ],
+              }),
+            },
+          );
+
+          if (!response.ok) {
+            // Avoid dumping response bodies or credentials into public workflow logs.
+            throw new Error(`GA4 Data API returned HTTP ${response.status}. Verify GA4 Viewer access for the service account.`);
+          }
+
+          const report = await response.json();
+          const values = report.rows?.[0]?.metricValues?.map((v) => v.value) ?? ['0', '0', '0'];
+          const [sessions, activeUsers, pageViews] = values;
+          const summary = [
+            '## Conan GA4 connection test',
+            '',
+            'Google Cloud OIDC authentication and GA4 Data API request succeeded.',
+            '',
+            'Period: 7 days ago through yesterday (GA4 property timezone).',
+            '',
+            '| Metric | Value |',
+            '| --- | ---: |',
+            `| Sessions | ${sessions} |`,
+            `| Active users | ${activeUsers} |`,
+            `| Page views | ${pageViews} |`,
+            '',
+            'This is an aggregate connectivity test, not visitor-level tracking or an alerting system.',
+          ].join('\n');
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary + '\n');
+          console.log('GA4 connection test succeeded. See the job summary for aggregate counts.');
+          NODE
