@@ -1,0 +1,63 @@
+name: Conan GA4 daily monitoring
+
+on:
+  schedule:
+    # 08:00 Saudi Arabia (UTC+3). GitHub schedules may run late.
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Test reporting without creating GitHub alert issues'
+        required: false
+        type: boolean
+        default: true
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/conan-ga4-monitor.yml'
+      - 'scripts/conan-ga4-report.mjs'
+
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+
+concurrency:
+  group: conan-ga4-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout monitoring script
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud without private keys
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/722951777147/locations/global/workloadIdentityPools/aventura-conan-github/providers/github-actions
+          service_account: aventura-conan-reader@aventura-analytics.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+
+      - name: Build GA4 report and evaluate alerts
+        env:
+          GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          GA4_PROPERTY_ID: '549237338'
+          GITHUB_TOKEN: ${{ github.token }}
+          CONAN_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+        run: node scripts/conan-ga4-report.mjs
+
+      - name: Flag a monitoring failure
+        if: failure() && github.event_name != 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # No visitor data or tokens in the issue.
+          gh issue create \
+            --title '[Conan GA4][monitor-failed] فشل تقرير كونان' \
+            --body "فشل تشغيل تقرير GA4. راجع سجل التشغيل: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+            --assignee zk8pr4pbcy-sudo || true
