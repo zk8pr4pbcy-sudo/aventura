@@ -338,6 +338,86 @@
     "bayadah-grand": "seaBayadah"
   };
 
+  // Product rules belong to the selected experience, not just its broad category.
+  var EXPERIENCE_RULES = {
+    "golden-hour": {type:"sea", title:"experiences.goldenTitle", hours:1, guests:6, departure:"sunset"},
+    "bayadah-day": {type:"sea", title:"experiences.bayadahTitle", hours:8, guests:8},
+    "bayadah-grand": {type:"sea", title:"experiences.grandTitle", hours:8, guests:23},
+    "historic-transport": {type:"historic-jeddah", title:"experiences.heritageStandardTitle", transport:"standard"},
+    "historic-vip": {type:"historic-jeddah", title:"experiences.heritageVipTitle", transport:"vip"}
+  };
+  var EXPERIENCE_TEXT = {
+    ar: {experience:"التجربة المختارة", duration:"مدة الرحلة", hour:"ساعة واحدة", eightHours:"8 ساعات", departure:"موعد الانطلاق", sunset:"تبدأ الرحلة قبل الغروب بساعة، ويُبلّغ الضيف بموعد الانطلاق الدقيق عند تأكيد الحجز.", desert:"يُنسق موعد الانطلاق حسب وقت الغروب في تاريخ الرحلة وزمن الوصول إلى الموقع.", transport:"النقل المشمول", standard:"نقل خاص بسيارة عادية", vip:"نقل خاص بسيارة VIP"},
+    en: {experience:"Selected experience", duration:"Journey duration", hour:"One hour", eightHours:"8 hours", departure:"Departure time", sunset:"The journey starts one hour before sunset. The exact departure time is shared when the booking is confirmed.", desert:"Departure is coordinated around sunset on the journey date and travel time to the location.", transport:"Included transport", standard:"Private standard vehicle", vip:"Private VIP vehicle"},
+    es: {experience:"Experiencia seleccionada", duration:"Duración del recorrido", hour:"Una hora", eightHours:"8 horas", departure:"Hora de salida", sunset:"El paseo comienza una hora antes de la puesta de sol. La hora exacta se comunica al confirmar la reserva.", desert:"La salida se coordina según la puesta de sol en la fecha del recorrido y el tiempo de traslado al lugar.", transport:"Transporte incluido", standard:"Vehículo privado estándar", vip:"Vehículo privado VIP"}
+  };
+  var selectedSeaJourney = "";
+
+  function activeExperienceId(type) {
+    var query = new URLSearchParams(window.location.search);
+    var item = query.get("request") || query.get("service") || "";
+    if (EXPERIENCE_RULES[item] && EXPERIENCE_RULES[item].type === type) return item;
+    if (type === "sea") {
+      return {seaSunset:"golden-hour", seaBayadah:"bayadah-day"}[selectedSeaJourney] || "";
+    }
+    return "";
+  }
+
+  function applyExperienceRules(type, experienceId) {
+    var form = document.querySelector("[data-contact-form]");
+    if (!form) return;
+    var rules = EXPERIENCE_RULES[experienceId] || {};
+    var copy = EXPERIENCE_TEXT[currentLanguage()];
+    function setSummary(name, label, value) {
+      var field = form.elements.namedItem(name);
+      if (!field) return;
+      field.value = value || "";
+      field.disabled = !value;
+      field.setAttribute("data-request-label", label);
+    }
+    var dictionaries = window.AVENTURA_I18N || {};
+    var dictionary = dictionaries[currentLanguage()] || {};
+    var title = rules.title ? dictionary[rules.title] : "";
+    setSummary("requestExperience", copy.experience, title);
+    setSummary("requestDuration", copy.duration, rules.hours ? (rules.hours === 1 ? copy.hour : copy.eightHours) : "");
+    setSummary("requestDeparture", copy.departure, rules.departure ? copy.sunset : (type === "desert" ? copy.desert : ""));
+    setSummary("requestTransport", copy.transport, rules.transport ? copy[rules.transport] : "");
+    var identity = form.elements.namedItem("requestExperienceId");
+    var previousExperienceId = identity.value;
+    identity.value = experienceId;
+    identity.disabled = !experienceId;
+
+    ["time", "duration"].forEach(function (name) {
+      var field = form.elements.namedItem(name);
+      var fixed = name === "duration" ? Boolean(rules.hours) : Boolean(rules.departure || type === "desert");
+      field.closest(".field").hidden = fixed;
+      field.disabled = fixed;
+      if (fixed) field.value = "";
+    });
+    var guests = form.elements.namedItem("guests");
+    guests.max = String(rules.guests || 10000);
+    guests.required = Boolean(rules.guests);
+    form.elements.namedItem("date").required = Boolean(rules.hours);
+
+    var info = form.querySelector("[data-experience-timing]");
+    if (info) {
+      var notes = [];
+      if (rules.hours) notes.push(copy.duration + ": " + (rules.hours === 1 ? copy.hour : copy.eightHours));
+      if (rules.departure) notes.push(copy.sunset);
+      else if (type === "desert") notes.push(copy.desert);
+      info.textContent = notes.join("\n");
+      info.hidden = !notes.length;
+    }
+    // URL-prefilled notes must not retain a different experience after changing type.
+    var message = form.elements.namedItem("message");
+    var query = new URLSearchParams(window.location.search);
+    var requestedItem = query.get("request") || query.get("service") || "";
+    if (message && message.dataset.autofilled === "true") {
+      if (title) message.value = (dictionary["contact.requestedItems"] || copy.experience) + ":\n- " + title;
+      else if (previousExperienceId || (REQUEST_TYPE_BY_ITEM[requestedItem] && REQUEST_TYPE_BY_ITEM[requestedItem] !== type)) message.value = "";
+    }
+  }
+
   function isKnownRequestType(value) {
     return Boolean(value) && REQUEST_TYPES.en.some(function (item) { return item[0] === value; });
   }
@@ -418,9 +498,18 @@
     if (!select || !secondGrid) return;
 
     var existing = document.getElementById("dynamicRequestPanel");
+    var saved = [];
+    if (existing && existing.getAttribute("data-request-type") === select.value) {
+      existing.querySelectorAll("input, select, textarea").forEach(function (field) {
+        saved.push({name:field.name, value:field.value, checked:field.checked, index:field.selectedIndex});
+      });
+    }
     if (existing) existing.remove();
 
     var config = REQUEST_CONFIG[select.value];
+    var experienceId = activeExperienceId(select.value);
+    var rules = EXPERIENCE_RULES[experienceId] || {};
+    applyExperienceRules(select.value, experienceId);
     if (!config) {
       notifyRequestDetailsUpdated();
       return;
@@ -429,9 +518,29 @@
     var text = FORM_TEXT[currentLanguage()];
     var panel = document.createElement("section");
     panel.id = "dynamicRequestPanel";
+    panel.setAttribute("data-request-type", select.value);
     panel.className = "dynamic-request-panel";
     panel.setAttribute("aria-live", "polite");
-    panel.innerHTML = '<div class="dynamic-request-grid">' + config.items.map(function (item) { return itemMarkup(item, text); }).join("") + "</div>";
+    var requestQuery = new URLSearchParams(window.location.search);
+    var directSeaRequest = rules.type === "sea" && Boolean(SEA_JOURNEY_BY_ITEM[requestQuery.get("request") || requestQuery.get("service")]);
+    var items = config.items.filter(function (item) {
+      if (rules.type === "sea" && item.name === "seaMood") return false;
+      if (directSeaRequest && item.name === "seaJourney") return false;
+      return true;
+    }).map(function (item) {
+      if (item.kind !== "addons") return item;
+      return Object.assign({}, item, {options:item.options.filter(function (addon) {
+        return !(rules.type === "sea" && addon === "resort") && !(rules.transport && addon === "transport");
+      })});
+    });
+    panel.innerHTML = '<div class="dynamic-request-grid">' + items.map(function (item) { return itemMarkup(item, text); }).join("") + "</div>";
+    if (rules.transport) {
+      var transportCopy = EXPERIENCE_TEXT[currentLanguage()];
+      var transportNote = document.createElement("p");
+      transportNote.className = "dynamic-note full";
+      transportNote.textContent = transportCopy.transport + ": " + transportCopy[rules.transport];
+      panel.querySelector(".dynamic-request-grid").prepend(transportNote);
+    }
 
     var requestedAddon = requestedAddonFromUrl();
     var requestedService = panel.querySelector('[name="guestService"]');
@@ -439,10 +548,19 @@
       requestedService.value = requestedAddon;
     }
 
-    var requestedSeaJourney = requestedSeaJourneyFromUrl();
-    var selectedSeaJourney = requestedSeaJourney && panel.querySelector('[name="seaJourney"][value="' + requestedSeaJourney + '"]');
-    if (selectedSeaJourney) {
-      selectedSeaJourney.checked = true;
+    saved.forEach(function (state) {
+      panel.querySelectorAll("input, select, textarea").forEach(function (field) {
+        if (field.name !== state.name) return;
+        if (field.type === "radio" || field.type === "checkbox") {
+          if (field.value === state.value) field.checked = state.checked;
+        } else if (field.name === "guideLanguage") field.selectedIndex = state.index;
+        else field.value = state.value;
+      });
+    });
+    var requestedSeaJourney = selectedSeaJourney || requestedSeaJourneyFromUrl();
+    var seaChoice = requestedSeaJourney && panel.querySelector('[name="seaJourney"][value="' + requestedSeaJourney + '"]');
+    if (seaChoice) {
+      seaChoice.checked = true;
     }
 
     var detailGroup = secondGrid.querySelector("[data-request-details]");
@@ -454,7 +572,12 @@
 
     setMinimumDate(panel);
     updateConditionalFields(panel);
-    panel.addEventListener("change", function () {
+    panel.addEventListener("change", function (event) {
+      if (event.target.name === "seaJourney") {
+        selectedSeaJourney = event.target.value;
+        renderDynamicRequestFields();
+        return;
+      }
       updateConditionalFields(panel);
       notifyRequestDetailsUpdated();
     });
@@ -478,7 +601,7 @@
     addDynamicStyles();
     updateRequestTypeOptions(currentLanguage());
     var select=document.getElementById("type");
-    if(select)select.addEventListener("change",function(){renderDynamicRequestFields();if(window.AVENTURA_TRACK)window.AVENTURA_TRACK("request_type_select",{requestType:select.value});});
+    if(select)select.addEventListener("change",function(){selectedSeaJourney="";renderDynamicRequestFields();if(window.AVENTURA_TRACK)window.AVENTURA_TRACK("request_type_select",{requestType:select.value});});
     document.addEventListener("aventura:language",function(event){updateRequestTypeOptions((event.detail&&event.detail.language)||currentLanguage());});
     document.addEventListener("aventura:contact-wizard-ready",function(){updateRequestTypeOptions(currentLanguage());});
   }

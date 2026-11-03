@@ -153,6 +153,11 @@ jobs:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
         run: node tests/contact-request-data-browser.mjs
 
+      - name: Verify experience-specific durations, capacity and request summaries
+        env:
+          AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173
+        run: node tests/experience-request-browser.mjs
+
       - name: Run contact submission browser checks
         env:
           AVENTURA_TEST_BASE_URL: http://127.0.0.1:4173

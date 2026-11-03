@@ -55,6 +55,8 @@
     }
 
     ["type", "date", "time", "duration", "guests"].forEach(function (name) { moveField(name, firstGrid); });
+    var experienceTiming = form.querySelector("[data-experience-timing]");
+    if (experienceTiming) firstGrid.appendChild(experienceTiming);
     detailGroups.forEach(function (group) { secondGrid.appendChild(group); });
     moveField("message", secondGrid);
     ["name", "company", "phone", "email", "preferredResponse"].forEach(function (name) { moveField(name, thirdGrid); });
@@ -182,6 +184,27 @@
         showStep(currentStep - 1);
       }
     });
+
+    // Apply the same experience constraints on final submission as on Continue.
+    form.addEventListener("submit", function (event) {
+      for (var number = 1; number <= 2; number += 1) {
+        var invalid = firstMissingRequiredField(steps[number]);
+        if (!invalid) {
+          invalid = Array.from(steps[number].querySelectorAll("input, select, textarea")).find(function (field) {
+            return field.willValidate && !field.disabled && !field.checkValidity();
+          });
+        }
+        if (invalid) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          showStep(number);
+          var invalidStatus = form.querySelector("[data-form-status]");
+          if (invalidStatus) invalidStatus.textContent = translate("contact.stepRequiredError");
+          invalid.focus();
+          return;
+        }
+      }
+    }, true);
 
     form.addEventListener("aventura:request-success", function () {
       showStep(3);
