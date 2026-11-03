@@ -1,0 +1,52 @@
+name: Conan hourly visit alerts
+
+on:
+  schedule:
+    # Every hour at :15 UTC, about 15 minutes after the hour ends.
+    - cron: '15 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Validate hourly GA4 reading without creating an alert'
+        required: false
+        type: boolean
+        default: true
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/conan-hourly-visits.yml'
+      - 'scripts/conan-hourly-visits.mjs'
+
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+
+concurrency:
+  group: conan-hourly-visits
+  cancel-in-progress: false
+
+jobs:
+  hourly-visits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud without JSON keys
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/722951777147/locations/global/workloadIdentityPools/aventura-conan-github/providers/github-actions
+          service_account: aventura-conan-reader@aventura-analytics.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+
+      - name: Read hourly sessions and create new visit signals
+        env:
+          GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          GA4_PROPERTY_ID: '549237338'
+          GITHUB_TOKEN: ${{ github.token }}
+          CONAN_DRY_RUN: ${{ github.event_name != 'schedule' && 'true' || 'false' }}
+        run: node scripts/conan-hourly-visits.mjs
