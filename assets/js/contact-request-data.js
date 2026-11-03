@@ -46,6 +46,11 @@
     if (typeText) {
       lines.push(translate("contact.whatsappType") + ": " + typeText);
     }
+    Array.from(form.querySelectorAll("[data-experience-summary]")).forEach(function (field) {
+      if (!field.disabled && field.value) {
+        lines.push(field.getAttribute("data-request-label") + ": " + field.value);
+      }
+    });
 
     var dynamicSummary = {};
     Array.from(form.querySelectorAll("#dynamicRequestPanel [data-request-summary]")).forEach(function (field) {
@@ -70,11 +75,13 @@
     });
 
     var selectedDuration = form.querySelector('[name="duration"] option:checked');
-    if (selectedDuration && selectedDuration.value) {
+    if (selectedDuration && selectedDuration.value && !selectedDuration.parentElement.disabled) {
       lines.push(translate("contact.whatsappDuration") + ": " + selectedDuration.textContent.trim());
     }
 
     [["date", "contact.whatsappDate"], ["time", "contact.whatsappTime"], ["guests", "contact.whatsappGuests"], ["message", "contact.whatsappMessage"]].forEach(function (row) {
+      var field = form.querySelector('[name="' + row[0] + '"]');
+      if (field && field.disabled) return;
       var value = String(data.get(row[0]) || "").trim();
       if (value) {
         lines.push(translate(row[1]) + ": " + value);

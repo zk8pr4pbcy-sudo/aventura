@@ -31,12 +31,12 @@
   <link rel="stylesheet" href="assets/css/light-theme.css?v=recover-v2-20260809" />
   <link rel="stylesheet" href="assets/css/contact-mobile-fix.css?v=20260810-2" />
   <link rel="stylesheet" href="assets/css/contact.css?v=20260909" />
-  <script src="assets/js/translations.js?v=date-validation-20260830" defer></script>
+  <script src="assets/js/translations.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/ga4.js?v=20260815-pdpl4" defer></script>
-  <script src="assets/js/analytics.js?v=date-validation-20260830" defer></script>
+  <script src="assets/js/analytics.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/runtime-state.js?v=20260910" defer></script>
-  <script src="assets/js/contact-wizard.js?v=20260910" defer></script>
-  <script src="assets/js/contact-request-data.js?v=20260910" defer></script>
+  <script src="assets/js/contact-wizard.js?v=experience-rules-20261103" defer></script>
+  <script src="assets/js/contact-request-data.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/contact-submission.js?v=20260910" defer></script>
   <script src="assets/js/dialog-runtime.js?v=20260910" defer></script><script src="assets/js/perfume-story-runtime.js?v=20260910" defer></script><script src="assets/js/reveal-runtime.js?v=20260910" defer></script>
 <script src="assets/js/app.js?v=date-validation-20260830" defer></script>
@@ -86,6 +86,11 @@
           <input type="hidden" name="request_reference" value="">
           <input type="hidden" name="request_language" value="">
           <input type="hidden" name="request_summary" value="">
+          <input type="hidden" name="requestExperienceId" disabled>
+          <input type="hidden" name="requestExperience" data-experience-summary disabled>
+          <input type="hidden" name="requestDuration" data-experience-summary disabled>
+          <input type="hidden" name="requestDeparture" data-experience-summary disabled>
+          <input type="hidden" name="requestTransport" data-experience-summary disabled>
           <input type="hidden" name="privacy_consent_at" value="">
           <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <h2 data-i18n="contact.formTitle">Request details</h2>
@@ -168,6 +173,7 @@
               <label for="guests" data-i18n="contact.guestsLabel">Number of guests</label>
               <input id="guests" name="guests" type="number" min="1" max="10000" inputmode="numeric" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="Example: 6">
             </div>
+            <p class="form-note full" data-experience-timing hidden></p>
 
             <fieldset class="request-detail-group full" data-request-details="thobe" hidden>
               <legend data-i18n="contact.thobeDetailsTitle">Tailoring service details</legend>

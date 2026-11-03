@@ -88,8 +88,17 @@ assert.equal(new Set(curated.events.map(event => event.id)).size, curated.events
 for (const event of curated.events) {
   assert.ok(validDate(event.startDate) && validDate(event.endDate), "invalid event dates: " + event.id);
   assert.ok(event.startDate <= event.endDate, "reversed event date range: " + event.id);
-  assert.equal(event.verification?.checkedOn, curated.lastReviewed,
-    "event must be verified on the latest editorial review: " + event.id);
+  const checkedOn = event.verification?.checkedOn;
+  assert.ok(validDate(checkedOn) && checkedOn <= curated.lastReviewed,
+    "event verification must have a valid date no later than the calendar review: " + event.id);
+  // Only cards in the published calendar window require that review's date.
+  // Retained future records keep their actual verification history.
+  const windowEnd = new Date(curated.lastReviewed + "T12:00:00Z");
+  windowEnd.setUTCDate(windowEnd.getUTCDate() + curated.windowDays);
+  if (event.endDate >= curated.lastReviewed && event.startDate <= windowEnd.toISOString().slice(0, 10)) {
+    assert.equal(checkedOn, curated.lastReviewed,
+      "published-window event must be verified on the latest editorial review: " + event.id);
+  }
 }
 
 for (const sitemap of ["sitemap.xml", "sitemap-ar.xml", "sitemap-en.xml", "sitemap-es.xml"]) {
