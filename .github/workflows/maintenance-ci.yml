@@ -54,6 +54,9 @@ jobs:
       - name: Run contact submission contract checks
         run: node tests/contact-submission-contract.mjs
 
+      - name: Verify email outage, timeout and invalid-response handling
+        run: node tests/contact-delivery-errors.mjs
+
       - name: Run perfume story runtime contract checks
         run: node tests/perfume-story-contract.mjs
 
