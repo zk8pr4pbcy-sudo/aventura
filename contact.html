@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#fff9ef">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; font-src 'self' data: https://www.gstatic.com; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; frame-src 'self' https://www.google.com https://www.recaptcha.net; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; font-src 'self' data: https://www.gstatic.com; connect-src 'self' https://formsubmit.co https://api.web3forms.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; frame-src 'self' https://www.google.com https://www.recaptcha.net; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
   <link rel="canonical" href="https://aventuraksa.com/contact.html">
   <link rel="alternate" hreflang="ar" href="https://aventuraksa.com/contact.html">
   <link rel="alternate" hreflang="en" href="https://aventuraksa.com/contact.html?lang=en">
@@ -31,15 +31,15 @@
   <link rel="stylesheet" href="assets/css/light-theme.css?v=recover-v2-20260809" />
   <link rel="stylesheet" href="assets/css/contact-mobile-fix.css?v=20260810-2" />
   <link rel="stylesheet" href="assets/css/contact.css?v=20260909" />
-  <script src="assets/js/translations.js?v=email-recovery-20261104" defer></script>
+  <script src="assets/js/translations.js?v=verified-provider-20261104" defer></script>
   <script src="assets/js/ga4.js?v=20260815-pdpl4" defer></script>
   <script src="assets/js/analytics.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/runtime-state.js?v=20260910" defer></script>
   <script src="assets/js/contact-wizard.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/contact-request-data.js?v=experience-rules-20261103" defer></script>
-  <script src="assets/js/contact-submission.js?v=email-recovery-20261104" defer></script>
+  <script src="assets/js/contact-submission.js?v=verified-provider-20261104" defer></script>
   <script src="assets/js/dialog-runtime.js?v=20260910" defer></script><script src="assets/js/perfume-story-runtime.js?v=20260910" defer></script><script src="assets/js/reveal-runtime.js?v=20260910" defer></script>
-<script src="assets/js/app.js?v=email-recovery-20261104" defer></script>
+<script src="assets/js/app.js?v=verified-provider-20261104" defer></script>
   <script src="assets/js/contact-consent.js?v=20260909" defer></script>
   <script type="application/ld+json">
   {
@@ -79,6 +79,8 @@
       <div class="container contact-layout">
 
         <form id="request" class="form-card" data-contact-form aria-busy="false" action="contact.html" method="POST" novalidate data-reveal>
+          <!-- Enable only after verifying the receiving mailbox with Web3Forms. This is a public form key, never an SMTP password. -->
+          <input type="hidden" name="access_key" value="" disabled>
           <input type="hidden" name="_subject" value="Aventura booking request">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_replyto" value="">

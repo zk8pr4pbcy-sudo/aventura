@@ -7,6 +7,7 @@
 
   var FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/" + decodeContactValue([106, 118, 117, 123, 104, 106, 123, 71, 104, 125, 108, 117, 123, 124, 121, 104, 114, 122, 104, 53, 106, 118, 116]);
   var WHATSAPP_NUMBER = decodeContactValue([64, 61, 61, 60, 60, 60, 63, 63, 59, 63, 60, 59]);
+  var WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
   var EMAIL_TIMEOUT_MS = 25000;
 
   function deliveryError(code, status) {
@@ -20,6 +21,24 @@
     if (!window.fetch) {
       return Promise.reject(deliveryError("EMAIL_NETWORK"));
     }
+    var endpoint = FORM_SUBMIT_ENDPOINT;
+    var requestPayload = payload;
+    var accessKey = payload && typeof payload.get === "function" ? String(payload.get("access_key") || "").trim() : "";
+    if (accessKey) {
+      if (String(payload.get("_honey") || "").trim()) {
+        return Promise.reject(deliveryError("EMAIL_REJECTED"));
+      }
+      endpoint = WEB3FORMS_ENDPOINT;
+      requestPayload = new FormData();
+      payload.forEach(function (value, name) {
+        if (name.charAt(0) !== "_" && name !== "submissionChannel") requestPayload.append(name, value);
+      });
+      requestPayload.set("access_key", accessKey);
+      requestPayload.set("subject", String(payload.get("_subject") || "Aventura booking request"));
+      requestPayload.set("replyto", String(payload.get("_replyto") || payload.get("email") || ""));
+      requestPayload.set("source_url", String(payload.get("_url") || ""));
+      requestPayload.set("from_name", "Aventura KSA");
+    }
     var controller = window.AbortController ? new window.AbortController() : null;
     var timer;
     return new Promise(function (resolve, reject) {
@@ -27,10 +46,10 @@
         reject(deliveryError("EMAIL_TIMEOUT"));
         if (controller) controller.abort();
       }, EMAIL_TIMEOUT_MS);
-      window.fetch(FORM_SUBMIT_ENDPOINT, {
+      window.fetch(endpoint, {
         method: "POST",
         headers: { Accept: "application/json" },
-        body: payload,
+        body: requestPayload,
         signal: controller ? controller.signal : undefined
       }).then(function (response) {
         if (response.status >= 500 || response.status === 429) {

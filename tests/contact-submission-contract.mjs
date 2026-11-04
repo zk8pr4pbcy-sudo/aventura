@@ -18,7 +18,7 @@ function check(condition, message) {
   }
 }
 
-const transportRef = 'assets/js/contact-submission.js?v=email-recovery-20261104';
+const transportRef = 'assets/js/contact-submission.js?v=verified-provider-20261104';
 check((contact.split(transportRef).length - 1) === 1, 'contact page loads the submission transport exactly once');
 check(contact.indexOf(transportRef) < contact.indexOf('assets/js/app.js'), 'submission transport loads before app.js');
 
@@ -28,7 +28,7 @@ check(transport.includes('var WHATSAPP_NUMBER = decodeContactValue(['), 'transpo
 check(!transport.includes(contactEmail), 'transport source does not expose the naked contact email');
 check(!transport.includes(whatsappNumber), 'transport source does not expose the naked WhatsApp number');
 check(transport.includes('function sendEmail(payload)'), 'transport exposes email delivery');
-check(transport.includes('window.fetch(FORM_SUBMIT_ENDPOINT'), 'transport owns the network fetch');
+check(transport.includes('window.fetch(endpoint,'), 'transport owns the network fetch');
 check(transport.includes('method: "POST"'), 'transport keeps email submission as POST');
 check(transport.includes('headers: { Accept: "application/json" }'), 'transport still requests JSON');
 check(transport.includes('!response.ok || body.success === false || body.success === "false"'), 'transport rejects failed FormSubmit responses');
