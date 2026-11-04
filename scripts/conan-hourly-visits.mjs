@@ -32,9 +32,9 @@ async function report() {
       },
       body: JSON.stringify({
         dateRanges: [{ startDate: 'yesterday', endDate: 'today' }],
-        dimensions: [{ name: 'dateHour' }],
+        dimensions: ['dateHour','country','city','sessionDefaultChannelGroup','sessionSourceMedium'].map(name => ({name})),
         metrics: [{ name: 'sessions' }],
-        limit: '100',
+        limit: '10000',
         keepEmptyRows: false
       })
     }
@@ -48,7 +48,7 @@ async function existingIssueTitles() {
   const issues = await response.json();
   return new Set(issues.map((i) => i.title));
 }
-async function createIssue(key, count, tz) {
+async function createIssue(key, count, tz, breakdown) {
   const title = '[Conan Visit][' + key + '] زيارات موقع أفنتورا';
   const body = [
     'رصد كونان زيارات للموقع في ساعة مكتملة وفق توقيت Google Analytics.',
@@ -57,6 +57,11 @@ async function createIssue(key, count, tz) {
       '-' + key.slice(6,8) + '، ' + key.slice(8,10) + ':00–:59',
     '**المنطقة الزمنية:** ' + tz,
     '**الجلسات المرصودة:** ' + count,
+    '',
+    '### الموقع الجغرافي ومصدر الزيارة (بيانات مجمعة)',
+    '| الدولة | المدينة | القناة | المصدر / الوسيط | الجلسات |',
+    '| --- | --- | --- | --- | ---: |',
+    ...breakdown.map(r => '| ' + [r.country,r.city,r.channel,r.source].map(v => String(v).replace(/[|\r\n<>`]/g,' ').slice(0,80)).join(' | ') + ' | ' + r.sessions + ' |'),
     '',
     'الجلسة ليست بالضرورة زائرًا فريدًا. قد تصل البيانات متأخرة أو تتغير لاحقًا.',
     'لا يتضمن هذا التنبيه بيانات تعريف شخصية، ولا يثبت تقديم طلب حجز.',
@@ -79,13 +84,23 @@ async function main() {
   const activatedHour = hourKey(activation, tz);
   const lastCompletedHour = hourKey(new Date(now.getTime() - 3600000), tz);
   const earliestHour = hourKey(new Date(now.getTime() - 24 * 3600000), tz);
-  const rows = (result.rows || []).map((r) => ({
+  const detailRows = (result.rows || []).map((r) => ({
     hour: r.dimensionValues?.[0]?.value || '',
-    sessions: Number(r.metricValues?.[0]?.value || 0)
+    sessions: Number(r.metricValues?.[0]?.value || 0),
+    country: r.dimensionValues?.[1]?.value || '(not set)',
+    city: r.dimensionValues?.[2]?.value || '(not set)',
+    channel: r.dimensionValues?.[3]?.value || '(not set)',
+    source: r.dimensionValues?.[4]?.value || '(not set)'
   })).filter((r) => /^\d{10}$/.test(r.hour) && Number.isFinite(r.sessions) &&
     r.sessions > 0 && r.hour >= activatedHour &&
     r.hour >= earliestHour && r.hour <= lastCompletedHour)
     .sort((a,b) => a.hour.localeCompare(b.hour));
+  const grouped = new Map();
+  for (const r of detailRows) {
+    if (!grouped.has(r.hour)) grouped.set(r.hour, {hour:r.hour,sessions:0,breakdown:[]});
+    const g=grouped.get(r.hour); g.sessions+=r.sessions; g.breakdown.push(r);
+  }
+  const rows=[...grouped.values()].sort((a,b)=>a.hour.localeCompare(b.hour));
   console.log('GA4 hourly query succeeded; positive eligible hours: ' + rows.length);
   const existing = await existingIssueTitles();
   const unseen = rows.filter((r) =>
@@ -106,7 +121,7 @@ async function main() {
     return;
   }
   // Limit catch-up alerts to three per run to prevent floods on first deployment.
-  for (const row of unseen.slice(-3)) await createIssue(row.hour, row.sessions, tz);
+  for (const row of unseen.slice(-3)) await createIssue(row.hour, row.sessions, tz, row.breakdown);
   console.log('Conan hourly visit check finished.');
 }
 main().catch((e) => { console.error(e.message); process.exitCode = 1; });
