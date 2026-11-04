@@ -1,7 +1,7 @@
 {
-  "version": "1.8.9",
+  "version": "1.8.10",
   "windowDays": 14,
-  "lastReviewed": "2026-11-01",
+  "lastReviewed": "2026-11-04",
   "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
@@ -127,7 +127,7 @@
       },
       "sourceUrl": "https://www.int-motorshowjeddah.com/en/visit",
       "verification": {
-        "checkedOn": "2026-11-01",
+        "checkedOn": "2026-11-04",
         "status": "confirmed",
         "notes": "Official JIMS site confirms 4 Nov press/VIP and 5–7 Nov visitor days, JCEE; online registration advertised. https://www.int-motorshowjeddah.com/en"
       },
@@ -198,7 +198,7 @@
       },
       "sourceUrl": "https://hajjconfex.com",
       "verification": {
-        "checkedOn": "2026-11-01",
+        "checkedOn": "2026-11-04",
         "status": "confirmed",
         "notes": "Ministry/PEP confirms 8–11 Nov 2026 in Jeddah; official Hajj site confirms 09:00–21:00 and registration. https://pep.gov.sa/en/news/1031 ; https://hajjconfex.com/"
       },
@@ -409,9 +409,9 @@
       },
       "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
       "verification": {
-        "checkedOn": "2026-11-01",
+        "checkedOn": "2026-11-04",
         "status": "confirmed",
-        "notes": "Official Foodex homepage confirms 23–25 Nov 2026; venue name inconsistent between homepage heading JCEE and detailed venue section JIECC. Public venue kept generic pending confirmation. https://www.foodexsaudiexpo.com/en"
+        "notes": "Official homepage checked 4 Nov 2026: 23–25 Nov confirmed. Page names both JCEE and JIECC; do not promise a precise venue until organiser clarifies. https://www.foodexsaudiexpo.com/en"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -757,22 +757,15 @@
     }
   ],
   "reviewSummary": {
-    "date": "2026-10-23",
-    "added": [
-      "jewellery-salon-jeddah-2026"
-    ],
+    "date": "2026-11-04",
+    "added": [],
     "updated": [
-      "hajj-conference-exhibition-2026",
       "jeddah-motor-show-2026",
-      "foodex-saudi-jeddah-2026",
-      "saudi-franchise-expo-jeddah-2026",
-      "international-trade-exchange-expo-2027"
+      "hajj-conference-exhibition-2026",
+      "foodex-saudi-jeddah-2026"
     ],
-    "removedEnded": [
-      "jewels-of-the-world-jeddah-2026",
-      "saudi-maritime-logistics-congress-2026"
-    ],
+    "removedEnded": [],
     "publishingScope": "website_only",
-    "note": "Removed expired maritime congress and postponed Jewels of the World Jeddah (no replacement date). Verified official sources; 2026 Jewellery Salon registration page remains outdated. Existing repository images only; independent underlying commercial rights proof not audited. Foodex organiser uses conflicting venue naming; confirm before itinerary."
+    "note": "Rechecked official sources. Motor Show 4–7 Nov with media/VIP on 4 Nov; Hajj Confex 8–11 Nov at Jeddah Superdome; Foodex 23–25 Nov venue naming conflict remains. Port & Marine Development Conference was not added: organiser site now advertises 6–7 Apr 2027, conflicting with third-party Nov 2026 listings. No expired entries. No new images; commercial ownership documentation of existing assets still unaudited."
   }
 }
