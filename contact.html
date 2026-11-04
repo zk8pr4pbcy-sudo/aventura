@@ -31,15 +31,15 @@
   <link rel="stylesheet" href="assets/css/light-theme.css?v=recover-v2-20260809" />
   <link rel="stylesheet" href="assets/css/contact-mobile-fix.css?v=20260810-2" />
   <link rel="stylesheet" href="assets/css/contact.css?v=20260909" />
-  <script src="assets/js/translations.js?v=experience-rules-20261103" defer></script>
+  <script src="assets/js/translations.js?v=email-recovery-20261104" defer></script>
   <script src="assets/js/ga4.js?v=20260815-pdpl4" defer></script>
   <script src="assets/js/analytics.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/runtime-state.js?v=20260910" defer></script>
   <script src="assets/js/contact-wizard.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/contact-request-data.js?v=experience-rules-20261103" defer></script>
-  <script src="assets/js/contact-submission.js?v=20260910" defer></script>
+  <script src="assets/js/contact-submission.js?v=email-recovery-20261104" defer></script>
   <script src="assets/js/dialog-runtime.js?v=20260910" defer></script><script src="assets/js/perfume-story-runtime.js?v=20260910" defer></script><script src="assets/js/reveal-runtime.js?v=20260910" defer></script>
-<script src="assets/js/app.js?v=date-validation-20260830" defer></script>
+<script src="assets/js/app.js?v=email-recovery-20261104" defer></script>
   <script src="assets/js/contact-consent.js?v=20260909" defer></script>
   <script type="application/ld+json">
   {
@@ -227,6 +227,10 @@
           </div>
           <p class="form-privacy-notice"><span data-i18n="contact.privacyNoticePrefix">By sending this request, Aventura processes your data to prepare the request and contact you under the</span> <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a><span data-i18n="contact.privacyNoticeTerms">. Confirmed services are governed by the</span> <a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a>.</p>
           <p class="form-status" data-form-status role="alert" aria-live="polite"></p>
+          <div class="request-success-actions" data-email-recovery hidden>
+            <a class="text-link" data-email-recovery-whatsapp target="_blank" rel="noopener" data-i18n="contact.sendSameWhatsapp">Send this request via WhatsApp</a>
+            <button class="text-link" type="button" data-copy-request data-i18n="contact.copyRequest">Copy request details</button>
+          </div>
         </form>
 
         <aside class="contact-panel" data-reveal>

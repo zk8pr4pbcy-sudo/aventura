@@ -142,15 +142,18 @@ try {
     await page.close();
   }
 
+  for (const failureLang of ['ar', 'en', 'es']) {
   const failurePage = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  const retryBodies = [];
   await failurePage.route(formSubmitUrl, async (route) => {
+    retryBodies.push(route.request().postData() || '');
     await route.fulfill({
-      status: 500,
+      status: 522,
       contentType: 'application/json',
       body: JSON.stringify({ success: false })
     });
   });
-  await failurePage.goto(`${baseUrl}/contact.html?lang=en`, { waitUntil: 'domcontentloaded' });
+  await failurePage.goto(`${baseUrl}/contact.html?lang=${failureLang}`, { waitUntil: 'domcontentloaded' });
   await failurePage.waitForLoadState('load').catch(() => {});
   const failureStep = await reachFinalStep(failurePage);
   await failureStep.locator('[name="submissionChannel"][value="email"]').check().catch(() => {});
@@ -162,7 +165,19 @@ try {
   check(!(await failurePage.locator('[data-request-success]').isVisible()), 'submission failure: success UI stays hidden');
   check(!(await submit.isDisabled()), 'submission failure: submit button is re-enabled');
   check((await failurePage.locator('[data-contact-form]').getAttribute('aria-busy')) === 'false', 'submission failure: busy state clears');
+  check(await failurePage.locator('[data-email-recovery]').isVisible(), `outage ${failureLang}: recovery actions are visible`);
+  check(await failurePage.locator('[name="email"]').inputValue() === 'guest@example.com', `outage ${failureLang}: visitor details are retained`);
+  check(await failurePage.locator('[data-contact-form]').getAttribute('data-email-error') === 'EMAIL_SERVICE_UNAVAILABLE', `outage ${failureLang}: 522 is classified correctly`);
+  const recoveryUrl = new URL(await failurePage.locator('[data-email-recovery-whatsapp]').getAttribute('href'));
+  const recoveryText = recoveryUrl.searchParams.get('text');
+  const reference = recoveryText.match(/AVE-\d{8}-[A-Z0-9]+/)[0];
+  check(recoveryUrl.hostname === 'wa.me' && recoveryText.includes('guest@example.com'), `outage ${failureLang}: WhatsApp carries the failed request`);
+  check(recoveryText.includes(reference) && statusText.includes(reference), `outage ${failureLang}: recovery and error share a reference`);
+  await submit.click();
+  await failurePage.waitForTimeout(250);
+  check(retryBodies.length === 2 && retryBodies.every(body => body.includes(reference)), `outage ${failureLang}: explicit retries retain the reference`);
   await failurePage.close();
+  }
 
   const missingTransportPage = await browser.newPage({ viewport: { width: 390, height: 844 } });
   await missingTransportPage.route('**/assets/js/contact-submission.js*', async (route) => route.abort());

@@ -18,7 +18,7 @@ function check(condition, message) {
   }
 }
 
-const transportRef = 'assets/js/contact-submission.js?v=20260910';
+const transportRef = 'assets/js/contact-submission.js?v=email-recovery-20261104';
 check((contact.split(transportRef).length - 1) === 1, 'contact page loads the submission transport exactly once');
 check(contact.indexOf(transportRef) < contact.indexOf('assets/js/app.js'), 'submission transport loads before app.js');
 

@@ -1675,6 +1675,7 @@
     document.addEventListener("aventura:language", updateSubmissionChannel);
     updateSubmissionChannel();
     var lastRequestMessage = "";
+    var pendingEmailRequestId = "";
     var isSubmitting = false;
     var contactRequestData = window.AVENTURA_CONTACT_REQUEST_DATA;
     if (!contactRequestData || typeof contactRequestData.createRequestId !== "function" || typeof contactRequestData.buildMessage !== "function") {
@@ -1701,7 +1702,7 @@
       var success = form.querySelector("[data-request-success]");
       var successTitle = form.querySelector("[data-request-success-title]");
       var successText = form.querySelector("[data-request-success-text]");
-      var successActions = form.querySelector(".request-success-actions");
+      var successActions = success && success.querySelector(".request-success-actions");
       var sendLink = form.querySelector("[data-request-send-link]");
       var status = form.querySelector("[data-form-status]");
 
@@ -1808,7 +1809,7 @@
         previousSuccess.hidden = true;
       }
 
-      var requestId = contactRequestData.createRequestId();
+      var requestId = submissionChannel === "email" && pendingEmailRequestId ? pendingEmailRequestId : contactRequestData.createRequestId();
       lastRequestMessage = contactRequestData.buildMessage({
         form: form,
         data: data,
@@ -1818,6 +1819,10 @@
       });
       var isEmail = submissionChannel === "email";
       if (isEmail) {
+        pendingEmailRequestId = requestId;
+        var emailRecovery = form.querySelector("[data-email-recovery]");
+        if (emailRecovery) emailRecovery.hidden = true;
+        form.removeAttribute("data-email-error");
         var submissionData = new FormData(form);
         submissionData.set("_subject", translate("contact.emailSubject") + " · " + requestId);
         submissionData.set("_replyto", email);
@@ -1834,15 +1839,24 @@
         isSubmitting = true;
         setContactSubmitting(true);
         submissionTransport.sendEmail(submissionData).then(function () {
+          pendingEmailRequestId = "";
           isSubmitting = false;
           setContactSubmitting(false);
           showRequestSuccess("email", requestId);
-        }).catch(function () {
+        }).catch(function (error) {
           isSubmitting = false;
           setContactSubmitting(false);
           if (status) {
-            status.textContent = translate("contact.submitError");
+            var code = error && error.code || "EMAIL_NETWORK";
+            form.setAttribute("data-email-error", code);
+            var errorKey = code === "EMAIL_REJECTED" ? "contact.emailRejected" : "contact.emailUnavailable";
+            status.textContent = translate(errorKey) + " " + translate("contact.requestReference") + ": " + requestId;
             status.classList.remove("is-success");
+          }
+          var recoveryLink = form.querySelector("[data-email-recovery-whatsapp]");
+          if (emailRecovery && recoveryLink && typeof submissionTransport.buildWhatsAppUrl === "function") {
+            recoveryLink.href = submissionTransport.buildWhatsAppUrl(lastRequestMessage);
+            emailRecovery.hidden = false;
           }
         });
         return;
@@ -1855,6 +1869,8 @@
         return;
       }
       var whatsappUrl = submissionTransport.buildWhatsAppUrl(lastRequestMessage);
+      var previousEmailRecovery = form.querySelector("[data-email-recovery]");
+      if (previousEmailRecovery) previousEmailRecovery.hidden = true;
       showRequestSuccess("whatsapp", requestId, whatsappUrl);
       window.open(whatsappUrl, "_blank", "noopener");
     });
