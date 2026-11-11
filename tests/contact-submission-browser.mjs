@@ -179,6 +179,27 @@ try {
   await failurePage.close();
   }
 
+  // Mock the alternate provider: no customer data is sent to either external service.
+  for (const lang of ['ar', 'en', 'es']) {
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    let body = '';
+    let legacyCalls = 0;
+    await page.route(formSubmitUrl, async route => { legacyCalls++; await route.abort(); });
+    await page.route('https://api.web3forms.com/submit', async route => {
+      body = route.request().postData() || '';
+      await route.fulfill({status:200, contentType:'application/json', body:JSON.stringify({success:true})});
+    });
+    await page.goto(`${baseUrl}/contact.html?lang=${lang}&request=golden-hour`, {waitUntil:'load'});
+    await page.locator('[name="access_key"]').evaluate(element => { element.disabled = false; element.value = '00000000-0000-4000-8000-000000000000'; });
+    const finalStep = await reachFinalStep(page);
+    await finalStep.locator('[data-submit-channel-button]').click();
+    await page.locator('[data-request-success]').waitFor({state:'visible'});
+    check(body.includes('name="access_key"') && body.includes('name="subject"') && body.includes('name="replyto"'), `verified ${lang}: provider receives required fields`);
+    check(body.includes('name="request_summary"') && body.includes('name="request_reference"') && body.includes('guest@example.com'), `verified ${lang}: booking summary and reply details retained`);
+    check(!body.includes('name="_subject"') && legacyCalls === 0, `verified ${lang}: one provider receives the submission`);
+    await page.close();
+  }
+
   const missingTransportPage = await browser.newPage({ viewport: { width: 390, height: 844 } });
   await missingTransportPage.route('**/assets/js/contact-submission.js*', async (route) => route.abort());
   await missingTransportPage.goto(`${baseUrl}/contact.html?lang=en`, { waitUntil: 'domcontentloaded' });
