@@ -1,0 +1,32 @@
+name: Conan GA4 read-only verification
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  verify-ga4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Authenticate without service account keys
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.CONAN_WIF_PROVIDER }}
+          service_account: aventura-conan-reader@aventura-analytics.iam.gserviceaccount.com
+      - name: Install minimal dependency
+        run: python -m pip install 'google-auth>=2,<3'
+      - name: Verify GA4 aggregate event report
+        env:
+          GA4_PROPERTY_ID: '549237338'
+        run: python scripts/conan_ga4_reader.py
+      - name: Store report privately as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: conan-ga4-aggregate-report
+          path: conan-output/ga4-event-summary.json
+          retention-days: 7
