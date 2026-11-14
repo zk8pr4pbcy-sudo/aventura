@@ -198,7 +198,7 @@ async function main() {
       method: 'POST', headers: snapshotHeaders,
       body: JSON.stringify({
         title: snapshotTitle,
-        body: report.join('\\n') + '\\n\\n[سجل التشغيل](' + runUrl + ')'
+        body: report.join('\n') + '\n\n[سجل التشغيل](' + runUrl + ')'
       })
     });
     if (!snapshot.ok) throw new Error('Daily report publish HTTP ' + snapshot.status);
