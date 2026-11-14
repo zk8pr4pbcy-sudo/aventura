@@ -176,6 +176,36 @@ async function main() {
     console.log('Dry run: ' + alerts.map((x) => x[0]).join(', '));
     return;
   }
+  // Publish a readable, deduplicated daily snapshot for the ChatGPT monitor.
+  // The GitHub Actions job summary alone is not accessible to external monitors.
+  const snapshotDate = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Riyadh', year: 'numeric', month: '2-digit', day: '2-digit'
+  }).format(new Date());
+  const snapshotTitle = '[Conan Report][' + snapshotDate + '] تقرير زيارات أفنتورا';
+  const snapshotHeaders = {
+    Authorization: 'Bearer ' + issueToken,
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    'Content-Type': 'application/json'
+  };
+  const snapshotsResponse = await fetch(issueApi + '?state=all&per_page=100', {
+    headers: snapshotHeaders
+  });
+  if (!snapshotsResponse.ok) throw new Error('Daily report lookup HTTP ' + snapshotsResponse.status);
+  const snapshots = await snapshotsResponse.json();
+  if (!snapshots.some((issue) => issue.title === snapshotTitle)) {
+    const snapshot = await fetch(issueApi, {
+      method: 'POST', headers: snapshotHeaders,
+      body: JSON.stringify({
+        title: snapshotTitle,
+        body: report.join('\\n') + '\\n\\n[سجل التشغيل](' + runUrl + ')'
+      })
+    });
+    if (!snapshot.ok) throw new Error('Daily report publish HTTP ' + snapshot.status);
+    console.log('Published readable daily GA4 report: ' + snapshotDate);
+  } else {
+    console.log('Daily GA4 report already published: ' + snapshotDate);
+  }
   for (const [code, title, body] of alerts) await notify(code, title, body);
   console.log('Conan alert evaluation completed (' + alerts.length + ' rules triggered).');
 }
