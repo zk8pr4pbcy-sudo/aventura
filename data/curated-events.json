@@ -1,8 +1,7 @@
 {
-
-  "version": "1.8.12",
+  "version": "1.8.13",
   "windowDays": 14,
-  "lastReviewed": "2026-11-11",
+  "lastReviewed": "2026-11-15",
   "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
@@ -68,77 +67,6 @@
   },
   "events": [
     {
-      "id": "hajj-conference-exhibition-2026",
-      "active": true,
-      "priority": 3,
-      "startDate": "2026-11-08",
-      "endDate": "2026-11-11",
-      "title": {
-        "ar": "مؤتمر ومعرض الحج 2026 — النسخة السادسة",
-        "en": "Hajj Conference & Exhibition 2026 — 6th Edition",
-        "es": "Congreso y Exposición del Hach 2026 — 6.ª edición"
-      },
-      "category": {
-        "ar": "مؤتمرات دولية وأعمال",
-        "en": "International conference & business",
-        "es": "Congreso internacional y negocios"
-      },
-      "focusLabel": {
-        "ar": "وفود دولية • قيادات • تنفيذيون",
-        "en": "International delegations • Leaders • Executives",
-        "es": "Delegaciones internacionales • Líderes • Ejecutivos"
-      },
-      "summary": {
-        "ar": "مؤتمر ومعرض دولي يجمع جهات حكومية وشركات ومقدمي خدمات الحج لمناقشة الشراكات والخدمات والتطوير.",
-        "en": "International conference and exhibition connecting government bodies, businesses and Hajj service providers.",
-        "es": "Congreso y exposición internacional que reúne entidades públicas, empresas y proveedores de servicios del Hach."
-      },
-      "location": {
-        "ar": "جدة سوبر دوم",
-        "en": "Jeddah Superdome",
-        "es": "Jeddah Superdome"
-      },
-      "aventuraPlan": {
-        "ar": "استقبال الوفود • تنقلات خاصة طوال فترة الإقامة • تنسيق ضيافة تنفيذية حول الاجتماعات ومنصات توقيع الاتفاقيات • جولة جدة التاريخية بعد البرنامج",
-        "en": "Delegation reception • Private transfers throughout the stay • Executive hospitality around meetings and agreement-signing sessions • Historic Jeddah after the programme",
-        "es": "Recepción de delegaciones • Traslados privados durante la estancia • Hospitalidad ejecutiva para reuniones y firmas de acuerdos • Yeda Histórica después del programa"
-      },
-      "audience": {
-        "ar": "القيادات الحكومية وصناع القرار ومكاتب شؤون الحجاج والشركات والوفود الدولية",
-        "en": "Government leaders, decision-makers, pilgrim affairs offices, companies and international delegations",
-        "es": "Líderes públicos, responsables, oficinas de peregrinos, empresas y delegaciones internacionales"
-      },
-      "ticketing": {
-        "status": "registration_open",
-        "ar": "التسجيل مجاني ومطلوب للحصول على رمز الدخول الإلكتروني QR عبر موقع المؤتمر الرسمي.",
-        "en": "Free registration is required for an e-badge with QR code on the official conference site.",
-        "es": "Registro gratuito obligatorio para obtener un pase electrónico con código QR en el sitio oficial."
-      },
-      "image": "assets/images/event-corporate.webp",
-      "imageAlt": {
-        "ar": "ضيافة أفنتورا للوفود والمؤتمرات في جدة",
-        "en": "Aventura hospitality for conferences and delegations in Jeddah",
-        "es": "Hospitalidad de Aventura para congresos y delegaciones en Yeda"
-      },
-      "imageRights": {
-        "source": "Aventura-owned asset (repository designation; independent license not audited)",
-        "commercialUse": true,
-        "attributionRequired": false,
-        "independentRightsAudit": "pending"
-      },
-      "sourceUrl": "https://hajjconfex.com",
-      "verification": {
-        "checkedOn": "2026-11-11",
-        "status": "confirmed",
-        "notes": "Rechecked official sixth-edition site on 11 Nov: it still advertises 8–11 November 2026 in Jeddah and visitor registration. Registration completion and badge issuance were not tested. https://hajjconfex.transcend.com.sa/"
-      },
-      "timeLabels": {
-        "ar": "تفتح الأبواب من 9:00 ص؛ تختلف مواعيد الجلسات.",
-        "en": "Doors open from 9:00 AM; session times vary.",
-        "es": "Apertura desde las 09:00; los horarios de sesiones varían."
-      }
-    },
-    {
       "id": "paperme-print2pack-jeddah-2026",
       "active": true,
       "priority": 5,
@@ -199,9 +127,9 @@
       },
       "sourceUrl": "https://paperme-saudi.com/",
       "verification": {
-        "checkedOn": "2026-11-11",
+        "checkedOn": "2026-11-15",
         "status": "confirmed",
-        "notes": "Official PAPER-ME site confirms 16–18 Nov 2026 at JCEE and currently links to visitor registration; admission badge issuance not independently tested. https://paperme-saudi.com/ ; https://www.print2pack-saudi.com/"
+        "notes": "15 Nov official PAPER-ME site confirms 16–18 Nov 2026 at Jeddah Center for Exhibitions and Events (JCEE), visitor registration link. PRINT2PACK official site confirms co-located dates. Badge issuance not tested. https://paperme-saudi.com/ https://www.print2pack-saudi.com/"
       }
     },
     {
@@ -265,9 +193,9 @@
       },
       "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
       "verification": {
-        "checkedOn": "2026-11-11",
+        "checkedOn": "2026-11-15",
         "status": "confirmed",
-        "notes": "Official site reconfirms 23–25 Nov 2026, 16:00–23:00, trade buyers, registration and business matching; its own page inconsistently names venue JCEE and JIECC. Keep precise venue unconfirmed pending organiser response. https://www.foodexsaudiexpo.com/en"
+        "notes": "15 Nov official Foodex site confirms 23–25 Nov 2026, 16:00–23:00, free visitor registration and business matching. Organiser homepage names JCEE while venue/trip sections name JIECC: exact arrival point remains unverified. https://www.foodexsaudiexpo.com/en https://www.foodexsaudiexpo.com/en/registertovisit"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -336,9 +264,9 @@
       },
       "sourceUrl": "https://www.saudifranchiseexpo.com/",
       "verification": {
-        "checkedOn": "2026-11-11",
+        "checkedOn": "2026-11-15",
         "status": "confirmed",
-        "notes": "Official site confirms 23–25 Nov 2026 at Jeddah Center for Exhibitions and Events, 16:00–23:00; free screened trade visitor registration online, WhatsApp or Sunaidi Expo app. https://www.saudifranchiseexpo.com/register-to-visit"
+        "notes": "15 Nov official organiser confirms 23–25 Nov 2026 at Jeddah Center for Exhibitions and Events; trade registration free but screened, e-badge described. Opening hours inconsistent between organiser pages (to 22:00 vs 23:00); confirm before guest itinerary. https://www.saudifranchiseexpo.com/ https://www.saudifranchiseexpo.com/register-to-visit"
       }
     },
     {
@@ -473,9 +401,9 @@
       },
       "sourceUrl": "https://idwsc.com/",
       "verification": {
-        "checkedOn": "2026-11-11",
+        "checkedOn": "2026-11-15",
         "status": "confirmed",
-        "notes": "Official IDWS site confirms 14–16 Dec 2026 at Ritz-Carlton Jeddah; leaders, investors, startups, global water sector, visitor registration link available; entry issuance not tested. https://idwsc.com/"
+        "notes": "15 Nov official conference site confirms 14–16 Dec 2026 at Ritz-Carlton Jeddah, global executives, investors and water leaders. https://idwsc.com/"
       }
     },
     {
@@ -606,28 +534,27 @@
       },
       "sourceUrl": "https://jewelofsaudi.com/",
       "verification": {
-        "checkedOn": "2026-11-11",
+        "checkedOn": "2026-11-15",
         "status": "confirmed",
-        "notes": "Official site confirms 18–20 Dec 2026 at Jeddah Superdome; international B2B jewellery/machinery and hosted buyers; visitor registration outcome not tested. https://jewelofsaudi.com/"
+        "notes": "15 Nov official event website advertises 18–20 Dec 2026 at Jeddah Superdome for B2B jewellery/machinery and hosted buyers. Entry outcome not tested. https://jewelofsaudi.com/"
       }
     }
   ],
   "reviewSummary": {
-    "date": "2026-11-11",
+    "date": "2026-11-15",
     "added": [],
     "updated": [
       "paperme-print2pack-jeddah-2026",
       "foodex-saudi-jeddah-2026",
       "saudi-franchise-expo-jeddah-2026",
-      "agrofood-propack-jeddah-2026",
       "idws-water-sustainability-jeddah-2026",
       "jewel-of-saudi-jeddah-2026"
     ],
-    "removedEnded": [],
-    "removedPostponed": [
-      "jewellery-salon-jeddah-2026"
+    "removedEnded": [
+      "hajj-conference-exhibition-2026"
     ],
+    "removedPostponed": [],
     "publishingScope": "website_only",
-    "note": "Removed Jewellery Salon Jeddah 12–15 Nov listing: organiser's current official site explicitly says JEDDAH POSTPONED, new dates TBA; do not market old dates. Rechecked PAPER-ME, Foodex, Saudi Franchise, Agrofood, IDWS and Jewel of Saudi against official sites. Foodex venue JCEE/JIECC conflict unresolved. No ended events as of 11 Nov (Hajj ends today). Existing image rights assertions not independently audited; no external images or social posts. Publication/CI status must be independently confirmed."
+    "note": "Removed Hajj conference ended 11 Nov. Official sites rechecked for PAPER-ME/PRINT2PACK, Foodex, Saudi Franchise, IDWS and Jewel of Saudi. Foodex JCEE/JIECC discrepancy and Saudi Franchise closing hour discrepancy remain unresolved; registration issuance not tested. Other existing future events retained without claiming new verification. No new external imagery or social posts; existing image rights audit pending. CI and live deployment require independent verification."
   }
 }
