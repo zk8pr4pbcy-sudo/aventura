@@ -1,7 +1,7 @@
 {
-  "version": "1.8.13",
+  "version": "1.8.14",
   "windowDays": 14,
-  "lastReviewed": "2026-11-15",
+  "lastReviewed": "2026-11-18",
   "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
@@ -127,9 +127,9 @@
       },
       "sourceUrl": "https://paperme-saudi.com/",
       "verification": {
-        "checkedOn": "2026-11-15",
+        "checkedOn": "2026-11-18",
         "status": "confirmed",
-        "notes": "15 Nov official PAPER-ME site confirms 16–18 Nov 2026 at Jeddah Center for Exhibitions and Events (JCEE), visitor registration link. PRINT2PACK official site confirms co-located dates. Badge issuance not tested. https://paperme-saudi.com/ https://www.print2pack-saudi.com/"
+        "notes": "18 Nov: PAPER-ME organiser continues to list 16–18 Nov 2026, JCEE Jeddah and visitor registration. Final scheduled day today; do not remove until 19 Nov. PRINT2PACK co-location based on existing organiser verification. Badge issuance not tested. https://paperme-saudi.com/"
       }
     },
     {
@@ -193,9 +193,9 @@
       },
       "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
       "verification": {
-        "checkedOn": "2026-11-15",
+        "checkedOn": "2026-11-18",
         "status": "confirmed",
-        "notes": "15 Nov official Foodex site confirms 23–25 Nov 2026, 16:00–23:00, free visitor registration and business matching. Organiser homepage names JCEE while venue/trip sections name JIECC: exact arrival point remains unverified. https://www.foodexsaudiexpo.com/en https://www.foodexsaudiexpo.com/en/registertovisit"
+        "notes": "18 Nov: official Foodex homepage confirms 23–25 Nov 2026, 16:00–23:00, registration and B2B matching. Same official website labels venue JCEE in header but JIECC in detailed venue section; exact drop-off remains unverified. https://www.foodexsaudiexpo.com/en"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -264,9 +264,9 @@
       },
       "sourceUrl": "https://www.saudifranchiseexpo.com/",
       "verification": {
-        "checkedOn": "2026-11-15",
+        "checkedOn": "2026-11-18",
         "status": "confirmed",
-        "notes": "15 Nov official organiser confirms 23–25 Nov 2026 at Jeddah Center for Exhibitions and Events; trade registration free but screened, e-badge described. Opening hours inconsistent between organiser pages (to 22:00 vs 23:00); confirm before guest itinerary. https://www.saudifranchiseexpo.com/ https://www.saudifranchiseexpo.com/register-to-visit"
+        "notes": "18 Nov: official organiser confirms 23–25 Nov 2026 at Jeddah Center for Exhibitions and Events; free screened trade visitor registration and e-badge process. Main page lists 16:00–23:00 while about/visit pages say 16:00–22:00; closing hour unresolved. https://www.saudifranchiseexpo.com/ https://www.saudifranchiseexpo.com/register-to-visit"
       }
     },
     {
@@ -335,9 +335,9 @@
       },
       "sourceUrl": "https://agrofoodjeddah.com/secure-your-visit/",
       "verification": {
-        "checkedOn": "2026-11-11",
+        "checkedOn": "2026-11-18",
         "status": "confirmed",
-        "notes": "Official Agrofood page confirms 8–10 Dec 2026 at Jeddah Center for Exhibitions & Events, co-located with Propack and Khairat Makkah; visitor registration via ICON EMS app, ticket issuance not tested. https://agrofoodjeddah.com/secure-your-visit/"
+        "notes": "18 Nov: official Agrofood organiser continues to advertise 8–10 Dec 2026 in Jeddah; existing venue/ProPack co-location details retained from prior verification, not independently reconfirmed today. https://agrofoodjeddah.com/about-agrofood/"
       }
     },
     {
@@ -401,9 +401,9 @@
       },
       "sourceUrl": "https://idwsc.com/",
       "verification": {
-        "checkedOn": "2026-11-15",
+        "checkedOn": "2026-11-18",
         "status": "confirmed",
-        "notes": "15 Nov official conference site confirms 14–16 Dec 2026 at Ritz-Carlton Jeddah, global executives, investors and water leaders. https://idwsc.com/"
+        "notes": "18 Nov: official IDWS organiser confirms 14–16 Dec 2026 at Ritz-Carlton Jeddah, water leaders, investors, speakers and startups. https://idwsc.com/"
       }
     },
     {
@@ -534,27 +534,26 @@
       },
       "sourceUrl": "https://jewelofsaudi.com/",
       "verification": {
-        "checkedOn": "2026-11-15",
+        "checkedOn": "2026-11-18",
         "status": "confirmed",
-        "notes": "15 Nov official event website advertises 18–20 Dec 2026 at Jeddah Superdome for B2B jewellery/machinery and hosted buyers. Entry outcome not tested. https://jewelofsaudi.com/"
+        "notes": "18 Nov: official event site confirms 18–20 Dec 2026 at Jeddah Superdome, B2B jewellery and hosted buyers. https://jewelofsaudi.com/index"
       }
     }
   ],
   "reviewSummary": {
-    "date": "2026-11-15",
+    "date": "2026-11-18",
     "added": [],
     "updated": [
       "paperme-print2pack-jeddah-2026",
       "foodex-saudi-jeddah-2026",
       "saudi-franchise-expo-jeddah-2026",
+      "agrofood-propack-jeddah-2026",
       "idws-water-sustainability-jeddah-2026",
       "jewel-of-saudi-jeddah-2026"
     ],
-    "removedEnded": [
-      "hajj-conference-exhibition-2026"
-    ],
+    "removedEnded": [],
     "removedPostponed": [],
     "publishingScope": "website_only",
-    "note": "Removed Hajj conference ended 11 Nov. Official sites rechecked for PAPER-ME/PRINT2PACK, Foodex, Saudi Franchise, IDWS and Jewel of Saudi. Foodex JCEE/JIECC discrepancy and Saudi Franchise closing hour discrepancy remain unresolved; registration issuance not tested. Other existing future events retained without claiming new verification. No new external imagery or social posts; existing image rights audit pending. CI and live deployment require independent verification."
+    "note": "Six organiser sites rechecked. PAPER-ME still running on 18 Nov, so retain until after its final day. Foodex venue JCEE/JIECC conflict and Saudi Franchise 22:00/23:00 closing conflict unresolved. No new eligible verified event added. Existing images unchanged; independent rights documentation pending. CI and live deployment not independently confirmed."
   }
 }
