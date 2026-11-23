@@ -102,6 +102,10 @@ async function main() {
   }
   const rows=[...grouped.values()].sort((a,b)=>a.hour.localeCompare(b.hour));
   console.log('GA4 hourly query succeeded; positive eligible hours: ' + rows.length);
+  // Audit evidence is kept in the job summary even for already-notified hours.
+  const auditRows = rows.map(r => ({hour:r.hour, sessions:r.sessions,
+    breakdown:r.breakdown.map(b=>({country:b.country,city:b.city,
+      channel:b.channel,source:b.source,sessions:b.sessions}))}));
   const existing = await existingIssueTitles();
   const unseen = rows.filter((r) =>
     !existing.has('[Conan Visit][' + r.hour + '] زيارات موقع أفنتورا'));
@@ -116,12 +120,24 @@ async function main() {
       '- وضع الاختبار دون إنشاء تنبيهات: **' + (dryRun ? 'نعم' : 'لا') + '**\n\n' +
       'التنبيه عن جلسات مجمعة، وليس عن هوية زائر. بيانات GA4 قد تتأخر.\n');
   }
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    const lines = ['\n### سجل التدقيق لكل ساعة (بيانات مجمعة)\n',
+      '| الساعة (GA4) | الدولة | المدينة | القناة | المصدر / الوسيط | الجلسات |',
+      '| --- | --- | --- | --- | --- | ---: |'];
+    for (const row of auditRows) for (const b of row.breakdown) {
+      const safe = v => String(v).replace(/[|\\r\\n<>`]/g,' ').slice(0,80);
+      lines.push('| ' + [row.hour,b.country,b.city,b.channel,b.source].map(safe).join(' | ') + ' | ' + b.sessions + ' |');
+    }
+    if (!auditRows.length) lines.push('| لا توجد ساعات موجبة مكتملة | — | — | — | — | 0 |');
+    appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
+  }
+  console.log('Hourly audit: ' + JSON.stringify(auditRows));
   if (dryRun) {
     console.log('Dry run: would alert on ' + unseen.length + ' hourly buckets.');
     return;
   }
-  // Limit catch-up alerts to three per run to prevent floods on first deployment.
-  for (const row of unseen.slice(-3)) await createIssue(row.hour, row.sessions, tz, row.breakdown);
+  // Publish every unseen completed hour; avoid silently dropping catch-up hours.
+  for (const row of unseen) await createIssue(row.hour, row.sessions, tz, row.breakdown);
   console.log('Conan hourly visit check finished.');
 }
 main().catch((e) => { console.error(e.message); process.exitCode = 1; });

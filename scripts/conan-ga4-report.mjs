@@ -113,6 +113,8 @@ async function main() {
   const dailySessions = pairs(daily, 'sessions').reduce((sum, row) => sum + row.value, 0);
   const yesterdayDailySessions = pairs(yesterdayDaily, 'sessions').reduce((sum, row) => sum + row.value, 0);
   const consistencyOk = dailySessions === sessions && yesterdayDailySessions === yesterdaySessions;
+  // A successful query is not proof of complete visitor tracking or email delivery.
+  // Keep reports explicitly provisional until independent reconciliation is available.
   const funnelRows = pairs(funnel, 'eventCount');
   const funnelMap = Object.fromEntries(funnelRows.map((x) => [x.label, x.value]));
   const report = [
@@ -123,6 +125,8 @@ async function main() {
     '',
     '**ملاحظة:** لا يشمل هذا التقرير زيارات اليوم الحالي. قد تتأخر بيانات أمس في GA4؛ ' +
       'التنبيهات بالساعة بيانات أولية وقد تتغير بعد المعالجة.',
+    '',
+    '**حالة جودة التقرير:** ' + (consistencyOk ? 'أولي — اجتاز مطابقة الإجماليات اليومية فقط؛ لا يثبت اكتمال جميع الزيارات' : 'غير معتمد — اختلاف في إجماليات الجلسات') + '.',
     '',
     '**فحص اتساق الجلسات:** ' + (consistencyOk ? 'متطابق' : 'يحتاج مراجعة') +
       ' (إجمالي الأيام: ' + num(dailySessions) + '؛ إجمالي الفترة: ' + num(sessions) +
