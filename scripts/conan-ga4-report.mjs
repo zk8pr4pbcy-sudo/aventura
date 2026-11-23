@@ -12,6 +12,9 @@ const fmt = new Intl.NumberFormat('ar-SA-u-nu-latn');
 const n = (v) => Number.isFinite(Number(v)) ? Number(v) : 0;
 const clean = (v) => String(v ?? '').replace(/[\r\n|<>`]/g, ' ').slice(0, 90);
 const num = (v) => fmt.format(n(v));
+const reportDate = (offsetDays) => { const d = new Date(Date.now() + offsetDays * 86400000); return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Riyadh', year: 'numeric', month: '2-digit', day: '2-digit' }).format(d); };
+const yesterdayDate = reportDate(-1);
+const weekStartDate = reportDate(-7);
 
 async function ga4(dimensions, metrics, startDate, endDate, filter, limit = 10) {
   if (!property || !token) throw new Error('Missing GA4 access token or property ID');
@@ -91,7 +94,7 @@ async function main() {
   const filter = {
     filter: { fieldName: 'eventName', inListFilter: { values: events } }
   };
-  const [week, prior, yesterday, channels, cities, devices, pages, funnel, daily] =
+  const [week, prior, yesterday, channels, cities, devices, pages, funnel, daily, yesterdayDaily] =
     await Promise.all([
       ga4([], names, '7daysAgo', 'yesterday'),
       ga4([], names, '14daysAgo', '8daysAgo'),
@@ -101,18 +104,29 @@ async function main() {
       ga4(['deviceCategory'], ['activeUsers'], '7daysAgo', 'yesterday'),
       ga4(['pagePath'], ['screenPageViews'], '7daysAgo', 'yesterday'),
       ga4(['eventName'], ['eventCount'], '7daysAgo', 'yesterday', filter, 20),
-      ga4(['date'], ['sessions'], '7daysAgo', 'yesterday', undefined, 10)
+      ga4(['date'], ['sessions'], '7daysAgo', 'yesterday', undefined, 10),
+      ga4(['date'], ['sessions'], 'yesterday', 'yesterday', undefined, 5)
     ]);
   const sessions = metric(week, 'sessions');
   const previousSessions = metric(prior, 'sessions');
   const yesterdaySessions = metric(yesterday, 'sessions');
+  const dailySessions = pairs(daily, 'sessions').reduce((sum, row) => sum + row.value, 0);
+  const yesterdayDailySessions = pairs(yesterdayDaily, 'sessions').reduce((sum, row) => sum + row.value, 0);
+  const consistencyOk = dailySessions === sessions && yesterdayDailySessions === yesterdaySessions;
   const funnelRows = pairs(funnel, 'eventCount');
   const funnelMap = Object.fromEntries(funnelRows.map((x) => [x.label, x.value]));
   const report = [
     '# كونان | تقرير أفنتورا من Google Analytics 4',
     '',
-    '**الفترة:** آخر 7 أيام مكتملة حتى أمس، بتوقيت موقع GA4. ' +
-      'المقارنة مع الأيام السبعة السابقة.',
+    '**الفترة:** ' + weekStartDate + ' إلى ' + yesterdayDate +
+      ' (آخر 7 أيام مكتملة، بتوقيت Asia/Riyadh). المقارنة مع الأيام السبعة السابقة.',
+    '',
+    '**ملاحظة:** لا يشمل هذا التقرير زيارات اليوم الحالي. قد تتأخر بيانات أمس في GA4؛ ' +
+      'التنبيهات بالساعة بيانات أولية وقد تتغير بعد المعالجة.',
+    '',
+    '**فحص اتساق الجلسات:** ' + (consistencyOk ? 'متطابق' : 'يحتاج مراجعة') +
+      ' (إجمالي الأيام: ' + num(dailySessions) + '؛ إجمالي الفترة: ' + num(sessions) +
+      '؛ أمس بالتفصيل: ' + num(yesterdayDailySessions) + ').',
     '',
     '| المؤشر | آخر 7 أيام | 7 أيام سابقة | أمس |',
     '| --- | ---: | ---: | ---: |',
@@ -146,6 +160,10 @@ async function main() {
   console.log('Conan GA4 aggregate report succeeded. Open the job summary.');
   const dryRun = process.env.CONAN_DRY_RUN === 'true';
   const alerts = [];
+  if (!consistencyOk) {
+    alerts.push(['report-mismatch', 'اختلاف نتائج استعلامات GA4',
+      'مجموع الجلسات اليومية لا يطابق إجمالي التقرير. راجع الفلاتر ونطاق التواريخ وتوقيت GA4 وسجل التشغيل.']);
+  }
   if (previousSessions >= 20 && sessions <= previousSessions * 0.5) {
     alerts.push(['traffic-drop', 'انخفاض كبير في الزيارات',
       'انخفضت الجلسات في آخر 7 أيام بنسبة 50% أو أكثر مقارنة بالأسبوع السابق. ' +
@@ -155,6 +173,10 @@ async function main() {
     alerts.push(['no-sessions', 'لم تُسجّل جلسات أمس',
       'لم تظهر جلسات في تقرير أمس رغم وجود حجم زيارات سابق كافٍ. ' +
       'تحقق من GA4 والموقع وتأخر المعالجة.']);
+  }
+  if (sessions >= 5 && metric(week, 'screenPageViews') === 0) {
+    alerts.push(['tracking-gap', 'جلسات دون مشاهدات صفحات',
+      'رُصدت جلسات دون أي مشاهدة صفحة في الفترة؛ راجع تثبيت GA4 وموافقة التتبع.']);
   }
   if ((funnelMap.request_form_started || 0) >= 5 &&
       (funnelMap.request_completed || 0) === 0) {
@@ -178,9 +200,7 @@ async function main() {
   }
   // Publish a readable, deduplicated daily snapshot for the ChatGPT monitor.
   // The GitHub Actions job summary alone is not accessible to external monitors.
-  const snapshotDate = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Asia/Riyadh', year: 'numeric', month: '2-digit', day: '2-digit'
-  }).format(new Date());
+  const snapshotDate = reportDate(0);
   const snapshotTitle = '[Conan Report][' + snapshotDate + '] تقرير زيارات أفنتورا';
   const snapshotHeaders = {
     Authorization: 'Bearer ' + issueToken,
@@ -193,7 +213,8 @@ async function main() {
   });
   if (!snapshotsResponse.ok) throw new Error('Daily report lookup HTTP ' + snapshotsResponse.status);
   const snapshots = await snapshotsResponse.json();
-  if (!snapshots.some((issue) => issue.title === snapshotTitle)) {
+  const existingSnapshot = snapshots.find((issue) => issue.title === snapshotTitle);
+  if (!existingSnapshot) {
     const snapshot = await fetch(issueApi, {
       method: 'POST', headers: snapshotHeaders,
       body: JSON.stringify({
@@ -204,7 +225,12 @@ async function main() {
     if (!snapshot.ok) throw new Error('Daily report publish HTTP ' + snapshot.status);
     console.log('Published readable daily GA4 report: ' + snapshotDate);
   } else {
-    console.log('Daily GA4 report already published: ' + snapshotDate);
+    const updated = await fetch(issueApi + '/' + existingSnapshot.number, {
+      method: 'PATCH', headers: snapshotHeaders,
+      body: JSON.stringify({ body: report.join('\n') + '\n\n[سجل التشغيل](' + runUrl + ')' })
+    });
+    if (!updated.ok) throw new Error('Daily report update HTTP ' + updated.status);
+    console.log('Refreshed daily GA4 report: ' + snapshotDate);
   }
   for (const [code, title, body] of alerts) await notify(code, title, body);
   console.log('Conan alert evaluation completed (' + alerts.length + ' rules triggered).');
