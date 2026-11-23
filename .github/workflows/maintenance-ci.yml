@@ -76,7 +76,8 @@ jobs:
         run: node scripts/build-public.mjs
 
   browser:
-    runs-on: ubuntu-latest
+    # Playwright 1.55 Chromium is not supported on the ubuntu-26.04 runner image.
+    runs-on: ubuntu-24.04
     needs: verify
     steps:
       - name: Checkout repository
