@@ -91,7 +91,7 @@ async function main() {
   const filter = {
     filter: { fieldName: 'eventName', inListFilter: { values: events } }
   };
-  const [week, prior, yesterday, channels, cities, devices, pages, funnel, daily] =
+  const [week, prior, yesterday, channels, cities, devices, pages, funnel, daily, engagement, landing, pageTitles, lastDayHours] =
     await Promise.all([
       ga4([], names, '7daysAgo', 'yesterday'),
       ga4([], names, '14daysAgo', '8daysAgo'),
@@ -101,7 +101,11 @@ async function main() {
       ga4(['deviceCategory'], ['activeUsers'], '7daysAgo', 'yesterday'),
       ga4(['pagePath'], ['screenPageViews'], '7daysAgo', 'yesterday'),
       ga4(['eventName'], ['eventCount'], '7daysAgo', 'yesterday', filter, 20),
-      ga4(['date'], ['sessions'], '7daysAgo', 'yesterday', undefined, 10)
+      ga4(['date'], ['sessions'], '7daysAgo', 'yesterday', undefined, 10),
+      ga4([], ['sessions','userEngagementDuration','engagementRate','averageSessionDuration'], '7daysAgo', 'yesterday'),
+      ga4(['landingPagePlusQueryString'], ['sessions'], '7daysAgo', 'yesterday', undefined, 30),
+      ga4(['pageTitle'], ['screenPageViews'], '7daysAgo', 'yesterday', undefined, 30),
+      ga4(['dateHour'], ['sessions'], 'yesterday', 'yesterday', undefined, 100)
     ]);
   const sessions = metric(week, 'sessions');
   const previousSessions = metric(prior, 'sessions');
@@ -126,6 +130,18 @@ async function main() {
       num(metric(yesterday, 'screenPageViews')) + ' |',
     ''
   ];
+  const engagementSeconds = metric(engagement, 'userEngagementDuration');
+  const engagementSessions = metric(engagement, 'sessions');
+  const avgEngagementSeconds = engagementSessions > 0 ? engagementSeconds / engagementSessions : null;
+  const avgSessionSeconds = engagementSessions > 0 ? metric(engagement, 'averageSessionDuration') : null;
+  report.push('### التفاعل والمدة', '',
+    '| المؤشر | القيمة |', '| --- | ---: |',
+    '| متوسط وقت التفاعل لكل جلسة | ' + (avgEngagementSeconds === null ? 'غير متاح' : avgEngagementSeconds.toFixed(1) + ' ثانية') + ' |',
+    '| متوسط مدة الجلسة | ' + (avgSessionSeconds === null ? 'غير متاح' : avgSessionSeconds.toFixed(1) + ' ثانية') + ' |',
+    '| معدل التفاعل | ' + (engagementSessions === 0 ? 'غير متاح' : (metric(engagement, 'engagementRate') * 100).toFixed(1) + '%') + ' |',
+    '', 'مدة الجلسة تختلف عن وقت التفاعل الفعلي. المتوسطات مجمّعة ولا تصف زائرًا بعينه.', '');
+  table(report, 'صفحات الدخول', pairs(landing, 'sessions'), 'صفحة الدخول');
+  table(report, 'عناوين الصفحات الأكثر مشاهدة', pairs(pageTitles, 'screenPageViews'), 'عنوان الصفحة');
   table(report, 'مصادر الزيارات (القنوات)', pairs(channels, 'sessions'), 'القناة');
   // Suppress tiny city groups to avoid unnecessarily exposing low-volume locations.
   table(report, 'المدن (3 مستخدمين نشطين أو أكثر)', pairs(cities, 'activeUsers', 3), 'المدينة');
@@ -133,8 +149,32 @@ async function main() {
   table(report, 'الصفحات الأكثر مشاهدة', pairs(pages, 'screenPageViews'), 'المسار');
   table(report, 'مؤشرات مسار الطلب (أحداث، لا تعادل عملاء مؤكدين)',
     events.map((label) => ({ label, value: funnelMap[label] || 0 })), 'الحدث');
+  // These ratios are event-to-event signals, not unique-user conversion rates.
+  const formStarts = funnelMap.request_form_started || 0;
+  const submitAttempts = funnelMap.request_submit_attempt || 0;
+  const completions = funnelMap.request_completed || 0;
+  const pct = (part, whole) => whole > 0 ? (100 * part / whole).toFixed(1) + '%' : 'غير متاح';
+  report.push('### صحة مسار الطلب (مؤشرات أحداث مجمّعة)', '',
+    '| المؤشر | القيمة |', '| --- | ---: |',
+    '| أحداث بدء النموذج | ' + num(formStarts) + ' |',
+    '| أحداث محاولة الإرسال | ' + num(submitAttempts) + ' |',
+    '| أحداث الإكمال المرصودة | ' + num(completions) + ' |',
+    '| نسبة محاولات الإرسال إلى بدء النموذج | ' + pct(submitAttempts, formStarts) + ' |',
+    '| نسبة الإكمال إلى محاولات الإرسال | ' + pct(completions, submitAttempts) + ' |',
+    '', 'هذه نسب بين أعداد أحداث وليست معدلات تحويل لزوار فريدين. قد تتجاوز 100% عند تكرار الأحداث أو اختلاف تسلسل التسجيل.',
+    'حدث الإكمال لا يثبت وصول رسالة بريد أو تأكيد حجز؛ يجب مطابقته مع الطلبات المستلمة.', '');
   table(report, 'الجلسات حسب اليوم', pairs(daily, 'sessions'), 'تاريخ GA4');
-  report.push('---', '',
+  const hourlyYesterday = (lastDayHours.rows || []).reduce((sum, row) => sum + n(row.metricValues?.[0]?.value), 0);
+  report.push('### تشخيص اتساق البيانات', '',
+    '- جلسات أمس في الاستعلام الإجمالي: **' + num(yesterdaySessions) + '**',
+    '- مجموع جلسات أمس حسب الساعة في استعلام مستقل: **' + num(hourlyYesterday) + '**',
+    '- النتيجة: **' + (yesterdaySessions === hourlyYesterday ? 'متطابقة داخل التقرير اليومي' : 'اختلاف بين استعلامي التقرير اليومي؛ يحتاج فحصًا') + '**',
+    '- تنبيهات [Conan Visit] تُنشأ باستعلام آخر للفترة أمس واليوم؛ لا يمكن استنتاج التطابق معها من هذا التقرير وحده.',
+    '- عند ظهور صفر رغم تنبيهات ساعات موجبة، افحص تاريخ الساعة والمنطقة الزمنية، ومعالجة GA4، وصحة خاصية GA4 والفلاتر.',
+    '', '### حدود تتبع رحلة الزائر', '',
+    'هذه البيانات مجمّعة: صفحات الدخول والصفحات الأكثر مشاهدة وأحداث النموذج لا تثبت ترتيب التنقل داخل جلسة فردية.',
+    'الرحلات الفردية تتطلب إعدادًا إضافيًا للتحليل مع مراعاة الخصوصية؛ لا يمكن استرجاع أحداث لم تُسجّل سابقًا.',
+    '', '---', '',
     'النتائج مجمّعة وقد تتأخر بسبب معالجة GA4 أو الموافقة على التتبع أو أدوات الحجب. ' +
     'لا تتضمن هوية الزائر أو مسارًا فرديًا مفصلًا. الأرقام لا تمثل جميع زوار الموقع بالضرورة.',
     '',

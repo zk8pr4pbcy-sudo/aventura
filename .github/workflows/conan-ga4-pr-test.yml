@@ -1,0 +1,29 @@
+name: Conan report static PR test
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/conan-ga4-report.mjs'
+      - '.github/workflows/conan-ga4-pr-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  ga4-readonly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check report syntax
+        run: node --check scripts/conan-ga4-report.mjs
+      - name: Validate report contains engagement and diagnostics
+        run: |
+          grep -q 'averageSessionDuration' scripts/conan-ga4-report.mjs
+          grep -q 'landingPagePlusQueryString' scripts/conan-ga4-report.mjs
+          grep -q 'تشخيص اتساق البيانات' scripts/conan-ga4-report.mjs

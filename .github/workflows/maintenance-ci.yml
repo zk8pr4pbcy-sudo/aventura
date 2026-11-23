@@ -76,7 +76,7 @@ jobs:
         run: node scripts/build-public.mjs
 
   browser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: verify
     steps:
       - name: Checkout repository
