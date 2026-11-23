@@ -149,6 +149,20 @@ async function main() {
   table(report, 'الصفحات الأكثر مشاهدة', pairs(pages, 'screenPageViews'), 'المسار');
   table(report, 'مؤشرات مسار الطلب (أحداث، لا تعادل عملاء مؤكدين)',
     events.map((label) => ({ label, value: funnelMap[label] || 0 })), 'الحدث');
+  // These ratios are event-to-event signals, not unique-user conversion rates.
+  const formStarts = funnelMap.request_form_started || 0;
+  const submitAttempts = funnelMap.request_submit_attempt || 0;
+  const completions = funnelMap.request_completed || 0;
+  const pct = (part, whole) => whole > 0 ? (100 * part / whole).toFixed(1) + '%' : 'غير متاح';
+  report.push('### صحة مسار الطلب (مؤشرات أحداث مجمّعة)', '',
+    '| المؤشر | القيمة |', '| --- | ---: |',
+    '| أحداث بدء النموذج | ' + num(formStarts) + ' |',
+    '| أحداث محاولة الإرسال | ' + num(submitAttempts) + ' |',
+    '| أحداث الإكمال المرصودة | ' + num(completions) + ' |',
+    '| نسبة محاولات الإرسال إلى بدء النموذج | ' + pct(submitAttempts, formStarts) + ' |',
+    '| نسبة الإكمال إلى محاولات الإرسال | ' + pct(completions, submitAttempts) + ' |',
+    '', 'هذه نسب بين أعداد أحداث وليست معدلات تحويل لزوار فريدين. قد تتجاوز 100% عند تكرار الأحداث أو اختلاف تسلسل التسجيل.',
+    'حدث الإكمال لا يثبت وصول رسالة بريد أو تأكيد حجز؛ يجب مطابقته مع الطلبات المستلمة.', '');
   table(report, 'الجلسات حسب اليوم', pairs(daily, 'sessions'), 'تاريخ GA4');
   const hourlyYesterday = (lastDayHours.rows || []).reduce((sum, row) => sum + n(row.metricValues?.[0]?.value), 0);
   report.push('### تشخيص اتساق البيانات', '',
