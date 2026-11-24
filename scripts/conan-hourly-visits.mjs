@@ -21,7 +21,7 @@ function hourKey(date, tz) {
   const map = Object.fromEntries(parts.map((p) => [p.type, p.value]));
   return map.year + map.month + map.day + map.hour;
 }
-async function report() {
+async function report(dimensions = ['dateHour','country','city','sessionDefaultChannelGroup','sessionSourceMedium'], metrics = ['sessions']) {
   const response = await fetch(
     'https://analyticsdata.googleapis.com/v1beta/properties/' + property + ':runReport',
     {
@@ -32,8 +32,8 @@ async function report() {
       },
       body: JSON.stringify({
         dateRanges: [{ startDate: 'yesterday', endDate: 'today' }],
-        dimensions: ['dateHour','country','city','sessionDefaultChannelGroup','sessionSourceMedium'].map(name => ({name})),
-        metrics: [{ name: 'sessions' }],
+        dimensions: dimensions.map(name => ({name})),
+        metrics: metrics.map(name => ({name})),
         limit: '10000',
         keepEmptyRows: false
       })
@@ -48,7 +48,7 @@ async function existingIssueTitles() {
   const issues = await response.json();
   return new Set(issues.map((i) => i.title));
 }
-async function createIssue(key, count, tz, breakdown) {
+async function createIssue(key, count, tz, breakdown, quality) {
   const title = '[Conan Visit][' + key + '] زيارات موقع أفنتورا';
   const body = [
     'رصد كونان زيارات للموقع في ساعة مكتملة وفق توقيت Google Analytics.',
@@ -57,6 +57,12 @@ async function createIssue(key, count, tz, breakdown) {
       '-' + key.slice(6,8) + '، ' + key.slice(8,10) + ':00–:59',
     '**المنطقة الزمنية:** ' + tz,
     '**الجلسات المرصودة:** ' + count,
+    '',
+    '**المستخدمون النشطون (GA4):** ' + (quality?.[0] ?? 'غير متاح'),
+    '**مشاهدات الصفحات:** ' + (quality?.[1] ?? 'غير متاح'),
+    '**إجمالي مدة التفاعل بالثواني:** ' + (quality?.[2] ?? 'غير متاح'),
+    '**الجلسات المتفاعلة:** ' + (quality?.[3] ?? 'غير متاح'),
+    '**الزيارات الآلية:** غير قابلة للتحديد من هذه البيانات المجمعة؛ لا تصنيف دون دليل.',
     '',
     '### الموقع الجغرافي ومصدر الزيارة (بيانات مجمعة)',
     '| الدولة | المدينة | القناة | المصدر / الوسيط | الجلسات |',
@@ -80,6 +86,13 @@ async function createIssue(key, count, tz, breakdown) {
 async function main() {
   if (!repo || !token || !property || !accessToken) throw new Error('Missing required environment');
   const result = await report();
+  let qualityByHour = new Map();
+  try {
+    const quality = await report(['dateHour'], ['activeUsers','screenPageViews','userEngagementDuration','engagedSessions']);
+    if (quality.metadata?.timeZone === result.metadata?.timeZone) {
+      qualityByHour = new Map((quality.rows || []).map(r => [r.dimensionValues[0].value, r.metricValues.map(m => m.value)]));
+    }
+  } catch (e) { console.warn('Optional quality metrics unavailable: ' + e.message); }
   const tz = result.metadata?.timeZone || 'Asia/Riyadh';
   const activatedHour = hourKey(activation, tz);
   const lastCompletedHour = hourKey(new Date(now.getTime() - 3600000), tz);
@@ -121,7 +134,7 @@ async function main() {
     return;
   }
   // Limit catch-up alerts to three per run to prevent floods on first deployment.
-  for (const row of unseen.slice(-3)) await createIssue(row.hour, row.sessions, tz, row.breakdown);
+  for (const row of unseen.slice(-3)) await createIssue(row.hour, row.sessions, tz, row.breakdown, qualityByHour.get(row.hour));
   console.log('Conan hourly visit check finished.');
 }
 main().catch((e) => { console.error(e.message); process.exitCode = 1; });
