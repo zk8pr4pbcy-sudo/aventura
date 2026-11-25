@@ -1,7 +1,7 @@
 {
-  "version": "1.8.15",
+  "version": "1.8.16",
   "windowDays": 14,
-  "lastReviewed": "2026-11-22",
+  "lastReviewed": "2026-11-25",
   "reviewedBy": "Salem + Aventura team",
   "publishingScope": "website_only",
   "imagePolicy": {
@@ -108,10 +108,10 @@
         "es": "Compradores, importadores, distribuidores y empresas de alimentos, bebidas y hospitalidad"
       },
       "ticketing": {
-        "status": "registration_open",
-        "ar": "التسجيل مجاني للزوار التجاريين وغير التجاريين عبر النموذج الإلكتروني أو واتساب أو تطبيق Sunaidi Expo؛ يصدر تصريح دخول إلكتروني. المعرض تجاري ولا يُسمح بدخول الأطفال.",
-        "en": "Free visitor registration for trade and non-trade visitors via online form, WhatsApp or Sunaidi Expo app; an e-badge is issued. This trade show does not admit children.",
-        "es": "Registro gratuito para visitantes profesionales y generales por formulario, WhatsApp o app Sunaidi Expo; se emite un pase electrónico. No se permite la entrada de niños."
+        "status": "organiser_info",
+        "ar": "أغلق التسجيل الإلكتروني؛ التسجيل متاح عند مدخل المعرض مع إحضار بطاقة العمل. لا يسمح بدخول الأطفال.",
+        "en": "Online registration is closed; register at the venue entrance and bring a business card. Children are not admitted.",
+        "es": "Registro en línea cerrado; inscripción en la entrada con tarjeta de visita. No se permite la entrada de niños."
       },
       "image": "assets/images/event-corporate.webp",
       "imageAlt": {
@@ -127,9 +127,9 @@
       },
       "sourceUrl": "https://www.foodexsaudiexpo.com/ar",
       "verification": {
-        "checkedOn": "2026-11-22",
+        "checkedOn": "2026-11-25",
         "status": "confirmed",
-        "notes": "22 Nov: official registration remains advertised for 23–25 Nov, 16:00–23:00; trade/non-trade adults, no children. Official pages use JCEE and JIECC; exact drop-off not confirmed. https://www.foodexsaudiexpo.com/en/registertovisit"
+        "notes": "25 Nov: official organiser announces onsite registration only, 16:00–23:00, final day today; children not admitted. Venue naming JCEE/JIECC remains inconsistent; confirm exact drop-off. https://www.foodexsaudiexpo.com/en/registertovisit"
       },
       "timeLabels": {
         "ar": "يوميًا: 4:00 م–11:00 م",
@@ -179,10 +179,10 @@
         "es": "Inversores, franquiciados, directivos de expansión, marcas y grupos empresariales"
       },
       "ticketing": {
-        "status": "registration_open",
-        "ar": "دخول مجاني للزوار التجاريين بعد التسجيل؛ توجد خيارات لحجز اجتماعات الأعمال.",
-        "en": "Free entry for registered trade visitors; business matchmaking is available.",
-        "es": "Entrada gratuita para visitantes profesionales registrados; hay opción de reuniones empresariales."
+        "status": "organiser_info",
+        "ar": "أغلق التسجيل الإلكتروني؛ التسجيل متاح عند مدخل المعرض مع إحضار بطاقة العمل. لا يسمح بدخول الأطفال.",
+        "en": "Online registration is closed; register at the venue entrance and bring a business card. Children are not admitted.",
+        "es": "Registro en línea cerrado; inscripción en la entrada con tarjeta de visita. No se permite la entrada de niños."
       },
       "image": "assets/images/event-corporate.webp",
       "imageAlt": {
@@ -198,9 +198,9 @@
       },
       "sourceUrl": "https://www.saudifranchiseexpo.com/",
       "verification": {
-        "checkedOn": "2026-11-22",
+        "checkedOn": "2026-11-25",
         "status": "confirmed",
-        "notes": "22 Nov: official dates, Jeddah Center for Exhibitions and Events and screened trade registration reconfirmed; homepage closing 23:00 conflicts with about/visit pages 22:00. https://www.saudifranchiseexpo.com/ https://www.saudifranchiseexpo.com/visit"
+        "notes": "25 Nov: official organiser announces onsite registration only, 16:00–23:00, final day today; children not admitted. Current homepage states 23:00; older pages may differ. https://www.saudifranchiseexpo.com/"
       }
     },
     {
@@ -269,9 +269,9 @@
       },
       "sourceUrl": "https://agrofoodjeddah.com/secure-your-visit/",
       "verification": {
-        "checkedOn": "2026-11-22",
+        "checkedOn": "2026-11-25",
         "status": "confirmed",
-        "notes": "22 Nov: official visitor page reconfirms 8–10 Dec, Jeddah Center for Exhibitions & Events, ProPack co-location and registration, business owners and supply-chain audience. https://agrofoodjeddah.com/secure-your-visit/"
+        "notes": "22 Nov: official visitor page reconfirms 8–10 Dec, Jeddah Center for Exhibitions & Events, ProPack co-location and registration, business owners and supply-chain audience. https://agrofoodjeddah.com/secure-your-visit/ Rechecked 25 Nov: official page confirms dates, venue and registration link; badge issuance not tested."
       }
     },
     {
@@ -335,9 +335,9 @@
       },
       "sourceUrl": "https://idwsc.com/",
       "verification": {
-        "checkedOn": "2026-11-22",
+        "checkedOn": "2026-11-25",
         "status": "confirmed",
-        "notes": "22 Nov: official homepage confirms 14–16 Dec at Ritz-Carlton Jeddah, government and investors; official paid pass page offers delegate and premium categories, expired early-bird prices not used. https://idwsc.com/ https://idwsc.com/tickets-2026"
+        "notes": "22 Nov: official homepage confirms 14–16 Dec at Ritz-Carlton Jeddah, government and investors; official paid pass page offers delegate and premium categories, expired early-bird prices not used. https://idwsc.com/ https://idwsc.com/tickets-2026 Rechecked 25 Nov: official page confirms dates, venue and registration link; badge issuance not tested."
       }
     },
     {
