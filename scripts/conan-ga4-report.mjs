@@ -62,7 +62,7 @@ function table(lines, title, rows, label) {
 }
 async function notify(code, title, description) {
   if (!issueToken || !repo) throw new Error('Missing GitHub token/repository for alert');
-  const key = '[Conan GA4][' + code + ']';
+  const key = '[Conan GA4][' + code + ']' + (code === 'request-event' ? '[' + yesterdayDate + ']' : '');
   const headers = {
     Authorization: 'Bearer ' + issueToken,
     Accept: 'application/vnd.github+json',
@@ -94,7 +94,7 @@ async function main() {
   const filter = {
     filter: { fieldName: 'eventName', inListFilter: { values: events } }
   };
-  const [week, prior, yesterday, channels, cities, devices, pages, funnel, daily, yesterdayDaily] =
+  const [week, prior, yesterday, channels, cities, devices, pages, funnel, daily, yesterdayDaily, countries] =
     await Promise.all([
       ga4([], names, '7daysAgo', 'yesterday'),
       ga4([], names, '14daysAgo', '8daysAgo'),
@@ -105,7 +105,8 @@ async function main() {
       ga4(['pagePath'], ['screenPageViews'], '7daysAgo', 'yesterday'),
       ga4(['eventName'], ['eventCount'], '7daysAgo', 'yesterday', filter, 20),
       ga4(['date'], ['sessions'], '7daysAgo', 'yesterday', undefined, 10),
-      ga4(['date'], ['sessions'], 'yesterday', 'yesterday', undefined, 5)
+      ga4(['date'], ['sessions'], 'yesterday', 'yesterday', undefined, 5),
+      ga4(['country'], ['sessions'], '7daysAgo', 'yesterday')
     ]);
   const sessions = metric(week, 'sessions');
   const previousSessions = metric(prior, 'sessions');
@@ -140,6 +141,7 @@ async function main() {
       num(metric(yesterday, 'screenPageViews')) + ' |',
     ''
   ];
+  table(report, 'الدول', pairs(countries, 'sessions'), 'الدولة');
   table(report, 'مصادر الزيارات (القنوات)', pairs(channels, 'sessions'), 'القناة');
   // Suppress tiny city groups to avoid unnecessarily exposing low-volume locations.
   table(report, 'المدن (3 مستخدمين نشطين أو أكثر)', pairs(cities, 'activeUsers', 3), 'المدينة');
@@ -189,10 +191,33 @@ async function main() {
     'yesterday', 'yesterday',
     { filter: { fieldName: 'eventName',
       stringFilter: { matchType: 'EXACT', value: 'request_completed' } } }, 5);
-  if (pairs(completedYesterday, 'eventCount').some((x) => x.value > 0)) {
-    alerts.push(['request-event', 'رُصد حدث إكمال طلب أمس',
-      'ظهر حدث request_completed في بيانات أمس. راجع طلبات أفنتورا الفعلية ' +
-      'للتحقق من وصول الطلب، ولا تعتبر الحدث حجزًا مؤكدًا.']);
+  const completionCount = pairs(completedYesterday, 'eventCount').reduce((sum, row) => sum + row.value, 0);
+  if (completionCount > 0) {
+    const details = [
+      'تاريخ النشاط: ' + yesterdayDate + ' (تاريخ GA4؛ توقيت الخاصية يحتاج تحققًا).',
+      'عدد أحداث الإكمال: ' + num(completionCount) + ' (ليس عدد الحجوزات أو الأشخاص).',
+      'التفاصيل التالية تخص أحداث الإكمال المجمّعة فقط؛ لا تمثل مسار زائر فردي.'
+    ];
+    const completionFilter = { filter: { fieldName: 'eventName',
+      stringFilter: { matchType: 'EXACT', value: 'request_completed' } } };
+    for (const [dimension, label] of [
+      ['country', 'الدولة'], ['city', 'المدينة'],
+      ['sessionSourceMedium', 'مصدر الوصول / الوسيط'],
+      ['sessionDefaultChannelGroup', 'القناة'],
+      ['deviceCategory', 'الجهاز'], ['dateHour', 'ساعة النشاط بتوقيت الخاصية'],
+      ['landingPage', 'صفحة الدخول'], ['pagePath', 'صفحة تسجيل الإكمال']
+    ]) {
+      try {
+        const result = await ga4([dimension], ['eventCount'], 'yesterday', 'yesterday', completionFilter, 20);
+        const rows = pairs(result, 'eventCount');
+        details.push(label + ': ' + (rows.length ? rows.map(r => clean(r.label) + ' (' + num(r.value) + ')').join('؛ ') : 'غير متوفر'));
+      } catch (error) {
+        details.push(label + ': تعذر الاستعلام (' + clean(error.message) + ')');
+      }
+    }
+    details.push('تسلسل الصفحات والنشاط السابق للإكمال: غير مثبت على مستوى الجلسة من هذه البيانات المجمّعة.',
+      'وصول البريد: غير متحقق منه. راجع الطلبات الفعلية ولا تعتبر الحدث حجزًا مؤكدًا.');
+    alerts.push(['request-event', 'رُصد حدث إكمال طلب أمس', details.join('\n\n')]);
   }
   if (dryRun) {
     console.log('Dry run: ' + alerts.map((x) => x[0]).join(', '));
