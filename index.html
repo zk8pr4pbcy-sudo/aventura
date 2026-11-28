@@ -32,11 +32,11 @@
   <link rel="stylesheet" href="assets/css/light-theme.css?v=recover-v2-20260809" />
   <link rel="stylesheet" href="assets/css/home-phase1.css?v=phase1-final-20260729">
   <link rel="stylesheet" href="assets/css/home-brand-reset.css?v=header-system-20260809">
-  <link rel="stylesheet" href="assets/css/hero-contrast-fix.css?v=20260809-1" />
+  <link rel="stylesheet" href="assets/css/home-demo.css?v=20261128" />
   <link rel="stylesheet" href="assets/css/curated-calendar.css?v=20260910" />
   <script src="assets/js/translations.js?v=email-recovery-20261104" defer></script>
   <script src="assets/js/home-phase1-i18n.js?v=maher-20260801" defer></script>
-  <script src="assets/js/home-brand-reset.js?v=hero-contrast-20260802" defer></script>
+  <script src="assets/js/home-brand-reset.js?v=demo-20261128" defer></script>
   <script src="assets/js/ga4.js?v=20260815-pdpl4" defer></script>
   <script src="assets/js/analytics.js?v=experience-rules-20261103" defer></script>
   <script src="assets/js/dialog-runtime.js?v=20260910" defer></script><script src="assets/js/perfume-story-runtime.js?v=20260910" defer></script><script src="assets/js/reveal-runtime.js?v=20260910" defer></script>
@@ -57,65 +57,31 @@
 <body data-page="home" data-title-key="home.metaTitle" data-description-key="home.metaDescription">
   <site-header></site-header>
   <main id="main">
-    <section class="hero home-hero home-hero-aventura">
-      <div class="home-hero-mosaic" aria-hidden="true">
-        <figure class="home-hero-tile home-hero-tile-historic"><img src="assets/images/experience-historic.webp" width="1200" height="675" alt="" fetchpriority="high"></figure>
-        <figure class="home-hero-tile home-hero-tile-sea"><img src="assets/images/experience-sea.webp" width="1200" height="675" alt=""></figure>
-        <figure class="home-hero-tile home-hero-tile-desert"><img src="assets/images/desert-sunset.webp" width="1400" height="746" alt=""></figure>
-        <figure class="home-hero-tile home-hero-tile-taif"><img src="assets/images/experience-taif.webp" width="1200" height="675" alt=""></figure>
-      </div>
-      <div class="container">
-        <div class="hero-content" data-reveal>
-          <span class="eyebrow" data-i18n="home.heroEyebrow">Private experiences · Events · Guest hospitality</span>
-          <h1 data-i18n="home.heroTitle">Experiences shaped around people, place and purpose.</h1>
-          <p class="hero-description" data-i18n="home.heroDescription">Aventura designs private experiences, corporate programs, events and guest hospitality across Historic Jeddah, the Red Sea, the desert and Taif through one coordinated team.</p>
-          <div class="hero-audience" aria-label="Guest profiles">
-            <span data-i18n="home.audience1">Private travellers</span>
-            <span data-i18n="home.audience2">Corporate guests</span>
-            <span data-i18n="home.audience3">Executives &amp; VIPs</span>
-          </div>
-          <div class="hero-actions">
-            <a class="btn" href="experiences.html" data-i18n="home.heroPrimary">Explore experiences</a>
-            <a class="btn btn-outline" href="contact.html" data-i18n="home.heroSecondary">Request a Tailored Proposal</a>
+    <section class="demo-hero" aria-labelledby="home-title">
+      <div class="container demo-hero-grid">
+        <div class="demo-hero-copy">
+          <p class="demo-hero-kicker" data-i18n="home.heroEyebrow">أفنتورا، جدة</p>
+          <h1 id="home-title" data-i18n="home.heroTitle">تجارب خاصة وفعاليات في جدة</h1>
+          <p class="demo-hero-description" data-i18n="home.heroDescription">جولات خاصة وضيافة للوفود وتنظيم للمناسبات. شاركنا الموعد وعدد الضيوف لنعدّ عرضك.</p>
+          <div class="demo-hero-actions">
+            <a class="btn demo-hero-primary" href="contact.html" data-i18n="home.heroPrimary">صمّم تجربتك</a>
+            <a class="demo-hero-secondary" href="experiences.html" data-i18n="home.heroExplore">استكشف التجارب</a>
           </div>
         </div>
-      </div>
-      <div class="hero-proof">
-        <div class="container hero-proof-grid">
-          <div class="proof-item"><strong data-i18n="home.proof1Title">Four distinct worlds</strong><span data-i18n="home.proof1Text">Historic Jeddah, the Red Sea, the desert and Taif</span></div>
-          <div class="proof-item"><strong data-i18n="home.proof2Title">Private by design</strong><span data-i18n="home.proof2Text">Programs shaped around your guests, privacy and pace</span></div>
-          <div class="proof-item"><strong data-i18n="home.proof3Title">One operating team</strong><span data-i18n="home.proof3Text">Planning, hospitality, transport and execution together</span></div>
-        </div>
+        <figure class="demo-hero-photo">
+          <img src="assets/images/experience-historic.webp" width="1200" height="675" data-i18n-alt="home.altHistoric" alt="رواشين جدة التاريخية" fetchpriority="high">
+          <figcaption data-i18n="home.heroLocation">البلد، جدة التاريخية</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section home-intro-editorial">
-      <div class="container section-heading" data-reveal>
-        <div>
-          <span class="eyebrow" data-i18n="home.introEyebrow">The Aventura approach</span>
-          <h2 data-i18n="home.introTitle">One brand. Different worlds. Every journey designed around the guest.</h2>
-        </div>
-          <p class="lead" data-i18n="home.introDescription">From Historic Jeddah to the Red Sea, the desert and Taif, we design private days shaped around your guests.</p>
-      </div>
-    </section>
-
-    <section class="curated-calendar" id="curated-calendar" data-curated-calendar hidden aria-labelledby="curated-calendar-title">
-      <div class="container">
-        <div class="curated-calendar__header" data-reveal>
-          <div class="curated-calendar__copy">
-            <span class="curated-calendar__eyebrow" data-curated-ui="eyebrow">AVENTURA CURATED CALENDAR</span>
-            <h2 id="curated-calendar-title" data-curated-ui="title">مختارات أفنتورا في جدة</h2>
-            <p class="curated-calendar__description" data-curated-ui="description">فعاليات مختارة خلال الأيام القادمة، ويمكن لأفنتورا تنسيق تجربة خاصة متكاملة حول كل فعالية.</p>
-          </div>
-          <div class="curated-calendar__controls" aria-label="Curated events navigation">
-            <button class="curated-calendar__control" type="button" data-curated-prev data-curated-label="previous" aria-label="الفعالية السابقة">←</button>
-            <button class="curated-calendar__control" type="button" data-curated-next data-curated-label="next" aria-label="الفعالية التالية">→</button>
-          </div>
-        </div>
-        <div class="curated-calendar__track" data-curated-track aria-live="polite"></div>
-        <p class="curated-calendar__disclaimer" data-curated-ui="disclaimer">أفنتورا لا تبيع تذاكر الفعاليات ما لم يُذكر خلاف ذلك؛ نحن ننسّق التجربة والخدمات المحيطة بها حسب الطلب والتوفر.</p>
-      </div>
-    </section>
+    <div class="demo-paths">
+      <ul class="container demo-path-grid">
+        <li><a href="experiences.html"><strong data-i18n="home.pathExperienceTitle">تجربة خاصة</strong><span data-i18n="home.pathExperienceText">جدة التاريخية والبحر والصحراء والطائف</span></a></li>
+        <li><a href="corporate.html"><strong data-i18n="home.pathCorporateTitle">شركات ووفود</strong><span data-i18n="home.pathCorporateText">برامج عمل وضيافة وتنقّلات</span></a></li>
+        <li><a href="events.html#private-events"><strong data-i18n="home.pathPrivateTitle">مناسبة خاصة</strong><span data-i18n="home.pathPrivateText">تنسيق المكان والضيافة والتفاصيل</span></a></li>
+      </ul>
+    </div>
 
     <section class="section section-muted" id="experiences">
       <div class="container">
@@ -150,6 +116,24 @@
             <div class="experience-card-content"><span class="eyebrow" data-i18n="home.jeddahCode">05 · Signature day</span><h3 data-i18n="home.jeddahTitle">A complete Jeddah day</h3><p data-i18n="home.jeddahText">Historic Jeddah, the waterfront, dining and selected city moments in one coordinated route.</p><a class="text-link" href="experience-jeddah-day.html" data-i18n="home.enterExperience">Enter the experience</a></div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="curated-calendar" id="curated-calendar" data-curated-calendar hidden aria-labelledby="curated-calendar-title">
+      <div class="container">
+        <div class="curated-calendar__header" data-reveal>
+          <div class="curated-calendar__copy">
+            <span class="curated-calendar__eyebrow" data-curated-ui="eyebrow">AVENTURA CURATED CALENDAR</span>
+            <h2 id="curated-calendar-title" data-curated-ui="title">مختارات أفنتورا في جدة</h2>
+            <p class="curated-calendar__description" data-curated-ui="description">فعاليات مختارة خلال الأيام القادمة، ويمكن لأفنتورا تنسيق تجربة خاصة متكاملة حول كل فعالية.</p>
+          </div>
+          <div class="curated-calendar__controls" aria-label="Curated events navigation">
+            <button class="curated-calendar__control" type="button" data-curated-prev data-curated-label="previous" aria-label="الفعالية السابقة">←</button>
+            <button class="curated-calendar__control" type="button" data-curated-next data-curated-label="next" aria-label="الفعالية التالية">→</button>
+          </div>
+        </div>
+        <div class="curated-calendar__track" data-curated-track aria-live="polite"></div>
+        <p class="curated-calendar__disclaimer" data-curated-ui="disclaimer">أفنتورا لا تبيع تذاكر الفعاليات ما لم يُذكر خلاف ذلك؛ نحن ننسّق التجربة والخدمات المحيطة بها حسب الطلب والتوفر.</p>
       </div>
     </section>
 

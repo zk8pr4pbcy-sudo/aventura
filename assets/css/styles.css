@@ -3277,7 +3277,8 @@ html[lang="ar"] .request-detail-group legend {
 
 .form-honeypot {
   position: absolute !important;
-  left: -9999px !important;
+  inset-inline-start: 0 !important;
+  clip-path: inset(50%);
   width: 1px !important;
   height: 1px !important;
   opacity: 0 !important;

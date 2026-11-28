@@ -24,10 +24,10 @@ check(index.includes('data-curated-calendar'), 'home page contains the Curated C
 check(index.includes('assets/css/curated-calendar.css'), 'home page loads the isolated Curated Calendar stylesheet');
 check(index.includes('assets/js/curated-calendar.js'), 'home page loads the isolated Curated Calendar runtime');
 
-const introPosition = index.indexOf('home-intro-editorial');
+const servicesPosition = index.indexOf('home-service-story');
 const calendarPosition = index.indexOf('data-curated-calendar');
 const experiencesPosition = index.indexOf('id="experiences"');
-check(introPosition !== -1 && calendarPosition > introPosition && calendarPosition < experiencesPosition, 'Curated Calendar sits after the Aventura approach and before core experiences');
+check(experiencesPosition !== -1 && calendarPosition > experiencesPosition && servicesPosition > calendarPosition, 'Curated Calendar sits after core experiences and before guest services');
 
 check(!app.includes('curated-calendar') && !app.includes('CURATED_CALENDAR'), 'app.js does not own Curated Calendar behavior');
 check(runtime.includes('HOME_LIMIT = 4'), 'home page editorial selection is capped at four events');
